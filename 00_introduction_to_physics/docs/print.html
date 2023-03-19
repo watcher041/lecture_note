@@ -9,7 +9,6 @@
 
         <!-- Custom HTML head -->
         
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -33,17 +32,18 @@
         <!-- Custom theme stylesheets -->
 
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -59,7 +59,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -71,12 +71,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -84,7 +86,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">物理学入門</a></li><li class="chapter-item expanded "><a href="chapter_1/section_0.html"><strong aria-hidden="true">1.</strong> 物理量と単位</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/section_1.html"><strong aria-hidden="true">1.1.</strong> 物理学における研究法</a></li><li class="chapter-item expanded "><a href="chapter_1/section_2.html"><strong aria-hidden="true">1.2.</strong> 単位と単位系</a></li><li class="chapter-item expanded "><a href="chapter_1/section_3.html"><strong aria-hidden="true">1.3.</strong> 長さの単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_4.html"><strong aria-hidden="true">1.4.</strong> 時間の単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_5.html"><strong aria-hidden="true">1.5.</strong> 重力質量とその単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_6.html"><strong aria-hidden="true">1.6.</strong> 単位の変換と次元</a></li><li class="chapter-item expanded "><a href="chapter_1/section_7.html"><strong aria-hidden="true">1.7.</strong> 量の間の関係式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/section_0.html"><strong aria-hidden="true">2.</strong> 古典力学</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 電磁気学</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 熱力学</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> 統計力学</div></li><li class="chapter-item expanded "><a href="chapter_6/section_0.html"><strong aria-hidden="true">6.</strong> 相対性理論</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 量子力学</div></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">物理学入門</a></li><li class="chapter-item expanded "><a href="chapter_1/section_0.html"><strong aria-hidden="true">1.</strong> 物理量と単位</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/section_1.html"><strong aria-hidden="true">1.1.</strong> 物理学における研究法</a></li><li class="chapter-item expanded "><a href="chapter_1/section_2.html"><strong aria-hidden="true">1.2.</strong> 単位と単位系</a></li><li class="chapter-item expanded "><a href="chapter_1/section_3.html"><strong aria-hidden="true">1.3.</strong> 長さの単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_4.html"><strong aria-hidden="true">1.4.</strong> 時間の単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_5.html"><strong aria-hidden="true">1.5.</strong> 重力質量とその単位</a></li><li class="chapter-item expanded "><a href="chapter_1/section_6.html"><strong aria-hidden="true">1.6.</strong> 単位の変換と次元</a></li><li class="chapter-item expanded "><a href="chapter_1/section_7.html"><strong aria-hidden="true">1.7.</strong> 量の間の関係式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/section_0.html"><strong aria-hidden="true">2.</strong> 古典力学</a></li><li class="chapter-item expanded "><a href="chapter_3/section_0.html"><strong aria-hidden="true">3.</strong> 電磁気学</a></li><li class="chapter-item expanded "><a href="chapter_4/section_0.html"><strong aria-hidden="true">4.</strong> 熱力学</a></li><li class="chapter-item expanded "><a href="chapter_5/section_0.html"><strong aria-hidden="true">5.</strong> 統計力学</a></li><li class="chapter-item expanded "><a href="chapter_6/section_0.html"><strong aria-hidden="true">6.</strong> 相対性理論</a></li><li class="chapter-item expanded "><a href="chapter_7/section_0.html"><strong aria-hidden="true">7.</strong> 量子力学</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -102,7 +104,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -135,7 +137,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -250,7 +252,17 @@ y &amp;=&amp; x \\
 <p>　太陽や月あるいは惑星などの天空上の運行がある周期性を示すことから、古代人は時の循環について理解するようになり、そこから時を詳しく表現するための暦が考案されてきたものと思われる。したがって、時を測る基準としては、身近な天体である太陽と月の運行における周期的な循環が、一番初めにとりあげられたことであろう。現在の私たちがいう太陽暦および太陰暦が古代文明を築いた人々によって考案されたのは、こんなわけで当然のことであったと思われる。</p>
 <p>　歴史上で太陽暦が最初に用いられたのは、古代エジプト文明においてであって、紀元前4241年のこととされている。ちょうどその頃は、日出直前にシリウスが昇ってくる時期と一致していたが、偶然にもまた、ナイル河の定期的な氾濫の開始期でもあった。農耕文明であった古代エジプト国家にとっては、この氾濫は農耕の開始を告げるもので、その後の約４か月が”氾濫季”とされた。次の約４か月が”地の回復季”で、このときに、種々の穀物の種子が播かれた。最後の約４か月が”乾季”で、農作物の収穫期に当たっていた。太陽暦の考察に至るヒントは、シリウスが日出直前に昇ってくる（伴日出、Heliacal rising）が、農業生産に大切な</p>
 <p>　</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="熱力学"><a class="header" href="#熱力学">熱力学</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="熱力学-1"><a class="header" href="#熱力学-1">熱力学</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="熱力学-2"><a class="header" href="#熱力学-2">熱力学</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="相対性理論"><a class="header" href="#相対性理論">相対性理論</a></h2>
+<p>　相対性理論は観測に関する理論</p>
+<p>　特殊相対性理論は20世紀の当初、主としてEinsteinの研究によって展開されたものであるが、その基盤となったものを訪ねれば、遥かに過去の時代に遡るのである。あるい意味でこの理論はGalileiやNewtonの時代以来、自然記述の根底に横たわっていた理念の発展であり、完成されたものであるとみなすことができる。この理論の根本的な要請である、いわゆる”相対性原理”はすでにGalileiやHuygensの研究においても、力学の基本法則を展開するのに決定的な役割を演じていたのである。そして力学現象に関して、特殊相対原理が成り立っていることは、Newtonの力学法則からの簡単な帰結の一つである。相対性原理を解説するのに力学の法則によるものが最も適切なので、まず準力学的現象の考察から出発することにしよう。</p>
+<p>　Newtonの第1法則、すなわち慣性の法則によれば、放置された質点は一直線上を一定の速度で運動をつづける。元来、単に運動というものが考えられるわけがなく、必ず他の何者かに対する運動しか考えられないから、上の命題が精密な意味をもちうるのは、ある準拠系がはっきり定義されていて、これに対して質点の速度が測りうると考えられる場合だけである。それでNewtonはあらゆる運動を測る基準となるような準拠系を意味するものとして”絶対空間”という概念を導入した。経験によれば恒星は全体として、この”絶対空間”に対して近似的に静止していると見なすことができる。それは、天界の物質から十分遠方に隔っている物体は、恒星に対して常に一様な速度で運動するからである。</p>
+<p>　しかし、慣性の法則は”絶対空間”に対して一様な速度で運動しているすべてのゆがむことのない準拠系に対しても成り立つ。それは自由な粒子は、このような座標系に対しても一様な並進運動をするからである。慣性の法則が成り立つような準拠系が全て慣性系という。慣性系全体は互いに他に対して等速直線運動をする歪まない準拠系の三重に無限の集合である。これらのうちの１つが恒星全体に対して静止している絶対系であるけれども、慣性の法則が成り立つという点では、どの慣性系も完全に同等である。</p>
+<p>　さて、力学における相対性原理というのは、すべての慣性系は、慣性の法則に対してのみならず他のあらゆる力学法則に対しても完全に同等であることを述べたものである。もしこれが正しいならば、力学現象はどの観測系においても同じ推移の経過をたどることになるから、このような現象を観察することによって、この系全体が”絶対空間”に対して行っている一様な運動を検知することは不可能である。したがって力学現象を調べるだけで”絶対”系を決定することはできない。</p>
+<p>　次に、Newton力学の基礎方程式が実際にこの相対性原理にかなっていることを示そう。</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="相対性理論-1"><a class="header" href="#相対性理論-1">相対性理論</a></h2>
 <p>　相対性理論は観測に関する理論</p>
 <p>　特殊相対性理論は20世紀の当初、主としてEinsteinの研究によって展開されたものであるが、その基盤となったものを訪ねれば、遥かに過去の時代に遡るのである。あるい意味でこの理論はGalileiやNewtonの時代以来、自然記述の根底に横たわっていた理念の発展であり、完成されたものであるとみなすことができる。この理論の根本的な要請である、いわゆる”相対性原理”はすでにGalileiやHuygensの研究においても、力学の基本法則を展開するのに決定的な役割を演じていたのである。そして力学現象に関して、特殊相対原理が成り立っていることは、Newtonの力学法則からの簡単な帰結の一つである。相対性原理を解説するのに力学の法則によるものが最も適切なので、まず準力学的現象の考察から出発することにしよう。</p>
 <p>　Newtonの第1法則、すなわち慣性の法則によれば、放置された質点は一直線上を一定の速度で運動をつづける。元来、単に運動というものが考えられるわけがなく、必ず他の何者かに対する運動しか考えられないから、上の命題が精密な意味をもちうるのは、ある準拠系がはっきり定義されていて、これに対して質点の速度が測りうると考えられる場合だけである。それでNewtonはあらゆる運動を測る基準となるような準拠系を意味するものとして”絶対空間”という概念を導入した。経験によれば恒星は全体として、この”絶対空間”に対して近似的に静止していると見なすことができる。それは、天界の物質から十分遠方に隔っている物体は、恒星に対して常に一様な速度で運動するからである。</p>
@@ -275,41 +287,25 @@ y &amp;=&amp; x \\
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);
@@ -317,5 +313,6 @@ y &amp;=&amp; x \\
         });
         </script>
 
+    </div>
     </body>
 </html>
