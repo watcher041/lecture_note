@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>長さの単位 - 物理学入門</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">物理学入門</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_0.html"><strong aria-hidden="true">1.</strong> 物理量と単位</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../chapter_1/section_1.html"><strong aria-hidden="true">1.1.</strong> 物理学における研究法</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_2.html"><strong aria-hidden="true">1.2.</strong> 単位と単位系</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_3.html" class="active"><strong aria-hidden="true">1.3.</strong> 長さの単位</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_4.html"><strong aria-hidden="true">1.4.</strong> 時間の単位</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_5.html"><strong aria-hidden="true">1.5.</strong> 重力質量とその単位</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_6.html"><strong aria-hidden="true">1.6.</strong> 単位の変換と次元</a></li><li class="chapter-item expanded "><a href="../chapter_1/section_7.html"><strong aria-hidden="true">1.7.</strong> 量の間の関係式</a></li></ol></li><li class="chapter-item expanded "><a href="../chapter_2/section_0.html"><strong aria-hidden="true">2.</strong> 古典力学</a></li><li class="chapter-item expanded "><a href="../chapter_3/section_0.html"><strong aria-hidden="true">3.</strong> 電磁気学</a></li><li class="chapter-item expanded "><a href="../chapter_4/section_0.html"><strong aria-hidden="true">4.</strong> 熱力学</a></li><li class="chapter-item expanded "><a href="../chapter_5/section_0.html"><strong aria-hidden="true">5.</strong> 統計力学</a></li><li class="chapter-item expanded "><a href="../chapter_6/section_0.html"><strong aria-hidden="true">6.</strong> 相対性理論</a></li><li class="chapter-item expanded "><a href="../chapter_7/section_0.html"><strong aria-hidden="true">7.</strong> 量子力学</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">物理学入門</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="長さの単位"><a class="header" href="#長さの単位">長さの単位</a></h2>
+<p>　長さはもともと点の相対的位置を表すための量で、二つの長さはこれらを重ね合わせることによって直感的にその大きさを判定することができる。長さがあらゆる物理量の中での最も基礎的なものになっている理由はここにある。そして他の物理量も、これを正確に知るためには長さの測定によることが非常に多い。例えば、時間は時計の針の動いた距離で、物体の重さははかりの目盛りで温度は水銀柱の長さで測るなどがこれである。</p>
+<p>　長さの単位として物理学で用いられているものはメートルであるが、このメートルが最初測定されたのはフランスで1795年のことである。そして地球子午線の全長の4000万分の1の長さをもって単位とするというのが最初の考えであった。これにしたがって子午線の実測を行い、その後、幾多の経緯を経た後に1875年に至って初めて国際的にメートル条約ができ、メートル原器というものが制定された。このメートル原器は特殊の切り口（これは曲がりにくくするため）をもち、白金90％、イリジウム10％の合金で作られた棒で、その両端に近いところそれぞれ細い標線がある。0℃におけるこの標線間の長さが1m と決められた。この国際原器はパリ郊外の国際度量衡局に保管され、各国はこれとほとんど同じもの（副原器）を保管することとなった。それぞれ多少の誤差は免れ難く、我が国に配布されたものでは、標線間の長さは</p>
+<p>\[
+1{\rm m}-\left(1.3-8.667t-0.00100t^2 \right)\mu
+\]</p>
+<p>であった。ただし \( t \) は温度（℃）を、\( \mu \) はミクロン（micron）で \( 10^{-6} \) m である。</p>
+<p>　このようにして決定されたメートル原器にもいろいろ難点がある・まず第１は永久不変性の問題で、人工的なものである以上、破損の危険がないとは言えないし、またこのような合金製のものが長年月の間にひとりでに変形しないとは保証できない。しかもそれ以上の欠点とされるのは精度である。原器の両端にある標線は細い線であるが、それでも幅が \( 6~8\mu \) 程度である。そこで両線の中心を採ったとしても全長に \( 0.2\mu \) 程度の誤差は免れ得ない。すなわち、相対誤差 \( 2\times 10^{-7} \) の精度しかなく、これでは進歩した現代の精密科学の要求を満足してくれない。そこで、永久不変性という意味で、ある決まった光の波長を長さの基準にするという考えが20世紀初頭からあった。そして、 Cd 蒸気中における放電の場合に発する赤色光をこのために用いるという提案がなされたこともある。</p>
+<p>光の波長を基準にするというのは</p>
+<p>&quot;外から何らかの影響を受けていない静止した同一種の原子の出す光の波長は定まっている&quot;<sup class="footnote-reference"><a href="#note1">1</a></sup></p>
+<p>という考えに基づくものである。しかし現実には、元素が同位体の集合であって、完全に同一種の原子の集合でないこと、原子同士が互いに影響しあっていること、これを光らせるために電気的影響を受けていること、原子が前後左右に振動しているために、その発する光が例え一定でもDoppler効果によって異なった波長の光の混合として観測されること、などその他いろいろの理由で純粋に波長が一定した光というものが得られなかった。</p>
+<p>　その後の研究によって\( {}^{86} \)Kr<sup class="footnote-reference"><a href="#note2">2</a></sup> という同位体が分離されるようになり、理想に近い光が得られるようになった。そして1960年10月14日の国際度量衡総会で、今後長さの単位として\( {}^{86} \)Kr の発するKr66橙色線の波長を用いることが決定され、わが国でも1961年7月1日からこれによるということが政令で決められた。</p>
+<p>以下の図はこの\( {}^{86} \)Kr ランプの要点を示したもので、Vは熱陰極を持った真空管で、この中に少量の\( {}^{86} \)Kr が封入され、放電によって得る光の波長はBの方向から分光器で観測する。Vを液体窒素Nの中に入れ、この窒素はポンプで減圧し、Nの温度が（63±1）°Kの範囲になるようにして用いる。</p>
+<p><img src="images/Kr86_lamb.jpeg" alt="Kr86ランプ" /></p>
+<p>\( {}^{86} \)Kr の低温低圧における発光を用いたのは、上に述べた種々の障害を少なくするためで、放電電流にも一定の限度が与えられている。</p>
+<p>こうして出てくる光の中のいわゆる Kr86 橙色線の真空中における波長の1650763.73倍を 1 m と定義する。もちろん従来の 1 m とほとんど違いはない。</p>
+<p>この方法は極めて精度の高いもので、メートル原器の精度が\( 2\times 10^{-7} \)であったのに、ここでは\( 10^{-8} \)の精度が得られ、将来は\( 10^{-9} \)の精度にまで上げられる見込みである。</p>
+<div class="footnote-definition" id="note1"><sup class="footnote-definition-label">1</sup>
+<p>数個の飛び飛びの波長の光の混合でるから、その中の一つを選ぶ。</p>
+</div>
+<div class="footnote-definition" id="note2"><sup class="footnote-definition-label">2</sup>
+<p>もともとKrの中には質量数、78、80、82、83、84、86の同位体が含まれている。</p>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../chapter_1/section_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../chapter_1/section_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../chapter_1/section_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../chapter_1/section_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
