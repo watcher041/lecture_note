@@ -1,4 +1,35 @@
 
+# 時間の遅れ
+
+観測者K、K'がおり、Kから見てK'がx軸に速度Vで移動しているものとする。このとき、K'においてある一つの地点Pでの時間を計測したとき
+
+$$
+    x_{\rm A}'=x_{\rm B}'、t_{\rm B}'-t_{\rm A}'=\Delta t'
+$$
+が成立する。一方で、Lotentz変換に基づいてKからK'の立場で考えてみると
+$$
+    x_{\rm B}'-x_{\rm A}'=
+    \gamma\left[
+        \left(x_{\rm B}-x_{\rm A}\right)-V\left(t_{\rm B}-t_{\rm A}\right)
+    \right]=0
+$$
+$$
+    t_{\rm B}'-t_{\rm A}'=
+    \gamma\left[
+        \left(t_{\rm B}-t_{\rm A}\right)-
+        \frac{V}{c^2}\left(x_{\rm B}-x_{\rm A}\right)
+    \right]=\Delta t'
+$$
+となる。ただし、\\(\gamma=\left(1-V^2/c^2\right)^{-1/2}\\)である。すると、以下の関係式が得られる。
+$$
+    \left(x_{\rm B}-x_{\rm A}\right)=V\left(t_{\rm B}-t_{\rm A}\right)=
+    V\Delta t
+$$
+$$
+    \Delta t'=\sqrt{1-\frac{V^2}{c^2}}\Delta t<\Delta t
+$$
+というように短く感じることになる。これが時間の短縮と呼ばれるものとなる。
+
 # Lorentz収縮
 
 観測者K、K'がおり、Kから見てK'がx軸に速度Vで移動しているものとする。このとき、K'においてx軸に沿って地点Aから地点Bに置かれている棒があるとすると
