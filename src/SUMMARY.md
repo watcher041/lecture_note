@@ -17,5 +17,6 @@
   - [エントロピーについて](chapter_4/section.md)
 - [統計力学](chapter_5/section_0.md)
 - [相対性理論](chapter_6/section_0.md)
+  - [同時の定義](chapter_6/section_1.md)
   - [Lorentz収縮](chapter_6/section.md)
 - [量子力学](chapter_7/section_0.md)
