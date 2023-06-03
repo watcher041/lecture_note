@@ -1,36 +1,101 @@
 
-# 特殊相対性理論
+## Lorentz変換
 
-ある物体の運動を観測した時、そのように見える状況として「物体自身が動く」ことの他に「観測者自身が動いている」場合がある。このうち、どちらの状況になっているかは事実上判断はできないが、どっちにしろ運動を記述した形は一致してないといけない（異なる視点から見て違っていると、今までの事実と食い違いが起こるため）。そのため、観測者が移動していたとしても、同じ形で運動を記述している必要があることから\tb{変換}という操作が行われる。これは、「観測者が移動しているものとした際にも、運動方程式の形が変わらないような座標系に変更する」というものであり、特に今の場合だとGalilei変換と呼ぶことが多い。
-では、ここからはGalilei変換がどういうものかを見ていくことにしよう。まず、観測の対象となる物体A（質量$m$）とそれを止まったまま観測する人（K）を考える。もし、ここでKが物体Aの運動を力$\bm{F}$によるものだとした場合、物体Aの位置を示すベクトル$\bm{r}$により運動方程式は 
+先ほど導いた変換式を改めて記載してみると
+$$
+    x'=\gamma(x-Vt)、y'=y、z'=z、
+    t'=\gamma\left(t-\frac{V}{c^2}x\right)　
+    \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
+$$
+となるわけだが、これらが何を意味しているのか考えてみることにする。従来から変換式としてはGalilei変換が利用されており
+$$
+    x'=x-Vt、y'=y、z'=z、t'=t
+$$
+という形であるが、 \\(V/c\to 0\\) と観測者が光速に比べて低速で動いている場合は近似的にこの形になることが分かる。そのため、変換式を以下のように変形してみる。
+$$
+    x'=\gamma(x-\beta ct)、y'=y、z'=z、
+    ct'=\gamma\left(ct-\beta x\right)　
+    \left(\gamma=\frac{1}{\sqrt{1-\beta^2}}、\beta=\frac{V}{c}\right)
+$$
+すると、\\(ct\\) が \\(x\\) と同じような座標の一部としてみなせるので \\(w\\) として
+$$
+    x'=\gamma(x-\beta w)、w'=\gamma\left(w-\beta x\right)
+$$
+とおき、試しに \\(x\\) と \\(w\\) との関係を座標で描いてみると以下の図の通りになる。
 
-\と表される。一方で、同じ状況をK$'$のように動いて観測した場合には \begin{equation} m\dd{^2\bm{r}'}{t^2}=\bm{F}' \end{equation} と書ける。この時、$\bm{r}'$は観測者Kが扱う座標により \begin{equation}
-\bm{r}'=\bm{r} -\bm{R} \end{equation} と表されるので、試しにこれを(1.2)式に代入すると \begin{equation} m\dd{^2\bm{r}}{t^2}-m\dd{^2\bm{R}}{t^2}=\bm{F}' \end{equation} であり、(1.1)式により \begin{equation} \bm{F}'=\bm{F}-m\dd{^2\bm{R}}{t^2} \end{equation} を得る。このことから、もし(1.5)式の右辺のうち第2項目$\bm{0}$ であれば、(1.1)式と(1.2)式は同じものとなり、(1.3)式は変換式と言うことができる。
-加えて$\bm{R}$は、初期条件 $[\bm{R}(t=0)=\bm{R}_0、d\bm{R}/dt=\bm{V}（等速）]$と \begin{equation*} \dd{^2\bm{R}}{t^2}=\bm{0} \end{equation*} により \begin{equation} \bm{R}=\bm{V}t+\bm{R}_0 \end{equation} であり、多くの場合$\bm{R}_0=\bm{0}$（観測者Kと同じ位置から観測を始めている）とすることから、結果(1.3)式は \begin{equation} \bm{r}'=\bm{r}-\bm{V}t \end{equation} という形になる。
-以上の議論から、観測者が等速で移動している場合には運動方程式を同じ形で書くことができ、変換式は(1.7)式の形になることが分かる。ただし、これはあくまで古典力学における変換（Galilei変換）であるため、他の分野（電気力学など）でも同じことが言えるかは不明なので、是非とも注意していただきたい。 %
-%%エーテル理論 \section{エーテル理論} エーテルの風を検出する実験の中でも最も有名で精度が高かったものが、マイケルソンーモーリの実験である。（エーテルの風が相対速度を生み出す？）
-%Michelson-Morleyの実験 \subsection{Michelson-Morleyの実験（付録５）の概要} \begin{wrapfigure}{r}{5cm} \begin{center} \includegraphics[width=4cm]{mm.png} \caption{M-M実験の概図} \end{center} \end{wrapfigure} 絶対静止系に対して、地球上の物体が等速$V$で動いていると仮定する（ここで$V$は、地球の公転または自転の速度を合わせたものであるが、後者の方は前者の方に比べて極めて小さいため、無視することができる）。その動いている方向に沿って、右図のような装置を設置する。これにより、光がエーテルの風に対して、鉛直に進む場合と平行に進む場合とでの移動時間を観測点Tに出来る干渉縞の形から比較することができる。
-このようにした上で、まず絶対静止系を有する観測者Kが静止している装置で実験を行うと、光は各方向に \begin{equation} t_v=\frac{ 2l_0 }{ c }=t_0\ （鉛直方向）、t_p=\frac{ 2l_0 }{ c }=t_0\ （水平方向） \end{equation} だけ移動に時間がかかるので、$t_v=t_p$であると考えられる。
-一方、等速$V$で動く観測者K$'$が同じ速度で動いている装置を用いて実験を行うと、今度は \begin{equation} t'_v=\frac{ 2l_0 }{ \sqrt{c^2-V^2} }\ （鉛直方向）、t'_p=\frac{ 2cl_0 }{ c^2-V^2 }\ （水平方向） \end{equation} となるので$t'_v\neq t'_p$であると予想される（ただここで、これらの式が\tb{「どの観測者の立場から見て、たてたものか？」}ということに気をつけていただきたい。今の場合だと()式はK自身から見た時のもので、()式はKがK$'$の立場から見た時のものを表している。（ただし、時間の方は各観測者が測ったものとしている））。しかし実験の方では、高い精度にも関わらず$t'_v=t'_p$と()式に反した結果がでてくるため、「この式が本当に正しいものではないのではないか？」という疑いが出てくる。このことから改めて、()式に対して考察を行うと次の通りになる。\ \tb{「} \parbox[t]{11cm}{ KがK'の立場に立ってみる際に、光は相対速度で絶対静止系で見た時と同じように動いているとするため、$t'_v=t'_p$であることも踏まえると()式は()式と似たような形になると考えられる。そのため、()式を次のようにしてみる。 \begin{equation} t'_v=\gamma\frac{2l_0}{c}=\gamma t_0\ （鉛直方向） 、 t'_p=\gamma^{2}\frac{2l_0}{c}=\gamma^{2}t_0\ （水平方向） \end{equation} \begin{equation*} →\frac{t'_v}{t'_p}=\frac{\gamma t_0}{\gamma^{2}t_0}=\frac{1}{\gamma}\ (ただし、ここで\ \gamma=\frac{1}{\sqrt{1-V^2/c^2}}\ である) \end{equation*}
-ここで$t'_v/t'_p=1$と実験により確かめられたことから、(2-?-4)式は実際のところ以下のどちらかになっていたと考えられる。（他にも様々な可能性があるが…とりあえず、その一部だけを載せている） \begin{equation*} \left{ \begin{aligned} &\ \cdot\frac{(\gamma t'_v)}{t'p}=\frac{t'{Real}}{t'_p}=1　 (鉛直方向の時間が予想よりも短い)\cdots{\rm (A)}\ &\ \cdot\frac{t'_v}{(t'_p/\gamma)}=\frac{t'v}{t'{Real}}=1　 (水平方向の時間が予想よりも短い)\cdots{\rm (B)} \end{aligned} \right. \end{equation*}
-\tb{」}}\
-これに対して今まで光が水平方向へ動く際に、エーテルの風の影響で相対速度になるとしていたことから(B)のようになると考え、これが起こる原因として次にある収縮仮説が提唱された。 %
-%Lorentz=FitzGeraldの収縮仮説 \subsection{Lorentz＝FitzGeraldの収縮仮説} Michelson-Morleyの実験で生じた矛盾を解消するため、G.F.FitzGerald（1851〜1901）とH.A.Lorentz(1853〜1928）は独自にあるひとつの仮説を提唱した。それは、「物体がエーテル中を運動するとき、その方向の長さが縮む」というものであった(その縮む割合は当初、1892年にLorentzが述べた$1-V^2/2c^2$という近似式であったが、1895年に出版された書物においては$\sqrt{1-V^2/c^2}$とFitzGeraldが1893年に出したものと同じ形に修正されている）。
-これを適用すると、水平方向の距離$l_0$が$l_0\sqrt{1-V^2/c^2}$になり \begin{equation} t'_{Real}=\frac{t'_p}{\gamma}=\frac{2cl_0\sqrt{1-V^2/c^2}}{c^2-V^2} =\frac{2l_0}{\sqrt{c^2-V^2}}=t'_v \end{equation} というように、水平方向へ移動する時間と等しくなる事が分かる。
-しかし、本当にそんな事が起こっていたのか…疑わしい限りであるが、それを確かめようにも仮説により\tb{「測定する器具（ものさしなど）も同じ割合で縮む」}と考えられるため、物体の縮みを検証することはできないのである（Lorentzもこれと同じようなことを述べている）。
-このようなわけで結局、収縮仮説は正誤の判断がされることなく、実証するまでに至っていないのである。 %
-%Lorentz変換 \subsection{Lorentz変換} ここでは、\underline{\tb{収縮仮説が正しいもの}}として話を進めていく。
-前回の収縮仮説のところで\tb{”観測者の持つ測定器具（定規など）も動くことで縮む”}とあるので、座標変換（座標同士の比較）の仕方にも違いが出てくると思われる。そのため、Galilei変換を導いた時と同じ方法で改めて変換について考察していくことにする。
-\begin{figure}[htbp] \begin{minipage}{.5\textwidth} \centering \includegraphics[width=5cm]{kl.png} \captionsetup{labelformat=empty,labelsep=none} \caption{(a)} \end{minipage} \begin{minipage}{.5\textwidth} \centering % \includegraphics[width=5cm]{kr.png} \captionsetup{labelformat=empty,labelsep=none} \caption{(b)} \end{minipage} \caption{Kを静止系(a)、またはK$'$を静止系(b)にした場合の図} \end{figure}
-最初にKを基準（図()のa）として、$x$方向へ動く物体を観察すると \begin{equation*} \left{ \begin{aligned} &\ \cdot\frac{ dx' }{ dt }=v'　{\rm （K'自身から見た時を、このように置く）}\ &\ \cdot\frac{ (dx'\slash\gamma) }{ dt }=v-V　{\rm （KがK'の立場で見たとき）} \end{aligned} \right. \end{equation*} というようになり、変換式は$x'=\gamma(x-Vt)$となる（二つ目の式：Kから見るとK'が等速$V$で動いているため、Kは一見して長さが$dx'$であるものを$\gamma$倍だけ短くなるものと考えている）。K'を基準（図()のb）としても同じように、 \begin{equation*} \left{ \begin{aligned} &\ \cdot\frac{dx}{dt}=v　{\rm （K自身から見た時を、このように置く）}\ &\ \cdot\frac{(dx\slash\gamma)}{dt}=v'+V　{\rm （K'がKの立場で見たとき）} \end{aligned} \right. \end{equation*} となり、逆変換は$x=\gamma(x'+Vt)$となると予想される。では、本当にこれが正しいものかどうかを判断するため、互いに逆変換の式を求めてみると次の通りになる。 [ \begin{cases} ・x'=\gamma(x-Vt)\ 　\to x=\gamma[x'+V(\frac{t}{\gamma}-\frac{V}{c^2}x')]=\gamma[x'+V\gamma(t-\frac{V}{c^2}x)] =\gamma[x'+Vf(x,t)]\ ・x=\gamma(x'+Vt)\ 　\to x'=\gamma[x-V(\frac{t}{\gamma}+\frac{V}{c^2}x)]=\gamma[x-V\gamma(t+\frac{V}{c^2}x')] =\gamma[x-Vf'(x',t)] \end{cases} ] （各式で$f(x,t)=t,f'(x',t)=t$の関係にあることから、$f(x,t)=f'(x',t)$が成立していないといけないが、これが正しくないことはすぐ分かる）\
-ではここで$f(x,t)$に着目すると、$x'$の変換式とよく似た形をしており、なおかつ時間$t$が第一項目に出てきているので、これは$t'$（K$'$が用いる時間）であると考えることができる。このことをふまえて、改めて変換を行うと逆変換も同じ形になることが分かる。 [ \begin{cases} \ ・x'=\gamma(x-Vt)\ 　→x=\gamma[x'+V(\frac{t}{\gamma}-\frac{V}{c^2}x')]=\gamma[x+V\gamma(t-\frac{V}{c^2}x)] =\gamma(x'+Vt')\ \ ・x=\gamma(x'+Vt')\ 　→x'=\gamma[x-V(\frac{t'}{\gamma}+\frac{V}{c^2}x)]=\gamma(x-Vt) \end{cases} ]
-これより、Lorentz収縮を導入した際の変換は次のようになると考えられる。（この変換のことを\tb{Lorentz変換}と言う） \begin{boxnote} \begin{eqnarray} &&x'=\gamma(x-Vt)\ &&t'=\gamma(t-\frac{V}{c}x) \end{eqnarray} \end{boxnote}
-また、観測者K$'$の時間を$t'$にしたことで、速度の変換式も次のようになってしまう。（$t'$を$\gamma$で割っているのは、$t'$の変換式にある$\gamma$がローレンツ収縮に似た作用により生じたものと考えられるため）
-\begin{enumerate} \item 水平方向では$\cdots$\ 最初、Lorentz変換に従って各方向へ移動する時間を出すと、 \begin{equation*} \left{ \begin{aligned} &\ \cdot t'{go}=\gamma(t{go}-\frac{V}{c^2}\Delta x_{go}) =\gamma(1-\frac{V}{c})t_{go}=\frac{\gamma l_0}{c}\ &\ \cdot t'{back}=\gamma(t{back}-\frac{V}{c^2}\Delta x_{back}) =\gamma(1-\frac{V}{c})t_{back}=\frac{\gamma l_0}{c}\ \end{aligned} \right.
-\end{equation*} \begin{equation*} \to t'p=t'{go}+t'{back}=\frac{2\gamma l_0}{c}=\gamma t_0 \end{equation*}
-となり、またLorentz収縮をしていると仮定すると \begin{equation} t'{p\slash\gamma}=\frac{2\gamma(l_0\slash\gamma)}{c}=\frac{t'p}{\gamma}=t_0 \end{equation} であり、さらに時間の遅れも生じているなら、結果的に次のようになる。 \begin{equation} t'{Real}=\frac{t'_{p\slash\gamma}}{\gamma}=\frac{t_0}{\gamma} \end{equation}
-\item 鉛直方向では$\cdots$ \begin{equation*} \left{ \begin{aligned} &\ \cdot t'{go}=\gamma(t{go}-\frac{V}{c^2}\Delta x_{go})=\gamma(1-\frac{V^2}{c^2})t_{go} =\frac{l_0}{c}\ &\ ・t'{back}=\gamma(t{back}-\frac{V}{c^2}\Delta x_{back}) =\gamma(1-\frac{V^2}{c^2})t_{back}=\frac{l_0}{c}\ \end{aligned} \right. \end{equation*} \begin{equation*} \to t'v=t'{go}+t'_{back}=\frac{2l_0}{c}=t_0 \end{equation*}
-ここで、時間の遅れが生じているとすると \begin{equation} t'_{Real}=\frac{t'_v}{\gamma}=\frac{t_0}{\gamma} \end{equation}
-となる。これでも、結局どの方向においても進む時間が同じであるが、絶対静止系で見た時と比べて、時間は$1/\gamma$倍だけ短くなっている。また、この時の速度も見てみると \begin{eqnarray*} &&\frac{dx'/\gamma}{dt'/\gamma}=\frac{dx'}{dt'}=\frac{v_p-V}{1-\frac{v_pV}{c^2}}=v'_p → v'_p=\frac{v_p-V}{1-\frac{v_pV}{c^2}}\cdots(1)\ &&\frac{dy'}{dt'/\gamma}=\gamma\frac{dy'}{dt'}=\frac{v_v}{1-\frac{v_pV}{c^2}}=\gamma v'_v → v'_v=\frac{v_v}{\gamma(1-\frac{v_pV}{c^2})}\cdots（2） \end{eqnarray*}
-というようになり、今は光を見ているため(1)式に$v_p=c$、(2)式に$v_p=V,v_v=\sqrt{c^2-V^2}$を代入すると、どちらも結果は$c$という値で出てくる。これは予想だにもしなかった結論である。ここまで相対速度で考えていたのに、光に限って不変になるのである。このことから、動いている観測者K'から見ても光速の値は変化しないと考えられる。\tb{」} \end{enumerate}
-このように、Lorentz収縮が起きていると仮定することでLorentz変換なるものが出てくるわけだが、果たしてこれが本当に正しいものかはまだ疑わしいところである。Lorentz収縮や時間の遅れ…なんぞが実際に起きているかが分からないことには、何も確かめようがない。一方で、この変換はMaxwell方程式における変換式とみなすことができることもあり、完全に
+![ミンコフスキー時空](images/minkofsky.png)
+
+この図を見ても分かる通り、\\(\gamma\\) が付いていない状態だと観測者K'の状況を観測者Kは自分自身の座標で見ている状態になっており、正しく同じ立場で見るためにはこの定数が付く必要があることが分かる。また、前回の最後のところででてきた
+$$
+    t_{\rm C}'=\sqrt{1-\frac{V^2}{c^2}}t_{\rm C}
+$$
+については以下のようにして導くことができる。また、時間だけではなく変位についても確認してみると同様な事象を確認することができる。
+
+### 時間の遅れ
+
+観測者K、K'がおり、Kから見てK'がx軸に速度Vで移動しているものとする。このとき、K'においてある一つの地点Pでの時間を計測したとき
+
+$$
+    x_{\rm A}'=x_{\rm B}'、t_{\rm B}'-t_{\rm A}'=\Delta t'
+$$
+が成立する。一方で、Lotentz変換に基づいてKからK'の立場で考えてみると
+$$
+    x_{\rm B}'-x_{\rm A}'=
+    \gamma\left[
+        \left(x_{\rm B}-x_{\rm A}\right)-V\left(t_{\rm B}-t_{\rm A}\right)
+    \right]=0
+$$
+$$
+    t_{\rm B}'-t_{\rm A}'=
+    \gamma\left[
+        \left(t_{\rm B}-t_{\rm A}\right)-
+        \frac{V}{c^2}\left(x_{\rm B}-x_{\rm A}\right)
+    \right]=\Delta t'
+$$
+となる。ただし、\\(\gamma=\left(1-V^2/c^2\right)^{-1/2}\\)である。すると、以下の関係式が得られる。
+$$
+    \left(x_{\rm B}-x_{\rm A}\right)=V\left(t_{\rm B}-t_{\rm A}\right)=
+    V\Delta t
+$$
+$$
+    \Delta t'=\sqrt{1-\frac{V^2}{c^2}}\Delta t<\Delta t
+$$
+というように短く感じることになる。これが時間の短縮と呼ばれるものとなる。
+先ほどの式は時刻0から時間を計測しており \\(\Delta t = t_{\rm C}\\) となるため、この事象によることが分かる。
+
+### Lorentz収縮
+
+観測者K、K'がおり、Kから見てK'がx軸に速度Vで移動しているものとする。このとき、K'においてx軸に沿って地点Aから地点Bに置かれている棒があるとすると
+$$
+    x_{\rm B}'-x_{\rm A}'=L、t_{\rm A}'=t_{\rm B}'
+$$
+が成立する。一方で、Lotentz変換に基づいてKからK'の立場で考えてみると
+$$
+    x_{\rm B}'-x_{\rm A}'=
+    \gamma\left[
+        \left(x_{\rm B}-x_{\rm A}\right)-V\left(t_{\rm B}-t_{\rm A}\right)
+    \right]=L
+$$
+$$
+    t_{\rm B}'-t_{\rm A}'=
+    \gamma\left[
+        \left(t_{\rm B}-t_{\rm A}\right)-
+        \frac{V}{c^2}\left(x_{\rm B}-x_{\rm A}\right)
+    \right]=0
+$$
+となる。ただし、\\(\gamma=\left(1-V^2/c^2\right)^{-1/2}\\)である。すると、以下の関係式が得られる。
+$$
+    V\left(t_{\rm B}-t_{\rm A}\right)=
+    \frac{V^2}{c^2}\left(x_{\rm B}-x_{\rm A}\right)=
+    \frac{V^2}{c^2}\gamma L
+$$
+$$
+    \left(x_{\rm B}-x_{\rm A}\right)=\gamma L
+$$
+このことから、K'から見てKの視点で棒はVで極微小に動いていることが分かる。そのため、棒は地点Aから地点Bにかけて移動していることになり、静止している棒の長さは
+$$
+    \left(x_{\rm B}-x_{\rm A}\right)-
+    V\left(t_{\rm B}-t_{\rm A}\right)=
+    \sqrt{1-\frac{V^2}{c^2}}L<L
+$$
+というように短く見えることになる。これがLorentz収縮と呼ばれるものとなる。
