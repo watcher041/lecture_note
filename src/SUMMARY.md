@@ -19,5 +19,5 @@
 - [相対性理論](chapter_6/section_0.md)
   - [同時の定義](chapter_6/section_1.md)
   - [Lorentz変換](chapter_6/section_2.md)
-  - [Lorentz収縮](chapter_6/section.md)
+  - [相対論的力学](chapter_6/section_3.md)
 - [量子力学](chapter_7/section_0.md)
