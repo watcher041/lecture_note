@@ -175,19 +175,38 @@ $$
 \frac{{\rm d}\boldsymbol{p}'}{{\rm d}t'}=\frac{{\rm d}\boldsymbol{p}}{{\rm d}t}、
 \boldsymbol{F}'=\boldsymbol{F}
 $$
-となることが確認できる。また、仕事率（力と速度の内積）を求めてみると
+となることが確認できる。では、実際に速度がどうなるか等加速度運動を仮定して見てみると
+$$
+\frac{{\rm d}\boldsymbol{p}}{{\rm d}t}=\boldsymbol{C}（定ベクトル）
+$$
+において、各成分は以下の通りとなる。
+$$
+\frac{m_0 v_x}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=C_x t、
+\frac{m_0 v_y}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=C_y t、
+\frac{m_0 v_z}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=C_z t
+$$
+すると、各成分の速度の二乗を足し合わせると以下の式が得られる。
+$$
+\boldsymbol{v}^2=\frac{\frac{\boldsymbol{C}^2}{m_0^2}t^2}{1+\frac{\boldsymbol{C}^2}{m_0^2c^2}t^2}
+$$
+この式からもわかるように、加速し続けて時間が無限だけ経過しても光速になることがわかる。
+また、仕事率（力と速度の内積）を求めてみると
 $$
 \boldsymbol{F}\cdot\boldsymbol{v}=
 \frac{{\rm d}}{{\rm d}t}
 \left(\frac{m_0\boldsymbol{v}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}\right)\cdot\boldsymbol{v}=
 \frac{{\rm d}}{{\rm d}t}\left(\frac{m_0c^2}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}\right)
 $$
-となることから運動エネルギーは以下のようになることがわかる。
+となることからエネルギーは以下のようになることがわかる。
 $$
-K=\frac{m_0c^2}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=
+E=\frac{m_0c^2}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=
 m_0c^2+\frac{1}{2}m_0\boldsymbol{v}^2+\cdots=mc^2
 $$
-このように、\(v\) が \(c\) に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーとの和になることがわかる。</p>
+このように、\(v\) が \(c\) に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーとの和になることがわかる。
+そのため、運動エネルギーは以下の式から導けることになる。
+$$
+K=E-m_0c^2=\frac{1}{2}m_0\boldsymbol{v}^2+\cdots
+$$</p>
 
                     </main>
 
