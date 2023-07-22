@@ -23,7 +23,9 @@ $$
 $$
 とおき、試しに $x$ と $w$ との関係を座標で描いてみると以下の図の通りになる。
 
-![ミンコフスキー時空](images/minkofsky.png)
+<p align="center">
+    <img width="50%" src="images/minkofsky.png">
+</p>
 
 この図を見ても分かる通り、$\gamma$ が付いていない状態だと観測者K'の状況を観測者Kは自分自身の座標で見ている状態になっており、正しく同じ立場で見るためにはこの定数が付く必要があることが分かる。また、前回の最後のところででてきた
 $$
@@ -67,14 +69,14 @@ $$
 
 観測者K、K'がおり、Kから見てK'がx軸に速度Vで移動しているものとする。このとき、K'においてx軸に沿って地点Aから地点Bに置かれている棒があるとすると
 $$
-    x_{\rm B}'-x_{\rm A}'=L、t_{\rm A}'=t_{\rm B}'
+    x_{\rm B}'-x_{\rm A}'=L'、t_{\rm A}'=t_{\rm B}'
 $$
 が成立する。一方で、Lotentz変換に基づいてKからK'の立場で考えてみると
 $$
     x_{\rm B}'-x_{\rm A}'=
     \gamma\left[
         \left(x_{\rm B}-x_{\rm A}\right)-V\left(t_{\rm B}-t_{\rm A}\right)
-    \right]=L
+    \right]=L'
 $$
 $$
     t_{\rm B}'-t_{\rm A}'=
@@ -83,19 +85,13 @@ $$
         \frac{V}{c^2}\left(x_{\rm B}-x_{\rm A}\right)
     \right]=0
 $$
-となる。ただし、$\gamma=\left(1-V^2/c^2\right)^{-1/2}$である。すると、以下の関係式が得られる。
+となる。ただし、$\gamma=\left(1-V^2/c^2\right)^{-1/2}$ である。すると、以下の関係式が得られる。
 $$
     V\left(t_{\rm B}-t_{\rm A}\right)=
     \frac{V^2}{c^2}\left(x_{\rm B}-x_{\rm A}\right)=
-    \frac{V^2}{c^2}\gamma L
+    \frac{V^2}{c^2}L
 $$
 $$
-    \left(x_{\rm B}-x_{\rm A}\right)=\gamma L
+    L'=\sqrt{1-\frac{V^2}{c^2}}L<L
 $$
-このことから、K'から見てKの視点で棒はVで極微小に動いていることが分かる。そのため、棒は地点Aから地点Bにかけて移動していることになり、静止している棒の長さは
-$$
-    \left(x_{\rm B}-x_{\rm A}\right)-
-    V\left(t_{\rm B}-t_{\rm A}\right)=
-    \sqrt{1-\frac{V^2}{c^2}}L<L
-$$
-というように短く見えることになる。これがLorentz収縮と呼ばれるものとなる。
+このことから、K'から見てKの視点で棒は短く見えることになる。これがLorentz収縮と呼ばれるものとなる。ここで違いとしては、片方は静止している棒の長さを計測したのに対して、もう片方では運動している棒の長さを計測している。

@@ -11,7 +11,9 @@ $$
 
 このうち、２番目と３番目の式に関して
 $$
-  \frac{\partial B_{x}}{\partial x}+\frac{\partial B_{y}}{\partial y}+\frac{\partial B_{z}}{\partial z}=0\\\\
+  \frac{\partial B_{x}}{\partial x}+\frac{\partial B_{y}}{\partial y}+\frac{\partial B_{z}}{\partial z}=0
+$$
+$$
   \frac{\partial E_{z}}{\partial y}-\frac{\partial E_{y}}{\partial z}=-\frac{\partial B_{x}}{\partial t}、
   \frac{\partial E_{x}}{\partial z}-\frac{\partial E_{z}}{\partial x}=-\frac{\partial B_{y}}{\partial t}、
   \frac{\partial E_{y}}{\partial x}-\frac{\partial E_{x}}{\partial y}=-\frac{\partial B_{z}}{\partial t}
@@ -29,13 +31,19 @@ $$
 $$
     \gamma\frac{\partial B_x}{\partial x'}+
     \frac{\partial B_y}{\partial y'}+
-    \frac{\partial B_z}{\partial z'}=\gamma\frac{V}{c^2}\frac{\partial B_x}{\partial t'}\\\\
+    \frac{\partial B_z}{\partial z'}=\gamma\frac{V}{c^2}\frac{\partial B_x}{\partial t'}
+$$
+$$
     -\gamma V\frac{\partial B_{x}}{\partial x'}+
     \frac{\partial E_{z}}{\partial y'}-\frac{\partial E_{y}}{\partial z'}=
-    -\gamma\frac{\partial B_{x}}{\partial t'}\\\\
+    -\gamma\frac{\partial B_{x}}{\partial t'}
+$$
+$$
     \frac{\partial E_{x}}{\partial z'}-
     \frac{\partial }{\partial x'}\gamma\left(E_{z}+VB_{y}\right)=
-    -\frac{\partial }{\partial t'}\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)\\\\
+    -\frac{\partial }{\partial t'}\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)
+$$
+$$
     \frac{\partial }{\partial x'}\gamma\left(E_{y}-VB_{z}\right)-
     \frac{\partial E_{x}}{\partial  y'}=
     -\frac{\partial }{\partial t'}\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
@@ -44,7 +52,9 @@ $$
 $$
     -\gamma V\frac{\partial B_x}{\partial x'}-
     V\frac{\partial B_y}{\partial y'}-
-    V\frac{\partial B_z}{\partial z'}=-\gamma\frac{V^2}{c^2}\frac{\partial B_x}{\partial t'}\\\\
+    V\frac{\partial B_z}{\partial z'}=-\gamma\frac{V^2}{c^2}\frac{\partial B_x}{\partial t'}
+$$
+$$
     \gamma V\frac{\partial B_{x}}{\partial x'}-
     \frac{\partial E_{z}}{\partial y'}+\frac{\partial E_{y}}{\partial z'}=
     \gamma\frac{\partial B_{x}}{\partial t'}
@@ -65,13 +75,19 @@ $$
 $$
     \frac{\partial B_x}{\partial x'}+
     \frac{\partial}{\partial y'}\gamma\left(B_y+\frac{V}{c^2}E_z\right)+
-    \frac{\partial}{\partial z'}\gamma\left(B_z-\frac{V}{c^2}E_y\right)=0\\\\
+    \frac{\partial}{\partial z'}\gamma\left(B_z-\frac{V}{c^2}E_y\right)=0
+$$
+$$
     \frac{\partial}{\partial y'}\gamma(E_z+VB_y)-
     \frac{\partial}{\partial z'}\gamma(E_y-VB_z)=
-    -\frac{\partial B_x}{\partial t'}\\\\
+    -\frac{\partial B_x}{\partial t'}
+$$
+$$
     \frac{\partial E_{x}}{\partial z'}-
     \frac{\partial }{\partial x'}\gamma\left(E_{z}+VB_{y}\right)=
-    -\frac{\partial }{\partial t'}\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)\\\\
+    -\frac{\partial }{\partial t'}\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)
+$$
+$$
     \frac{\partial }{\partial x'}\gamma\left(E_{y}-VB_{z}\right)-
     \frac{\partial E_{x}}{\partial  y'}=
     -\frac{\partial }{\partial t'}\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
@@ -80,8 +96,11 @@ $$
 $$
     E_{x'}=E_{x}、
     E_{y'}=\gamma\left(E_{y}-VB_{z}\right)、
-    E_{z'}=\gamma\left(E_{z}+VB_{y}\right)\\\\
+    E_{z'}=\gamma\left(E_{z}+VB_{y}\right)
+$$
+$$
     B_{x'}=B_{x}、
     B_{y'}=\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)、
     B_{z'}=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
 $$
+電場については、Lorentz力による項が追加されており、
