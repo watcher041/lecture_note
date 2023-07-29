@@ -25,6 +25,7 @@
   - [光の電磁波説](chapter_4/section_3.md)
   - [光と物体との相互作用](chapter_4/section_4.md)
 - [解析力学](chapter_5/section_0.md)
+  - [Lagrange形式](chapter_5/section_1.md)
 - [統計力学](chapter_6/section_0.md)
 - [相対性理論](chapter_7/section_0.md)
   - [同時の定義](chapter_7/section_1.md)
