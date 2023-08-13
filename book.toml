@@ -11,6 +11,7 @@ mathjax-support = false
 [preprocessor.katex]
 after = ["links"]
 
+# cargo install mdbook-katex
 # github pagesのため、docs にビルド結果を出力
 # mdbook build --dest-dir docs
 # 数式は以下のように記載する
