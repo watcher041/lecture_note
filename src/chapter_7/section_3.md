@@ -26,10 +26,18 @@ $$
 $$
 というようになることがわかる。ここで $m_0$ は物体が静止しているときの質量としている。実際にこの形で確認してみると
 $$
-    \frac{{\rm d}\boldsymbol{p}'}{{\rm d}t'}=\frac{{\rm d}\boldsymbol{p}}{{\rm d}t}、
-    \boldsymbol{F}'=\boldsymbol{F}
+    \frac{{\rm d}\boldsymbol{p}'}{{\rm d}\tau'}=\frac{{\rm d}\boldsymbol{p}}{{\rm d}\tau}、
+    \boldsymbol{f}'=\boldsymbol{f}、
+    \left(
+        \tau=
+        t\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}、
+        \boldsymbol{f}=
+        \frac{\boldsymbol{F}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    \right)
 $$
-となることが確認できる。では、実際に速度がどうなるか等加速度運動を仮定して見てみると
+となることが確認できる。ここで$\tau$というのは固有時と呼ばれるものとなり、
+
+では、実際に速度がどうなるか等加速度運動を仮定して見てみると
 $$
     \frac{{\rm d}\boldsymbol{p}}{{\rm d}t}=\boldsymbol{C}（定ベクトル）
 $$
@@ -61,3 +69,5 @@ $$
 $$
     K=E-m_0c^2=\frac{1}{2}m_0\boldsymbol{v}^2+\cdots
 $$
+
+しかし、重力が関わってくるとうまく説明ができないという欠点がでてくる。
