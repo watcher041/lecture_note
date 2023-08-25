@@ -17,6 +17,7 @@
   - [エントロピーについて](chapter_2/section.md)
 - [電磁気学](chapter_3/section_0.md)
   - [静電気](chapter_3/section_1.md)
+  - [遠隔作用と近接作用](chapter_3/section_2.md)
 - [光学](chapter_4/section_0.md)
   - [幾何光学](chapter_4/section_1.md)
   - [Fermatの原理](chapter_4/section_2.md)
