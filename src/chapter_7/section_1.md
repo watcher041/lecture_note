@@ -7,29 +7,58 @@ $$
     t_{\rm C}-t_{\rm B}=t_{\rm B}-t_{\rm A}
 $$
 
-この信号としては光がある（真空中でも伝わる）。さらに過去の実験結果を踏まえて、観測者ごとに光の速度が同じように見える（**光速度不変の原理**）ものとして観測者間の関係を見てみよう。まず、観測者Kと観測者K'が同じ位置にいてKから見てK'が時刻0にて速さ $V$ で $x$ 軸に沿って動いたとする。同時に光を原点から放出して地点Bにて折り返す。このとき、各観測者から見てどのような式が成り立つか見てみると
+この信号としては光がある（真空中でも伝わる）。さらに過去の実験結果を踏まえて、観測者ごとに光の速度が同じように見える（**光速度不変の原理**）ものとして観測者間の関係を見てみよう。
 
-$$
-    x_{\rm B}'^2+y_{\rm B}'^2+z_{\rm B}'^2=(ct_{\rm B}')^2、
-    x_{\rm C}'=y_{\rm C}'=z_{\rm C}'=0、
-    t_{\rm C}'=2t_{\rm B}'
-$$
 
+
+まず、下図のように観測者Kと観測者K'が同じ位置にいてKから見てK'が時刻0にて速さ $V$ で $x$ 軸に沿って動いたとする。同時に光を原点から放出して地点Bにて折り返す。このとき、各観測者から見てどのような式が成り立つか見てみると以下のようになる。
+
+<table>
+<tr>
+<td>
+    <img src="images/simultaneous.png">
+</td>
+<td>
 $$
-    x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2、
-    x_{\rm C}-Vt_{\rm C}=y_{\rm C}=z_{\rm C}=0\\\\
     \left[c(t_{\rm C}-t_{\rm B})\right]^2=
-    (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)\\\\
-    →t_{\rm C}=2\frac{c^2}{c^2-V^2}
+    (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)
+$$
+</td>
+</table>
+
+<table>
+<tr><td>
+$$
+    x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2
+$$
+$$
+    x_{\rm C}-Vt_{\rm C}=y_{\rm C}=z_{\rm C}=0
+$$
+$$
+    t_{\rm C}=2\frac{c^2}{c^2-V^2}
     \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
 $$
+</td>
+<td>
+$$
+    x_{\rm B}'^2+y_{\rm B}'^2+z_{\rm B}'^2=(ct_{\rm B}')^2
+$$
+$$
+    x_{\rm C}'=y_{\rm C}'=z_{\rm C}'=0
+$$
+$$
+    t_{\rm C}'=2t_{\rm B}'
+$$
+</td></tr>
+</table>
 
-というようになる。ここで各観測者の間で
+ここでC点において各観測者の間で
 $$
     x_{\rm C}'\Leftrightarrow x_{\rm C}-Vt_{\rm C}、
     y_{\rm C}'\Leftrightarrow y_{\rm C}、
     z_{\rm C}'\Leftrightarrow z_{\rm C}、
-    t_{\rm C}'\Leftrightarrow t_{\rm C}、\\\\
+    t_{\rm C}'\Leftrightarrow t_{\rm C}、
+
     t_{\rm B}'\Leftrightarrow 
     \frac{c^2}{c^2-V^2}\left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
 $$
@@ -38,7 +67,7 @@ $$
     x'=x-Vt、y'=y、z'=z、
     t'=\frac{c^2}{c^2-V^2}\left(t-\frac{V}{c^2}x\right)
 $$
-としてみると、一部の式以外は成立していることが分かる。
+しかし、B点での関係式は満たさないという問題が起きる。
 $$
     x'^2-(ct')^2\ne x^2-(ct)^2
 $$
