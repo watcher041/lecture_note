@@ -24,13 +24,11 @@ $$
     \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
     \bm{p}=m\bm{v}
 $$
-今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでにN.LwisとC.Tolmanの論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量とエネルギーが保存されることを利用して導いている。これによると
+今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでにN.LwisとC.Tolmanの論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 $$
     m(\bm{v})=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
-というようになることがわかる。ここで $m_0$ は物体が静止しているときの質量としている。
-
-　以上のことをふまえて、各観測者ごとに変換がどのようになるかまず質量を見てみると
+というようになるとされている。ここで $m_0$ は物体が静止しているときの質量としている。では、観測者ごとにどうなるかを見ていくと、まず質量に関して
 $$
     m(\bm{v}')=
     \frac{m_0}{\sqrt{1-\frac{\bm{v'}^2}{c^2}}}
@@ -87,12 +85,8 @@ $$
     \gamma
     \left[
         F_x-
-        \frac{V}{c^2}
-        \gamma(\bm{v})^2
-        \left(
-        \bm{p}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-        \right)
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        (m(\bm{v})V)
     \right]
 $$
 $$
@@ -113,21 +107,27 @@ $$
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     F_z
 $$
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t'}
+    (m(\bm{v}')v_w')=
+    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    (m(\bm{v})c)=
+    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    F_w
+$$
 ここで、右辺は力に等しいとしているため
 $$
     F_x'\mathrm{d}t'=
     \gamma
     \left[
         F_x-
-        \frac{V}{c^2}
-        \gamma(\bm{v})^2
-        \left(
-        \bm{p}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-        \right)
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        (m(\bm{v})V)
     \right]\mathrm{d}t、
     F_y'\mathrm{d}t'=F_y\mathrm{d}t、
-    F_z'\mathrm{d}t'=F_z\mathrm{d}t
+    F_z'\mathrm{d}t'=F_z\mathrm{d}t、
+    F_w'\mathrm{d}t'=F_w\mathrm{d}t
 $$
 となり、力積（運動量の変化）が等しい形になる。そのため
 $$
@@ -158,9 +158,10 @@ $$
 として、運動方程式を以下のようにしてみよう。
 $$
     \bm{f}=
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \bm{f}\equiv\gamma(\bm{v})\bm{F}
 $$
-こちらも同じように変換がどのようになるかというと、質量に関しては同じとなるが、各成分についてはそれぞれ
+こちらも同じように見ていくと、質量に関しては同じとなる一方で各成分についてはそれぞれ
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
     (m(\bm{v}')v_x')=
@@ -172,15 +173,9 @@ $$
         (m(\bm{v})V)
     \right]=
     \gamma
-    \left[
-        f_x-
-        \frac{V}{c^2}
-        \gamma(\bm{v})
-        \left(
-        \bm{p}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}\tau}
-        \right)
-    \right]
+    \left(
+        f_x-\frac{V}{c}f_w
+    \right)
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
@@ -194,44 +189,60 @@ $$
     \frac{\mathrm{d}}{\mathrm{d}\tau}
     (m(\bm{v})v_z)=f_z
 $$
-
-
-<!-- 固有時を利用すると、以下のようになる。
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_x')=
-    \gamma
-    \left[
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})v_x)-
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})V)
-    \right]=
-    \gamma
-    \left[
-        \gamma(\bm{v})F_x-
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})V)
-    \right]
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_y')=
+    (m(\bm{v}')v_w')=
     \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\bm{v})v_y)=
-    \gamma(\bm{v})F_y
+    (m(\bm{v})c)=f_w
 $$
+となる。このことから、下記のように力に関して対応していることが分かる。
 $$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_z')=
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\bm{v})v_z)=
-    \gamma(\bm{v})F_z
+    f_x'=
+    \gamma\left(
+        f_x-\frac{V}{c}f_w
+    \right)、
+    f_y'=f_y、
+    f_z'=f_z、
+    f_w'=f_w
+$$
+また、運動量に対してエネルギーも保存するため、まずエネルギーがどのような形になるか確認するため仕事率（力と速度の内積）を求めてみると
+$$
+    \bm{f}\cdot\bm{v}=
+    \frac{{\rm d}}{{\rm d}\tau}
+    \left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
+    \frac{{\rm d}}{{\rm d}\tau}
+    \left(
+        \frac{m_0c^2}
+        {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \right)=
+    \frac{{\rm d}}{{\rm d}\tau}
+    \left(m(\bm{v})c^2\right)
+$$
+となるため、エネルギーは以下の形になることが分かる。
+$$
+    E=m(\bm{v})c^2=
+    m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
+$$
+このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており、
+$$
+    f_w=
+    \frac{1}{c}(\bm{f}\cdot\bm{v})=
+    \frac{1}{c}
+    \frac{{\rm d}E}{{\rm d}\tau}
+$$
+であるため、改めて力の変換式は次の通りになる。
+$$
+    f_x'=
+    \gamma\left(
+        f_x-\frac{V}{c}f_w
+    \right)、
+    f_y'=f_y、
+    f_z'=f_z、
+    \frac{1}{c}(\bm{f}'\cdot\bm{v}')=
+    \frac{1}{c}(\bm{f}\cdot\bm{v})
 $$
 
-
- -->
-
+この式からもわかるように、加速し続けて時間が無限だけ経過しても光速になることがわかる。
 では、実際に速度がどうなるか等加速度運動を仮定して見てみると
 $$
     \frac{{\rm d}\bm{p}}{{\rm d}t}=\bm{C}（定ベクトル）
@@ -245,24 +256,6 @@ $$
 すると、各成分の速度の二乗を足し合わせると以下の式が得られる。
 $$
     \bm{v}^2=\frac{\frac{\bm{C}^2}{m_0^2}t^2}{1+\frac{\bm{C}^2}{m_0^2c^2}t^2}
-$$
-この式からもわかるように、加速し続けて時間が無限だけ経過しても光速になることがわかる。
-また、仕事率（力と速度の内積）を求めてみると
-$$
-    \bm{F}\cdot\bm{v}=
-    \frac{{\rm d}}{{\rm d}t}
-    \left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
-    \frac{{\rm d}}{{\rm d}t}\left(\frac{m_0c^2}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)
-$$
-となることからエネルギーは以下のようになることがわかる。
-$$
-    E=\frac{m_0c^2}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}=
-    m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots=mc^2
-$$
-このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーとの和になることがわかる。
-そのため、運動エネルギーは以下の式から導けることになる。
-$$
-    K=E-m_0c^2=\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 
 しかし、重力が関わってくるとうまく説明ができないという欠点がでてくる。
