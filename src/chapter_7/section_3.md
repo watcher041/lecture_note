@@ -233,9 +233,9 @@ $$
 であるため、改めて力の変換式は次の通りになる。
 $$
     f_x'=
-    \gamma\left(
-        f_x-\frac{V}{c}f_w
-    \right)、
+    \gamma\left[
+        f_x-\frac{V}{c^2}(\bm{f}\cdot\bm{v})
+    \right]、
     f_y'=f_y、
     f_z'=f_z、
     \frac{1}{c}(\bm{f}'\cdot\bm{v}')=
