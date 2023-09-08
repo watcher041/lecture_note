@@ -257,7 +257,8 @@ $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
     (\bm{f}\cdot\bm{v})=
-    \frac{\mathrm{d}E}{\mathrm{d}\tau}
+    \frac{\mathrm{d}E}{\mathrm{d}\tau}、
+    \bm{p}=m(\bm{v})\bm{v}、E=m(\bm{v})c^2
 $$
 $$
     f_x'=
