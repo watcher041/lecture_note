@@ -266,30 +266,11 @@ $$
         \frac{V}{c^2}(\bm{f}\cdot\bm{v})
     \right]、
     f_y'=f_y、
-    f_z'=f_z、
+    f_z'=f_z
+    \rightarrow
     (\bm{f}'\cdot\bm{v}')=
     \gamma\left[
         (\bm{f}\cdot\bm{v})-
         \frac{V}{c^2}f_x
     \right]
 $$
-
-この式からもわかるように、加速し続けて時間が無限だけ経過しても光速になることがわかる。
-では、実際に速度がどうなるか等加速度運動を仮定して見てみると
-$$
-    \frac{{\rm d}\bm{p}}{{\rm d}t}=\bm{C}（定ベクトル）、
-    \frac{{\rm d}E}{{\rm d}t}=
-    \bm{C}\cdot\bm{v}
-$$
-において、各成分は以下の通りとなる。
-$$
-    \frac{m_0 v_x}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}=C_x t、
-    \frac{m_0 v_y}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}=C_y t、
-    \frac{m_0 v_z}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}=C_z t
-$$
-すると、各成分の速度の二乗を足し合わせると以下の式が得られる。
-$$
-    \bm{v}^2=\frac{\frac{\bm{C}^2}{m_0^2}t^2}{1+\frac{\bm{C}^2}{m_0^2c^2}t^2}
-$$
-
-しかし、重力が関わってくるとうまく説明ができないという欠点がでてくる。
