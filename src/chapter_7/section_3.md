@@ -8,8 +8,7 @@ $$
     \gamma\left(1-\frac{v_xV}{c^2}\right)}、
     v_z'=\frac{v_z}{
     \gamma\left(1-\frac{v_xV}{c^2}\right)}、
-    v'_w=\frac{c}{
-    \gamma\left(1-\frac{v_xV}{c^2}\right)}
+    v'_w=c
 $$
 となるが、ここで $v_x'$ に着目すると $v_x$ に対して以下の条件下でないと発散することが分かる。
 $$
@@ -83,11 +82,9 @@ $$
     \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \gamma
-    \left[
-        F_x-
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})V)
-    \right]
+    \left(
+        F_x-\frac{V}{c}F_w
+    \right)
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
@@ -111,20 +108,26 @@ $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
     (m(\bm{v}')v_w')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (m(\bm{v})c)=
+    \left[
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        (m(\bm{v})c)-
+        \frac{V}{c}
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        (m(\bm{v})v_x)
+    \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
-    F_w
+    \gamma
+    \left(
+        F_w-\frac{V}{c}F_x
+    \right)
 $$
 ここで、右辺は力に等しいとしているため
 $$
     F_x'\mathrm{d}t'=
     \gamma
-    \left[
-        F_x-
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})V)
-    \right]\mathrm{d}t、
+    \left(
+        F_x-\frac{V}{c}F_w
+    \right)\mathrm{d}t、
     F_y'\mathrm{d}t'=F_y\mathrm{d}t、
     F_z'\mathrm{d}t'=F_z\mathrm{d}t、
     F_w'\mathrm{d}t'=F_w\mathrm{d}t
@@ -192,8 +195,18 @@ $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
     (m(\bm{v}')v_w')=
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\bm{v})c)=f_w
+    \gamma
+    \left[
+        \frac{\mathrm{d}}{\mathrm{d}\tau}
+        (m(\bm{v})c)-
+        \frac{V}{c}
+        \frac{\mathrm{d}}{\mathrm{d}\tau}
+        (m(\bm{v})v_x)
+    \right]=
+    \gamma
+    \left(
+        f_w-\frac{V}{c}f_x
+    \right)
 $$
 となる。このことから、下記のように力に関して対応していることが分かる。
 $$
@@ -203,7 +216,11 @@ $$
     \right)、
     f_y'=f_y、
     f_z'=f_z、
-    f_w'=f_w
+    f_w'=
+    \gamma
+    \left(
+        f_w-\frac{V}{c}f_x
+    \right)
 $$
 また、運動量に対してエネルギーも保存するため、まずエネルギーがどのような形になるか確認するため仕事率（力と速度の内積）を求めてみると
 $$
@@ -223,29 +240,42 @@ $$
     E=m(\bm{v})c^2=
     m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
-このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており、
+このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており、整理すると次の通りになる。
 $$
     f_w=
     \frac{1}{c}(\bm{f}\cdot\bm{v})=
     \frac{1}{c}
     \frac{{\rm d}E}{{\rm d}\tau}
 $$
-であるため、改めて力の変換式は次の通りになる。
+
+以上を踏まえて、運動方程式と変換式を書き下すと以下のようになる。
+$$
+    \bm{f}=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    (\bm{f}\cdot\bm{v})=
+    \frac{\mathrm{d}E}{\mathrm{d}\tau}
+$$
 $$
     f_x'=
     \gamma\left[
-        f_x-\frac{V}{c^2}(\bm{f}\cdot\bm{v})
+        f_x-
+        \frac{V}{c^2}(\bm{f}\cdot\bm{v})
     \right]、
     f_y'=f_y、
     f_z'=f_z、
-    \frac{1}{c}(\bm{f}'\cdot\bm{v}')=
-    \frac{1}{c}(\bm{f}\cdot\bm{v})
+    (\bm{f}'\cdot\bm{v}')=
+    \gamma\left[
+        (\bm{f}\cdot\bm{v})-
+        \frac{V}{c^2}f_x
+    \right]
 $$
 
 この式からもわかるように、加速し続けて時間が無限だけ経過しても光速になることがわかる。
 では、実際に速度がどうなるか等加速度運動を仮定して見てみると
 $$
-    \frac{{\rm d}\bm{p}}{{\rm d}t}=\bm{C}（定ベクトル）
+    \frac{{\rm d}\bm{p}}{{\rm d}t}=\bm{C}（定ベクトル）、
+    \frac{{\rm d}E}{{\rm d}t}=
+    \bm{C}\cdot\bm{v}
 $$
 において、各成分は以下の通りとなる。
 $$
