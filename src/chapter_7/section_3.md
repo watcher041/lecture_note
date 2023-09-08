@@ -130,7 +130,11 @@ $$
     \right)\mathrm{d}t、
     F_y'\mathrm{d}t'=F_y\mathrm{d}t、
     F_z'\mathrm{d}t'=F_z\mathrm{d}t、
-    F_w'\mathrm{d}t'=F_w\mathrm{d}t
+    F_w'\mathrm{d}t'=
+    \gamma
+    \left(
+        F_w-\frac{V}{c}F_x
+    \right)\mathrm{d}t
 $$
 となり、力積（運動量の変化）が等しい形になる。そのため
 $$
