@@ -272,6 +272,32 @@ $$
     (\bm{f}'\cdot\bm{v}')=
     \gamma\left[
         (\bm{f}\cdot\bm{v})-
-        \frac{V}{c^2}f_x
+        Vf_x
     \right]
 $$
+これらの式に基づいて、実際に重力がかかる場合の運動を考えてみる。重力には質量が関わってくるが、この質量というのは**重力質量**と呼ばれ、実質的には違うものとなっている。先ほどの質量は慣性（運動の状態を維持しようとする性質）がどのくらいかを表す**慣性質量**（加速のしにくさ）に相当している。そのため、運動方程式は以下の通りになる。
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        \frac{m_0\bm{v}}
+        {\sqrt{1-\frac{\bm{v}^2}{c}}}
+    \right)=
+    m_0\bm{g}、
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        \frac{m_0c^2}
+        {\sqrt{1-\frac{\bm{v}^2}{c}}}
+    \right)=
+    m_0(\bm{g}\cdot\bm{v})
+$$
+ここで、静止した状態から落とした状況を考えると
+$$
+    \frac{m_0\bm{v}}
+    {\sqrt{1-\frac{\bm{v}^2}{c}}}=
+    m_0\bm{g}t、
+    \frac{m_0c^2}
+    {\sqrt{1-\frac{\bm{v}^2}{c}}}=
+    m_0c^2+
+    m_0\bm{g}\cdot(\bm{r}-\bm{r}_0)
+$$
+と
