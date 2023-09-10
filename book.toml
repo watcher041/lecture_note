@@ -1,12 +1,12 @@
 [book]
 authors = ["watcher041"]
-language = "en"
+language = "ja"
 multilingual = false
 src = "src"
 title = "物理学入門"
 
 [output.html]
-mathjax-support = false
+additional-css = ["option.css"]
 
 [preprocessor.katex]
 after = ["links"]
