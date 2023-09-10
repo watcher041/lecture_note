@@ -194,3 +194,12 @@ $$
         qE_z+q(v_xB_y-v_yB_x)
     \right]
 $$
+$$
+    f_w'=
+    \frac{1}{c\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    (\bm{v}'\cdot q\bm{E}')
+    \leftrightarrow
+    f_w=
+    \frac{1}{c\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    (\bm{v}\cdot q\bm{E})
+$$
