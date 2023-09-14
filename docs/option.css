@@ -1,2 +1,4 @@
 
-.katex-display { overflow: auto hidden }
+.katex-display { 
+    overflow: auto hidden 
+}
