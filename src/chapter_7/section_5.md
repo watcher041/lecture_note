@@ -288,3 +288,13 @@ $$
     \mathrm{d}x'^\mu=
     e_{\ \ \nu}^\mu\mathrm{d}x^\nu
 $$
+そして、この大きさというのは2乗にして表すことが多く、
+$$
+    \mathrm{d}s'^2=
+    \mathrm{d}x'_\mu\mathrm{d}x'^\mu=
+    (e_{\mu\nu}\mathrm{d}x^\nu)
+    (e_{\ \ \xi}^{\mu}\mathrm{d}x^\xi)=
+    g_{\nu\xi}\mathrm{d}x^\nu\mathrm{d}x^\xi、
+    (g_{\nu\xi}=e_{\mu\nu}e_{\ \ \xi}^{\mu})
+$$
+となるが、ここで現れる $g_{\nu\xi}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。
