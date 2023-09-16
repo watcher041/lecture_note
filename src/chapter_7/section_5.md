@@ -290,11 +290,42 @@ $$
 $$
 そして、この大きさというのは2乗にして表すことが多く、
 $$
-    \mathrm{d}s'^2=
+    \mathrm{d}s^2=
     \mathrm{d}x'_\mu\mathrm{d}x'^\mu=
     (e_{\mu\nu}\mathrm{d}x^\nu)
     (e_{\ \ \xi}^{\mu}\mathrm{d}x^\xi)=
     g_{\nu\xi}\mathrm{d}x^\nu\mathrm{d}x^\xi、
     (g_{\nu\xi}=e_{\mu\nu}e_{\ \ \xi}^{\mu})
 $$
-となるが、ここで現れる $g_{\nu\xi}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。
+となるが、ここで現れる $g_{\nu\xi}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる。
+$$
+    \mathrm{d}s^2=
+    g'_{\mu\nu}
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    g_{\mu\nu}
+    \mathrm{d}x^\mu\mathrm{d}x^\nu、
+    （g'_{\mu\nu}=
+    e_{\mu\xi}'e_{\ \ \nu}'^{\xi}、
+    g_{\mu\nu}=
+    e_{\mu\xi}e_{\ \ \nu}^{\xi}
+    ）
+$$
+実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
+$$
+    \mathrm{d}t'
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
+    \mathrm{d}t
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
+$$
+であったが、変位の形に整理して二乗にすると不変な形をしていることが分かる。
+$$
+    ds^2=
+    \mathrm{d}w'^2-
+    \mathrm{d}x'^2-
+    \mathrm{d}y'^2-
+    \mathrm{d}z'^2=
+    \mathrm{d}w^2-
+    \mathrm{d}x^2-
+    \mathrm{d}y^2-
+    \mathrm{d}z^2
+$$
