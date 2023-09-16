@@ -23,7 +23,7 @@ $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
 $$
-となるわけだが、これを行列を用いて記載すると以下のようになる。
+となるわけだが、行列でまとめて以下のように記載することもできる。
 $$
 \begin{pmatrix}
     w' \\
@@ -45,7 +45,7 @@ $$
     z
 \end{pmatrix}
 $$
-これをもう少し扱いやすくするために、添え字に行列の番号を振って
+あるいは、これをさらに扱い易くするよう添え字に行列の番号を振って
 $$
 \begin{pmatrix}
     x'^0 \\
@@ -55,14 +55,14 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-    g_{\ \  0}^0 & g_{\ \  1}^0 & 
-    g_{\ \  2}^0 & g_{\ \  3}^0 \\
-    g_{\ \  0}^1 & g_{\ \  1}^1 & 
-    g_{\ \  2}^1 & g_{\ \  3}^1 \\
-    g_{\ \  0}^2 & g_{\ \  1}^2 & 
-    g_{\ \  2}^2 & g_{\ \  3}^2 \\
-    g_{\ \  0}^3 & g_{\ \  1}^3 & 
-    g_{\ \  2}^3 & g_{\ \  3}^3 
+    \alpha_{\ \  0}^0 & \alpha_{\ \  1}^0 & 
+    \alpha_{\ \  2}^0 & \alpha_{\ \  3}^0 \\
+    \alpha_{\ \  0}^1 & \alpha_{\ \  1}^1 & 
+    \alpha_{\ \  2}^1 & \alpha_{\ \  3}^1 \\
+    \alpha_{\ \  0}^2 & \alpha_{\ \  1}^2 & 
+    \alpha_{\ \  2}^2 & \alpha_{\ \  3}^2 \\
+    \alpha_{\ \  0}^3 & \alpha_{\ \  1}^3 & 
+    \alpha_{\ \  2}^3 & \alpha_{\ \  3}^3 
 \end{pmatrix}
 \begin{pmatrix}
     x^0 \\
@@ -71,10 +71,15 @@ $$
     x^3
 \end{pmatrix}
 $$
-とかくと、ベクトルを用いて以下のようにもかける。
+とおくと、ベクトルを用いて書くこともできる。
 $$
     x'^\mu=
-    \sum_{\nu=0}^{3}g_{\ \  \nu}^\mu x^\nu　
+    \sum_{\nu=0}^{3}\alpha_{\ \  \nu}^\mu x^\nu　
+    (\mu=0,1,2,3)
+$$
+あるいは、今ここで $\nu$ に対して総和をとっているが、行列においては下付き添え字（行）と上付き添え字（列）の掛け算は足し合わせることになるので、以下のように総和記号を省いた表記（**Einsteinの縮約記法**）がよく用いられている。
+$$
+    x'^\mu=\alpha_{\ \  \nu}^\mu x^\nu　
     (\mu=0,1,2,3)
 $$
 一方で、Lorentz変換においても
@@ -109,7 +114,7 @@ $$
     z
 \end{pmatrix}
 $$
-であるため、先ほどのように $g$ を用いた表記をすることができる。ところが、つい先ほど扱った加速度の系の場合だと
+であるため、先ほどと同様に $\alpha$ を用いた表記をすることができる。ところが、つい先ほど扱った加速度の系の場合だと
 $$
     w'=w、x'=-\frac{a}{2c^2}w^2+x、
     y'=y,z'=z
@@ -121,30 +126,165 @@ $$
     y'=y'(w,x,y,z)、
     z'=z'(w,x,y,z)
 $$
-ここで確認したいのは、互いに加速する場合に変換式がどのようになるかということであるため、加速度を求めてみると、
+そして後で加速度運動を取り扱うことを考慮して、まず速度を求めてみると
 $$
-    \frac{\mathrm{d}^2w'}{\mathrm{d}t'^2}=
+    \frac{\mathrm{d}w'}{\mathrm{d}t'}=
+    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \left(
+        \frac{\partial w'}{\partial w}
+    \right)+
+    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \left(
+        \frac{\partial w'}{\partial x}
+    \right)+
+    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \left(
+        \frac{\partial w'}{\partial y}
+    \right)+
+    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \left(
+        \frac{\partial w'}{\partial z}
+    \right)
 $$
-
-一方で、ベクトルというのは基底を用いて表すこともでき、
 $$
-    x'^\mu=x'^0e'^\mu_0+x'^1e'^\mu_1+
-            x'^1e'^\mu_1+x'^1e'^\mu_1=
-            A^0e_0^\mu+A^1e_1^\mu+
-            A^2e_2^\mu+A^3e_3^\mu
+    \frac{\mathrm{d}x'}{\mathrm{d}t'}=
+    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \left(
+        \frac{\partial x'}{\partial w}
+    \right)+
+    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \left(
+        \frac{\partial x'}{\partial x}
+    \right)+
+    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \left(
+        \frac{\partial x'}{\partial y}
+    \right)+
+    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \left(
+        \frac{\partial x'}{\partial z}
+    \right)
 $$
 $$
-    x^\mu=x^0e^\mu_0+x^1e^\mu_1+
-            x^1e^\mu_1+x^1e^\mu_1=
-            B^0e_0'^\mu+B^1e_1'^\mu+
-            B^2e_2'^\mu+B^3e_3'^\mu
+    \frac{\mathrm{d}y'}{\mathrm{d}t'}=
+    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \left(
+        \frac{\partial y'}{\partial w}
+    \right)+
+    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \left(
+        \frac{\partial y'}{\partial x}
+    \right)+
+    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \left(
+        \frac{\partial y'}{\partial y}
+    \right)+
+    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \left(
+        \frac{\partial y'}{\partial z}
+    \right)
 $$
-というに書くと、各成分というのは内積をとることで求めることができる。例として、$x'0$ 成分については
 $$
-    e'_{0\mu}x'^\mu=x'^0(e'_{0\mu}e'^\mu_0)
+    \frac{\mathrm{d}z'}{\mathrm{d}t'}=
+    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \left(
+        \frac{\partial z'}{\partial w}
+    \right)+
+    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \left(
+        \frac{\partial z'}{\partial x}
+    \right)+
+    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \left(
+        \frac{\partial z'}{\partial y}
+    \right)+
+    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \left(
+        \frac{\partial z'}{\partial z}
+    \right)
 $$
-
-
+であるのだが、これ書き直すと以下のような形で書けることが分かる。
 $$
-    g_{a\,\, c\,\, e}^{\,\, b\,\, d\,\,}
+\begin{pmatrix}
+    \frac{\mathrm{d}w'}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}x'}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}y'}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}z'}{\mathrm{d}t'}
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \frac{\partial w'}{\partial w} & 
+    \frac{\partial w'}{\partial x} & 
+    \frac{\partial w'}{\partial y} & 
+    \frac{\partial w'}{\partial z} \\
+    \frac{\partial x'}{\partial w} & 
+    \frac{\partial x'}{\partial x} & 
+    \frac{\partial x'}{\partial y} & 
+    \frac{\partial x'}{\partial z} \\
+    \frac{\partial y'}{\partial w} & 
+    \frac{\partial y'}{\partial x} & 
+    \frac{\partial y'}{\partial y} & 
+    \frac{\partial y'}{\partial z} \\
+    \frac{\partial z'}{\partial w} & 
+    \frac{\partial z'}{\partial x} & 
+    \frac{\partial z'}{\partial y} & 
+    \frac{\partial z'}{\partial z} \\
+\end{pmatrix}
+\begin{pmatrix}
+    \frac{\mathrm{d}w}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}x}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}y}{\mathrm{d}t'} \\
+    \frac{\mathrm{d}z}{\mathrm{d}t'}
+\end{pmatrix}
+$$
+そのため、ベクトルで以下のように記述できる。
+$$
+    \frac{\mathrm{d}x'^\mu}{\mathrm{d}t'}=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
+    \frac{\mathrm{d}x^\nu}{\mathrm{d}t'}
+$$
+ここで一つ、時間の項を除いて座標の微小量の関係で表す（と
+$$
+    \mathrm{d}x'^\mu=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
+    \mathrm{d}x^\nu
+$$
+であるので、先ほどの一定加速度での行列は次の通りになる。
+$$
+\begin{pmatrix}
+    \mathrm{d}x'^0 \\
+    \mathrm{d}x'^1 \\
+    \mathrm{d}x'^2 \\
+    \mathrm{d}x'^3
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    -ax^0/c^2 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+    \mathrm{d}x^0 \\
+    \mathrm{d}x^1 \\
+    \mathrm{d}x^2 \\
+    \mathrm{d}x^3
+\end{pmatrix}
+$$
+さらに、ここでの偏微分の部分は接線ベクトルにあたるため、これを基本ベクトル $e$ 以下のように書くこともできる（偏微分のほうも、分母の添え字を用いて簡潔に表現する）。
+$$
+    e_{\ \ \nu}^\mu=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)=
+    \partial_\nu x'^\mu
+$$
+そのため、先ほどと同様に以下のように表される。
+$$
+    \mathrm{d}x'^\mu=
+    e_{\ \ \nu}^\mu\mathrm{d}x^\nu
 $$
