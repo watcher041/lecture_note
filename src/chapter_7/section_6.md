@@ -37,4 +37,16 @@ $$
     \mathcal{L}=
     -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
 $$
-であることが分かる。これを踏まえて、
+であることが分かる。これは静止エネルギーがポテンシャルエネルギーの一種ともとれる。（物体内の原子、分子同士に働く相互作用によるものと考えられる）次に、先ほど登場した計量により
+$$
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}=
+    \sqrt{\frac{\mathrm{d}s^2}{c^2}}=
+    \frac{1}{c}\sqrt{
+    \eta_{\mu\nu}
+    \mathrm{d}x^\mu\mathrm{d}x^\nu}
+    \rightarrow
+    \frac{1}{c}\sqrt{
+    g_{\mu\nu}
+    \mathrm{d}x^\mu\mathrm{d}x^\nu}
+$$
+と置き換えて、改めて運動方程式を解いてみると

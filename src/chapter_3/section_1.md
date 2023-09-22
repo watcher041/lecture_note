@@ -7,7 +7,7 @@
 <tr><td>
     電気の性質を調べるには、<b>電気振り子</b>を用いると便利である。それは右図に示すように、軽いコルク球を絹糸でガラスの支柱につるしたものである。絹でこすったガラス棒をコルク球に近づけると、はじめはコルク球は棒に引き付けられるが、それがガラス棒に触れた瞬間にコルク球は勢いよく反発して、ガラス棒から遠ざかろうとする。これと同じことをガラス棒の代わりに樹脂棒で試しても同様な現象を示す。
 </td>
-<td width="35%">
+<td width="40%">
     <img src="images/static_electricity.png">
 </td></tr>
 </table>
@@ -18,9 +18,10 @@
 
 > 2個の点電荷間の力は、両者を結ぶ直線上に働き、その大きさはそれぞれの電荷の量に比例し、またそれらの間の距離の2乗に反比例する。
 
-<table>
-<tr><td width="25%">
-    <img src="images/colmonb_experiment.png">
+<table >
+<tr><td align="center" width="40%">
+    <img 
+    src="images/colmonb_experiment.png">
 </td>
 <td>
     <u>Coulombが行った実験の装置</u><br>
@@ -55,7 +56,7 @@ $$
 
 <table>
 <tr><td align="center">
-    <img width="80%" 
+    <img width="100%" 
     src="images/Coulomb_force.png">
 </td>
 <td>
