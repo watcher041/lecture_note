@@ -71,7 +71,7 @@ $$
     x^3
 \end{pmatrix}
 $$
-とおくと、ベクトルを用いて書くこともできる。
+とおくと、各成分ごと（**ベクトルではない**）に簡略化して書ける。
 $$
     x'^\mu=
     \sum_{\nu=0}^{3}\alpha_{\ \  \nu}^\mu x^\nu　
@@ -126,90 +126,90 @@ $$
     y'=y'(w,x,y,z)、
     z'=z'(w,x,y,z)
 $$
-そして後で加速度運動を取り扱うことを考慮して、まず速度を求めてみると
+そして、これらの微小変化をとると
 $$
-    \frac{\mathrm{d}w'}{\mathrm{d}t'}=
-    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \mathrm{d}w'=
     \left(
         \frac{\partial w'}{\partial w}
-    \right)+
-    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}w+
     \left(
         \frac{\partial w'}{\partial x}
-    \right)+
-    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}x+
     \left(
         \frac{\partial w'}{\partial y}
-    \right)+
-    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}y+
     \left(
         \frac{\partial w'}{\partial z}
     \right)
+    \mathrm{d}z
 $$
 $$
-    \frac{\mathrm{d}x'}{\mathrm{d}t'}=
-    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \mathrm{d}x'=
     \left(
         \frac{\partial x'}{\partial w}
-    \right)+
-    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}w+
     \left(
         \frac{\partial x'}{\partial x}
-    \right)+
-    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}x+
     \left(
         \frac{\partial x'}{\partial y}
-    \right)+
-    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}y+
     \left(
         \frac{\partial x'}{\partial z}
     \right)
+    \mathrm{d}z
 $$
 $$
-    \frac{\mathrm{d}y'}{\mathrm{d}t'}=
-    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \mathrm{d}y'=
     \left(
         \frac{\partial y'}{\partial w}
-    \right)+
-    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}w+
     \left(
         \frac{\partial y'}{\partial x}
-    \right)+
-    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}x+
     \left(
         \frac{\partial y'}{\partial y}
-    \right)+
-    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}y+
     \left(
         \frac{\partial y'}{\partial z}
     \right)
+    \mathrm{d}z
 $$
 $$
-    \frac{\mathrm{d}z'}{\mathrm{d}t'}=
-    \frac{\mathrm{d}w}{\mathrm{d}t'}
+    \mathrm{d}z'=
     \left(
         \frac{\partial z'}{\partial w}
-    \right)+
-    \frac{\mathrm{d}x}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}w+
     \left(
         \frac{\partial z'}{\partial x}
-    \right)+
-    \frac{\mathrm{d}y}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}x+
     \left(
         \frac{\partial z'}{\partial y}
-    \right)+
-    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \right)
+    \mathrm{d}y+
     \left(
         \frac{\partial z'}{\partial z}
     \right)
+    \mathrm{d}z
 $$
 であるのだが、これ書き直すと以下のような形で書けることが分かる。
 $$
 \begin{pmatrix}
-    \frac{\mathrm{d}w'}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}x'}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}y'}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}z'}{\mathrm{d}t'}
+    \mathrm{d}w' \\
+    \mathrm{d}x' \\
+    \mathrm{d}y' \\
+    \mathrm{d}z'
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -231,29 +231,22 @@ $$
     \frac{\partial z'}{\partial z} \\
 \end{pmatrix}
 \begin{pmatrix}
-    \frac{\mathrm{d}w}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}x}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}y}{\mathrm{d}t'} \\
-    \frac{\mathrm{d}z}{\mathrm{d}t'}
+    \mathrm{d}w \\
+    \mathrm{d}x \\
+    \mathrm{d}y \\
+    \mathrm{d}z
 \end{pmatrix}
 $$
-そのため、ベクトルで以下のように記述できる。
-$$
-    \frac{\mathrm{d}x'^\mu}{\mathrm{d}t'}=
-    \left(
-        \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)
-    \frac{\mathrm{d}x^\nu}{\mathrm{d}t'}
-$$
-ここで一つ、時間の項を除いて座標の微小量の関係で表すと
+これは先ほどの各成分ごとの表記と同様な形で
 $$
     \mathrm{d}x'^\mu=
     \left(
         \frac{\partial x'^\mu}{\partial x^\nu}
     \right)
-    \mathrm{d}x^\nu
+    \mathrm{d}x^\nu　
+    (\mu=0,1,2,3)
 $$
-であるので、先ほどの一定加速度での行列は次の通りになる。
+と記述できるため、先ほどの一定加速度での行列は次の通りになる。
 $$
 \begin{pmatrix}
     \mathrm{d}x'^0 \\
@@ -275,29 +268,38 @@ $$
     \mathrm{d}x^3
 \end{pmatrix}
 $$
-さらに、ここでの偏微分の部分は接線ベクトルにあたるため、これを基本ベクトル $e$ 以下のように書くこともできる（偏微分のほうも、分母の添え字を用いて簡潔に表現する）。
+さらに、ここでの偏微分の部分を分母の添え字を用いて簡潔に表現すると以下のようになる。
 $$
     e_{\ \ \nu}^\mu=
+    \partial_\nu x'^\mu=
     \left(
         \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)=
-    \partial_\nu x'^\mu
+    \right)
 $$
-そのため、先ほどと同様に以下のように表される。
+そのため、先ほどと同様に以下のように表される（単位ベクトル $\bm{e}$ を用いて別の表記をすることができる。接線ベクトルとなるため）。
 $$
     \mathrm{d}x'^\mu=
-    e_{\ \ \nu}^\mu\mathrm{d}x^\nu
+    e_{\ \ \nu}^\mu\mathrm{d}x^\nu、
+    \mathrm{d}\bm{x}'=
+    \mathrm{d}x^{\nu}\bm{e}_{\nu}　
+    \left(
+        \bm{e}_{\nu}=
+        \frac{\partial \bm{x}'}
+        {\partial x^\nu}
+    \right)
+
 $$
-そして、この大きさというのは2乗にして表すことが多く、
+そして、この大きさというのは2乗をとることで求められるため、
 $$
     \mathrm{d}s^2=
-    \mathrm{d}x'_\mu\mathrm{d}x'^\mu=
-    (e_{\mu\nu}\mathrm{d}x^\nu)
-    (e_{\ \ \xi}^{\mu}\mathrm{d}x^\xi)=
-    g_{\nu\xi}\mathrm{d}x^\nu\mathrm{d}x^\xi、
-    (g_{\nu\xi}=e_{\mu\nu}e_{\ \ \xi}^{\mu})
+    \mathrm{d}\bm{x}'\cdot\mathrm{d}\bm{x}'=
+    (\bm{e}_\mu\cdot\bm{e}_\nu)\ 
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    g_{\mu\nu}
+    \mathrm{d}x^\mu\mathrm{d}x^\nu　
+    (g_{\mu\nu}=\bm{e}_\mu\cdot\bm{e}_\nu)
 $$
-となるが、ここで現れる $g_{\nu\xi}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる。
+となるが、ここで現れる $g_{\mu\nu}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる（後で証明が必要）。
 $$
     \mathrm{d}s^2=
     g'_{\mu\nu}
