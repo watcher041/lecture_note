@@ -70,28 +70,28 @@ $$
 と置き換えて、改めて運動方程式を解いてみると
 $$
     \frac{\partial\mathcal{L}}
-    {\partial \dot{x}^\xi}=
+    {\partial \dot{x}^\lambda}=
     -m_0c
     \frac{\partial}
-    {\partial \dot{x}^\xi}
+    {\partial \dot{x}^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
     -\frac{m_0c}{\dot{s}}
-    g_{\xi\mu}\dot{x}^{\mu}
+    g_{\lambda\mu}\dot{x}^{\mu}
     　(\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu})
 $$
 $$
     \frac{\partial\mathcal{L}}
-    {\partial x^\xi}=
+    {\partial x^\lambda}=
     -m_0c
     \frac{\partial}
-    {\partial x^\xi}
+    {\partial x^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
     -\frac{m_0c}{2\dot{s}}
     \left(
         \frac{\partial g_{\mu\nu}}
-        {\partial x^\xi}
+        {\partial x^\lambda}
         \dot{x}^\mu\dot{x}^\nu
     \right)
     　(\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu})
@@ -99,44 +99,44 @@ $$
 以上の結果を方程式に代入すると以下のような形になる。
 $$
     -\frac{\ddot{s}}{\dot{s}^2}
-    g_{\mu\xi}\dot{x}^{\mu}+
+    g_{\mu\lambda}\dot{x}^{\mu}+
     \frac{1}{\dot{s}}
-    \frac{\partial g_{\mu\xi}}{\partial x^\nu}
-    \dot{x}^\xi\dot{x}^\nu+
-    \frac{1}{\dot{s}}g_{\mu\xi}\ddot{x}^{\mu}-
+    \frac{\partial g_{\mu\lambda}}{\partial x^\nu}
+    \dot{x}^\lambda\dot{x}^\nu+
+    \frac{1}{\dot{s}}g_{\mu\lambda}\ddot{x}^{\mu}-
     \frac{1}{2\dot{s}}
     \left(
         \frac{\partial g_{\mu\nu}}
-        {\partial x^\xi}
+        {\partial x^\lambda}
         \dot{x}^\mu\dot{x}^\nu
     \right)=0
 $$
 $$
-    g_{\mu\xi}\ddot{x}^\mu+
+    g_{\mu\lambda}\ddot{x}^\mu+
     \frac{1}{2}
     \left(
-        \frac{\partial g_{\mu\xi}}
+        \frac{\partial g_{\mu\lambda}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\xi}}
+        \frac{\partial g_{\nu\lambda}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
-        {\partial x^\xi}
+        {\partial x^\lambda}
     \right)
     \dot{x}^\mu\dot{x}^\nu-
     \frac{\ddot{s}}{\dot{s}^2}
-    g_{\mu\xi}\dot{x}^{\mu}=0
+    g_{\mu\lambda}\dot{x}^{\mu}=0
 $$
-これに $g^{k\xi}$ をかけ、$s$ が時間の一次関数である（$\ddot{s}=0$）であるとすると
+これに $g^{k\lambda}$ をかけ、$s$ が時間の一次関数である（$\ddot{s}=0$）であるとすると
 $$
     \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
-    \frac{1}{2}g^{k\xi}
+    \frac{1}{2}g^{k\lambda}
     \left(
-        \frac{\partial g_{\mu\xi}}
+        \frac{\partial g_{\mu\lambda}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\xi}}
+        \frac{\partial g_{\nu\lambda}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
-        {\partial x^\xi}
+        {\partial x^\lambda}
     \right)
     \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
     \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
@@ -144,14 +144,14 @@ $$
 となり、さらに**第２種クリストッフェル記号**を用いて
 $$
     \Gamma^{k}_{\ \ \mu\nu}=
-    \frac{1}{2}g^{k\xi}
+    \frac{1}{2}g^{k\lambda}
     \left(
-        \frac{\partial g_{\mu\xi}}
+        \frac{\partial g_{\mu\lambda}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\xi}}
+        \frac{\partial g_{\nu\lambda}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
-        {\partial x^\xi}
+        {\partial x^\lambda}
     \right)
 $$
 というように置くと、測地線の方程式を求めることができる。
@@ -160,4 +160,52 @@ $$
     \Gamma^{k}_{\ \ \mu\nu}
     \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
     \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
+$$
+一方で、**第1種クリストッフェル記号**もあるわけだが、こちらは
+$$
+    \Gamma_{\lambda,\mu\nu}=
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\mu\lambda}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\nu\lambda}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+$$
+というように $g^{k\lambda}$ をかける前のものとなっている。この意味については、単位ベクトルに直すとわかる。
+$$
+\begin{aligned}
+    \Gamma_{\lambda,\mu\nu}
+    &=
+    \frac{1}{2}
+    \left[
+        \frac{\partial}{\partial x^\nu}
+        (\bm{e}_\mu\cdot\bm{e}_\lambda)+
+        \frac{\partial}{\partial x^\mu}
+        (\bm{e}_\nu\cdot\bm{e}_\lambda)-
+        \frac{\partial}{\partial x^\lambda}
+        (\bm{e}_\mu\cdot\bm{e}_\nu)
+    \right]\\
+    &=
+    \frac{1}{2}
+    \left[
+    \frac{\partial\bm{e}_\mu}{\partial x^\nu}
+    \cdot\bm{e}_\lambda+
+    \bm{e}_\mu\cdot
+    \frac{\partial\bm{e}_\lambda}{\partial x^\nu}+
+    \frac{\partial\bm{e}_\nu}{\partial x^\mu}
+    \cdot\bm{e}_\lambda+
+    \bm{e}_\nu\cdot
+    \frac{\partial\bm{e}_\lambda}{\partial x^\mu}-
+    \frac{\partial\bm{e}_\mu}{\partial x^\lambda}
+    \cdot\bm{e}_\nu-
+    \bm{e}_\mu\cdot
+    \frac{\partial\bm{e}_\nu}{\partial x^\lambda}
+    \right]\\
+    &=
+    \bm{e}_\lambda\cdot
+    \frac{\partial\bm{e}_\mu}{\partial x^\nu}
+\end{aligned}
 $$
