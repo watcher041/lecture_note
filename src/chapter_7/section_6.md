@@ -111,3 +111,18 @@ $$
         \dot{x}^\mu\dot{x}^\nu
     \right)=0
 $$
+$$
+    g_{\mu\xi}\ddot{x}^\mu+
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\mu\xi}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\nu\xi}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\xi}
+    \right)
+    \dot{x}^\mu\dot{x}^\nu-
+    \frac{\ddot{s}}{\dot{s}^2}
+    g_{\mu\xi}\dot{x}^{\mu}=0
+$$
