@@ -307,9 +307,9 @@ $$
     g_{\mu\nu}
     \mathrm{d}x^\mu\mathrm{d}x^\nu、
     （g'_{\mu\nu}=
-    e_{\mu\xi}'e_{\ \ \nu}'^{\xi}、
+    \bm{e}'_\mu\cdot\bm{e}'_\nu、
     g_{\mu\nu}=
-    e_{\mu\xi}e_{\ \ \nu}^{\xi}
+    \bm{e}_\mu\cdot\bm{e}_\nu
     ）
 $$
 実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
