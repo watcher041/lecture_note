@@ -126,3 +126,38 @@ $$
     \frac{\ddot{s}}{\dot{s}^2}
     g_{\mu\xi}\dot{x}^{\mu}=0
 $$
+これに $g^{k\xi}$ をかけ、$s$ が時間の一次関数である（$\ddot{s}=0$）であるとすると
+$$
+    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
+    \frac{1}{2}g^{k\xi}
+    \left(
+        \frac{\partial g_{\mu\xi}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\nu\xi}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\xi}
+    \right)
+    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
+    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
+$$
+となり、さらに**第２種クリストッフェル記号**を用いて
+$$
+    \Gamma^{k}_{\ \ \mu\nu}=
+    \frac{1}{2}g^{k\xi}
+    \left(
+        \frac{\partial g_{\mu\xi}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\nu\xi}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\xi}
+    \right)
+$$
+というように置くと、測地線の方程式を求めることができる。
+$$
+    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
+    \Gamma^{k}_{\ \ \mu\nu}
+    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
+    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
+$$
