@@ -14,19 +14,18 @@ $$
 まず、下図のように観測者Kと観測者K'が同じ位置にいてKから見てK'が時刻0にて速さ $V$ で $x$ 軸に沿って動いたとする。同時に光を原点から放出して地点Bにて折り返す。このとき、各観測者から見てどのような式が成り立つか見てみると以下のようになる。
 
 <table>
+<tr >
+    <p align="center">
+        <img width="60%"
+        src="images/simultaneous.png">
+    </p>
+</tr>
 <tr>
-<td>
-    <img src="images/simultaneous.png">
-</td>
-<td>
 $$
     \left[c(t_{\rm C}-t_{\rm B})\right]^2=
     (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)
 $$
-</td>
-</table>
-
-<table>
+</tr>
 <tr><td>
 $$
     x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2
