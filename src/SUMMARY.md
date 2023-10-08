@@ -12,7 +12,7 @@
 - [古典力学](chapter_1/section_0.md)
   - [運動の表現方法](chapter_1/section_1.md)
   - [運動の法則](chapter_1/section_2.md)
-  - [惑星の運動](chapter_1/section_3.md)
+  - [万有引力の法則](chapter_1/section_3.md)
   - [質点系の力学](chapter_1/section_4.md)
 - [熱力学](chapter_2/section_0.md)
   - [温度](chapter_2/section_1.md)
