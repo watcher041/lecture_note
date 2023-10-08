@@ -216,12 +216,11 @@ $$
 そのため、$r$ は以下のように表される。
 $$
     r=
-    \left(
-        \frac{L^2}{Gm_1m_2\mu}
-    \right)
-    \frac{1}
+    \frac{l}
     {1+\epsilon\cos(\theta-\theta_0)}、
     \epsilon=
-    \frac{AL^2}{Gm_1m_2\mu}
+    \frac{AL^2}{Gm_1m_2\mu}、
+    l=\frac{L^2}{Gm_1m_2\mu}
+
 $$
-このことから、軌道が楕円軌道になることが分かる。
+この軌道は離心率 $\epsilon$ の大きさによ決まる。 
