@@ -213,14 +213,14 @@ $$
     A\cos(\theta-\theta_0)+
     \frac{Gm_1m_2\mu}{L^2}
 $$
-そのため、$r$ は以下のように表される。
+そのため、$r$ は以下のように表される（$\epsilon$：離心率、$d$：焦点）。
 $$
     r=
-    \frac{l}
+    \frac{d\epsilon}
     {1+\epsilon\cos(\theta-\theta_0)}、
     \epsilon=
     \frac{AL^2}{Gm_1m_2\mu}、
-    l=\frac{L^2}{Gm_1m_2\mu}
+    d=\frac{1}{A}
 
 $$
-この軌道は離心率 $\epsilon$ の大きさによ決まる。 
+この軌道は離心率 $\epsilon$ の大きさによって決まる。 この大きさの比はどういうことことかいうと $L$ を展開することで
