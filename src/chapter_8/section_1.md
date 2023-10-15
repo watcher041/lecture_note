@@ -50,7 +50,7 @@ $$
     u=
     \frac{8\pi k\alpha}{c^3}
     e^{-\alpha\nu/T}\nu^3、
-    (\alpha：適当な定数)
+    (\alpha：定数)
 $$
 ここで式の導出過程を述べていないが、これは導出に用いられた仮定が不自然なものであり、なおかつMaxwellの電磁気学を全く無視しており説明するには不適切と判断したためである。
 
@@ -67,3 +67,19 @@ $$
     \frac{1}{e^{h\nu/kT}-1}\nu^3、
     （h=6.626\times 10^{-34}\ \mathrm{Js}）
 $$
+この式において、$h\nu << kT（\nu\to 0）$とすると
+$$
+    u\simeq
+    \frac{8\pi h}{c^3}
+    \frac{1}{(1+h\nu/kT)-1}\nu^3=
+    \frac{8\pi kT}{c^3}\nu^2
+$$
+というようになり、反対に $h\nu >> kT（\nu\to\infty）$ では $e^{h\nu/kT}>>1$ であるため
+ $$
+    u\simeq
+    \frac{8\pi h}{c^3}
+    \frac{1}{e^{h\nu/kT}}\nu^3=
+    \frac{8\pi h}{c^3}
+    e^{-h\nu/kT}\nu^3
+$$
+と先ほどと同様な式が得られることが分かる。
