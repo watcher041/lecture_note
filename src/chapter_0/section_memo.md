@@ -104,7 +104,14 @@ $$
 ・右辺：各成分同士をかけて足したもの
 \end{cases}
 $$
-となる。そうすると、右辺において一つが別のベクト $\vec{b}=(a_x,a_y)$ になった場合は
+となる。
+<p align="center">
+    <img 
+    width="60%" 
+    src="images/aavector.png">
+</p>
+
+そうすると、右辺において一つが別のベクト $\vec{b}=(a_x,a_y)$ になった場合は
 $$
     |\vec{a}||\vec{b}|=
     a_xb_x+a_yb_y
@@ -118,6 +125,11 @@ $$
     \sqrt{(b_x-a_x)^2+(b_y-a_y)^2}
 \end{cases}
 $$
+<p align="center">
+    <img 
+    width="60%" 
+    src="images/abvector.png">
+</p>
 一方で、余弦定理を用いると
 $$
     c^2=a^2+b^2-
