@@ -43,3 +43,6 @@ $$
     S=k_{\rm B}\ln \mathcal{W}
 $$
 で求めることができる。
+
+
+stefan-boltzmannの法則もここで説明して

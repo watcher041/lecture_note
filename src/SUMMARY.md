@@ -2,6 +2,7 @@
 # Summary
 
 [物理学入門](./top.md)
+- [メモ](chapter_0/section_memo.md)
 - [物理学における研究法](chapter_0/section_0.md)
   - [単位と単位系](chapter_0/section_1.md)
   - [長さの単位](chapter_0/section_2.md)

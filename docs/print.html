@@ -572,6 +572,7 @@ Bについても同様な議論を行うことで、<span class="katex"><span cl
 これから孤立系では熱平衡出ない状態であればエントロピーが増大し続け、熱平衡になればエントロピーがある値をとるようになる。この値はBoltzmannの原理により
 <span class="katex-display"><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0315em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight">B</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathcal" style="margin-right:0.08222em;">W</span></span></span></span></span>
 で求めることができる。</p>
+<p>stefan-boltzmannの法則もここで説明して</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="電磁気学"><a class="header" href="#電磁気学">電磁気学</a></h1>
 <p>　電磁気学が難しいとされる理由はいろいろあげられるが、その第一は力学と違って、そこで扱われる物理的対象がわれわれのに日常的な感覚を超えるものであることだろう。電荷や電流そのものも目に見えない。それでもそれらは、静電気や火花やコンセントのショートなどの体験によって、その存在を感知することができる。しかし、電磁気学の主役である電場や磁場となると、それらはまったく人間の五感とは無縁の存在であり、そのためにそれらは初学者にあたかも幻との格闘を強いている趣さえ感じられる。第２の理由は、力学と違って学ぶにつれて種々雑多の法則が次々と現れてきて、それらの法則の上下関係や相互関係が分からなくなり、全体の話の筋道が見失われがちな点にある。第3のつまずきの石は、そこに用いられている数学にあるようである。電磁気学で使用される数学は、主としてベクトル場の微分・積分という数学的にもかなり高度なものである。そのため、その数学に気をとられて物理どころではなくなってしまうのである。しかも、物理学と並行して学習しているはずの数学の内容が、物理学のそれに追いつかないことも原因の一つにあげられよう。</p>
@@ -1124,6 +1125,19 @@ Bについても同様な議論を行うことで、<span class="katex"><span cl
 というように第２項目の式が得られる。そのため、エネルギーが1自由度ごとに等分配されるわけではなく、振動数に応じて分配されるエネルギーに制限があることになる。</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h2 id="粒子と波動の二重性"><a class="header" href="#粒子と波動の二重性">粒子と波動の二重性</a></h2>
+<p>　前回は電磁波のエネルギーの最小単位が <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span> であると仮定することで、Planckの公式を導出していた。ただ、これはエネルギーが質量と等価であることを踏まえると、電磁波は <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span> のエネルギーを持つ粒子として考えることもできると予想される。それを用いてEinsteinは、光が <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mord mathnormal" style="margin-right:0.06366em;">ν</span></span></span></span> のエネルギーを持つ粒子としてもふるまう（<strong>光量子仮説</strong>）として光電効果の説明を行った。
+　光電効果とは高い振動数の光線（紫外線域）いわゆるX線のようなものを金属などの物質の表面にあてると、そこから電子が飛び出してくるというものである。実験を行ったLenardにより、以下のことが確認されている。</p>
+<ol>
+<li>
+<p>飛び出る電子の一つ一つのエネルギーを測ってみると、それは照らす輻射線の強さに無関係である。</p>
+</li>
+<li>
+<p>照らす輻射線の強さを大きくすると、飛び出る電子の個数（単位時間あたりの個数、出現頻度）が多くなるだけである。</p>
+</li>
+<li>
+<p>飛び出る電子一つ一つのエネルギーは照らす輻射線の色に関係する。すなわちその輻射線の波長が短いほどエネルギーの大きな電子が飛び出してくる。</p>
+</li>
+</ol>
 <p>wienの公式の真の意味について述べる。</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h2 id="波動力学行列力学"><a class="header" href="#波動力学行列力学">波動力学・行列力学</a></h2>
@@ -1161,22 +1175,6 @@ Bについても同様な議論を行うことで、<span class="katex"><span cl
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
 

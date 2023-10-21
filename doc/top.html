@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>物理学入門 - 物理学入門</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="option.css">
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="top.html" class="active">物理学入門</a></li><li class="chapter-item expanded "><a href="chapter_0/section_memo.html"><strong aria-hidden="true">1.</strong> メモ</a></li><li class="chapter-item expanded "><a href="chapter_0/section_0.html"><strong aria-hidden="true">2.</strong> 物理学における研究法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_0/section_1.html"><strong aria-hidden="true">2.1.</strong> 単位と単位系</a></li><li class="chapter-item expanded "><a href="chapter_0/section_2.html"><strong aria-hidden="true">2.2.</strong> 長さの単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_3.html"><strong aria-hidden="true">2.3.</strong> 時間の単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_4.html"><strong aria-hidden="true">2.4.</strong> 重力質量とその単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_5.html"><strong aria-hidden="true">2.5.</strong> 単位の変換と次元</a></li><li class="chapter-item expanded "><a href="chapter_0/section_6.html"><strong aria-hidden="true">2.6.</strong> 量の間の関係式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_1/section_0.html"><strong aria-hidden="true">3.</strong> 古典力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/section_1.html"><strong aria-hidden="true">3.1.</strong> 運動の表現方法</a></li><li class="chapter-item expanded "><a href="chapter_1/section_2.html"><strong aria-hidden="true">3.2.</strong> 運動の法則</a></li><li class="chapter-item expanded "><a href="chapter_1/section_3.html"><strong aria-hidden="true">3.3.</strong> 力を用いた運動の記述</a></li><li class="chapter-item expanded "><a href="chapter_1/section_4.html"><strong aria-hidden="true">3.4.</strong> 万有引力の法則</a></li><li class="chapter-item expanded "><a href="chapter_1/section_5.html"><strong aria-hidden="true">3.5.</strong> 質点系の力学</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/section_0.html"><strong aria-hidden="true">4.</strong> 熱力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_2/section_1.html"><strong aria-hidden="true">4.1.</strong> 温度</a></li><li class="chapter-item expanded "><a href="chapter_2/section.html"><strong aria-hidden="true">4.2.</strong> エントロピーについて</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_3/section_0.html"><strong aria-hidden="true">5.</strong> 電磁気学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_3/section_1.html"><strong aria-hidden="true">5.1.</strong> 静電気</a></li><li class="chapter-item expanded "><a href="chapter_3/section_2.html"><strong aria-hidden="true">5.2.</strong> 遠隔作用と近接作用</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_4/section_0.html"><strong aria-hidden="true">6.</strong> 光学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_4/section_1.html"><strong aria-hidden="true">6.1.</strong> 幾何光学</a></li><li class="chapter-item expanded "><a href="chapter_4/section_2.html"><strong aria-hidden="true">6.2.</strong> Fermatの原理</a></li><li class="chapter-item expanded "><a href="chapter_4/section_3.html"><strong aria-hidden="true">6.3.</strong> レンズの仕組み</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_5/section_0.html"><strong aria-hidden="true">7.</strong> 解析力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_5/section_1.html"><strong aria-hidden="true">7.1.</strong> Lagrange形式</a></li><li class="chapter-item expanded "><a href="chapter_5/section_2.html"><strong aria-hidden="true">7.2.</strong> Hamilton形式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_6/section_0.html"><strong aria-hidden="true">8.</strong> 統計力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_6/section_1.html"><strong aria-hidden="true">8.1.</strong> 気体運動論</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_7/section_0.html"><strong aria-hidden="true">9.</strong> 相対性理論</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_7/section_1.html"><strong aria-hidden="true">9.1.</strong> 同時の定義</a></li><li class="chapter-item expanded "><a href="chapter_7/section_2.html"><strong aria-hidden="true">9.2.</strong> Lorentz変換</a></li><li class="chapter-item expanded "><a href="chapter_7/section_3.html"><strong aria-hidden="true">9.3.</strong> 相対論的力学</a></li><li class="chapter-item expanded "><a href="chapter_7/section_4.html"><strong aria-hidden="true">9.4.</strong> 相対論的電磁気学</a></li><li class="chapter-item expanded "><a href="chapter_7/section_5.html"><strong aria-hidden="true">9.5.</strong> 特殊相対論から一般相対論へ</a></li><li class="chapter-item expanded "><a href="chapter_7/section_6.html"><strong aria-hidden="true">9.6.</strong> 測地線方程式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_8/section_0.html"><strong aria-hidden="true">10.</strong> 量子力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_8/section_1.html"><strong aria-hidden="true">10.1.</strong> 空洞輻射の理論</a></li><li class="chapter-item expanded "><a href="chapter_8/section_2.html"><strong aria-hidden="true">10.2.</strong> 粒子と波動の二重性</a></li><li class="chapter-item expanded "><a href="chapter_8/section_3.html"><strong aria-hidden="true">10.3.</strong> 波動力学・行列力学</a></li><li class="chapter-item expanded "><a href="chapter_8/section_4.html"><strong aria-hidden="true">10.4.</strong> 量子電磁気学</a></li><li class="chapter-item expanded "><a href="chapter_8/section_5.html"><strong aria-hidden="true">10.5.</strong> 相対論的量子力学</a></li></ol></li><li class="chapter-item expanded "><a href="references.html"><strong aria-hidden="true">11.</strong> 参考文献</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">物理学入門</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+<h1 id="物理学入門"><a class="header" href="#物理学入門">物理学入門</a></h1>
+<p>　現在我が国の大学教育は一般教育と専門教育とに分かれているが、学問とはどのようなものであるかを学び取らせるということを第一の目的としている一般教育は専門教育の領域に一歩足を踏み入れなければその実行は不可能である。このことを考え、なかば専門教育の意味も含め、しかも対象を理工科方面に進む学生に絞って書いた一般物理学の教科書がすなわち本書である。</p>
+<p>　本書はその性格からいって、物理学科もしくはこれに近い学科に進もうとする学生諸君にとっては物理学の入門編であり、その他の諸君にとっては完結編となるべきものであるから、執筆者はいずれも基礎的部分に重点を置くとともに、現代の情勢からみて、科学技術者としての必要な知識はできるたけ盛り込むように努めた。内容は多方面にわたり、多少専門領域にまで渡った部分もあるので、この全部を限られた授業時間内に教室で完結することは不可能である。教室で取り上げるのはこの中の基礎的部分だけというつもりである。全体を通じ、学生諸君の自習を期待したので、説明を平易にすると共に数式の問題などもなるべく途中を省かないように努めた。また、随所に例題を入れ、章末に演習問題を設け、さらにその解をも示しておいた。このように本書は教科書という従来の通念から離れた自習書である。自習の間に必ず湧いてくるであろう疑問はこれを教室において解決するという方法で学習の実を挙げていただきたい。実際このような方法をとらない限り、現在のように進歩した物理学を一般教育課程というわずかの時間内に修めることは不可能である。</p>
+<p>　物理学の学習上いつも支障となるのは学術用語の不統一と、単位系の混用である。このような本質的でない問題に学力を割くのを防ぐため、本書では用語はなるべく文部省編集による学術用語集によることにし、単位記号や量をあらわす文字は国際純粋応用物理学連合（IUPAP）および日本工業標準（JIS）調査会の奨めているもの（SI単位系）に従うことにした。ただ、自習するにあたって過去の文献や論文を確認する必要が生じた際にMKS単位系、電磁気学ではMKSA単位系で表記されていることがある。そのような場合、用語や実験データを引用する際に現在利用されているものに変換が必要なことに注意が必要である。（参考文献：物理実験者のための13章）</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next" href="chapter_0/section_memo.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next" href="chapter_0/section_memo.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
