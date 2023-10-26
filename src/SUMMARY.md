@@ -29,7 +29,7 @@
   - [Lagrange形式](chapter_5/section_1.md)
   - [Hamilton形式](chapter_5/section_2.md)
 - [統計力学](chapter_6/section_0.md)
-  - [気体運動論](chapter_6/section_1.md)
+  - [気体分子運動論](chapter_6/section_1.md)
 - [相対性理論](chapter_7/section_0.md)
   - [同時の定義](chapter_7/section_1.md)
   - [Lorentz変換](chapter_7/section_2.md)
