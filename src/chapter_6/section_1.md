@@ -50,18 +50,26 @@ $$
 
 そのため、分子の平均速度はおおよそ $100～300\ \mathrm{m/s}$ となるわけだが、実際の気体の拡散速度（1 m/s程度以下）と比べるとずっと遅いため矛盾があるように感じる。これは衝突を繰り返すことで**平均自由行路**が短くなり、全体的な速度が遅くなるということによるものと考えられる。そのため、衝突に関して考察していくことにする。
 
-　二体の衝突においては、角運動量保存とエネルギー保存により以下の関係式が成り立つ。
+　まず簡単に二体の衝突を場合を考えてみる。このときの自由工程 $l$ は互いに近づいていき次に衝突するまでの間の距離として
+$$
+    l=\int_{0}^{\alpha}
+    r\ \mathrm{d}\theta、
+    \left(
+        \alpha=\pi-\theta
+    \right)
+$$
+であると予想される（$x$軸の左側からやってくるように軸を設定）。次に角運動量保存とエネルギー保存により以下の関係式が成り立つ。
 $$
     L=\mu r^2
     \left(
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \right)、
     E=
-    \frac{1}{2}\mu
-    \left(
+    \frac{1}{2}\mu \left(
         \frac{\mathrm{d}r}{\mathrm{d}t}
     \right)^2+
-    \frac{1}{2}\mu r^2
+    \frac{1}{2}\mu
+    r^2
     \left(
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \right)^2+U(r)
@@ -77,123 +85,37 @@ $$
     \right)
     }
 $$
-となる（分子同士が近づく場合は負の値になり、分子同士が離れる場合は正の値になる）。ここで最近接距離 $r_0$ では動径方向の長さが変化しないため以下のようになる。
+となる（分子同士が近づく場合は負の値になり、分子同士が離れる場合は正の値になる）。ここで、$u=1/r$ として整理すると、
 $$
-    \frac{\mathrm{d}r}{\mathrm{d}t}=0
-    \rightarrow
-    E=\frac{L^2}{2\mu r_0^2}+U(r_0)
+    \frac{\mathrm{d}r}{\mathrm{d}t}=
+    -\frac{L}{\mu}
+    \frac{\mathrm{d}u}{\mathrm{d}\theta}=
+    \frac{L}{\mu r^2}
+    \frac{\mathrm{d}r}{\mathrm{d}\theta}
 $$
-以上の二体間の衝突を繰り返して速度を変化させているため、
-
-
-衝突によって速度の分布は各方向で等確率になる。→速度分布は各方向で同じ値になる。
-
-　分子の速度は壁への衝突と分子同士の衝突により変化するものと考えられる。前者のほうは向きが反対向きになるだけであるため、後者の方がどうなるか見ていくことにする。
-
-
-
-
- <!-- 例として、一つ目の分子1にもう一つの分子2が衝突する状況を考えると、各運動方程式は $\bm{r}=\bm{r}_2-\bm{r}_1、r=|\bm{r}_2-\bm{r}_1|$ として
+であるため、先ほどの式は以下のように置き換えられる（互いに近づいていることから動径に応じて負になる）。
 $$
-    m_1
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
-    \frac{\partial U(r)}{\partial r}
+    \frac{\mathrm{d}r}{\mathrm{d}\theta}=
+    -
+    \sqrt{
+    \frac{2\mu r^4}{L^2}
     \left(
-    \frac{\bm{r}}{r}
-    \right)、
-    m_2
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
-    -\frac{\partial U(r)}{\partial r}
-    \left(
-    \frac{\bm{r}}{r}
+        E-\frac{L^2}{2\mu r^2}-U(r)
     \right)
+    }=f(r)
 $$
-であるが、これを変形して 
+ここで変形して積分する形にすると
 $$
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
-    \frac{1}{m_1}
-    \frac{\partial U(r)}{\partial r}
-    \left(
-    \frac{\bm{r}}{r}
-    \right)、
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
-    -\frac{1}{m_2}
-    \frac{\partial U(r)}{\partial r}
-    \left(
-    \frac{\bm{r}}{r}
-    \right)
+    l=
+    \int_{0}^{\alpha}
+    \frac{r}{f(r)}
+    \frac{\mathrm{d}r}{\mathrm{d}\theta}
+    \mathrm{d}\theta=
+    \int_{\infty}^{r_0}
+    \frac{r}{f(r)}
+    \mathrm{d}r=
+    \int_{0}^{\alpha}r
+    \mathrm{d}\theta
 $$
-として両辺の差をとると
-$$
-    \mu\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
-    -\frac{\partial U(r)}{\partial r}
-    \left(
-    \frac{\bm{r}}{r}
-    \right)、
-    \left(
-        \mu=\frac{m_1m_2}{m_1+m_2}
-    \right)
-$$
-となる。これは動径方向と角度方向に分けることができ、
-$$
-    \bm{r}=r\bm{e}_r、
-    \frac{\mathrm{d}\bm{r}}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \bm{e}_r+
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \bm{e}_\theta、
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
-    \left[
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    r
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
-    \right]
-    \bm{e}_r+
-    \left[
-    r
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-    2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right]
-    \bm{e}_\theta
-$$
-であるから以下の通りとなる。
-$$
-    \mu
-    \left[
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    r
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
-    \right]=
-    -\frac{\partial U(r)}{\partial r}、
-    \mu
-    \left[
-    r
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-    2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right]=0
-$$
-2番目の式に $r$ をかけて整理することで、角運動量の保存則および動径方向の運動方程式が得られる。
-$$
-    L=\mu r^2
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}、
-    \mu\frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    \frac{L^2}{\mu r^3}=
-    -\frac{\partial U(r)}{\partial r}
-$$
-ここで、右辺を偏微分の形に
-$$
-    \mu
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-    =
-    \frac{L^2}{\mu r^3}
-    -\frac{\partial U}{\partial r}
-$$
-としてから無限大の彼方から $r$ で積分すると  -->
+であることから、$r$ の積分を解くことで自由工程を得られることが分かる。仮に、$U(u)=Cu^4$ という形になっているとすると
+
