@@ -5,29 +5,42 @@
 $$
     \bar{F}=\frac{2mv_{\perp}}{\Delta t}
 $$
-ただ、実際は一つの分子による力のみがかかるわけではなく、複数の分子 $\Delta N$ による力が働くため、数密度 $n$ とすると面積 $\Delta S$ にかかる力は以下の通りとなる。
+ただ、実際は一つの分子による力のみがかかるわけではなく、同じ速度の分子の数（ $N(v_{\perp})$ ）だけ力が働く。この個数というのは時間 $\Delta t$ の間に範囲 $\Delta S$ に力が生じるものとして、数密度 $n(v_{\perp})$ により
 $$
-    \bar{F}_{\mathrm{total}}=
-    \overline{F}\Delta N=
-    \overline{F}
+    N(v_{\perp})=
+    n(v_{\perp})
     \left(
-        nv_{\perp}\frac{1}{2}\Delta t
-        \Delta S
+    \frac{1}{2}v_{\perp}\Delta t
+    \Delta S
     \right)
 $$
-そのため、圧力は次のようになると考えられる。
+となるため、全体の力は以下の通りとなる。
 $$
-    P(v_{\perp})=
-    \frac{\overline{F}_{\mathrm{total}}}{\Delta S}=
-    mv_{\perp}^2n
+    F(v_{\perp})=
+    \overline{F}N(v_{\perp})=
+    mn(v_{\perp})v_{\perp}^2
+    \Delta S
 $$
-しかし、これはあくまである速度 $v_{\perp}$ 
-での圧力であり、様々な速度による圧力によるものではない。そのため、全体的に観測される圧力は速度の平均をとったものになると予想される。
+最終的な圧力は、全ての速度に対する力の合計を面積で割ったものであるため次のように書ける。
 $$
-    P=\braket{P(v_{\perp})}=
-    mn\braket{v_{\perp}^2}
+    P=
+    \frac{1}{\Delta S}
+    \sum_{v_{\perp}>0}F(v_{\perp})=
+    m\sum_{v_{\perp}>0}
+    n(v_{\perp})v_{\perp}^2
 $$
-ここで $\braket{v_{\perp}^2}$ がどのくらいの値になるかは式を変形することで求めることができる（全質量 $M$ ）。
+ここで、単位体積内の分子数を $n$ としたとき
+$$
+    P=mn\braket{v_{\perp}^2}、
+    \braket{v_{\perp}^2}=
+    \sum_{v_{\perp}>0}
+    v_{\perp}^2 f(v_{\perp})、
+    \left(
+        f(v_{\perp})=
+        \frac{n(v_{\perp})}{n}
+    \right)
+$$
+となる。ここで $\braket{v_{\perp}^2}$ がどのくらいの値になるかは式を変形することで求めることができる（数密度：$n\ (=N/V)$、全質量：$M$、体積：$V$ ）。
 $$
     P=\frac{mN\braket{v_{\perp}^2}}{V}=
     \frac{M\braket{v_{\perp}^2}}{V}
