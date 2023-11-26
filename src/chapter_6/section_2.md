@@ -102,6 +102,10 @@ $$
     \rightarrow
     PV=Nk_\mathrm{B}T
 $$
+1molの気体である場合は理想気体の状態方程式から気体定数 $R$ により次の関係が導かれる。
+$$
+    R=Nk_{\mathrm{B}T}
+$$
 
 Dulong-Putiの法則
 
