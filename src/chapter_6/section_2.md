@@ -1,7 +1,7 @@
 
 ## 統計集団
 
-　気体の性質を調べる際には、箱の中に気体を閉じ込めておく必要があるが、このときに閉じ込められた気体（分子の集まり）は一種の集団を形成している。この集団を**統計集団**と呼ぶ。例えば、この気体が外部との熱のやり取り、漏れ出しなどもなく完全に孤立している状態だとすると、熱力学第1法則
+　気体の性質を調べる際には、よくピストンなどの容器に気体を閉じ込めておくことが多いが、このときに閉じ込められた気体（分子の集まり）は一種の集団を形成している。この集団を**統計集団**と呼ぶ。例えば、この気体が外部との熱のやり取り、漏れ出しなどもなく完全に孤立している集団（**小正準集団**）だとすると、熱力学第1法則
 $$
     \mathrm{d}U=
     \mathrm{d}'Q+\mathrm{d}W
@@ -18,7 +18,7 @@ $$
 $$
     S=k_{\mathrm{B}}\ln\mathcal{W}
 $$
-と書ける（ボルツマンの原理）。この状態の数というのは全体の状態がエネルギーを用いて書けることから計算することができる。具体的には、エネルギーが
+というような関係がある（ボルツマンの原理）。この状態の数というのは全体の状態がエネルギーを用いて書けることから計算することができる。具体的には、エネルギーが
 $$
     U=\sum_{i=1}^{N}
     \frac{1}{2}m\bm{v}_{i}^2、
@@ -45,29 +45,50 @@ $$
 $$
     S(U)=
     \left(
-    \frac{\mathrm{d}V}{\mathrm{d}U}
+    \frac{\mathrm{d}V}{\mathrm{d}r}
     \right)=
-    \frac{1}{\Gamma(3N/2+1)}
+    \frac{3N\pi}{2\Gamma(3N/2+1)}
     \left(
-        \frac{2\pi}{m}
-    \right)^{3N/2}
-    \frac{3N}{2}
-    U^{3N/2-1}
+        \frac{2\pi U}{m}
+    \right)^{3N/2-1}
 $$
 と微分することで求められる。しかし、このままだと次元が無次元とならないため、次元調整用に$A$ をかけたものが状態数となる。
 
 $$
     \mathcal{W}=
-    \frac{A}{\Gamma(3N/2+1)}
+    \frac{3N\pi A}{2\Gamma(3N/2+1)}
     \left(
-        \frac{2\pi}{m}
-    \right)^{3N/2}
-    \frac{3N}{2}
-    U^{3N/2-1}
+        \frac{2\pi U}{m}
+    \right)^{3N/2-1}
 $$
-一方で、熱力学第1法則から得られるエネルギーとエントロピーの関係式を用いると
+一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
 $$
-    \frac{\partial S}{\partial U}=
+    \mathrm{d}S=
+    \frac{1}{T}\mathrm{d}U+
+    \frac{P}{T}\mathrm{d}V
+$$
+であるため、以下の関係式が成り立つことが分かる。
+$$
+    \left.
+    \left(
+        \frac{\partial S}{\partial U}
+    \right)
+    \right|_{V}=
+    \frac{1}{T}、
+    \left.
+    \left(
+        \frac{\partial S}{\partial V}
+    \right)
+    \right|_{U}=
+    \frac{P}{T}
+$$
+ここで、一つ目の式に先ほどの値を代入すると
+$$
+    \left.
+    \left(
+        \frac{\partial S}{\partial U}
+    \right)
+    \right|_{V}=
     \frac{1}{T}
     \rightarrow
     U\simeq
@@ -84,7 +105,69 @@ $$
     \right)=
     \frac{1}{2}k_{\mathrm{B}}T
 $$
-というように、一成分当たりの平均エネルギーになっていることが分かる。これは見方を変えると
+というように、一成分当たりの平均エネルギーになっていることが分かる。そこで、
+$$
+    \braket{v^2}=
+    \frac{1}{3N}
+    \sum_{i=1}^{3N}v_{i}^2=
+    \frac{k_{\mathrm{B}}T}{m}
+$$
+というようにすると、先ほどの関係式と成り立つため以下の通りとなる。
+$$
+    PV=M\braket{v_{\perp}^2}
+    \rightarrow
+    PV=Nk_\mathrm{B}T
+$$
+この関係を用いると、先ほどの圧力に関する式により$A$から$V$を抜き出すことができる。
+$$
+    \left.
+    \left(
+        \frac{\partial S}{\partial V}
+    \right)
+    \right|_{U}=
+    \frac{P}{T}
+    \rightarrow
+    \frac{\partial}{\partial V}
+    \ln A=\frac{N}{V}
+    \rightarrow
+    A=CV^{N}、
+    (C:定数)
+$$
+
+　ここまでが集団を孤立系とした場合の説明であるが、実際のところ孤立系というのは現実にはなく最低でも熱のやり取りをしていることが多い。そのため、以下の図ような系を考えてみる。
+
+<p align="center">
+    <img width="60%"
+        src="images/hot_bath.png">
+</p>
+
+ここでの熱浴系の状態を見てみると、熱力学第一法則において
+$$
+    \mathrm{d}U=
+    \mathrm{d}'Q+\mathrm{d}'W=
+    \mathrm{d}'Q
+$$
+となるわけだが、先ほどと異なりエネルギーが一定とならないため状態数を求めることができない。そこで、あるエネルギーをとる確率を出してみる。
+$$
+    P(U)=
+    \frac{\mathcal{W}(U_t-U)
+    \mathcal{W}(U)}{\mathcal{W}(U_t)}
+$$
+$$
+    S(U_t-U)\simeq S(U_t)-
+    \left(
+        \frac{\partial S}{\partial U}    
+    \right)U=
+    S(U_t)-\frac{U}{T}
+$$
+$$
+    k_{\mathrm{B}}\ln
+    \mathcal{W}(U_t-U)=
+    k_{\mathrm{B}}\ln
+    \mathcal{W}(U_t)e^{-U/k_{\mathrm{B}}T}
+$$
+
+これは見方を変えると
 $$
     \frac{m}{2}
     \left(
@@ -113,14 +196,23 @@ $$
     \frac{\partial U}{\partial T}
     \right)_{V}=\frac{3}{2}R
 $$
-となる。この値と実験値を比較してみると以下の表の通りになる。
+となる。この値と実験値を比較してみると以下の表の通りになる。ここで気体定数 $R=8.31\ \mathrm{J/K\cdot mol}$である。
 
-
+|分子名|モル比熱（実験値）|$3/2R$|
+|-|-|-|
+|He（気体）|$12.59\times 10^{3}$ J|$12.47\ \mathrm{J/K\cdot mol}$|
+|A（気体）|$12.85\times 10^{3}$ J|$12.47\ \mathrm{J/K\cdot mol}$|
+|N$_2$（気体）|0.0280|$12.47\ \mathrm{J/K\cdot mol}$|
+|O$_2$（気体）|0.0320|$12.47\ \mathrm{J/K\cdot mol}$|
+|Al（固体）|0.0280|$12.47\ \mathrm{J/K\cdot mol}$|
+|Pb（固体）|0.0320|$12.47\ \mathrm{J/K\cdot mol}$|
 
 
 Dulong-Putiの法則
 
 正準集団
+
+
 
 $$
     Z=
