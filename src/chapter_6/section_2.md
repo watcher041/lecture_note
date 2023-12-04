@@ -118,7 +118,7 @@ $$
     \rightarrow
     PV=Nk_\mathrm{B}T
 $$
-この関係を用いると、先ほどの圧力に関する式により$A$から$V$を抜き出すことができる。
+この関係を用いると、先ほどの圧力に関する式により $A$ から $V$ を抜き出すことができる。
 $$
     \left.
     \left(
@@ -133,6 +133,35 @@ $$
     A=CV^{N}、
     (C:定数)
 $$
+さらに、$n$モルでの理想気体の状態方程式は
+$$
+    PV=nRT
+$$
+であることを踏まえると、次のような関係があることが導ける。
+$$
+    R=N_{\mathrm{A}}k_{\mathrm{B}}、
+    N_{\mathrm{A}}=\frac{N}{n}
+$$
+ここでの$N_{\mathrm{A}}$は1molでの分子数を表しており**アボガドロ数**と呼ばれている。そして、この関係式から定積モル比熱（1molあたりの比熱）を求めてみると次のようになる。
+$$
+    C_V=
+    \left(
+    \frac{\partial U}{\partial T}
+    \right)_{V}=\frac{3}{2}R
+$$
+この値と実験値を比較してみると以下の表の通りになる。
+
+|分子名|$C_V$（実験値）|$3/2R$|
+|-|-|-|
+|He（気体）|$12.60\ \mathrm{J/K\cdot mol}\ (291℃)\\ 12.33\ \mathrm{J/K\cdot mol}\ (93℃)$|$12.47\ \mathrm{J/K\cdot mol}$|
+|A（気体）|$12.86\ \mathrm{J/K\cdot mol}\ (288℃)\\ 12.00\ \mathrm{J/K\cdot mol}\ (93℃)$|$12.47\ \mathrm{J/K\cdot mol}$|
+|N$_2$（気体）|$20.83\ \mathrm{J/K\cdot mol}\ (293℃)\\ 19.78\ \mathrm{J/K\cdot mol}\ (92℃)$|$12.47\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
+|O$_2$（気体）|$20.84\ \mathrm{J/K\cdot mol}\ (293℃)\\ 18.43\ \mathrm{J/K\cdot mol}\ (92℃)$|$12.47\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
+|Al（固体）|$24.37\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$12.47\ \mathrm{J/K\cdot mol}$|
+|Pb（固体）|$22.70\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$12.47\ \mathrm{J/K\cdot mol}$|
+
+
+Dulong-Putiの法則
 
 　ここまでが集団を孤立系とした場合の説明であるが、実際のところ孤立系というのは現実にはなく最低でも熱のやり取りをしていることが多い。そのため、以下の図ような系を考えてみる。
 
@@ -185,30 +214,7 @@ $$
     \rightarrow
     PV=Nk_\mathrm{B}T
 $$
-1molの気体である場合は理想気体の状態方程式から気体定数 $R$ により次の関係が導かれる。
-$$
-    R=N_{\mathrm{A}}k_{\mathrm{B}}
-$$
-ただし、ここでの$N_{\mathrm{A}}$は1molでの分子数を表しており**アボガドロ数**と呼ばれている。この関係式を用いると定積モル比熱（1molあたりの比熱）は
-$$
-    C_V=
-    \left(
-    \frac{\partial U}{\partial T}
-    \right)_{V}=\frac{3}{2}R
-$$
-となる。この値と実験値を比較してみると以下の表の通りになる。ここで気体定数 $R=8.31\ \mathrm{J/K\cdot mol}$である。
 
-|分子名|モル比熱（実験値）|$3/2R$|
-|-|-|-|
-|He（気体）|$12.59\times 10^{3}$ J|$12.47\ \mathrm{J/K\cdot mol}$|
-|A（気体）|$12.85\times 10^{3}$ J|$12.47\ \mathrm{J/K\cdot mol}$|
-|N$_2$（気体）|0.0280|$12.47\ \mathrm{J/K\cdot mol}$|
-|O$_2$（気体）|0.0320|$12.47\ \mathrm{J/K\cdot mol}$|
-|Al（固体）|0.0280|$12.47\ \mathrm{J/K\cdot mol}$|
-|Pb（固体）|0.0320|$12.47\ \mathrm{J/K\cdot mol}$|
-
-
-Dulong-Putiの法則
 
 正準集団
 
