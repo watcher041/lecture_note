@@ -69,26 +69,20 @@ $$
 $$
 であるため、以下の関係式が成り立つことが分かる。
 $$
-    \left.
     \left(
         \frac{\partial S}{\partial U}
-    \right)
-    \right|_{V}=
+    \right)_{V}=
     \frac{1}{T}、
-    \left.
     \left(
         \frac{\partial S}{\partial V}
-    \right)
-    \right|_{U}=
+    \right)_{U}=
     \frac{P}{T}
 $$
 ここで、一つ目の式に先ほどの値を代入すると
 $$
-    \left.
     \left(
         \frac{\partial S}{\partial U}
-    \right)
-    \right|_{V}=
+    \right)_{V}=
     \frac{1}{T}
     \rightarrow
     U\simeq
@@ -120,11 +114,9 @@ $$
 $$
 この関係を用いると、先ほどの圧力に関する式により $A$ から $V$ を抜き出すことができる。
 $$
-    \left.
     \left(
         \frac{\partial S}{\partial V}
-    \right)
-    \right|_{U}=
+    \right)_{U}=
     \frac{P}{T}
     \rightarrow
     \frac{\partial}{\partial V}
