@@ -154,16 +154,18 @@ $$
 
 |分子名|$C_V$（実験値）|$5/2R$|
 |-|-|-|
-|N$_2$（気体）|$20.83\ \mathrm{J/K\cdot mol}\ (293℃)\\ 19.78\ \mathrm{J/K\cdot mol}\ (92℃)$|$12.47\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
-|O$_2$（気体）|$20.84\ \mathrm{J/K\cdot mol}\ (293℃)\\ 18.43\ \mathrm{J/K\cdot mol}\ (92℃)$|$12.47\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
+|N$_2$（気体）|$20.83\ \mathrm{J/K\cdot mol}\ (293℃)\\ 19.78\ \mathrm{J/K\cdot mol}\ (92℃)$|$20.78\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
+|O$_2$（気体）|$20.84\ \mathrm{J/K\cdot mol}\ (293℃)\\ 18.43\ \mathrm{J/K\cdot mol}\ (92℃)$|$20.78\ \mathrm{J/K\cdot mol}$|$12.47\ \mathrm{J/K\cdot mol}$|
+
+同様に、固体についても調和振動子と考えると自由度が $6N$ だけあり、なおかつDulong-Putiの法則においても $3R$ になることは確かめられている。
 
 |分子名|$C_V$（実験値）|$3R$|
 |-|-|-|
-|Al（固体）|$24.37\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$12.47\ \mathrm{J/K\cdot mol}$|
-|Pb（固体）|$22.70\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$12.47\ \mathrm{J/K\cdot mol}$|
+|Al（固体）|$24.37\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$24.94\ \mathrm{J/K\cdot mol}$|
+|Pb（固体）|$22.70\ \mathrm{J/K\cdot mol}\ (15～100℃間の平均)$|$24.94\ \mathrm{J/K\cdot mol}$|
 
 
-Dulong-Putiの法則
+
 
 　ここまでが集団を孤立系とした場合の説明であるが、実際のところ孤立系というのは現実にはなく最低でも熱のやり取りをしていることが多い。そのため、以下の図ような系を考えてみる。
 
