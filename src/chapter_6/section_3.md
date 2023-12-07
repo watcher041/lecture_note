@@ -13,23 +13,52 @@ $$
     \mathrm{d}U=
     \mathrm{d}'Q+\mathrm{d}'W=
     \mathrm{d}'Q、
-    \mathrm{d}'Q \le T\mathrm{d}S
+    \frac{\mathrm{d}'Q}{T} 
+    \le \mathrm{d}S
 $$
 となるため、先ほどと異なりエネルギーが一定とならないため状態数を求めることができない。一方で、熱浴系においても
 $$
     \mathrm{d}U_{b}=
     \mathrm{d}'Q_{b}+\mathrm{d}'W_{b}=
     \mathrm{d}'Q_{b}、
-    \mathrm{d}'Q_{b} \le T_{b}\mathrm{d}S_{b}
+    \frac{\mathrm{d}'Q_{b}}{T_{b}} 
+    \le \mathrm{d}S_{b}
 $$
-となるわけだが、熱に関しては容器系と熱浴系が互いにやりとりしていることを考慮すると
-$$
-    \mathrm{d}'Q_{b}=-\mathrm{d}'Q
-$$
-であると考えられる。ここで全体としては孤立系となっていることを踏まえると以下の関係が成り立つことが分かる（上の二式を足し合わせることで確かめられる）。
+となるわけだが、全体としては孤立系であることを踏まえると、全体の内部エネルギーが保存しており尚且つ熱浴系と容器系の間でしか熱のやりとりしないことになる。
 $$
     \mathrm{d}U_{t}=
-    \mathrm{d}U_{b}+\mathrm{d}U=0
+    \mathrm{d}U_{b}+\mathrm{d}U=0、
+    \mathrm{d}'Q_{b}=-\mathrm{d}'Q
+$$
+ここで熱力学第二法則の二式の和をとるとエントロピーに関して
+$$
+    \frac{\mathrm{d}'Q}{T}+
+    \frac{\mathrm{d}'Q_{b}}{T_{b}} =
+    \left(
+        \frac{1}{T}-
+        \frac{1}{T_{b}}
+    \right)\mathrm{d}'Q \le
+    \mathrm{d}S + \mathrm{d}S_{b}
+$$
+となるわけだが、ここで熱と温度の関係を見てみると
+$$
+    \begin{cases}
+        ・\mathrm{d}'Q>0の場合 &
+        \rightarrow　T < T_{b}\ 
+        (1/T-1/T_{b}>0)\\
+        ・\mathrm{d}'Q<0の場合 &
+        \rightarrow　T > T_{b}\ 
+        (1/T-1/T_{b}<0)
+    \end{cases}
+$$
+というように互いに同符号になっていることから、以下の関係が成り立つことが分かる。
+$$
+    0\le\left(
+        \frac{1}{T}-
+        \frac{1}{T_{b}}
+    \right)\mathrm{d}'Q
+    \rightarrow
+    0\le\mathrm{d}S + \mathrm{d}S_{b}
 $$
 
 $$
