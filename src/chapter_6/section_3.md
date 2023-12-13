@@ -102,23 +102,42 @@ $$
     \mathcal{W}_{b}(Ut-U)}
     {\mathcal{W}_t(U_t)}
 $$
-
-ここでどのように展開するか？
+そして、右辺の $\mathcal{W}_b$ のエントロピーに関して
 $$
-    S(U_t-U)\simeq S(U_t)-
+    S_b(U_t-U)\simeq S_b(U_t)-
     \left(
-        \frac{\partial S}{\partial U}    
-    \right)U=
-    S(U_t)-\frac{U}{T}
+        \frac{\partial S_b}{\partial U_b}    
+    \right)_V U=
+    S_b(U_t)-\frac{U}{T_b}
 $$
+であることから、状態数に関しては以下のように書ける。
 $$
-    k_{\mathrm{B}}\ln
-    \mathcal{W}(U_t-U)=
-    k_{\mathrm{B}}\ln
-    \mathcal{W}(U_t)e^{-U/k_{\mathrm{B}}T}
+    \mathcal{W}_b(U_t-U)=
+    \mathcal{W}_b(U_t)
+    e^{-U/k_{\mathrm{B}}T_b}
 $$
-
-
+そのため、先ほどの確率は次のようになる。
+$$
+    P(U)=
+    A\mathcal{W}(U)
+    e^{-U/k_{\mathrm{B}}T_b}、
+    A=
+    \frac{\mathcal{W}_b(U_t)}
+    {\mathcal{W}_t(U_t)}
+$$
+しかし、これを整理すると
+$$
+    Z=\frac{1}{A}=
+    \sum_{U}
+    \mathcal{W}(U)
+    e^{-U/k_{\mathrm{B}}T_b}
+$$
+となるため、以下のように置くこともできる。
+$$
+    P(U)=\frac{1}{Z}
+    \mathcal{W}(U)
+    e^{-U/k_{\mathrm{B}}T_b}
+$$
 $$
     Z=
     \int\cdots\int
