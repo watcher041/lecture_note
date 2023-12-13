@@ -43,12 +43,14 @@ $$
 となるわけだが、ここで熱と温度の関係を見てみると
 $$
     \begin{cases}
-        ・\mathrm{d}'Q>0の場合 &
-        \rightarrow　T < T_{b}\ 
-        (1/T-1/T_{b}>0)\\
-        ・\mathrm{d}'Q<0の場合 &
-        \rightarrow　T > T_{b}\ 
-        (1/T-1/T_{b}<0)
+        ・T < T_{b}\ 
+        (1/T-1/T_{b}>0)\ の場合 &
+        \rightarrow　
+        \mathrm{d}'Q>0\\
+        ・T > T_{b}\ 
+        (1/T-1/T_{b}<0)\ の場合 &
+        \rightarrow　
+        \mathrm{d}'Q<0
     \end{cases}
 $$
 というように互いに同符号になっていることから、以下の関係が成り立つことが分かる。
@@ -60,12 +62,48 @@ $$
     \rightarrow
     0\le\mathrm{d}S + \mathrm{d}S_{b}
 $$
-
+ここでBoltzmannの原理よりエントロピーを状態数で置き換えると
 $$
+    \mathrm{d}S + \mathrm{d}S_{b}=
+    \mathrm{d}
+    (k_{\mathrm{B}}\ln\mathcal{W})+
+    \mathrm{d}
+    (k_{\mathrm{B}}\ln\mathcal{W}_{b})=
+    \mathrm{d}
+     (k_{\mathrm{B}}
+     \ln\mathcal{W}\mathcal{W}_{b})
+$$
+となり、一つのエントロピーとしてみなすことができる。
+$$
+    S_\mathrm{x}=
+    k_{\mathrm{B}}
+    \ln\mathcal{W}_\mathrm{x}、
+    \mathcal{W}_\mathrm{x}=
+    \mathcal{W}\mathcal{W}_{b}
+$$
+もし、熱浴系も容器系も孤立系の場合どちらもエネルギー（$U,U_b$）が一定になるため、この積で全体の状態数になると思われる。
+$$
+    \mathcal{W}_\mathrm{x}(U_t)=
+    \mathcal{W}(U)
+    \mathcal{W}_{b}(U_b)
+$$
+しかし、今の場合だと全体のエネルギーが一定の状態で様々な値をとることから
+$$
+    \mathcal{W}_t(U_t)=
+    \sum_{U}
+    \mathcal{W}(U)
+    \mathcal{W}_{b}(Ut-U)
+$$
+ここで、左辺で右辺を割るとあたかも確率のようになることが分かる。
+$$
+    1=\sum_{U}P(U)、
     P(U)=
-    \frac{\mathcal{W}(U_t-U)
-    \mathcal{W}(U)}{\mathcal{W}(U_t)}
+    \frac{\mathcal{W}(U)
+    \mathcal{W}_{b}(Ut-U)}
+    {\mathcal{W}_t(U_t)}
 $$
+
+ここでどのように展開するか？
 $$
     S(U_t-U)\simeq S(U_t)-
     \left(
