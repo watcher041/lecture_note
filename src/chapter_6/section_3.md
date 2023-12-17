@@ -139,3 +139,21 @@ $$
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T}
 $$
+理想気体の場合だと、状態数が先ほどの形になるため
+$$
+    \int_0^\infty
+    U^{3/2N-1}e^{-\beta U}\mathrm{d}U=
+    \frac{1}{\beta^{3/2N}}
+    \int_0^\infty
+    x^{3/2N-1}e^{-x}\mathrm{d}x=
+    \frac{\Gamma(3/2N)}{\beta^{3/2N}}
+$$
+$$
+    Z=
+    \frac{m}{2}CV^{N}
+    \left(
+        \frac{2\pi}{m\beta}
+    \right)^{3/2N}
+    \rightarrow
+    U=\frac{3}{2}Nk_{\mathrm{B}}T
+$$

@@ -50,16 +50,21 @@ $$
     \frac{3N\pi}{2\Gamma(3N/2+1)}
     \left(
         \frac{2\pi U}{m}
+    \right)^{3N/2-1}=
+    \frac{\pi}{\Gamma(3N/2)}
+    \left(
+        \frac{2\pi U}{m}
     \right)^{3N/2-1}
 $$
 と微分することで求められる。しかし、このままだと次元が無次元とならないため、次元調整用に$A$ をかけたものが状態数となる。
 
 $$
     \mathcal{W}=
-    \frac{3N\pi A}{2\Gamma(3N/2+1)}
+    \frac{\pi A}{\Gamma(3N/2)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}
+
 $$
 一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
 $$
