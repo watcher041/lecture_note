@@ -118,57 +118,24 @@ $$
 $$
 そのため、先ほどの確率は次のようになる。
 $$
-    P(U)=
-    A\mathcal{W}(U)
-    e^{-U/k_{\mathrm{B}}T_b}、
-    A=
+    1=
+    \sum_U
     \frac{\mathcal{W}_b(U_t)}
     {\mathcal{W}_t(U_t)}
-$$
-しかし、これを整理すると
-$$
-    Z=\frac{1}{A}=
-    \sum_{U}
+    \mathcal{W}(U)
+    e^{-U/k_{\mathrm{B}}T_b}
+    \rightarrow
+    \frac{\mathcal{W}_b(U_t)}
+    {\mathcal{W}_t(U_t)}=
+    \frac{1}{Z}、
+    Z=
+    \sum_U
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
-となるため、以下のように置くこともできる。
+となるため、以下のように置くこともできる（ここで温度を $T_b\simeq T$ とする）。
 $$
     P(U)=\frac{1}{Z}
     \mathcal{W}(U)
-    e^{-U/k_{\mathrm{B}}T_b}
+    e^{-U/k_{\mathrm{B}}T}
 $$
-$$
-    Z=
-    \int\cdots\int
-    e^{-\frac{\beta m}{2}
-    (v_1^2+\cdots+v_{3N}^2) }
-    \mathrm{d}v_1\cdots\mathrm{d}v_{3N}
-$$
-
-$$
-    \braket{v^2}=
-    \frac{1}{Z}
-    \int\cdots\int
-    v^2
-    e^{-\frac{\beta m}{2}
-    (v_1^2+\cdots+v_{3N}^2) }
-    \mathrm{d}v_1\cdots\mathrm{d}v_{3N}=
-    \frac{f(\beta)}{g(\beta)}=
-    \frac{1}{\beta m}、
-$$
-$$
-    \left(
-        f(\beta)=
-        \int v^2 e^{-\frac{\beta m}{2}v^2 }\mathrm{d}v=
-        \frac{1}{2}\sqrt{\frac{2^3\pi}{\beta^3 m^3}}、
-        g(\beta)=
-        \int e^{-\frac{\beta m}{2}v^2 }\mathrm{d}v=
-        \sqrt{\frac{2\pi}{\beta m}}
-    \right)
-$$
-$$
-    PV=Nk_{\mathrm{B}}T
-$$
-
-ボルツマン定数の値
