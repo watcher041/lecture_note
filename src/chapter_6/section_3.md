@@ -147,14 +147,33 @@ $$
     -\frac{\partial}{\partial\beta}
     \ln Z、
     \braket{P}=
-    -\left(
-        \frac{\partial U}
+    \left<
+        -\frac{\partial U}
         {\partial V}
-    \right)=
+    \right>=
     \frac{1}{\beta}
     \frac{\partial}{\partial V}
     \ln Z
 $$
+一方で、分配関数の方についてはエネルギーが連続していることから
+$$
+    \int_0^\infty 
+    P(U)\mathrm{d}U=
+    \frac{1}{Z}
+    \int_0^\infty
+    \mathcal{W}(U)e^{-\beta U}
+    \mathrm{d}U=1
+$$
+と積分の形で書けるため、整理すると以下のようになっていることが分かる。
+$$
+    Z=
+    \int_0^\infty
+    \mathcal{W}(U)
+    e^{-\beta U}
+    \mathrm{d}U
+$$
+ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。
+
 
 理想気体の場合だと、状態数が先ほどの形になるため
 $$
