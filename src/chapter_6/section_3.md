@@ -141,18 +141,19 @@ $$
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T}
 $$
-さらに、ここでボルツマンの原理を導入すると
-$$
-    P(U)=\frac{1}{Z}e^{-\beta F}、
-    F=U-TS
-$$
-というように形になる。ここで、エネルギーとエントロピーの期待値を求めると
+これにより、エネルギーと圧力の期待値が以下のように分配関数から求められることが分かる。
 $$
     \braket{U}=
     -\frac{\partial}{\partial\beta}
     \ln Z、
-    \braket{S}=
-
+    \braket{P}=
+    -\left(
+        \frac{\partial U}
+        {\partial V}
+    \right)=
+    \frac{1}{\beta}
+    \frac{\partial}{\partial V}
+    \ln Z
 $$
 
 理想気体の場合だと、状態数が先ほどの形になるため
