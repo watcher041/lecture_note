@@ -81,13 +81,14 @@ $$
     \mathcal{W}_\mathrm{x}=
     \mathcal{W}\mathcal{W}_{b}
 $$
-もし、熱浴系も容器系も孤立系の場合どちらもエネルギー（$U,U_b$）が一定になるため、この積で全体の状態数になると思われる。
+仮に熱浴系も容器系も孤立系の場合だと、互いに独立していることから $\mathcal{W}_\mathrm{x}$ が全体の状態数になるものと思われる。
 $$
+    \mathcal{W}_t(U_t)=
     \mathcal{W}_\mathrm{x}(U_t)=
     \mathcal{W}(U)
     \mathcal{W}_{b}(U_b)
 $$
-しかし、今の場合だと全体のエネルギーが一定の状態で様々な値をとることから
+しかし、今の場合だと各々でエネルギーが様々な値をとることから、全体のエネルギーが一定の条件の下で以下のような総和をとった形になる。
 $$
     \mathcal{W}_t(U_t)=
     \sum_{U}
@@ -116,15 +117,16 @@ $$
     \mathcal{W}_b(U_t)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
-そのため、先ほどの確率は次のようになる。
+そのため、確率は次のようになる。
 $$
-    1=
-    \sum_U
+    P(U)=
     \frac{\mathcal{W}_b(U_t)}
     {\mathcal{W}_t(U_t)}
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T_b}
-    \rightarrow
+$$
+ここで、この総和をとったときに
+$$
     \frac{\mathcal{W}_b(U_t)}
     {\mathcal{W}_t(U_t)}=
     \frac{1}{Z}、
@@ -133,12 +135,26 @@ $$
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
-となるため、以下のように置くこともできる（ここで温度を $T_b\simeq T$ とする）。
+とすることで、以下のように置くこともできる（ここで温度は $T_b\simeq T$ とみなしている）。
 $$
     P(U)=\frac{1}{Z}
     \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T}
 $$
+さらに、ここでボルツマンの原理を導入すると
+$$
+    P(U)=\frac{1}{Z}e^{-\beta F}、
+    F=U-TS
+$$
+というように形になる。ここで、エネルギーとエントロピーの期待値を求めると
+$$
+    \braket{U}=
+    -\frac{\partial}{\partial\beta}
+    \ln Z、
+    \braket{S}=
+
+$$
+
 理想気体の場合だと、状態数が先ほどの形になるため
 $$
     \int_0^\infty
@@ -156,4 +172,25 @@ $$
     \right)^{3/2N}
     \rightarrow
     U=\frac{3}{2}Nk_{\mathrm{B}}T
+$$
+
+$$
+    \braket{S}=
+    k_{\mathrm{B}}
+    \braket{\ln\mathcal{W}}=
+    k_{\mathrm{B}}
+    \int_0^{\infty}
+    (\ln\mathcal{W})P(U)
+    \mathrm{d}U=
+    k_{\mathrm{B}}
+    \int_0^{\infty}
+    (\ln\mathcal{P})P(U)
+    \mathrm{d}U+
+    k_{\mathrm{B}}\ln Z+
+    \frac{\braket{U}}{T}
+$$
+$$
+    \frac{1}{\beta}\braket{\ln P}=
+    -\frac{1}{\beta}\ln Z+
+    T\braket{S}-\braket{U}
 $$
