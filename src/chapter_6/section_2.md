@@ -49,7 +49,7 @@ $$
     \frac{\mathrm{d}\mathcal{W}}
     {\mathrm{d}r}
     \right)=
-    \frac{3NA\pi}{2\Gamma(3N/2+1)}
+    \frac{3NA\pi/2}{\Gamma(3N/2+1)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}=

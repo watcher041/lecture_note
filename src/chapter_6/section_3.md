@@ -59,8 +59,7 @@ $$
         \frac{1}{T}-
         \frac{1}{T_{b}}
     \right)\mathrm{d}'Q
-    \rightarrow
-    0\le\mathrm{d}S + \mathrm{d}S_{b}
+    \le\mathrm{d}S + \mathrm{d}S_{b}
 $$
 ここでBoltzmannの原理よりエントロピーを状態数で置き換えると
 $$
@@ -73,15 +72,15 @@ $$
      (k_{\mathrm{B}}
      \ln\Omega\Omega_{b})
 $$
-となり、一つのエントロピーとしてみなすことができる。
+となり、一つのエントロピー $S_{\mathrm{x}}$ としてこれが増大し続けることが分かる。
 $$
     S_\mathrm{x}=
     k_{\mathrm{B}}
-    \ln\Omega_\mathrm{x}、
-    \Omega_\mathrm{x}=
-    \Omega\Omega_{b}
+    \ln\Omega\Omega_{b}
+    \rightarrow
+    0\le\mathrm{d}S_\mathrm{x}
 $$
-仮に熱浴系も容器系も孤立系の場合だと、互いに独立していることから $\Omega_\mathrm{x}$ が全体の状態数になるものと思われる。
+ここで $S_{\mathrm{x}}(\Omega_{\mathrm{x}})$ は熱浴系も容器系も孤立系の場合だと、互いに独立していることから全体の状態数になるものと思われる。
 $$
     \Omega_t(U_t)=
     \Omega_\mathrm{x}(U_t)=
@@ -189,7 +188,7 @@ $$
     U^{3N/2-1}、
     (C：定数)
 $$
-となり、分配関数も以下の通りとなる。
+となり、分配関数や各期待値も以下の通りとなる。
 $$
     Z=CV^N
     \left(
@@ -200,3 +199,10 @@ $$
     \braket{P}=
     \frac{Nk_{\mathrm{B}}T}{V}
 $$
+一方で、分配関数は状態密度をエントロピーで置き換えることで
+$$
+    Z=\int_0^{\infty}
+    e^{-\beta F}、
+    F=U-TS
+$$
+と書くことができるため、$e^{-\beta F}$ を足しわせたものであると考えることができる。
