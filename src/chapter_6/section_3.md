@@ -66,44 +66,44 @@ $$
 $$
     \mathrm{d}S + \mathrm{d}S_{b}=
     \mathrm{d}
-    (k_{\mathrm{B}}\ln\mathcal{W})+
+    (k_{\mathrm{B}}\ln\Omega)+
     \mathrm{d}
-    (k_{\mathrm{B}}\ln\mathcal{W}_{b})=
+    (k_{\mathrm{B}}\ln\Omega_{b})=
     \mathrm{d}
      (k_{\mathrm{B}}
-     \ln\mathcal{W}\mathcal{W}_{b})
+     \ln\Omega\Omega_{b})
 $$
 となり、一つのエントロピーとしてみなすことができる。
 $$
     S_\mathrm{x}=
     k_{\mathrm{B}}
-    \ln\mathcal{W}_\mathrm{x}、
-    \mathcal{W}_\mathrm{x}=
-    \mathcal{W}\mathcal{W}_{b}
+    \ln\Omega_\mathrm{x}、
+    \Omega_\mathrm{x}=
+    \Omega\Omega_{b}
 $$
-仮に熱浴系も容器系も孤立系の場合だと、互いに独立していることから $\mathcal{W}_\mathrm{x}$ が全体の状態数になるものと思われる。
+仮に熱浴系も容器系も孤立系の場合だと、互いに独立していることから $\Omega_\mathrm{x}$ が全体の状態数になるものと思われる。
 $$
-    \mathcal{W}_t(U_t)=
-    \mathcal{W}_\mathrm{x}(U_t)=
-    \mathcal{W}(U)
-    \mathcal{W}_{b}(U_b)
+    \Omega_t(U_t)=
+    \Omega_\mathrm{x}(U_t)=
+    \Omega(U)
+    \Omega_{b}(U_b)
 $$
 しかし、今の場合だと各々でエネルギーが様々な値をとることから、全体のエネルギーが一定の条件の下で以下のような総和をとった形になる。
 $$
-    \mathcal{W}_t(U_t)=
+    \Omega_t(U_t)=
     \sum_{U}
-    \mathcal{W}(U)
-    \mathcal{W}_{b}(Ut-U)
+    \Omega(U)
+    \Omega_{b}(Ut-U)
 $$
 ここで、左辺で右辺を割るとあたかも確率のようになることが分かる。
 $$
     1=\sum_{U}P(U)、
     P(U)=
-    \frac{\mathcal{W}(U)
-    \mathcal{W}_{b}(Ut-U)}
-    {\mathcal{W}_t(U_t)}
+    \frac{\Omega(U)
+    \Omega_{b}(Ut-U)}
+    {\Omega_t(U_t)}
 $$
-そして、右辺の $\mathcal{W}_b$ のエントロピーに関して
+そして、右辺の $\Omega_b$ のエントロピーに関して
 $$
     S_b(U_t-U)\simeq S_b(U_t)-
     \left(
@@ -113,32 +113,32 @@ $$
 $$
 であることから、状態数に関しては以下のように書ける。
 $$
-    \mathcal{W}_b(U_t-U)=
-    \mathcal{W}_b(U_t)
+    \Omega_b(U_t-U)=
+    \Omega_b(U_t)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 そのため、確率は次のようになる。
 $$
     P(U)=
-    \frac{\mathcal{W}_b(U_t)}
-    {\mathcal{W}_t(U_t)}
-    \mathcal{W}(U)
+    \frac{\Omega_b(U_t)}
+    {\Omega_t(U_t)}
+    \Omega(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 ここで、この総和をとったときに
 $$
-    \frac{\mathcal{W}_b(U_t)}
-    {\mathcal{W}_t(U_t)}=
+    \frac{\Omega_b(U_t)}
+    {\Omega_t(U_t)}=
     \frac{1}{Z}、
     Z=
     \sum_U
-    \mathcal{W}(U)
+    \Omega(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 とすることで、以下のように置くこともできる（ここで温度は $T_b\simeq T$ とみなしている）。
 $$
     P(U)=\frac{1}{Z}
-    \mathcal{W}(U)
+    \Omega(U)
     e^{-U/k_{\mathrm{B}}T}
 $$
 これにより、エネルギーと圧力の期待値が以下のように分配関数から求められることが分かる。
@@ -161,56 +161,42 @@ $$
     P(U)\mathrm{d}U=
     \frac{1}{Z}
     \int_0^\infty
-    \mathcal{W}(U)e^{-\beta U}
+    \Omega(U)e^{-\beta U}
     \mathrm{d}U=1
 $$
 と積分の形で書けるため、整理すると以下のようになっていることが分かる。
 $$
     Z=
     \int_0^\infty
-    \mathcal{W}(U)
+    \Omega(U)
     e^{-\beta U}
     \mathrm{d}U
 $$
-ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。
-
-
-理想気体の場合だと、状態数が先ほどの形になるため
+ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。そこで、状態密度の定義を
 $$
-    \int_0^\infty
-    U^{3/2N-1}e^{-\beta U}\mathrm{d}U=
-    \frac{1}{\beta^{3/2N}}
-    \int_0^\infty
-    x^{3/2N-1}e^{-x}\mathrm{d}x=
-    \frac{\Gamma(3/2N)}{\beta^{3/2N}}
+    \Omega(U)\equiv
+    \frac{\partial \mathcal{W}}
+    {\partial U}
 $$
+と置くことで、離散的のときも打ち消しあい、
+積分の形にした場合でも上記で定義できることが分かる。そのため、先ほどの理想気体の場合だと
 $$
-    Z=
-    \frac{m}{2}CV^{N}
+    \Omega(U)=
+    \frac{CV^N}{\Gamma(3N/2)}
+    \left(
+        \frac{2\pi}{m}
+    \right)^{3N/2}
+    U^{3N/2-1}、
+    (C：定数)
+$$
+となり、分配関数も以下の通りとなる。
+$$
+    Z=CV^N
     \left(
         \frac{2\pi}{m\beta}
-    \right)^{3/2N}
-    \rightarrow
-    U=\frac{3}{2}Nk_{\mathrm{B}}T
-$$
-
-$$
-    \braket{S}=
-    k_{\mathrm{B}}
-    \braket{\ln\mathcal{W}}=
-    k_{\mathrm{B}}
-    \int_0^{\infty}
-    (\ln\mathcal{W})P(U)
-    \mathrm{d}U=
-    k_{\mathrm{B}}
-    \int_0^{\infty}
-    (\ln\mathcal{P})P(U)
-    \mathrm{d}U+
-    k_{\mathrm{B}}\ln Z+
-    \frac{\braket{U}}{T}
-$$
-$$
-    \frac{1}{\beta}\braket{\ln P}=
-    -\frac{1}{\beta}\ln Z+
-    T\braket{S}-\braket{U}
+    \right)^{3N/2}、
+    \braket{U}=
+    \frac{3}{2}Nk_{\mathrm{B}}T、
+    \braket{P}=
+    \frac{Nk_{\mathrm{B}}T}{V}
 $$

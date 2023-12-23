@@ -14,9 +14,9 @@ $$
 $$
     \mathrm{d}'W=-P\mathrm{d}V=0
 $$
-と体積が変化しない関係で一定になる。体積については気体の性質とは直接関係がない（人的に変更されるもの）が、エントロピーについてはBoltzmannによると気体のとりうる状態の数 $\mathcal{W}$ により
+と体積が変化しない関係で一定になる。体積については気体の性質とは直接関係がない（人的に変更されるもの）が、エントロピーについてはBoltzmannによると気体のとりうる状態の数 $\Omega$ により
 $$
-    S=k_{\mathrm{B}}\ln\mathcal{W}
+    S=k_{\mathrm{B}}\ln\Omega
 $$
 というような関係がある（ボルツマンの原理）。この状態の数というのは全体の状態がエネルギーを用いて書けることから計算することができる。具体的には、エネルギーが
 $$
@@ -36,37 +36,29 @@ $$
 $$
 であるから、以下のようになる。
 $$
-    V(U)=\frac{1}{\Gamma(3N/2+1)}
+    \mathcal{W}(U)=
+    \frac{1}{\Gamma(3N/2+1)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2}
 $$
 エネルギーが一定の際に取りうる速度のパターン数はこの表面積になるため
 $$
-    S(U)=
-    \left(
-    \frac{\mathrm{d}V}{\mathrm{d}r}
+    \Omega(U)=
+    A\left(
+    \frac{\mathrm{d}\mathcal{W}}
+    {\mathrm{d}r}
     \right)=
-    \frac{3N\pi}{2\Gamma(3N/2+1)}
+    \frac{3NA\pi}{2\Gamma(3N/2+1)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}=
-    \frac{\pi}{\Gamma(3N/2)}
+    \frac{A\pi}{\Gamma(3N/2)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}
 $$
-と微分することで求められる。しかし、このままだと次元が無次元とならないため、次元調整用に$A$ をかけたものが状態数となる。
-
-$$
-    \mathcal{W}=
-    \frac{\pi A}{\Gamma(3N/2)}
-    \left(
-        \frac{2\pi U}{m}
-    \right)^{3N/2-1}
-
-$$
-一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
+と求められる（ここで無次元にするために係数 $A$ をかけている）。一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
 $$
     \mathrm{d}S=
     \frac{1}{T}\mathrm{d}U+
