@@ -170,13 +170,14 @@ $$
     \mathcal{W}_b(U_t)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
-そのため、確率は次のようになる。
+そして、熱平衡（$T_b\simeq T$）であることを踏まえると確率は次の通りになる。
 $$
     P(U)=
     \frac{\mathcal{W}_b(U_t)}
     {\mathcal{W}_t(U_t)}
     \mathcal{W}(U)
-    e^{-U/k_{\mathrm{B}}T_b}
+    e^{-\beta U}、
+    \beta=\frac{1}{k_{\mathrm{B}}T}
 $$
 ここで、この総和をとったときに
 $$
@@ -186,28 +187,75 @@ $$
     Z=
     \sum_U
     \mathcal{W}(U)
-    e^{-U/k_{\mathrm{B}}T_b}
+    e^{-\beta U}
 $$
-とすることで、以下のように置くこともできる（ここで温度は $T_b\simeq T$ とみなしている）。
+とすることで、以下のように置くこともできる。
 $$
     P(U)=\frac{1}{Z}
     \mathcal{W}(U)
-    e^{-U/k_{\mathrm{B}}T}
+    e^{-\beta U}
 $$
-これにより、エネルギーと圧力の期待値が以下のように分配関数から求められることが分かる。
+あるいは、状態数をエントロピーの形に置き換えることで
 $$
-    \braket{U}=
-    -\frac{\partial}{\partial\beta}
-    \ln Z、
-    \braket{P}=
-    \left<
-        -\frac{\partial U}
+    P(U)=\frac{1}{Z}e^{-\beta F}、
+    F=U-TS
+$$
+とHelmholtzの自由エネルギー $F$ で表現することもできる。この関数は微小変化をとると
+$$
+    \mathrm{d}F=
+    \mathrm{d}U
+    -S\mathrm{d}T-T\mathrm{d}S=
+    -S\mathrm{d}T-P\mathrm{d}V
+$$
+であるから、以下の関係式が成り立つ。
+$$
+    S=-
+    \left(
+        \frac{\partial F}
+        {\partial T}
+    \right)_{V}、
+    P=-
+    \left(
+        \frac{\partial F}
         {\partial V}
-    \right>=
-    \frac{1}{\beta}
-    \frac{\partial}{\partial V}
-    \ln Z
+    \right)_{T}、
+    U=F+TS=
+    -T^2\left[
+        \frac{\partial}{\partial T}
+        \left(
+            \frac{F}{T}
+        \right)
+    \right]_V
 $$
+このことから、自由エネルギーが求めることで表示できることが分かる。そのため、期待値の方も
+$$
+    \braket{S}=
+    -k_{\mathrm{B}}\beta
+    \left(
+        \frac{\partial}{\partial\beta}
+        \ln Z
+    \right)_V-
+    \frac{\braket{F}}{T}
+$$
+$$
+    \braket{P}=
+    -\frac{1}{\beta}
+    \left(
+        \frac{\partial}{\partial V}\ln Z
+    \right)_T、
+    \braket{U}=
+    k_{\mathrm{B}}T^2\left(
+        \frac{\partial}{\partial T}
+        \ln Z
+    \right)_V
+$$
+
+
+
+
+
+
+
 一方で、分配関数の方についてはエネルギーが連続していることから
 $$
     \int_0^\infty 
