@@ -65,44 +65,98 @@ $$
 $$
     \mathrm{d}S + \mathrm{d}S_{b}=
     \mathrm{d}
-    (k_{\mathrm{B}}\ln\Omega)+
+    (k_{\mathrm{B}}\ln\mathcal{W})+
     \mathrm{d}
-    (k_{\mathrm{B}}\ln\Omega_{b})=
+    (k_{\mathrm{B}}\ln\mathcal{W}_{b})=
     \mathrm{d}
      (k_{\mathrm{B}}
-     \ln\Omega\Omega_{b})
+     \ln\mathcal{W}\mathcal{W}_{b})
 $$
 となり、一つのエントロピー $S_{\mathrm{x}}$ としてこれが増大し続けることが分かる。
 $$
     S_\mathrm{x}=
     k_{\mathrm{B}}
-    \ln\Omega\Omega_{b}
+    \ln\mathcal{W}\mathcal{W}_{b}
     \rightarrow
     0\le\mathrm{d}S_\mathrm{x}
 $$
-ここで $S_{\mathrm{x}}(\Omega_{\mathrm{x}})$ は熱浴系も容器系も孤立系の場合だと、互いに独立していることから全体の状態数になるものと思われる。
+そして、そのまま放置するとやがて熱平衡になり熱の移動が緩やかになることから、準静的変化をするようになり近似的に以下の式が成り立つ。
 $$
-    \Omega_t(U_t)=
-    \Omega_\mathrm{x}(U_t)=
-    \Omega(U)
-    \Omega_{b}(U_b)
+    \mathrm{d}S\simeq
+    \frac{\mathrm{d}'Q}{T}
+    、
+    \mathrm{d}S_b\simeq
+    \frac{\mathrm{d}'Q_b}{T_b}
 $$
-しかし、今の場合だと各々でエネルギーが様々な値をとることから、全体のエネルギーが一定の条件の下で以下のような総和をとった形になる。
+そのため、内部エネルギーに関する式もエントロピーを含めた形で表現することができる。
 $$
-    \Omega_t(U_t)=
+    \mathrm{d}S=
+    \frac{1}{T}\mathrm{d}U+
+    \frac{P}{T}\mathrm{d}V
+    \rightarrow
+    \left(
+        \frac{\partial S}
+        {\partial U}
+    \right)_V=
+    \frac{1}{T}、
+    \left(
+        \frac{\partial S}
+        {\partial V}
+    \right)_U=
+    \frac{P}{T}
+$$
+$$
+    \mathrm{d}S_b=
+    \frac{1}{T_b}\mathrm{d}U_b+
+    \frac{P_b}{T_b}\mathrm{d}V_b
+    \rightarrow
+    \left(
+        \frac{\partial S_b}
+        {\partial U_b}
+    \right)_{V_b}=
+    \frac{1}{T_b}、
+    \left(
+        \frac{\partial S_b}
+        {\partial V_b}
+    \right)_{U_b}=
+    \frac{P_b}{T_b}
+$$
+また、二つのエントロピーの和（$S_{\mathrm{x}}$）も熱平衡（$T\simeq T_b$）の状態になると
+$$
+    \mathrm{d}S+\mathrm{d}S_b=
+    \left(
+        \frac{1}{T}-
+        \frac{1}{T_{b}}
+    \right)\mathrm{d}'Q\simeq 0
+    \rightarrow
+    \mathrm{d}S_{\mathrm{x}}=0
+$$ 
+と増大しなくなり、極大値をとると考えられる。
+ここで $\mathcal{W}_{\mathrm{x}}$ は熱浴系も容器系も孤立系の場合だと、互いに独立していることから全体の状態数になるものと思われる。
+$$
+    \mathcal{W}_t=
+    \mathcal{W}_\mathrm{x}=
+    \mathcal{W}\mathcal{W}_{b}
+$$
+しかし、今の場合だと各々でエネルギーが様々な値をとることから、全体のエネルギーが一定の条件の下で以下のような総和をとった形になると考えられる。
+$$
+    \mathcal{W}_t(U_t)=
+    \sum_{Ut=U+U_b}
+    \mathcal{W}(U)
+    \mathcal{W}_{b}(U_b)=
     \sum_{U}
-    \Omega(U)
-    \Omega_{b}(Ut-U)
+    \mathcal{W}(U)
+    \mathcal{W}_{b}(U_t-U)
 $$
 ここで、左辺で右辺を割るとあたかも確率のようになることが分かる。
 $$
     1=\sum_{U}P(U)、
     P(U)=
-    \frac{\Omega(U)
-    \Omega_{b}(Ut-U)}
-    {\Omega_t(U_t)}
+    \frac{\mathcal{W}(U)
+    \mathcal{W}_{b}(Ut-U)}
+    {\mathcal{W}_t(U_t)}
 $$
-そして、右辺の $\Omega_b$ のエントロピーに関して
+そして、右辺の $\mathcal{W}_b$ のエントロピーに関して
 $$
     S_b(U_t-U)\simeq S_b(U_t)-
     \left(
@@ -112,32 +166,32 @@ $$
 $$
 であることから、状態数に関しては以下のように書ける。
 $$
-    \Omega_b(U_t-U)=
-    \Omega_b(U_t)
+    \mathcal{W}_b(U_t-U)=
+    \mathcal{W}_b(U_t)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 そのため、確率は次のようになる。
 $$
     P(U)=
-    \frac{\Omega_b(U_t)}
-    {\Omega_t(U_t)}
-    \Omega(U)
+    \frac{\mathcal{W}_b(U_t)}
+    {\mathcal{W}_t(U_t)}
+    \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 ここで、この総和をとったときに
 $$
-    \frac{\Omega_b(U_t)}
-    {\Omega_t(U_t)}=
+    \frac{\mathcal{W}_b(U_t)}
+    {\mathcal{W}_t(U_t)}=
     \frac{1}{Z}、
     Z=
     \sum_U
-    \Omega(U)
+    \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T_b}
 $$
 とすることで、以下のように置くこともできる（ここで温度は $T_b\simeq T$ とみなしている）。
 $$
     P(U)=\frac{1}{Z}
-    \Omega(U)
+    \mathcal{W}(U)
     e^{-U/k_{\mathrm{B}}T}
 $$
 これにより、エネルギーと圧力の期待値が以下のように分配関数から求められることが分かる。
@@ -160,27 +214,27 @@ $$
     P(U)\mathrm{d}U=
     \frac{1}{Z}
     \int_0^\infty
-    \Omega(U)e^{-\beta U}
+    \mathcal{W}(U)e^{-\beta U}
     \mathrm{d}U=1
 $$
 と積分の形で書けるため、整理すると以下のようになっていることが分かる。
 $$
     Z=
     \int_0^\infty
-    \Omega(U)
+    \mathcal{W}(U)
     e^{-\beta U}
     \mathrm{d}U
 $$
 ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。そこで、状態密度の定義を
 $$
-    \Omega(U)\equiv
+    \mathcal{W}(U)\equiv
     \frac{\partial \mathcal{W}}
     {\partial U}
 $$
 と置くことで、離散的のときも打ち消しあい、
 積分の形にした場合でも上記で定義できることが分かる。そのため、先ほどの理想気体の場合だと
 $$
-    \Omega(U)=
+    \mathcal{W}(U)=
     \frac{CV^N}{\Gamma(3N/2)}
     \left(
         \frac{2\pi}{m}
