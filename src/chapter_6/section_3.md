@@ -227,10 +227,10 @@ $$
         \right)
     \right]_V
 $$
-このことから、自由エネルギーが求めることで表示できることが分かる。そのため、期待値の方も
+このことから、自由エネルギーの形で表示できることが分かる。そのため、期待値の方も
 $$
     \braket{S}=
-    -k_{\mathrm{B}}\beta
+    -\frac{1}{T}
     \left(
         \frac{\partial}{\partial\beta}
         \ln Z
@@ -244,17 +244,11 @@ $$
         \frac{\partial}{\partial V}\ln Z
     \right)_T、
     \braket{U}=
-    k_{\mathrm{B}}T^2\left(
-        \frac{\partial}{\partial T}
+    -\left(
+        \frac{\partial}{\partial\beta}
         \ln Z
     \right)_V
 $$
-
-
-
-
-
-
 
 一方で、分配関数の方についてはエネルギーが連続していることから
 $$
@@ -273,16 +267,44 @@ $$
     e^{-\beta U}
     \mathrm{d}U
 $$
-ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。そこで、状態密度の定義を
+ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。そこで、エントロピーの式をエネルギーで偏微分すると
 $$
-    \mathcal{W}(U)\equiv
-    \frac{\partial \mathcal{W}}
-    {\partial U}
+    \left(
+        \frac{\partial S}
+        {\partial U}
+    \right)_V=
+    \frac{k_{\mathrm{B}}}{\mathcal{W}}
+    \left(
+        \frac{\partial \mathcal{W}}
+        {\partial U}
+    \right)_V
+    \rightarrow
+     \mathcal{W}=
+     \frac{1}{\beta}
+     \left(
+        \frac{\partial \mathcal{W}}
+        {\partial U}
+    \right)_V
 $$
-と置くことで、離散的のときも打ち消しあい、
-積分の形にした場合でも上記で定義できることが分かる。そのため、先ほどの理想気体の場合だと
+であることを利用して、確率を次のように置きなおしてみる。
 $$
-    \mathcal{W}(U)=
+    f(U)=\frac{1}{Z}D(U)e^{-\beta U}、
+    D(U)=
+    \left(
+        \frac{\partial \mathcal{W}}
+        {\partial U}
+    \right)_V、
+    Z=\int_0^{\infty}f(U)\mathrm{d}U
+$$
+このようにすることで、積分の形にした場合でも無次元になることが分かる。
+
+　以上のことを理想気体に適用してみると、エネルギーが連続していることから
+$$
+    D(U)=
+    \left(
+        \frac{\partial \mathcal{W}}
+        {\partial U}
+    \right)_V=
     \frac{CV^N}{\Gamma(3N/2)}
     \left(
         \frac{2\pi}{m}
@@ -301,10 +323,4 @@ $$
     \braket{P}=
     \frac{Nk_{\mathrm{B}}T}{V}
 $$
-一方で、分配関数は状態密度をエントロピーで置き換えることで
-$$
-    Z=\int_0^{\infty}
-    e^{-\beta F}、
-    F=U-TS
-$$
-と書くことができるため、$e^{-\beta F}$ を足しわせたものであると考えることができる。
+これらは、小正準集団のときの結果と一致していることが分かる。
