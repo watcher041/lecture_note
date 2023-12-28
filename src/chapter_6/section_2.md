@@ -49,21 +49,22 @@ $$
     \frac{\mathrm{d}V_{3N}}
     {\mathrm{d}r}
     \right)=
-    \frac{3N\pi/2}{\Gamma(3N/2+1)}
+    \frac{3N\pi^{3N/2}/2}
+    {\Gamma(3N/2+1)}
     \left(
-        \frac{2\pi U}{m}
+        \frac{2U}{m}
     \right)^{3N/2-1}=
-    \frac{\pi}{\Gamma(3N/2)}
+    \frac{\pi^{3N/2}}{\Gamma(3N/2)}
     \left(
-        \frac{2\pi U}{m}
+        \frac{2U}{m}
     \right)^{3N/2-1}
 $$
 と求められる。しかし、このままだと半径の部分に速度の二乗の次元が残ってしまうため、無次元かするために以下のようにする。
 $$
     \mathcal{W}=
-    \frac{\pi}{\Gamma(3N/2)}
+    \frac{\pi^{3N/2}}{\Gamma(3N/2)}
     \left(
-        \frac{2\pi U}{mA^2}
+        \frac{2U}{mA^2}
     \right)^{3N/2-1}、
     (A:速度の次元を持つ定数)
 $$

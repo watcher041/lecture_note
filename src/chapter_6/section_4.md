@@ -30,8 +30,8 @@ $$
 $$
     \mathcal{W}=
     \frac{V^{N}}{h^{3N}}
-    \frac{\pi}{\Gamma(3N/2)}
-    \left(2\pi mU\right)^{3N/2-1}、
+    \frac{\pi^{3N/2}}{\Gamma(3N/2)}
+    \left(2mU\right)^{3N/2-1}、
     V=L^3
 $$
 というようになる。ここで、
