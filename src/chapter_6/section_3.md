@@ -330,11 +330,11 @@ $$
         \frac{\partial \mathcal{W}}
         {\partial U}
     \right)_V=
-    \frac{CV^N}{\Gamma(3N/2)}
+    \frac{CV^N}{\Gamma(3N/2-1)}
     \left(
         \frac{2\pi}{m}
     \right)^{3N/2}
-    U^{3N/2-1}、
+    U^{3N/2-2}、
     (C：定数)
 $$
 となり、分配関数と期待値は以下の通りとなる。
