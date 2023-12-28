@@ -249,6 +249,30 @@ $$
         \ln Z
     \right)_V
 $$
+となるが、エントロピーについては状態数の対数でも書けたため、
+$$
+    \braket{S}=
+    k_{\mathrm{B}}\braket{\ln\mathcal{W}}=
+    k_{\mathrm{B}}\braket{\ln P}+
+    k_{\mathrm{B}}\ln Z+
+    \frac{\braket{U}}{T}
+$$
+であることから、ヘルムホルツの自由エネルギーとエントロピーは以下の通りになる。
+$$
+    \braket{F}=
+    -\frac{1}{\beta}
+    \left(
+        \braket{\ln P}+\ln Z
+    \right)、
+    \braket{S}=
+    k_{\mathrm{B}}\braket{\ln P}+
+    \left[
+    \frac{\partial}{\partial T}
+    \left(
+    \frac{1}{\beta}\ln Z
+    \right)
+    \right]_V
+$$
 
 一方で、分配関数の方についてはエネルギーが連続していることから
 $$
@@ -288,13 +312,14 @@ $$
 $$
 であることを利用して、確率を次のように置きなおしてみる。
 $$
-    f(U)=\frac{1}{Z}\mathcal{D}(U)e^{-\beta U}、
+    P(U)=\frac{1}{\beta Z}\mathcal{D}(U)e^{-\beta U}、
     \mathcal{D}(U)=
     \left(
         \frac{\partial \mathcal{W}}
         {\partial U}
     \right)_V、
-    Z=\int_0^{\infty}f(U)\mathrm{d}U
+    \beta Z=
+    \int_0^{\infty}P(U)\mathrm{d}U
 $$
 このようにすることで、積分の形にした場合でも無次元になることが分かる。
 
@@ -312,12 +337,13 @@ $$
     U^{3N/2-1}、
     (C：定数)
 $$
-となり、分配関数や各期待値も以下の通りとなる。
+となり、分配関数と期待値は以下の通りとなる。
 $$
     Z=CV^N
     \left(
         \frac{2\pi}{m\beta}
-    \right)^{3N/2}、
+    \right)^{3N/2}
+    \rightarrow
     \braket{U}=
     \frac{3}{2}Nk_{\mathrm{B}}T、
     \braket{P}=
