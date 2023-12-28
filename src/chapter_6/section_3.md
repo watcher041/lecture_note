@@ -150,8 +150,8 @@ $$
 $$
 ここで、左辺で右辺を割るとあたかも確率のようになることが分かる。
 $$
-    1=\sum_{U}P(U)、
-    P(U)=
+    1=\sum_{U}f(U)、
+    f(U)=
     \frac{\mathcal{W}(U)
     \mathcal{W}_{b}(Ut-U)}
     {\mathcal{W}_t(U_t)}
@@ -172,7 +172,7 @@ $$
 $$
 そして、熱平衡（$T_b\simeq T$）であることを踏まえると確率は次の通りになる。
 $$
-    P(U)=
+    f(U)=
     \frac{\mathcal{W}_b(U_t)}
     {\mathcal{W}_t(U_t)}
     \mathcal{W}(U)
@@ -191,13 +191,13 @@ $$
 $$
 とすることで、以下のように置くこともできる。
 $$
-    P(U)=\frac{1}{Z}
+    f(U)=\frac{1}{Z}
     \mathcal{W}(U)
     e^{-\beta U}
 $$
 あるいは、状態数をエントロピーの形に置き換えることで
 $$
-    P(U)=\frac{1}{Z}e^{-\beta F}、
+    f(U)=\frac{1}{Z}e^{-\beta F}、
     F=U-TS
 $$
 とHelmholtzの自由エネルギー $F$ で表現することもできる。この関数は微小変化をとると
@@ -253,7 +253,7 @@ $$
 $$
     \braket{S}=
     k_{\mathrm{B}}\braket{\ln\mathcal{W}}=
-    k_{\mathrm{B}}\braket{\ln P}+
+    k_{\mathrm{B}}\braket{\ln f}+
     k_{\mathrm{B}}\ln Z+
     \frac{\braket{U}}{T}
 $$
@@ -262,10 +262,10 @@ $$
     \braket{F}=
     -\frac{1}{\beta}
     \left(
-        \braket{\ln P}+\ln Z
+        \braket{\ln f}+\ln Z
     \right)、
     \braket{S}=
-    k_{\mathrm{B}}\braket{\ln P}+
+    k_{\mathrm{B}}\braket{\ln f}+
     \left[
     \frac{\partial}{\partial T}
     \left(
@@ -277,7 +277,7 @@ $$
 一方で、分配関数の方についてはエネルギーが連続していることから
 $$
     \int_0^\infty 
-    P(U)\mathrm{d}U=
+    f(U)\mathrm{d}U=
     \frac{1}{Z}
     \int_0^\infty
     \mathcal{W}(U)e^{-\beta U}
@@ -312,14 +312,14 @@ $$
 $$
 であることを利用して、確率を次のように置きなおしてみる。
 $$
-    P(U)=\frac{1}{\beta Z}\mathcal{D}(U)e^{-\beta U}、
+    f(U)=\frac{1}{\beta Z}\mathcal{D}(U)e^{-\beta U}、
     \mathcal{D}(U)=
     \left(
         \frac{\partial \mathcal{W}}
         {\partial U}
     \right)_V、
     \beta Z=
-    \int_0^{\infty}P(U)\mathrm{d}U
+    \int_0^{\infty}f(U)\mathrm{d}U
 $$
 このようにすることで、積分の形にした場合でも無次元になることが分かる。
 
