@@ -310,7 +310,7 @@ $$
         {\partial U}
     \right)_V
 $$
-であることを利用して、確率を次のように置きなおしてみる。
+であることを利用して、確率を状態密度 $\mathcal{D}$ を用いて次のように置きなおしてみる。
 $$
     f(U)=\frac{1}{\beta Z}\mathcal{D}(U)e^{-\beta U}、
     \mathcal{D}(U)=
