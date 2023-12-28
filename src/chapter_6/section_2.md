@@ -49,11 +49,11 @@ $$
     \frac{\mathrm{d}V_{3N}}
     {\mathrm{d}r}
     \right)=
-    \frac{3N/2}{\Gamma(3N/2+1)}
+    \frac{3N\pi/2}{\Gamma(3N/2+1)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}=
-    \frac{1}{\Gamma(3N/2)}
+    \frac{\pi}{\Gamma(3N/2)}
     \left(
         \frac{2\pi U}{m}
     \right)^{3N/2-1}
@@ -61,7 +61,7 @@ $$
 と求められる。しかし、このままだと半径の部分に速度の二乗の次元が残ってしまうため、無次元かするために以下のようにする。
 $$
     \mathcal{W}=
-    \frac{1}{\Gamma(3N/2)}
+    \frac{\pi}{\Gamma(3N/2)}
     \left(
         \frac{2\pi U}{mA^2}
     \right)^{3N/2-1}、
@@ -105,7 +105,7 @@ $$
     \right)=
     \frac{1}{2}k_{\mathrm{B}}T
 $$
-というように、一成分当たりの平均エネルギーが $k_{\mathrm{B}}T/2$ になっていることが分かる（**エネルギー等分配則**）。そこで、
+というように、一成分当たりの平均エネルギーが $1/2k_{\mathrm{B}}T$ になっていることが分かる（**エネルギー等分配則**）。そこで、
 $$
     \braket{v^2}=
     \frac{1}{3N}
