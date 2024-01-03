@@ -319,7 +319,9 @@ $$
         {\partial U}
     \right)_V、
     \beta Z=
-    \int_0^{\infty}f(U)\mathrm{d}U
+    \int_0^{\infty}
+    \mathcal{D}(U)e^{-\beta U}
+    \mathrm{d}U
 $$
 このようにすることで、積分の形にした場合でも無次元になることが分かる。
 

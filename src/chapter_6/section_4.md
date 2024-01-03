@@ -162,7 +162,7 @@ $$
 $$
 $$
     \frac{Y}{\beta P}=
-    \int_{0}^{\infty}
+    \int_{0}^{V_t}
     (\beta Z)e^{-\beta PV}\mathrm{d}V、
     \beta Z=
     \int_{0}^{\infty}
@@ -170,10 +170,30 @@ $$
     e^{-\beta U}\mathrm{d}U
 $$
 
-
-
-
-
+理想気体での分配関数を求めてみると、$V_t\to\infty\ (x_t\to\infty)$ として
+$$
+    Y=
+    \frac{C}{(\beta P)^N}
+    \left(
+        \frac{2\pi}{m\beta}
+    \right)^{3N/2}
+    \int_0^{x_t}
+    x^{N}e^{-x}
+    \mathrm{d}x=
+    \frac{C}{(\beta P)^N}
+    \left(
+        \frac{2\pi}{m\beta}
+    \right)^{3N/2}   
+    (N+1)!
+$$
+となるので、各期待値は次の形で得られる。
+$$
+    \braket{V}=
+    \frac{Nk_{\mathrm{B}}T}{P}、
+    \braket{H}=
+    \frac{5}{2}Nk_{\mathrm{B}}T=
+    \braket{U}+P\braket{V}
+$$
 
 
 
