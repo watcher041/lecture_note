@@ -60,11 +60,19 @@ $$
 また、**ギブスの自由エネルギー** $G$ の微小変化をとると
 $$
     \mathrm{d}G=
-    \mathrm{d}F+
-    \mathrm{d}PV+P\mathrm{d}V=
+    \mathrm{d}H-
+    \mathrm{d}TS+T\mathrm{d}S=
     -S\mathrm{d}T+V\mathrm{d}P
 $$
-であることから、以下の関係が成り立つ。
+ここで、エンタルピーの微小変化の式を利用している。
+$$
+    \mathrm{d}H=
+    \mathrm{d}U+
+    \mathrm{d}PV+P\mathrm{d}V=
+    T\mathrm{d}S+V\mathrm{d}P
+$$
+
+上記の関係式から、以下の関係が成り立つ。
 $$
     S=-
     \left(
@@ -76,14 +84,14 @@ $$
         \frac{\partial G}
         {\partial P}
     \right)_{T}、
-    F=-P^2
+    H=-T^2
     \left[
         \frac{\partial}
-        {\partial P}
+        {\partial T}
         \left(
-            \frac{G}{P}
+            \frac{G}{T}
         \right)
-    \right]_{T}
+    \right]_{P}
 $$
 そのため、期待値は以下の通りにかける。
 $$
@@ -104,7 +112,13 @@ $$
         {\partial P}
         \ln Y
     \right)_{T}、
-
+    \braket{H}=
+    -
+    \left(
+        \frac{\partial}
+        {\partial\beta}
+        \ln Y
+    \right)_{P}
 $$
 
 そして、これが連続している場合には正準集団のところ無次元化係数が影響しないことをふまえると、以下のように書くこともできる。
