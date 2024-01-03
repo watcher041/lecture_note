@@ -1,13 +1,146 @@
 
-## 大正準集団、等温定圧集団
+## 等温定圧集団・大正準集団
 
-　前回の熱平衡に続いて、今度は粒子数も変化するような系を考える。ただ、このときに粒子数の変化に対応した項が熱力学第１法則に含まれていないため、$H_2$ や $O_2$ といった化学的性質によるエネルギーとして**化学ポテンシャル** $\mu$ を導入して
+　ここまでは体積が一定の場合を考えていたが、実際の物体は圧力が外部と同じになることが多い。そのため、ここでは温度と圧力が変化する状況でどうなるかを見てみることにする。熱平衡になった場合
+$$
+    S(U_t-U,V_t-V)=
+    S(U_t,V_t)-
+    \left(
+        \frac{\partial S}{\partial U}
+    \right)U-
+    \left(
+        \frac{\partial S}{\partial V}
+    \right)V=
+    S(U_t,V_t)-
+    \left(
+    \frac{U+PV}{T}
+    \right)
+$$
+であるから、状態数としては以下の通りになる。
+$$
+    \mathcal{W}_t(U_t,V_t)=
+    \sum_{U,V}
+    \mathcal{W}(U,V)
+    \mathcal{W}_{b}(U_t-U,V_t-V)
+$$
+$$
+    1=\sum_{U,V}f(U,V)、
+    f(U,V)=
+    \frac{\mathcal{W}(U,V)
+    \mathcal{W}_{b}(Ut-U,V_t-V)}
+    {\mathcal{W}_t(U_t,V_t)}
+$$
+$$
+    f(U,V)=
+    \frac{\mathcal{W}_b(U_t,V_t)}
+    {\mathcal{W}_t(U_t,V_t)}
+    \mathcal{W}(U,V)
+    e^{-\beta (U+PV)}、
+    \beta=\frac{1}{k_{\mathrm{B}}T}
+$$
+ここで分配関数のように**エンタルピー** $H$ を用いて
+$$
+    Y =
+    \frac{\mathcal{W}_t(U_t,V_t)}
+    {\mathcal{W}_b(U_t,V_t)}=
+    \sum_{U,V}
+    \mathcal{W}(U,V)
+    e^{-\beta H}=、
+    H=U+PV
+$$
+とすることで、以下の通りにかける。
+$$
+    f(U,V)=
+    \frac{1}{Y}
+    \mathcal{W}(U,V)
+    e^{-\beta H}=
+    \frac{1}{Y}e^{-\beta G}、
+    G=H-TS
+$$
+また、**ギブスの自由エネルギー** $G$ の微小変化をとると
+$$
+    \mathrm{d}G=
+    \mathrm{d}F+
+    \mathrm{d}PV+P\mathrm{d}V=
+    -S\mathrm{d}T+V\mathrm{d}P
+$$
+であることから、以下の関係が成り立つ。
+$$
+    S=-
+    \left(
+        \frac{\partial G}
+        {\partial T}
+    \right)_{P}、
+    V=
+    \left(
+        \frac{\partial G}
+        {\partial P}
+    \right)_{T}、
+    F=-P^2
+    \left[
+        \frac{\partial}
+        {\partial P}
+        \left(
+            \frac{G}{P}
+        \right)
+    \right]_{T}
+$$
+そのため、期待値は以下の通りにかける。
+$$
+    \braket{S}=
+    -\frac{1}{T}
+    \left(
+        \frac{\partial}
+        {\partial\beta}
+        \ln Y
+    \right)_{P}-
+    \frac{\braket{G}}{T}
+$$
+$$
+    \braket{V}=
+    -\frac{1}{\beta}
+    \left(
+        \frac{\partial}
+        {\partial P}
+        \ln Y
+    \right)_{T}、
+
+$$
+
+そして、これが連続している場合には正準集団のところ無次元化係数が影響しないことをふまえると、以下のように書くこともできる。
+$$
+    f(U,V)=
+    \frac{\beta P}{Y}
+    \mathcal{D}(U,V)
+    e^{-\beta (U+PV)}
+$$
+$$
+    \frac{Y}{\beta P}=
+    \int_{0}^{\infty}
+    (\beta Z)e^{-\beta PV}\mathrm{d}V、
+    \beta Z=
+    \int_{0}^{\infty}
+    \mathcal{D}(U,V)
+    e^{-\beta U}\mathrm{d}U
+$$
+
+
+
+
+
+
+
+
+
+
+
+　前回の熱平衡に続いて、今度は粒子数も変化するような系を考える。ただ、このときに粒子数の変化に対応した項が熱力学第１法則に含まれていないため、H$_2$ や O$_2$ といった化学的性質によるエネルギーとして**化学ポテンシャル** $\mu$ を導入して
 $$
     \mathrm{d}U=
     \mathrm{d}'Q+\mathrm{d}'W+
     \mu\mathrm{d}N
 $$
-とする。このようにすると、粒子数の変化があった場合も取り扱うことが可能になる。化学ポテンシャルの形は、小正準集団の場合だと
+とする（一つの物質のみ存在する場合）。このようにすると、粒子数の変化があった場合も取り扱うことが可能になる。化学ポテンシャルの形は、小正準集団の場合だと
 $$
     \mathrm{d}N=0、
     \mu=-T\left(
@@ -59,7 +192,7 @@ $$
 $$
 $$
     S=
-    -\frac{1}{\beta}
+    k_{\mathrm{B}}
     \left[
         N\ln
             \frac{V(2m\pi U)^{3/2}}
@@ -86,21 +219,17 @@ $$
         \left(
             \frac{4\pi m U}{3}
         \right)^{3/2}e^{5/2}
-    \right]
+    \right]-
+    k_{\mathrm{B}}\ln
+    (2\sqrt{6}\pi mUN)
 $$
 そのため、化学ポテンシャルは以下のようになる。
 $$
     \mu=
     -k_{\mathrm{B}}T\ln
     \left[
-        \frac{V}{Nh^3}
-        \left(
-            \frac{4\pi m U}{3}
-        \right)^{3/2}
-    \right]=
-    -k_{\mathrm{B}}T\ln
-    \left[
-        \frac{V}{Nh^3}
+        \frac{Ve^{-\frac{1}{N}}}
+        {N^{5/2}h^3}
         \left(
             2\pi m k_{\mathrm{B}}T
         \right)^{3/2}
@@ -109,7 +238,7 @@ $$
 大正準集団の場合にも、正準集団と同様な方法で取り扱うことができる。
 $$
     S(U_t-U,N_t-N)=
-    S(U_t,S_t)-
+    S(U_t,N_t)-
     \left(
         \frac{\partial S}{\partial U}
     \right)U-
@@ -121,4 +250,3 @@ $$
     \frac{U-\mu N}{T}
     \right)
 $$
-より一般的に、物体の状態を見るときに温度と圧力との関係でみると固体や液体の変化を見る際には便利である。そのため、等温等圧集団も考えてみると、
