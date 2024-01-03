@@ -120,6 +120,38 @@ $$
         \ln Y
     \right)_{P}
 $$
+一方で、エントロピーに関して
+$$
+    \braket{S}=
+    k_{\mathrm{B}}
+    \braket{\ln\mathcal{W}}=
+    k_{\mathrm{B}}
+    \left(
+        \braket{\ln f}+
+        \ln Y
+    \right)+
+    \frac{\braket{H}}{T}    
+$$
+であることから、最終的に以下の通りになる。
+$$
+    \braket{G}=
+    -\frac{1}{\beta}
+    \left(
+        \braket{\ln f}+
+        \ln Y
+    \right)、
+    \braket{S}=
+    k_{\mathrm{B}}
+    \braket{\ln f}+
+    \left[
+    \frac{\partial}{\partial T}
+    \left(
+    \frac{1}{\beta}\ln Y
+    \right)
+    \right]_P
+$$
+
+
 
 そして、これが連続している場合には正準集団のところ無次元化係数が影響しないことをふまえると、以下のように書くこともできる。
 $$
