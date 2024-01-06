@@ -332,23 +332,18 @@ $$
         \frac{\partial \mathcal{W}}
         {\partial U}
     \right)_V=
-    \frac{CV^N}{\Gamma(3N/2-1)}
-    \left(
-        \frac{2\pi}{m}
-    \right)^{3N/2}
-    U^{3N/2-2}、
+    \frac{V^{N}}{N!h^{3N}}
+    \frac{(3N-1)(2\pi m)^{3N/2}}
+    {\Gamma(3N/2)\sqrt{2m}}
+    U^{(3N-1)/2-1}、
     (C：定数)
 $$
 となり、分配関数と期待値は以下の通りとなる。
 $$
-    Z=CV^N
-    \left(
-        \frac{2\pi}{m\beta}
-    \right)^{3N/2}
-    \rightarrow
-    \braket{U}=
-    \frac{3}{2}Nk_{\mathrm{B}}T、
-    \braket{P}=
-    \frac{Nk_{\mathrm{B}}T}{V}
+    Z=
+    \frac{V^{N}}{N!h^{3N}}
+    \frac{(3N-1)(2\pi m)^{(3N-1)/2}}
+    {\beta^{(3N+1)/2}}
+    B(3N/2,1/2)
 $$
 これらは、小正準集団のときの結果と一致していることが分かる。
