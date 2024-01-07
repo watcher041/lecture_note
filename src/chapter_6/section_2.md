@@ -71,17 +71,19 @@ $$
 $$
 ここで $\Delta q、\Delta p$ は定数であることを踏まえると、
 $$
-    \Delta q\Delta p = h
+    \Delta q\Delta p = h、
+    \Delta p=
+    \sqrt{\frac{m}{2U}}\Delta U
 $$ 
 とおいても問題ないため、以下の式が成り立つ（$h$ は後に出てくる量子力学で重要な役割を持つ）。
 $$
     \mathcal{W}=
-    \frac{2V^{N}\pi^{3N/2}}
-    {\Gamma(3N/2)}
+    \frac{V^{N}}
+    {h^{3N}\Gamma(3N/2)}
+    (2m\pi U)^{3N/2}
     \left(
-        \frac{\Delta p}{h^{3N}}
+        \frac{\Delta U}{U}
     \right)
-    (2mU)^{(3N-1)/2}
 $$
 
 　一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
@@ -105,15 +107,12 @@ $$
 $$
     S=
     k_{\mathrm{B}}
-    \ln\frac{2V^{N}\pi^{3N/2}}
-    {\Gamma(3N/2)}+
-    \frac{1}{2}
-    \left(
-        3N-1
-    \right)k_{\mathrm{B}}
+    \ln\frac{V^{N}(2m\pi)^{3N/2}}
+    {h^{3N}\Gamma(3N/2)}+
+    \frac{3}{2}Nk_{\mathrm{B}}
     \ln U+
     k_{\mathrm{B}}
-    \ln\frac{\Delta p}{h^{3N}}
+    \ln\frac{\Delta U}{U}
 $$
 であることから、それぞれの式に代入すると
 $$

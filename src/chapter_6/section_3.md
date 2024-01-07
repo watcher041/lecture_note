@@ -332,16 +332,20 @@ $$
         \frac{\partial \mathcal{W}}
         {\partial U}
     \right)_V=
-    \frac{V^{N}}{N!h^{3N}}
-    \frac{(3N-1)(2\pi m)^{3N/2}}
-    {\Gamma(3N/2)\sqrt{2m}}
-    U^{(3N-1)/2-1}、
-    (C：定数)
+    \frac{V^{N}(3N-1)(2m\pi)^{3N/2}}
+    {N!\Gamma(3N/2)\sqrt{2m}}
+    \left(
+        \frac{\Delta p}{h^{3N}}
+    \right)
+    U^{(3N-1)/2-1}
 $$
 となり、分配関数と期待値は以下の通りとなる。
 $$
     Z=
-    \frac{V^{N}}{N!h^{3N}}
+    \frac{V^{N}}{N!}
+    \left(
+        \frac{\Delta p}{h^{3N}}
+    \right)
     \frac{(3N-1)(2\pi m)^{(3N-1)/2}}
     {\beta^{(3N+1)/2}}
     B(3N/2,1/2)
