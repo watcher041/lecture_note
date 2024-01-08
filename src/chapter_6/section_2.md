@@ -30,7 +30,7 @@ $$
     \sum_{i=1}^{3N}
     \frac{p_i^2}{2m}
 $$
-の場合は、$p_1,\cdots,p_{3N}$ のみ依存している。今回はエネルギーが一定値 $U$ ということなので、この式を変形すると
+と $p_1,\cdots,p_{3N}$ のみ依存した形になる。今回はエネルギーが一定値 $U$ ということなので、この式を変形すると
 $$
     \sum_{i=1}^{3N}p_i^2=2mU
 $$
@@ -38,14 +38,14 @@ $$
 $$
     p_1^2=2m U
 $$
-として、これを満たす $q_1,p_1$ の状態数（組み合わせの数）を数えていく。今の場合、一辺 $L$ の箱の中に粒子があることを考えると、任意の間隔 $\delta q、\delta p$ ごとに一つの状態があるものとして
+として、これを満たす $q_1,p_1$ の状態数（組み合わせの数）を数えていく。しかし、小数点以下も含めると無限個存在することになってしまうため、 $q_1,p_1$ がそれぞれ $L、P$ の幅しかとらず十分小さい間隔 $\delta q、\delta p$ ごとに一つの状態があるものとすると
 $$
     \mathcal{W}_1=
     \frac{L}{\delta q}\times
     \frac{P}{\delta p}=
     \frac{LP}{\delta q\delta p}
 $$
-となる。同様に2次元になった場合でも
+として状態数を記述することができる。同様に2次元になった場合でも
 $$
     \mathcal{W}_2=
     \frac{L^2}{\delta q^2}\times
@@ -65,7 +65,7 @@ $$
     \frac{L}{\delta q}\times 2、
     \mathcal{W}_2=
     \frac{L^2}{\delta q^2}\times
-    \frac{\pi\sqrt{2mU}}{\delta p}
+    2\pi\frac{\sqrt{2mU}}{\delta p}
 $$
 
 $3N$ 次元になった場合は半径 $r$ の $f$ 次元の球の表面積が
@@ -78,8 +78,7 @@ $$
 $$
     \mathcal{W}=
     \frac{L^{3N}}{\delta q^{3N}}
-    \frac{S_{3N}(\sqrt{2m U})}
-    {\delta p^{3N-1}}=
+    S_{3N}(\sqrt{2m U}/\delta p)=
     \frac{V^{N}}{h^{3N}}
     \frac{2\pi^{3N/2}}{\Gamma(3N/2)}
     (2mU)^{(3N-1)/2}\delta p
