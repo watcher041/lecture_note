@@ -106,12 +106,12 @@ $$
 $$
     S=
     k_{\mathrm{B}}
-    \ln\frac{V^{N}(2m\pi)^{3N/2}}
+    \ln\frac{V^{N}2\pi^{3N/2}}
     {h^{3N}\Gamma(3N/2)}+
-    \frac{3}{2}Nk_{\mathrm{B}}
-    \ln U+
+    \frac{1}{2}(3N-1)k_{\mathrm{B}}
+    \ln(2mU)+
     k_{\mathrm{B}}
-    \ln\frac{\delta U}{U}
+    \ln\delta p
 $$
 であることから、それぞれの式に代入すると
 $$
