@@ -38,17 +38,36 @@ $$
 $$
     p_1^2=2m U
 $$
-として、これを満たす $q_1,p_1$ の状態数（組み合わせの数）を数えていく。今の場合、一辺 $L$ の箱の中に粒子があることを考えると、十分小さい間隔$\Delta q、\Delta p$ ごとに一つの状態があるものとして
+として、これを満たす $q_1,p_1$ の状態数（組み合わせの数）を数えていく。今の場合、一辺 $L$ の箱の中に粒子があることを考えると、任意の間隔 $\delta q、\delta p$ ごとに一つの状態があるものとして
 $$
-    \mathcal{W}=
-    \frac{L}{\Delta q}\times
-    2
-    \left(
-        \frac{\sqrt{2mU}}
-        {\Delta p}
-    \right)^0
+    \mathcal{W}_1=
+    \frac{L}{\delta q}\times
+    \frac{P}{\delta p}=
+    \frac{LP}{\delta q\delta p}
 $$
-となる。これが $3N$ 次元になった場合は
+となる。同様に2次元になった場合でも
+$$
+    \mathcal{W}_2=
+    \frac{L^2}{\delta q^2}\times
+    \frac{P^2}{\delta p^2}=
+    \frac{L^2P^2}{(\delta q\delta p)^2}
+$$
+となることから、$3N$ 次元になった場合は以下の形になる。
+$$
+    \mathcal{W}_{3N}=
+    \frac{V^{N}P^{3N}}{h^{3N}}、
+    V=L^3、
+    h=\delta q\delta p
+$$
+しかし、いまの場合は運動量の方が円周上に制限されていることから、以下の通りになる。
+$$
+    \mathcal{W}_1=
+    \frac{L}{\delta q}\times 2、
+    \mathcal{W}_2=
+    \frac{L^2}{\delta q^2}\times
+    \frac{\pi\sqrt{2mU}}{\delta p}
+$$
+
 $3N$ 次元になった場合は半径 $r$ の $f$ 次元の球の表面積が
 $$
     S_{f}(r)=
@@ -58,32 +77,12 @@ $$
 であることから、状態数は以下の通りとなる。
 $$
     \mathcal{W}=
-    \frac{L^{3N}}{\Delta q^{3N}}
-    S_{3N}
-    \left(\frac{\sqrt{2m U}}
-    {\Delta p}\right)=
-    \frac{V^{N}}{\Delta q^{3N}}
+    \frac{L^{3N}}{\delta q^{3N}}
+    \frac{S_{3N}(\sqrt{2m U})}
+    {\delta p^{3N-1}}=
+    \frac{V^{N}}{h^{3N}}
     \frac{2\pi^{3N/2}}{\Gamma(3N/2)}
-    \left(
-        \frac{\sqrt{2mU}}{\Delta p}
-    \right)^{3N-1}、
-    V=L^3
-$$
-ここで $\Delta q、\Delta p$ は定数であることを踏まえると、
-$$
-    \Delta q\Delta p = h、
-    \Delta p=
-    \sqrt{\frac{m}{2U}}\Delta U
-$$ 
-とおいても問題ないため、以下の式が成り立つ（$h$ は後に出てくる量子力学で重要な役割を持つ）。
-$$
-    \mathcal{W}=
-    \frac{V^{N}}
-    {h^{3N}\Gamma(3N/2)}
-    (2m\pi U)^{3N/2}
-    \left(
-        \frac{\Delta U}{U}
-    \right)
+    (2mU)^{(3N-1)/2}\delta p
 $$
 
 　一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
@@ -112,7 +111,7 @@ $$
     \frac{3}{2}Nk_{\mathrm{B}}
     \ln U+
     k_{\mathrm{B}}
-    \ln\frac{\Delta U}{U}
+    \ln\frac{\delta U}{U}
 $$
 であることから、それぞれの式に代入すると
 $$
