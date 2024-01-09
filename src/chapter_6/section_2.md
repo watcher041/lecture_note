@@ -59,7 +59,7 @@ $$
     V=L^3、
     h=\delta q\delta p
 $$
-しかし、いまの場合は運動量の方が円周上に制限されていることから、以下の通りになる。
+しかし、自由粒子の場合は運動量が $3N$ 次元の球の表面上に制限されていることから
 $$
     \mathcal{W}_1=
     \frac{L}{\delta q}\times 2、
@@ -81,7 +81,10 @@ $$
     S_{3N}(\sqrt{2m U}/\delta p)=
     \frac{V^{N}}{h^{3N}}
     \frac{2\pi^{3N/2}}{\Gamma(3N/2)}
-    (2mU)^{(3N-1)/2}\delta p
+    (2mU)^{3N/2}
+    \left(
+        \frac{\delta p}{\sqrt{2m U}}
+    \right)
 $$
 
 　一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
@@ -107,10 +110,13 @@ $$
     k_{\mathrm{B}}
     \ln\frac{V^{N}2\pi^{3N/2}}
     {h^{3N}\Gamma(3N/2)}+
-    \frac{1}{2}(3N-1)k_{\mathrm{B}}
+    \frac{3}{2}Nk_{\mathrm{B}}
     \ln(2mU)+
     k_{\mathrm{B}}
-    \ln\delta p
+    \ln
+    \left(
+        \frac{\delta p}{\sqrt{2m U}}
+    \right)
 $$
 であることから、それぞれの式に代入すると
 $$
