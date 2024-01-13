@@ -80,11 +80,9 @@ $$
     \frac{L^{3N}}{\delta q^{3N}}
     S_{3N}(\sqrt{2m U}/\delta p)=
     \frac{V^{N}}{h^{3N}}
-    \frac{2}{\Gamma(3N/2)}
-    (2\pi mU)^{3N/2}
-    \left(
-        \frac{\delta p}{\sqrt{2m U}}
-    \right)
+    \frac{2\pi^{3N/2}\delta p}
+    {\Gamma(3N/2)}
+    (2mU)^{3N/2-1}
 $$
 
 　一方で、熱力学第1法則をエントロピーとエネルギーを含む式に展開すると
