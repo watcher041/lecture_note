@@ -4,7 +4,7 @@
 　前回までは分子の集団が孤立している状態を考えていたが、実際のところ孤立系というのは現実にはなく最低でも外部と熱のやり取りをしていることが多い。そのため、以下の図ような系を考えてみる。
 
 <p align="center">
-    <img width="60%"
+    <img width="50%"
         src="images/hot_bath.png">
 </p>
 
@@ -251,24 +251,9 @@ $$
         \ln Z
     \right)_V
 $$
-となるが、エントロピーについては状態数の対数でも書けたため、
-$$
-    \braket{S}=
-    k_{\mathrm{B}}\braket{\ln\mathcal{W}}=
-    k_{\mathrm{B}}\braket{\ln f}+
-    k_{\mathrm{B}}\ln Z+
-    \frac{\braket{U}}{T}
-$$
-であることから、ヘルムホルツの自由エネルギーは以下の通りになる。
-$$
-    \braket{F}=
-    -\frac{1}{\beta}
-    \left(
-        \braket{\ln f}+\ln Z
-    \right)
-$$
+となり、分配関数から圧力とエネルギーが求まることが分かる。
 
-一方で、分配関数の方についてはエネルギーが連続していることから
+　一方で、分配関数の方についてはエネルギーが連続していることから
 $$
     \int_0^\infty 
     f(U)\mathrm{d}U=
@@ -286,10 +271,48 @@ $$
     \mathrm{d}q_1\cdots\mathrm{d}q_{3N}
     \mathrm{d}p_1\cdots\mathrm{d}p_{3N}
 $$
-というように書いていることが多い（このようにすると分配関数を状態数なしで求めることができる）。例として、自由粒子の場合だと以下の通りになる。
+というように書いていることが多い（このようにすると分配関数を状態数なしで求めることができる）。このようにすると分布関数も
+$$
+    \rho=\frac{e^{-\beta\mathcal{H}}}{Z}
+$$
+に置き換えた方がよいわけだが、これからエネルギーの期待値を求めてみると
+$$
+    \braket{\mathcal{H}}=
+    -\frac{1}{\beta}\braket{\ln\rho}+
+    \frac{1}{\beta}\ln Z
+    \leftrightarrow
+    \braket{U}=
+    T\braket{S}+\braket{F}
+$$
+であるから、以下のような関係があることが予想される。
+$$
+    \braket{S}=
+    -k_{\mathrm{B}}\braket{\ln\rho}、
+    \braket{F}=
+    \frac{1}{\beta}\ln Z
+$$
+確認のため、仮に小正準集団の場合を考えるとエネルギーが一定値 $U$ をとることから $\rho$ が
+$$
+    Z=\mathcal{W}(U)e^{-\beta U}=
+    e^{-\beta F(U)}、
+    \rho=\frac{e^{-\beta U}}{Z}=
+    \frac{1}{\mathcal{W}(U)}
+$$
+であるため、エントロピーとヘルムホルツの自由エネルギーに関して等式が成り立つことが分かる。
+$$
+    \braket{S}=
+    -k_{\mathrm{B}}\braket{\ln\rho}=
+    k_{\mathrm{B}}\ln\mathcal{W}(U)、
+    \braket{F}=\frac{1}{\beta}\ln Z=
+    F(U)
+$$
+例として、自由粒子の場合だと以下の通りになる。
 $$
     Z=\frac{V^N}{h^{3N}}
     \left(
         \frac{2m\pi}{\beta}
     \right)^{3N/2}
 $$
+
+
+
