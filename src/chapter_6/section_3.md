@@ -277,55 +277,19 @@ $$
     \mathcal{W}(U)e^{-\beta U}
     \mathrm{d}U=1
 $$
-と積分の形で書けるため、整理すると以下のようになっていることが分かる。
+と積分の形で書けるものと思われるが、これだと分配関数にエネルギーの次元がついてしまう。そのため、連続している場合にはハミルトニアンにより
 $$
     Z=
-    \int_0^\infty
-    \mathcal{W}(U)
-    e^{-\beta U}
-    \mathrm{d}U
-$$
-あるいは、エネルギーがハミルトニアンで記述できることから、
-$$
-    Z=
-    \frac{1}{N!h^{3N}}
+    \frac{1}{h^{3N}}
     \int\cdots\int
     e^{-\beta\mathcal{H}}
     \mathrm{d}q_1\cdots\mathrm{d}q_{3N}
     \mathrm{d}p_1\cdots\mathrm{d}p_{3N}
 $$
-というように書くこともできる。例として、自由粒子の場合だと以下の通りになる。
+というように書いていることが多い（このようにすると分配関数を状態数なしで求めることができる）。例として、自由粒子の場合だと以下の通りになる。
 $$
-    Z=\frac{V^N}{N!h^{3N}}
+    Z=\frac{V^N}{h^{3N}}
     \left(
         \frac{2m\pi}{\beta}
     \right)^{3N/2}
-$$
-同じように、対数の期待値に関しても
-$$
-    f=\frac{e^{-\beta\mathcal{H}}}{Z}
-$$
-であることから、ヘルムホルツの自由エネルギーは以下の通りになる。
-$$
-    \braket{F}=
-    \frac{V^N}{N!h^{3N}}
-    \frac{3N}{2}
-    \left(
-        \frac{2m\pi}{\beta}
-    \right)^{3N/2+1}、
-    \braket{P}=
-    \frac{Nk_{\mathrm{B}}T}{V}、
-    \braket{U}=
-    \frac{3}{2}Nk_{\mathrm{B}}T
-$$
-$$
-    \braket{S}=
-    \frac{3}{2}Nk_{\mathrm{B}}
-    \left[
-        1-
-        \frac{V^N}{N!h^{3N}}
-        \left(
-            \frac{2m\pi}{\beta}
-        \right)^{3N/2}
-    \right]
 $$
