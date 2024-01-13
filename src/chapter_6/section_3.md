@@ -278,7 +278,7 @@ $$
 に置き換えた方がよいわけだが、これからエネルギーの期待値を求めてみると
 $$
     \braket{\mathcal{H}}=
-    -\frac{1}{\beta}\braket{\ln\rho}+
+    -\frac{1}{\beta}\braket{\ln\rho}-
     \frac{1}{\beta}\ln Z
     \leftrightarrow
     \braket{U}=
@@ -289,7 +289,7 @@ $$
     \braket{S}=
     -k_{\mathrm{B}}\braket{\ln\rho}、
     \braket{F}=
-    \frac{1}{\beta}\ln Z
+    -\frac{1}{\beta}\ln Z
 $$
 確認のため、仮に小正準集団の場合を考えるとエネルギーが一定値 $U$ をとることから $\rho$ が
 $$
@@ -303,13 +303,10 @@ $$
     \braket{S}=
     -k_{\mathrm{B}}\braket{\ln\rho}=
     k_{\mathrm{B}}\ln\mathcal{W}(U)、
-    \braket{F}=\frac{1}{\beta}\ln Z=
-    F(U)
+    \braket{F}=
+    -\frac{1}{\beta}\ln Z=F(U)
 $$
 　以上のことを踏まえて、例として自由粒子の場合を考えると分配間関数が
-$$
-
-$$
 $$
     Z=\frac{V^N}{h^{3N}}
     \left(

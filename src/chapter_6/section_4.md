@@ -102,7 +102,9 @@ $$
         {\partial\beta}
         \ln Y
     \right)_{P}-
-    \frac{\braket{G}}{T}
+    \frac{\braket{G}}{T}=
+    \frac{1}{T}
+    (\braket{H}-\braket{G})
 $$
 $$
     \braket{V}=
@@ -120,55 +122,36 @@ $$
         \ln Y
     \right)_{P}
 $$
-一方で、エントロピーに関して
-$$
-    \braket{S}=
-    k_{\mathrm{B}}
-    \braket{\ln\mathcal{W}}=
-    k_{\mathrm{B}}
-    \left(
-        \braket{\ln f}+
-        \ln Y
-    \right)+
-    \frac{\braket{H}}{T}    
-$$
-であることから、最終的に以下の通りになる。
-$$
-    \braket{G}=
-    -\frac{1}{\beta}
-    \left(
-        \braket{\ln f}+
-        \ln Y
-    \right)、
-    \braket{S}=
-    k_{\mathrm{B}}
-    \braket{\ln f}+
-    \left[
-    \frac{\partial}{\partial T}
-    \left(
-    \frac{1}{\beta}\ln Y
-    \right)
-    \right]_P
-$$
-
-
-
 そして、これが連続している場合には正準集団のところ無次元化係数が影響しないことをふまえると、以下のように書くこともできる。
 $$
-    f(U,V)=
-    \frac{\beta P}{Y}
-    \mathcal{D}(U,V)
-    e^{-\beta (U+PV)}
-$$
-$$
-    \frac{Y}{\beta P}=
+    \rho_Y=
+    \frac{1}{Y}
+    e^{-\beta (\mathcal{H}+PV)}、
+    Y=
+    \beta P
     \int_{0}^{V_t}
-    (\beta Z)e^{-\beta PV}\mathrm{d}V、
-    \beta Z=
-    \int_{0}^{\infty}
-    \mathcal{D}(U,V)
-    e^{-\beta U}\mathrm{d}U
+    Ze^{-\beta PV}\mathrm{d}V、
 $$
+このうち、$\rho_Y$ からエンタルピーの期待値を求めると
+$$
+    \braket{\mathcal{H}+PV}=
+    -\frac{1}{\beta}\braket{\ln \rho_Y}+
+    \frac{1}{\beta}\ln Y
+    \leftrightarrow
+    \braket{H}=
+    T\braket{S}+\braket{G}
+$$
+であるから、以下の関係になっていることが予想される。
+$$
+    \braket{S}=
+    -k_{\mathrm{B}}\braket{\ln\rho_Y}、
+    \braket{G}=
+    \frac{1}{\beta}\ln Y
+$$
+
+
+
+
 
 理想気体での分配関数を求めてみると、$V_t\to\infty\ (x_t\to\infty)$ として
 $$
