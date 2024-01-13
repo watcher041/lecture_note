@@ -235,7 +235,9 @@ $$
         \frac{\partial}{\partial\beta}
         \ln Z
     \right)_V-
-    \frac{\braket{F}}{T}
+    \frac{\braket{F}}{T}=
+    \frac{1}{T}
+    (\braket{U}-\braket{F})
 $$
 $$
     \braket{P}=
@@ -257,21 +259,13 @@ $$
     k_{\mathrm{B}}\ln Z+
     \frac{\braket{U}}{T}
 $$
-であることから、ヘルムホルツの自由エネルギーとエントロピーは以下の通りになる。
+であることから、ヘルムホルツの自由エネルギーは以下の通りになる。
 $$
     \braket{F}=
     -\frac{1}{\beta}
     \left(
         \braket{\ln f}+\ln Z
-    \right)、
-    \braket{S}=
-    k_{\mathrm{B}}\braket{\ln f}+
-    \left[
-    \frac{\partial}{\partial T}
-    \left(
-    \frac{1}{\beta}\ln Z
     \right)
-    \right]_V
 $$
 
 一方で、分配関数の方についてはエネルギーが連続していることから
@@ -291,63 +285,47 @@ $$
     e^{-\beta U}
     \mathrm{d}U
 $$
-ただ、少し考えるとこの分配関数にはエネルギーの次元がついてしまい、先ほどの分配関数との違いが生じてしまう。そこで、エントロピーの式をエネルギーで偏微分すると
-$$
-    \left(
-        \frac{\partial S}
-        {\partial U}
-    \right)_V=
-    \frac{k_{\mathrm{B}}}{\mathcal{W}}
-    \left(
-        \frac{\partial \mathcal{W}}
-        {\partial U}
-    \right)_V
-    \rightarrow
-     \mathcal{W}=
-     \frac{1}{\beta}
-     \left(
-        \frac{\partial \mathcal{W}}
-        {\partial U}
-    \right)_V
-$$
-であることを利用して、確率を状態密度 $\mathcal{D}$ を用いて次のように置きなおしてみる。
-$$
-    f(U)=\frac{1}{\beta Z}\mathcal{D}(U)e^{-\beta U}、
-    \mathcal{D}(U)=
-    \left(
-        \frac{\partial \mathcal{W}}
-        {\partial U}
-    \right)_V、
-    \beta Z=
-    \int_0^{\infty}
-    \mathcal{D}(U)e^{-\beta U}
-    \mathrm{d}U
-$$
-このようにすることで、積分の形にした場合でも無次元になることが分かる。
-
-　以上のことを理想気体に適用してみると、エネルギーが連続していることから
-$$
-    \mathcal{D}(U)=
-    \left(
-        \frac{\partial \mathcal{W}}
-        {\partial U}
-    \right)_V=
-    \frac{V^{N}(3N-1)(2m\pi)^{3N/2}}
-    {N!\Gamma(3N/2)\sqrt{2m}}
-    \left(
-        \frac{\delta p}{h^{3N}}
-    \right)
-    U^{(3N-1)/2-1}
-$$
-となり、分配関数と期待値は以下の通りとなる。
+あるいは、エネルギーがハミルトニアンで記述できることから、
 $$
     Z=
-    \frac{V^{N}}{N!}
-    \left(
-        \frac{\delta p}{h^{3N}}
-    \right)
-    \frac{(3N-1)(2\pi m)^{(3N-1)/2}}
-    {\beta^{(3N+1)/2}}
-    B(3N/2,1/2)
+    \frac{1}{N!h^{3N}}
+    \int\cdots\int
+    e^{-\beta\mathcal{H}}
+    \mathrm{d}q_1\cdots\mathrm{d}q_{3N}
+    \mathrm{d}p_1\cdots\mathrm{d}p_{3N}
 $$
-これらは、小正準集団のときの結果と一致していることが分かる。
+というように書くこともできる。例として、自由粒子の場合だと以下の通りになる。
+$$
+    Z=\frac{V^N}{N!h^{3N}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3N/2}
+$$
+同じように、対数の期待値に関しても
+$$
+    f=\frac{e^{-\beta\mathcal{H}}}{Z}
+$$
+であることから、ヘルムホルツの自由エネルギーは以下の通りになる。
+$$
+    \braket{F}=
+    \frac{V^N}{N!h^{3N}}
+    \frac{3N}{2}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3N/2+1}、
+    \braket{P}=
+    \frac{Nk_{\mathrm{B}}T}{V}、
+    \braket{U}=
+    \frac{3}{2}Nk_{\mathrm{B}}T
+$$
+$$
+    \braket{S}=
+    \frac{3}{2}Nk_{\mathrm{B}}
+    \left[
+        1-
+        \frac{V^N}{N!h^{3N}}
+        \left(
+            \frac{2m\pi}{\beta}
+        \right)^{3N/2}
+    \right]
+$$

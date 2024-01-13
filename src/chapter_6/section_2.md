@@ -80,8 +80,8 @@ $$
     \frac{L^{3N}}{\delta q^{3N}}
     S_{3N}(\sqrt{2m U}/\delta p)=
     \frac{V^{N}}{h^{3N}}
-    \frac{2\pi^{3N/2}}{\Gamma(3N/2)}
-    (2mU)^{3N/2}
+    \frac{2}{\Gamma(3N/2)}
+    (2\pi mU)^{3N/2}
     \left(
         \frac{\delta p}{\sqrt{2m U}}
     \right)
@@ -107,16 +107,11 @@ $$
 そのため、まずエントロピーを求めてみると
 $$
     S=
-    k_{\mathrm{B}}
-    \ln\frac{V^{N}2\pi^{3N/2}}
-    {h^{3N}\Gamma(3N/2)}+
-    \frac{3}{2}Nk_{\mathrm{B}}
+    Nk_{\mathrm{B}}\ln V+
+    \frac{1}{2}(3N-1)k_{\mathrm{B}}
     \ln(2mU)+
-    k_{\mathrm{B}}
-    \ln
-    \left(
-        \frac{\delta p}{\sqrt{2m U}}
-    \right)
+    \ln\frac{2\pi^{3N/2}\delta p}
+    {h^{3N}\Gamma(3N/2)}
 $$
 であることから、それぞれの式に代入すると
 $$
