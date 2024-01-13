@@ -306,13 +306,46 @@ $$
     \braket{F}=\frac{1}{\beta}\ln Z=
     F(U)
 $$
-例として、自由粒子の場合だと以下の通りになる。
+　以上のことを踏まえて、例として自由粒子の場合を考えると分配間関数が
+$$
+
+$$
 $$
     Z=\frac{V^N}{h^{3N}}
     \left(
         \frac{2m\pi}{\beta}
     \right)^{3N/2}
 $$
-
-
+であることから、各期待値は以下の通りになる。
+$$
+    \braket{P}=
+    \frac{Nk_{\mathrm{B}}T}{V}、
+    \braket{U}=
+    \frac{3}{2}Nk_{\mathrm{B}}T、
+    \braket{F}=
+    \frac{N}{\beta}
+    \ln
+    \left[
+        \frac{V}{h^{3}}
+        \left(
+           \frac{2m\pi}{\beta}
+        \right)^{3/2}
+    \right]
+$$
+$$
+    \braket{S}=
+    \frac{1}{T}
+    (\braket{U}-\braket{F})=
+    Nk_{\mathrm{B}}
+    \left\{
+        \frac{3}{2}-
+        \ln
+        \left[
+            \frac{V}{h^{3}}
+            \left(
+            \frac{2m\pi}{\beta}
+            \right)^{3/2}
+        \right]
+    \right\}
+$$
 
