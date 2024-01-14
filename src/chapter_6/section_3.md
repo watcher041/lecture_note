@@ -320,7 +320,7 @@ $$
     \braket{U}=
     \frac{3}{2}Nk_{\mathrm{B}}T、
     \braket{F}=
-    \frac{N}{\beta}
+    -\frac{N}{\beta}
     \ln
     \left[
         \frac{V}{h^{3}}
@@ -335,7 +335,7 @@ $$
     (\braket{U}-\braket{F})=
     Nk_{\mathrm{B}}
     \left\{
-        \frac{3}{2}-
+        \frac{3}{2}+
         \ln
         \left[
             \frac{V}{h^{3}}
