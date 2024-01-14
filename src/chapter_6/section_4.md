@@ -301,6 +301,14 @@ $$
         N\ln N
     \right)
 $$
+$$
+    \braket{G}=
+    \braket{H}-T\braket{S}=
+    -\frac{N}{\beta}
+    \ln
+    \frac{(2\pi m)^{3/2}}
+    {h^3\beta^{5/2}P}
+$$
 
 これらを比較すると、以下の関係が成り立てば互いに等しい関係になっていることが分かる。
 $$
