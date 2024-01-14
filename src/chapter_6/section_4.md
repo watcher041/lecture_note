@@ -307,7 +307,15 @@ $$
     -\frac{N}{\beta}
     \ln
     \frac{(2\pi m)^{3/2}}
-    {h^3\beta^{5/2}P}
+    {h^3\beta^{5/2}P}=
+    -\frac{N}{\beta}
+    \ln
+    \left[
+    \frac{\braket{V}}{Nh^3}
+    \left(
+        \frac{2\pi m}{\beta}
+    \right)^{3/2}
+    \right]
 $$
 
 これらを比較すると、以下の関係が成り立てば互いに等しい関係になっていることが分かる。
