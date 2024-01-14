@@ -58,13 +58,18 @@ $$
     S=
     Nk_{\mathrm{B}}\ln
     \left[
-    \frac{8V}{h^3}
+    \frac{8Ve^{5/2}}{h^3}
     \left(
         \frac{\pi mU}{3}
     \right)^{3/2}
-    \left(
-        \frac{e}{N}
-    \right)^{5/2}
-    \right]+
+    \right]-
+    \frac{5}{2}
+    Nk_{\mathrm{B}}
+    \ln N+
     \ln\frac{2\delta p}{\sqrt{2mU}}
+$$
+これにより、化学ポテンシャルは以下の通りになる。
+$$
+    \mu=
+
 $$
