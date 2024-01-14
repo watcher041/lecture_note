@@ -27,73 +27,44 @@ $$
         \right)_{T,P}
     \end{cases}
 $$
-として求まるわけだが、ここで $N$ は定数としていた係数にも含まれているため、その部分に関しても細かく議論していく必要がある。
+として求まるので、各集団でどのようになるかを見ていくことにしよう。
 
-　
-というようになる。ここで、エントロピーが示量量であることを踏まえるとこれだけでは不十分で、同じ状態を $N!$ だけあることを考慮して最終的には次の形になる。
+　小正準集団の場合は、状態数ならびにエントロピーが前項の $N!$ を考慮して
 $$
     \mathcal{W}=
     \frac{V^{N}}{N!h^{3N}}
-    \frac{\pi^{3N/2}}{\Gamma(3N/2)}
-    \left(2mU\right)^{3N/2-1}
+    \frac{2\pi^{3N/2}\delta p}
+    {\Gamma(3N/2)}
+    (2mU)^{3N/2-1}
 $$
 $$
     S=
+    Nk_{\mathrm{B}}\ln
+    \frac{V(2\pi mU)^{3/2}}{h^3}-
     k_{\mathrm{B}}
-    \left[
-        N\ln
-            \frac{V(2m\pi U)^{3/2}}
-            {h^3}-\ln(2mU)
-        -\ln N!-
-        \ln
-        \left(
-            \frac{3N}{2}
-        \right)!
-    \right]
+    \ln N!-
+    k_{\mathrm{B}}
+    \ln\Gamma(3N/2)+
+    \ln\frac{2\delta p}{\sqrt{2mU}}
 $$
-スターリングの公式により
+であるが、Stringの公式を用いると
 $$
-    \ln N!\simeq
-    N(\ln N-1)+
-    \frac{1}{2}\ln(2\pi N)
+    \ln N!\simeq N\ln N-N、
+    \ln\Gamma(3N/2)=\ln (3N/2)!\simeq 
+    3N/2\ln(3N/2)-3N/2
 $$
-であることから、以下の形に近似できる。
+と置けるため、以下の形になる。
 $$
     S=
-    k_{\mathrm{B}}N\ln
+    Nk_{\mathrm{B}}\ln
     \left[
-        \frac{V}{N^{5/2}h^3}
-        \left(
-            \frac{4\pi m U}{3}
-        \right)^{3/2}e^{5/2}
-    \right]-
-    k_{\mathrm{B}}\ln
-    (2\sqrt{6}\pi mUN)
-$$
-そのため、化学ポテンシャルは以下のようになる。
-$$
-    \mu=
-    -k_{\mathrm{B}}T\ln
-    \left[
-        \frac{Ve^{-\frac{1}{N}}}
-        {N^{5/2}h^3}
-        \left(
-            2\pi m k_{\mathrm{B}}T
-        \right)^{3/2}
-    \right]
-$$
-大正準集団の場合にも、正準集団と同様な方法で取り扱うことができる。
-$$
-    S(U_t-U,N_t-N)=
-    S(U_t,N_t)-
+    \frac{8V}{h^3}
     \left(
-        \frac{\partial S}{\partial U}
-    \right)U-
+        \frac{\pi mU}{3}
+    \right)^{3/2}
     \left(
-        \frac{\partial S}{\partial N}
-    \right)N=
-    S(U_t,S_t)-
-    \left(
-    \frac{U-\mu N}{T}
-    \right)
+        \frac{e}{N}
+    \right)^{5/2}
+    \right]+
+    \ln\frac{2\delta p}{\sqrt{2mU}}
 $$

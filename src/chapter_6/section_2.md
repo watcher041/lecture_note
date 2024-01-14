@@ -108,6 +108,7 @@ $$
     Nk_{\mathrm{B}}\ln V+
     \frac{1}{2}(3N-1)k_{\mathrm{B}}
     \ln(2mU)+
+    k_{\mathrm{B}}
     \ln\frac{2\pi^{3N/2}\delta p}
     {h^{3N}\Gamma(3N/2)}
 $$
