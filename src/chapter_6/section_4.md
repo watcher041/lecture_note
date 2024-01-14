@@ -308,12 +308,12 @@ $$
     \ln
     \frac{(2\pi m)^{3/2}}
     {h^3\beta^{5/2}P}=
-    -\frac{N}{\beta}
+    -Nk_{\mathrm{B}}T
     \ln
     \left[
     \frac{\braket{V}}{Nh^3}
     \left(
-        \frac{2\pi m}{\beta}
+        2\pi mk_{\mathrm{B}}T
     \right)^{3/2}
     \right]
 $$
