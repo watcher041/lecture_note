@@ -27,7 +27,7 @@ $$
         \right)_{T,P}
     \end{cases}
 $$
-として求まるので、各集団でどのようになるかを見ていくことにしよう。
+として求まるので、自由粒子の場合を例にあげて各集団ごとにどうなるかを見ていくことにする。
 
 　小正準集団の場合は、状態数ならびにエントロピーが前項の $N!$ を考慮して
 $$
@@ -58,18 +58,92 @@ $$
     S=
     Nk_{\mathrm{B}}\ln
     \left[
-    \frac{8Ve^{5/2}}{h^3}
+    \frac{8V}{h^3}
     \left(
         \frac{\pi mU}{3}
     \right)^{3/2}
-    \right]-
-    \frac{5}{2}
-    Nk_{\mathrm{B}}
-    \ln N+
+    \left(
+        \frac{e}{N}
+    \right)^{5/2}
+    \right]+
     \ln\frac{2\delta p}{\sqrt{2mU}}
 $$
 これにより、化学ポテンシャルは以下の通りになる。
 $$
     \mu=
-
+    -T\left(
+        \frac{\partial S}
+        {\partial N}
+    \right)_{U,V}=
+    -k_{\mathrm{B}}T\ln
+    \left[
+    \frac{V}{Nh^3}
+    \left(
+        2\pi mk_{\mathrm{B}}T
+    \right)^{3/2}
+    \right]
+$$
+　同様に、正準集団においても分配関数が
+$$
+    Z=\frac{V^N}{N!h^{3N}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3N/2}、
+    \ln Z\simeq
+    N\ln
+    \left[
+    \frac{Ve}{Nh^3}
+    \left(
+        \frac{2\pi m}{\beta}
+    \right)^{3/2}
+    \right]
+$$
+であったため、化学ポテンシャルは以下の通りとなる。
+$$
+    \mu=
+    -\frac{1}{\beta}\left(
+        \frac{\partial}
+        {\partial N}\ln Z
+    \right)_{T,V}=
+    -k_{\mathrm{B}}T\ln
+    \left[
+    \frac{V}{Nh^3}
+    \left(
+        2\pi mk_{\mathrm{B}}T
+    \right)^{3/2}
+    \right]
+$$
+　さらに、等圧定温集団においても分配関数が
+$$
+    Y=
+    \frac{(2m\pi)^{3N/2}}{h^{3N}}
+    \frac{1}{\beta^{5N/2}P^{N}}、
+    \ln Y=
+    N\ln
+    \left[
+        \frac{(2\pi m)^{3/2}}
+        {h^3\beta^{5/2}P}
+    \right]=
+    N\ln
+    \left[
+        \frac{\braket{V}}{Nh^3}
+        \left(
+            \frac{2\pi m}{\beta}
+        \right)^{3/2}
+    \right]
+$$
+であるから、上記と同じ形が得られることが確認できる。
+$$
+    \mu=
+    -\frac{1}{\beta}\left(
+        \frac{\partial}
+        {\partial N}\ln Y
+    \right)_{T,P}=
+    -k_{\mathrm{B}}T\ln
+    \left[
+    \frac{\braket{V}}{Nh^3}
+    \left(
+        2\pi mk_{\mathrm{B}}T
+    \right)^{3/2}
+    \right]
 $$
