@@ -34,6 +34,7 @@
   - [正準集団（カノニカルアンサンブル）](chapter_6/section_3.md)
   - [等温定圧集団](chapter_6/section_4.md)
   - [化学ポテンシャル](chapter_6/section_5.md)
+  - [大正準集団](chapter_6/section_6.md)
 - [相対性理論](chapter_7/section_0.md)
   - [同時の定義](chapter_7/section_1.md)
   - [Lorentz変換](chapter_7/section_2.md)
