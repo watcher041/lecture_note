@@ -177,4 +177,37 @@ $$
     -\frac{S}{N}\mathrm{d}T+
     \frac{V}{N}\mathrm{d}P
 $$
-というように確かに $\mu(T,P)$ となっていることが分かる。これはGibbs-Duhemの式と呼ばれており、化学ポテンシャルの変数に関することだけではなく、$T,P,\mu$ が互いに依存しており、独立して変化させることができないとを意味している。
+というように確かに $\mu(T,P)$ となっていることが分かる。これはGibbs-Duhemの式と呼ばれており、化学ポテンシャルの変数に関することだけではなく、$T,P,\mu$ が互いに依存しており、独立して変化させることができないとを意味している。この形で正しいものかは、
+$$
+    -\frac{S}{N}=
+    \left(
+        \frac{\partial \mu}
+        {\partial T}
+    \right)_{P}、
+    \frac{V}{N}=
+    \left(
+        \frac{\partial \mu}
+        {\partial P}
+    \right)_{T}
+$$
+であることから、化学ポテンシャルを圧力で表示した
+$$
+    \mu =
+    -k_{\mathrm{B}}T\ln
+    \left[
+    \frac{(2\pi m)^{3/2}
+    (k_{\mathrm{B}}T)^{5/2}}
+    {Ph^3}
+    \right]
+$$
+を代入すると以前までに得た形と同じであることが分かる。
+$$
+    S=Nk_{\mathrm{B}}
+    \ln
+    \left[
+    \frac{(2\pi m)^{3/2}
+    (k_{\mathrm{B}}T)^{5/2}}
+    {Ph^3}e^{5/2}
+    \right]、
+    PV=Nk_{\mathrm{B}}T
+$$
