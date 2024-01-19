@@ -172,7 +172,7 @@ $$
     \right)^{3/2}
     e^{\beta \mu}、
     \braket{J}=
-    \frac{V}{\beta h^{3}}
+    -\frac{V}{\beta h^{3}}
     \left(
         \frac{2m\pi}{\beta}
     \right)^{3/2}
@@ -223,7 +223,7 @@ $$
 $$
     \braket{P}=
     \frac{\braket{N}}{\beta V}、
-    \braket{J}=\braket{P}V、
+    \braket{J}=-\braket{P}V、
     \braket{U}=
     \frac{3}{2}
     \braket{N}k_{\mathrm{B}}T
