@@ -123,15 +123,33 @@ $$
     \right)_{P}=
     \braket{U}+P\braket{V}
 $$
-そして、これが連続している場合には正準集団のところ無次元化係数が影響しないことをふまえると、以下のように書くこともできる。
+そして、これが連続している場合には
+$$
+    \mathcal{W}=
+    \frac{1}{\beta P}
+    \left(
+        \frac{\partial\mathcal{W}}
+        {\partial V}
+    \right)_{U,N}
+    \leftrightarrow
+    Z\rightarrow 
+    \left(
+        \frac{\partial Z}
+        {\partial V}
+    \right)_{U,N}
+$$
+であることをふまえると、以下のように書くこともできる。
 $$
     \rho_Y=
     \frac{1}{Y}
     e^{-\beta (\mathcal{H}+PV)}、
     Y=
-    \frac{1}{V_t}
     \int_{0}^{V_t}
-    Ze^{-\beta PV}\mathrm{d}V、
+    \left(
+        \frac{\partial Z}
+        {\partial V}
+    \right)_{U,N}
+    e^{-\beta PV}\mathrm{d}V、
 $$
 このうち、$\rho_Y$ からエンタルピーの期待値を求めると
 $$
@@ -152,21 +170,19 @@ $$
 理想気体での分配関数を求めてみると
 $$
     Y=
-    \frac{1}{h^{3N}}
+    \frac{N}{h^{3N}}
     \left(
         \frac{2m\pi}{\beta}
     \right)^{3N/2}
-    \frac{1}{V_t}
     \int_{0}^{V_t}
-    V^{N}e^{-\beta PV}\mathrm{d}V
+    V^{N-1}e^{-\beta PV}\mathrm{d}V
 $$
 であるが、$V_t$ が十分大きいとして $V_t\to\infty$ とすると
 $$
     \lim_{V_t\to\infty}
-    \frac{1}{V_t}
     \int_{0}^{V_t}
-    V^{N}e^{-\beta PV}\mathrm{d}V=
-    \frac{N!}{(\beta P)^{N}}
+    V^{N-1}e^{-\beta PV}\mathrm{d}V=
+    \frac{(N-1)!}{(\beta P)^{N}}
 $$
 であるため、以下の通りになる。
 $$
