@@ -63,13 +63,13 @@ $$
 が成り立つため、各気体値は以下のように書ける。
 $$
     \braket{P}=
-    -\frac{1}{\beta}
+    \frac{1}{\beta}
     \left(
         \frac{\partial}{\partial V}
         \ln\Xi
     \right)_{T,\mu}、
     \braket{N}=
-    -\frac{1}{\beta}
+    \frac{1}{\beta}
     \left(
         \frac{\partial}{\partial \mu}
         \ln\Xi
@@ -83,9 +83,11 @@ $$
         \frac{\partial}{\partial T}
         \ln\Xi
     \right)_{V,\mu}=
-    -\frac{\braket{J}}{T}+
-    \frac{1}{T}
-    (\braket{U}-\mu\braket{N})
+    k_{\mathrm{B}}
+    \left(
+        \frac{\partial}{\partial T}
+        T\ln\Xi
+    \right)_{V,\mu}
 $$
 これを連続的な形で記載した場合には、
 $$
@@ -107,7 +109,7 @@ $$
     \braket{S}=
     -k_{\mathrm{B}}\braket{\ln\rho}、
     \braket{J}=
-    \frac{1}{\beta}\ln\Xi
+    -\frac{1}{\beta}\ln\Xi
 $$
 実際、小正準集団とみなした場合には、
 $$
@@ -116,3 +118,130 @@ $$
     \braket{J}=J(U,N)
 $$
 となる。さらに、自由粒子の場合で解いてみると、
+$$
+    \Xi=
+    \sum_{N=0}^{N_t}
+    \frac{V^N}{N!h^{3N}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3N/2}e^{\beta\mu N}=
+    \sum_{N=0}^{N_t}
+    \frac{1}{N!}
+    \left[
+        \frac{V}{h^{3}}
+        \left(
+            \frac{2m\pi}{\beta}
+        \right)^{3/2}e^{\beta \mu}
+    \right]^{N}
+$$
+となるため、総和に関して
+$$
+    \sum_{N=0}^{\infty}
+    \frac{x^{N}}{N!}=e^{x}
+$$
+であることを利用して、$N_t\rightarrow \infty$ とすると
+$$
+    \Xi=
+    \exp
+    \left[
+        \frac{V}{h^{3}}
+        \left(
+            \frac{2m\pi}{\beta}
+        \right)^{3/2}
+        e^{\beta \mu}
+    \right]、
+    \ln\Xi=
+    \frac{V}{h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}
+$$
+となるため、各期待値は以下の通りになる。
+$$
+    \braket{P}=
+    \frac{1}{\beta h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}、
+    \braket{N}=
+    \frac{V}{h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}、
+    \braket{J}=
+    \frac{V}{\beta h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}
+$$
+$$
+    \braket{S}=
+    k_{\mathrm{B}}
+    \frac{V}{h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}
+    \left(
+        \frac{5}{2}-\beta\mu
+    \right)
+$$
+$$
+    \braket{U}=
+    T\braket{S}-\braket{P}V+
+    \mu\braket{N}=
+    \frac{3}{2}
+    k_{\mathrm{B}}T
+    \frac{V}{h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}
+$$
+あまりにも見にくいので、改めて整理すると以下のようになる。
+$$
+    \braket{N}=
+    \frac{V}{h^{3}}
+    \left(
+        \frac{2m\pi}{\beta}
+    \right)^{3/2}
+    e^{\beta \mu}、
+    \mu=
+    -\frac{1}{\beta}
+    \ln
+    \left[
+        \frac{V}{\braket{N}h^{3}}
+        \left(
+            \frac{2m\pi}{\beta}
+        \right)^{3/2}
+    \right]
+$$
+$$
+    \braket{P}=
+    \frac{\braket{N}}{\beta V}、
+    \braket{J}=\braket{P}V、
+    \braket{U}=
+    \frac{3}{2}
+    \braket{N}k_{\mathrm{B}}T
+$$
+$$
+    \braket{S}=
+    \braket{N}k_{\mathrm{B}}
+    \left(
+        \frac{5}{2}-\beta\mu
+    \right)=
+    \braket{N}k_{\mathrm{B}}
+    \ln
+    \left[
+        \frac{V}{\braket{N}h^{3}}
+        \left(
+            \frac{2m\pi}{\beta}
+        \right)^{3/2}
+        e^{5/2}
+    \right]
+$$
+このように、従来の結果と同じ結果が得られることが分かる。
