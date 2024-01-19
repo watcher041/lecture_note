@@ -262,7 +262,28 @@ $$
     \mathcal{W}(U)e^{-\beta U}
     \mathrm{d}U=1
 $$
-と積分の形で書けるものと思われるが、これだと分配関数にエネルギーの次元がついてしまう。そのため、連続している場合にはハミルトニアンにより
+と積分の形で書けるものと思われるが、これだと分配関数にエネルギーの次元がついてしまう。そのため、連続している場合
+$$
+    \mathcal{W}=
+    \frac{1}{\beta}
+    \left(
+    \frac{\partial \mathcal{W}}
+    {\partial U}
+    \right)_{V}
+$$
+というような関係が成り立つことを利用して、
+$$
+    \frac{1}{Z}
+    \int_0^\infty
+    \mathcal{D}(U)e^{-\beta U}
+    \mathrm{d}U=1、
+    \mathcal{D}(U)=
+    \left(
+    \frac{\partial \mathcal{W}}
+    {\partial U}
+    \right)_{V}
+$$
+というように書ける。ただ、一般的にはハミルトニアンにより
 $$
     Z=
     \frac{1}{h^{3N}}
@@ -271,7 +292,7 @@ $$
     \mathrm{d}q_1\cdots\mathrm{d}q_{3N}
     \mathrm{d}p_1\cdots\mathrm{d}p_{3N}
 $$
-というように書いていることが多い（このようにすると分配関数を状態数なしで求めることができる）。このようにすると分布関数も
+というように書くことが多い（このようにすると分配関数を状態数なしで求めることができる）。このようにすると分布関数も
 $$
     \rho=\frac{e^{-\beta\mathcal{H}}}{Z}
 $$
