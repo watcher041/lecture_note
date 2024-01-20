@@ -96,15 +96,7 @@ $$
         aq_i^2+bp_i^2
     \right)
 $$
-となり、この分の期待値が
-$$
-    \braket{\mathcal{H}}=
-    -\frac{\partial}{\partial\beta}
-    \ln Z=fkT、
-    \left(
-        \beta=\frac{1}{kT}
-    \right)
-$$
+となり、この分の分配関数と期待値が
 $$
     Z=
     \frac{1}{f!h^{f}}
@@ -117,6 +109,14 @@ $$
         \frac{\pi}{h\beta\sqrt{ab}}
     \right)^{f}
 $$
+$$
+    \braket{\mathcal{H}}=
+    -\frac{\partial}{\partial\beta}
+    \ln Z=fkT、
+    \left(
+        \beta=\frac{1}{kT}
+    \right)
+$$
 であるため、$kT$ が出てきているということになる（分配関数を除けば、1自由度の場合を $f$ 倍したものと同じ）。そのため、ここで1自由度あたりのエネルギーを
 $$
     U_1=nh\nu、(n:自然数)
@@ -128,7 +128,7 @@ $$
     \mathcal{W}(n_1,\cdots,n_f)
     e^{-(n_1+\cdots+n_f)\beta h\nu}
 $$
-となる。ここで各準位ごとに光が $N_0,\cdots,N_n,\cdots$ だけあるとすると
+となる。ここで各準位ごとに対象の数が $N_0,\cdots,N_n,\cdots$ だけあるとすると
 $$
     n_1+\cdots+n_f=
     N_1+2N_2+\cdots+nN_n+\cdots
