@@ -88,38 +88,82 @@ $$
     \frac{8\pi\nu^2}{c^3}
     \frac{h\nu}{e^{h\nu/kT}-1}
 $$
-とすると、$kT$ の代わりに別の形になっていることが分かる。この部分というのは、電磁波のエネルギーが振動体で書けることから一つの電磁波に対して
+とすると、$kT$ の代わりに別の形になっていることが分かる。この部分というのは、電磁波のハミルトニアンが振動体の形で書けることから自由度 $f$ に対して
 $$
-    \mathcal{H}=aq^2+bp^2
+    \mathcal{H}=
+    \sum_{i=1}^{f}
+    \left(
+        aq_i^2+bp_i^2
+    \right)
 $$
-であり、このエネルギーの平均値は以下の通りとなる。
+となり、この分の期待値が
 $$
     \braket{\mathcal{H}}=
     -\frac{\partial}{\partial\beta}
-    \ln Z=kT、
+    \ln Z=fkT、
     \left(
-        \beta=\frac{1}{kT}、
-        Z=\iint
-        e^{-\beta \mathcal{H}}
-        \mathrm{d}q\mathrm{d}p=
-        \frac{\pi}{\beta\sqrt{ab}}
+        \beta=\frac{1}{kT}
     \right)
 $$
-ここで、とりうるエネルギーが連続的ではなく
 $$
-    E=nh\nu、(n:自然数)
+    Z=
+    \frac{1}{f!h^{f}}
+    \int\cdots\int
+    e^{-\beta \mathcal{H}}
+    \mathrm{d}q_1\cdots\mathrm{d}q_f
+    \mathrm{d}p_1\cdots\mathrm{d}p_f=
+    \frac{1}{f!}
+    \left(
+        \frac{\pi}{h\beta\sqrt{ab}}
+    \right)^{f}
+$$
+であるため、$kT$ が出てきているということになる（分配関数を除けば、1自由度の場合を $f$ 倍したものと同じ）。そのため、ここで1自由度あたりのエネルギーを
+$$
+    U_1=nh\nu、(n:自然数)
 $$
 という離散的な値をとる（エネルギーの最小単位いわゆる**量子**が $h\nu$ である）と仮定すると
 $$
-    \braket{E}=
+    Z=
+    \sum_{n_1,\cdots,n_f}
+    \mathcal{W}(n_1,\cdots,n_f)
+    e^{-(n_1+\cdots+n_f)\beta h\nu}
+$$
+となる。ここで各準位ごとに光が $N_0,\cdots,N_n,\cdots$ だけあるとすると
+$$
+    n_1+\cdots+n_f=
+    N_1+2N_2+\cdots+nN_n+\cdots
+$$
+であり、状態数も区別がつかないことを考慮して
+$$
+    \mathcal{W}(n_1,\cdots,n_f)=
+    \frac{f!}{N_0!N_1!\cdots N_n!\cdots}
+$$
+となるため、多項定理より以下の通りになる。
+$$
+    Z=
+    \sum_{N_0+N_1+\cdots=f}
+    \frac{f!}{N_0!N_1!\cdots N_n!\cdots}
+    e^{-(0N_0+\cdots+nN_n+\cdots)
+    \beta h\nu}=
+    \left(
+        \sum_{n=0}^{\infty}
+        e^{-n\beta h\nu}
+    \right)^f
+$$
+このときは、分配関数も一体の分配関数を $N$ 乗したものとなっており、
+$$
+    Z_1=
+    \sum_{n=0}^{\infty}
+    e^{-n\beta h\nu}=
+    \frac{1}{1-e^{-\beta h\nu}}
+$$
+であるから、最終的なエネルギーの期待値は以下の通りになる。
+$$
+    \braket{U}=
     -\frac{\partial}{\partial\beta}
     \ln Z=
-    \frac{h\nu}{e^{h\nu/kT}-1}、
-    \left(
-        Z=\sum_{n=0}^{\infty}
-        e^{-n\beta h\nu}=
-        \frac{1}
-        {1-e^{-\beta h\nu}}
-    \right)
+    -f\frac{\partial}{\partial\beta}
+    \ln Z_1=
+    \frac{fh\nu}{e^{h\nu/kT}-1}
 $$
-というように第２項目の式が得られる。そのため、エネルギーが1自由度ごとに等分配されるわけではなく、振動数に応じて分配されるエネルギーに制限があることになる。
+そのため、エネルギーが1自由度ごとに等分配されるわけではなく、振動数に応じて分配されるエネルギーに制限があることになる。
