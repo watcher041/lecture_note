@@ -45,7 +45,7 @@ $$
     \right)=
     \frac{8\pi kT}{c^3}\nu^2\mathrm{d}\nu
 $$
-となる。これがRayleigh–Jeansの法則と呼ばれるものとなっている。実はこの式は低周波数でしか成立していないが、これは先ほど $L\to\infty$ としたことで波長、振動数が $\lambda\to\infty、\nu\to 0$ となることからもうかがえる。一方で、高振動数の領域に対してはWienが提唱した以下の式（Wienの輻射式）が成り立つが知られている。
+これがRayleigh–Jeansの法則と呼ばれるものとなっている。実はこの式は低周波数でしか成立していないが、これは先ほど $L\to\infty$ としたことで波長、振動数が $\lambda\to\infty、\nu\to 0$ となることからもうかがえる。一方で、高振動数の領域に対してはWienが提唱した以下の式（Wienの輻射式）が成り立つが知られている。
 $$
     u=
     \frac{8\pi k\alpha}{c^3}
@@ -90,17 +90,18 @@ $$
 $$
 とすると、$kT$ の代わりに別の形になっていることが分かる。この部分というのは、電磁波のエネルギーが振動体で書けることから一つの電磁波に対して
 $$
-    E=aq^2+bp^2
+    \mathcal{H}=aq^2+bp^2
 $$
 であり、このエネルギーの平均値は以下の通りとなる。
 $$
-    \braket{E}=
+    \braket{\mathcal{H}}=
     -\frac{\partial}{\partial\beta}
     \ln Z=kT、
     \left(
         \beta=\frac{1}{kT}、
         Z=\iint
-        e^{-\beta E}\mathrm{d}q\mathrm{d}p=
+        e^{-\beta \mathcal{H}}
+        \mathrm{d}q\mathrm{d}p=
         \frac{\pi}{\beta\sqrt{ab}}
     \right)
 $$
