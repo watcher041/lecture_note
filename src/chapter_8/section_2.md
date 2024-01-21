@@ -62,6 +62,12 @@ $$
 $$
 というようになる。
 
+<p align="center">
+    <img width="60%"
+        src="images/compton_scattering.png">
+</p>
+
+
 運動量保存の法則により、
 $$
     \frac{h\nu_0}{c}=
@@ -143,7 +149,10 @@ $$
 $$
     \lambda_\phi=
     \lambda_0+
-    \frac{2h}{m_ec}\sin^2\frac{\phi}{2}
+    \left(
+        \frac{h}{m_ec}
+    \right)
+    2\sin^2\frac{\phi}{2}
 $$ 
 と表示した方が式が容易になり、ここでの $h/m_ec$ はCompton波長と呼ばれている。
 $$
