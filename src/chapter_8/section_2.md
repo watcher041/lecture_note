@@ -1,5 +1,5 @@
 
-## 粒子と波動の二重性
+## 光の粒子仮設
 
 　前回は電磁波のエネルギーの最小単位が $h\nu$ であると仮定することで、Planckの公式を導出していた。ただ、これはエネルギーが質量と等価であることを踏まえると、電磁波は $h\nu$ のエネルギーを持つ粒子として考えることもできると予想される。それを用いてEinsteinは、光が $h\nu$ のエネルギーを持つ粒子としてもふるまうもの（**光量子仮説**）として光電効果の説明を行った。
 　光電効果とは高い振動数の光線（紫外線域）いわゆるX線のようなものを金属などの物質の表面にあてると、そこから電子が飛び出してくる現象である。実験を行ったLenardにより、以下のことが確認されている。
@@ -54,4 +54,100 @@ $$
     \rightarrow
     p=\frac{h\nu}{c}
 $$
-となることが分かる。
+となることが分かる。このことについては、特殊相対性理論からも推測できる。このときは、物体が光速では質量を持てない（静止質量が $0$ ）ことからエネルギーと運動量の関係式より
+$$
+    (h\nu)^2=(m_0c^2)^2+(cp)^2
+    \rightarrow
+    p=\frac{h\nu}{c}
+$$
+というようになる。
+
+運動量保存の法則により、
+$$
+    \frac{h\nu_0}{c}=
+    \frac{h\nu_{\phi}}{c}\cos\phi+
+    \gamma m_{e}v\cos\alpha、
+    \left(
+        \gamma=
+        \frac{1}{\sqrt{1-(v/c)^2}}
+    \right)
+$$
+$$
+    0=
+    \frac{h\nu_{\phi}}{c}\sin\phi-
+    \gamma m_{e}v\sin\alpha
+$$
+であり、さらにエネルギー保存則から
+$$
+    h\nu_0+m_{e}c^2=
+    h\nu_\phi+\gamma  m_{e}c^2
+$$
+であることから、
+$$
+    \left(
+        \frac{h\nu_0}{c}-
+        \frac{h\nu_{\phi}}{c}\cos\phi
+    \right)^2=
+    (\gamma m_{e}v\cos\alpha)^2
+$$
+$$
+    \left(
+        \frac{h\nu_{\phi}}{c}\sin\phi
+    \right)^2=
+    (\gamma m_{e}v\sin\alpha)^2
+$$
+となるため、これら二式を足し合わせる。
+$$
+    \left(
+        \frac{h\nu_0}{c}
+    \right)^2-
+    2\frac{h^2\nu_0\nu_{\phi}}{c^2}
+    \cos\phi+
+    \left(
+        \frac{h\nu_{\phi}}{c}
+    \right)^2=
+    (\gamma m_{e}v)^2
+$$
+そして、片方の式においては
+$$
+    (h\nu_0-h\nu_\phi+m_{e}c^2)^2=
+    (\gamma  m_{e}c^2)^2
+$$
+$$
+    v^2=
+    c^2
+    \left[
+        1-
+        \left(
+            \frac{m_{e}c^2}
+            {h\nu_0-h\nu_\phi+m_{e}c^2}
+        \right)^2
+    \right]
+$$
+であるため、右辺は以下の通りになる。
+$$
+    (\gamma  m_{e}c^2)^2=
+    \frac{1}{c^2}
+    \left[
+        (h\nu_0-h\nu_\phi+m_{e}c^2)^2-
+        (m_{e}c^2)^2
+    \right]
+$$
+そのため、式を整理すると最終的に以下の式が得られる。
+$$
+    \nu_\phi=
+    \frac{\nu_0}
+    {1+\frac{2h\nu_0}{m_ec^2}\sin^2\frac{\phi}{2}}
+$$
+これが散乱されたX線の振動数であり、$\phi$ によらず $\nu_\phi<\nu_0$ と小さくなること及び実験とも一致した結果が得られる。ただ、この形よりも波長の形により
+$$
+    \lambda_\phi=
+    \lambda_0+
+    \frac{2h}{m_ec}\sin^2\frac{\phi}{2}
+$$ 
+と表示した方が式が容易になり、ここでの $h/m_ec$ はCompton波長と呼ばれている。
+$$
+    \frac{h}{m_ec}=
+    2.42\times 10^{-13}\ \mathrm{m}=
+    0.0242\ \mathrm{\AA}
+$$
