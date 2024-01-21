@@ -61,7 +61,7 @@ $$
     \frac{1}{e^{\alpha\nu/T}-1}\nu^3
 $$
 ここで、定数に関して $h=k\alpha$（**Planck定数**） に置き換えることで、以下のように $kT$ を含んだ形にまとめることができる。
- $$
+$$
     u=
     \frac{8\pi h}{c^3}
     \frac{1}{e^{h\nu/kT}-1}\nu^3、
@@ -75,7 +75,7 @@ $$
     \frac{8\pi kT}{c^3}\nu^2
 $$
 というようになり、反対に $h\nu >> kT（\nu\to\infty）$ では $e^{h\nu/kT}>>1$ であるため
- $$
+$$
     u\simeq
     \frac{8\pi h}{c^3}
     \frac{1}{e^{h\nu/kT}}\nu^3=

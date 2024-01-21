@@ -45,7 +45,7 @@
 - [量子力学](chapter_8/section_0.md)
   - [空洞輻射の理論](chapter_8/section_1.md)
   - [光の粒子仮設](chapter_8/section_2.md)
-  - [粒子と波動の二重性](chapter_8/section_3.md)
+  - [電子の波動説](chapter_8/section_3.md)
   - [量子電磁気学](chapter_8/section_4.md)
   - [相対論的量子力学](chapter_8/section_5.md)
 - [参考文献](./references.md)
