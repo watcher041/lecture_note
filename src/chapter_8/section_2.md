@@ -77,11 +77,6 @@ $$
     \frac{h\nu_{\phi}}{c}\sin\phi-
     \gamma m_{e}v\sin\alpha
 $$
-であり、さらにエネルギー保存則から
-$$
-    h\nu_0+m_{e}c^2=
-    h\nu_\phi+\gamma  m_{e}c^2
-$$
 であることから、
 $$
     \left(
@@ -108,7 +103,12 @@ $$
     \right)^2=
     (\gamma m_{e}v)^2
 $$
-そして、片方の式においては
+さらに、エネルギー保存則から
+$$
+    h\nu_0+m_{e}c^2=
+    h\nu_\phi+\gamma  m_{e}c^2
+$$
+であり、両辺を二乗すると
 $$
     (h\nu_0-h\nu_\phi+m_{e}c^2)^2=
     (\gamma  m_{e}c^2)^2
