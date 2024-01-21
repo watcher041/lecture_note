@@ -13,43 +13,27 @@ $$
 
 まず、下図のように観測者Kと観測者K'が同じ位置にいてKから見てK'が時刻0にて速さ $V$ で $x$ 軸に沿って動いたとする。同時に光を原点から放出して地点Bにて折り返す。このとき、各観測者から見てどのような式が成り立つか見てみると以下のようになる。
 
-<table>
-<tr >
-    <p align="center">
-        <img width="60%"
+<p align="center">
+    <img width="50%"
         src="images/simultaneous.png">
-    </p>
-</tr>
-<tr>
+</p>
 $$
     \left[c(t_{\rm C}-t_{\rm B})\right]^2=
     (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)
 $$
-</tr>
-<tr><td>
 $$
-    x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2
-$$
-$$
-    x_{\rm C}-Vt_{\rm C}=y_{\rm C}=z_{\rm C}=0
-$$
-$$
-    t_{\rm C}=2\frac{c^2}{c^2-V^2}
-    \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
-$$
-</td>
-<td>
-$$
+    x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2、
     x_{\rm B}'^2+y_{\rm B}'^2+z_{\rm B}'^2=(ct_{\rm B}')^2
 $$
 $$
+    x_{\rm C}-Vt_{\rm C}=y_{\rm C}=z_{\rm C}=0、
     x_{\rm C}'=y_{\rm C}'=z_{\rm C}'=0
 $$
 $$
+    t_{\rm C}=2\frac{c^2}{c^2-V^2}
+    \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)、
     t_{\rm C}'=2t_{\rm B}'
 $$
-</td></tr>
-</table>
 
 ここでC点において各観測者の間で
 $$
