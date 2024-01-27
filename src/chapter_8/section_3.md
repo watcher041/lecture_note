@@ -100,3 +100,75 @@ $$
     \rightarrow
     W_n=-\frac{Rhc}{n^2}
 $$
+すると、$n$ が大きくなるにつれて0に近づいて連続的に分布するようになるが、ここで連続で分布するようになるというのは古典的な状態に相当していることから、振動数に関する式において まず $m=n-\tau$ とすると
+$$
+    \nu=
+    Rc
+    \left(
+        \frac{n^2-m^2}{n^2m^2}
+    \right)=
+    Rc
+    \frac{(n+m)(n-m)}{n^2m^2}=
+    Rc\frac{\tau}{n^3}
+    \frac{(2-\tau/n)}{(1-\tau/n)^2}
+$$
+であるから、$n\to\infty\ (\tau/n\to 0)$ とする近似的に以下の式が得られる。
+$$
+    \nu\simeq\frac{2Rc}{n^3}\tau=
+    \frac{2}{\sqrt{Rch^3}}
+    |W_n|^{3/2}\tau、
+    (|W_n|=-W_n)
+$$
+一方で、水素原子は当時電子が円運動をしているものと考えられており、このときのエネルギーは
+$$
+    W_n=
+    \frac{1}{2}mv^2-
+    \frac{1}{4\pi\epsilon_0}
+    \frac{e^2}{r}
+$$
+であり、円運動する条件として
+$$
+    \frac{mv_n^2}{r}=
+    \frac{1}{4\pi\epsilon_0}
+    \frac{e^2}{r_n^2}
+$$
+であり、なおかつ速度に関して $v_n=2\pi r_n\nu_n$ とおけるため
+$$
+    -\frac{1}{2}mv_n^2=
+    -\frac{1}{8\pi\epsilon_0}
+    \frac{e^2}{r_n}=W_n
+    \rightarrow
+    -\frac{2W_n}{m}=
+    (2\pi\nu_n)^2
+    \left(-
+    \frac{1}{8\pi\epsilon_0}
+    \frac{e^2}{W_n}
+    \right)^2
+$$
+であることから、整理すると以下の通りになる。
+$$
+    \nu_n=
+    2\sqrt{
+        \frac{8\epsilon_0^2}{me^4}
+    }
+    |W_n|^{3/2}
+$$
+そのため、ある範囲 $\tau$ でエネルギーが変化したときに放出する光の振動数は次のようになる。
+$$
+    \nu=
+    2\sqrt{
+        \frac{8\epsilon_0^2}{me^4}
+    }
+    |W_n|^{3/2}\tau
+$$
+以上の考察から、次の関係式が成り立つことが予想される。
+$$
+    \frac{1}{\sqrt{Rch^3}}=
+    \sqrt{
+        \frac{8\epsilon_0^2}{me^4}
+    }
+    \rightarrow
+    R=
+    \frac{me^4}{8\epsilon_0^2h^3c}
+$$
+この値に代入すると、定数が一致していることが分かる。
