@@ -122,31 +122,32 @@ $$
 一方で、水素原子は当時電子が円運動をしているものと考えられており、このときのエネルギーは
 $$
     W_n=
-    \frac{1}{2}mv^2-
+    \frac{1}{2}mv_n^2-
     \frac{1}{4\pi\epsilon_0}
-    \frac{e^2}{r}
+    \frac{e^2}{r_n}
 $$
 であり、円運動する条件として
 $$
-    \frac{mv_n^2}{r}=
+    \frac{mv_n^2}{r_n}=
     \frac{1}{4\pi\epsilon_0}
     \frac{e^2}{r_n^2}
 $$
-であり、なおかつ速度に関して $v_n=2\pi r_n\nu_n$ とおけるため
+を利用すると、速度と動径は以下の通りになる。
 $$
-    -\frac{1}{2}mv_n^2=
-    -\frac{1}{8\pi\epsilon_0}
-    \frac{e^2}{r_n}=W_n
+    v_n=\sqrt{\frac{2}{m}}
+    |W_n|^{1/2}、
+    r_n=
+    \frac{e^2}{8\pi\epsilon_0}
+    |W_n|^{-1}
+$$
+さらに速度に関して $v_n=2\pi r_n\nu_n$ とおけるため
+$$
+    \sqrt{\frac{2}{m}}
+    |W_n|^{1/2}=
+    2\pi
+    \frac{e^2}{8\pi\epsilon_0}
+    |W_n|^{-1}\nu_n
     \rightarrow
-    -\frac{2W_n}{m}=
-    (2\pi\nu_n)^2
-    \left(-
-    \frac{1}{8\pi\epsilon_0}
-    \frac{e^2}{W_n}
-    \right)^2
-$$
-であることから、整理すると以下の通りになる。
-$$
     \nu_n=
     2\sqrt{
         \frac{8\epsilon_0^2}{me^4}
