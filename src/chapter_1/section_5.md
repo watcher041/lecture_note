@@ -4,7 +4,7 @@
 　ここまでは、単に物体を質点におきかえて正確に位置を指定してから、その時間変化を見ることで物体の運動を調べていた。このとき、質点を置く地点は物体内であれば何処でもよく特に指定があるわけではないが、場合によっては問題となってしまうことがある。
 
 <p align="center">
-    <img width="60%"  
+    <img width="70%"  
         style="background-color:white;"
         src="images/pointmass.png">
 </p>
@@ -60,7 +60,7 @@ $$
 $$
 となっているため、内分点の公式と同じ形になっていることが見て取れる。
 <p align="center">
-    <img width="50%"  
+    <img width="60%"  
         style="background-color:white;"
         src="images/two_mass_point.png">
 </p>
@@ -75,7 +75,7 @@ $$
     \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 $$
 <p align="center">
-    <img width="40%"  
+    <img width="50%"  
         style="background-color:white;"
         src="images/three_mass_point.png">
 </p>

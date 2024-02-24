@@ -61,7 +61,7 @@ $$
 $$
 <p align="center">
     <img 
-    width="60%" 
+    width="70%" 
     src="images/xyABC.png">
 </p>
 すると、ベクトルをどのようにするかというと、$x$方向と$y$方向それぞれのほうから見た長さが判明すればよい。
@@ -107,7 +107,7 @@ $$
 となる。
 <p align="center">
     <img 
-    width="60%" 
+    width="70%" 
     src="images/aavector.png">
 </p>
 
@@ -127,7 +127,7 @@ $$
 $$
 <p align="center">
     <img 
-    width="60%" 
+    width="70%" 
     src="images/abvector.png">
 </p>
 一方で、余弦定理を用いると

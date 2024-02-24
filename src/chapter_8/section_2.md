@@ -61,7 +61,7 @@ $$
 というようになる。
 
 <p align="center">
-    <img width="60%"
+    <img width="70%"
         src="images/compton_scattering.png">
 </p>
 

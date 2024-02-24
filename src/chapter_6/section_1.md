@@ -67,7 +67,7 @@ $$
 　気体の分子には大きさがあるために必ず衝突する。分子の直径を $\sigma$ とし、一つの分子 M が M$_1$、M$_2$、M$_3$,・・・と次々に衝突して運動を変えていくありさまを想像したものが図である。
 
 <p align="center">
-    <img width="60%"
+    <img width="70%"
         src="images/cylinder_motion.png">
 </p>
 

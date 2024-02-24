@@ -14,7 +14,7 @@ $$
 $$
 これをLorentz変換のところでも見せた時空図で描写すると以下のようになる。
 <p align="center">
-    <img width="30%" src="images/const.png">
+    <img width="40%" src="images/const.png">
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。
 

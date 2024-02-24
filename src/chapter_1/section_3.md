@@ -4,7 +4,7 @@
 1. 水平な地面に置かれた物体
 
     <p align="center">
-        <img width="50%" src="images/translational_motion.png">
+        <img width="60%" src="images/translational_motion.png">
     </p>
 
     何もしていない状態だと静止し続ける。そこに下図のように力をかけ続けると動き始め、この様子を運動方程式を用いてみる。
@@ -29,7 +29,7 @@
 1. 上記と同様な状況で角度 $\theta$ だけ傾けて力をかけた場合
 
     <p align="center">
-        <img width="50%" src="images/translational_motion_theta.png">
+        <img width="60%" src="images/translational_motion_theta.png">
     </p>
 
     先ほどと同様な考え方で
@@ -46,7 +46,7 @@
 1. 落下運動と2と同様の運動
 
     <p align="center">
-        <img width="30%" src="images/falling_motion.png">
+        <img width="40%" src="images/falling_motion.png">
     </p>
 
     物体を持ち上げて離すと、落下するわけだが、このときに働く力は重力 $G$ と呼ばれる。そのため、このときの運動方程式は以下の形になることが分かる。
@@ -61,7 +61,7 @@
     この重力が働くということを踏まえて、改めて先ほどの状況を考えてみる。この場合だと、重力と上にひく力が釣り合っていると思えるが、すると何も力が働いていないときに静止していることの説明がつかない。そのため、重力により下へ引き付けることで地面へ力がかかり地面から反発力（反作用）が働くものと考えられる。
 
     <p align="center">
-        <img width="50%" src="images/translational_motion_theta2.png">
+        <img width="60%" src="images/translational_motion_theta2.png">
     </p>
 
     $$
