@@ -41,9 +41,51 @@ $$
 $$
 
 <p align="center">
-    <img width="60%" src="images/flux_line_two.png">
+    <img width="400vw" src="images/flux_line_two.png">
 </p>
 
-以上のように、電荷が複数個あることで様々な形で電場が発生するわけだが、実際のところ電荷が物体内にあることを考えると物体表面から電場が生じるものと思われる。
-
-
+以上のように、電荷が複数個あることで様々な形で電場が発生するわけだが、実際のところ電荷が物体内にあることを考えると物体表面から電場が生じるものと思われる。そこで、一つの電荷（電荷量 $Q$ ）の周囲に閉曲面があることを考えてみると、閉曲面が半径 $r$ の球面の場合は
+$$
+    E(r)4\pi r^2=4\pi kQ
+$$
+だけの電場が放出される。これが、任意の形状になると閉曲面 $\Omega$ の微小面積が
+$$
+    \mathrm{d}S=
+    r^2\sin\phi\mathrm{d}\theta\mathrm{d}\phi
+$$
+であるから、電場の総量は以下のようになる。
+$$
+    \int_{\Omega} E\mathrm{d}S=
+    kQ\int_{0}^{2\pi}\mathrm{d}\theta
+    \int_{0}^{\pi}\sin\phi\mathrm{d}\phi=
+    4\pi k Q
+$$
+これを見ると、閉曲面の形によらず電場の総量は電荷量に比例していることが分かる。そのため、２個の電荷がある場合にも
+$$
+    \int_{\Omega} |\bm{E}|\mathrm{d}S=
+    \int_{\Omega} |\bm{E}_q+\bm{E}_Q|
+    \mathrm{d}S
+$$
+となるわけだが、単純に展開するだけでは分りにくいので電場を
+$$
+    \bm{E}=\bm{E}_{\perp}+\bm{E}_{//}
+$$
+というように閉曲面に垂直方向な成分 $\bm{E}_{\perp}$ と水平方向の成分 $\bm{E}_{//}$ に分解すると、各成分ごとに和をとった形になる。
+$$
+    \int_{\Omega} |\bm{E}_{\perp}|\mathrm{d}S=
+    \int_{\Omega} 
+    |\bm{E}_q|_{\perp}\mathrm{d}S+
+    \int_{\Omega} 
+    |\bm{E}_Q|_{\perp}\mathrm{d}S
+$$
+$$
+    \int_{\Omega} |\bm{E}_{//}|\mathrm{d}S=
+    \int_{\Omega} 
+    |\bm{E}_q|_{//}\mathrm{d}S+
+    \int_{\Omega}
+    |\bm{E}_Q|_{//}\mathrm{d}S
+$$
+さらに、各成分ごとの電場の積分が
+$$
+    \int_{\Omega} |\bm{E}|_{\perp}\mathrm{d}S
+$$
