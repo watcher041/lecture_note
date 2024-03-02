@@ -1,7 +1,7 @@
 
 ## 測地線方程式
 
-　まず特殊相対性理論において運動方程式というのは
+　特殊相対性理論において、運動方程式は
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \bm{f}、
@@ -14,7 +14,7 @@ $$
     \frac{m_0c^2}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
-という形で書けたわけだが、一方で解析力学においての運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
+という形で書けたわけなので、これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     \left(
@@ -26,33 +26,38 @@ $$
         {\partial q}
     \right)=0
 $$
-ここで力 $\bm{f}$ が保存力であれば、各成分ごとに速度に関わる部分のみ記載すると
+これと先ほどの運動方程式を比較すると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
 $$
-     \frac{\partial\mathcal{L}}{\partial v_x}=
-     p_x、
-     \frac{\partial\mathcal{L}}{\partial v_y}=
-     p_y、
-     \frac{\partial\mathcal{L}}{\partial v_z}=
-     p_z
-$$
-であるから、以下の関係式が成立する。
-$$
-     \frac{\partial\mathcal{L}}{\partial v_x}=
-     \frac{m_0v_x}
+    \frac{\partial\mathcal{L}}{\partial v_x}=
+    \frac{m_0v_x}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-     \frac{\partial\mathcal{L}}{\partial v_y}=
-     \frac{m_0v_y}
+    \frac{\partial\mathcal{L}}{\partial v_y}=
+    \frac{m_0v_y}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-     \frac{\partial\mathcal{L}}{\partial v_z}=
-     \frac{m_0v_z}
+    \frac{\partial\mathcal{L}}{\partial v_z}=
+    \frac{m_0v_z}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
-となることを考慮すると、
+$$
+    \frac{\partial\mathcal{L}}{\partial x}=
+    -\left(
+        \frac{\partial U}{\partial x}
+    \right)、
+     \frac{\partial\mathcal{L}}{\partial y}=
+     -\left(
+        \frac{\partial U}{\partial y}
+    \right)、
+    \frac{\partial\mathcal{L}}{\partial z}=
+    -\left(
+        \frac{\partial U}{\partial z}
+    \right)
+$$
+であるから、ラグランジアンが以下の通りになることが分かる。
 $$
     \mathcal{L}=
     -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
 $$
-であることが分かる。これは静止エネルギーがポテンシャルエネルギーの一種ともとれる。（物体内の原子、分子同士に働く相互作用によるものと考えられる）次に、先ほど登場した計量により
+これは静止エネルギーがポテンシャルエネルギーの一種ともとれる。（物体内の原子、分子同士に働く相互作用によるものと考えられる）次に、先ほど登場した計量により
 $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
