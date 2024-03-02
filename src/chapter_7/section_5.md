@@ -55,14 +55,14 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-    \alpha_{\ \  0}^0 & \alpha_{\ \  1}^0 & 
-    \alpha_{\ \  2}^0 & \alpha_{\ \  3}^0 \\
-    \alpha_{\ \  0}^1 & \alpha_{\ \  1}^1 & 
-    \alpha_{\ \  2}^1 & \alpha_{\ \  3}^1 \\
-    \alpha_{\ \  0}^2 & \alpha_{\ \  1}^2 & 
-    \alpha_{\ \  2}^2 & \alpha_{\ \  3}^2 \\
-    \alpha_{\ \  0}^3 & \alpha_{\ \  1}^3 & 
-    \alpha_{\ \  2}^3 & \alpha_{\ \  3}^3 
+    \alpha_{ 0}^0 & \alpha_{ 1}^0 & 
+    \alpha_{ 2}^0 & \alpha_{ 3}^0 \\
+    \alpha_{ 0}^1 & \alpha_{ 1}^1 & 
+    \alpha_{ 2}^1 & \alpha_{ 3}^1 \\
+    \alpha_{ 0}^2 & \alpha_{ 1}^2 & 
+    \alpha_{ 2}^2 & \alpha_{ 3}^2 \\
+    \alpha_{ 0}^3 & \alpha_{ 1}^3 & 
+    \alpha_{ 2}^3 & \alpha_{ 3}^3 
 \end{pmatrix}
 \begin{pmatrix}
     x^0 \\
@@ -74,12 +74,12 @@ $$
 とおくと、各成分ごと（**ベクトルではない**）に簡略化して書ける。
 $$
     x'^\mu=
-    \sum_{\nu=0}^{3}\alpha_{\ \  \nu}^\mu x^\nu　
+    \sum_{\nu=0}^{3}\alpha_{ \nu}^\mu x^\nu　
     (\mu=0,1,2,3)
 $$
 あるいは、今ここで $\nu$ に対して総和をとっているが、行列においては下付き添え字（行）と上付き添え字（列）の掛け算は足し合わせることになるので、以下のように総和記号を省いた表記（**Einsteinの縮約記法**）がよく用いられている。
 $$
-    x'^\mu=\alpha_{\ \  \nu}^\mu x^\nu　
+    x'^\mu=\alpha_{ \nu}^\mu x^\nu　
     (\mu=0,1,2,3)
 $$
 一方で、Lorentz変換においても
@@ -270,7 +270,7 @@ $$
 $$
 さらに、ここでの偏微分の部分を分母の添え字を用いて簡潔に表現すると以下のようになる。
 $$
-    e_{\ \ \nu}^\mu=
+    e_{\nu}^\mu=
     \partial_\nu x'^\mu=
     \left(
         \frac{\partial x'^\mu}{\partial x^\nu}
@@ -279,7 +279,8 @@ $$
 そのため、先ほどと同様に以下のように表される（単位ベクトル $\bm{e}$ を用いて別の表記をすることができる。接線ベクトルとなるため）。
 $$
     \mathrm{d}x'^\mu=
-    e_{\ \ \nu}^\mu\mathrm{d}x^\nu、
+    e_{\nu}^\mu\mathrm{d}x^\nu
+    \leftrightarrow
     \mathrm{d}\bm{x}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \left(
