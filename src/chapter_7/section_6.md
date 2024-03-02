@@ -5,12 +5,12 @@
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \bm{f}、
-    \frac{\mathrm{d}E}{\mathrm{d}\tau}=
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
     \bm{f}\cdot\bm{v}、
     \bm{p}=
     \frac{m_0\bm{v}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    E=
+    E_K=
     \frac{m_0c^2}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
@@ -52,12 +52,14 @@ $$
         \frac{\partial U}{\partial z}
     \right)
 $$
-であるから、ラグランジアンが以下の通りになることが分かる。
+であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 $$
     \mathcal{L}=
     -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
+    \simeq
+    \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
 $$
-これは静止エネルギーがポテンシャルエネルギーの一種ともとれる。（物体内の原子、分子同士に働く相互作用によるものと考えられる）次に、先ほど登場した計量により
+次に、前回でも登場した計量 $g_{\mu\nu}$ により
 $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
@@ -72,7 +74,7 @@ $$
     \frac{1}{c}\sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
 $$
-と置き換えて、改めて運動方程式を解いてみると
+と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}$ として
 $$
     \frac{\partial\mathcal{L}}
     {\partial \dot{x}^\lambda}=
@@ -81,9 +83,11 @@ $$
     {\partial \dot{x}^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
+    -\frac{m_0c}{2\dot{s}}
+    (g_{\lambda\nu}\dot{x}^{\nu}+
+    g_{\mu\lambda}\dot{x}^{\mu})=
     -\frac{m_0c}{\dot{s}}
     g_{\lambda\mu}\dot{x}^{\mu}
-    　(\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu})
 $$
 $$
     \frac{\partial\mathcal{L}}
@@ -92,44 +96,74 @@ $$
     \frac{\partial}
     {\partial x^\lambda}
     \sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
+    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
+    \frac{\partial U}{\partial x^\lambda}=
     -\frac{m_0c}{2\dot{s}}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
         \dot{x}^\mu\dot{x}^\nu
-    \right)
-    　(\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu})
+    \right)-
+    \frac{\partial U}{\partial x^\lambda}
 $$
-以上の結果を方程式に代入すると以下のような形になる。
+となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
+以上の結果を上記の運動方程式に代入すると以下のような形になる。
 $$
+    m_0c\left[
     -\frac{\ddot{s}}{\dot{s}^2}
-    g_{\mu\lambda}\dot{x}^{\mu}+
+    g_{\lambda\mu}\dot{x}^{\mu}+
     \frac{1}{\dot{s}}
-    \frac{\partial g_{\mu\lambda}}{\partial x^\nu}
-    \dot{x}^\lambda\dot{x}^\nu+
-    \frac{1}{\dot{s}}g_{\mu\lambda}\ddot{x}^{\mu}-
+    \frac{\mathrm{d} g_{\lambda\mu}}
+    {\mathrm{d} t}\dot{x}^\mu+
+    \frac{1}{\dot{s}}g_{\lambda\mu}\ddot{x}^{\mu}-
     \frac{1}{2\dot{s}}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
         \dot{x}^\mu\dot{x}^\nu
-    \right)=0
+    \right)\right]+
+    \frac{\partial U}{\partial x^\lambda}=0
 $$
+ここで、計量に関しての時間微分が
 $$
-    g_{\mu\lambda}\ddot{x}^\mu+
-    \frac{1}{2}
+    \frac{\mathrm{d} g_{\lambda\mu}}
+    {\mathrm{d} t}=
+    \frac{\partial g_{\lambda\nu}}
+    {\partial x^\nu}\dot{x}^\nu
+$$
+であるため、これを踏まえて整理すると次の通りになる。
+$$
+    m_0c\left[
+    \frac{1}{\dot{s}}
+    g_{\lambda\mu}\ddot{x}^{\mu}+
+    \frac{1}{\dot{s}}
     \left(
-        \frac{\partial g_{\mu\lambda}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\nu\lambda}}
-        {\partial x^\mu}-
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     \right)
     \dot{x}^\mu\dot{x}^\nu-
     \frac{\ddot{s}}{\dot{s}^2}
-    g_{\mu\lambda}\dot{x}^{\mu}=0
+    g_{\lambda\mu}\dot{x}^{\mu}\right]+
+    \frac{\partial U}{\partial x^\lambda}=0
+$$
+$$
+    \rightarrow
+    g_{\lambda\mu}\ddot{x}^{\mu}+
+    \left(
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \dot{x}^\mu\dot{x}^\nu-
+    \frac{\ddot{s}}{\dot{s}}
+    g_{\lambda\mu}\dot{x}^{\mu}+
+    \frac{\dot{s}}{m_0c}
+    \frac{\partial U}{\partial x^\lambda}=0
 $$
 これに $g^{k\lambda}$ をかけ、$s$ が時間の一次関数である（$\ddot{s}=0$）であるとすると
 $$
