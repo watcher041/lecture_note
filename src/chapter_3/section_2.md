@@ -48,44 +48,57 @@ $$
 $$
     E(r)4\pi r^2=4\pi kQ
 $$
-だけの電場が放出される。これが、任意の形状になると閉曲面 $\Omega$ の微小面積が
+だけの電場が放出される。これが、任意の形状になると閉曲面 $S$ の微小面積が
+$$
+    \mathrm{d}S'=
+    r^2\sin\phi\ \mathrm{d}\theta\mathrm{d}\phi
+$$
+となるのだが、実際は電場と平面に垂直な単位ベクトル $\bm{n}$ のなす角度 $\alpha$ により
 $$
     \mathrm{d}S=
-    r^2\sin\phi\mathrm{d}\theta\mathrm{d}\phi
+    \frac{\mathrm{d}S'}{\cos\alpha}
 $$
-であるから、電場の総量は以下のようになる。
+だけの面積を貫く。
+<p align="center">
+    <img width="60%" src="images/en_relation.png">
+</p>
+一方で、電場と $\bm{n}$ の内積が
 $$
-    \int_{\Omega} E\mathrm{d}S=
+    \bm{E}\cdot\bm{n}=E\cos\alpha
+$$
+であるが、面上の $E$ の合計（積分）を求めるのに $\cos\alpha$ が余計なので
+$$
+    \oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
+    \oint E\ \mathrm{d}S'=
     kQ\int_{0}^{2\pi}\mathrm{d}\theta
-    \int_{0}^{\pi}\sin\phi\mathrm{d}\phi=
+    \int_{0}^{\pi}\sin\phi\ \mathrm{d}\phi=
     4\pi k Q
 $$
-これを見ると、閉曲面の形によらず電場の総量は電荷量に比例していることが分かる。そのため、２個の電荷がある場合にも
+というようにすると、面上の電場の総和を求めることができる。ここで、左辺については一般的に
 $$
-    \int_{\Omega} |\bm{E}|\mathrm{d}S=
-    \int_{\Omega} |\bm{E}_q+\bm{E}_Q|
-    \mathrm{d}S
+    \oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
+    \oint\bm{E}\cdot\mathrm{d}\bm{S}
 $$
-となるわけだが、単純に展開するだけでは分りにくいので電場を
+というように面積分と呼ばれる形で書かれる。
+
+　任意の閉曲面の結果から、閉曲面の形によらず電場の総量は電荷量に比例していることが予想される。そのため、２個の電荷がある場合にも
 $$
-    \bm{E}=\bm{E}_{\perp}+\bm{E}_{//}
+    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
+    \oint\bm{E}_q\cdot\mathrm{d}\bm{S}+
+    \oint\bm{E}_Q\cdot\mathrm{d}\bm{S}=
+    4\pi k (q+Q)
 $$
-というように閉曲面に垂直方向な成分 $\bm{E}_{\perp}$ と水平方向の成分 $\bm{E}_{//}$ に分解すると、各成分ごとに和をとった形になる。
+というようになる。少しひねくれて、もし閉曲面の外部に電荷がある場合は電場が地点1から地点2に向けて出入りした場合は、
 $$
-    \int_{\Omega} |\bm{E}_{\perp}|\mathrm{d}S=
-    \int_{\Omega} 
-    |\bm{E}_q|_{\perp}\mathrm{d}S+
-    \int_{\Omega} 
-    |\bm{E}_Q|_{\perp}\mathrm{d}S
+    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
+    E_1\cos(\pi-\alpha_1)
+    \mathrm{d}S_1+
+    E_2\cos(\alpha_2)
+    \mathrm{d}S_2=
+    -E_1\mathrm{d}S'_1+E_2\mathrm{d}S'_2=0
 $$
+である。したがって、閉曲面から出てくる電場というのは、その閉曲面内にある電荷量 $Q$ に比例することになる。これを**Gaussの法則**と呼ぶ。
 $$
-    \int_{\Omega} |\bm{E}_{//}|\mathrm{d}S=
-    \int_{\Omega} 
-    |\bm{E}_q|_{//}\mathrm{d}S+
-    \int_{\Omega}
-    |\bm{E}_Q|_{//}\mathrm{d}S
-$$
-さらに、各成分ごとの電場の積分が
-$$
-    \int_{\Omega} |\bm{E}|_{\perp}\mathrm{d}S
+    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
+    4\pi k Q
 $$
