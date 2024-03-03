@@ -389,7 +389,7 @@ $$
     \right)
     \mathrm{d}x^\lambda\mathrm{d}x^\tau
 $$
-であり、同じように逆の立場で記載すると
+であり、同じように $g_{\lambda\tau}\mathrm{d}x^\lambda\mathrm{d}x^\tau$ も展開してみると
 $$
     g_{\lambda\tau}
     \mathrm{d}x^\lambda\mathrm{d}x^\tau=
@@ -404,7 +404,7 @@ $$
     \right)
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
-というようになるため、以下の関係式が成り立つため互いに代入してみると成立することが分かる。
+というようになるため、以下の関係式が成り立ち互いに代入することで元の $\mathrm{d}s^2$ の関係式を満たしていることが確認できる。
 $$
     g_{\lambda\tau}=
     g'_{\mu\nu}
@@ -426,6 +426,17 @@ $$
         \frac{\partial x^{\tau}}
         {\partial x'^\nu}
     \right)
+$$
+ここまでで、$\mathrm{d}s^2$ の式というは今までのベクトルの積の形をしていないように見えるが
+$$
+    \mathrm{d}x_\nu=
+    g_{\mu\nu}\mathrm{d}x^{\mu}
+$$
+というように定義することで、次のように積の形で表記することもできる。
+$$
+    \mathrm{d}s^2=
+    \mathrm{d}x'_\nu\mathrm{d}x'^\nu=
+    \mathrm{d}x_\tau\mathrm{d}x^\tau
 $$
 
 実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
@@ -458,16 +469,6 @@ $$
     0 & 0 & 0 & -1
 \end{pmatrix}
 $$
-あるいは、内積を行列の積の形で表記するためによく
-$$
-    \mathrm{d}x_\nu=
-    g_{\mu\nu}\mathrm{d}x^{\mu}
-$$
-というように定義されることが多く、この場合だと以下のように書ける。
-$$
-    \mathrm{d}s^2=
-    \mathrm{d}x'_\nu\mathrm{d}x'^\nu=
-    \mathrm{d}x_\nu\mathrm{d}x^\nu
-$$
+
 
 このように、特殊相対性理論にもRieman幾何学との間に計量を通じて関係しているため、以降ではこれを用いて一般相対性理論について述べていくことにする。
