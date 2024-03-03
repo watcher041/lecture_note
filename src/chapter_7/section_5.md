@@ -343,14 +343,91 @@ $$
     \mathrm{d}s^2=
     g'_{\mu\nu}
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
-    g_{\mu\nu}
-    \mathrm{d}x^\mu\mathrm{d}x^\nu、
+    g_{\lambda\tau}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau、
     （g'_{\mu\nu}=
     \bm{e}'_\mu\cdot\bm{e}'_\nu、
-    g_{\mu\nu}=
-    \bm{e}_\mu\cdot\bm{e}_\nu
+    g_{\lambda\tau}=
+    \bm{e}_\lambda\cdot\bm{e}_\tau
     ）
 $$
+この関係が成り立つかどうかは、まず
+$$
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    \left(
+        \frac{\partial x'^{\mu}}
+        {\partial x^\lambda}
+    \right)
+    \mathrm{d}x^\lambda
+    \left(
+        \frac{\partial x'^{\nu}}
+        {\partial x^\tau}
+    \right)
+    \mathrm{d}x^\tau=
+    \left(
+        \frac{\partial x'^{\mu}}
+        {\partial x^\lambda}
+    \right)
+    \left(
+        \frac{\partial x'^{\nu}}
+        {\partial x^\tau}
+    \right)
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau
+$$
+と展開することができ、これに計量 $g'_{\mu\nu}$ をかけると
+$$
+    g'_{\mu\nu}
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    g'_{\mu\nu}
+    \left(
+        \frac{\partial x'^{\mu}}
+        {\partial x^\lambda}
+    \right)
+    \left(
+        \frac{\partial x'^{\nu}}
+        {\partial x^\tau}
+    \right)
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau
+$$
+であり、同じように逆の立場で記載すると
+$$
+    g_{\lambda\tau}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau=
+    g_{\lambda\tau}
+    \left(
+        \frac{\partial x^{\lambda}}
+        {\partial x'^\mu}
+    \right)
+    \left(
+        \frac{\partial x^{\tau}}
+        {\partial x'^\nu}
+    \right)
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu
+$$
+というようになるため、以下の関係式が成り立つため互いに代入してみると成立することが分かる。
+$$
+    g_{\lambda\tau}=
+    g'_{\mu\nu}
+    \left(
+        \frac{\partial x'^{\mu}}
+        {\partial x^\lambda}
+    \right)
+    \left(
+        \frac{\partial x'^{\nu}}
+        {\partial x^\tau}
+    \right)、
+    g'_{\mu\nu}=
+    g_{\lambda\tau}
+    \left(
+        \frac{\partial x^{\lambda}}
+        {\partial x'^\mu}
+    \right)
+    \left(
+        \frac{\partial x^{\tau}}
+        {\partial x'^\nu}
+    \right)
+$$
+
 実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
 $$
     \mathrm{d}t'
