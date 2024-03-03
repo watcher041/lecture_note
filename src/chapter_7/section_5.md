@@ -275,12 +275,50 @@ $$
     \left(
         \frac{\partial x'^\mu}{\partial x^\nu}
     \right)
-$$
-そのため、先ほどと同様に以下のように表される（単位ベクトル $\bm{e}$ を用いて別の表記をすることができる。接線ベクトルとなるため）。
-$$
+    \rightarrow
     \mathrm{d}x'^\mu=
     e_{\nu}^\mu\mathrm{d}x^\nu
-    \leftrightarrow
+$$
+あるいは、行列の見方を変えると
+$$
+\begin{pmatrix}
+    \mathrm{d}w' \\
+    \mathrm{d}x' \\
+    \mathrm{d}y' \\
+    \mathrm{d}z'
+\end{pmatrix}
+=
+\mathrm{d}w
+\begin{pmatrix}
+    \frac{\partial w'}{\partial w} \\
+    \frac{\partial x'}{\partial w} \\
+    \frac{\partial y'}{\partial w} \\
+    \frac{\partial z'}{\partial w} 
+\end{pmatrix}+
+\mathrm{d}x
+\begin{pmatrix}
+    \frac{\partial w'}{\partial x} \\
+    \frac{\partial x'}{\partial x} \\
+    \frac{\partial y'}{\partial x} \\
+    \frac{\partial z'}{\partial x} 
+\end{pmatrix}+
+\mathrm{d}y
+\begin{pmatrix}
+    \frac{\partial w'}{\partial y} \\
+    \frac{\partial x'}{\partial y} \\
+    \frac{\partial y'}{\partial y} \\
+    \frac{\partial z'}{\partial y} 
+\end{pmatrix}+
+\mathrm{d}z
+\begin{pmatrix}
+    \frac{\partial w'}{\partial z} \\
+    \frac{\partial x'}{\partial z} \\
+    \frac{\partial y'}{\partial z} \\
+    \frac{\partial z'}{\partial z} 
+\end{pmatrix}
+$$
+というように、基底ベクトルの和の形にもなるため、次のように書くこともできる。
+$$
     \mathrm{d}\bm{x}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \left(
@@ -290,7 +328,7 @@ $$
     \right)
 
 $$
-そして、この大きさというのは2乗をとることで求められるため、
+そして、この大きさを求めるために内積をとると
 $$
     \mathrm{d}s^2=
     \mathrm{d}\bm{x}'\cdot\mathrm{d}\bm{x}'=
