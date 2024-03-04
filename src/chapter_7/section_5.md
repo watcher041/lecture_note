@@ -338,7 +338,7 @@ $$
     \mathrm{d}x^\mu\mathrm{d}x^\nu　
     (g_{\mu\nu}=\bm{e}_\mu\cdot\bm{e}_\nu)
 $$
-となるが、ここで現れる $g_{\mu\nu}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる（後で証明が必要）。
+となるが、ここで現れる $g_{\mu\nu}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる。
 $$
     \mathrm{d}s^2=
     g'_{\mu\nu}
@@ -406,16 +406,6 @@ $$
 $$
 というようになるため、以下の関係式が成り立ち互いに代入することで元の $\mathrm{d}s^2$ の関係式を満たしていることが確認できる。
 $$
-    g_{\lambda\tau}=
-    g'_{\mu\nu}
-    \left(
-        \frac{\partial x'^{\mu}}
-        {\partial x^\lambda}
-    \right)
-    \left(
-        \frac{\partial x'^{\nu}}
-        {\partial x^\tau}
-    \right)、
     g'_{\mu\nu}=
     g_{\lambda\tau}
     \left(
@@ -425,18 +415,56 @@ $$
     \left(
         \frac{\partial x^{\tau}}
         {\partial x'^\nu}
+    \right)、
+    g_{\lambda\tau}=
+    g'_{\mu\nu}
+    \left(
+        \frac{\partial x'^{\mu}}
+        {\partial x^\lambda}
+    \right)
+    \left(
+        \frac{\partial x'^{\nu}}
+        {\partial x^\tau}
     \right)
 $$
 ここまでで、$\mathrm{d}s^2$ の式というは今までのベクトルの積の形をしていないように見えるが
 $$
+    \mathrm{d}x_\mu=
+    g_{\mu\nu}\mathrm{d}x^{\nu}、
     \mathrm{d}x_\nu=
     g_{\mu\nu}\mathrm{d}x^{\mu}
 $$
 というように定義することで、次のように積の形で表記することもできる。
 $$
     \mathrm{d}s^2=
+    \mathrm{d}x'^\mu\mathrm{d}x'_\mu=
     \mathrm{d}x'_\nu\mathrm{d}x'^\nu=
+    \mathrm{d}x^\lambda\mathrm{d}x_\lambda=
     \mathrm{d}x_\tau\mathrm{d}x^\tau
+$$
+また、$g_{\mu\nu}$ の逆行列で $g^{\mu\nu}$ というように書くと
+$$
+    \mathrm{d}x^{\nu}=
+    g^{\nu\lambda}\mathrm{d}x_{\lambda} 、
+    \mathrm{d}x^{\mu}=
+    g^{\mu\tau}\mathrm{d}x_{\tau}
+$$
+であるから、以下のように逆行列の性質を利用して等式が成り立つことが分かる。
+$$
+    \mathrm{d}x_\mu=
+    g_{\mu\nu}\mathrm{d}x^{\nu}=
+    g_{\mu\nu}g^{\nu\lambda}
+    \mathrm{d}x_{\lambda}=
+    \delta_\mu^\lambda\mathrm{d}x_{\lambda}=
+    \mathrm{d}x_{\mu}
+$$
+$$
+    \mathrm{d}x_\nu=
+    g_{\mu\nu}\mathrm{d}x^{\mu}=
+    g_{\mu\nu}g^{\mu\tau}
+    \mathrm{d}x_{\tau}=
+    \delta_\nu^\tau\mathrm{d}x_{\tau}=
+    \mathrm{d}x_{\nu}
 $$
 
 実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
