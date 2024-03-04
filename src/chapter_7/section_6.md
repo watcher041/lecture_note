@@ -84,8 +84,8 @@ $$
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
     -\frac{m_0c}{2\dot{s}}
-    (g_{\lambda\nu}\dot{x}^{\nu}+
-    g_{\mu\lambda}\dot{x}^{\mu})=
+    (g_{\lambda\mu}\dot{x}^{\nu}+
+    g_{\lambda\mu}\dot{x}^{\mu})=
     -\frac{m_0c}{\dot{s}}
     g_{\lambda\mu}\dot{x}^{\mu}
 $$
@@ -128,7 +128,7 @@ $$
 $$
     \frac{\mathrm{d} g_{\lambda\mu}}
     {\mathrm{d} t}=
-    \frac{\partial g_{\lambda\nu}}
+    \frac{\partial g_{\lambda\mu}}
     {\partial x^\nu}\dot{x}^\nu
 $$
 であるため、これを踏まえて整理すると次の通りになる。
@@ -138,7 +138,7 @@ $$
     g_{\lambda\mu}\ddot{x}^{\mu}+
     \frac{1}{\dot{s}}
     \left(
-        \frac{\partial g_{\lambda\nu}}
+        \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
         \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
@@ -153,7 +153,7 @@ $$
     \rightarrow
     g_{\lambda\mu}\ddot{x}^{\mu}+
     \left(
-        \frac{\partial g_{\lambda\nu}}
+        \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
         \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
@@ -165,14 +165,32 @@ $$
     \frac{\dot{s}}{m_0c}
     \frac{\partial U}{\partial x^\lambda}=0
 $$
-これに $g^{k\lambda}$ をかけ、$s$ が時間の一次関数である（$\ddot{s}=0$）であるとすると
+これに $g^{k\lambda}$ をかけることにより以下の形が得られる。
+$$
+    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
+    g^{k\lambda}
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
+    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}-
+    \frac{\ddot{s}}{\dot{s}}\dot{x}^{k}+
+    g^{k\lambda}\frac{\dot{s}}{m_0c}
+    \frac{\partial U}{\partial x^\lambda}=0
+$$
+
+ここでポテンシャル $U$ がなく $s$ が時間の一次関数である（$\ddot{s}=0$）とすると
 $$
     \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
     \frac{1}{2}g^{k\lambda}
     \left(
-        \frac{\partial g_{\mu\lambda}}
+        \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\lambda}}
+        \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
@@ -182,21 +200,21 @@ $$
 $$
 となり、さらに**第２種クリストッフェル記号**を用いて
 $$
-    \Gamma^{k}_{\ \ \mu\nu}=
+    \Gamma^{k}_{\mu\nu}=
     \frac{1}{2}g^{k\lambda}
     \left(
-        \frac{\partial g_{\mu\lambda}}
+        \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\lambda}}
+        \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     \right)
 $$
-というように置くと、測地線の方程式を求めることができる。
+というように置くと、測地線方程式というものを求めることができる。
 $$
     \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
-    \Gamma^{k}_{\ \ \mu\nu}
+    \Gamma^{k}_{\mu\nu}
     \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
     \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
 $$
@@ -205,9 +223,9 @@ $$
     \Gamma_{\lambda,\mu\nu}=
     \frac{1}{2}
     \left(
-        \frac{\partial g_{\mu\lambda}}
+        \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
-        \frac{\partial g_{\nu\lambda}}
+        \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
