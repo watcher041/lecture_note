@@ -86,8 +86,12 @@ $$
     -\frac{m_0c}{2\dot{s}}
     (g_{\lambda\mu}\dot{x}^{\nu}+
     g_{\lambda\mu}\dot{x}^{\mu})=
-    -\frac{m_0c}{\dot{s}}
-    g_{\lambda\mu}\dot{x}^{\mu}
+    -m_0c
+    \left(
+    g_{\lambda\mu}
+    \frac{\mathrm{d}x^{\mu}}
+    {\mathrm{d}s}
+    \right)
 $$
 $$
     \frac{\partial\mathcal{L}}
@@ -98,45 +102,59 @@ $$
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
     \frac{\partial U}{\partial x^\lambda}=
-    -\frac{m_0c}{2\dot{s}}
+    -\frac{m_0c}{2}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-        \dot{x}^\mu\dot{x}^\nu
-    \right)-
+        \frac{\mathrm{d}x^{\mu}}
+        {\mathrm{d}s}
+        \frac{\mathrm{d}x^{\nu}}
+        {\mathrm{d}s}
+    \right)
+    \frac{\mathrm{d}s}{\mathrm{d}t}-
     \frac{\partial U}{\partial x^\lambda}
 $$
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
 以上の結果を上記の運動方程式に代入すると以下のような形になる。
 $$
-    m_0c\left[
-    -\frac{\ddot{s}}{\dot{s}^2}
-    g_{\lambda\mu}\dot{x}^{\mu}+
-    \frac{1}{\dot{s}}
+    m_0c
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \left[
     \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} t}\dot{x}^\mu+
-    \frac{1}{\dot{s}}g_{\lambda\mu}\ddot{x}^{\mu}-
-    \frac{1}{2\dot{s}}
+    {\mathrm{d} s}
+    \frac{\mathrm{d}x^{\mu}}
+    {\mathrm{d}s}+
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
+    {\mathrm{d}s^2}-
+    \frac{1}{2}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-        \dot{x}^\mu\dot{x}^\nu
-    \right)\right]+
+        \frac{\mathrm{d}x^{\mu}}
+        {\mathrm{d}s}
+        \frac{\mathrm{d}x^{\nu}}
+        {\mathrm{d}s}
+    \right)\right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
-ここで、計量に関しての時間微分が
+ここで、計量に関しての微分が
 $$
     \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} t}=
+    {\mathrm{d} s}=
     \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}\dot{x}^\nu
+    {\partial x^\nu}
+    \frac{\mathrm{d} x^\nu}
+    {\mathrm{d} s}
 $$
 であるため、これを踏まえて整理すると次の通りになる。
 $$
-    m_0c\left[
-    \frac{1}{\dot{s}}
-    g_{\lambda\mu}\ddot{x}^{\mu}+
-    \frac{1}{\dot{s}}
+    m_0c
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \left[
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
+    {\mathrm{d}s^2}+
     \left(
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
@@ -144,30 +162,18 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     \right)
-    \dot{x}^\mu\dot{x}^\nu-
-    \frac{\ddot{s}}{\dot{s}^2}
-    g_{\lambda\mu}\dot{x}^{\mu}\right]+
-    \frac{\partial U}{\partial x^\lambda}=0
-$$
-$$
-    \rightarrow
-    g_{\lambda\mu}\ddot{x}^{\mu}+
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
-        \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-    \dot{x}^\mu\dot{x}^\nu-
-    \frac{\ddot{s}}{\dot{s}}
-    g_{\lambda\mu}\dot{x}^{\mu}+
-    \frac{\dot{s}}{m_0c}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+    \right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
 これに $g^{k\lambda}$ をかけることにより以下の形が得られる。
 $$
-    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
+    m_0c
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \left[
+    \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
     g^{k\lambda}
     \left(
         \frac{\partial g_{\lambda\mu}}
@@ -176,17 +182,19 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     \right)
-    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
-    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}-
-    \frac{\ddot{s}}{\dot{s}}\dot{x}^{k}+
-    g^{k\lambda}\frac{\dot{s}}{m_0c}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+    \right]-
+    g^{k\lambda}
     \frac{\partial U}{\partial x^\lambda}=0
 $$
 
-ここでポテンシャル $U$ がなく $s$ が時間の一次関数である（$\ddot{s}=0$）とすると
+ここでポテンシャル $U$ がなく $\dot{s}\neq 0$ であることを考慮すると
 $$
-    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
-    \frac{1}{2}g^{k\lambda}
+    \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
+    \frac{1}{2}
+    g^{k\lambda}
     \left(
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
@@ -195,8 +203,8 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     \right)
-    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
-    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
 となり、さらに**第２種クリストッフェル記号**を用いて
 $$
@@ -211,12 +219,13 @@ $$
         {\partial x^\lambda}
     \right)
 $$
-というように置くと、測地線方程式というものを求めることができる。
+というように置くと、**測地線方程式**というものが求められる。
 $$
-    \frac{\mathrm{d}^2 x^k}{\mathrm{d}t^2}+
+    \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
     \Gamma^{k}_{\mu\nu}
-    \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
-    \frac{\mathrm{d} x^\nu}{\mathrm{d}t}=0
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
 一方で、**第1種クリストッフェル記号**もあるわけだが、こちらは
 $$

@@ -42,6 +42,7 @@
   - [相対論的電磁気学](chapter_7/section_4.md)
   - [特殊相対論から一般相対論へ](chapter_7/section_5.md)
   - [測地線方程式](chapter_7/section_6.md)
+  - [重力と慣性（等価原理）](chapter_7/section_7.md)
 - [量子力学](chapter_8/section_0.md)
   - [空洞輻射の理論](chapter_8/section_1.md)
   - [光の粒子仮説](chapter_8/section_2.md)
