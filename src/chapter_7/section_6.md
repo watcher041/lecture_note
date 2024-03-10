@@ -188,7 +188,6 @@ $$
     g^{k\lambda}
     \frac{\partial U}{\partial x^\lambda}=0
 $$
-
 ここでポテンシャル $U$ がなく $\dot{s}\neq 0$ であることを考慮すると
 $$
     \frac{\mathrm{d}^2x^k}
@@ -227,6 +226,18 @@ $$
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
+この式は物体がRiemann空間内を最短距離で通るということを前提にして求められるもので、例として点Aから点Bへ物体が移動するものとすると
+$$
+    s=\int_A^B\mathrm{d}s=
+    \int_A^B
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \mathrm{d}t=
+    \int_A^B
+    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \mathrm{d}t
+$$
+が最小となる（$\delta s=0$）ときの関係式からも確認できる。
+
 一方で、**第1種クリストッフェル記号**もあるわけだが、こちらは
 $$
     \Gamma_{\lambda,\mu\nu}=

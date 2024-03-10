@@ -354,24 +354,12 @@ $$
 この関係が成り立つかどうかは、まず
 $$
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
-    \left(
-        \frac{\partial x'^{\mu}}
-        {\partial x^\lambda}
-    \right)
+    \partial_\lambda x'^{\mu}
     \mathrm{d}x^\lambda
-    \left(
-        \frac{\partial x'^{\nu}}
-        {\partial x^\tau}
-    \right)
+    \partial_\tau x'^{\nu}
     \mathrm{d}x^\tau=
-    \left(
-        \frac{\partial x'^{\mu}}
-        {\partial x^\lambda}
-    \right)
-    \left(
-        \frac{\partial x'^{\nu}}
-        {\partial x^\tau}
-    \right)
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
     \mathrm{d}x^\lambda\mathrm{d}x^\tau
 $$
 と展開することができ、これに計量 $g'_{\mu\nu}$ をかけると
@@ -379,14 +367,8 @@ $$
     g'_{\mu\nu}
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
     g'_{\mu\nu}
-    \left(
-        \frac{\partial x'^{\mu}}
-        {\partial x^\lambda}
-    \right)
-    \left(
-        \frac{\partial x'^{\nu}}
-        {\partial x^\tau}
-    \right)
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
     \mathrm{d}x^\lambda\mathrm{d}x^\tau
 $$
 であり、同じように $g_{\lambda\tau}\mathrm{d}x^\lambda\mathrm{d}x^\tau$ も展開してみると
@@ -394,38 +376,20 @@ $$
     g_{\lambda\tau}
     \mathrm{d}x^\lambda\mathrm{d}x^\tau=
     g_{\lambda\tau}
-    \left(
-        \frac{\partial x^{\lambda}}
-        {\partial x'^\mu}
-    \right)
-    \left(
-        \frac{\partial x^{\tau}}
-        {\partial x'^\nu}
-    \right)
+    \partial'_\mu x^{\lambda}
+    \partial'_\nu x^{\tau}
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
 というようになるため、以下の関係式が成り立ち互いに代入することで元の $\mathrm{d}s^2$ の関係式を満たしていることが確認できる。
 $$
     g'_{\mu\nu}=
     g_{\lambda\tau}
-    \left(
-        \frac{\partial x^{\lambda}}
-        {\partial x'^\mu}
-    \right)
-    \left(
-        \frac{\partial x^{\tau}}
-        {\partial x'^\nu}
-    \right)、
+    \partial'_\mu x^{\lambda}
+    \partial'_\nu x^{\tau}、
     g_{\lambda\tau}=
     g'_{\mu\nu}
-    \left(
-        \frac{\partial x'^{\mu}}
-        {\partial x^\lambda}
-    \right)
-    \left(
-        \frac{\partial x'^{\nu}}
-        {\partial x^\tau}
-    \right)
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
 $$
 ここまでで、$\mathrm{d}s^2$ の式というは今までのベクトルの積の形をしていないように見えるが
 $$
