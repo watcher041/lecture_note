@@ -74,7 +74,7 @@ $$
     \frac{1}{c}\sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
 $$
-と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}$ として
+と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
 $$
     \frac{\partial\mathcal{L}}
     {\partial \dot{x}^\lambda}=
@@ -167,14 +167,11 @@ $$
     \right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
-これに $g^{k\lambda}$ をかけることにより以下の形が得られる。
+ここでポテンシャルが $U$ がなく $\dot{s}\neq 0$ であることを踏まえると、
 $$
-    m_0c
-    \frac{\mathrm{d}s}{\mathrm{d}t}
-    \left[
-    \frac{\mathrm{d}^2x^k}
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
     {\mathrm{d}s^2}+
-    g^{k\lambda}
     \left(
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
@@ -183,17 +180,20 @@ $$
         {\partial x^\lambda}
     \right)
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
-    \right]-
-    g^{k\lambda}
-    \frac{\partial U}{\partial x^\lambda}=0
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
-ここでポテンシャル $U$ がなく $\dot{s}\neq 0$ であることを考慮すると
+となるわけだが、ここで以下のように変形する。
 $$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
     \frac{1}{2}
-    g^{k\lambda}
     \left(
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
@@ -203,11 +203,88 @@ $$
         {\partial x^\lambda}
     \right)
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+$$
+そして、計量の微分を展開してみると
+$$
+    \frac{\partial g_{\lambda\mu}}
+    {\partial x^\nu}=
+    \frac{\partial}{\partial x^\nu}
+    (\bm{e}_\lambda\cdot\bm{e}_\mu)=
+    \frac{\partial}{\partial x^\nu}
+    \left(
+        \frac{\partial x'_{m}}
+        {\partial x^\lambda}
+        \frac{\partial x'^{m}}
+        {\partial x^\mu}
+    \right)=
+    \frac{\partial x'_{m}}
+    {\partial x^\nu\partial x^\lambda}
+    \frac{\partial x'^{m}}
+    {\partial x^\mu}+
+    \frac{\partial x'^{m}}
+    {\partial x^\nu\partial x^\mu}
+    \frac{\partial x'_{m}}
+    {\partial x^\lambda}
+$$
+であり、ここで**第１種クリストフェル記号**を
+$$
+    \Gamma_{\nu\lambda,\mu}=
+    \frac{\partial x'_{m}}
+    {\partial x^\nu\partial x^\lambda}
+    \frac{\partial x'^{m}}
+    {\partial x^\mu}=
+    \frac{\partial x'^{m}}
+    {\partial x^\nu\partial x^\lambda}
+    \frac{\partial x'_{m}}
+    {\partial x^\mu}
+$$
+というように定義することで、
+$$
+    \frac{\partial g_{\lambda\mu}}
+    {\partial x^\nu}=
+    \Gamma_{\nu\lambda,\mu}+
+    \Gamma_{\nu\mu,\lambda}
+$$
+となる。同様に、その他の偏微分についても
+$$
+    \frac{\partial g_{\lambda\nu}}
+    {\partial x^\mu}=
+    \Gamma_{\mu\lambda,\nu}+
+    \Gamma_{\mu\nu,\lambda}、
+    \frac{\partial g_{\mu\nu}}
+    {\partial x^\lambda}=
+    \Gamma_{\lambda\mu,\nu}+
+    \Gamma_{\lambda\nu,\mu}
+$$
+となるため、以下のような関係が成り立つことが分かる。
+$$
+    \Gamma_{\mu\nu,\lambda}=
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+$$
+
+そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
+$$
+    \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
+    g^{k\lambda}
+    \Gamma_{\mu\nu,\lambda}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
-となり、さらに**第２種クリストッフェル記号**を用いて
+これは**第２種クリストッフェル記号**を用いて
 $$
     \Gamma^{k}_{\mu\nu}=
+    g^{k\lambda}
+    \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}g^{k\lambda}
     \left(
         \frac{\partial g_{\lambda\mu}}
@@ -218,7 +295,7 @@ $$
         {\partial x^\lambda}
     \right)
 $$
-というように置くと、**測地線方程式**というものが求められる。
+により、次の**測地線方程式**の形で記載される。
 $$
     \frac{\mathrm{d}^2x^k}
     {\mathrm{d}s^2}+
@@ -237,52 +314,3 @@ $$
     \mathrm{d}t
 $$
 が最小となる（$\delta s=0$）ときの関係式からも確認できる。
-
-一方で、**第1種クリストッフェル記号**もあるわけだが、こちらは
-$$
-    \Gamma_{\lambda,\mu\nu}=
-    \frac{1}{2}
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-$$
-というように $g^{k\lambda}$ をかける前のものとなっている。この意味については、単位ベクトルに直すとわかる。
-$$
-\begin{aligned}
-    \Gamma_{\lambda,\mu\nu}
-    &=
-    \frac{1}{2}
-    \left[
-        \frac{\partial}{\partial x^\nu}
-        (\bm{e}_\mu\cdot\bm{e}_\lambda)+
-        \frac{\partial}{\partial x^\mu}
-        (\bm{e}_\nu\cdot\bm{e}_\lambda)-
-        \frac{\partial}{\partial x^\lambda}
-        (\bm{e}_\mu\cdot\bm{e}_\nu)
-    \right]\\
-    &=
-    \frac{1}{2}
-    \left[
-    \frac{\partial\bm{e}_\mu}{\partial x^\nu}
-    \cdot\bm{e}_\lambda+
-    \bm{e}_\mu\cdot
-    \frac{\partial\bm{e}_\lambda}{\partial x^\nu}+
-    \frac{\partial\bm{e}_\nu}{\partial x^\mu}
-    \cdot\bm{e}_\lambda+
-    \bm{e}_\nu\cdot
-    \frac{\partial\bm{e}_\lambda}{\partial x^\mu}-
-    \frac{\partial\bm{e}_\mu}{\partial x^\lambda}
-    \cdot\bm{e}_\nu-
-    \bm{e}_\mu\cdot
-    \frac{\partial\bm{e}_\nu}{\partial x^\lambda}
-    \right]\\
-    &=
-    \bm{e}_\lambda\cdot
-    \frac{\partial\bm{e}_\mu}{\partial x^\nu}
-\end{aligned}
-$$

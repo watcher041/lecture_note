@@ -5,12 +5,13 @@
 $$
     \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=a、
     \frac{\mathrm{d}^2x'}{\mathrm{d}t'^2}=0、
-    w'=w
+    t'=t
 $$
 となるため、以下の関係が成り立つものと考えられる。
 $$
     x'=x-\frac{1}{2}at^2=x-\frac{a}{2c^2}w^2、
-    w'=w
+    w'=w、
+    (w=ct)
 $$
 これをLorentz変換のところでも見せた時空図で描写すると以下のようになる。
 <p align="center">

@@ -47,41 +47,56 @@ $$
 
 　斜塔の落下実験はあまり精度のよいものとはいえないであろうが、振り子の実験などはもっと精密な測定ということができよう。2種類の質量の比例関係についてはその後さらに正確な実験が行われた。特に19世紀末から20世紀末にかけてE$\"\mathrm{o}$tv$\"\mathrm{o}$sが優れた実験を行っている。それによれば $m_G/m_I$ を多くの物体について測定した結果、$10^{-9}$ という実験制度の範囲ですべて同じ値になった。さらにもっと最近のDicke、Braginskiらの測定によると$10^{-12}$くらいの精度で $m_G$ と $m_I$ の比例関係が成り立っていることが確認されている。2種類の質量が正確に比例しているのであれば、その比の値を1に選ぶのが便利である。もし比の値が1でなかったならば、どちらかの質量測定の目盛りを変更して比が1になるようにすればよい。要するにすべての物体について $m_G=m_I$ と考えればよいのである。
 
-　以上の議論から、前回登場した測地線方程式において等加速度 $g$ で運動した時の計量を求めることで重力の影響を含めた変換を求めることができることになる。そこで、前回の最初でも述べた一定加速度で移動する状況を応用して重力$g$で自由落下をしている場合を考えると
+　以上の議論から、前回登場した測地線方程式において等加速度 $g$ で運動した時の計量を求めることで重力の影響を含めた変換を求めることができることになる。そこで、前回の最初でも述べた一定加速度で移動する状況を応用して重力$g$で自由落下をしている場合を考えると、座標変換が
 $$
     x'^0=x^0、x'^1=x^1、x'^2=x^2、
-    x'^3=x^3-\frac{g}{2c^2}(x^0)^2
+    x'^3=x^3+\frac{g}{2c^2}(x^0)^2
 $$
-であるから、計量 $g_{\mu\nu}$ は以下の通りとなる。
+となるため、計量は以下の通りになる。
 $$
     g_{\mu\nu}=
-    \delta^{00}_{\mu\nu}+
-    \delta^{11}_{\mu\nu}+
-    \delta^{22}_{\mu\nu}+
-    \delta^{33}_{\mu\nu}-
-    \frac{g}{c^2}x^0
-    \delta^{30}_{\mu\nu}
+    \delta_{\mu\nu}^{00}+
+    \delta_{\mu\nu}^{11}+
+    \delta_{\mu\nu}^{22}+
+    \delta_{\mu\nu}^{33}+
+    \frac{g}{c^2}x^0\delta_{\mu\nu}^{30}
 $$
-そのため、クリストフェル記号は以下の通りになる。
+そのため、計量の逆行列に関して
+$$
+    g^{k\nu}g_{\mu\nu}=\delta_{\mu}^k
+    \rightarrow
+    \left(
+        1+
+        \frac{g}{c^2}x^0
+    \right)g^{k0}
+    \delta_{\mu}^{0}+
+    g^{k1}\delta_{\mu}^{1}+
+    g^{k2}\delta_{\mu}^{2}+
+    g^{k3}\delta_{\mu}^{3}=
+    \delta_{\mu}^k
+$$
+が成立しているため、計量の逆行列に関して以下の関係式になることが分かる。
+$$
+    g^{k\nu}=
+    \left(
+        1+\frac{g}{c^2}x^0
+    \right)^{-1}
+    \delta_{00}^{k\nu}+
+    \delta_{11}^{k\nu}+
+    \delta_{22}^{k\nu}+
+    \delta_{33}^{k\nu}
+$$
+そのため、クリストフェル記号において
 $$
     \Gamma^{k}_{\mu\nu}=
-    \frac{1}{2}g^{k\lambda}
+    \frac{g}{2c^2}g^{k\lambda}
     \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)=
-    -\frac{g}{2c^2}g^{k\lambda}
-    \left(
-        \delta^{300}_{\lambda\mu\nu}+
-        \delta^{300}_{\lambda\nu\mu}-
-        \delta^{300}_{\mu\nu\lambda}
+        \delta_{\lambda\mu\nu}^{300}+
+        \delta_{\lambda\nu\mu}^{300}-
+        \delta_{\mu\nu\lambda}^{300}
     \right)
 $$
-また、$s$ の微分 
+となるため測地線方程式は以下の通りになる。
 $$
     \frac{\mathrm{d}^2x^k}
     {\mathrm{d}s^2}+
@@ -89,14 +104,36 @@ $$
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
     \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
+    \frac{g}{2c^2}
+    \left[
+    2\delta^k_3
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}-
+    \delta^k_0
+    \left(
+        1+\frac{g}{c^2}x^0
+    \right)^{-1}
+    \frac{\mathrm{d}x^{3}}{\mathrm{d}s}
+    \right]
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
+$$
+各成分ごとに分けて書くと以下のようになる。
+$$
+    \frac{\mathrm{d}^2x^0}
     {\mathrm{d}s^2}-
     \frac{g}{2c^2}
     \left(
-        2g^{k3}
-        \frac{\mathrm{d}x^0}{\mathrm{d}s}
-        \frac{\mathrm{d}x^0}{\mathrm{d}s}-
-        g^{k0}
-        \frac{\mathrm{d}x^3}{\mathrm{d}s}
-        \frac{\mathrm{d}x^0}{\mathrm{d}s}
-    \right)=0
+        1+\frac{g}{c^2}x^0
+    \right)^{-1}
+    \frac{\mathrm{d}x^{3}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
+$$
+$$
+    \frac{\mathrm{d}^2x^1}{\mathrm{d}s^2}=
+    \frac{\mathrm{d}^2x^2}{\mathrm{d}s^2}=
+    \frac{\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}+
+    \frac{g}{c^2}
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
 $$
