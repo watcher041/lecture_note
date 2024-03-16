@@ -356,52 +356,7 @@ $$
     (\dot{x}^3)^2
     \right]
 $$
-が成立するわけだが、この等式は成り立たないことが分かる。一方で、Lorentz変換の場合だと
-$$
-    x'^0=\gamma(x^0-\beta x^1)、
-    x'^1=\gamma(x^1-\beta x^0)、
-    x'^2=x^2、
-    x'^3=x^3、
-    \left(
-        \gamma=\frac{1}{\sqrt{1-\beta^2}}
-    \right)
-$$
-$$
-    g_{\lambda\mu}=
-    \frac{\partial x'_{m}}
-    {\partial x^\lambda}
-    \frac{\partial x'^{m}}
-    {\partial x^\mu}=
-    \gamma^2(1+\beta^2)
-    (\delta_{\lambda\mu}^{00}+
-    \delta_{\lambda\mu}^{11})-
-    2\gamma^2\beta
-    (\delta_{\lambda\mu}^{01}+
-    \delta_{\lambda\mu}^{10})+
-    \delta_{\lambda\mu}^{22}+
-    \delta_{\lambda\mu}^{33}
-$$
-$$
-    \dot{s}=
-    \sqrt{
-    \gamma^2(1+\beta^2)
-    [(\dot{x}^0)^2+(\dot{x}^1)^2]-
-    4\gamma^2\beta\dot{x}^0\dot{x}^1+
-    (\dot{x}^2)^2+(\dot{x}^3)^2}
-$$
-となるため、速度の二乗の式が
-$$
-    (\dot{x}^k)^2=
-    (C^k)^2
-    \left[
-    \gamma^2(1+\beta^2)
-    [(\dot{x}^0)^2+(\dot{x}^1)^2]-
-    4\gamma^2\beta\dot{x}^0\dot{x}^1+
-    (\dot{x}^2)^2+(\dot{x}^3)^2
-    \right]
-$$
-
-
+が成立するわけだが、$C^k\neq 0$ としても等式が成り立たないことが分かる。そのため、$\dot{x}^k=0$ であり等速度運動するという結論になる。Lorentz変換においても、これと同様の結果が導かれる。
 
 　例として、地球表面上での運動がどのようになるか見るために極座標で書くと
 $$
