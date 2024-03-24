@@ -66,27 +66,26 @@ $$
     \left(
     \frac{\mathrm{d}s}{\mathrm{d}t}
     \right)=
-    \frac{1}{c}\sqrt{
+    \sqrt{
     \eta_{\mu\nu}
     \frac{\mathrm{d}x^\mu}{\mathrm{d}t}
     \frac{\mathrm{d}x^\nu}{\mathrm{d}t}}
     \rightarrow
-    \frac{1}{c}\sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
 $$
 と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
 $$
     \frac{\partial\mathcal{L}}
     {\partial \dot{x}^\lambda}=
-    -m_0c
+    -m_0c^2
     \frac{\partial}
     {\partial \dot{x}^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
-    -\frac{m_0c}{2\dot{s}}
+    -\frac{m_0c^2}{2\dot{s}}
     (g_{\lambda\mu}\dot{x}^{\nu}+
     g_{\lambda\mu}\dot{x}^{\mu})=
-    -m_0c
+    -m_0c^2
     \left(
     g_{\lambda\mu}
     \frac{\mathrm{d}x^{\mu}}
@@ -96,13 +95,13 @@ $$
 $$
     \frac{\partial\mathcal{L}}
     {\partial x^\lambda}=
-    -m_0c
+    -m_0c^2
     \frac{\partial}
     {\partial x^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
     \frac{\partial U}{\partial x^\lambda}=
-    -\frac{m_0c}{2}
+    -\frac{m_0c^2}{2}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
@@ -117,7 +116,7 @@ $$
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
 以上の結果を上記の運動方程式に代入すると以下のような形になる。
 $$
-    m_0c
+    m_0c^2
     \frac{\mathrm{d}s}{\mathrm{d}t}
     \left[
     \frac{\mathrm{d} g_{\lambda\mu}}
@@ -149,7 +148,7 @@ $$
 $$
 であるため、これを踏まえて整理すると次の通りになる。
 $$
-    m_0c
+    m_0c^2
     \frac{\mathrm{d}s}{\mathrm{d}t}
     \left[
     g_{\lambda\mu}
@@ -324,9 +323,9 @@ $$
     \frac{\mathrm{d}s}{\mathrm{d}t}=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
-と置くことができるので、先程測地線方程式に $m_0c$ がかかっていたことを踏まえると
+と置くことができるので、先程測地線方程式に $m_0c^2$ がかかっていたことを踏まえると
 $$
-    m_0c
+    m_0c^2
     \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=
     \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
     \left(
