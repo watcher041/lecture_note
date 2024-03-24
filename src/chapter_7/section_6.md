@@ -313,17 +313,17 @@ $$
     (\mathrm{d}y)^2-
     (\mathrm{d}z)^2
 $$
-となるが、ここで $s$ の時間微分に関して
+となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
 $$
     \frac{\mathrm{d}s}{\mathrm{d}t}=
     \sqrt{c^2-\bm{v}^2}
     \rightarrow
     \mathrm{d}\tau=
-    \frac{1}{c}
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \frac{1}{c}\mathrm{d}s=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
+    \mathrm{d}t
 $$
-と置くことができるので、先程測地線方程式に $m_0c^2$ がかかっていたことを踏まえると
+とおくと、先程測地線方程式に $m_0c^2$ がかかっていたことを踏まえて
 $$
     m_0c^2
     \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=
