@@ -302,61 +302,49 @@ $$
 $$
 が最小となる（$\delta s=0$）ときの関係式からも確認できる。
 
-　例として、先ほどでも出たGaliei変換、Lorentz変換でどうなるか見てみると、まずGalilei変換の場合
-$$
-    x'^0=x^0、
-    x'^1=x^1-\beta x^0、
-    x'^2=x^2、
-    x'^3=x^3、
-    \left(
-        \beta=\frac{V}{c}
-    \right)
-$$
-であるが、この計量を求めてみると
-$$
-    g_{\lambda\mu}=
-    \frac{\partial\bm{x}'}
-    {\partial x^\lambda}\cdot
-    \frac{\partial\bm{x}'}
-    {\partial x^\mu}=
-    (1+\beta^2)
-    \delta_{\lambda\mu}^{00}-
-    \beta
-    (\delta_{\lambda\mu}^{01}+
-    \delta_{\lambda\mu}^{10})+
-    \delta_{\lambda\mu}^{11}+
-    \delta_{\lambda\mu}^{22}+
-    \delta_{\lambda\mu}^{33}
-$$
-であり、偏微分する項目がなくクリストフェル記号の部分は0になる。そのため、測地線方程式において $s$ の二階微分しか残らないことになる。
+　簡単な例として、$g_{\mu\nu}=\eta_{\mu\nu}$（Lorentz変換）とするとクリストッフェル記号は0となり
 $$
     \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}=0
+    {\mathrm{d}s^2}=0、
+    (\mathrm{d}s)^2=
+    \eta_{\mu\nu}
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    (c\mathrm{d}t)^2-
+    (\mathrm{d}x)^2-
+    (\mathrm{d}y)^2-
+    (\mathrm{d}z)^2
+$$
+となるが、ここで $s$ の時間微分に関して
+$$
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \sqrt{c^2-\bm{v}^2}
     \rightarrow
-    x^k=a^ks+b^k、
-    （a^k,b^k：定数）
+    \mathrm{d}\tau=
+    \frac{1}{c}
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
-ここで、$s$ に関して $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}$ であったので
+と置くことができるので、先程測地線方程式に $m_0c$ がかかっていたことを踏まえると
 $$
-    \dot{s}=
-    \sqrt{
-    (1+\beta^2)(\dot{x}^0)^2-
-    2\beta\dot{x}^0\dot{x}^1+
-    (\dot{x}^1)^2+(\dot{x}^2)^2+
-    (\dot{x}^3)^2}
+    m_0c
+    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=
+    \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
+    \left(
+        p^k=
+        m_0
+        \frac{\mathrm{d}x^k}
+        {\mathrm{d}\tau}
+    \right)
 $$
-となるが、求めた式を時間微分して二乗すると
-$$
-    (\dot{x}^k)^2=(a^k\dot{s})^2=
-    (a^k)^2
-    \left[
-    (1+\beta^2)(\dot{x}^0)^2-
-    2\beta\dot{x}^0\dot{x}^1+
-    (\dot{x}^1)^2+(\dot{x}^2)^2+
-    (\dot{x}^3)^2
-    \right]
-$$
-が成立するわけだが、$a^k\neq 0$ としても等式が成り立たないことが分かる。そのため、$\dot{x}^k=0$ であり等速度運動するという結論になる。Lorentz変換においても、これと同様の結果が導かれる。
+というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量、右辺に力があった場合 $f^k$ となるが、これは4元力と呼ばれている。
+
+
+
+
+
+
+
+
 
 　例として、地球表面上での運動がどのようになるか見るために極座標で書くと
 $$
