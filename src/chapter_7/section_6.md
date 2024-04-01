@@ -5,13 +5,8 @@
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \bm{f}、
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
-    \bm{f}\cdot\bm{v}、
     \bm{p}=
     \frac{m_0\bm{v}}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    E_K=
-    \frac{m_0c^2}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 という形で書けたわけなので、これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
@@ -65,7 +60,8 @@ $$
     \frac{1}{c}
     \left(
     \frac{\mathrm{d}s}{\mathrm{d}t}
-    \right)=
+    \right)、
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
     \sqrt{
     \eta_{\mu\nu}
     \frac{\mathrm{d}x^\mu}{\mathrm{d}t}
@@ -77,15 +73,15 @@ $$
 $$
     \frac{\partial\mathcal{L}}
     {\partial \dot{x}^\lambda}=
-    -m_0c^2
+    -m_0c
     \frac{\partial}
     {\partial \dot{x}^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
-    -\frac{m_0c^2}{2\dot{s}}
+    -\frac{m_0c}{2\dot{s}}
     (g_{\lambda\mu}\dot{x}^{\nu}+
     g_{\lambda\mu}\dot{x}^{\mu})=
-    -m_0c^2
+    -m_0c
     \left(
     g_{\lambda\mu}
     \frac{\mathrm{d}x^{\mu}}
@@ -95,13 +91,13 @@ $$
 $$
     \frac{\partial\mathcal{L}}
     {\partial x^\lambda}=
-    -m_0c^2
+    -m_0c
     \frac{\partial}
     {\partial x^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
     \frac{\partial U}{\partial x^\lambda}=
-    -\frac{m_0c^2}{2}
+    -\frac{m_0c\dot{s}}{2}
     \left(
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
@@ -109,15 +105,13 @@ $$
         {\mathrm{d}s}
         \frac{\mathrm{d}x^{\nu}}
         {\mathrm{d}s}
-    \right)
-    \frac{\mathrm{d}s}{\mathrm{d}t}-
+    \right)-
     \frac{\partial U}{\partial x^\lambda}
 $$
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
 以上の結果を上記の運動方程式に代入すると以下のような形になる。
 $$
-    m_0c^2
-    \frac{\mathrm{d}s}{\mathrm{d}t}
+    m_0c\dot{s}
     \left[
     \frac{\mathrm{d} g_{\lambda\mu}}
     {\mathrm{d} s}
@@ -148,8 +142,7 @@ $$
 $$
 であるため、これを踏まえて整理すると次の通りになる。
 $$
-    m_0c^2
-    \frac{\mathrm{d}s}{\mathrm{d}t}
+    m_0c\dot{s}
     \left[
     g_{\lambda\mu}
     \frac{\mathrm{d}^2x^{\mu}}
@@ -166,7 +159,7 @@ $$
     \right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
-ここでポテンシャルが $U$ がなく $\dot{s}\neq 0$ であることを踏まえると、
+仮に、ここでポテンシャルが $U$ がなく $\dot{s}\neq 0$ であることを踏まえると、
 $$
     g_{\lambda\mu}
     \frac{\mathrm{d}^2x^{\mu}}
@@ -305,28 +298,26 @@ $$
 $$
     \frac{\mathrm{d}^2x^k}
     {\mathrm{d}s^2}=0、
-    (\mathrm{d}s)^2=
-    \eta_{\mu\nu}
-    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-    (c\mathrm{d}t)^2-
-    (\mathrm{d}x)^2-
-    (\mathrm{d}y)^2-
-    (\mathrm{d}z)^2
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \sqrt{
+        \eta_{\mu\nu}
+        \dot{x}^{\mu} \dot{x}^{\nu}
+    }=
+    \sqrt{c^2-\bm{v}^2}
 $$
 となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
 $$
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
-    \sqrt{c^2-\bm{v}^2}
-    \rightarrow
     \mathrm{d}\tau=
-    \frac{1}{c}\mathrm{d}s=
+    \frac{\dot{s}}{c}\mathrm{d}t=
+    \frac{\mathrm{d}s}{c}=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
-とおくと、先程測地線方程式に $m_0c^2$ がかかっていたことを踏まえて
+とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
 $$
-    m_0c^2
-    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=
+    m_0c\dot{s}
+    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=0
+    \rightarrow
     \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
     \left(
         p^k=
@@ -344,7 +335,7 @@ $$
 
 
 
-
+ 
 　例として、地球表面上での運動がどのようになるか見るために極座標で書くと
 $$
     x'^0=x^0、
