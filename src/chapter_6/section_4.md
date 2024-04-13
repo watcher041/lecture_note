@@ -213,12 +213,18 @@ $$
     \braket{S}=
     Nk_{\mathrm{B}}
     \left[
-        \frac{5}{2}+
+        \frac{3}{2}+
         \ln
-        \frac{(2\pi m)^{3/2}}
-        {h^3\beta^{5/2}P}
+        \frac{\braket{V}}{h^3}
+        \left(
+            \frac{2\pi m}{\beta}
+        \right)^{3/2}
     \right]+
-    k_{\mathrm{B}}\ln N!
+    k_{\mathrm{B}}
+    \left(
+        N-N\ln N+\ln N!
+    \right)
+    
 $$
 さらに、これからヘルムホルツの自由エネルギーも求めてみると
 $$
@@ -291,11 +297,10 @@ $$
     \frac{\braket{V}}{h^3}
     \left(
             \frac{2\pi m}{\beta}
-    \right)^{3/2}-
+    \right)^{3/2}+
     \frac{1}{\beta}
     \left(
-        N-
-        N\ln N
+        N\ln N-N
     \right)
 $$
 $$
@@ -305,16 +310,15 @@ $$
         \frac{3}{2}+
         \ln
         \left[
-            \frac{V}{h^{3}}
+            \frac{\braket{V}}{h^{3}}
             \left(
             \frac{2m\pi}{\beta}
             \right)^{3/2}
         \right]
-    \right\}+
+    \right\}-
     k_{\mathrm{B}}
     \left(
-        N-
-        N\ln N
+        N\ln N-N
     \right)
 $$
 $$
