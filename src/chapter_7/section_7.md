@@ -55,46 +55,66 @@ $$
 となるため、計量は以下の通りになる。
 $$
     g_{\mu\nu}=
+    \left[
+        1+
+        \left(
+            \frac{g}{c^2}x^0
+        \right)^2
+    \right]
     \delta_{\mu\nu}^{00}+
     \delta_{\mu\nu}^{11}+
     \delta_{\mu\nu}^{22}+
     \delta_{\mu\nu}^{33}+
-    \frac{g}{c^2}x^0\delta_{\mu\nu}^{30}
+    \frac{g}{c^2}x^0
+    (\delta_{\mu\nu}^{30}+
+    \delta_{\mu\nu}^{03})
 $$
-そのため、計量の逆行列に関して
+そのため、計量の逆行列に関して $ g^{k\nu}g_{\mu\nu}=\delta_{\mu}^k$ という式が成り立つことから
 $$
-    g^{k\nu}g_{\mu\nu}=\delta_{\mu}^k
-    \rightarrow
-    \left(
+    \left[
         1+
-        \frac{g}{c^2}x^0
-    \right)g^{k0}
+        \left(
+            \frac{g}{c^2}x^0
+        \right)^2
+    \right]g^{k0}
     \delta_{\mu}^{0}+
     g^{k1}\delta_{\mu}^{1}+
     g^{k2}\delta_{\mu}^{2}+
-    g^{k3}\delta_{\mu}^{3}=
+    g^{k3}\delta_{\mu}^{3}+
+    \frac{g}{c^2}x^0
+    (g^{k0}\delta_{\mu}^{3}+
+    g^{k3}\delta_{\mu}^{0})=
     \delta_{\mu}^k
 $$
-が成立しているため、計量の逆行列に関して以下の関係式になることが分かる。
+が成立しているため、整理すると以下の関係式が得られる。
 $$
     g^{k\nu}=
-    \left(
-        1+\frac{g}{c^2}x^0
-    \right)^{-1}
     \delta_{00}^{k\nu}+
     \delta_{11}^{k\nu}+
     \delta_{22}^{k\nu}+
-    \delta_{33}^{k\nu}
+    \left[
+        1+
+        \left(
+            \frac{g}{c^2}x^0
+        \right)^2
+    \right]
+    \delta_{33}^{k\nu}-
+    \frac{g}{c^2}x^0
+    (\delta_{03}^{k\nu}+
+    \delta_{30}^{k\nu})
 $$
 そのため、クリストフェル記号において
 $$
     \Gamma^{k}_{\mu\nu}=
-    \frac{g}{2c^2}g^{k\lambda}
+    \left[
+    x^0g^{k0}
     \left(
-        \delta_{\lambda\mu\nu}^{300}+
-        \delta_{\lambda\nu\mu}^{300}-
-        \delta_{\mu\nu\lambda}^{300}
-    \right)
+        \frac{g}{c^2}
+    \right)^2+
+    \frac{g}{c^2}g^{k3}
+    \right]\delta_{\mu\nu}^{00}=
+    \frac{g}{c^2}
+    \delta_3^k\delta_{\mu\nu}^{00}
 $$
 となるため測地線方程式は以下の通りになる。
 $$
@@ -105,35 +125,24 @@ $$
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
     \frac{\mathrm{d}^2x^k}
     {\mathrm{d}s^2}+
-    \frac{g}{2c^2}
-    \left[
-    2\delta^k_3
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}-
-    \delta^k_0
-    \left(
-        1+\frac{g}{c^2}x^0
-    \right)^{-1}
-    \frac{\mathrm{d}x^{3}}{\mathrm{d}s}
-    \right]
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
+    \frac{g}{c^2}\delta_3^k
+    \frac{\mathrm{d}x^0}{\mathrm{d}s}
+    \frac{\mathrm{d}x^0}{\mathrm{d}s}=0
 $$
 各成分ごとに分けて書くと以下のようになる。
 $$
-    \frac{\mathrm{d}^2x^0}
-    {\mathrm{d}s^2}-
-    \frac{g}{2c^2}
-    \left(
-        1+\frac{g}{c^2}x^0
-    \right)^{-1}
-    \frac{\mathrm{d}x^{3}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
-$$
-$$
+    \frac{\mathrm{d}^2x^0}{\mathrm{d}s^2}=
     \frac{\mathrm{d}^2x^1}{\mathrm{d}s^2}=
-    \frac{\mathrm{d}^2x^2}{\mathrm{d}s^2}=
+    \frac{\mathrm{d}^2x^2}{\mathrm{d}s^2}=0、
     \frac{\mathrm{d}^2x^3}
     {\mathrm{d}s^2}+
     \frac{g}{c^2}
     \frac{\mathrm{d}x^{0}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
 $$
+ここで、 $x^0$ の二階微分が0であることから
+$$
+    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=A、
+    （A:定数）
+$$
+とすると、
