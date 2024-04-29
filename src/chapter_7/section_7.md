@@ -47,43 +47,169 @@ $$
 
 　斜塔の落下実験はあまり精度のよいものとはいえないであろうが、振り子の実験などはもっと精密な測定ということができよう。2種類の質量の比例関係についてはその後さらに正確な実験が行われた。特に19世紀末から20世紀末にかけてE$\"\mathrm{o}$tv$\"\mathrm{o}$sが優れた実験を行っている。それによれば $m_G/m_I$ を多くの物体について測定した結果、$10^{-9}$ という実験制度の範囲ですべて同じ値になった。さらにもっと最近のDicke、Braginskiらの測定によると$10^{-12}$くらいの精度で $m_G$ と $m_I$ の比例関係が成り立っていることが確認されている。2種類の質量が正確に比例しているのであれば、その比の値を1に選ぶのが便利である。もし比の値が1でなかったならば、どちらかの質量測定の目盛りを変更して比が1になるようにすればよい。要するにすべての物体について $m_G=m_I$ と考えればよいのである。
 
-　以上の議論から、前回登場した測地線方程式において等加速度 $g$ で運動した時の計量を求めることで重力の影響を含めた変換を求めることができることになる。同時に、特殊相対性理論のことも考慮する必要があるため、改めて特殊相対性理論での加速度の取り扱いがどうなるかを見てみることにする。まず、特殊相対性理論において等加速度運動をする場合は、相対論的力学において出てきた式
+　以上の議論から、前回登場した測地線方程式において等加速度 $g$ で運動した時の計量を求めることで重力の影響を含めた変換を求めることができることになる。同時に、特殊相対性理論のことも考慮する必要があるため、改めて特殊相対性理論での加速度の取り扱いがどうなるかを見てみることにする。まず、特殊相対性論での運動方程式は、
 $$
-    v_z=-gt、
-    z=z_0-\frac{1}{2}gt^2
-$$
-があるが、これは速度が光速度に近いものだと
-$$
-    v_z=
-    -\frac{gt}
-    {\sqrt{1+\left(\frac{gt}{c}\right)^2}}、
-    z=z_0+
-    \frac{c^2}{g}
+    \frac
+    {\mathrm{d}p^k}
+    {\mathrm{d}\tau}=
+    f^k
+    \rightarrow
+    \frac
+    {\mathrm{d}p^k}
+    {\mathrm{d}t}=
+    F^k、
     \left(
-    1-\sqrt{1+\left(\frac{gt}{c}\right)^2}
+    p^k=
+    m_0
+    \frac{\mathrm{d}x^k}
+    {\mathrm{d}\tau}
     \right)
 $$
-というようになっていた。そのため、同じように変換においても、以前まで
+となるが、ここで
 $$
-    z'=z-\frac{1}{2}gt^2、
-    \frac{\mathrm{d}z'}{\mathrm{d}t}=
-    \frac{\mathrm{d}z}{\mathrm{d}t}-gt
+    \mathrm{d}\tau=
+    \frac{\mathrm{d}s}{c}
 $$
-としていたものを以下のようにしてみる。
+であることを踏まえると、以下のように書ける。
 $$
-    z'=z+
-    \frac{c^2}{g}
+    \dot{s}
+    \frac
+    {\mathrm{d}p^k}
+    {\mathrm{d}s}=
+    F^k、
     \left(
-    1-\sqrt{1+\left(\frac{gt}{c}\right)^2}
-    \right)、
-    \frac{\mathrm{d}z'}{\mathrm{d}t}=
-    \frac{\mathrm{d}z}{\mathrm{d}t}-
-    \frac{gt}
-    {\sqrt{1+\left(\frac{gt}{c}\right)^2}}
+    p^k=
+    m_0c
+    \frac{\mathrm{d}x^k}
+    {\mathrm{d}s}
+    \right)
+$$
+ここで、z方向（3成分目）で重力が働いているとすると
+$$
+    \dot{s}
+    \frac
+    {\mathrm{d}p^3}
+    {\mathrm{d}s}=
+    -m_0g、
+    \left(
+    p^3=
+    m_0c
+    \frac{\mathrm{d}x^3}
+    {\mathrm{d}s}
+    \right)
+$$
+となるため、以下の式が得られる。
+$$
+    \dot{s}
+    \frac
+    {\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}=
+    -\frac{g}{c}
+    \rightarrow
+    \frac
+    {\mathrm{d}x^3}
+    {\mathrm{d}s}=
+    -\frac{g}{c}t+
+    A、(A:定数)
+$$
+また、第0成分ではどのようになっていたかというと
+$$
+    \dot{s}
+    \frac
+    {\mathrm{d}p^0}
+    {\mathrm{d}s}=
+    F^0=
+    \frac{1}{c}
+    (\bm{F}\cdot\bm{v})、
+    p^0=
+    m_0c
+    \frac{\mathrm{d}x^0}
+    {\mathrm{d}s}
+$$
+であったので、以下のとおりになる。
+$$
+    \frac
+    {\mathrm{d}^2x^0}
+    {\mathrm{d}s^2}=
+    -\frac{g}{c^2}
+    \left(
+    \frac
+    {\mathrm{d}x^3}
+    {\mathrm{d}s}
+    \right)
+$$
+ここで、先ほどの式を代入すると
+$$
+    \frac
+    {\mathrm{d}^2x^0}
+    {\mathrm{d}s^2}=
+    \frac{g^2}{c^3}
+    t-\frac{g}{c^2}A
 $$
 
 
 
+
+一方で、測地線方程式において3成分目は
+$$
+    \frac{\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}+
+    \Gamma^{3}_{\mu\nu}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0   
+$$
+となるわけだが、これに係数をかけて
+$$
+    m_0c\dot{s}\frac{\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}+
+    m_0c\dot{s}
+    \Gamma^{3}_{\mu\nu}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0  
+$$
+とすることで、以下の式が成り立つことがわかる。
+$$
+    \dot{s}
+    \Gamma^{3}_{\mu\nu}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
+    \frac{g}{c}
+$$
+続けて、これを展開することで
+$$
+    \dot{s}
+    \left[
+    \Gamma^3_{00}
+    \left(
+    \frac{\mathrm{d}x^0}
+    {\mathrm{d}s}
+    \right)^2+
+    (\Gamma^3_{03}+
+    \Gamma^3_{30})
+    \left(
+    \frac{\mathrm{d}x^0}
+    {\mathrm{d}s}
+    \right)
+    \left(
+    \frac{\mathrm{d}x^3}
+    {\mathrm{d}s}
+    \right)+
+    \Gamma^3_{33}
+    \left(
+    \frac{\mathrm{d}x^3}
+    {\mathrm{d}s}
+    \right)^2
+    \right]=
+    \frac{g}{c}
+$$
+となる。一方で、測地線方程式の第0番式において
+$$
+    \frac{\mathrm{d}^2x^0}
+    {\mathrm{d}s^2}+
+    \Gamma^{0}_{\mu\nu}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0   
+$$
 
 
 
