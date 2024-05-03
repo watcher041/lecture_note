@@ -107,10 +107,14 @@ $$
     -\frac{g}{c}
     \rightarrow
     \frac
-    {\mathrm{d}x^3}
-    {\mathrm{d}s}=
-    -\frac{g}{c}t+
-    A、(A:定数)
+    {\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}=
+    -\frac{g}{c^2}
+    \left(
+        \frac
+        {\mathrm{d}x^0}
+        {\mathrm{d}s}
+    \right)
 $$
 また、第0成分ではどのようになっていたかというと
 $$
@@ -138,78 +142,23 @@ $$
     {\mathrm{d}s}
     \right)
 $$
-ここで、先ほどの式を代入すると
-$$
-    \frac
-    {\mathrm{d}^2x^0}
-    {\mathrm{d}s^2}=
-    \frac{g^2}{c^3}
-    t-\frac{g}{c^2}A
-$$
 
-
-
-
-一方で、測地線方程式において3成分目は
-$$
-    \frac{\mathrm{d}^2x^3}
-    {\mathrm{d}s^2}+
-    \Gamma^{3}_{\mu\nu}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0   
-$$
-となるわけだが、これに係数をかけて
-$$
-    m_0c\dot{s}\frac{\mathrm{d}^2x^3}
-    {\mathrm{d}s^2}+
-    m_0c\dot{s}
-    \Gamma^{3}_{\mu\nu}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0  
-$$
-とすることで、以下の式が成り立つことがわかる。
-$$
-    \dot{s}
-    \Gamma^{3}_{\mu\nu}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
-    \frac{g}{c}
-$$
-続けて、これを展開することで
-$$
-    \dot{s}
-    \left[
-    \Gamma^3_{00}
-    \left(
-    \frac{\mathrm{d}x^0}
-    {\mathrm{d}s}
-    \right)^2+
-    (\Gamma^3_{03}+
-    \Gamma^3_{30})
-    \left(
-    \frac{\mathrm{d}x^0}
-    {\mathrm{d}s}
-    \right)
-    \left(
-    \frac{\mathrm{d}x^3}
-    {\mathrm{d}s}
-    \right)+
-    \Gamma^3_{33}
-    \left(
-    \frac{\mathrm{d}x^3}
-    {\mathrm{d}s}
-    \right)^2
-    \right]=
-    \frac{g}{c}
-$$
-となる。一方で、測地線方程式の第0番式において
+一方で、測地線方程式において第0,3成分は
 $$
     \frac{\mathrm{d}^2x^0}
     {\mathrm{d}s^2}+
     \Gamma^{0}_{\mu\nu}
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0   
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0、
+    \frac{\mathrm{d}^2x^3}
+    {\mathrm{d}s^2}+
+    \Gamma^{3}_{\mu\nu}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
+
+
+
 
 
 

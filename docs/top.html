@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ja" class="light" dir="ltr">
+<html lang="ja" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#ffffff" />
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="option.css">
 
     </head>
-    <body class="sidebar-visible no-js">
+    <body>
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,38 +62,31 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
+            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add('js');
         </script>
-
-        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
+            var html = document.querySelector('html');
             var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="top.html" class="active">物理学入門</a></li><li class="chapter-item expanded "><a href="chapter_0/section_0.html"><strong aria-hidden="true">1.</strong> 物理学における研究法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_0/section_1.html"><strong aria-hidden="true">1.1.</strong> 単位と単位系</a></li><li class="chapter-item expanded "><a href="chapter_0/section_2.html"><strong aria-hidden="true">1.2.</strong> 長さの単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_3.html"><strong aria-hidden="true">1.3.</strong> 時間の単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_4.html"><strong aria-hidden="true">1.4.</strong> 重力質量とその単位</a></li><li class="chapter-item expanded "><a href="chapter_0/section_5.html"><strong aria-hidden="true">1.5.</strong> 単位の変換と次元</a></li><li class="chapter-item expanded "><a href="chapter_0/section_6.html"><strong aria-hidden="true">1.6.</strong> 量の間の関係式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_1/section_0.html"><strong aria-hidden="true">2.</strong> 古典力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_1/section_1.html"><strong aria-hidden="true">2.1.</strong> 運動の表現方法</a></li><li class="chapter-item expanded "><a href="chapter_1/section_2.html"><strong aria-hidden="true">2.2.</strong> 運動の法則</a></li><li class="chapter-item expanded "><a href="chapter_1/section_3.html"><strong aria-hidden="true">2.3.</strong> 力を用いた運動の記述</a></li><li class="chapter-item expanded "><a href="chapter_1/section_4.html"><strong aria-hidden="true">2.4.</strong> 万有引力の法則</a></li><li class="chapter-item expanded "><a href="chapter_1/section_5.html"><strong aria-hidden="true">2.5.</strong> 質点系の力学</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_2/section_0.html"><strong aria-hidden="true">3.</strong> 熱力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_2/section_1.html"><strong aria-hidden="true">3.1.</strong> 温度</a></li><li class="chapter-item expanded "><a href="chapter_2/section.html"><strong aria-hidden="true">3.2.</strong> エントロピーについて</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_3/section_0.html"><strong aria-hidden="true">4.</strong> 電磁気学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_3/section_1.html"><strong aria-hidden="true">4.1.</strong> 静電気</a></li><li class="chapter-item expanded "><a href="chapter_3/section_2.html"><strong aria-hidden="true">4.2.</strong> 遠隔作用と近接作用</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_4/section_0.html"><strong aria-hidden="true">5.</strong> 光学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_4/section_1.html"><strong aria-hidden="true">5.1.</strong> 幾何光学</a></li><li class="chapter-item expanded "><a href="chapter_4/section_2.html"><strong aria-hidden="true">5.2.</strong> Fermatの原理</a></li><li class="chapter-item expanded "><a href="chapter_4/section_3.html"><strong aria-hidden="true">5.3.</strong> レンズの仕組み</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_5/section_0.html"><strong aria-hidden="true">6.</strong> 解析力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_5/section_1.html"><strong aria-hidden="true">6.1.</strong> Lagrange形式</a></li><li class="chapter-item expanded "><a href="chapter_5/section_2.html"><strong aria-hidden="true">6.2.</strong> Hamilton形式</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_6/section_0.html"><strong aria-hidden="true">7.</strong> 統計力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_6/section_1.html"><strong aria-hidden="true">7.1.</strong> 気体分子運動論</a></li><li class="chapter-item expanded "><a href="chapter_6/section_2.html"><strong aria-hidden="true">7.2.</strong> 統計集団（小正準集団）</a></li><li class="chapter-item expanded "><a href="chapter_6/section_3.html"><strong aria-hidden="true">7.3.</strong> 正準集団（カノニカルアンサンブル）</a></li><li class="chapter-item expanded "><a href="chapter_6/section_4.html"><strong aria-hidden="true">7.4.</strong> 等温定圧集団</a></li><li class="chapter-item expanded "><a href="chapter_6/section_5.html"><strong aria-hidden="true">7.5.</strong> 化学ポテンシャル</a></li><li class="chapter-item expanded "><a href="chapter_6/section_6.html"><strong aria-hidden="true">7.6.</strong> 大正準集団</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_7/section_0.html"><strong aria-hidden="true">8.</strong> 相対性理論</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_7/section_1.html"><strong aria-hidden="true">8.1.</strong> 同時の定義</a></li><li class="chapter-item expanded "><a href="chapter_7/section_2.html"><strong aria-hidden="true">8.2.</strong> Lorentz変換</a></li><li class="chapter-item expanded "><a href="chapter_7/section_3.html"><strong aria-hidden="true">8.3.</strong> 相対論的力学</a></li><li class="chapter-item expanded "><a href="chapter_7/section_4.html"><strong aria-hidden="true">8.4.</strong> 相対論的電磁気学</a></li><li class="chapter-item expanded "><a href="chapter_7/section_5.html"><strong aria-hidden="true">8.5.</strong> 特殊相対論から一般相対論へ</a></li><li class="chapter-item expanded "><a href="chapter_7/section_6.html"><strong aria-hidden="true">8.6.</strong> 測地線方程式</a></li><li class="chapter-item expanded "><a href="chapter_7/section_7.html"><strong aria-hidden="true">8.7.</strong> 重力と慣性（等価原理）</a></li></ol></li><li class="chapter-item expanded "><a href="chapter_8/section_0.html"><strong aria-hidden="true">9.</strong> 量子力学</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="chapter_8/section_1.html"><strong aria-hidden="true">9.1.</strong> 空洞輻射の理論</a></li><li class="chapter-item expanded "><a href="chapter_8/section_2.html"><strong aria-hidden="true">9.2.</strong> 光の粒子仮説</a></li><li class="chapter-item expanded "><a href="chapter_8/section_3.html"><strong aria-hidden="true">9.3.</strong> 電子の波動説</a></li><li class="chapter-item expanded "><a href="chapter_8/section_4.html"><strong aria-hidden="true">9.4.</strong> 波動力学</a></li><li class="chapter-item expanded "><a href="chapter_8/section_5.html"><strong aria-hidden="true">9.5.</strong> 相対論的量子力学</a></li></ol></li><li class="chapter-item expanded "><a href="references.html"><strong aria-hidden="true">10.</strong> 参考文献</a></li><li class="chapter-item expanded "><a href="memo/math.html"><strong aria-hidden="true">11.</strong> メモ</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="memo/math.html"><strong aria-hidden="true">11.1.</strong> 物理数学</a></li></ol></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
-                <div class="sidebar-resize-indicator"></div>
-            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -124,9 +117,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </label>
+                        </button>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -174,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
 <h1 id="物理学入門"><a class="header" href="#物理学入門">物理学入門</a></h1>
 <p>　現在我が国の大学教育は一般教育と専門教育とに分かれているが、学問とはどのようなものであるかを学び取らせるということを第一の目的としている一般教育は専門教育の領域に一歩足を踏み入れなければその実行は不可能である。このことを考え、なかば専門教育の意味も含め、しかも対象を理工科方面に進む学生に絞って書いた一般物理学の教科書がすなわち本書である。</p>
 <p>　本書はその性格からいって、物理学科もしくはこれに近い学科に進もうとする学生諸君にとっては物理学の入門編であり、その他の諸君にとっては完結編となるべきものであるから、執筆者はいずれも基礎的部分に重点を置くとともに、現代の情勢からみて、科学技術者としての必要な知識はできるたけ盛り込むように努めた。内容は多方面にわたり、多少専門領域にまで渡った部分もあるので、この全部を限られた授業時間内に教室で完結することは不可能である。教室で取り上げるのはこの中の基礎的部分だけというつもりである。全体を通じ、学生諸君の自習を期待したので、説明を平易にすると共に数式の問題などもなるべく途中を省かないように努めた。また、随所に例題を入れ、章末に演習問題を設け、さらにその解をも示しておいた。このように本書は教科書という従来の通念から離れた自習書である。自習の間に必ず湧いてくるであろう疑問はこれを教室において解決するという方法で学習の実を挙げていただきたい。実際このような方法をとらない限り、現在のように進歩した物理学を一般教育課程というわずかの時間内に修めることは不可能である。</p>
@@ -185,7 +178,7 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
 
-                            <a rel="next prefetch" href="chapter_0/section_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="chapter_0/section_0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -196,7 +189,7 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
 
-                    <a rel="next prefetch" href="chapter_0/section_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="chapter_0/section_0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
