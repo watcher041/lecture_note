@@ -19,7 +19,8 @@ $$
 $$
 すると、$ct$ が $x$ と同じような座標の一部としてみなせるので $w$ として
 $$
-    x'=\gamma(x-\beta w)、w'=\gamma\left(w-\beta x\right)
+    x'=\gamma(x-\beta w)、
+    w'=\gamma\left(w-\beta x\right)
 $$
 とおき、試しに $x$ と $w$ との関係を座標で描いてみると以下の図の通りになる。
 
@@ -27,7 +28,75 @@ $$
     <img width="60%" src="images/minkofsky.png">
 </p>
 
-この図を見ても分かる通り、$\gamma$ が付いていない状態だと観測者K'の状況を観測者Kは自分自身の座標で見ている状態になっており、正しく同じ立場で見るためにはこの定数が付く必要があることが分かる。また、前回の最後のところででてきた
+この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w'$ 軸とのなす角をそれぞれ$\theta$、$\phi$とすると
+$$
+    w=w'\cos\theta+x'\cos\phi、
+    x=w'\sin\theta+x'\sin\phi
+$$
+となるため、Lorentz変換を逆変換したもの
+$$
+    x=\gamma(x'+\beta w')、
+    w=\gamma\left(w'+\beta x'\right)
+$$
+と比較すると以下の関係が成り立つことが予想される。
+$$
+    \sin\theta=\gamma、
+    \cos\theta=\gamma\beta、
+    \sin\phi=\gamma\beta、
+    \cos\phi=\gamma
+$$
+しかし、これでは三角関数の公式を満たさない。
+$$
+    \sin^2\theta+\cos^2\theta=
+    \frac{1+\beta^2}{1-\beta^2}\neq 1、
+    \sin^2\phi+\cos^2\phi=
+    \frac{1+\beta^2}{1-\beta^2}\neq 1
+$$
+
+そこで分子と分母の符号が反対であることを踏まると、双曲線関数であれば等式が成り立つことが分かる。実際、先ほどの三角関数と同じように
+$$
+    \sinh\theta=\gamma、
+    \cosh\theta=\gamma\beta、
+    \sinh\phi=\gamma\beta、
+    \cosh\phi=\gamma
+$$
+としてみると、以下の関係式が成り立つことが分かる。
+$$
+    \cosh^2\theta-\sinh^2\theta=-1、
+    \cosh^2\phi-\sinh^2\phi=1
+$$
+
+
+
+
+
+
+
+
+そこで、$w$ 軸に関しては虚数がついているものとして改めてLorentz変換を
+$$
+    x'=
+    \gamma
+    \left[x+\mathrm{i}\beta (\mathrm{i}w)\right]、
+    (\mathrm{i}w')=
+    \gamma
+    \left[(\mathrm{i}w)-\mathrm{i}\beta x\right]
+$$
+とすると、先ほどの座標は複素数平面になる。そのため、ベクトル表記も二つを足し合わせたもの
+$$
+    x'+\mathrm{i}w'=
+    \gamma
+    \left[
+        (1-\mathrm{i}\beta)x+
+        (1+\mathrm{i}\beta)\mathrm{i}w
+    \right]
+$$
+という形になる。
+
+
+
+
+また、前回の最後のところででてきた
 $$
     t_{\rm C}'=\sqrt{1-\frac{V^2}{c^2}}t_{\rm C}
 $$

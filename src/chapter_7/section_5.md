@@ -19,7 +19,7 @@ $$
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。
 
-　この曲がった座標に変換する方法というのは、Riemann幾何学があることが知られている。だが、この分野はかなり難解であるものであるため、まずはその橋渡しとしてGalielei変換、Lorentz変換を数学的にどのように取り扱うことができるか見てみることにする。まず、Galiei変換は
+　この曲がった座標に変換する方法というのは、Riemann幾何学があることが知られている。だが、この分野はかなり難解であるため、その橋渡しとして以前までに登場した変換（Galielei変換、Lorentz変換）を数学的にどのように取り扱うことができるかを見て行くことにする。まず、Galiei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
@@ -441,7 +441,6 @@ $$
 $$
 であったが、変位の形に整理して二乗にすると不変な形をしていることが分かる（Galilei変換、等加速度系の変換でも別の形で不変な形になる）。
 $$
-    ds^2=
     \mathrm{d}w'^2-
     \mathrm{d}x'^2-
     \mathrm{d}y'^2-
@@ -451,16 +450,113 @@ $$
     \mathrm{d}y^2-
     \mathrm{d}z^2
 $$
-この時の計量の形は以下のようになっており、**Minkofsky計量**と呼ばれている。
+そのため、このときの計量は以下の形をしているものと考えられる。
 $$
     g_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & -1
+    \end{pmatrix}
+$$
+しかし、このままだと各座標ごとの基底ベクトルが
+$$
+    \bm{e}_0=
+    \begin{pmatrix}
+        \gamma \\ -\gamma\beta \\ 0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_1=
+    \begin{pmatrix}
+        -\gamma\beta \\ \gamma \\ 0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_2=
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}、
+    \bm{e}_3=
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+$$
+であることから、計量の値は
+$$
+    g_{00}=\bm{e}_0\cdot\bm{e}_0=
+    \frac{1+\beta^2}{1-\beta^2}\neq 1、
+    g_{11}\cdots
+$$
+というように別の値がでてきてしまう。そこで、
+Lorentz変換の形を虚時間を用いて
+$$
+    x'^0=
+    \gamma(x^0-\mathrm{i}\beta x^1)、
+    x'^1=
+    \gamma(x^1+\mathrm{i}\beta x^0)、
+    x'^2=x^2、x'^3=x^3、
+    (x^0=\mathrm{i}w)
+$$
+というようにすると、基底ベクトルが
+$$
+    \bm{e}_0=
+    \begin{pmatrix}
+        \gamma \\ 
+        \mathrm{i}\gamma\beta \\ 
+        0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_1=
+    \begin{pmatrix}
+        -\mathrm{i}\gamma\beta \\ 
+        \gamma \\ 
+        0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_2=
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}、
+    \bm{e}_3=
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+$$
+となり、このときの計量は以下の形になる。
+$$
+    g_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
+$$
+この場合だと、以下の形で不変な形になることが分かる。
+$$
+    -\mathrm{d}w'^2+
+    \mathrm{d}x'^2+
+    \mathrm{d}y'^2+
+    \mathrm{d}z'^2=
+    -\mathrm{d}w^2+
+    \mathrm{d}x^2+
+    \mathrm{d}y^2+
+    \mathrm{d}z^2
+$$
+
+以上のことから、座標に含まれた虚数によってあたかも計量が別の形になっているように見えていたことが考えられ、この見かけの計量はよく**Minkofsky計量**と呼ばれている。
+$$
     \eta_{\mu\nu}=
     \begin{pmatrix}
-    1 & 0 & 0 & 0 \\
-    0 & -1 & 0 & 0 \\
-    0 & 0 & -1 & 0 \\
-    0 & 0 & 0 & -1
-\end{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & -1
+    \end{pmatrix}
+    または\ 
+    \eta_{\mu\nu}=
+    \begin{pmatrix}
+        -1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
 $$
 
 
