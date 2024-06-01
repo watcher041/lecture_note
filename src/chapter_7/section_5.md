@@ -17,9 +17,129 @@ $$
 <p align="center">
     <img width="40%" src="images/const.png">
 </p>
-このことから、加速する座標への変換というのは曲がったものになることが予想される。
+このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
 
-　この曲がった座標に変換する方法というのは、Riemann幾何学があることが知られている。だが、この分野はかなり難解であるため、その橋渡しとして以前までに登場した変換（Galielei変換、Lorentz変換）を数学的にどのように取り扱うことができるかを見て行くことにする。まず、Galiei変換は
+　一般的にベクトルは $\bm{x}$ というように太字で表記されるが、用いる座標系によってその中身の表記が異なってくる。例えば以下の図のように、よく用いられている3次元直交座標系の場合だと $\bm{x}=(x,y,z)$ というようになるが、3次元極座標を用いると $\bm{x}=(r,\theta,\phi)$ と表記される。
+<p align="center">
+    <img width="40%" src="images/coordinate.png">
+</p>
+ここで注意することは、左から順に $x=r、\cdots$ というように等式が成り立つわけではなく、比較する座標系の関係で変化する。上記の場合だと
+$$
+    x=r\sin\phi\cos\theta、
+    y=r\sin\phi\sin\theta、
+    z=r\cos\phi
+$$
+というようになるが、この関係をベクトルで表すときに先ほどの表記のままだと、どの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに基底ベクトル（各方向の単位ベクトル）というものを用意し、
+$$
+    \bm{x}=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    r\sin\phi\cos\theta\bm{e}_x+
+    r\sin\phi\sin\theta\bm{e}_y+
+    r\cos\phi\bm{e}_z
+$$
+とすることで、直交座標系での関係式であることが見て分かる形になる。
+<p align="center">
+    <img width="40%" src="images/basis_vector.png">
+</p>
+同じように、上図の通り極座標系も基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
+$$
+    \bm{x}=
+    r\bm{e}_r+
+    r_\theta\bm{e}_\theta+
+    r_\phi\bm{e}_\phi
+$$
+と書けるので、直交座標系とどのように関係しているか見てみると
+$$
+    \bm{e}_r=
+    \frac{\frac{\partial\bm{x}}{\partial r}}
+    {\left|\frac{\partial\bm{x}}{\partial r}\right|}、
+    \bm{e}_\theta=
+    \frac{\frac{\partial\bm{x}}{\partial\theta}}
+    {\left|\frac{\partial\bm{x}}{\partial\theta}\right|}、
+    \bm{e}_\phi=
+    \frac{\frac{\partial\bm{x}}{\partial\phi}}
+    {\left|\frac{\partial\bm{x}}{\partial\phi}\right|}
+$$
+であり、ここで $\bm{x}=x\bm{e}_x+y\bm{e}_y+z\bm{e}_z$ を用いると
+$$
+    \frac{\partial\bm{x}}{\partial r}=
+    \sin\phi\cos\theta\bm{e}_x+
+    \sin\phi\sin\theta\bm{e}_y+
+    \cos\phi\bm{e}_z、
+    \left|
+    \frac{\partial\bm{x}}{\partial r}
+    \right|=1
+$$
+$$
+    \frac{\partial\bm{x}}{\partial\theta}=
+    r\cos\theta\cos\phi\bm{e}_x+
+    r\cos\theta\sin\phi\bm{e}_y-
+    r\sin\theta\bm{e}_z、
+    \left|
+    \frac{\partial\bm{x}}{\partial\theta}
+    \right|=r
+$$
+$$
+    \frac{\partial\bm{x}}{\partial\phi}=
+    -r\sin\theta\sin\phi\bm{e}_x+
+    r\sin\theta\cos\phi\bm{e}_y、
+    \left|
+    \frac{\partial\bm{x}}{\partial\phi}
+    \right|=
+    r\sin\theta
+$$
+となるため、基底ベクトルは以下の通りになる。
+$$
+    \bm{e}_r=
+    \sin\phi\cos\theta\bm{e}_x+
+    \sin\phi\sin\theta\bm{e}_y+
+    \cos\phi\bm{e}_z=
+    \frac{\bm{x}}{r}
+$$
+$$
+    \bm{e}_\theta=
+    \cos\theta\cos\phi\bm{e}_x+
+    \cos\theta\sin\phi\bm{e}_y-
+    \sin\theta\bm{e}_z
+$$
+$$
+    \bm{e}_\phi=
+    -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
+$$
+直交座標系での基底ベクトル同士の内積が
+$$
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_y\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+であることを用いて、角度方向の長さも求めてみるとちょうどどちらも0になることが確認できる。
+$$
+     r_\theta=
+     \bm{x}\cdot\bm{e}_\theta-
+     r(\bm{e}_r\cdot\bm{e}_\theta)-
+     r_\phi(\bm{e}_\phi\cdot\bm{e}_\theta)=0
+$$
+$$
+     r_\phi=
+     \bm{x}\cdot\bm{e}_\phi-
+     r(\bm{e}_r\cdot\bm{e}_\phi)-
+     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
+$$
+ここで、
+
+
+
+以前までに登場した変換（Galielei変換、Lorentz変換）を数学的にどのように取り扱うことができるかを見て行くことにする。まず、Galiei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
@@ -72,7 +192,7 @@ $$
     x^3
 \end{pmatrix}
 $$
-とおくと、各成分ごと（**ベクトルではない**）に簡略化して書ける。
+とおくと、各成分ごと（ベクトルではない）に簡略化して書ける。
 $$
     x'^\mu=
     \sum_{\nu=0}^{3}\alpha_{ \nu}^\mu x^\nu　

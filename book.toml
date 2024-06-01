@@ -17,3 +17,6 @@ after = ["links"]
 # 数式は以下のように記載する
 # ブロック数式：\$ ～ \$
 # インライン数式：$ ～ $
+# ~/.cargo/configに追記
+# [net]
+# git-fetch-with-cli = true
