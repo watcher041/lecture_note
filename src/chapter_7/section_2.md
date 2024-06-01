@@ -30,41 +30,61 @@ $$
 
 この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w'$ 軸とのなす角をそれぞれ$\theta$、$\phi$とすると
 $$
-    w=w'\cos\theta+x'\cos\phi、
-    x=w'\sin\theta+x'\sin\phi
+    w=w'\sin\phi+x'\sin\theta、
+    x=w'\cos\phi+x'\cos\theta
 $$
 となるため、Lorentz変換を逆変換したもの
 $$
-    x=\gamma(x'+\beta w')、
-    w=\gamma\left(w'+\beta x'\right)
+    w=\gamma\left(w'+\beta x'\right)、
+    x=\gamma(x'+\beta w')
+    
 $$
 と比較すると以下の関係が成り立つことが予想される。
 $$
-    \sin\theta=\gamma、
-    \cos\theta=\gamma\beta、
-    \sin\phi=\gamma\beta、
-    \cos\phi=\gamma
+    \sin\phi=\gamma、
+    \sin\theta=\gamma\beta、
+    \cos\phi=\gamma\beta、
+    \cos\theta=\gamma
 $$
 しかし、これでは三角関数の公式を満たさない。
 $$
     \sin^2\theta+\cos^2\theta=
-    \frac{1+\beta^2}{1-\beta^2}\neq 1、
+    \frac{\beta^2+1}{1-\beta^2}\neq 1、
     \sin^2\phi+\cos^2\phi=
     \frac{1+\beta^2}{1-\beta^2}\neq 1
 $$
 
 そこで分子と分母の符号が反対であることを踏まると、双曲線関数であれば等式が成り立つことが分かる。実際、先ほどの三角関数と同じように
 $$
-    \sinh\theta=\gamma、
-    \cosh\theta=\gamma\beta、
-    \sinh\phi=\gamma\beta、
-    \cosh\phi=\gamma
+    \sinh\phi=\gamma、
+    \sinh\theta=\gamma\beta、
+    \cosh\phi=\gamma\beta、
+    \cosh\theta=\gamma
 $$
 としてみると、以下の関係式が成り立つことが分かる。
 $$
-    \cosh^2\theta-\sinh^2\theta=-1、
-    \cosh^2\phi-\sinh^2\phi=1
+    \cosh^2\theta-\sinh^2\theta=1、
+    \cosh^2\phi-\sinh^2\phi=-1
 $$
+そのため、Lonrentz変換は以下のように書けることになる。
+$$
+    w=w'\sinh\phi+x'\sinh\theta、
+    (\sinh\phi=\gamma、
+    \sinh\theta=\gamma\beta)
+$$
+$$
+    x=w'\cosh\phi+x'\cosh\theta、
+    (\cosh\phi=\gamma\beta、
+    \cosh\theta=\gamma)
+$$
+この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、角度 $\phi$ に関しては $\phi\to\infty$ であることから,
+$\beta\to 1\ (V\to c)$ というように観測者の速度が光速になっていると考えられる（ $\theta$ も $\beta$ に依存するため同じようになっているといえる）。
+<p align="center">
+    <img width="60%" src="images/hyperbola.png">
+</p>
+
+
+
 
 
 
