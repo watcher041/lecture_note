@@ -41,7 +41,7 @@ $$
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
-同じように、上図の通り極座標系も基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
+同じように、極座標系においても上図の通り基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
 $$
     \bm{x}=
     r\bm{e}_r+
@@ -60,7 +60,7 @@ $$
     \frac{\frac{\partial\bm{x}}{\partial\phi}}
     {\left|\frac{\partial\bm{x}}{\partial\phi}\right|}
 $$
-であり、ここで $\bm{x}=x\bm{e}_x+y\bm{e}_y+z\bm{e}_z$ を用いると
+であるから、これに $\bm{x}=r\sin\phi\cos\theta\bm{e}_x+r\sin\phi\sin\theta\bm{e}_y+r\cos\phi\bm{e}_z$ を代入すると
 $$
     \frac{\partial\bm{x}}{\partial r}=
     \sin\phi\cos\theta\bm{e}_x+
@@ -88,7 +88,7 @@ $$
     \right|=
     r\sin\theta
 $$
-となるため、基底ベクトルは以下の通りになる。
+となるため、基底ベクトルの関係は以下の通りになる。
 $$
     \bm{e}_r=
     \sin\phi\cos\theta\bm{e}_x+
@@ -106,6 +106,8 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
+
+
 直交座標系での基底ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
