@@ -25,30 +25,30 @@ $$
 </p>
 ここで注意することは、左から順に $x=r、\cdots$ というように等式が成り立つわけではなく、比較する座標系の関係で変化する。上記の場合だと
 $$
-    x=r\sin\phi\cos\theta、
-    y=r\sin\phi\sin\theta、
-    z=r\cos\phi
+    x=r\sin\theta\cos\phi、
+    y=r\sin\theta\sin\phi、
+    z=r\cos\theta
 $$
 というようになるが、この関係をベクトルで表すときに先ほどの表記のままだと、どの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに基底ベクトル（各方向の単位ベクトル）というものを用意し、
 $$
     \bm{x}=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    r\sin\phi\cos\theta\bm{e}_x+
-    r\sin\phi\sin\theta\bm{e}_y+
-    r\cos\phi\bm{e}_z
+    r\sin\theta\cos\phi\bm{e}_x+
+    r\sin\theta\sin\phi\bm{e}_y+
+    r\cos\theta\bm{e}_z
 $$
 とすることで、直交座標系での関係式であることが見て分かる形になる。
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
-同じように、極座標系においても上図の通り基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
+同じように、極座標系においても上図の通り基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
 $$
     \bm{x}=
     r\bm{e}_r+
     r_\theta\bm{e}_\theta+
     r_\phi\bm{e}_\phi
 $$
-と書けるので、直交座標系とどのように関係しているか見てみると
+となるが、これらの基底ベクトルと直交座標系のものとの関係は以下の偏微分から求められる。
 $$
     \bm{e}_r=
     \frac{\frac{\partial\bm{x}}{\partial r}}
@@ -60,11 +60,11 @@ $$
     \frac{\frac{\partial\bm{x}}{\partial\phi}}
     {\left|\frac{\partial\bm{x}}{\partial\phi}\right|}
 $$
-であるから、これに $\bm{x}=r\sin\phi\cos\theta\bm{e}_x+r\sin\phi\sin\theta\bm{e}_y+r\cos\phi\bm{e}_z$ を代入すると
+実際に、 $\bm{x}=r\sin\theta\cos\theta\bm{e}_x+r\sin\theta\sin\theta\bm{e}_y+r\cos\phi\bm{e}_z$ を代入すると
 $$
     \frac{\partial\bm{x}}{\partial r}=
-    \sin\phi\cos\theta\bm{e}_x+
-    \sin\phi\sin\theta\bm{e}_y+
+    \sin\theta\cos\phi\bm{e}_x+
+    \sin\theta\sin\phi\bm{e}_y+
     \cos\phi\bm{e}_z、
     \left|
     \frac{\partial\bm{x}}{\partial r}
@@ -91,8 +91,8 @@ $$
 となるため、基底ベクトルの関係は以下の通りになる。
 $$
     \bm{e}_r=
-    \sin\phi\cos\theta\bm{e}_x+
-    \sin\phi\sin\theta\bm{e}_y+
+    \sin\theta\cos\phi\bm{e}_x+
+    \sin\theta\sin\phi\bm{e}_y+
     \cos\phi\bm{e}_z=
     \frac{\bm{x}}{r}
 $$
@@ -106,9 +106,7 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-
-
-直交座標系での基底ベクトル同士の内積が
+また、この関係を用いることで直交座標系での基底ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
     \bm{e}_x\cdot\bm{e}_y=0、
@@ -124,20 +122,47 @@ $$
     \bm{e}_z\cdot\bm{e}_y=0、
     \bm{e}_z\cdot\bm{e}_z=1
 $$
-であることを用いて、角度方向の長さも求めてみるとちょうどどちらも0になることが確認できる。
+であることから、極座標系の基底ベクトル同士の内積が
 $$
-     r_\theta=
-     \bm{x}\cdot\bm{e}_\theta-
-     r(\bm{e}_r\cdot\bm{e}_\theta)-
-     r_\phi(\bm{e}_\phi\cdot\bm{e}_\theta)=0
+    \bm{e}_r\cdot\bm{e}_r=1、
+    \bm{e}_r\cdot\bm{e}_\theta=0、
+    \bm{e}_r\cdot\bm{e}_\phi=0
 $$
 $$
-     r_\phi=
-     \bm{x}\cdot\bm{e}_\phi-
-     r(\bm{e}_r\cdot\bm{e}_\phi)-
-     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
+    \bm{e}_\theta\cdot\bm{e}_r=0、
+    \bm{e}_\theta\cdot\bm{e}_\theta=1、
+    \bm{e}_\theta\cdot\bm{e}_\phi=0
 $$
-ここで、
+$$
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+となるため、角度方向の大きさ $r_\theta,r_\phi$ はどちらも0になることが分かる。
+$$
+    r_\theta=
+    (\bm{x}\cdot\bm{e}_\theta)-
+    r(\bm{e}_r\cdot\bm{e}_\theta)-
+    r_\phi(\bm{e}_r\cdot\bm{e}_\phi)=0
+$$
+$$
+    r_\phi=
+    (\bm{x}\cdot\bm{e}_\phi)-
+    r(\bm{e}_r\cdot\bm{e}_\phi)-
+    r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
+$$
+
+　このように、基底ベクトルの内積を計算することで各成分の変換式を求めることができることになる。そこで、基底ベクトル同士の内積を
+$$
+    g_{xx}=\bm{e}_x\cdot\bm{e}_x、
+    g_{xy}=\bm{e}_x\cdot\bm{e}_y、
+    \cdots
+$$
+というようにして、これを一括して $g_{\mu\nu}$ 
+
+
+
+
 
 
 
