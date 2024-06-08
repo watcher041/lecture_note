@@ -90,35 +90,29 @@ $$
     \bm{e}_z=
     \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
 $$
-という関係を満たしているとすると、ベクトル $\bm{x}$ の各偏微分が
+という関係を満たしているとすると、各成分の基底ベクトルが
 $$
-    \frac{\partial\bm{x}}{\partial r}=
+    \bm{u}_r=
     \sin\theta\cos\phi\bm{e}_x+
     \sin\theta\sin\phi\bm{e}_y+
     \cos\phi\bm{e}_z、
-    \left|
-    \frac{\partial\bm{x}}{\partial r}
-    \right|=1
+    \left|\bm{u}_r\right|=1
 $$
 $$
-    \frac{\partial\bm{x}}{\partial\theta}=
+    \bm{u}_\theta=
     r\cos\theta\cos\phi\bm{e}_x+
     r\cos\theta\sin\phi\bm{e}_y-
     r\sin\theta\bm{e}_z、
-    \left|
-    \frac{\partial\bm{x}}{\partial\theta}
-    \right|=r
+    \left|\bm{u}_\theta\right|=r
 $$
 $$
-    \frac{\partial\bm{x}}{\partial\phi}=
+    \bm{u}_\phi=
     -r\sin\theta\sin\phi\bm{e}_x+
     r\sin\theta\cos\phi\bm{e}_y、
-    \left|
-    \frac{\partial\bm{x}}{\partial\phi}
-    \right|=
+    \left|\bm{u}_\phi\right|=
     r\sin\theta
 $$
-となるため、基本ベクトルの関係は以下の通りになる。
+であるため、基本ベクトルの関係は以下の通りになる。
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
