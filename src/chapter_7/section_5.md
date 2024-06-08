@@ -29,7 +29,7 @@ $$
     y=r\sin\theta\sin\phi、
     z=r\cos\theta
 $$
-というようになるが、この関係をベクトルで表すときに先ほどの表記のままだと、どの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに基底ベクトル（各方向の単位ベクトル）というものを用意し、
+というようになるが、この関係をベクトルで表すときに先ほどの表記のままだとどの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに基本ベクトル（各方向の単位ベクトル）というものを用意し、
 $$
     \bm{x}=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
@@ -41,26 +41,56 @@ $$
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
-同じように、極座標系においても上図の通り基底ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
+同じように、上図の通り極座標系における基本ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
 $$
     \bm{x}=
     r\bm{e}_r+
     r_\theta\bm{e}_\theta+
-    r_\phi\bm{e}_\phi
+    r_\phi\bm{e}_\phi=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
 $$
-となるが、これらの基底ベクトルと直交座標系のものとの関係は以下の偏微分から求められる。
+となるが、このままだとこれらの関係がどのようなものか求められない。そこで、 $\bm{x}$ の各成分が $r,\theta,\phi$ あるいは $x,y,z$ の変数を持つ関数であることから
+$$
+    \mathrm{d}\bm{x}=
+    \bm{u}_r\mathrm{d}r+
+    \bm{u}_\theta\mathrm{d}\theta+
+    \bm{u}_\phi\mathrm{d}\phi=
+    \bm{u}_x\mathrm{d}x+
+    \bm{u}_y\mathrm{d}y+
+    \bm{u}_z\mathrm{d}z
+$$
+$$
+    \bm{u}_r=
+    \frac{\partial \bm{x}}{\partial r}、
+    \bm{u}_\theta=
+    \frac{\partial \bm{x}}{\partial \theta}、
+    \bm{u}_\phi=
+    \frac{\partial \bm{x}}{\partial \phi}、
+    \bm{u}_x=
+    \frac{\partial \bm{x}}{\partial x}、
+    \bm{u}_y=
+    \frac{\partial \bm{x}}{\partial y}、
+    \bm{u}_z=
+    \frac{\partial \bm{x}}{\partial z}
+$$
+と展開すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そのため、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え基本ベクトル $\bm{e}$ と
 $$
     \bm{e}_r=
-    \frac{\frac{\partial\bm{x}}{\partial r}}
-    {\left|\frac{\partial\bm{x}}{\partial r}\right|}、
+    \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
     \bm{e}_\theta=
-    \frac{\frac{\partial\bm{x}}{\partial\theta}}
-    {\left|\frac{\partial\bm{x}}{\partial\theta}\right|}、
+    \frac{\bm{u}_\theta}
+    {\left|\bm{u}_\theta\right|}、
     \bm{e}_\phi=
-    \frac{\frac{\partial\bm{x}}{\partial\phi}}
-    {\left|\frac{\partial\bm{x}}{\partial\phi}\right|}
+    \frac{\bm{u}_\phi}
+    {\left|\bm{u}_\phi\right|}、
+    \bm{e}_x=
+    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
+    \bm{e}_y=
+    \frac{\bm{u}_y}{\left|\bm{u}_y\right|}、
+    \bm{e}_z=
+    \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
 $$
-実際に、 $\bm{x}=r\sin\theta\cos\theta\bm{e}_x+r\sin\theta\sin\theta\bm{e}_y+r\cos\phi\bm{e}_z$ を代入すると
+という関係を満たしているとすると、ベクトル $\bm{x}$ の各偏微分が
 $$
     \frac{\partial\bm{x}}{\partial r}=
     \sin\theta\cos\phi\bm{e}_x+
@@ -88,7 +118,7 @@ $$
     \right|=
     r\sin\theta
 $$
-となるため、基底ベクトルの関係は以下の通りになる。
+となるため、基本ベクトルの関係は以下の通りになる。
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -106,7 +136,7 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-また、この関係を用いることで直交座標系での基底ベクトル同士の内積が
+また、この関係を用いることで直交座標系での基本ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
     \bm{e}_x\cdot\bm{e}_y=0、
@@ -122,7 +152,7 @@ $$
     \bm{e}_z\cdot\bm{e}_y=0、
     \bm{e}_z\cdot\bm{e}_z=1
 $$
-であることから、極座標系の基底ベクトル同士の内積が
+であることから、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
 $$
     \bm{e}_r\cdot\bm{e}_r=1、
     \bm{e}_r\cdot\bm{e}_\theta=0、
@@ -152,47 +182,49 @@ $$
     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
 $$
 
-　このように、基底ベクトルの内積を計算することで各成分の変換式を求めることができることになる。そこで、基底ベクトル同士の内積を
-$$
-    g_{xx}=\bm{e}_x\cdot\bm{e}_x、
-    g_{xy}=\bm{e}_x\cdot\bm{e}_y、
-    \cdots
-$$
-というようにして、これを一括して $g_{\mu\nu}$ 
-
-
-
-
-
-
-
-以前までに登場した変換（Galielei変換、Lorentz変換）を数学的にどのように取り扱うことができるかを見て行くことにする。まず、Galiei変換は
+　このように、基本ベクトルの内積を計算することで各成分の変換式を求めることができることになる。追加で試しに以前までに登場した変換（Galielei変換、Lorentz変換）を見て行くことにする。まず、Galiei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
 $$
-となるわけだが、行列でまとめて以下のように記載することもできる。
+という変換であったため、ベクトル $\bm{x}$ は以下の通りに書ける。
 $$
-\begin{pmatrix}
-    w' \\
-    x' \\
-    y' \\
-    z'
-\end{pmatrix}
-=
-\begin{pmatrix}
-    1 & 0 & 0 & 0 \\
-    -\beta & 1 & 0 & 0 \\
-    0 & 0 & 1 & 0 \\
-    0 & 0 & 0 & 1
-\end{pmatrix}
-\begin{pmatrix}
-    w \\
-    x \\
-    y \\
-    z
-\end{pmatrix}
+    \bm{x}=
+    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    w'\bm{e}_w+
+    (x'+\beta w')\bm{e}_x+
+    y'\bm{e}_y+z\bm{e}_z
 $$
+一方で、変換先の座標を用いて
+$$
+    \bm{x}=
+    w'\bm{e}_w'+x'\bm{e}_x'+
+    y'\bm{e}_y'+z'\bm{e}_z'
+$$
+となるが、このときの基本ベクトルを求めると
+$$
+    \bm{e}_w'=
+    \frac{\frac{\partial\bm{x}}{\partial w'}}
+    {\left|\frac{\partial\bm{x}}{\partial w'}\right|}=\bm{e}_w+\beta\bm{e}_x、
+    \bm{e}_x'=
+    \frac{\frac{\partial\bm{x}}{\partial x'}}
+    {\left|\frac{\partial\bm{x}}{\partial x'}\right|}=\bm{e}_x、
+    \bm{e}_y'=
+    \frac{\frac{\partial\bm{x}}{\partial y'}}
+    {\left|\frac{\partial\bm{x}}{\partial y'}\right|}=\bm{e}_y、
+    \bm{e}_z'=
+    \frac{\frac{\partial\bm{x}}{\partial z'}}
+    {\left|\frac{\partial\bm{x}}{\partial z'}\right|}=\bm{e}_z
+$$
+であるから、内積の関係は以下の通りになる。
+
+
+
+
+
+
+
+
 あるいは、これをさらに扱い易くするよう添え字に行列の番号を振って
 $$
 \begin{pmatrix}
@@ -465,7 +497,7 @@ $$
     \frac{\partial z'}{\partial z} 
 \end{pmatrix}
 $$
-というように、基底ベクトルの和の形にもなるため、次のように書くこともできる。
+というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
 $$
     \mathrm{d}\bm{x}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
@@ -607,7 +639,7 @@ $$
         0 & 0 & 0 & -1
     \end{pmatrix}
 $$
-しかし、このままだと各座標ごとの基底ベクトルが
+しかし、このままだと各座標ごとの基本ベクトルが
 $$
     \bm{e}_0=
     \begin{pmatrix}
@@ -642,7 +674,7 @@ $$
     x'^2=x^2、x'^3=x^3、
     (x^0=\mathrm{i}w)
 $$
-というようにすると、基底ベクトルが
+というようにすると、基本ベクトルが
 $$
     \bm{e}_0=
     \begin{pmatrix}
