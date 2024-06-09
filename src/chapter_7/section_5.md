@@ -90,7 +90,23 @@ $$
     \bm{e}_z=
     \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
 $$
-という関係を満たしているとすると、各成分の基底ベクトルが
+という関係を満たしているとすると、直交座標系での基本ベクトル同士の内積が
+$$
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_y\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+と**なるように設定されている**ことから、各成分の基底ベクトルは
 $$
     \bm{u}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -112,7 +128,8 @@ $$
     \left|\bm{u}_\phi\right|=
     r\sin\theta
 $$
-であるため、基本ベクトルの関係は以下の通りになる。
+
+となり、基本ベクトルの関係は以下の通りになる。
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -130,23 +147,7 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-また、この関係を用いることで直交座標系での基本ベクトル同士の内積が
-$$
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_x\cdot\bm{e}_y=0、
-    \bm{e}_x\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_y\cdot\bm{e}_x=0、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_y\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_z\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_y=0、
-    \bm{e}_z\cdot\bm{e}_z=1
-$$
-であることから、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
+そして、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
 $$
     \bm{e}_r\cdot\bm{e}_r=1、
     \bm{e}_r\cdot\bm{e}_\theta=0、
@@ -158,9 +159,9 @@ $$
     \bm{e}_\theta\cdot\bm{e}_\phi=0
 $$
 $$
-    \bm{e}_z\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_y=0、
-    \bm{e}_z\cdot\bm{e}_z=1
+    \bm{e}_\phi\cdot\bm{e}_r=0、
+    \bm{e}_\phi\cdot\bm{e}_\theta=0、
+    \bm{e}_\phi\cdot\bm{e}_\phi=1
 $$
 となるため、角度方向の大きさ $r_\theta,r_\phi$ はどちらも0になることが分かる。
 $$
@@ -195,27 +196,92 @@ $$
     w'\bm{e}_w'+x'\bm{e}_x'+
     y'\bm{e}_y'+z'\bm{e}_z'
 $$
-となるが、このときの基本ベクトルを求めると
+となるが、直交座標系での関係が
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=0、
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_w\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_x\cdot\bm{e}_w=0、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_y\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_z\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+で**あるものとする**と、このときの基本ベクトルを求めると
 $$
     \bm{e}_w'=
-    \frac{\frac{\partial\bm{x}}{\partial w'}}
-    {\left|\frac{\partial\bm{x}}{\partial w'}\right|}=\bm{e}_w+\beta\bm{e}_x、
+    \frac{\bm{u}_w'}{\left|\bm{u}_w'\right|}=
+    \frac{\bm{e}_w+\beta\bm{e}_x}
+    {\sqrt{1+\beta^2}}、
     \bm{e}_x'=
-    \frac{\frac{\partial\bm{x}}{\partial x'}}
-    {\left|\frac{\partial\bm{x}}{\partial x'}\right|}=\bm{e}_x、
+    \frac{\bm{u}_x'}{\left|\bm{u}_x'\right|}=
+    \bm{e}_x、
     \bm{e}_y'=
-    \frac{\frac{\partial\bm{x}}{\partial y'}}
-    {\left|\frac{\partial\bm{x}}{\partial y'}\right|}=\bm{e}_y、
+    \frac{\bm{u}_y'}{\left|\bm{u}_y'\right|}=
+    \bm{e}_y、
     \bm{e}_z'=
-    \frac{\frac{\partial\bm{x}}{\partial z'}}
-    {\left|\frac{\partial\bm{x}}{\partial z'}\right|}=\bm{e}_z
+    \frac{\bm{u}_z'}{\left|\bm{u}_z'\right|}=
+    \bm{e}_z
 $$
-であるから、内積の関係は以下の通りになる。
-
-
-
-
-
+となる。そうすると、変換後の内積が
+$$
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \frac{\beta}{{\sqrt{1+\beta^2}}}、
+    \bm{e}_w'\cdot\bm{e}_y'=0、
+    \bm{e}_w'\cdot\bm{e}_z'=0
+$$
+$$
+    \bm{e}_x'\cdot\bm{e}_w'=
+    \frac{\beta}{{\sqrt{1+\beta^2}}}、
+    \bm{e}_x'\cdot\bm{e}_x'=1、
+    \bm{e}_x'\cdot\bm{e}_y'=0、
+    \bm{e}_x'\cdot\bm{e}_z'=0
+$$
+$$
+    \bm{e}_y'\cdot\bm{e}_w'=0、
+    \bm{e}_y'\cdot\bm{e}_x'=0、
+    \bm{e}_y'\cdot\bm{e}_y'=1、
+    \bm{e}_y'\cdot\bm{e}_z'=0
+$$
+$$
+    \bm{e}_z'\cdot\bm{e}_w'=0、
+    \bm{e}_z'\cdot\bm{e}_x'=0、
+    \bm{e}_z'\cdot\bm{e}_y'=0、
+    \bm{e}_z'\cdot\bm{e}_z'=1
+$$
+となり、これから変換を確認すると以下の通りになる。
+$$
+    w'=
+    \bm{x}\cdot-
+    x'(\bm{e}_x'\cdot\bm{e}_w')-
+    y'(\bm{e}_y'\cdot\bm{e}_w')-
+    z'(\bm{e}_z'\cdot\bm{e}_w')=
+    \sqrt{1+\beta^2}\omega
+$$
+$$
+    x'=
+    \bm{x}\cdot-
+    x'(\bm{e}_x'\cdot\bm{e}_x')-
+    y'(\bm{e}_y'\cdot\bm{e}_x')-
+    z'(\bm{e}_z'\cdot\bm{e}_x')=
+    x-\frac{\beta w}{\sqrt{1+\beta^2}}
+$$
+これを見ても分かるように内積から求めると変換式がおかしくなってしまうため、逆に
 
 
 
