@@ -194,50 +194,30 @@ $$
 $$
     \bm{x}=
     w'\bm{e}_w'+x'\bm{e}_x'+
-    y'\bm{e}_y'+z'\bm{e}_z'
+    y'\bm{e}_y'+z'\bm{e}_z'=
+    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
 $$
-となるが、直交座標系での関係が
+となるが、直交座標系での関係を用いて同じように見ていきたいのだが、ここで $\bm{e}_w\cdot\bm{e}_w$ など $\bm{e}_w$ が関わる内積がどのような値になるか分からない。そこで、
 $$
-    \bm{e}_w\cdot\bm{e}_w=1、
-    \bm{e}_w\cdot\bm{e}_x=0、
-    \bm{e}_w\cdot\bm{e}_y=0、
-    \bm{e}_w\cdot\bm{e}_z=0
+    w'\bm{e}_w'+x'\bm{e}_x'+
+    y'\bm{e}_y'+z'\bm{e}_z'=
+    w(\bm{e}_w'-\beta\bm{e}_x')+
+    x\bm{e}_x'+y\bm{e}_y'+z\bm{e}_z'
 $$
+であることから以下の関係があるものする。
 $$
-    \bm{e}_x\cdot\bm{e}_w=0、
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_x\cdot\bm{e}_y=0、
-    \bm{e}_x\cdot\bm{e}_z=0
+    \bm{e}_w=\bm{e}_w'-\beta\bm{e}_x'、
+    \bm{e}_x=\bm{e}_x'、
+    \bm{e}_y=\bm{e}_y'、
+    \bm{e}_z=\bm{e}_z'
 $$
-$$
-    \bm{e}_y\cdot\bm{e}_w=0、
-    \bm{e}_y\cdot\bm{e}_x=0、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_y\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_z\cdot\bm{e}_w=0、
-    \bm{e}_z\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_y=0、
-    \bm{e}_z\cdot\bm{e}_z=1
-$$
-で**あるものとする**と、このときの基本ベクトルを求めると
-$$
-    \bm{e}_w'=
-    \frac{\bm{u}_w'}{\left|\bm{u}_w'\right|}=
-    \frac{\bm{e}_w+\beta\bm{e}_x}
-    {\sqrt{1+\beta^2}}、
-    \bm{e}_x'=
-    \frac{\bm{u}_x'}{\left|\bm{u}_x'\right|}=
-    \bm{e}_x、
-    \bm{e}_y'=
-    \frac{\bm{u}_y'}{\left|\bm{u}_y'\right|}=
-    \bm{e}_y、
-    \bm{e}_z'=
-    \frac{\bm{u}_z'}{\left|\bm{u}_z'\right|}=
-    \bm{e}_z
-$$
-となる。そうすると、変換後の内積が
+
+
+
+
+
+
+そうすると、変換後の内積が
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
     \bm{e}_w'\cdot\bm{e}_x'=
