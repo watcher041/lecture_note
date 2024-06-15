@@ -197,7 +197,7 @@ $$
     y'\bm{e}_y'+z'\bm{e}_z'=
     w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
 $$
-となるが、直交座標系での関係を用いて同じように見ていきたいのだが、ここで $\bm{e}_w\cdot\bm{e}_w$ など $\bm{e}_w$ が関わる内積がどのような値になるか分からない。そこで、
+となるが、直交座標系での関係を用いて同じように見ていきたいのだが、ここで $\bm{e}_w\cdot\bm{e}_x$ など $\bm{e}_w$ が関わる内積がどのような値になるか分からない。そこで、
 $$
     w'\bm{e}_w'+x'\bm{e}_x'+
     y'\bm{e}_y'+z'\bm{e}_z'=
@@ -211,23 +211,31 @@ $$
     \bm{e}_y=\bm{e}_y'、
     \bm{e}_z=\bm{e}_z'
 $$
-
-
-
-
-
-
 そうすると、変換後の内積が
+$$
+    \bm{e}_w'\cdot\bm{e}_w'=
+    \bm{e}_w\cdot\bm{e}_w+
+    2\beta(\bm{e}_w\cdot\bm{e}_x)+\beta^2
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \bm{e}_w\cdot\bm{e}_x+\beta、
+    \bm{e}_y'\cdot\bm{e}_w'=
+    \bm{e}_y\cdot\bm{e}_w、
+    \bm{e}_z'\cdot\bm{e}_w'=
+    \bm{e}_z\cdot\bm{e}_w
+$$
+というようになるが、今までと同様な考えで以下のようになっているものとする。
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
     \bm{e}_w'\cdot\bm{e}_x'=
-    \frac{\beta}{{\sqrt{1+\beta^2}}}、
+    \frac{1}{2}\beta、
     \bm{e}_w'\cdot\bm{e}_y'=0、
     \bm{e}_w'\cdot\bm{e}_z'=0
 $$
 $$
     \bm{e}_x'\cdot\bm{e}_w'=
-    \frac{\beta}{{\sqrt{1+\beta^2}}}、
+    \frac{1}{2}\beta、
     \bm{e}_x'\cdot\bm{e}_x'=1、
     \bm{e}_x'\cdot\bm{e}_y'=0、
     \bm{e}_x'\cdot\bm{e}_z'=0
@@ -244,22 +252,48 @@ $$
     \bm{e}_z'\cdot\bm{e}_y'=0、
     \bm{e}_z'\cdot\bm{e}_z'=1
 $$
-となり、これから変換を確認すると以下の通りになる。
+同様に変換前の内積も以下の通りになる。
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=
+    -\frac{1}{2}\beta、
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_w\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_x\cdot\bm{e}_w=
+    -\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_y\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_z\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+上記の関係式から、以下の式でも等式が成り立つことが分かる。
 $$
     w'=
     (\bm{x}\cdot\bm{e}_w')-
     x'(\bm{e}_x'\cdot\bm{e}_w')-
     y'(\bm{e}_y'\cdot\bm{e}_w')-
-    z'(\bm{e}_z'\cdot\bm{e}_w')=
-    \sqrt{1+\beta^2}\omega
+    z'(\bm{e}_z'\cdot\bm{e}_w')=w
 $$
 $$
     x'=
     (\bm{x}\cdot\bm{e}_x')-
-    x'(\bm{e}_x'\cdot\bm{e}_x')-
+    w'(\bm{e}_w'\cdot\bm{e}_x')-
     y'(\bm{e}_y'\cdot\bm{e}_x')-
     z'(\bm{e}_z'\cdot\bm{e}_x')=
-    x-\frac{\beta w}{\sqrt{1+\beta^2}}
+    x-\beta\omega
 $$
 これを見ても分かるように内積から求めると変換式がおかしくなってしまうため、逆に
 
