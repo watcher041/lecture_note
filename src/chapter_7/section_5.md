@@ -73,7 +73,7 @@ $$
     \bm{u}_z=
     \frac{\partial \bm{x}}{\partial z}
 $$
-と展開すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そのため、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
+と展開すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
 $$
     \bm{e}_r=
     \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
@@ -90,7 +90,7 @@ $$
     \bm{e}_z=
     \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
 $$
-という関係を満たしているとすると、直交座標系での基本ベクトル同士の内積が
+という関係を満たしているとすると、ベクトルの大きさ（ $|\bm{u}_r|$ など）については直交座標系での基本ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
     \bm{e}_x\cdot\bm{e}_y=0、
@@ -106,7 +106,7 @@ $$
     \bm{e}_z\cdot\bm{e}_y=0、
     \bm{e}_z\cdot\bm{e}_z=1
 $$
-と**なるように設定されている**ことから、各成分の基底ベクトルは
+と**なるように設定されている**ことから、各成分の基底ベクトルは以下の形になる。
 $$
     \bm{u}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -129,7 +129,7 @@ $$
     r\sin\theta
 $$
 
-となり、基本ベクトルの関係は以下の通りになる。
+そのため、基本ベクトルの関係は
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -147,7 +147,7 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-そして、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
+となり、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
 $$
     \bm{e}_r\cdot\bm{e}_r=1、
     \bm{e}_r\cdot\bm{e}_\theta=0、
@@ -225,60 +225,56 @@ $$
     \bm{e}_z'\cdot\bm{e}_w'=
     \bm{e}_z\cdot\bm{e}_w
 $$
-というようになるが、今までと同様な考えで以下のようになっているものとする。
+というようになるが、これだけだとどのような値になるか決めることができない。そのため、先ほど出した微小ベクトルに関して
 $$
-    \bm{e}_w'\cdot\bm{e}_w'=1、
-    \bm{e}_w'\cdot\bm{e}_x'=
-    \frac{1}{2}\beta、
-    \bm{e}_w'\cdot\bm{e}_y'=0、
-    \bm{e}_w'\cdot\bm{e}_z'=0
-$$
-$$
-    \bm{e}_x'\cdot\bm{e}_w'=
-    \frac{1}{2}\beta、
-    \bm{e}_x'\cdot\bm{e}_x'=1、
-    \bm{e}_x'\cdot\bm{e}_y'=0、
-    \bm{e}_x'\cdot\bm{e}_z'=0
+    \mathrm{d}\bm{x}=
+    \bm{u}_w\mathrm{d}w+
+    \bm{u}_x\mathrm{d}x+
+    \bm{u}_y\mathrm{d}y+
+    \bm{u}_z\mathrm{d}z=
+    \bm{u}_w'\mathrm{d}w'+
+    \bm{u}_x'\mathrm{d}x'+
+    \bm{u}_y'\mathrm{d}y'+
+    \bm{u}_z'\mathrm{d}z'
 $$
 $$
-    \bm{e}_y'\cdot\bm{e}_w'=0、
-    \bm{e}_y'\cdot\bm{e}_x'=0、
-    \bm{e}_y'\cdot\bm{e}_y'=1、
-    \bm{e}_y'\cdot\bm{e}_z'=0
+    \bm{u}_w=
+    \frac{\partial \bm{x}}{\partial w}、
+    \bm{u}_x=
+    \frac{\partial \bm{x}}{\partial x}、
+    \bm{u}_y=
+    \frac{\partial \bm{x}}{\partial y}、
+    \bm{u}_z=
+    \frac{\partial \bm{x}}{\partial z}
 $$
 $$
-    \bm{e}_z'\cdot\bm{e}_w'=0、
-    \bm{e}_z'\cdot\bm{e}_x'=0、
-    \bm{e}_z'\cdot\bm{e}_y'=0、
-    \bm{e}_z'\cdot\bm{e}_z'=1
+    \bm{u}_w'=
+    \frac{\partial \bm{x}}{\partial w'}、
+    \bm{u}_x'=
+    \frac{\partial \bm{x}}{\partial x'}、
+    \bm{u}_y'=
+    \frac{\partial \bm{x}}{\partial y'}、
+    \bm{u}_z'=
+    \frac{\partial \bm{x}}{\partial z'}
 $$
-同様に変換前の内積も以下の通りになる。
+となるが、ここで内積をとることで
 $$
-    \bm{e}_w\cdot\bm{e}_w=1、
-    \bm{e}_w\cdot\bm{e}_x=
-    -\frac{1}{2}\beta、
-    \bm{e}_w\cdot\bm{e}_y=0、
-    \bm{e}_w\cdot\bm{e}_z=0
+    \mathrm{d}s^2=
+    \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
+    \sum_{}
 $$
-$$
-    \bm{e}_x\cdot\bm{e}_w=
-    -\frac{1}{2}\beta、
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_x\cdot\bm{e}_y=0、
-    \bm{e}_x\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_y\cdot\bm{e}_w=0、
-    \bm{e}_y\cdot\bm{e}_x=0、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_y\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_z\cdot\bm{e}_w=0、
-    \bm{e}_z\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_y=0、
-    \bm{e}_z\cdot\bm{e}_z=1
-$$
+
+
+
+
+
+
+
+
+
+
+
+
 上記の関係式から、以下の式でも等式が成り立つことが分かる。
 $$
     w'=
