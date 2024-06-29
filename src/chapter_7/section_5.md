@@ -29,7 +29,7 @@ $$
     y=r\sin\theta\sin\phi、
     z=r\cos\theta
 $$
-というようになるが、この関係をベクトルで表すときに先ほどの表記のままだとどの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに基本ベクトル（各方向の単位ベクトル）というものを用意し、
+というようになるが、この関係をベクトルで表すときに先ほどの表記のままだとどの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに単位ベクトル（各方向の単位ベクトル）というものを用意し、
 $$
     \bm{x}=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
@@ -41,7 +41,7 @@ $$
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
-同じように、上図の通り極座標系における基本ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
+同じように、上図の通り極座標系における単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
 $$
     \bm{x}=
     r\bm{e}_r+
@@ -49,7 +49,7 @@ $$
     r_\phi\bm{e}_\phi=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
 $$
-となるが、このままだと各座標系での基本ベクトルの関係がどのようになっているか見ることができない。そこで、 $\bm{x}$ の各成分が $r,\theta,\phi$ あるいは $x,y,z$ の変数を持つ関数であることから
+となるが、このままだと各座標系での単位ベクトルの関係がどのようになっているか見ることができない。そこで、 $\bm{x}$ の各成分が $r,\theta,\phi$ あるいは $x,y,z$ の変数を持つ関数であることから
 $$
     \mathrm{d}\bm{x}=
     \bm{u}_r\mathrm{d}r+
@@ -90,7 +90,7 @@ $$
     \bm{e}_z=
     \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
 $$
-という関係を満たしているとすると、ベクトルの大きさ（ $|\bm{u}_r|$ など）については直交座標系での基本ベクトル同士の内積が
+という関係を満たしているとすると、ベクトルの大きさ（ $|\bm{u}_r|$ など）については直交座標系での単位ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
     \bm{e}_x\cdot\bm{e}_y=0、
@@ -112,30 +112,32 @@ $$
     \sin\theta\cos\phi\bm{e}_x+
     \sin\theta\sin\phi\bm{e}_y+
     \cos\phi\bm{e}_z、
-    \left|\bm{u}_r\right|=1
+    \left|\bm{u}_r\right|=
+    \sqrt{\bm{u}_r\cdot\bm{u}_r}=1
 $$
 $$
     \bm{u}_\theta=
     r\cos\theta\cos\phi\bm{e}_x+
     r\cos\theta\sin\phi\bm{e}_y-
     r\sin\theta\bm{e}_z、
-    \left|\bm{u}_\theta\right|=r
+    \left|\bm{u}_\theta\right|=
+    \sqrt{\bm{u}_\theta\cdot\bm{u}_\theta}=r
 $$
 $$
     \bm{u}_\phi=
     -r\sin\theta\sin\phi\bm{e}_x+
     r\sin\theta\cos\phi\bm{e}_y、
     \left|\bm{u}_\phi\right|=
+    \sqrt{\bm{u}_\phi\cdot\bm{u}_\phi}=
     r\sin\theta
 $$
 
-そのため、基本ベクトルの関係は
+そのため、単位ベクトルの関係は
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
     \sin\theta\sin\phi\bm{e}_y+
-    \cos\phi\bm{e}_z=
-    \frac{\bm{x}}{r}
+    \cos\phi\bm{e}_z
 $$
 $$
     \bm{e}_\theta=
@@ -147,7 +149,7 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-となり、極座標系の基本ベクトル同士の内積（互いに直交していることからも分かるが…）は
+となり、極座標系の単位ベクトル同士の内積（互いに直交していることからも分かるが…）は
 $$
     \bm{e}_r\cdot\bm{e}_r=1、
     \bm{e}_r\cdot\bm{e}_\theta=0、
@@ -177,7 +179,7 @@ $$
     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
 $$
 
-　このように、基本ベクトルの内積を計算することで各成分の変換式を求めることができることになる。追加で試しに以前までに登場した変換（Galielei変換、Lorentz変換）を見て行くことにする。まず、Galiei変換は
+　このように**変換式**と**単位ベクトルの内積**が分かっていると、変換後のベクトルがどのようになるか求めることができる。試しに以前までに登場した変換（Galielei変換、Lorentz変換）を見て行くことにする。まず、Galiei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
@@ -188,7 +190,7 @@ $$
     w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     w'\bm{e}_w+
     (x'+\beta w')\bm{e}_x+
-    y'\bm{e}_y+z\bm{e}_z
+    y'\bm{e}_y+z'\bm{e}_z
 $$
 一方で、変換先の座標を用いて
 $$
@@ -197,35 +199,84 @@ $$
     y'\bm{e}_y'+z'\bm{e}_z'=
     w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
 $$
-となるが、直交座標系での関係を用いて同じように見ていきたいのだが、ここで $\bm{e}_w\cdot\bm{e}_x$ など $\bm{e}_w$ が関わる内積がどのような値になるか分からない。そこで、
+となるが、まず基底ベクトルの方は以下の通りになる。
 $$
-    w'\bm{e}_w'+x'\bm{e}_x'+
-    y'\bm{e}_y'+z'\bm{e}_z'=
-    w(\bm{e}_w'-\beta\bm{e}_x')+
-    x\bm{e}_x'+y\bm{e}_y'+z\bm{e}_z'
-$$
-であることから以下の関係があるものする。
-$$
-    \bm{e}_w=\bm{e}_w'-\beta\bm{e}_x'、
-    \bm{e}_x=\bm{e}_x'、
-    \bm{e}_y=\bm{e}_y'、
-    \bm{e}_z=\bm{e}_z'
-$$
-そうすると、変換後の内積が
-$$
-    \bm{e}_w'\cdot\bm{e}_w'=
-    \bm{e}_w\cdot\bm{e}_w+
-    2\beta(\bm{e}_w\cdot\bm{e}_x)+\beta^2
+    \bm{u}_w'=|\bm{u}_w'|\bm{e}_w'=
+    \frac{\partial\bm{x}}{\partial w'}=
+    \bm{e}_w+\beta\bm{e}_x、
+    \bm{u}_x'=|\bm{u}_x'|\bm{e}_x'=
+    \frac{\partial\bm{x}}{\partial x'}=
+    \bm{e}_x
 $$
 $$
+    \bm{u}_y'=|\bm{u}_y'|\bm{e}_y'=
+    \frac{\partial\bm{x}}{\partial y'}=
+    \bm{e}_y、
+    \bm{u}_z'=|\bm{u}_z'|\bm{e}_z'=
+    \frac{\partial\bm{x}}{\partial z'}=
+    \bm{e}_z
+$$
+この後にベクトルの大きさを求めるわけだが、このままだと $\bm{e}_w$ を含む内積の値がどのように設定すればよいか不明なため、
+$$
+    w\bm{e}_w+x\bm{e}_x+
+    y\bm{e}_y+z\bm{e}_z=
+    w'(\bm{e}_w+\beta\bm{e}_x)+
+    x'\bm{e}_x+y'\bm{e}_y+z'\bm{e}_z
+$$
+と変形してみると、以下の関係があることが予想される。
+$$
+    \bm{e}_w'=\bm{e}_w+\beta\bm{e}_x、
+    \bm{e}_x'=\bm{e}_x、
+    \bm{e}_y'=\bm{e}_y、
+    \bm{e}_z'=\bm{e}_z
+$$
+そのため、先ほどの基底ベクトルの大きさはすべて1になり、以下の通りとなる。
+$$
+    |\bm{u}_w'|^2=
+    (\bm{e}_w\cdot\bm{e}_w)+
+    2\beta(\bm{e}_w\cdot\bm{e}_x)+\beta^2=1、
+    \bm{e}_w'\cdot\bm{e}_w'=1
+$$
+$$
+    |\bm{u}_w|^2=
+    (\bm{e}_w'\cdot\bm{e}_w')-
+    2\beta(\bm{e}_w'\cdot\bm{e}_x')+\beta^2=1、
+    \bm{e}_w\cdot\bm{e}_w=1
+$$
+そのため、各座標ごとの内積は以下の関係にあることが予想される。
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta=
+    \cos\left(
+        \frac{\pi}{2}+\frac{\alpha}{2}
+    \right)
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_w'=1、
     \bm{e}_w'\cdot\bm{e}_x'=
-    \bm{e}_w\cdot\bm{e}_x+\beta、
-    \bm{e}_y'\cdot\bm{e}_w'=
-    \bm{e}_y\cdot\bm{e}_w、
-    \bm{e}_z'\cdot\bm{e}_w'=
-    \bm{e}_z\cdot\bm{e}_w
+    \bm{e}_x'\cdot\bm{e}_w'=\frac{1}{2}\beta=
+    \cos\left(
+        \frac{\pi}{2}-\frac{\alpha}{2}
+    \right)
 $$
-というようになるが、これだけだとどのような値になるか決めることができない。そのため、先ほど出した微小ベクトルに関して
+<p align="center">
+    <img width="40%" src="images/galilei_space.png">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+というようになるが、これだけだとどのような値になるか決めることができない。この関係というのは、先ほどの微小ベクトルに対して
 $$
     \mathrm{d}\bm{x}=
     \bm{u}_w\mathrm{d}w+
@@ -261,7 +312,12 @@ $$
 $$
     \mathrm{d}s^2=
     \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
-    \sum_{}
+    \sum_{i,j}
+    (\bm{u}_i\cdot\bm{u}_j)
+    \mathrm{d}i\mathrm{d}j=
+    \sum_{k,l}
+    (\bm{u}_k'\cdot\bm{u}_l')
+    \mathrm{d}k'\mathrm{d}l'
 $$
 
 
@@ -567,7 +623,7 @@ $$
     \frac{\partial z'}{\partial z} 
 \end{pmatrix}
 $$
-というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
+というように、単位ベクトルの和の形にもなるため、次のように書くこともできる。
 $$
     \mathrm{d}\bm{x}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
@@ -709,7 +765,7 @@ $$
         0 & 0 & 0 & -1
     \end{pmatrix}
 $$
-しかし、このままだと各座標ごとの基本ベクトルが
+しかし、このままだと各座標ごとの単位ベクトルが
 $$
     \bm{e}_0=
     \begin{pmatrix}
@@ -744,7 +800,7 @@ $$
     x'^2=x^2、x'^3=x^3、
     (x^0=\mathrm{i}w)
 $$
-というようにすると、基本ベクトルが
+というようにすると、単位ベクトルが
 $$
     \bm{e}_0=
     \begin{pmatrix}
