@@ -243,7 +243,7 @@ $$
     2\beta(\bm{e}_w'\cdot\bm{e}_x')+\beta^2=1、
     \bm{e}_w\cdot\bm{e}_w=1
 $$
-そのため、各座標ごとの内積は以下の関係にあることが予想される。
+そのため、各座標ごとの内積は以下の関係があることになる。
 $$
     \bm{e}_w\cdot\bm{e}_w=1、
     \bm{e}_w\cdot\bm{e}_x=
@@ -264,61 +264,55 @@ $$
     <img width="40%" src="images/galilei_space.png">
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-というようになるが、これだけだとどのような値になるか決めることができない。この関係というのは、先ほどの微小ベクトルに対して
+　次にLorentz変換の場合、変換式は以下の通りであった。
 $$
-    \mathrm{d}\bm{x}=
-    \bm{u}_w\mathrm{d}w+
-    \bm{u}_x\mathrm{d}x+
-    \bm{u}_y\mathrm{d}y+
-    \bm{u}_z\mathrm{d}z=
-    \bm{u}_w'\mathrm{d}w'+
-    \bm{u}_x'\mathrm{d}x'+
-    \bm{u}_y'\mathrm{d}y'+
-    \bm{u}_z'\mathrm{d}z'
+    w'=\gamma(w-\beta x)、
+    x'=\gamma(-\beta w+x)、
+    y'=y、
+    z'=z、
+    \left(
+        \gamma=\frac{1}{\sqrt{1-\beta^2}}
+    \right)
+$$
+この場合もGalielei変換の時と同様な考えで、単位ベクトルの関係とそれらの内積を求めてみると
+$$
+    \bm{e}'_w=
+    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}'_x=
+    \gamma (\bm{e}_x+\beta\bm{e}_w)
 $$
 $$
-    \bm{u}_w=
-    \frac{\partial \bm{x}}{\partial w}、
-    \bm{u}_x=
-    \frac{\partial \bm{x}}{\partial x}、
-    \bm{u}_y=
-    \frac{\partial \bm{x}}{\partial y}、
-    \bm{u}_z=
-    \frac{\partial \bm{x}}{\partial z}
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=
+    \bm{e}_x\cdot\bm{e}_w=-\beta=
+    \cos\left(
+        \frac{\pi}{2}+\alpha
+    \right)
 $$
 $$
-    \bm{u}_w'=
-    \frac{\partial \bm{x}}{\partial w'}、
-    \bm{u}_x'=
-    \frac{\partial \bm{x}}{\partial x'}、
-    \bm{u}_y'=
-    \frac{\partial \bm{x}}{\partial y'}、
-    \bm{u}_z'=
-    \frac{\partial \bm{x}}{\partial z'}
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \bm{e}_x'\cdot\bm{e}_w'=\beta=
+    \cos\left(
+        \frac{\pi}{2}-\alpha
+    \right)
 $$
-となるが、ここで内積をとることで
+となり、座標も記載すると以下の図（ローデル図）の通りになる。
+<p align="center">
+    <img width="40%" src="images/lorentz_space.png">
+</p>
+　一方で、相対論的力学でもあったようにLorentz変換においては以下の形で不変となっていた。
 $$
-    \mathrm{d}s^2=
-    \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
-    \sum_{i,j}
-    (\bm{u}_i\cdot\bm{u}_j)
-    \mathrm{d}i\mathrm{d}j=
-    \sum_{k,l}
-    (\bm{u}_k'\cdot\bm{u}_l')
-    \mathrm{d}k'\mathrm{d}l'
+    (\mathrm{d}w)^2-
+    (\mathrm{d}x)^2-
+    (\mathrm{d}y)^2-
+    (\mathrm{d}z)^2=
+    (\mathrm{d}w')^2-
+    (\mathrm{d}x')^2-
+    (\mathrm{d}y')^2-
+    (\mathrm{d}z')^2
 $$
+そのため、これを内積として定義した空間（Minkofsky空間）を考えると、内積の形が不変となって便利であることがうかがえる。
 
 
 
@@ -331,22 +325,11 @@ $$
 
 
 
-上記の関係式から、以下の式でも等式が成り立つことが分かる。
-$$
-    w'=
-    (\bm{x}\cdot\bm{e}_w')-
-    x'(\bm{e}_x'\cdot\bm{e}_w')-
-    y'(\bm{e}_y'\cdot\bm{e}_w')-
-    z'(\bm{e}_z'\cdot\bm{e}_w')=w
-$$
-$$
-    x'=
-    (\bm{x}\cdot\bm{e}_x')-
-    w'(\bm{e}_w'\cdot\bm{e}_x')-
-    y'(\bm{e}_y'\cdot\bm{e}_x')-
-    z'(\bm{e}_z'\cdot\bm{e}_x')=
-    x-\beta\omega
-$$
+
+
+
+
+
 これを見ても分かるように内積から求めると変換式がおかしくなってしまうため、逆に
 
 
