@@ -301,6 +301,35 @@ $$
 <p align="center">
     <img width="40%" src="images/lorentz_space.png">
 </p>
+　このように既存の座標系の単位ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から単位ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{x}$ で関連つけられていたため、
+$$
+    \omega=x^0、x=x^1、y=x^2、z=x^3、
+    \bm{u}_\omega=\bm{u}_0、
+    \bm{u}_x=\bm{u}_1、
+    \bm{u}_y=\bm{u}_2、
+    \bm{u}_z=\bm{u}_3
+$$
+とおき、$\mathrm{d}\bm{x}$ を以下のように書く。
+$$
+    \mathrm{d}\bm{x}=
+    \sum_{\mu}\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu'}\mathrm{d}x^{\mu'}\bm{u}_{\mu'}
+$$
+$$
+    (\mathrm{d}s)^2=
+    \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
+    \sum_{\mu,\nu=0}^{3}
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    \sum_{\mu',\nu'=0}^{3}
+    (\bm{u}_{\mu'}\cdot\bm{u}_{\nu'})
+    \mathrm{d}x^{\mu'}\mathrm{d}x^{\nu'}
+$$
+ここで片方の内積が分かることで、もう片方の内積や返還前後の関係が分かるため、これはリーマン計量と呼ばれている。
+
+
+
+
 　一方で、相対論的力学でもあったようにLorentz変換においては以下の形で不変となっていた。
 $$
     (\mathrm{d}w)^2-
