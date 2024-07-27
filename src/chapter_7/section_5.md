@@ -44,37 +44,43 @@ $$
 同じように、上図の通り極座標系における単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
 $$
     \bm{x}=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     r\bm{e}_r+
     r_\theta\bm{e}_\theta+
-    r_\phi\bm{e}_\phi=
-    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
+    r_\phi\bm{e}_\phi
 $$
 となるが、このままだと各座標系での単位ベクトルの関係がどのようになっているか見ることができない。そこで、 $\bm{x}$ の各成分が $r,\theta,\phi$ あるいは $x,y,z$ の変数を持つ関数であることから
 $$
     \mathrm{d}\bm{x}=
-    \bm{u}_r\mathrm{d}r+
-    \bm{u}_\theta\mathrm{d}\theta+
-    \bm{u}_\phi\mathrm{d}\phi=
     \bm{u}_x\mathrm{d}x+
     \bm{u}_y\mathrm{d}y+
-    \bm{u}_z\mathrm{d}z
+    \bm{u}_z\mathrm{d}z=
+    \bm{u}_r\mathrm{d}r+
+    \bm{u}_\theta\mathrm{d}\theta+
+    \bm{u}_\phi\mathrm{d}\phi
 $$
 $$
-    \bm{u}_r=
-    \frac{\partial \bm{x}}{\partial r}、
-    \bm{u}_\theta=
-    \frac{\partial \bm{x}}{\partial \theta}、
-    \bm{u}_\phi=
-    \frac{\partial \bm{x}}{\partial \phi}、
     \bm{u}_x=
     \frac{\partial \bm{x}}{\partial x}、
     \bm{u}_y=
     \frac{\partial \bm{x}}{\partial y}、
     \bm{u}_z=
-    \frac{\partial \bm{x}}{\partial z}
+    \frac{\partial \bm{x}}{\partial z}、
+    \bm{u}_r=
+    \frac{\partial \bm{x}}{\partial r}、
+    \bm{u}_\theta=
+    \frac{\partial \bm{x}}{\partial \theta}、
+    \bm{u}_\phi=
+    \frac{\partial \bm{x}}{\partial \phi}
 $$
 と展開すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
 $$
+    \bm{e}_x=
+    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
+    \bm{e}_y=
+    \frac{\bm{u}_y}{\left|\bm{u}_y\right|}、
+    \bm{e}_z=
+    \frac{\bm{u}_z}{\left|\bm{u}_z\right|}、
     \bm{e}_r=
     \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
     \bm{e}_\theta=
@@ -82,15 +88,33 @@ $$
     {\left|\bm{u}_\theta\right|}、
     \bm{e}_\phi=
     \frac{\bm{u}_\phi}
-    {\left|\bm{u}_\phi\right|}、
-    \bm{e}_x=
-    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
-    \bm{e}_y=
-    \frac{\bm{u}_y}{\left|\bm{u}_y\right|}、
-    \bm{e}_z=
-    \frac{\bm{u}_z}{\left|\bm{u}_z\right|}
+    {\left|\bm{u}_\phi\right|}
+    
 $$
-という関係を満たしているとすると、ベクトルの大きさ（ $|\bm{u}_r|$ など）については直交座標系での単位ベクトル同士の内積が
+という関係を満たしているとすると、まず各基底ベクトルは$\bm{e}_x,\bm{e}_y,\bm{e}_z$により
+$$
+    \bm{u}_x=\bm{e}_x、
+    \bm{u}_y=\bm{e}_y、
+    \bm{u}_z=\bm{e}_z、
+$$
+$$
+    \bm{u}_r=
+    \sin\theta\cos\phi\bm{e}_x+
+    \sin\theta\sin\phi\bm{e}_y+
+    \cos\phi\bm{e}_z、
+$$
+$$
+    \bm{u}_\theta=
+    r\cos\theta\cos\phi\bm{e}_x+
+    r\cos\theta\sin\phi\bm{e}_y-
+    r\sin\theta\bm{e}_z、
+$$
+$$
+    \bm{u}_\phi=
+    -r\sin\theta\sin\phi\bm{e}_x+
+    r\sin\theta\cos\phi\bm{e}_y
+$$
+となる。次に、基底ベクトルの大きさについては直交座標系での単位ベクトル同士の内積が
 $$
     \bm{e}_x\cdot\bm{e}_x=1、
     \bm{e}_x\cdot\bm{e}_y=0、
@@ -106,33 +130,25 @@ $$
     \bm{e}_z\cdot\bm{e}_y=0、
     \bm{e}_z\cdot\bm{e}_z=1
 $$
-と**なるように設定されている**ことから、各成分の基底ベクトルは以下の形になる。
+と**なるように設定されている**ことから、各成分の基底ベクトルの大きさも求められる。
 $$
-    \bm{u}_r=
-    \sin\theta\cos\phi\bm{e}_x+
-    \sin\theta\sin\phi\bm{e}_y+
-    \cos\phi\bm{e}_z、
+    \left|\bm{u}_x\right|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
+    \left|\bm{u}_y\right|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1、
+    \left|\bm{u}_z\right|=
+    \sqrt{\bm{u}_z\cdot\bm{u}_z}=1
+$$
+$$
     \left|\bm{u}_r\right|=
-    \sqrt{\bm{u}_r\cdot\bm{u}_r}=1
-$$
-$$
-    \bm{u}_\theta=
-    r\cos\theta\cos\phi\bm{e}_x+
-    r\cos\theta\sin\phi\bm{e}_y-
-    r\sin\theta\bm{e}_z、
+    \sqrt{\bm{u}_r\cdot\bm{u}_r}=1、
     \left|\bm{u}_\theta\right|=
-    \sqrt{\bm{u}_\theta\cdot\bm{u}_\theta}=r
-$$
-$$
-    \bm{u}_\phi=
-    -r\sin\theta\sin\phi\bm{e}_x+
-    r\sin\theta\cos\phi\bm{e}_y、
+    \sqrt{\bm{u}_\theta\cdot\bm{u}_\theta}=r、
     \left|\bm{u}_\phi\right|=
     \sqrt{\bm{u}_\phi\cdot\bm{u}_\phi}=
     r\sin\theta
 $$
-
-そのため、単位ベクトルの関係は
+したがって、各成分の単位ベクトル（直交座標系のものは省略）は
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -179,7 +195,7 @@ $$
     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
 $$
 
-　このように**変換式**と**単位ベクトルの内積**が分かっていると、変換後のベクトルがどのようになるか求めることができる。試しに以前までに登場した変換（Galielei変換、Lorentz変換）を見て行くことにする。まず、Galiei変換は
+　次に前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
