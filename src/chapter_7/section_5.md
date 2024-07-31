@@ -41,46 +41,35 @@ $$
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
-同じように、上図の通り極座標系における単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
+一方で、上図の通り極座標系における単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
 $$
     \bm{x}=
-    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     r\bm{e}_r+
     r_\theta\bm{e}_\theta+
-    r_\phi\bm{e}_\phi
+    r_\phi\bm{e}_\phi=
+    r(x,y,z)\bm{e}_r+
+    r_\theta(x,y,z)\bm{e}_\theta+
+    r_\phi(x,y,z)\bm{e}_\phi
 $$
-となるが、このままだと各座標系での単位ベクトルの関係がどのようになっているか見ることができない。そこで、 $\bm{x}$ の各成分が $r,\theta,\phi$ あるいは $x,y,z$ の変数を持つ関数であることから
+となるが、ここで各成分 $r,r_\theta,r_\phi$ がどのような値になるか分からないため、 $\bm{x}$ の変数が $r,\theta,\phi$ の変数を持つ関数であることから
 $$
     \mathrm{d}\bm{x}=
-    \bm{u}_x\mathrm{d}x+
-    \bm{u}_y\mathrm{d}y+
-    \bm{u}_z\mathrm{d}z=
     \bm{u}_r\mathrm{d}r+
     \bm{u}_\theta\mathrm{d}\theta+
-    \bm{u}_\phi\mathrm{d}\phi
-$$
-$$
-    \bm{u}_x=
-    \frac{\partial \bm{x}}{\partial x}、
-    \bm{u}_y=
-    \frac{\partial \bm{x}}{\partial y}、
-    \bm{u}_z=
-    \frac{\partial \bm{x}}{\partial z}、
+    \bm{u}_\phi\mathrm{d}\phi、
+    \left(
     \bm{u}_r=
     \frac{\partial \bm{x}}{\partial r}、
     \bm{u}_\theta=
     \frac{\partial \bm{x}}{\partial \theta}、
     \bm{u}_\phi=
     \frac{\partial \bm{x}}{\partial \phi}
+    \right)
 $$
+
 と展開してみると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
+
 $$
-    \bm{e}_x=
-    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
-    \bm{e}_y=
-    \frac{\bm{u}_y}{\left|\bm{u}_y\right|}、
-    \bm{e}_z=
-    \frac{\bm{u}_z}{\left|\bm{u}_z\right|}、
     \bm{e}_r=
     \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
     \bm{e}_\theta=
@@ -89,14 +78,9 @@ $$
     \bm{e}_\phi=
     \frac{\bm{u}_\phi}
     {\left|\bm{u}_\phi\right|}
-    
 $$
-という関係を満たしているとすると、まず各基底ベクトルは$\bm{e}_x,\bm{e}_y,\bm{e}_z$により
-$$
-    \bm{u}_x=\bm{e}_x、
-    \bm{u}_y=\bm{e}_y、
-    \bm{u}_z=\bm{e}_z、
-$$
+
+という関係を満たしているとすると、まず各基底ベクトルは $\bm{e}_x,\bm{e}_y,\bm{e}_z$ により
 $$
     \bm{u}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -132,14 +116,6 @@ $$
 $$
 と**設定されている**ことから、各成分の基底ベクトルの大きさも求められる。
 $$
-    \left|\bm{u}_x\right|=
-    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
-    \left|\bm{u}_y\right|=
-    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1、
-    \left|\bm{u}_z\right|=
-    \sqrt{\bm{u}_z\cdot\bm{u}_z}=1
-$$
-$$
     \left|\bm{u}_r\right|=
     \sqrt{\bm{u}_r\cdot\bm{u}_r}=1、
     \left|\bm{u}_\theta\right|=
@@ -148,7 +124,7 @@ $$
     \sqrt{\bm{u}_\phi\cdot\bm{u}_\phi}=
     r\sin\theta
 $$
-したがって、各成分の単位ベクトル（直交座標系のものは省略）は
+したがって、各成分の単位ベクトルは
 $$
     \bm{e}_r=
     \sin\theta\cos\phi\bm{e}_x+
@@ -165,23 +141,14 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-となり、極座標系の単位ベクトル同士の内積（互いに直交していることからも分かるが…）は
+となるため、直交座標系での内積の関係を用いると $r,r_\theta,r_\phi$ は以下の値となることが分かる。
 $$
-    \bm{e}_r\cdot\bm{e}_r=1、
-    \bm{e}_r\cdot\bm{e}_\theta=0、
-    \bm{e}_r\cdot\bm{e}_\phi=0
+    r=
+    (\bm{x}\cdot\bm{e}_r)-
+    r_\theta (\bm{e}_\theta\cdot\bm{e}_r)-
+    r_\phi (\bm{e}_\phi\cdot\bm{e}_r)=
+    \sqrt{x^2+y^2+z^2}
 $$
-$$
-    \bm{e}_\theta\cdot\bm{e}_r=0、
-    \bm{e}_\theta\cdot\bm{e}_\theta=1、
-    \bm{e}_\theta\cdot\bm{e}_\phi=0
-$$
-$$
-    \bm{e}_\phi\cdot\bm{e}_r=0、
-    \bm{e}_\phi\cdot\bm{e}_\theta=0、
-    \bm{e}_\phi\cdot\bm{e}_\phi=1
-$$
-となるため、角度方向の大きさ $r_\theta,r_\phi$ はどちらも0になることが分かる。
 $$
     r_\theta=
     (\bm{x}\cdot\bm{e}_\theta)-
@@ -194,7 +161,11 @@ $$
     r(\bm{e}_r\cdot\bm{e}_\phi)-
     r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
 $$
-このように、各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
+
+このように、別の座標系に変換する際に**基底ベクトル**と**基底ベクトル同士の内積**が分かると
+
+
+各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
@@ -210,74 +181,143 @@ $$
 一方で、変換先の座標を用いて
 $$
     \bm{x}=
+    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     w'\bm{e}_w'+x'\bm{e}_x'+
-    y'\bm{e}_y'+z'\bm{e}_z'=
-    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z
+    y'\bm{e}_y'+z'\bm{e}_z'
 $$
 となるが、まず基底ベクトルの方は以下の通りになる。
 $$
-    \bm{u}_w'=|\bm{u}_w'|\bm{e}_w'=
+    \bm{u}_w'=
     \frac{\partial\bm{x}}{\partial w'}=
     \bm{e}_w+\beta\bm{e}_x、
-    \bm{u}_x'=|\bm{u}_x'|\bm{e}_x'=
+    \bm{u}_x'=
     \frac{\partial\bm{x}}{\partial x'}=
-    \bm{e}_x
-$$
-$$
-    \bm{u}_y'=|\bm{u}_y'|\bm{e}_y'=
+    \bm{e}_x、
+    \bm{u}_y'=
     \frac{\partial\bm{x}}{\partial y'}=
     \bm{e}_y、
-    \bm{u}_z'=|\bm{u}_z'|\bm{e}_z'=
+    \bm{u}_z'=
     \frac{\partial\bm{x}}{\partial z'}=
     \bm{e}_z
 $$
-この後にベクトルの大きさを求めるわけだが、このままだと $\bm{e}_w$ を含む内積の値がどのように設定すればよいか不明なため、
-$$
-    w\bm{e}_w+x\bm{e}_x+
-    y\bm{e}_y+z\bm{e}_z=
-    w'(\bm{e}_w+\beta\bm{e}_x)+
-    x'\bm{e}_x+y'\bm{e}_y+z'\bm{e}_z
-$$
-と変形してみると、以下の関係があることが予想される。
-$$
-    \bm{e}_w'=\bm{e}_w+\beta\bm{e}_x、
-    \bm{e}_x'=\bm{e}_x、
-    \bm{e}_y'=\bm{e}_y、
-    \bm{e}_z'=\bm{e}_z
-$$
-そのため、先ほどの基底ベクトルの大きさはすべて1になり、以下の通りとなる。
-$$
-    |\bm{u}_w'|^2=
-    (\bm{e}_w\cdot\bm{e}_w)+
-    2\beta(\bm{e}_w\cdot\bm{e}_x)+\beta^2=1、
-    \bm{e}_w'\cdot\bm{e}_w'=1
-$$
-$$
-    |\bm{u}_w|^2=
-    (\bm{e}_w'\cdot\bm{e}_w')-
-    2\beta(\bm{e}_w'\cdot\bm{e}_x')+\beta^2=1、
-    \bm{e}_w\cdot\bm{e}_w=1
-$$
-そのため、各座標ごとの内積は以下の関係があることになる。
+ここで、基底ベクトルの内積が次のように**設定されている**ものとする。
 $$
     \bm{e}_w\cdot\bm{e}_w=1、
-    \bm{e}_w\cdot\bm{e}_x=
-    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta=
-    \cos\left(
-        \frac{\pi}{2}+\frac{\alpha}{2}
-    \right)
+    \bm{e}_x\cdot\bm{e}_w=0、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
 $$
+$$
+    \bm{e}_w\cdot\bm{e}_x=0、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+すると、基底ベクトルの大きさは以下の通りになる。
+$$
+    |\bm{u}_w'|=
+    \sqrt{\bm{u}_{w}'\cdot\bm{u}_{w}'}=
+    \sqrt{1+\beta^2}、
+    |\bm{u}_x'|=
+    \sqrt{\bm{u}_{x}'\cdot\bm{u}_{x}'}=1、
+$$
+$$
+    |\bm{u}_y'|=
+    \sqrt{\bm{u}_{y}'\cdot\bm{u}_{y}'}=1、
+    |\bm{u}_z'|=
+    \sqrt{\bm{u}_{z}'\cdot\bm{u}_{z}'}=1
+$$
+
+そのため、Galilei変換後の単位ベクトルは
+$$
+    \bm{e}_w'=
+    \frac{1}{\sqrt{1+\beta^2}}
+    (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}_x'=
+    \bm{e}_x'=\bm{e}_x、
+    \bm{e}_y'=\bm{e}_y、
+    \bm{e}_z''=\bm{e}_z'
+$$
+となることから、変換後の内積は以下の通りとなる。
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
-    \bm{e}_w'\cdot\bm{e}_x'=
-    \bm{e}_x'\cdot\bm{e}_w'=\frac{1}{2}\beta=
-    \cos\left(
-        \frac{\pi}{2}-\frac{\alpha}{2}
-    \right)
+    \bm{e}_x'\cdot\bm{e}_w'=
+    \frac{\beta}{\sqrt{1+\beta^2}}、
+    \bm{e}_y'\cdot\bm{e}_w'=0、
+    \bm{e}_z'\cdot\bm{e}_w'=0
 $$
-<p align="center">
-    <img width="40%" src="images/galilei_space.png">
-</p>
+$$
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \frac{\beta}{\sqrt{1+\beta^2}}、
+    \bm{e}_x'\cdot\bm{e}_x'=1、
+    \bm{e}_y'\cdot\bm{e}_x'=0、
+    \bm{e}_z'\cdot\bm{e}_x'=0
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_y'=0、
+    \bm{e}_x'\cdot\bm{e}_y'=0、
+    \bm{e}_y'\cdot\bm{e}_y'=1、
+    \bm{e}_z'\cdot\bm{e}_y'=0
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_z'=0、
+    \bm{e}_x'\cdot\bm{e}_z'=0、
+    \bm{e}_y'\cdot\bm{e}_z'=0、
+    \bm{e}_z'\cdot\bm{e}_z'=1
+$$
+ここで $\bm{e}_w\cdot\bm{e}_x$ と $\bm{e}_w'\cdot\bm{e}_x'$ の値が異なることが気になると思うが、これは座標系の取り方によってなるものであり間違ったものではないことに注意されたし。とはいうものの、これだと内積の計算には少し不便であるため、試しに内積を不変とする座標系の取り方がないか考えてみる。そこで、基底ベクトルの関係式が利用できそうなので、これを用いてみることにする。そのため、まず内積 $\bm{u}_w'\cdot\bm{u}_w'$ の内積をとってみると
+$$
+    \bm{u}_w'\cdot\bm{u}_w'=
+    (\bm{e}_w\cdot\bm{e}_w)+
+    2\beta(\bm{e}_w\cdot\bm{e}_x)+
+    \beta^2(\bm{e}_x\cdot\bm{e}_x)
+$$
+となるが、この内積は $|\bm{u}_w'|^2(\bm{e}_w'\cdot\bm{e}_w')$ でもあるため以下の式が求められる。
+$$
+    (\bm{e}_w\cdot\bm{e}_w)+
+    2\beta(\bm{e}_w\cdot\bm{e}_x)+
+    \beta^2(\bm{e}_x\cdot\bm{e}_x)=
+    |\bm{u}_w'|^2
+    (\bm{e}_w'\cdot\bm{e}_w')
+$$
+その他に内積 $\bm{u}_w'\cdot\bm{u}_x'$ をとることで、以下の式が得られる。
+$$
+    \bm{u}_w'\cdot\bm{u}_x'=
+    (\bm{e}_w\cdot\bm{e}_x)+
+    \beta(\bm{e}_x\cdot\bm{e}_x)=
+    |\bm{u}_w'||\bm{u}_x'|
+    (\bm{e}_w'\cdot\bm{e}_x')
+$$
+ここで、単位ベクトルの内積が不変な形になるものとすると
+$$
+    (\bm{e}_w'\cdot\bm{e}_w')=
+    (\bm{e}_w\cdot\bm{e}_w)、
+    (\bm{e}_w'\cdot\bm{e}_x')=
+    (\bm{e}_w\cdot\bm{e}_x)
+$$
+であり、$|\bm{u}_x'|=1、\bm{e}_x\cdot\bm{e}_x=1$ となることから以下の関係式が求められる。
+$$
+    \bm{e}_w\cdot\bm{e}_w=
+    \pm\frac{\beta}{1-|\bm{u}_w'|}、
+    \bm{e}_w\cdot\bm{e}_x=
+    \frac{\beta}{|\bm{u}_w'|-1}
+    \rightarrow
+    \bm{e}_w\cdot\bm{e}_w=
+    \bm{e}_w\cdot(\pm\bm{e}_x)
+$$
 
 　次にLorentz変換の場合、変換式は以下の通りであった。
 $$
@@ -289,7 +329,55 @@ $$
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
     \right)
 $$
-この場合もGalielei変換の時と同様な考えで、単位ベクトルの関係とそれらの内積を求めてみると
+このときの基底ベクトルを求めてみると
+$$
+    \bm{u}'_w=
+    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{u}'_x=
+    \gamma (\bm{e}_x+\beta\bm{e}_w)
+$$
+であり、このときも内積が不変な形になっていないため、こちらでも試しに
+$$
+    (\bm{e}_w'\cdot\bm{e}_w')=
+    (\bm{e}_w\cdot\bm{e}_w)、
+    (\bm{e}_w'\cdot\bm{e}_x')=
+    (\bm{e}_w\cdot\bm{e}_x)
+$$
+というように内積が不変になるところがあるか見てみると
+$$
+    |\bm{u}'_w|^2(\bm{e}_w\cdot\bm{e}_w)=
+    \gamma^2[
+        (\bm{e}_w\cdot\bm{e}_w)+
+        2\beta(\bm{e}_w\cdot\bm{e}_x)+
+        \beta^2
+    ]
+$$
+$$
+    |\bm{u}'_w|
+    |\bm{u}'_x|(\bm{e}_w\cdot\bm{e}_x)=
+    \gamma^2[
+        (\bm{e}_w\cdot\bm{e}_x)+
+        (1+\beta^2)
+        (\bm{e}_w\cdot\bm{e}_w)+
+        \beta
+    ]
+$$
+$$
+    |\bm{u}'_x|^2=
+    \gamma^2[
+        1+
+        2\beta(\bm{e}_x\cdot\bm{e}_w)+
+        \beta^2
+        (\bm{e}_w\cdot\bm{e}_w)
+    ]
+$$
+
+
+
+
+
+
+、単位ベクトルの関係とそれらの内積を求めてみると
 $$
     \bm{e}'_w=
     \gamma (\bm{e}_w+\beta\bm{e}_x)、
@@ -318,8 +406,8 @@ $$
 </p>
 　このように既存の座標系の単位ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から単位ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{x}$ で関連つけられていたため、
 $$
-    \omega=x^0、x=x^1、y=x^2、z=x^3、
-    \bm{u}_\omega=\bm{u}_0、
+    w=x^0、x=x^1、y=x^2、z=x^3、
+    \bm{u}_w=\bm{u}_0、
     \bm{u}_x=\bm{u}_1、
     \bm{u}_y=\bm{u}_2、
     \bm{u}_z=\bm{u}_3
