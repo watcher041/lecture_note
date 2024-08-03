@@ -2,17 +2,22 @@
 ## 特殊相対論から一般相対論へ
 
 　ここまで観測者同士が等速直線運動をしているものとして考えてきたわけだが、実際は重力の影響を受けており等加速度運動しているものと思われる。そのため、等加速度している系同士での変換がどのようになるか考えてみる。例えば、今 $x$ 方向に一定加速度 $a$ で移動しているものとすると、
+
 $$
+
     \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=a、
     \frac{\mathrm{d}^2x'}{\mathrm{d}t'^2}=0、
     t'=t
 $$
+
 となるため、以下の関係が成り立つものと考えられる。
+
 $$
     x'=x-\frac{1}{2}at^2=x-\frac{a}{2c^2}w^2、
     w'=w、
     (w=ct)
 $$
+
 これをLorentz変換のところでも見せた時空図で描写すると以下のようになる。
 <p align="center">
     <img width="40%" src="images/const.png">
@@ -23,20 +28,23 @@ $$
 <p align="center">
     <img width="40%" src="images/coordinate.png">
 </p>
-ここで注意することは、左から順に $x=r、\cdots$ というように等式が成り立つわけではなく、比較する座標系の関係で変化する。上記の場合だと
+ここで注意することは、$\bm{x}=(x,y,z)=(r,\theta,\phi)$ というような等式が成り立つわけではなく、比較する座標系の関係で変化する。実際に各座標の間で以下の関係が成り立つことからもうかがえる。
+
 $$
-    x=r\sin\theta\cos\phi、
-    y=r\sin\theta\sin\phi、
-    z=r\cos\theta
+    x = r\sin\theta\cos\phi、
+    y = r\sin\theta\sin\phi、
+    z = r\cos\theta
 $$
-というようになるが、この関係をベクトルで表すときに先ほどの表記のままだとどの座標系を用いているか分からないという問題が起こる。そこで、座標系ごとに単位ベクトル（各方向の単位ベクトル）というものを用意し、
+
+そのため、ベクトルの中身を表記する際はどの座標系を用いているか分かるように各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y,\bm{e}_z$ 、極座標系での単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
+
 $$
     \bm{x}=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    r\sin\theta\cos\phi\bm{e}_x+
-    r\sin\theta\sin\phi\bm{e}_y+
-    r\cos\theta\bm{e}_z
+    r\bm{e}_r+r_\theta\bm{e}_\theta+
+    r_\phi\bm{e}_\phi
 $$
+
 とすることで、直交座標系での関係式であることが見て分かる形になる。
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
