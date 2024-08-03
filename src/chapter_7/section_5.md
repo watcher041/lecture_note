@@ -45,7 +45,7 @@ $$
     r_\phi\bm{e}_\phi
 $$
 
-とすることで、直交座標系での関係式であることが見て分かる形になる。
+とすることで、それぞれ直交座標系と極座標系で表していることが分かる。
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
