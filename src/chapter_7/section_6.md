@@ -1,334 +1,1036 @@
 
-## 測地線方程式
+## 特殊相対論から一般相対論へ
 
-　特殊相対性理論において、運動方程式は
+　ここからは、等加速度運動している系同士での変換がどのようになるか見ていこう。例えば、今 $x$ 方向に一定加速度 $a$ で移動しているものとすると、
+
 $$
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
-    \bm{f}
-    \leftrightarrow
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
-    \bm{F}、
+
+    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=a、
+    \frac{\mathrm{d}^2x'}{\mathrm{d}t'^2}=0、
+    t'=t
+$$
+
+となるため、以下の関係が成り立つものと考えられる。
+
+$$
+    x'=x-\frac{1}{2}at^2=x-\frac{a}{2c^2}w^2、
+    w'=w、
+    (w=ct)
+$$
+
+これをLorentz変換のところでも見せた時空図で描写すると以下のようになる。
+<p align="center">
+    <img width="40%" src="images/const.png">
+</p>
+このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
+
+　一般的にベクトルは $\bm{x}$ というように太字で表記されるが、用いる座標系によってその中身の表記が異なってくる。例として、3次元直交座標系の場合だと $(x,y,z)$ というようになるが、3次元極座標を用いると $(r,\theta,\phi)$ というように表記される。
+<p align="center">
+    <img width="40%" src="images/coordinate.png">
+</p>
+ここで注意することは、$\bm{x}=(x,y,z)=(r,\theta,\phi)$ というような等式が成り立つわけではなく、比較する座標系の関係で変化する。このことは、各座標の間で以下の関係が成り立つことからもうかがえる。
+
+$$
+    x = r\sin\theta\cos\phi、
+    y = r\sin\theta\sin\phi、
+    z = r\cos\theta
+$$
+この関係により、直交座標系でのベクトルは
+$$
+    \bm{x}=(x,y,z)=
+    (r\sin\theta\cos\phi,
+    r\sin\theta\sin\phi,
+    r\cos\theta)
+$$
+というようになるわけだが、この表記だと一目見てどの座標系を利用しているのかが分からず不便である。
+そこで、どの座標系を利用しているか分かりやすいよう各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y,\bm{e}_z$ 、極座標系での単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
+$$
+    \bm{x}=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    r\sin\theta\cos\phi\bm{e}_x+
+    r\sin\theta\sin\phi\bm{e}_y+
+    r\cos\theta\bm{e}_z
+$$
+$$
+    \bm{x}=
+    r\bm{e}_r+r_\theta\bm{e}_\theta+
+    r_\phi\bm{e}_\phi、
+    (r_\theta、r_\phi：各角度成分での長さ)
+$$
+
+というように表記すると、それぞれ直交座標系と極座標系を利用していることが分かる。
+<p align="center">
+    <img width="40%" src="images/basis_vector.png">
+</p>
+
+更に言うと、上記のベクトルの関係は
+
+$$
+    \bm{x}=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    r\bm{e}_r+r_\theta\bm{e}_\theta+
+    r_\phi\bm{e}_\phi
+$$
+
+とも書けるわけだが、もし $\bm{e}_x,\bm{e}_y,\bm{e}_z$ がそれぞれ $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ により置き換えることができれば直交座標系から極座標系へ変換ができることになる。そこで、単位ベクトル同士の関係を見るために、一般的に
+
+$$
+    \bm{x}(x,y,z)=\bm{x}(r,\theta,\phi)
+$$
+
+というように直交座標系と極座標系で表したものが等しいものとする。そして微小変化をとることで
+$$
+    \mathrm{d}\bm{x}=
+    \bm{u}_x\mathrm{d}x+
+    \bm{u}_y\mathrm{d}y+
+    \bm{u}_z\mathrm{d}z=
+    \bm{u}_r\mathrm{d}r+
+    \bm{u}_\theta\mathrm{d}\theta+
+    \bm{u}_\phi\mathrm{d}\phi、
+$$
+$$
     \left(
-    \bm{p}=
-    \frac{m_0\bm{v}}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \bm{u}_x=
+    \frac{\partial \bm{x}}{\partial x}、
+    \bm{u}_y=
+    \frac{\partial \bm{x}}{\partial y}、
+    \bm{u}_z=
+    \frac{\partial \bm{x}}{\partial z}、
+    \bm{u}_r=
+    \frac{\partial \bm{x}}{\partial r}、
+    \bm{u}_\theta=
+    \frac{\partial \bm{x}}{\partial \theta}、
+    \bm{u}_\phi=
+    \frac{\partial \bm{x}}{\partial \phi}
     \right)
 $$
-という形で書けたわけなので、これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
+
+と展開できる。すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
+
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \bm{e}_r=
+    \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
+    \bm{e}_\theta=
+    \frac{\bm{u}_\theta}
+    {\left|\bm{u}_\theta\right|}、
+    \bm{e}_\phi=
+    \frac{\bm{u}_\phi}
+    {\left|\bm{u}_\phi\right|}
+$$
+
+という関係を満たしているとすると、まず各基底ベクトルは $\bm{e}_x,\bm{e}_y,\bm{e}_z$ により
+$$
+    \bm{u}_r=
+    \sin\theta\cos\phi\bm{e}_x+
+    \sin\theta\sin\phi\bm{e}_y+
+    \cos\phi\bm{e}_z、
+$$
+$$
+    \bm{u}_\theta=
+    r\cos\theta\cos\phi\bm{e}_x+
+    r\cos\theta\sin\phi\bm{e}_y-
+    r\sin\theta\bm{e}_z、
+$$
+$$
+    \bm{u}_\phi=
+    -r\sin\theta\sin\phi\bm{e}_x+
+    r\sin\theta\cos\phi\bm{e}_y
+$$
+となる。次に、基底ベクトルの大きさについては直交座標系において単位ベクトル同士の内積が
+$$
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_y\cdot\bm{e}_z=0
+$$
+$$
+    \bm{e}_z\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_y=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+と**設定されている**ことから、各成分の基底ベクトルの大きさも求められる。
+$$
+    \left|\bm{u}_r\right|=
+    \sqrt{\bm{u}_r\cdot\bm{u}_r}=1、
+    \left|\bm{u}_\theta\right|=
+    \sqrt{\bm{u}_\theta\cdot\bm{u}_\theta}=r、
+    \left|\bm{u}_\phi\right|=
+    \sqrt{\bm{u}_\phi\cdot\bm{u}_\phi}=
+    r\sin\theta
+$$
+したがって、各成分の単位ベクトルは
+$$
+    \bm{e}_r=
+    \sin\theta\cos\phi\bm{e}_x+
+    \sin\theta\sin\phi\bm{e}_y+
+    \cos\phi\bm{e}_z
+$$
+$$
+    \bm{e}_\theta=
+    \cos\theta\cos\phi\bm{e}_x+
+    \cos\theta\sin\phi\bm{e}_y-
+    \sin\theta\bm{e}_z
+$$
+$$
+    \bm{e}_\phi=
+    -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
+$$
+と言う関係になっていることが分かる。そのため、この関係を先ほどの式に代入してみると
+
+$$
+    x=
+    r\sin\theta\cos\phi+
+    r_\theta\cos\theta\cos\phi-
+    r_\phi\sin\phi
+$$
+$$
+    y=
+    r\sin\theta\sin\phi+
+    r_\theta\cos\theta\sin\phi+
+    r_\phi\cos\phi
+$$
+$$
+    z=
+    r\cos\phi-r_\theta\sin\theta
+$$
+
+というようになるが、先ほどの変換式と見比べてみることで全て0になることが分かる。
+$$
+    r_\theta=r_\phi=0
+$$
+
+各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
+$$
+    w'=w、x'=-\beta w+x、y'=y、z'=z、
+    \left(\beta=\frac{V}{c}\right)
+$$
+という変換であったため、ベクトル $\bm{x}$ は以下の通りに書ける。
+$$
+    \bm{x}=
+    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    w'\bm{e}_w+
+    (x'+\beta w')\bm{e}_x+
+    y'\bm{e}_y+z'\bm{e}_z
+$$
+一方で、変換先の座標を用いて
+$$
+    \bm{x}=
+    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    w'\bm{e}_w'+x'\bm{e}_x'+
+    y'\bm{e}_y'+z'\bm{e}_z'
+$$
+となるが、まず基底ベクトルの方は以下の通りになる。
+$$
+    \bm{u}_w'=
+    \frac{\partial\bm{x}}{\partial w'}=
+    \bm{e}_w+\beta\bm{e}_x、
+    \bm{u}_x'=
+    \frac{\partial\bm{x}}{\partial x'}=
+    \bm{e}_x、
+    \bm{u}_y'=
+    \frac{\partial\bm{x}}{\partial y'}=
+    \bm{e}_y、
+    \bm{u}_z'=
+    \frac{\partial\bm{x}}{\partial z'}=
+    \bm{e}_z
+$$
+ここで、基底ベクトルの内積が次のように**設定されている**ものとする。
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=0、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_x=0、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+すると、基底ベクトルの大きさは以下の通りになる。
+$$
+    |\bm{u}_w'|=
+    \sqrt{\bm{u}_{w}'\cdot\bm{u}_{w}'}=
+    \sqrt{1+\beta^2}、
+    |\bm{u}_x'|=
+    \sqrt{\bm{u}_{x}'\cdot\bm{u}_{x}'}=1、
+$$
+$$
+    |\bm{u}_y'|=
+    \sqrt{\bm{u}_{y}'\cdot\bm{u}_{y}'}=1、
+    |\bm{u}_z'|=
+    \sqrt{\bm{u}_{z}'\cdot\bm{u}_{z}'}=1
+$$
+
+そのため、Galilei変換後の単位ベクトルは
+$$
+    \bm{e}_w'=
+    \frac{1}{\sqrt{1+\beta^2}}
+    (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}_x'=
+    \bm{e}_x'=\bm{e}_x、
+    \bm{e}_y'=\bm{e}_y、
+    \bm{e}_z''=\bm{e}_z'
+$$
+となることから、関係式は以下の通りになる。
+
+$$
+    w=\frac{w'}{\sqrt{1+\beta^2}}、
+    x=x'+\frac{\beta w'}{\sqrt{1+\beta^2}}、
+    y=y'、z=z'
+$$
+
+このように成立していないことが分かるため、内積の値に問題があることが予想される。そのため、
+
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_x=-\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+というようにしてみると、一方の内積も
+
+$$
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_x'\cdot\bm{e}_w'=
+    \frac{1}{2}\beta、
+    \bm{e}_y'\cdot\bm{e}_w'=0、
+    \bm{e}_z'\cdot\bm{e}_w'=0
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \frac{1}{2}\beta、
+    \bm{e}_x'\cdot\bm{e}_x'=1、
+    \bm{e}_y'\cdot\bm{e}_x'=0、
+    \bm{e}_z'\cdot\bm{e}_x'=0
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_y'=0、
+    \bm{e}_x'\cdot\bm{e}_y'=0、
+    \bm{e}_y'\cdot\bm{e}_y'=1、
+    \bm{e}_z'\cdot\bm{e}_y'=0
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_z'=0、
+    \bm{e}_x'\cdot\bm{e}_z'=0、
+    \bm{e}_y'\cdot\bm{e}_z'=0、
+    \bm{e}_z'\cdot\bm{e}_z'=1
+$$
+
+となり変換式を満たすことが分かる。さらには、このときの各座標は以下の図のような関係にある。
+
+<p align="center">
+    <img width="40%" src="images/galilei_space.png">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+　次にLorentz変換の場合、変換式は以下の通りであった。
+$$
+    w'=\gamma(w-\beta x)、
+    x'=\gamma(-\beta w+x)、
+    y'=y、
+    z'=z、
     \left(
-        \frac{\partial\mathcal{L}}
-        {\partial \dot{q}}
-    \right)-
-    \left(
-        \frac{\partial\mathcal{L}}
-        {\partial q}
-    \right)=0
-$$
-これと先ほどの運動方程式を比較すると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
-$$
-    \frac{\partial\mathcal{L}}{\partial v_x}=
-    \frac{m_0v_x}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\partial\mathcal{L}}{\partial v_y}=
-    \frac{m_0v_y}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\partial\mathcal{L}}{\partial v_z}=
-    \frac{m_0v_z}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-$$
-$$
-    \frac{\partial\mathcal{L}}{\partial x}=
-    -\left(
-        \frac{\partial U}{\partial x}
-    \right)、
-     \frac{\partial\mathcal{L}}{\partial y}=
-     -\left(
-        \frac{\partial U}{\partial y}
-    \right)、
-    \frac{\partial\mathcal{L}}{\partial z}=
-    -\left(
-        \frac{\partial U}{\partial z}
+        \gamma=\frac{1}{\sqrt{1-\beta^2}}
     \right)
 $$
-であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
+このときの基底ベクトルを求めてみると
 $$
-    \mathcal{L}=
-    -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
-    \simeq
-    \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
+    \bm{u}'_w=
+    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{u}'_x=
+    \gamma (\bm{e}_x+\beta\bm{e}_w)
 $$
-次に、前回でも登場した計量 $g_{\mu\nu}$ により
+であり、このときも内積が不変な形になっていないため、こちらでも試しに
 $$
-    \sqrt{1-\frac{\bm{v}^2}{c^2}}=
-    \frac{1}{c}
+    (\bm{e}_w'\cdot\bm{e}_w')=
+    (\bm{e}_w\cdot\bm{e}_w)、
+    (\bm{e}_w'\cdot\bm{e}_x')=
+    (\bm{e}_w\cdot\bm{e}_x)
+$$
+というように内積が不変になるところがあるか見てみると
+$$
+    |\bm{u}'_w|^2(\bm{e}_w\cdot\bm{e}_w)=
+    \gamma^2[
+        (\bm{e}_w\cdot\bm{e}_w)+
+        2\beta(\bm{e}_w\cdot\bm{e}_x)+
+        \beta^2
+    ]
+$$
+$$
+    |\bm{u}'_w|
+    |\bm{u}'_x|(\bm{e}_w\cdot\bm{e}_x)=
+    \gamma^2[
+        (\bm{e}_w\cdot\bm{e}_x)+
+        (1+\beta^2)
+        (\bm{e}_w\cdot\bm{e}_w)+
+        \beta
+    ]
+$$
+$$
+    |\bm{u}'_x|^2=
+    \gamma^2[
+        1+
+        2\beta(\bm{e}_x\cdot\bm{e}_w)+
+        \beta^2
+        (\bm{e}_w\cdot\bm{e}_w)
+    ]
+$$
+
+
+
+
+
+
+、単位ベクトルの関係とそれらの内積を求めてみると
+$$
+    \bm{e}'_w=
+    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}'_x=
+    \gamma (\bm{e}_x+\beta\bm{e}_w)
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=
+    \bm{e}_x\cdot\bm{e}_w=-\beta=
+    \cos\left(
+        \frac{\pi}{2}+\alpha
+    \right)
+$$
+$$
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \bm{e}_x'\cdot\bm{e}_w'=\beta=
+    \cos\left(
+        \frac{\pi}{2}-\alpha
+    \right)
+$$
+となり、座標も記載すると以下の図（ローデル図）の通りになる。
+<p align="center">
+    <img width="40%" src="images/lorentz_space.png">
+</p>
+　このように既存の座標系の単位ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から単位ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{x}$ で関連つけられていたため、
+$$
+    w=x^0、x=x^1、y=x^2、z=x^3、
+    \bm{u}_w=\bm{u}_0、
+    \bm{u}_x=\bm{u}_1、
+    \bm{u}_y=\bm{u}_2、
+    \bm{u}_z=\bm{u}_3
+$$
+とおき、$\mathrm{d}\bm{x}$ を以下のように書く。
+$$
+    \mathrm{d}\bm{x}=
+    \sum_{\mu}\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu'}\mathrm{d}x^{\mu'}\bm{u}_{\mu'}
+$$
+$$
+    (\mathrm{d}s)^2=
+    \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
+    \sum_{\mu,\nu=0}^{3}
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    \sum_{\mu',\nu'=0}^{3}
+    (\bm{u}_{\mu'}\cdot\bm{u}_{\nu'})
+    \mathrm{d}x^{\mu'}\mathrm{d}x^{\nu'}
+$$
+ここで片方の内積が分かることで、もう片方の内積や返還前後の関係が分かるため、これはリーマン計量と呼ばれている。
+
+
+
+
+　一方で、相対論的力学でもあったようにLorentz変換においては以下の形で不変となっていた。
+$$
+    (\mathrm{d}w)^2-
+    (\mathrm{d}x)^2-
+    (\mathrm{d}y)^2-
+    (\mathrm{d}z)^2=
+    (\mathrm{d}w')^2-
+    (\mathrm{d}x')^2-
+    (\mathrm{d}y')^2-
+    (\mathrm{d}z')^2
+$$
+そのため、これを内積として定義した空間（Minkofsky空間）を考えると、内積の形が不変となって便利であることがうかがえる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+これを見ても分かるように内積から求めると変換式がおかしくなってしまうため、逆に
+
+
+
+あるいは、これをさらに扱い易くするよう添え字に行列の番号を振って
+$$
+\begin{pmatrix}
+    x'^0 \\
+    x'^1 \\
+    x'^2 \\
+    x'^3
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \alpha_{ 0}^0 & \alpha_{ 1}^0 & 
+    \alpha_{ 2}^0 & \alpha_{ 3}^0 \\
+    \alpha_{ 0}^1 & \alpha_{ 1}^1 & 
+    \alpha_{ 2}^1 & \alpha_{ 3}^1 \\
+    \alpha_{ 0}^2 & \alpha_{ 1}^2 & 
+    \alpha_{ 2}^2 & \alpha_{ 3}^2 \\
+    \alpha_{ 0}^3 & \alpha_{ 1}^3 & 
+    \alpha_{ 2}^3 & \alpha_{ 3}^3 
+\end{pmatrix}
+\begin{pmatrix}
+    x^0 \\
+    x^1 \\
+    x^2 \\
+    x^3
+\end{pmatrix}
+$$
+とおくと、各成分ごと（ベクトルではない）に簡略化して書ける。
+$$
+    x'^\mu=
+    \sum_{\nu=0}^{3}\alpha_{ \nu}^\mu x^\nu　
+    (\mu=0,1,2,3)
+$$
+あるいは、今ここで $\nu$ に対して総和をとっているが、行列においては下付き添え字（行）と上付き添え字（列）の掛け算は足し合わせることになるので、以下のように総和記号を省いた表記（**Einsteinの縮約記法**）がよく用いられている。
+$$
+    x'^\mu=\alpha_{ \nu}^\mu x^\nu　
+    (\mu=0,1,2,3)
+$$
+一方で、Lorentz変換においても
+$$
+    w'=\gamma(w-\beta x)、
+    x'=\gamma(-\beta w+x)、
+    y'=y、
+    z'=z、
     \left(
-    \frac{\mathrm{d}s}{\mathrm{d}t}
-    \right)、
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
-    \sqrt{
-    \eta_{\mu\nu}
-    \frac{\mathrm{d}x^\mu}{\mathrm{d}t}
-    \frac{\mathrm{d}x^\nu}{\mathrm{d}t}}
+        \gamma=\frac{1}{\sqrt{1-\beta^2}}
+    \right)
+$$
+となるため、同じように行列にしてみると
+$$
+\begin{pmatrix}
+    w' \\
+    x' \\
+    y' \\
+    z'
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \gamma & -\gamma\beta & 0 & 0 \\
+    -\gamma\beta & \gamma & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+    w \\
+    x \\
+    y \\
+    z
+\end{pmatrix}
+$$
+であるため、先ほどと同様に $\alpha$ を用いた表記をすることができる。ところが、つい先ほど扱った加速度の系の場合だと
+$$
+    w'=w、x'=-\frac{a}{2c^2}w^2+x、
+    y'=y,z'=z
+$$
+というように、$w^2$ が関わってきてしまうため、一概に同じような関係式で表せないことが分かる。そこで、一般的に以下のような関数で表されるものとする。
+$$
+    w'=w'(w,x,y,z)、
+    x'=x'(w,x,y,z)、
+    y'=y'(w,x,y,z)、
+    z'=z'(w,x,y,z)
+$$
+そして、これらの微小変化をとると
+$$
+    \mathrm{d}w'=
+    \left(
+        \frac{\partial w'}{\partial w}
+    \right)
+    \mathrm{d}w+
+    \left(
+        \frac{\partial w'}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial w'}{\partial y}
+    \right)
+    \mathrm{d}y+
+    \left(
+        \frac{\partial w'}{\partial z}
+    \right)
+    \mathrm{d}z
+$$
+$$
+    \mathrm{d}x'=
+    \left(
+        \frac{\partial x'}{\partial w}
+    \right)
+    \mathrm{d}w+
+    \left(
+        \frac{\partial x'}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial x'}{\partial y}
+    \right)
+    \mathrm{d}y+
+    \left(
+        \frac{\partial x'}{\partial z}
+    \right)
+    \mathrm{d}z
+$$
+$$
+    \mathrm{d}y'=
+    \left(
+        \frac{\partial y'}{\partial w}
+    \right)
+    \mathrm{d}w+
+    \left(
+        \frac{\partial y'}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial y'}{\partial y}
+    \right)
+    \mathrm{d}y+
+    \left(
+        \frac{\partial y'}{\partial z}
+    \right)
+    \mathrm{d}z
+$$
+$$
+    \mathrm{d}z'=
+    \left(
+        \frac{\partial z'}{\partial w}
+    \right)
+    \mathrm{d}w+
+    \left(
+        \frac{\partial z'}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial z'}{\partial y}
+    \right)
+    \mathrm{d}y+
+    \left(
+        \frac{\partial z'}{\partial z}
+    \right)
+    \mathrm{d}z
+$$
+であるのだが、これ書き直すと以下のような形で書けることが分かる。
+$$
+\begin{pmatrix}
+    \mathrm{d}w' \\
+    \mathrm{d}x' \\
+    \mathrm{d}y' \\
+    \mathrm{d}z'
+\end{pmatrix}
+=
+\begin{pmatrix}
+    \frac{\partial w'}{\partial w} & 
+    \frac{\partial w'}{\partial x} & 
+    \frac{\partial w'}{\partial y} & 
+    \frac{\partial w'}{\partial z} \\
+    \frac{\partial x'}{\partial w} & 
+    \frac{\partial x'}{\partial x} & 
+    \frac{\partial x'}{\partial y} & 
+    \frac{\partial x'}{\partial z} \\
+    \frac{\partial y'}{\partial w} & 
+    \frac{\partial y'}{\partial x} & 
+    \frac{\partial y'}{\partial y} & 
+    \frac{\partial y'}{\partial z} \\
+    \frac{\partial z'}{\partial w} & 
+    \frac{\partial z'}{\partial x} & 
+    \frac{\partial z'}{\partial y} & 
+    \frac{\partial z'}{\partial z} \\
+\end{pmatrix}
+\begin{pmatrix}
+    \mathrm{d}w \\
+    \mathrm{d}x \\
+    \mathrm{d}y \\
+    \mathrm{d}z
+\end{pmatrix}
+$$
+これは先ほどの各成分ごとの表記と同様な形で
+$$
+    \mathrm{d}x'^\mu=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
+    \mathrm{d}x^\nu　
+    (\mu=0,1,2,3)
+$$
+と記述できるため、先ほどの一定加速度での行列は次の通りになる。
+$$
+\begin{pmatrix}
+    \mathrm{d}x'^0 \\
+    \mathrm{d}x'^1 \\
+    \mathrm{d}x'^2 \\
+    \mathrm{d}x'^3
+\end{pmatrix}
+=
+\begin{pmatrix}
+    1 & 0 & 0 & 0 \\
+    -ax^0/c^2 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+    \mathrm{d}x^0 \\
+    \mathrm{d}x^1 \\
+    \mathrm{d}x^2 \\
+    \mathrm{d}x^3
+\end{pmatrix}
+$$
+さらに、ここでの偏微分の部分を分母の添え字を用いて簡潔に表現すると以下のようになる。
+$$
+    e_{\nu}^\mu=
+    \partial_\nu x'^\mu=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
     \rightarrow
-    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \mathrm{d}x'^\mu=
+    e_{\nu}^\mu\mathrm{d}x^\nu
 $$
-と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
+あるいは、行列の見方を変えると
 $$
-    \frac{\partial\mathcal{L}}
-    {\partial \dot{x}^\lambda}=
-    -m_0c
-    \frac{\partial}
-    {\partial \dot{x}^\lambda}
-    \sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
-    -\frac{m_0c}{2\dot{s}}
-    (g_{\lambda\mu}\dot{x}^{\nu}+
-    g_{\lambda\mu}\dot{x}^{\mu})=
-    -m_0c
+\begin{pmatrix}
+    \mathrm{d}w' \\
+    \mathrm{d}x' \\
+    \mathrm{d}y' \\
+    \mathrm{d}z'
+\end{pmatrix}
+=
+\mathrm{d}w
+\begin{pmatrix}
+    \frac{\partial w'}{\partial w} \\
+    \frac{\partial x'}{\partial w} \\
+    \frac{\partial y'}{\partial w} \\
+    \frac{\partial z'}{\partial w} 
+\end{pmatrix}+
+\mathrm{d}x
+\begin{pmatrix}
+    \frac{\partial w'}{\partial x} \\
+    \frac{\partial x'}{\partial x} \\
+    \frac{\partial y'}{\partial x} \\
+    \frac{\partial z'}{\partial x} 
+\end{pmatrix}+
+\mathrm{d}y
+\begin{pmatrix}
+    \frac{\partial w'}{\partial y} \\
+    \frac{\partial x'}{\partial y} \\
+    \frac{\partial y'}{\partial y} \\
+    \frac{\partial z'}{\partial y} 
+\end{pmatrix}+
+\mathrm{d}z
+\begin{pmatrix}
+    \frac{\partial w'}{\partial z} \\
+    \frac{\partial x'}{\partial z} \\
+    \frac{\partial y'}{\partial z} \\
+    \frac{\partial z'}{\partial z} 
+\end{pmatrix}
+$$
+というように、単位ベクトルの和の形にもなるため、次のように書くこともできる。
+$$
+    \mathrm{d}\bm{x}'=
+    \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \left(
-    g_{\lambda\mu}
-    \frac{\mathrm{d}x^{\mu}}
-    {\mathrm{d}s}
+        \bm{e}_{\nu}=
+        \frac{\partial \bm{x}'}
+        {\partial x^\nu}
     \right)
+
+$$
+そして、この大きさを求めるために内積をとると
+$$
+    \mathrm{d}s^2=
+    \mathrm{d}\bm{x}'\cdot\mathrm{d}\bm{x}'=
+    (\bm{e}_\mu\cdot\bm{e}_\nu)\ 
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    g_{\mu\nu}
+    \mathrm{d}x^\mu\mathrm{d}x^\nu　
+    (g_{\mu\nu}=\bm{e}_\mu\cdot\bm{e}_\nu)
+$$
+となるが、ここで現れる $g_{\mu\nu}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる。
+$$
+    \mathrm{d}s^2=
+    g'_{\mu\nu}
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    g_{\lambda\tau}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau、
+    （g'_{\mu\nu}=
+    \bm{e}'_\mu\cdot\bm{e}'_\nu、
+    g_{\lambda\tau}=
+    \bm{e}_\lambda\cdot\bm{e}_\tau
+    ）
+$$
+この関係が成り立つかどうかは、まず
+$$
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    \partial_\lambda x'^{\mu}
+    \mathrm{d}x^\lambda
+    \partial_\tau x'^{\nu}
+    \mathrm{d}x^\tau=
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau
+$$
+と展開することができ、これに計量 $g'_{\mu\nu}$ をかけると
+$$
+    g'_{\mu\nu}
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu=
+    g'_{\mu\nu}
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau
+$$
+であり、同じように $g_{\lambda\tau}\mathrm{d}x^\lambda\mathrm{d}x^\tau$ も展開してみると
+$$
+    g_{\lambda\tau}
+    \mathrm{d}x^\lambda\mathrm{d}x^\tau=
+    g_{\lambda\tau}
+    \partial'_\mu x^{\lambda}
+    \partial'_\nu x^{\tau}
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu
+$$
+というようになるため、以下の関係式が成り立ち互いに代入することで元の $\mathrm{d}s^2$ の関係式を満たしていることが確認できる。
+$$
+    g'_{\mu\nu}=
+    g_{\lambda\tau}
+    \partial'_\mu x^{\lambda}
+    \partial'_\nu x^{\tau}、
+    g_{\lambda\tau}=
+    g'_{\mu\nu}
+    \partial_\lambda x'^{\mu}
+    \partial_\tau x'^{\nu}
+$$
+ここまでで、$\mathrm{d}s^2$ の式というは今までのベクトルの積の形をしていないように見えるが
+$$
+    \mathrm{d}x_\mu=
+    g_{\mu\nu}\mathrm{d}x^{\nu}、
+    \mathrm{d}x_\nu=
+    g_{\mu\nu}\mathrm{d}x^{\mu}
+$$
+というように定義することで、次のように積の形で表記することもできる。
+$$
+    \mathrm{d}s^2=
+    \mathrm{d}x'^\mu\mathrm{d}x'_\mu=
+    \mathrm{d}x'_\nu\mathrm{d}x'^\nu=
+    \mathrm{d}x^\lambda\mathrm{d}x_\lambda=
+    \mathrm{d}x_\tau\mathrm{d}x^\tau
+$$
+また、$g_{\mu\nu}$ の逆行列で $g^{\mu\nu}$ というように書くと
+$$
+    \mathrm{d}x^{\nu}=
+    g^{\nu\lambda}\mathrm{d}x_{\lambda} 、
+    \mathrm{d}x^{\mu}=
+    g^{\mu\tau}\mathrm{d}x_{\tau}
+$$
+であるから、以下のように逆行列の性質を利用して等式が成り立つことが分かる。
+$$
+    \mathrm{d}x_\mu=
+    g_{\mu\nu}\mathrm{d}x^{\nu}=
+    g_{\mu\nu}g^{\nu\lambda}
+    \mathrm{d}x_{\lambda}=
+    \delta_\mu^\lambda\mathrm{d}x_{\lambda}=
+    \mathrm{d}x_{\mu}
 $$
 $$
-    \frac{\partial\mathcal{L}}
-    {\partial x^\lambda}=
-    -m_0c
-    \frac{\partial}
-    {\partial x^\lambda}
-    \sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
-    \frac{\partial U}{\partial x^\lambda}=
-    -\frac{m_0c\dot{s}}{2}
-    \left(
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-        \frac{\mathrm{d}x^{\mu}}
-        {\mathrm{d}s}
-        \frac{\mathrm{d}x^{\nu}}
-        {\mathrm{d}s}
-    \right)-
-    \frac{\partial U}{\partial x^\lambda}
-$$
-となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
-以上の結果を上記の運動方程式に代入すると以下のような形になる。
-$$
-    m_0c\dot{s}
-    \left[
-    \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} s}
-    \frac{\mathrm{d}x^{\mu}}
-    {\mathrm{d}s}+
-    g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}-
-    \frac{1}{2}
-    \left(
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-        \frac{\mathrm{d}x^{\mu}}
-        {\mathrm{d}s}
-        \frac{\mathrm{d}x^{\nu}}
-        {\mathrm{d}s}
-    \right)\right]-
-    \frac{\partial U}{\partial x^\lambda}=0
-$$
-ここで、計量に関しての微分が
-$$
-    \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} s}=
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}
-    \frac{\mathrm{d} x^\nu}
-    {\mathrm{d} s}
-$$
-であるため、これを踏まえて整理すると次の通りになる。
-$$
-    m_0c\dot{s}
-    \left[
-    g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}+
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
-        \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
-    \right]-
-    \frac{\partial U}{\partial x^\lambda}=0
-$$
-仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
-$$
-    g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}+
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
-        \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
-$$
-となるわけだが、ここで以下のように変形する。
-$$
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
-        \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
-    \frac{1}{2}
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
-$$
-そして、計量の微分を展開してみると
-$$
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}=
-    \frac{\partial}{\partial x^\nu}
-    (\bm{e}_\lambda\cdot\bm{e}_\mu)=
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}\cdot\bm{e}_\mu+
-    \bm{e}_\lambda\cdot
-    \frac{\partial\bm{e}_\mu}
-    {\partial x^\nu}
-$$
-であり、ここで**第１種クリストフェル記号**を
-$$
-    \Gamma_{\nu\lambda,\mu}=
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}\cdot\bm{e}_\mu=
-    \bm{e}_\mu\cdot
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}
-$$
-というように定義することで、
-$$
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}=
-    \Gamma_{\nu\lambda,\mu}+
-    \Gamma_{\nu\mu,\lambda}
-$$
-となる。同様に、その他の偏微分についても
-$$
-    \frac{\partial g_{\lambda\nu}}
-    {\partial x^\mu}=
-    \Gamma_{\mu\lambda,\nu}+
-    \Gamma_{\mu\nu,\lambda}、
-    \frac{\partial g_{\mu\nu}}
-    {\partial x^\lambda}=
-    \Gamma_{\lambda\mu,\nu}+
-    \Gamma_{\lambda\nu,\mu}
-$$
-となるため、以下のような関係が成り立つことが分かる。
-$$
-    \Gamma_{\mu\nu,\lambda}=
-    \frac{1}{2}
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
+    \mathrm{d}x_\nu=
+    g_{\mu\nu}\mathrm{d}x^{\mu}=
+    g_{\mu\nu}g^{\mu\tau}
+    \mathrm{d}x_{\tau}=
+    \delta_\nu^\tau\mathrm{d}x_{\tau}=
+    \mathrm{d}x_{\nu}
 $$
 
-そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
+実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
 $$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
-    g^{k\lambda}
-    \Gamma_{\mu\nu,\lambda}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
-$$
-これは**第２種クリストッフェル記号**を用いて
-$$
-    \Gamma^{k}_{\mu\nu}=
-    g^{k\lambda}
-    \Gamma_{\mu\nu,\lambda}=
-    \frac{1}{2}g^{k\lambda}
-    \left(
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
-    \right)
-$$
-により、次の**測地線方程式**の形で記載される。
-$$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
-    \Gamma^{k}_{\mu\nu}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
-$$
-この式は物体がRiemann空間内を最短距離で通るということを前提にして求められるもので、例として点Aから点Bへ物体が移動するものとすると
-$$
-    s=\int_A^B\mathrm{d}s=
-    \int_A^B
-    \frac{\mathrm{d}s}{\mathrm{d}t}
-    \mathrm{d}t=
-    \int_A^B
-    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \mathrm{d}t'
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
     \mathrm{d}t
-$$
-が最小となる（$\delta s=0$）ときの関係式からも確認できる。特殊相対性理論においては、$g_{\mu\nu}=\eta_{\mu\nu}$（Lorentz変換）とするとクリストッフェル記号は0となり
-$$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}=0、
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
-    \sqrt{
-        \eta_{\mu\nu}
-        \dot{x}^{\mu} \dot{x}^{\nu}
-    }=
-    \sqrt{c^2-\bm{v}^2}
-$$
-となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
-$$
-    \mathrm{d}\tau=
-    \frac{\dot{s}}{c}\mathrm{d}t=
-    \frac{\mathrm{d}s}{c}=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
-    \mathrm{d}t
 $$
-とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
+であったが、変位の形に整理して二乗にすると不変な形をしていることが分かる（Galilei変換、等加速度系の変換でも別の形で不変な形になる）。
 $$
-    m_0c\dot{s}
-    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=0
-    \rightarrow
-    \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
-    \left(
-        p^k=
-        m_0
-        \frac{\mathrm{d}x^k}
-        {\mathrm{d}\tau}
-    \right)
+    \mathrm{d}w'^2-
+    \mathrm{d}x'^2-
+    \mathrm{d}y'^2-
+    \mathrm{d}z'^2=
+    \mathrm{d}w^2-
+    \mathrm{d}x^2-
+    \mathrm{d}y^2-
+    \mathrm{d}z^2
 $$
-というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量呼ばれており、右辺に力がある場合には $f^k$ （4元力）となる。このように、今までは速度に応じて質量が変化するものと思われてきたが、実は時間の進み方が変化していたことが分かる。
+そのため、このときの計量は以下の形をしているものと考えられる。
+$$
+    g_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & -1
+    \end{pmatrix}
+$$
+しかし、このままだと各座標ごとの単位ベクトルが
+$$
+    \bm{e}_0=
+    \begin{pmatrix}
+        \gamma \\ -\gamma\beta \\ 0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_1=
+    \begin{pmatrix}
+        -\gamma\beta \\ \gamma \\ 0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_2=
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}、
+    \bm{e}_3=
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+$$
+であることから、計量の値は
+$$
+    g_{00}=\bm{e}_0\cdot\bm{e}_0=
+    \frac{1+\beta^2}{1-\beta^2}\neq 1、
+    g_{11}\cdots
+$$
+というように別の値がでてきてしまう。そこで、
+Lorentz変換の形を虚時間を用いて
+$$
+    x'^0=
+    \gamma(x^0-\mathrm{i}\beta x^1)、
+    x'^1=
+    \gamma(x^1+\mathrm{i}\beta x^0)、
+    x'^2=x^2、x'^3=x^3、
+    (x^0=\mathrm{i}w)
+$$
+というようにすると、単位ベクトルが
+$$
+    \bm{e}_0=
+    \begin{pmatrix}
+        \gamma \\ 
+        \mathrm{i}\gamma\beta \\ 
+        0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_1=
+    \begin{pmatrix}
+        -\mathrm{i}\gamma\beta \\ 
+        \gamma \\ 
+        0 \\ 0
+    \end{pmatrix}、
+    \bm{e}_2=
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}、
+    \bm{e}_3=
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+$$
+となり、このときの計量は以下の形になる。
+$$
+    g_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
+$$
+この場合だと、以下の形で不変な形になることが分かる。
+$$
+    -\mathrm{d}w'^2+
+    \mathrm{d}x'^2+
+    \mathrm{d}y'^2+
+    \mathrm{d}z'^2=
+    -\mathrm{d}w^2+
+    \mathrm{d}x^2+
+    \mathrm{d}y^2+
+    \mathrm{d}z^2
+$$
+
+以上のことから、座標に含まれた虚数によってあたかも計量が別の形になっているように見えていたことが考えられ、この見かけの計量はよく**Minkofsky計量**と呼ばれている。
+$$
+    \eta_{\mu\nu}=
+    \begin{pmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & -1 & 0 & 0 \\
+        0 & 0 & -1 & 0 \\
+        0 & 0 & 0 & -1
+    \end{pmatrix}
+    または\ 
+    \eta_{\mu\nu}=
+    \begin{pmatrix}
+        -1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1
+    \end{pmatrix}
+$$
 
 
+このように、特殊相対性理論にもRieman幾何学との間に計量を通じて関係しているため、以降ではこれを用いて一般相対性理論について述べていくことにする。

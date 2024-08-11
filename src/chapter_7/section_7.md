@@ -1,274 +1,334 @@
 
-## 重力と慣性（等価原理）
+## 測地線方程式
 
-　特殊相対性理論において、各地点の座標と時間について議論していたと思うが、一定速度で動く観測者というのは実際にないことが多い。というのも、地球上で観測を行うにあたって重力や地球の自転といった影響を受けていることからも伺える。一例として、等速円運動で自転している地球上で球の運動を見てみると
+　特殊相対性理論において、運動方程式は
 $$
-    m\frac{\mathrm{d}^2z}{\mathrm{d}s^2}=
-    -mg
-$$
-であることから、外部から見ると
-$$
-    m\frac{\mathrm{d}^2z'}{\mathrm{d}s'^2}=
-    mr^2\omega^2-mg
-$$
-というように慣性力が働く。ただ、ここでこの式を
-$$
-    mr^2\omega^2-mg=-m(g-r^2\omega^2)=-mg'
-$$
-というようにすると、あたかも重力が変化したように見ることもできる。これ以外にも、加速する系では慣性力と重力が働いているが、互いに等価的なものとしてみなすことができる。実際、Newtonの運動方程式において
-$$
-    m_I
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=\bm{F}
-$$
-と書かれるが、ここに現れる質量は物体の慣性の度合いを表すものであるので**慣性質量**と呼ばれる。必要なときには添え字 $I$ をつけて表す。 Newton力学にはもう一つ別の種類の質量が登場する。それは万有引力の法則
-$$
-    F=G\frac{m_{1G}m_{2G}}{r^2}
-$$
-に使われる質量である。これは物体の慣性とは概念として全く別のものであり**重力質量**と呼ばれる。普通、添え字 $G$ をつけて慣性質量と区別する。上記の式によれば、地球表面で重力質量 $m_G$ の物体が受ける重力は
-$$
-    F=m_G g
-$$ 
-となる。ここで $g$ は、$M_G,R$ を地球の重力質量、半径として
-$$
-    g=G\frac{M_G}{R^2}
-$$
-で与えられる。さて、地球上での質点の自由落下の方程式というのは、簡単に鉛直方向 $z$ だけを考慮すると
-$$
-    m_I
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=
-    -m_G g
-$$
-となる。この式の両辺を $m_I$ で割ると
-$$
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=
-    -\frac{m_G}{m_I} g
-$$
-を得る。すなわち自由落下の加速度は比 $m_G/m_I$ に比例する。ところがGalileiの有名なPisaの斜塔の実験以降、他の摩擦力などなければ自由落下の加速度は全ての物体で等しいことが知られている。これは $m_G/m_I$ が**全ての物体について等しい値を持つ**ことを意味する。
-
-　斜塔の落下実験はあまり精度のよいものとはいえないであろうが、振り子の実験などはもっと精密な測定ということができよう。2種類の質量の比例関係についてはその後さらに正確な実験が行われた。特に19世紀末から20世紀末にかけてE$\"\mathrm{o}$tv$\"\mathrm{o}$sが優れた実験を行っている。それによれば $m_G/m_I$ を多くの物体について測定した結果、$10^{-9}$ という実験制度の範囲ですべて同じ値になった。さらにもっと最近のDicke、Braginskiらの測定によると$10^{-12}$くらいの精度で $m_G$ と $m_I$ の比例関係が成り立っていることが確認されている。2種類の質量が正確に比例しているのであれば、その比の値を1に選ぶのが便利である。もし比の値が1でなかったならば、どちらかの質量測定の目盛りを変更して比が1になるようにすればよい。要するにすべての物体について $m_G=m_I$ と考えればよいのである。
-
-　以上の議論から、前回登場した測地線方程式において等加速度 $g$ で運動した時の計量を求めることで重力の影響を含めた変換を求めることができることになる。ただ、まずは分かりやすい例として等速円運動しているときの計量がどうなるかを見てみることにする。まず、等速円運動（簡単のため2次元平面での話をしている）するときに変換は
-$$
-    x'^0=x^0、
-    x'^1=x^1\cos(\omega x^0/c)、
-    x'^2=x^2、
-    x'^3=x^1\sin(\omega x^0/c)
-$$
-となるが、この計量を求めると以下の通りとなる。
-$$
-    g_{\mu\nu}=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
+    \bm{f}
+    \leftrightarrow
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    \bm{F}、
     \left(
-    \right)
-    \delta_{\mu\nu}^{00}
-$$
-
-
-
-
-
-
-
-同時に、特殊相対性理論のことも考慮する必要があるため、改めて特殊相対性理論での加速度の取り扱いがどうなるかを見てみることにする。まず、特殊相対性論での運動方程式は、
-$$
-    \frac
-    {\mathrm{d}p^k}
-    {\mathrm{d}\tau}=
-    f^k
-    \rightarrow
-    \frac
-    {\mathrm{d}p^k}
-    {\mathrm{d}t}=
-    F^k、
-    \left(
-    p^k=
-    m_0
-    \frac{\mathrm{d}x^k}
-    {\mathrm{d}\tau}
+    \bm{p}=
+    \frac{m_0\bm{v}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     \right)
 $$
-となるが、ここで
+という形で書けたわけなので、これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
 $$
-    \mathrm{d}\tau=
-    \frac{\mathrm{d}s}{c}
-$$
-であることを踏まえると、以下のように書ける。
-$$
-    \dot{s}
-    \frac
-    {\mathrm{d}p^k}
-    {\mathrm{d}s}=
-    F^k、
+    \frac{\mathrm{d}}{\mathrm{d}t}
     \left(
-    p^k=
-    m_0c
-    \frac{\mathrm{d}x^k}
-    {\mathrm{d}s}
+        \frac{\partial\mathcal{L}}
+        {\partial \dot{q}}
+    \right)-
+    \left(
+        \frac{\partial\mathcal{L}}
+        {\partial q}
+    \right)=0
+$$
+これと先ほどの運動方程式を比較すると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
+$$
+    \frac{\partial\mathcal{L}}{\partial v_x}=
+    \frac{m_0v_x}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    \frac{\partial\mathcal{L}}{\partial v_y}=
+    \frac{m_0v_y}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    \frac{\partial\mathcal{L}}{\partial v_z}=
+    \frac{m_0v_z}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
+$$
+    \frac{\partial\mathcal{L}}{\partial x}=
+    -\left(
+        \frac{\partial U}{\partial x}
+    \right)、
+     \frac{\partial\mathcal{L}}{\partial y}=
+     -\left(
+        \frac{\partial U}{\partial y}
+    \right)、
+    \frac{\partial\mathcal{L}}{\partial z}=
+    -\left(
+        \frac{\partial U}{\partial z}
     \right)
 $$
-ここで、z方向（3成分目）で重力が働いているとすると
+であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 $$
-    \dot{s}
-    \frac
-    {\mathrm{d}p^3}
-    {\mathrm{d}s}=
-    -m_0g、
-    \left(
-    p^3=
-    m_0c
-    \frac{\mathrm{d}x^3}
-    {\mathrm{d}s}
-    \right)
+    \mathcal{L}=
+    -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
+    \simeq
+    \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
 $$
-となるため、以下の式が得られる。
+次に、前回でも登場した計量 $g_{\mu\nu}$ により
 $$
-    \dot{s}
-    \frac
-    {\mathrm{d}^2x^3}
-    {\mathrm{d}s^2}=
-    -\frac{g}{c}
-    \rightarrow
-    \frac
-    {\mathrm{d}^2x^3}
-    {\mathrm{d}s^2}=
-    -\frac{g}{c^2}
-    \left(
-        \frac
-        {\mathrm{d}x^0}
-        {\mathrm{d}s}
-    \right)
-$$
-また、第0成分ではどのようになっていたかというと
-$$
-    \dot{s}
-    \frac
-    {\mathrm{d}p^0}
-    {\mathrm{d}s}=
-    F^0=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
-    (\bm{F}\cdot\bm{v})、
-    p^0=
-    m_0c
-    \frac{\mathrm{d}x^0}
-    {\mathrm{d}s}
-$$
-であったので、以下のとおりになる。
-$$
-    \frac
-    {\mathrm{d}^2x^0}
-    {\mathrm{d}s^2}=
-    -\frac{g}{c^2}
     \left(
-    \frac
-    {\mathrm{d}x^3}
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \right)、
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \sqrt{
+    \eta_{\mu\nu}
+    \frac{\mathrm{d}x^\mu}{\mathrm{d}t}
+    \frac{\mathrm{d}x^\nu}{\mathrm{d}t}}
+    \rightarrow
+    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+$$
+と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
+$$
+    \frac{\partial\mathcal{L}}
+    {\partial \dot{x}^\lambda}=
+    -m_0c
+    \frac{\partial}
+    {\partial \dot{x}^\lambda}
+    \sqrt{
+    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
+    -\frac{m_0c}{2\dot{s}}
+    (g_{\lambda\mu}\dot{x}^{\nu}+
+    g_{\lambda\mu}\dot{x}^{\mu})=
+    -m_0c
+    \left(
+    g_{\lambda\mu}
+    \frac{\mathrm{d}x^{\mu}}
     {\mathrm{d}s}
     \right)
 $$
-
-
-
-
-
-
-
-
-
-
-
 $$
-    x'^0=x^0、x'^1=x^1、x'^2=x^2、
-    x'^3=x^3+\frac{g}{2c^2}(x^0)^2
+    \frac{\partial\mathcal{L}}
+    {\partial x^\lambda}=
+    -m_0c
+    \frac{\partial}
+    {\partial x^\lambda}
+    \sqrt{
+    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
+    \frac{\partial U}{\partial x^\lambda}=
+    -\frac{m_0c\dot{s}}{2}
+    \left(
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+        \frac{\mathrm{d}x^{\mu}}
+        {\mathrm{d}s}
+        \frac{\mathrm{d}x^{\nu}}
+        {\mathrm{d}s}
+    \right)-
+    \frac{\partial U}{\partial x^\lambda}
 $$
-となるため、計量は以下の通りになる。
+となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
+以上の結果を上記の運動方程式に代入すると以下のような形になる。
 $$
-    g_{\mu\nu}=
+    m_0c\dot{s}
     \left[
-        1+
-        \left(
-            \frac{g}{c^2}x^0
-        \right)^2
-    \right]
-    \delta_{\mu\nu}^{00}+
-    \delta_{\mu\nu}^{11}+
-    \delta_{\mu\nu}^{22}+
-    \delta_{\mu\nu}^{33}+
-    \frac{g}{c^2}x^0
-    (\delta_{\mu\nu}^{30}+
-    \delta_{\mu\nu}^{03})
+    \frac{\mathrm{d} g_{\lambda\mu}}
+    {\mathrm{d} s}
+    \frac{\mathrm{d}x^{\mu}}
+    {\mathrm{d}s}+
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
+    {\mathrm{d}s^2}-
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+        \frac{\mathrm{d}x^{\mu}}
+        {\mathrm{d}s}
+        \frac{\mathrm{d}x^{\nu}}
+        {\mathrm{d}s}
+    \right)\right]-
+    \frac{\partial U}{\partial x^\lambda}=0
 $$
-そのため、計量の逆行列に関して $ g^{k\nu}g_{\mu\nu}=\delta_{\mu}^k$ という式が成り立つことから
+ここで、計量に関しての微分が
 $$
+    \frac{\mathrm{d} g_{\lambda\mu}}
+    {\mathrm{d} s}=
+    \frac{\partial g_{\lambda\mu}}
+    {\partial x^\nu}
+    \frac{\mathrm{d} x^\nu}
+    {\mathrm{d} s}
+$$
+であるため、これを踏まえて整理すると次の通りになる。
+$$
+    m_0c\dot{s}
     \left[
-        1+
-        \left(
-            \frac{g}{c^2}x^0
-        \right)^2
-    \right]g^{k0}
-    \delta_{\mu}^{0}+
-    g^{k1}\delta_{\mu}^{1}+
-    g^{k2}\delta_{\mu}^{2}+
-    g^{k3}\delta_{\mu}^{3}+
-    \frac{g}{c^2}x^0
-    (g^{k0}\delta_{\mu}^{3}+
-    g^{k3}\delta_{\mu}^{0})=
-    \delta_{\mu}^k
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
+    {\mathrm{d}s^2}+
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+    \right]-
+    \frac{\partial U}{\partial x^\lambda}=0
 $$
-が成立しているため、整理すると以下の関係式が得られる。
+仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
 $$
-    g^{k\nu}=
-    \delta_{00}^{k\nu}+
-    \delta_{11}^{k\nu}+
-    \delta_{22}^{k\nu}+
-    \left[
-        1+
-        \left(
-            \frac{g}{c^2}x^0
-        \right)^2
-    \right]
-    \delta_{33}^{k\nu}-
-    \frac{g}{c^2}x^0
-    (\delta_{03}^{k\nu}+
-    \delta_{30}^{k\nu})
+    g_{\lambda\mu}
+    \frac{\mathrm{d}^2x^{\mu}}
+    {\mathrm{d}s^2}+
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
-そのため、クリストフェル記号において
+となるわけだが、ここで以下のように変形する。
+$$
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}-
+        \frac{1}{2}
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+$$
+そして、計量の微分を展開してみると
+$$
+    \frac{\partial g_{\lambda\mu}}
+    {\partial x^\nu}=
+    \frac{\partial}{\partial x^\nu}
+    (\bm{e}_\lambda\cdot\bm{e}_\mu)=
+    \frac{\partial\bm{e}_\lambda}
+    {\partial x^\nu}\cdot\bm{e}_\mu+
+    \bm{e}_\lambda\cdot
+    \frac{\partial\bm{e}_\mu}
+    {\partial x^\nu}
+$$
+であり、ここで**第１種クリストフェル記号**を
+$$
+    \Gamma_{\nu\lambda,\mu}=
+    \frac{\partial\bm{e}_\lambda}
+    {\partial x^\nu}\cdot\bm{e}_\mu=
+    \bm{e}_\mu\cdot
+    \frac{\partial\bm{e}_\lambda}
+    {\partial x^\nu}
+$$
+というように定義することで、
+$$
+    \frac{\partial g_{\lambda\mu}}
+    {\partial x^\nu}=
+    \Gamma_{\nu\lambda,\mu}+
+    \Gamma_{\nu\mu,\lambda}
+$$
+となる。同様に、その他の偏微分についても
+$$
+    \frac{\partial g_{\lambda\nu}}
+    {\partial x^\mu}=
+    \Gamma_{\mu\lambda,\nu}+
+    \Gamma_{\mu\nu,\lambda}、
+    \frac{\partial g_{\mu\nu}}
+    {\partial x^\lambda}=
+    \Gamma_{\lambda\mu,\nu}+
+    \Gamma_{\lambda\nu,\mu}
+$$
+となるため、以下のような関係が成り立つことが分かる。
+$$
+    \Gamma_{\mu\nu,\lambda}=
+    \frac{1}{2}
+    \left(
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
+$$
+
+そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
+$$
+    \frac{\mathrm{d}^2x^k}
+    {\mathrm{d}s^2}+
+    g^{k\lambda}
+    \Gamma_{\mu\nu,\lambda}
+    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
+$$
+これは**第２種クリストッフェル記号**を用いて
 $$
     \Gamma^{k}_{\mu\nu}=
-    \left[
-    x^0g^{k0}
+    g^{k\lambda}
+    \Gamma_{\mu\nu,\lambda}=
+    \frac{1}{2}g^{k\lambda}
     \left(
-        \frac{g}{c^2}
-    \right)^2+
-    \frac{g}{c^2}g^{k3}
-    \right]\delta_{\mu\nu}^{00}=
-    \frac{g}{c^2}
-    \delta_3^k\delta_{\mu\nu}^{00}
+        \frac{\partial g_{\lambda\mu}}
+        {\partial x^\nu}+
+        \frac{\partial g_{\lambda\nu}}
+        {\partial x^\mu}-
+        \frac{\partial g_{\mu\nu}}
+        {\partial x^\lambda}
+    \right)
 $$
-となるため測地線方程式は以下の通りになる。
+により、次の**測地線方程式**の形で記載される。
 $$
     \frac{\mathrm{d}^2x^k}
     {\mathrm{d}s^2}+
     \Gamma^{k}_{\mu\nu}
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
+    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
+$$
+この式は物体がRiemann空間内を最短距離で通るということを前提にして求められるもので、例として点Aから点Bへ物体が移動するものとすると
+$$
+    s=\int_A^B\mathrm{d}s=
+    \int_A^B
+    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \mathrm{d}t=
+    \int_A^B
+    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \mathrm{d}t
+$$
+が最小となる（$\delta s=0$）ときの関係式からも確認できる。特殊相対性理論においては、$g_{\mu\nu}=\eta_{\mu\nu}$（Lorentz変換）とするとクリストッフェル記号は0となり
+$$
     \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
-    \frac{g}{c^2}\delta_3^k
-    \frac{\mathrm{d}x^0}{\mathrm{d}s}
-    \frac{\mathrm{d}x^0}{\mathrm{d}s}=0
+    {\mathrm{d}s^2}=0、
+    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \sqrt{
+        \eta_{\mu\nu}
+        \dot{x}^{\mu} \dot{x}^{\nu}
+    }=
+    \sqrt{c^2-\bm{v}^2}
 $$
-各成分ごとに分けて書くと以下のようになる。
+となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
 $$
-    \frac{\mathrm{d}^2x^0}{\mathrm{d}s^2}=
-    \frac{\mathrm{d}^2x^1}{\mathrm{d}s^2}=
-    \frac{\mathrm{d}^2x^2}{\mathrm{d}s^2}=0、
-    \frac{\mathrm{d}^2x^3}
-    {\mathrm{d}s^2}+
-    \frac{g}{c^2}
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=0
+    \mathrm{d}\tau=
+    \frac{\dot{s}}{c}\mathrm{d}t=
+    \frac{\mathrm{d}s}{c}=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
+    \mathrm{d}t
 $$
-ここで、 $x^0$ の二階微分が0であることから
+とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
 $$
-    \frac{\mathrm{d}x^{0}}{\mathrm{d}s}=A、
-    （A:定数）
+    m_0c\dot{s}
+    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=0
+    \rightarrow
+    \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
+    \left(
+        p^k=
+        m_0
+        \frac{\mathrm{d}x^k}
+        {\mathrm{d}\tau}
+    \right)
 $$
-とすると、
+というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量呼ばれており、右辺に力がある場合には $f^k$ （4元力）となる。このように、今までは速度に応じて質量が変化するものと思われてきたが、実は時間の進み方が変化していたことが分かる。
+
+
