@@ -179,29 +179,29 @@ $$
     \bm{e}_\phi=
     -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
 $$
-となるため、直交座標系での内積の関係を用いると $r,r_\theta,r_\phi$ は以下の値となることが分かる。
+と言う関係になっていることが分かる。そのため、この関係を先ほどの式に代入してみると
+
 $$
-    r=
-    (\bm{x}\cdot\bm{e}_r)-
-    r_\theta (\bm{e}_\theta\cdot\bm{e}_r)-
-    r_\phi (\bm{e}_\phi\cdot\bm{e}_r)=
-    \sqrt{x^2+y^2+z^2}
-$$
-$$
-    r_\theta=
-    (\bm{x}\cdot\bm{e}_\theta)-
-    r(\bm{e}_r\cdot\bm{e}_\theta)-
-    r_\phi(\bm{e}_r\cdot\bm{e}_\phi)=0
+    x=
+    r\sin\theta\cos\phi+
+    r_\theta\cos\theta\cos\phi-
+    r_\phi\sin\phi
 $$
 $$
-    r_\phi=
-    (\bm{x}\cdot\bm{e}_\phi)-
-    r(\bm{e}_r\cdot\bm{e}_\phi)-
-    r_\theta(\bm{e}_\theta\cdot\bm{e}_\phi)=0
+    y=
+    r\sin\theta\sin\phi+
+    r_\theta\cos\theta\sin\phi+
+    r_\phi\cos\phi
+$$
+$$
+    z=
+    r\cos\phi-r_\theta\sin\theta
 $$
 
-このように、別の座標系に変換する際に**基底ベクトル**と**基底ベクトル同士の内積**が分かると
-
+というようになるが、先ほどの変換式と見比べてみることで全て0になることが分かる。
+$$
+    r_\theta=r_\phi=0
+$$
 
 各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
 $$
