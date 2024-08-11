@@ -43,7 +43,7 @@ $$
     r\cos\theta)
 $$
 というようになるわけだが、この表記だと一目見てどの座標系を利用しているのかが分からず不便である。
-そこで、ベクトルの中身を表記する際はどの座標系を用いているか分かるように各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y,\bm{e}_z$ 、極座標系での単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ とすると
+そこで、どの座標系を利用しているか分かりやすいよう各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y,\bm{e}_z$ 、極座標系での単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
 $$
     \bm{x}=
     x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
@@ -55,32 +55,47 @@ $$
     \bm{x}=
     r\bm{e}_r+r_\theta\bm{e}_\theta+
     r_\phi\bm{e}_\phi、
-    (r_\theta、r_\phi：各成分ごとの長さ)
+    (r_\theta、r_\phi：各角度成分での長さ)
 $$
 
-となるため、それぞれ直交座標系と極座標系で表していることが分かる。
+というように表記すると、それぞれ直交座標系と極座標系を利用していることが分かる。
 <p align="center">
     <img width="40%" src="images/basis_vector.png">
 </p>
 
+更に言うと、上記のベクトルの関係は
 
+$$
+    \bm{x}=
+    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
+    r\bm{e}_r+r_\theta\bm{e}_\theta+
+    r_\phi\bm{e}_\phi
+$$
 
+とも書けるわけだが、$\bm{e}_x,\bm{e}_y,\bm{e}_z$ がそれぞれ $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ により置き換えることができれば直交座標系から極座標系へ変換ができることになる。そこで、単位ベクトル同士の関係を見るために、一般的に
 
+$$
+    \bm{x}(x,y,z)=\bm{x}(r,\theta,\phi)
+$$
 
-
-
-
-
-
-
-
-となるが、ここで各成分 $r,r_\theta,r_\phi$ がどのような値になるか分からないため、 $\bm{x}$ の変数が $r,\theta,\phi$ の変数を持つ関数であることから
+というように直交座標系と極座標系で表したものが等しいものとすると、微小変化をとることで
 $$
     \mathrm{d}\bm{x}=
+    \bm{u}_x\mathrm{d}x+
+    \bm{u}_y\mathrm{d}y+
+    \bm{u}_z\mathrm{d}z=
     \bm{u}_r\mathrm{d}r+
     \bm{u}_\theta\mathrm{d}\theta+
     \bm{u}_\phi\mathrm{d}\phi、
+$$
+$$
     \left(
+    \bm{u}_x=
+    \frac{\partial \bm{x}}{\partial x}、
+    \bm{u}_y=
+    \frac{\partial \bm{x}}{\partial y}、
+    \bm{u}_z=
+    \frac{\partial \bm{x}}{\partial z}、
     \bm{u}_r=
     \frac{\partial \bm{x}}{\partial r}、
     \bm{u}_\theta=
@@ -90,7 +105,7 @@ $$
     \right)
 $$
 
-と展開してみると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
+と展開できる。すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
 
 $$
     \bm{e}_r=
