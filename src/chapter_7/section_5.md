@@ -289,17 +289,53 @@ $$
     \bm{e}_y'=\bm{e}_y、
     \bm{e}_z''=\bm{e}_z'
 $$
-となることから、変換後の内積は以下の通りとなる。
+となることから、関係式は以下の通りになる。
+
+$$
+    w=\frac{w'}{\sqrt{1+\beta^2}}、
+    x=x'+\frac{\beta w'}{\sqrt{1+\beta^2}}、
+    y=y'、z=z'
+$$
+
+このように成立していないことが分かるため、内積の値に問題があることが予想される。そのため、
+
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_x=-\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+というようにしてみると、一方の内積も
+
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
     \bm{e}_x'\cdot\bm{e}_w'=
-    \frac{\beta}{\sqrt{1+\beta^2}}、
+    \frac{1}{2}\beta、
     \bm{e}_y'\cdot\bm{e}_w'=0、
     \bm{e}_z'\cdot\bm{e}_w'=0
 $$
 $$
     \bm{e}_w'\cdot\bm{e}_x'=
-    \frac{\beta}{\sqrt{1+\beta^2}}、
+    \frac{1}{2}\beta、
     \bm{e}_x'\cdot\bm{e}_x'=1、
     \bm{e}_y'\cdot\bm{e}_x'=0、
     \bm{e}_z'\cdot\bm{e}_x'=0
@@ -316,46 +352,10 @@ $$
     \bm{e}_y'\cdot\bm{e}_z'=0、
     \bm{e}_z'\cdot\bm{e}_z'=1
 $$
-ここで $\bm{e}_w\cdot\bm{e}_x$ と $\bm{e}_w'\cdot\bm{e}_x'$ の値が異なることが気になると思うが、これは座標系の取り方によってなるものであり間違ったものではないことに注意されたし。とはいうものの、これだと内積の計算には少し不便であるため、試しに内積を不変とする座標系の取り方がないか考えてみる。そこで、基底ベクトルの関係式が利用できそうなので、これを用いてみることにする。そのため、まず内積 $\bm{u}_w'\cdot\bm{u}_w'$ の内積をとってみると
-$$
-    \bm{u}_w'\cdot\bm{u}_w'=
-    (\bm{e}_w\cdot\bm{e}_w)+
-    2\beta(\bm{e}_w\cdot\bm{e}_x)+
-    \beta^2(\bm{e}_x\cdot\bm{e}_x)
-$$
-となるが、この内積は $|\bm{u}_w'|^2(\bm{e}_w'\cdot\bm{e}_w')$ でもあるため以下の式が求められる。
-$$
-    (\bm{e}_w\cdot\bm{e}_w)+
-    2\beta(\bm{e}_w\cdot\bm{e}_x)+
-    \beta^2(\bm{e}_x\cdot\bm{e}_x)=
-    |\bm{u}_w'|^2
-    (\bm{e}_w'\cdot\bm{e}_w')
-$$
-その他に内積 $\bm{u}_w'\cdot\bm{u}_x'$ をとることで、以下の式が得られる。
-$$
-    \bm{u}_w'\cdot\bm{u}_x'=
-    (\bm{e}_w\cdot\bm{e}_x)+
-    \beta(\bm{e}_x\cdot\bm{e}_x)=
-    |\bm{u}_w'||\bm{u}_x'|
-    (\bm{e}_w'\cdot\bm{e}_x')
-$$
-ここで、単位ベクトルの内積が不変な形になるものとすると
-$$
-    (\bm{e}_w'\cdot\bm{e}_w')=
-    (\bm{e}_w\cdot\bm{e}_w)、
-    (\bm{e}_w'\cdot\bm{e}_x')=
-    (\bm{e}_w\cdot\bm{e}_x)
-$$
-であり、$|\bm{u}_x'|=1、\bm{e}_x\cdot\bm{e}_x=1$ となることから以下の関係式が求められる。
-$$
-    \bm{e}_w\cdot\bm{e}_w=
-    \pm\frac{\beta}{1-|\bm{u}_w'|}、
-    \bm{e}_w\cdot\bm{e}_x=
-    \frac{\beta}{|\bm{u}_w'|-1}
-    \rightarrow
-    \bm{e}_w\cdot\bm{e}_w=
-    \bm{e}_w\cdot(\pm\bm{e}_x)
-$$
+
+となり変換式を満たすことが分かる。
+
+
 
 　次にLorentz変換の場合、変換式は以下の通りであった。
 $$
