@@ -24,178 +24,154 @@ $$
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
 
-　一般的にベクトルは $\bm{x}$ というように太字で表記されるが、用いる座標系によってその中身の表記が異なってくる。例として、3次元直交座標系の場合だと $(x,y,z)$ というようになるが、3次元極座標を用いると $(r,\theta,\phi)$ というように表記される。
+　一般的にベクトルは $\bm{x}$ というように太字で表記されるが、用いる座標系によってその中身の表記が異なってくる。簡単な例として、2次元直交座標系の場合だと $(X,Y)$ というようになるが、2次元斜交座標系を用いると $(x,y)$ というように表記される。
 <p align="center">
-    <img width="40%" src="images/coordinate.png">
+    <img width="40%" src="images/oblique_system.png">
 </p>
-ここで注意することは、$\bm{x}=(x,y,z)=(r,\theta,\phi)$ というような等式が成り立つわけではなく、比較する座標系の関係で変化する。このことは、各座標の間で以下の関係が成り立つことからもうかがえる。
+ここで注意することは、$\bm{x}=(X,Y)=(x,y)$ というような等式が成り立つわけではなく、比較する座標系の関係で変化する。このことは、上記の座標間にて以下の関係が成り立つことからもうかがえる。
 
 $$
-    x = r\sin\theta\cos\phi、
-    y = r\sin\theta\sin\phi、
-    z = r\cos\theta
+    X = x+\frac{1}{\sqrt{2}}y、
+    Y = \frac{1}{\sqrt{2}}y
+    \leftrightarrow
+    x = X - Y、
+    y = \sqrt{2}Y
 $$
-この関係により、直交座標系でのベクトルは
+
+この関係により、各座標系でのベクトルは
+
 $$
-    \bm{x}=(x,y,z)=
-    (r\sin\theta\cos\phi,
-    r\sin\theta\sin\phi,
-    r\cos\theta)
+    \bm{x}=(X,Y)=
+    \left(
+        x+\frac{1}{\sqrt{2}}y,
+        \frac{1}{\sqrt{2}}y
+    \right)　（直交座標系）
 $$
+$$
+    \bm{x}=(x,y)=
+    (X-Y,\sqrt{2}Y)　（斜交座標系）
+$$
+
 というようになるわけだが、この表記だと一目見てどの座標系を利用しているのかが分からず不便である。
-そこで、どの座標系を利用しているか分かりやすいよう各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y,\bm{e}_z$ 、極座標系での単位ベクトルを $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ として
+そこで、どの座標系を利用しているか分かりやすいよう各座標ごとに**単位ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での単位ベクトルを $\bm{e}_X,\bm{e}_Y$ 、斜交座標系での単位ベクトルを $\bm{e}_x,\bm{e}_y$ として
+
 $$
     \bm{x}=
-    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    r\sin\theta\cos\phi\bm{e}_x+
-    r\sin\theta\sin\phi\bm{e}_y+
-    r\cos\theta\bm{e}_z
+    X\bm{e}_X+Y\bm{e}_Y=
+    \left(
+        x+\frac{1}{\sqrt{2}}y
+    \right)\bm{e}_X+
+    \left(
+        \frac{1}{\sqrt{2}}y
+    \right)\bm{e}_Y
 $$
 $$
     \bm{x}=
-    r\bm{e}_r+r_\theta\bm{e}_\theta+
-    r_\phi\bm{e}_\phi、
-    (r_\theta、r_\phi：各角度成分での長さ)
+    x\bm{e}_x+y\bm{e}_y=
+    (X-Y)\bm{e}_x+
+    \sqrt{2}Y\bm{e}_y
 $$
 
-というように表記すると、それぞれ直交座標系と極座標系を利用していることが分かる。
+というように表記すると、それぞれ直交座標系と斜交座標系を利用していることが分かる。
 <p align="center">
-    <img width="40%" src="images/basis_vector.png">
+    <img width="40%" src="images/oblique_unit_vector.png">
 </p>
 
 更に言うと、上記のベクトルの関係は
 
 $$
     \bm{x}=
-    x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    r\bm{e}_r+r_\theta\bm{e}_\theta+
-    r_\phi\bm{e}_\phi
+    X\bm{e}_X+Y\bm{e}_Y=
+    x\bm{e}_x+y\bm{e}_y
 $$
 
-とも書けるわけだが、もし $\bm{e}_x,\bm{e}_y,\bm{e}_z$ がそれぞれ $\bm{e}_r,\bm{e}_\theta,\bm{e}_\phi$ により置き換えることができれば直交座標系から極座標系へ変換ができることになる。そこで、単位ベクトル同士の関係を見るために、一般的に
+とも書けるわけだが、もし $\bm{e}_X,\bm{e}_Y$ がそれぞれ $\bm{e}_x,\bm{e}_y$ により置き換えることができれば直交座標系から斜交座標系へ変換ができることになる。そこで、単位ベクトル同士の関係を見るために、一般的に
 
 $$
-    \bm{x}(x,y,z)=\bm{x}(r,\theta,\phi)
+    \bm{x}(X,Y)=\bm{x}(x,y)
 $$
 
-というように直交座標系と極座標系で表したものが等しいものとする。そして微小変化をとることで
+というように直交座標系と斜交座標系で表したものが等しいものとする。そして微小変化をとることで
 $$
     \mathrm{d}\bm{x}=
+    \bm{u}_X\mathrm{d}X+
+    \bm{u}_Y\mathrm{d}Y=
     \bm{u}_x\mathrm{d}x+
-    \bm{u}_y\mathrm{d}y+
-    \bm{u}_z\mathrm{d}z=
-    \bm{u}_r\mathrm{d}r+
-    \bm{u}_\theta\mathrm{d}\theta+
-    \bm{u}_\phi\mathrm{d}\phi、
+    \bm{u}_y\mathrm{d}y
 $$
 $$
     \left(
+    \bm{u}_X=
+    \frac{\partial \bm{x}}{\partial X}、
+    \bm{u}_Y=
+    \frac{\partial \bm{x}}{\partial Y}、
     \bm{u}_x=
     \frac{\partial \bm{x}}{\partial x}、
     \bm{u}_y=
-    \frac{\partial \bm{x}}{\partial y}、
-    \bm{u}_z=
-    \frac{\partial \bm{x}}{\partial z}、
-    \bm{u}_r=
-    \frac{\partial \bm{x}}{\partial r}、
-    \bm{u}_\theta=
-    \frac{\partial \bm{x}}{\partial \theta}、
-    \bm{u}_\phi=
-    \frac{\partial \bm{x}}{\partial \phi}
+    \frac{\partial \bm{x}}{\partial y}
     \right)
 $$
 
 と展開できる。すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
 
 $$
-    \bm{e}_r=
-    \frac{\bm{u}_r}{\left|\bm{u}_r\right|}、
-    \bm{e}_\theta=
-    \frac{\bm{u}_\theta}
-    {\left|\bm{u}_\theta\right|}、
-    \bm{e}_\phi=
-    \frac{\bm{u}_\phi}
-    {\left|\bm{u}_\phi\right|}
+    \bm{e}_X=
+    \frac{\bm{u}_X}{\left|\bm{u}_X\right|}、
+    \bm{e}_Y=
+    \frac{\bm{u}_Y}
+    {\left|\bm{u}_Y\right|}、
+    \bm{e}_x=
+    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
+    \bm{e}_y=
+    \frac{\bm{u}_y}
+    {\left|\bm{u}_y\right|}
 $$
 
-という関係を満たしているとすると、まず各基底ベクトルは $\bm{e}_x,\bm{e}_y,\bm{e}_z$ により
+という関係を満たしているとすると、まず各基底ベクトルは $\bm{e}_X,\bm{e}_Y$ により
+
 $$
-    \bm{u}_r=
-    \sin\theta\cos\phi\bm{e}_x+
-    \sin\theta\sin\phi\bm{e}_y+
-    \cos\phi\bm{e}_z、
+    \bm{u}_X=\bm{e}_X、
+    \bm{u}_Y=\bm{e}_Y、
+    \bm{u}_x=\bm{e}_X、
+    \bm{u}_y=
+    \frac{1}{\sqrt{2}}(\bm{e}_X+\bm{e}_Y)
 $$
-$$
-    \bm{u}_\theta=
-    r\cos\theta\cos\phi\bm{e}_x+
-    r\cos\theta\sin\phi\bm{e}_y-
-    r\sin\theta\bm{e}_z、
-$$
-$$
-    \bm{u}_\phi=
-    -r\sin\theta\sin\phi\bm{e}_x+
-    r\sin\theta\cos\phi\bm{e}_y
-$$
+
 となる。次に、基底ベクトルの大きさについては直交座標系において単位ベクトル同士の内積が
+
 $$
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_x\cdot\bm{e}_y=0、
-    \bm{e}_x\cdot\bm{e}_z=0
+    \bm{e}_X\cdot\bm{e}_X=1、
+    \bm{e}_X\cdot\bm{e}_Y=0、
+    \bm{e}_Y\cdot\bm{e}_X=0、
+    \bm{e}_Y\cdot\bm{e}_Y=1
 $$
-$$
-    \bm{e}_y\cdot\bm{e}_x=0、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_y\cdot\bm{e}_z=0
-$$
-$$
-    \bm{e}_z\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_y=0、
-    \bm{e}_z\cdot\bm{e}_z=1
-$$
+
 と**設定されている**ことから、各成分の基底ベクトルの大きさも求められる。
+
 $$
-    \left|\bm{u}_r\right|=
-    \sqrt{\bm{u}_r\cdot\bm{u}_r}=1、
-    \left|\bm{u}_\theta\right|=
-    \sqrt{\bm{u}_\theta\cdot\bm{u}_\theta}=r、
-    \left|\bm{u}_\phi\right|=
-    \sqrt{\bm{u}_\phi\cdot\bm{u}_\phi}=
-    r\sin\theta
+    \left|\bm{u}_X\right|=
+    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1、
+    \left|\bm{u}_Y\right|=
+    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=1、
 $$
+$$
+    \left|\bm{u}_x\right|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
+    \left|\bm{u}_y\right|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1
+$$
+
 したがって、各成分の単位ベクトルは
 $$
-    \bm{e}_r=
-    \sin\theta\cos\phi\bm{e}_x+
-    \sin\theta\sin\phi\bm{e}_y+
-    \cos\phi\bm{e}_z
-$$
-$$
-    \bm{e}_\theta=
-    \cos\theta\cos\phi\bm{e}_x+
-    \cos\theta\sin\phi\bm{e}_y-
-    \sin\theta\bm{e}_z
-$$
-$$
-    \bm{e}_\phi=
-    -\sin\phi\bm{e}_x+\cos\phi\bm{e}_y
+    \bm{e}_x=\bm{e}_X、
+    \bm{e}_y=
+    \frac{1}{\sqrt{2}}(\bm{e}_X+\bm{e}_Y)
 $$
 と言う関係になっていることが分かる。そのため、この関係を先ほどの式に代入してみると
 
 $$
-    x=
-    r\sin\theta\cos\phi+
-    r_\theta\cos\theta\cos\phi-
-    r_\phi\sin\phi
-$$
-$$
-    y=
-    r\sin\theta\sin\phi+
-    r_\theta\cos\theta\sin\phi+
-    r_\phi\cos\phi
-$$
-$$
-    z=
-    r\cos\phi-r_\theta\sin\theta
+    X=x+\frac{1}{\sqrt{2}}y、
+    Y=\frac{1}{\sqrt{2}}y
 $$
 
 というようになるが、先ほどの変換式と見比べてみることで全て0になることが分かる。
