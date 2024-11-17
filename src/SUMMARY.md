@@ -47,7 +47,7 @@
   - [空洞輻射の理論](chapter_8/section_1.md)
   - [光の粒子仮説](chapter_8/section_2.md)
   - [電子の波動説](chapter_8/section_3.md)
-  - [波動力学](chapter_8/section_4.md)
+  - [粒子と波動の二重性](chapter_8/section_4.md)
   - [相対論的量子力学](chapter_8/section_5.md)
 - [参考文献](./references.md)
 - [メモ](memo/math.md)
