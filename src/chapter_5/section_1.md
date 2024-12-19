@@ -153,3 +153,60 @@ $$
     \cos\theta
 \end{align*}
 $$
+
+ここで $x$ と $y$ の二階微分の計算結果を並べてみると、それぞれ $\cos\phi$、$\sin\phi$ をかけて足し合わせることで
+
+$$
+\begin{align*}
+    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \cos\phi+
+    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \sin\phi
+    &=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \sin\theta+
+    2
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta\\
+    &+
+    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2
+    \sin\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)^2
+    \sin\theta\
+\end{align*}
+$$
+
+となり、さらに $z$ を二階微分したものを見比べてみると、それぞれ $\sin\theta,\cos\theta$ をかけることで
+
+$$
+    \left(
+        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        \cos\phi+
+        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        \sin\phi
+    \right)
+    \sin\theta+
+    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+    \cos\theta=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2-
+    r
+    \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)^2
+    \sin^2\theta
+$$
+
+が得られる。
