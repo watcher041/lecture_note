@@ -289,4 +289,61 @@ $$
     F_y\cos\phi
 $$
 
-となるわけだが、実はこれらが極座標系における各成分のごとの運動方程式になっている。
+となるわけだが、実はこれらが極座標系における各成分のごとの運動方程式になっている。実際に、力が保存力でポテンシャル $U$ で書いたときに
+
+$$
+    F_r =
+    -\frac{\partial U}{\partial r}、
+    F_\theta =
+    -\frac{\partial U}{\partial \theta}、
+    F_\phi =
+    -\frac{\partial U}{\partial \phi}
+$$
+
+であるが、これを直交座標系に変換すると
+
+$$
+    \frac{\partial U}{\partial r}=
+    \frac{\partial U}{\partial x}
+    \frac{\partial x}{\partial r}+
+    \frac{\partial U}{\partial y}
+    \frac{\partial y}{\partial r}+
+    \frac{\partial U}{\partial z}
+    \frac{\partial z}{\partial r}=
+    \frac{\partial U}{\partial x}
+    \sin\theta\cos\phi+
+    \frac{\partial U}{\partial y}
+    \sin\theta\sin\phi+
+    \frac{\partial U}{\partial z}
+    \cos\theta
+$$
+$$
+    \frac{\partial U}{\partial\theta}=
+    \frac{\partial U}{\partial x}
+    \frac{\partial x}{\partial\theta}+
+    \frac{\partial U}{\partial y}
+    \frac{\partial y}{\partial\theta}+
+    \frac{\partial U}{\partial z}
+    \frac{\partial z}{\partial\theta}=
+    \frac{\partial U}{\partial x}
+    r\cos\theta\cos\phi+
+    \frac{\partial U}{\partial y}
+    r\cos\theta\sin\phi-
+    \frac{\partial U}{\partial z}
+    r\sin\theta
+$$
+$$
+    \frac{\partial U}{\partial\phi}=
+    \frac{\partial U}{\partial x}
+    \frac{\partial x}{\partial\phi}+
+    \frac{\partial U}{\partial y}
+    \frac{\partial y}{\partial\phi}+
+    \frac{\partial U}{\partial z}
+    \frac{\partial z}{\partial\phi}=
+    -\frac{\partial U}{\partial x}
+    r\sin\theta\sin\phi+
+    \frac{\partial U}{\partial y}
+    r\cos\theta\cos\phi
+$$
+
+となることから、力は
