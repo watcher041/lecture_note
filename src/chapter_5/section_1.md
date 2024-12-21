@@ -102,6 +102,7 @@ $$
 
 $$
 \begin{align*}
+    a_x=
     \frac{\mathrm{d}v_x}{\mathrm{d}t}
     &=
     \frac{\mathrm{d}v_r}{\mathrm{d}t}
@@ -131,6 +132,7 @@ $$
 $$
 $$
 \begin{align*}
+    a_y=
     \frac{\mathrm{d}v_y}{\mathrm{d}t}
     &=
     \frac{\mathrm{d}v_r}{\mathrm{d}t}
@@ -159,6 +161,7 @@ $$
 \end{align*}
 $$
 $$
+    a_z=
     \frac{\mathrm{d}v_z}{\mathrm{d}t}
     =
     \frac{\mathrm{d}v_r}{\mathrm{d}t}
@@ -176,59 +179,114 @@ $$
 
 
 
-ここで $x$ と $y$ の二階微分の計算結果を並べてみると、それぞれ $\cos\phi$、$\sin\phi$ をかけて足し合わせることで
+ここで $a_x$ と $a_y$ の計算結果を並べてみると、それぞれ $\cos\phi$、$\sin\phi$ をかけて足し合わせることで
 
 $$
 \begin{align*}
-    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-    \cos\phi+
-    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-    \sin\phi
+    a_x\cos\phi+
+    a_y\sin\phi
     &=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \frac{\mathrm{d}v_r}{\mathrm{d}t}
     \sin\theta+
-    2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
+    v_r
     \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \cos\theta\\
     &+
-    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \frac{\mathrm{d}v_\theta}{\mathrm{d}t}
     \cos\theta-
-    r
-    \left(
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
+    v_\theta
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \sin\theta-
-    r
-    \left(
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)^2
-    \sin\theta\
+    v_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
 \end{align*}
 $$
 
-となり、さらに $z$ を二階微分したものを見比べてみると、それぞれ $\sin\theta,\cos\theta$ をかけることで
+となり、これと $a_z$ と見比べてみると、それぞれ $\sin\theta,\cos\theta$ をかけることで
 
 $$
     \left(
-        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-        \cos\phi+
-        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-        \sin\phi
+        a_x\cos\phi+
+        a_y\sin\phi
     \right)
     \sin\theta+
-    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
-    \cos\theta=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    r
-    \left(
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2-
-    r
-    \left(
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)^2
-    \sin^2\theta
+    a_z\cos\theta=
+    \frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    v_\theta
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    v_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta
 $$
 
-が得られる。
+が得られる。あるいは、それぞれ $\cos\theta,\sin\theta$ をかけることで
+
+$$
+    \left(
+        a_x\cos\phi+
+        a_y\sin\phi
+    \right)
+    \cos\theta-
+    a_z\sin\theta=
+    \frac{\mathrm{d}v_\theta}{\mathrm{d}t}+
+    v_r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    v_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta
+$$
+
+となる。さらに、改めて $a_x,a_y$ を見比べてみると 、それぞれ $\sin\phi,\cos\phi$ をかけることで
+
+$$
+    -a_x\sin\phi+
+    a_y\cos\phi
+    =
+    \frac{\mathrm{d}v_\phi}{\mathrm{d}t}+
+    v_r
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta+
+    v_\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta
+$$
+
+となることが分かる。ここまでに得られた3つの式に質量をかけることで
+
+$$
+    m
+    \frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mv_\theta
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    mv_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta=
+    F_x\sin\theta\cos\phi+
+    F_y\sin\theta\sin\phi+
+    F_z\cos\theta
+$$
+$$
+    m\frac{\mathrm{d}v_\theta}{\mathrm{d}t}+
+    mv_r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    mv_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta=
+    F_x\cos\theta\cos\phi+
+    F_y\cos\theta\sin\phi-
+    F_z\sin\theta
+$$
+$$
+    m
+    \frac{\mathrm{d}v_\phi}{\mathrm{d}t}+
+    mv_r
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta+
+    mv_\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta=
+    -F_x\sin\phi+
+    F_y\cos\phi
+$$
+
+となるわけだが、実はこれらが極座標系における各成分のごとの運動方程式になっている。
