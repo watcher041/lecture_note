@@ -289,7 +289,7 @@ $$
     F_y\cos\phi
 $$
 
-となるわけだが、実はこれらが極座標系における各成分のごとの運動方程式になっている。実際に、力が保存力でポテンシャル $U$ で書いたときに
+となり、各成分ごとの加速度のみを含む方程式が得られる。一般的な形では少し分かりにくいが、力がポテンシャル $U$ のもとで働くもの（保存力）であるものとすると、
 
 $$
     F_r =
@@ -300,7 +300,7 @@ $$
     -\frac{\partial U}{\partial \phi}
 $$
 
-であるが、これを直交座標系に変換すると
+と書けるので、これを直交座標系に変換すると
 
 $$
     \frac{\partial U}{\partial r}=
@@ -346,4 +346,36 @@ $$
     r\cos\theta\cos\phi
 $$
 
-となることから、力は
+となることから、先ほどの3式は以下のように極座標における力により書くことができる。
+
+$$
+    m
+    \frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mv_\theta
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    mv_\phi
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta=
+    F_r
+$$
+$$
+    \frac{m}{r}
+    \frac{\mathrm{d}v_\theta}{\mathrm{d}t}+
+    \frac{mv_r}{r}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    \frac{mv_\phi}{r}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta=
+    F_\phi
+$$
+$$
+    \frac{m}{r}
+    \frac{\mathrm{d}v_\phi}{\mathrm{d}t}+
+    \frac{mv_r}{r}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta+
+    \frac{mv_\theta}{r}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta=
+    F_\phi
+$$
