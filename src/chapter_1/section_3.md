@@ -113,8 +113,8 @@ $$
     \mathrm{m^3\ kg^{-1}\ s^{-2}}
 $$
 $$
-    r=6378
-    \times 10^{3}\ \mathrm{m}、
+    r=6.378
+    \times 10^{6}\ \mathrm{m}、
     M=5.972\times
     10^{24}\ \mathrm{kg}
 $$
