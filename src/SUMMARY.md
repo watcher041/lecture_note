@@ -15,6 +15,8 @@
   - [力の種類について](chapter_1/section_3.md)
   - [二体問題](chapter_1/section_4.md)
   - [質点系の力学](chapter_1/section_5.md)
+  - [回転運動について](chapter_1/section_6.md)
+  - [連続体力学](chapter_1/section_7.md)
 - [熱力学](chapter_2/section_0.md)
   - [温度](chapter_2/section_1.md)
   - [エントロピーについて](chapter_2/section.md)
