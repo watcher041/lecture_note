@@ -240,76 +240,41 @@ $$
     \sin\theta
 $$
 
+ここで、$x,y$ 方向の方程式にそれぞれ $\cos\theta,\sin\theta$ をかけて和をとると
 
-ここで、右辺に対して単位ベクトルを成分で書くと以下の通りにかける。
 $$
-    \bm{e}_r=(\cos\theta,\sin\theta)、
-    \frac{\mathrm{d}\bm{e}_r}{\mathrm{d}t}=
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    (-\sin\theta,\cos\theta)=
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \bm{e}_\theta
-$$
-$$
-    \frac{\mathrm{d}^2\bm{e}_r}{\mathrm{d}t^2}=
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-    \bm{e}_\theta+
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \frac{\mathrm{d}\bm{e}_\theta}{\mathrm{d}t}=
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-    \bm{e}_\theta-
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
-    (\cos\theta,\sin\theta)=
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-    \bm{e}_\theta-
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2\bm{e}_r
-$$
-そのため、改めて置き換えて表すと以下の通りになる。
-$$
-    \bm{r}=r\bm{e}_r、
-    \frac{\mathrm{d}\bm{r}}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \bm{e}_r+
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \bm{e}_\theta、
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
+    \mu
     \left[
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    r
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
     \right]
-    \bm{e}_r+
+    =
+    -G\frac{m_1m_2}{r^2}
+$$
+
+となり、一方で $\sin\theta,\cos\theta$ をかけて差をとると
+
+$$
+    \mu
     \left[
-    r
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-    2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
     \right]
-    \bm{e}_\theta
+    =0
 $$
-これらの式と運動方程式を比較すると、
-$$
-    \mu\frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
-    \mu r
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2=
-    -G\frac{m_1m_2}{r^2}、
-    \mu r
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-    2\mu
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}=
-    0
-$$
+
 ここで２番目の式に $r$ をかけることで
+
 $$
     \mu r^2
     \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
@@ -320,6 +285,7 @@ $$
     L=\mu r^2
     \frac{\mathrm{d}\theta}{\mathrm{d}t}  
 $$
+
 と変形できることから、この量（角運動量）が保存されている（$L$ が定数になる）ことが分かる。そこで、これを変形して
 $$
     \frac{\mathrm{d}\theta}{\mathrm{d}t}=
