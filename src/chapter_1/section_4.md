@@ -1,7 +1,8 @@
 
 ## 二体問題
 
-　ここまでは一つの物体質量を持つ二体間には万有引力という力が働くことが知られており、例として物体1と物体2の質量、位置ベクトルを $m_1,\bm{r}_1,m_2,\bm{r}_2$ とすると、物体1にかかる力は
+　ここまでは一つの物体のみ取り扱っていたが、もしもう一体物体がある場合は万有引力が働くことも考慮する必要がある。例として物体1と物体2の質量、位置ベクトルを $m_1,\bm{r}_1,m_2,\bm{r}_2$ とすると、物体1にかかる力は
+
 $$
     \bm{F}=
     G\frac{m_1m_2}{|\bm{r}_2-\bm{r}_1|^2}
@@ -9,7 +10,9 @@ $$
     \frac{\bm{r}_2-\bm{r}_1}{|\bm{r}_2-\bm{r}_1|}
     \right)
 $$
+
 というように書ける（$G$：重力定数）。そして、この２体の運動方程式を記載すると以下の通りとなる。
+
 $$
     m_1
     \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
@@ -18,7 +21,9 @@ $$
     \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
     -\bm{F}
 $$
+
 ここで二つの式の和をとった場合には
+
 $$
     (m_1+m_2)
     \frac{\mathrm{d}^2}{\mathrm{d}t^2}
@@ -27,25 +32,32 @@ $$
     \right)=
     0
 $$
+
 というように全体の運動方程式となり、このときの質量 $m_G$ と位置 $\bm{r}_G$（**重心**）は
+
 $$
     m_G = m_1+m_2、
     \bm{r}_G=
     \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 $$ 
+
 とおけることから、全体的に見た場合には以下の式が成り立つ。
+
 $$
     m_G\frac{\mathrm{d}^2\bm{r}_G}{\mathrm{d}t^2}=0
 $$
 
 一方で、万有引力の形を踏まえて2つの方程式を
+
 $$
     \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
     \frac{\bm{F}}{m_1}、
     \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
     -\frac{\bm{F}}{m_2}
 $$
+
 として2番目の式から1番目の式を差し引くと以下の式が得られる。
+
 $$
     \left(
         \frac{m_1m_2}{m_1+m_2}
@@ -54,31 +66,181 @@ $$
     (\bm{r}_2-\bm{r}_1)=
     -\bm{F}
 $$
+
 この式は物体1から見た物体2の運動方程式となっており、質量 $\mu$（換算質量） と相対位置 $\bm{r}$ は
+
 $$
     \mu=\frac{m_1m_2}{m_1+m_2}、
     \bm{r}=\bm{r}_2-\bm{r}_1
 $$
+
 と書ける。そのため、上記の運動方程式は以下のようになる。
+
 $$
     \mu\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
     -G\frac{m_1m_2}{r^3}\bm{r}
 $$
-ここで力が原点からの距離にしか依存していないことから、ベクトルを動径成分で記載したほうが便利なように思える。
+
+<p align="center">
+    <img width="40%" src="images/polar-2d.png">
+</p>
+
+仮に二次元の場合で考えてみると、直交座標系 $x,y$ で記述すると
+
 $$
-    \bm{r}=r\bm{e}_r、
-    \frac{\mathrm{d}\bm{r}}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \bm{e}_r+
-    r\frac{\mathrm{d}\bm{e}_r}{\mathrm{d}t}、
-    \frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-    \bm{e}_r+
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\bm{e}_r}{\mathrm{d}t}+
+    \mu\frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
+    -G\frac{m_1m_2}{r^2}
+    \frac{x}{r}、
+    \mu\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
+    -G\frac{m_1m_2}{r^2}
+    \frac{y}{r}
+$$
+
+となるが、ここで上図にもあるように
+
+$$
+    \frac{x}{r}=\cos\theta、
+    \frac{y}{r}=\sin\theta
+    \leftrightarrow
+    x=r\cos\theta、
+    y=r\sin\theta
+$$
+
+という関係にあるため、極座標 $r,\theta$ に変換すると
+
+$$
+\begin{align*}
+    \frac{\mathrm{d}^2}
+    {\mathrm{d}t^2}
+    (r\cos\theta)
+    &=
+    \frac{\mathrm{d}}
+    {\mathrm{d}t}
+    \left(
+        \frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \cos\theta-
+        r
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \sin\theta
+    \right)\\
+    &=
+    \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \sin\theta-
     r
-    \frac{\mathrm{d}^2\bm{e}_r}{\mathrm{d}t^2}
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \sin\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \cos\theta
+\end{align*}
 $$
+$$
+\begin{align*}
+    \frac{\mathrm{d}^2}
+    {\mathrm{d}t^2}
+    (r\sin\theta)
+    &=
+    \frac{\mathrm{d}}
+    {\mathrm{d}t}
+    \left(
+        \frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \sin\theta+
+        r
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \cos\theta
+    \right)\\
+    &=
+    \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \sin\theta+
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \cos\theta+
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \sin\theta
+\end{align*}
+$$
+
+であるから、以下のような形になる。
+
+$$
+    \mu
+    \left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}
+        \cos\theta-
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \sin\theta-
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+        \sin\theta-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+        \cos\theta
+    \right]
+    =
+    -G\frac{m_1m_2}{r^2}
+    \cos\theta
+$$
+$$
+    \mu
+    \left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}
+        \sin\theta+
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \cos\theta+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+        \cos\theta-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+        \sin\theta
+    \right]
+    =
+    -G\frac{m_1m_2}{r^2}
+    \sin\theta
+$$
+
+
 ここで、右辺に対して単位ベクトルを成分で書くと以下の通りにかける。
 $$
     \bm{e}_r=(\cos\theta,\sin\theta)、
