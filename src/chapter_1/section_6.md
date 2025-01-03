@@ -110,4 +110,9 @@ $$
     F_{y_i}\cos\theta_i
 $$
 
-となる。
+となる。ここで、以下の図のように力の間の関係として
+
+<p align="center">
+    <img width="50%" 
+    src="images/polor-2d_force.png">
+</p>
