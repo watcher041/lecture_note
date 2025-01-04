@@ -1,5 +1,10 @@
 
 ## 回転運動について
+　
+　前回までに単に質点としておけない運動の例として回転運動を挙げたが、実際にこの運動をどのように扱うのかを見ていくことにする。
+
+　簡単に棒を糸でつるす状況を考える。
+
 
 　先ほどまで質点の運動について論じてきたが、回転運動に関して言えば $i$ 番目の質点の運動方程式は
 $$
@@ -127,3 +132,30 @@ $$
     <img width="30%" 
     src="images/2d_force_change.jpg">
 </p>
+
+そのため、力も極座標で表記した上で角度 $\theta$ に関する式に $r$ をかけると角運動量 $L$ になることから
+
+$$
+    m_i
+    \left[
+        \frac{\mathrm{d}^2r_i}
+        {\mathrm{d}t^2}-
+        r_i
+        \left(
+        \frac{\mathrm{d}\theta_i}
+        {\mathrm{d}t}
+        \right)^2
+    \right]
+    =F_{r_i}
+$$
+$$
+    \frac{\mathrm{d}L_i}
+    {\mathrm{d}t}
+    =F_{\theta_i}r_i、
+    L_i=
+    m_ir_i^2
+    \frac{\mathrm{d}^2\theta_i}
+    {\mathrm{d}t^2}
+$$
+
+となる。ここで、角度成分の方程式の右辺が何かを見てみると
