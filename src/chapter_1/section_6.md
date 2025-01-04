@@ -110,9 +110,20 @@ $$
     F_{y_i}\cos\theta_i
 $$
 
-となる。ここで、以下の図のように力の間の関係として
+となる。ここでの力の関係については、下図から以下の通り担っていることがわかる。
+
+$$
+    F_r=
+    F_{x}\cos\theta+
+    F_{y}\sin\theta、
+    F_\theta=
+    F_{y}\cos\theta-
+    F_{x}\sin\theta
+$$
 
 <p align="center">
-    <img width="50%" 
+    <img width="40%" 
     src="images/polor-2d_force.png">
+    <img width="30%" 
+    src="images/2d_force_change.jpg">
 </p>
