@@ -12,7 +12,7 @@
 - [古典力学](chapter_1/section_0.md)
   - [運動の表現方法](chapter_1/section_1.md)
   - [運動の法則](chapter_1/section_2.md)
-  - [二体問題](chapter_1/section_3.md)
+  - [二体問題（惑星の運動）](chapter_1/section_3.md)
   - [質点系の力学](chapter_1/section_4.md)
   - [回転運動について](chapter_1/section_5.md)
   - [連続体力学](chapter_1/section_6.md)
