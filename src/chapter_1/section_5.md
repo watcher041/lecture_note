@@ -135,3 +135,14 @@ $$
         {\mathrm{d}t^2}
     \right)=F_\theta
 $$
+
+ここで回転に関わる部分を考えた時に、動径方向については直線状の移動だけであるため関係がないものと思われる。そこで、角度方向に着目すると二体問題と同じように $r$ を書けて整理すると
+
+$$
+    m\frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        r^2\frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+    \right)=
+    rF_\theta
+$$
