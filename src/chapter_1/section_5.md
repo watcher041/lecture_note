@@ -103,9 +103,11 @@ $$
     F_r=F_x\cos\theta+F_y\sin\theta、
     F_\theta=-F_x\sin\theta+F_y\cos\theta
 $$
-
 <p align="center">
-    <img width="50%"  
+    <img width="44%"  
+        style="background-color:white;"
+        src="images/polor-2d_force.png">
+    <img width="40%"  
         style="background-color:white;"
         src="images/2d_force_change.png">
 </p>
