@@ -244,14 +244,10 @@ $$
     \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
     \right)=
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
-    \bm{r}\times\bm{v}
-    \right)-
+    (\bm{r}\times\bm{v})-
     (\bm{v}\times\bm{v})=
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
-    \bm{r}\times\bm{v}
-    \right)
+    (\bm{r}\times\bm{v})
 $$
 
 であるから以下の通りになる。
@@ -259,8 +255,19 @@ $$
 $$
     m
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
-    \bm{r}\times\bm{v}
-    \right)=
+    (\bm{r}\times\bm{v})=
     \bm{r}\times\bm{F}
+$$
+
+ここで、左辺の外積を極座標で整理すると
+
+$$
+    \bm{r}\times\bm{v}=
+    x
+    \frac{\mathrm{d}y}{\mathrm{d}t}-
+    y
+    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    r^2\omega
+    \rightarrow
+    L=m(\bm{r}\times\bm{v})
 $$
