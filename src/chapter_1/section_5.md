@@ -16,3 +16,85 @@ $$
     x=r\cos\theta、
     y=r\sin\theta
 $$
+
+であることを踏まえて
+
+$$
+    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
+    \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \sin\theta-
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \sin\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \cos\theta
+$$
+$$
+     \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
+     \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \sin\theta+
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \cos\theta+
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \sin\theta
+$$
+
+と計算されることから、以下の方程式が得られる。
+
+$$
+    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \cos\theta+
+    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \sin\theta=
+    m\left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+    \right]=
+    F_x\cos\theta+
+    F_y\sin\theta
+$$
+$$
+    -m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \sin\theta+
+    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \cos\theta=
+    m\left(
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+    \right)=
+    -F_x\sin\theta+
+    F_y\cos\theta
+$$
