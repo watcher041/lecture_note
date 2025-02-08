@@ -211,3 +211,27 @@ $$
 1. 外積の元となったベクトル（$\bm{a},\bm{b}$）は外積（$\bm{c}$）と直交する。
 
 1. 外積の大きさは外積の元となったベクトル（$\bm{a},\bm{b}$）のなす角 $\theta$ により $ab\sin\theta$ と表される。
+
+上記において、$\bm{a}=\bm{r},\bm{b}=\bm{F}$ としても分かるように外積と同じ形をしていることから、試しに
+
+$$
+    \bm{N}=\bm{r}\times\bm{F}
+$$
+
+とおくと、一般に運動方程式が
+
+$$
+    m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=\bm{F}
+$$
+
+であることから両辺に外積をとることで
+
+$$
+    m
+    \left(
+    \bm{r}\times
+    \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+    \right)
+    =
+    \bm{r}\times\bm{F}
+$$
