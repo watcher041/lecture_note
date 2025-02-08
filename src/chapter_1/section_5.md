@@ -192,3 +192,5 @@ $$
     r\cos\theta F_y - r\sin\theta F_x =
     xF_y - yF_x 
 $$
+
+となるが、これは外積と呼ばれる関係になっている。
