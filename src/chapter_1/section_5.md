@@ -113,3 +113,25 @@ $$
         src="images/2d_force_change.png">
 </p>
 
+つまり、先ほどの方程式はそれぞれ極座標の各成分の運動方程式になっていることが分かる。
+
+$$
+    m\left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+    \right]=F_r、
+    m\left(
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+    \right)=F_\theta
+$$
