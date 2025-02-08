@@ -262,6 +262,15 @@ $$
     my
     \frac{\mathrm{d}x}{\mathrm{d}t}=
     mr^2\omega
-    \rightarrow
-    L=m(\bm{r}\times\bm{v})
+$$
+
+となるため、最終的に以下の通りになる。
+
+$$
+    \frac{\mathrm{d}\bm{L}}
+    {\mathrm{d}t}=
+    \bm{N}、
+    \bm{L}=
+    m(\bm{r}\times\bm{v})、
+    \bm{N}=\bm{r}\times\bm{F}
 $$
