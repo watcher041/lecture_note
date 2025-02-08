@@ -259,15 +259,15 @@ $$
     \bm{r}\times\bm{F}
 $$
 
-ここで、左辺の外積を極座標で整理すると
+ここで、左辺を極座標で整理すると
 
 $$
-    \bm{r}\times\bm{v}=
-    x
+    m(\bm{r}\times\bm{v})=
+    mx
     \frac{\mathrm{d}y}{\mathrm{d}t}-
-    y
+    my
     \frac{\mathrm{d}x}{\mathrm{d}t}=
-    r^2\omega
+    mr^2\omega
     \rightarrow
     L=m(\bm{r}\times\bm{v})
 $$
