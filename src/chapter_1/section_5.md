@@ -78,8 +78,7 @@ $$
         {\mathrm{d}t}
         \right)^2
     \right]=
-    F_x\cos\theta+
-    F_y\sin\theta
+    F_x\cos\theta+F_y\sin\theta
 $$
 $$
     -m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
@@ -95,6 +94,18 @@ $$
         \frac{\mathrm{d}^2\theta}
         {\mathrm{d}t^2}
     \right)=
-    -F_x\sin\theta+
-    F_y\cos\theta
+    -F_x\sin\theta+F_y\cos\theta
 $$
+
+ここで右辺の力に関しては、それぞれ以下の図にある通り極座標の各成分の力になっていることが分かる（$F_r$ に関しては赤線と青線の長さを足したもの、$F_\theta$ については 青線から赤線を引いた長さになっている）。
+
+$$
+    F_r=F_x\cos\theta+F_y\sin\theta、
+    F_\theta=-F_x\sin\theta+F_y\cos\theta
+$$
+
+<p align="center">
+    <img width="50%"  
+        style="background-color:white;"
+        src="images/2d_force_change.png">
+</p>
