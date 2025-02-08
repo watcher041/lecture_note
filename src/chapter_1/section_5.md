@@ -235,3 +235,32 @@ $$
     =
     \bm{r}\times\bm{F}
 $$
+
+であり、左辺を変形すると
+
+$$
+    \left(
+    \bm{r}\times
+    \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+    \right)=
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+    \bm{r}\times\bm{v}
+    \right)-
+    (\bm{v}\times\bm{v})=
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+    \bm{r}\times\bm{v}
+    \right)
+$$
+
+であるから以下の通りになる。
+
+$$
+    m
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+    \bm{r}\times\bm{v}
+    \right)=
+    \bm{r}\times\bm{F}
+$$
