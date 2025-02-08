@@ -193,4 +193,21 @@ $$
     xF_y - yF_x 
 $$
 
-となるが、これは外積と呼ばれる関係になっている。
+となるが、これは外積と呼ばれる関係になっている。例えば、以下のようにベクトル $\bm{a}=(a_x,a_y,0)、\bm{b}=(b_x,b_y,0)$ がある場合、外積 $\bm{c}$ は以下の形で表される。
+
+$$
+    \bm{c}=\bm{a}\times\bm{b}=
+    (0,0,a_xb_y-a_yb_x)
+$$
+
+<p align="center">
+    <img width="44%"  
+        style="background-color:white;"
+        src="images/cross_product.png">
+</p>
+
+ちなみに外積の特徴としては、以下の通りである。
+
+1. 外積の元となったベクトル（$\bm{a},\bm{b}$）は外積（$\bm{c}$）と直交する。
+
+1. 外積の大きさは外積の元となったベクトル（$\bm{a},\bm{b}$）のなす角 $\theta$ により $ab\sin\theta$ と表される。
