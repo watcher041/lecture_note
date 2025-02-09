@@ -278,3 +278,30 @@ $$
     m(\bm{r}\times\bm{v})、
     \bm{N}=\bm{r}\times\bm{F}
 $$
+
+以上の議論を質点系に適用した場合は、
+
+$$
+    m_i
+    \frac{\mathrm{d}^2\bm{r}_i}
+    {\mathrm{d}t^2}=
+    \bm{F}_{i}+
+    \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
+$$
+
+であるが、これに外積をとると
+
+$$
+    \sum_{i=1}^N
+    m_i
+    \left(
+    \bm{r}_i\times
+    \frac{\mathrm{d}^2\bm{r}_i}
+    {\mathrm{d}t^2}
+    \right)=
+    \sum_{i=1}^N
+    (\bm{r}_i\times\bm{F}_{i})+
+    \sum_{i=1}^N
+    \sum_{j=1(j\neq i)}^{N}
+    (\bm{r}_i\times\bm{F}_{ij})
+$$
