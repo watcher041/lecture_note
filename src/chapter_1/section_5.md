@@ -305,3 +305,34 @@ $$
     \sum_{j=1(j\neq i)}^{N}
     (\bm{r}_i\times\bm{F}_{ij})
 $$
+
+となるが、ここで右辺第2項目に関して $\bm{F}_{ij}=-\bm{F}_{ji}$ を利用することで
+
+$$
+    \sum_{i=1}^N
+    \sum_{j=1(j\neq i)}^{N}
+    (\bm{r}_i\times\bm{F}_{ij})=
+    \frac{1}{2}
+    \sum_{i=1}^N
+    \sum_{j=1(j\neq i)}^{N}
+    (\bm{r}_i\times\bm{F}_{ij}+
+    \bm{r}_j\times\bm{F}_{ji})=
+    \sum_{i=1}^N
+    \sum_{j=1(j\neq i)}^{N}
+    (\bm{r}_i-\bm{r}_j)
+    \times\bm{F}_{ij}
+$$
+
+となるが、$\bm{r}_i-\bm{r}_j$ と $\bm{F}_{ij}$ が平行であることから0になる。そのため、最終的には以下の形になる。
+
+$$
+    \sum_{i=1}^N
+    m_i
+    \left(
+    \bm{r}_i\times
+    \frac{\mathrm{d}^2\bm{r}_i}
+    {\mathrm{d}t^2}
+    \right)=
+    \sum_{i=1}^N
+    (\bm{r}_i\times\bm{F}_{i})
+$$
