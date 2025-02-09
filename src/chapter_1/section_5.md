@@ -275,7 +275,8 @@ $$
     {\mathrm{d}t}=
     \bm{N}、
     \bm{L}=
-    m(\bm{r}\times\bm{v})、
+    m(\bm{r}\times\bm{v})=
+    mr^2\bm{\omega}、
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
@@ -337,4 +338,33 @@ $$
     (\bm{r}_i\times\bm{F}_{i})
 $$
 
+更に速度の形に変形すると、左辺は
 
+$$
+    \sum_{i=1}^N
+    m_i
+    \left(
+    \bm{r}_i\times
+    \frac{\mathrm{d}^2\bm{r}_i}
+    {\mathrm{d}t^2}
+    \right)=
+    \sum_{i=1}^N
+    m_i
+    \left(
+    \bm{r}_i\times
+    \frac{\mathrm{d}\bm{v}_i}
+    {\mathrm{d}t}
+    \right)=
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left[
+    \sum_{i=1}^N
+    m_i
+    \left(
+    \bm{r}_i\times\bm{v}_i
+    \right)
+    \right]=
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    (I\bm{\omega})、
+    I=\sum_{i=1}^N
+    m_ir_i^2
+$$
