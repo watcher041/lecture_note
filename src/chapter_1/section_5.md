@@ -209,7 +209,8 @@ $$
 上記において $\bm{a}=\bm{r},\bm{b}=\bm{F}$ とすると、それらの外積の $z$ 成分が $N$ と同じ形をしていることから
 
 $$
-    \bm{N}=\bm{r}\times\bm{F}
+    \bm{N}=\bm{r}\times\bm{F}=
+    (0,0,xF_y-yF_x)
 $$
 
 とおくと、一般に運動方程式が
@@ -257,14 +258,17 @@ $$
 
 $$
     m(\bm{r}\times\bm{v})=
-    mx
-    \frac{\mathrm{d}y}{\mathrm{d}t}-
-    my
-    \frac{\mathrm{d}x}{\mathrm{d}t}=
-    mr^2\omega
+    \left(
+        0,0,
+        mx
+        \frac{\mathrm{d}y}{\mathrm{d}t}-
+        my
+        \frac{\mathrm{d}x}{\mathrm{d}t}
+    \right)=
+    (0,0,mr^2\omega)
 $$
 
-となるため、最終的に以下の通りになる。
+というように $z$ 成分が角運動量 $L$ と同じ形になるため、最終的に以下の通りになる。
 
 $$
     \frac{\mathrm{d}\bm{L}}
