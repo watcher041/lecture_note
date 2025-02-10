@@ -368,3 +368,15 @@ $$
     I=\sum_{i=1}^N
     m_ir_i^2
 $$
+
+となり、回転軸から質点の位置が不変であれば
+以下のような形になる。
+$$
+    I
+    \frac{\mathrm{d}\bm{\omega}}
+    {\mathrm{d}t}=
+    \bm{N}、
+    \bm{N}=
+    \sum_{i=1}^N
+    (\bm{r}_i\times\bm{F}_{i})
+$$
