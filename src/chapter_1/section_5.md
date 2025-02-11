@@ -182,7 +182,7 @@ $$
 
 $$
     \frac{\mathrm{d}L}{\mathrm{d}t}=N、
-    L=I\omega=mr^2\omega、N=rF_\theta
+    L=I\omega、N=rF_\theta
 $$
 
 というように回転の運動方程式として記述される。ここで、$N$ については直交座標系で見た時に
@@ -265,7 +265,7 @@ $$
         my
         \frac{\mathrm{d}x}{\mathrm{d}t}
     \right)=
-    (0,0,mr^2\omega)
+    (0,0,I\omega)
 $$
 
 というように $z$ 成分が角運動量 $L$ と同じ形になるため、最終的に以下の通りになる。
@@ -276,7 +276,7 @@ $$
     \bm{N}、
     \bm{L}=
     m(\bm{r}\times\bm{v})=
-    mr^2\bm{\omega}、
+    I\bm{\omega}、
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
