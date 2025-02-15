@@ -31,6 +31,10 @@ $$
     {\mathrm{d}t^2}
     \right)=
     \sum_{i=1}^N
+    \bm{F}_{i}+
+    \sum_{i=1}^N
+    \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}=
+    \sum_{i=1}^N
     \bm{F}_{i}
 $$
 
