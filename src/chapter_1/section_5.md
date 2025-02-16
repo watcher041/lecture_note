@@ -236,11 +236,11 @@ $$
     \bm{r}\times
     \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
     \right)
-    =
-    \bm{r}\times\bm{F}
+    =\bm{N}、
+    \bm{N} = \bm{r}\times\bm{F}
 $$
 
-であり、左辺を変形すると
+というように右辺がモーメント $\bm{N}$ となるので、左辺を変形してみると
 
 $$
     \left(
@@ -260,7 +260,7 @@ $$
     m
     \frac{\mathrm{d}}{\mathrm{d}t}
     (\bm{r}\times\bm{v})=
-    \bm{r}\times\bm{F}
+    \bm{N}
 $$
 
 ここで、左辺を極座標で整理すると
