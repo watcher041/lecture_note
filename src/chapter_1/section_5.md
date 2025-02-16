@@ -165,10 +165,18 @@ $$
     \neq 0
 $$
 
-さらに、$\omega$ を用いると先ほどの $f$  と $L$ は
+そこで、先ほどの式を $\omega$ を用いて表記し直すと
 
 $$
-    f=mr\omega^2、L=mr^2\omega
+    m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    F_r+f、
+    f=
+    mr\omega^2
+$$
+$$
+    \frac{\mathrm{d}L}{\mathrm{d}t}=
+    rF_\theta、
+    L=mr^2\omega
 $$
 
 となるが、このうち $L$ は従来の運動量が質量（慣性質量）と速度の掛け算であったことを踏まえ
