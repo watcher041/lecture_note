@@ -196,7 +196,7 @@ $$
 というように回転の運動方程式として記述される。ここで、$N$ については直交座標系で見た時に
 
 $$
-    rF_\theta=
+    N=rF_\theta=
     r\cos\theta F_y - r\sin\theta F_x =
     xF_y - yF_x 
 $$
@@ -214,14 +214,15 @@ $$
         src="images/cross_product.png">
 </p>
 
-上記において $\bm{a}=\bm{r},\bm{b}=\bm{F}$ とすると、それらの外積の $z$ 成分が $N$ と同じ形をしていることから
+試しに $\bm{a}=\bm{r},\bm{b}=\bm{F}$ として外積をとると、以下の通り $z$ 成分が先ほどの $N$ と一致していることが分かる。
 
 $$
-    \bm{N}=\bm{r}\times\bm{F}=
-    (0,0,xF_y-yF_x)
+    \bm{r}\times\bm{F}=
+    (0,0,xF_y-yF_x)=
+    (0,0,N)
 $$
 
-とおくと、一般に運動方程式が
+そこで、
 
 $$
     m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=\bm{F}
