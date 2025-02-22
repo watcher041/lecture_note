@@ -484,7 +484,9 @@ $$
 
 $$
     v_r=
-    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    \left(
+        \frac{\mathrm{d}r}{\mathrm{d}t}
+    \right)、
     \omega_\theta=
      \left(
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
