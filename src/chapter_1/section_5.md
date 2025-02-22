@@ -429,7 +429,17 @@ $$
     \right)
     \sin\theta+
     \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
-    \cos\theta
+    \cos\theta=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2-
+    r
+    \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)^2
+    \sin^2\theta
 $$
 $$
     \left(
@@ -438,15 +448,36 @@ $$
         \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
         \sin\phi
     \right)
-    \cos\theta+
+    \cos\theta-
     \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
-    \sin\theta
+    \sin\theta=
+    r
+    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+    2
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+    -r
+    \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)
+    \sin\theta\cos\theta
 $$
 $$
     -\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
     \sin\phi+
     \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-    \cos\phi
+    \cos\phi=
+    r
+    \frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+    \sin\theta+
+    2r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta+
+    2
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta
 $$
 
 　以上の内容を質点系に応用すると、通常の運動方程式
