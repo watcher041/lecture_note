@@ -295,6 +295,129 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
+ここまでは二次元での話であったため、今度は3次元の場合で考えてみると、その場合は直交座標系系 $x,y,z$ は極座標 $r,\theta,\phi$ により
+
+$$
+    x=r\sin\theta\cos\phi、
+    y=r\sin\theta\sin\phi、
+    z=r\cos\theta
+$$
+
+という関係にあるため、各成分の加速度を求めると
+
+$$
+    \begin{align*}
+        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        &=
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        \left(
+            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \sin\theta\cos\phi+
+            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \cos\theta\cos\phi-
+            r\frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \sin\theta\sin\phi
+        \right)\\
+        &=
+        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+        \sin\theta\cos\phi+
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \cos\theta\cos\phi-
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \sin\theta\sin\phi\\
+        &+
+        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+        \cos\theta\cos\phi-
+        r
+        \left(
+            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \right)^2
+        \sin\theta\cos\phi-
+        2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \cos\theta\sin\phi\\
+        &-
+        r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+        \sin\theta\sin\phi-
+        r
+        \left(
+            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \right)^2
+        \sin\theta\cos\phi
+    \end{align*}
+$$
+$$
+    \begin{align*}
+        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        &=
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        \left(
+            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \sin\theta\sin\phi+
+            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \cos\theta\sin\phi+
+            r\frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \sin\theta\cos\phi
+        \right)\\
+        &=
+        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+        \sin\theta\sin\phi+
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \cos\theta\sin\phi+
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \sin\theta\cos\phi\\
+        &+
+        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+        \cos\theta\sin\phi-
+        r
+        \left(
+            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \right)^2
+        \sin\theta\sin\phi+
+        2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \cos\theta\cos\phi\\
+        &+
+        r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+        \sin\theta\cos\phi-
+        r
+        \left(
+            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \right)^2
+        \sin\theta\sin\phi
+    \end{align*}
+$$
+$$
+    \begin{align*}
+        \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+        &=
+        \frac{\mathrm{d}}{\mathrm{d}t}
+        \left(
+            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \cos\theta-
+            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \sin\theta
+        \right)\\
+        &=
+        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+        \cos\theta-
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \sin\theta-
+        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+        \sin\theta-
+        r
+        \left(
+            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \right)^2
+        \cos\theta
+    \end{align*}
+$$
+
 　以上の内容を質点系に応用すると、通常の運動方程式
 
 $$
