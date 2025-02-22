@@ -418,6 +418,37 @@ $$
     \end{align*}
 $$
 
+となる。これらの式を見比べることで、極座標の各成分ごとの加速度を取り出してみると
+
+$$
+    \left(
+        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        \cos\phi+
+        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        \sin\phi
+    \right)
+    \sin\theta+
+    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+    \cos\theta
+$$
+$$
+    \left(
+        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        \cos\phi+
+        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        \sin\phi
+    \right)
+    \cos\theta+
+    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+    \sin\theta
+$$
+$$
+    -\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \sin\phi+
+    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \cos\phi
+$$
+
 　以上の内容を質点系に応用すると、通常の運動方程式
 
 $$
