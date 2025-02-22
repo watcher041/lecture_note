@@ -480,6 +480,46 @@ $$
     \sin\theta
 $$
 
+となる。そのため、極座標での各成分の運動方程式は
+
+$$
+    \omega_\theta=
+     \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)、
+    \omega_\phi=
+     \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)
+$$
+
+とすると、以下の通りになる。
+
+$$
+    m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+    mr\omega_\theta^2-
+    r\omega_\phi^2\sin^2\theta=F_r
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
+    2m
+    \frac{\mathrm{d}r}{\mathrm{d}t}\omega_\theta+
+    -mr\omega_\phi
+    \sin\theta\cos\theta=
+    F_\theta
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\phi}{\mathrm{d}t}
+    \sin\theta+
+    2mr\omega_\theta\omega_\phi\cos\theta+
+    2m
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \omega_\phi\sin\theta=
+    F_\phi
+$$
+
 　以上の内容を質点系に応用すると、通常の運動方程式
 
 $$
