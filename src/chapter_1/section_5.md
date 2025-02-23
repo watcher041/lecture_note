@@ -655,7 +655,26 @@ $$
     mr^2\omega_\phi\sin^2\theta
 $$
 
+そして、これから $I=mr^2$ として角速度ベクトルを
 
+$$
+    \omega_x=
+    -(
+        \omega_\theta\sin\phi+
+        \omega_\phi\sin\theta\cos\theta\cos\phi
+    )
+$$
+$$
+    \omega_y=
+    (
+        \omega_\theta\cos\phi-
+        \omega_\phi\sin\theta\cos\theta\sin\phi
+    )
+$$
+$$
+    \omega_z=
+    \omega_\phi\sin^2\theta
+$$
 
 
 
