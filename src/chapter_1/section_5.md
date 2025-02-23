@@ -295,15 +295,8 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-ここまでは二次元での話であったため、今度は3次元の場合で考えてみると、その場合は直交座標系系 $x,y,z$ は極座標 $r,\theta,\phi$ により
-
-$$
-    x=r\sin\theta\cos\phi、
-    y=r\sin\theta\sin\phi、
-    z=r\cos\theta
-$$
-
-という関係にあるため、各成分の加速度を求めると
+3次元においてもこの関係式が成り立つか見てみると、
+各成分の加速度を求めると
 
 $$
     \begin{align*}
@@ -533,7 +526,7 @@ $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     (mr^2\omega_\theta)-
-    mr^2\omega_\phi\sin\theta\cos\theta=
+    mr^2\omega_\phi^2\sin\theta\cos\theta=
     rF_\theta
 $$
 $$
