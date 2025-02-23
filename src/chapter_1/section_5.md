@@ -295,8 +295,15 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-3次元においてもこの関係式が成り立つか見てみると、
-各成分の加速度を求めると
+以上のことが3次元でも成立するかを見てみると、まず直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ が
+
+$$
+    x=r\sin\theta\cos\phi、
+    y=r\sin\theta\sin\phi、
+    z=r\cos\theta
+$$
+
+という関係にあることから、各成分の加速度を求めると
 
 $$
     \begin{align*}
@@ -595,6 +602,40 @@ $$
     2mv_r\omega_\phi\sin\theta=
     F_\phi
 $$
+
+そして、これらを整理すると
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mr[\omega_\theta^2+(\omega_\phi\sin\theta)^2]=
+    F_r
+$$
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    (mr^2\omega_\theta)-
+    mr^2\omega_\phi^2\sin\theta\cos\theta=
+    rF_\theta
+$$
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    [m(r\sin\theta)^2\omega_\phi]=
+    r\sin\theta F_\phi
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 　以上の内容を質点系に応用すると、通常の運動方程式
 
