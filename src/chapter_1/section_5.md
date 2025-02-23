@@ -455,11 +455,11 @@ $$
     \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
     2
     \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}+
-    -r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    r
     \left(
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)
+    \right)^2
     \sin\theta\cos\theta
 $$
 $$
@@ -502,13 +502,13 @@ $$
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
     mr\omega_\theta^2-
-    r\omega_\phi^2\sin^2\theta=F_r
+    mr\omega_\phi^2\sin^2\theta=F_r
 $$
 $$
     mr
     \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
-    2mv_r\omega_\theta+
-    -mr\omega_\phi\sin\theta\cos\theta=
+    2mv_r\omega_\theta-
+    mr\omega_\phi^2\sin\theta\cos\theta=
     F_\theta
 $$
 $$
@@ -518,6 +518,28 @@ $$
     2mr\omega_\theta\omega_\phi\cos\theta+
     2mv_r\omega_\phi\sin\theta=
     F_\phi
+$$
+
+これをさらに整理すると
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mr
+    \left[
+        \omega_\theta^2+
+        (\omega_\phi\sin\theta)^2
+    \right]=F_r
+$$
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    (mr^2\omega_\theta)-
+    mr^2\omega_\phi\sin\theta\cos\theta=
+    rF_\theta
+$$
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    [m(r\sin\theta)^2\omega_\phi]=
+    r\sin\theta F_\phi
 $$
 
 　以上の内容を質点系に応用すると、通常の運動方程式
