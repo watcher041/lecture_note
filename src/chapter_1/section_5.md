@@ -495,7 +495,90 @@ $$
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
     mr\omega_\theta^2-
-    mr\omega_\phi^2\sin^2\theta=F_r
+    mr\omega_\phi^2\sin^2\theta=
+    \left(
+        F_x\cos\phi+
+        F_y\sin\phi
+    \right)
+    \sin\theta+
+    F_z\cos\theta
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
+    2mv_r\omega_\theta-
+    mr\omega_\phi^2\sin\theta\cos\theta=
+    \left(
+        F_x\cos\phi+
+        F_y\sin\phi
+    \right)
+    \cos\theta-
+    F_z\sin\theta
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\phi}{\mathrm{d}t}
+    \sin\theta+
+    2mr\omega_\theta\omega_\phi\cos\theta+
+    2mv_r\omega_\phi\sin\theta=
+    -F_x\sin\phi+
+    F_y\cos\phi
+$$
+
+これをさらに整理すると、2次元のときの力の関係式を踏まえると
+
+$$
+    F_{x,y}=
+    F_x\cos\phi+F_y\sin\phi、
+    F_\phi=
+    F_y\cos\phi-F_x\sin\phi
+$$
+
+というように $x,y$ 平面上の動径方向の力になるため、
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mr\omega_\theta^2-
+    mr\omega_\phi^2\sin^2\theta=
+    F_{x,y}\sin\theta+
+    F_z\cos\theta
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
+    2mv_r\omega_\theta-
+    mr\omega_\phi^2\sin\theta\cos\theta=
+    F_{x,y}\cos\theta-
+    F_z\sin\theta
+$$
+$$
+    mr
+    \frac{\mathrm{d}\omega_\phi}{\mathrm{d}t}
+    \sin\theta+
+    2mr\omega_\theta\omega_\phi\cos\theta+
+    2mv_r\omega_\phi\sin\theta=
+    F_\phi
+$$
+
+
+となるため、2次元のときの力の関係を踏まえると
+
+$$
+    F_r=
+    F_z\cos\theta+
+    F_{x,y}\sin\theta、
+    F_\theta=
+    F_{x,y}\cos\theta-
+    F_z\sin\theta
+$$
+
+となるため、最終的に以下の形になる。
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    mr\omega_\theta^2-
+    mr\omega_\phi^2\sin^2\theta=
+    F_r
 $$
 $$
     mr
@@ -511,28 +594,6 @@ $$
     2mr\omega_\theta\omega_\phi\cos\theta+
     2mv_r\omega_\phi\sin\theta=
     F_\phi
-$$
-
-これをさらに整理すると
-
-$$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    mr
-    \left[
-        \omega_\theta^2+
-        (\omega_\phi\sin\theta)^2
-    \right]=F_r
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (mr^2\omega_\theta)-
-    mr^2\omega_\phi^2\sin\theta\cos\theta=
-    rF_\theta
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    [m(r\sin\theta)^2\omega_\phi]=
-    r\sin\theta F_\phi
 $$
 
 　以上の内容を質点系に応用すると、通常の運動方程式
