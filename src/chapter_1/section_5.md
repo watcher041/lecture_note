@@ -603,26 +603,57 @@ $$
     F_\phi
 $$
 
-そして、これらを整理すると
+一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となると予想されるため
 
 $$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    mr[\omega_\theta^2+(\omega_\phi\sin\theta)^2]=
-    F_r
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (mr^2\omega_\theta)-
-    mr^2\omega_\phi^2\sin\theta\cos\theta=
-    rF_\theta
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    [m(r\sin\theta)^2\omega_\phi]=
-    r\sin\theta F_\phi
+    L_x=m(yv_z-zv_y)、
+    L_y=m(zv_x-xv_z)、
+    L_z=m(xv_y-yv_x)
 $$
 
+とおく。そして、各速度が極座標により
 
+$$
+    v_x=
+    v_r\sin\theta\cos\phi+
+    r\omega_\theta\cos\theta\cos\phi-
+    r\omega_\phi\sin\theta\sin\phi
+$$
+$$
+    v_y=
+    v_r\sin\theta\sin\phi+
+    r\omega_\theta\cos\theta\sin\phi+
+    r\omega_\phi\sin\theta\cos\phi
+$$
+$$
+    v_z=
+    v_r\cos\theta-
+    r\omega_\theta\sin\theta
+$$
+
+と書けるため、以下の通りになる。
+
+$$
+    L_x=m(yv_z-zv_y)=
+    -mr^2
+    (
+        \omega_\theta\sin\phi+
+        \omega_\phi\sin\theta\cos\theta\cos\phi
+    )
+$$
+$$
+    L_y=m(zv_x-xv_z)=
+    mr^2
+    (
+        \omega_\theta\cos\phi-
+        \omega_\phi\sin\theta\cos\theta\sin\phi
+    )
+    
+$$
+$$
+    L_z=m(xv_y-yv_x)=
+    mr^2\omega_\phi\sin^2\theta
+$$
 
 
 
