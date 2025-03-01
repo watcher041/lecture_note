@@ -140,15 +140,15 @@ $$
 
 $$
     m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
-    F_r+f、
-    f=
+    F_r+f_{r,\theta}、
+    f_{r,\theta}=
     mr
     \left(
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \right)^2
 $$
 
-といように通常の運動方程式にあたかも力 $f$ （遠心力）が遠ざかる方向に加わった形になっている。次に、角度方向については二体問題と同じように $r$ を書けて整理すると
+といように通常の運動方程式にあたかも力 $f_{r,\theta}$ （遠心力）が遠ざかる方向に加わった形になっている。次に、角度方向については二体問題と同じように $r$ を書けて整理すると
 
 $$
     \frac{\mathrm{d}L}{\mathrm{d}t}=
@@ -169,8 +169,8 @@ $$
 
 $$
     m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
-    F_r+f、
-    f=
+    F_r+f_{r,\theta}、
+    f_{r,\theta}=
     mr\omega^2
 $$
 $$
@@ -281,8 +281,8 @@ $$
 
 $$
     m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
-    F_r+f、
-    f=
+    F_r+f_{r,\theta}、
+    f_{r,\theta}=
     mr\omega^2
 $$
 $$
@@ -575,6 +575,43 @@ $$
     F_\phi
 $$
 
+ここで、動径方向の運動方程式を整理すると
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    \left(
+        mr\omega_\theta^2+
+        mr\omega_\phi^2\sin^2\theta
+    \right)=
+    F_r
+$$
+
+となるが、括弧内の部分は遠心力となっている。実際、$x,y$ 平面上での遠心力は
+
+$$
+    f_{x,y}=
+    m(r\sin\theta)\omega_\phi^2
+$$
+
+であり、先ほどの動径方向の関係式を利用すると
+
+$$
+    f_{r,\phi}=
+    F_z\cos\theta+
+    F_{x,y}\sin\theta=
+    0+f_{x,y}\sin\theta=
+    mr\omega_\phi^2\sin^2\theta
+$$
+
+というように、第2項目の力になっていることが分かる。第１項目については、$x,y$ と $z$ 平面での遠心力となるため、
+
+$$
+    f_{r,\theta}=
+    mr\omega_\theta^2
+$$
+
+
+
 一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となると予想されるため
 
 $$
@@ -627,26 +664,24 @@ $$
     mr^2\omega_\phi\sin^2\theta
 $$
 
-そして、これから $I=mr^2$ として角速度ベクトルを
+これらを整理すると
 
 $$
-    \omega_x=
-    -(
-        \omega_\theta\sin\phi+
-        \omega_\phi\sin\theta\cos\theta\cos\phi
-    )
+    -L_x\sin\phi+L_y\cos\phi=
+    mr^2\omega_\theta
 $$
 $$
-    \omega_y=
-    (
-        \omega_\theta\cos\phi-
-        \omega_\phi\sin\theta\cos\theta\sin\phi
-    )
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
 $$
-$$
-    \omega_z=
-    \omega_\phi\sin^2\theta
-$$
+
+
+
+
+
+
+
+
 
 
 
