@@ -944,21 +944,24 @@ $$
     \left(
     \bm{r}_i\times\bm{v}_i
     \right)
-    \right]=
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (I\bm{\omega})、
-    I=\sum_{i=1}^N
-    m_ir_i^2
+    \right]
 $$
 
-となり、回転軸から質点の位置が不変であれば
-以下のような形になる。
+となり、以下の形になる。重心を用いて
+
 $$
-    I
-    \frac{\mathrm{d}\bm{\omega}}
-    {\mathrm{d}t}=
-    \bm{N}、
-    \bm{N}=
-    \sum_{i=1}^N
-    (\bm{r}_i\times\bm{F}_{i})
+    \bm{r}_i=\bm{r}+\bm{R}_i、
+    \bm{v}_i=\bm{v}+\bm{V}_i
 $$
+
+と書くと、これを代入することで
+
+$$
+    \sum_{i=1}^N 
+    m_i\bm{R}_i=
+    \sum_{i=1}^N 
+    m_i\bm{r}_i-m\bm{r}=
+    \bm{0}
+$$
+
+であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。
