@@ -838,6 +838,32 @@ $$
     mr^2\omega_\phi^2\sin\theta\cos\theta
 $$
 
+また、角運動量を慣性モーメントで書くと
+
+$$
+    \bm{L}=\bm{I}\bm{\omega}
+$$
+$$
+    \bm{I}=
+    \begin{pmatrix}
+        mr^2 & 0    & 0\\
+        0    & mr^2 & 0\\
+        0    & 0    & m(r\sin\theta)^2
+    \end{pmatrix}、
+    \bm{\omega}=
+    \begin{pmatrix}
+        -\omega_\theta\sin\phi
+        -\omega_\phi\sin\theta\cos\theta\cos\phi\\
+        \omega_\theta\cos\phi-
+        \omega_\phi\sin\theta\cos\theta\sin\phi\\
+        \omega_\phi
+    \end{pmatrix}
+$$
+
+
+
+
+
 
 
 
