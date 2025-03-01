@@ -610,6 +610,105 @@ $$
     mr\omega_\theta^2
 $$
 
+であるから、動径方向については以下のようになると思われる。
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
+    F_r+
+    (f_{r,\theta}+f_{r,\phi})、
+    f_{r,\theta}=
+    mr\omega_\theta^2、
+    f_{r,\phi}=
+    [m(r\sin\theta)\omega_\phi^2]\sin\theta
+$$
+
+
+このことからも伺えるように $\theta$ の方向には $r$ 、$\phi$ の方向には $r\sin\theta$ の位置で回転することから
+
+$$
+    L_\theta=
+    mr^2\omega_\theta、
+    L_\phi=
+    m(r\sin\theta)^2\omega_\phi
+$$
+
+と角運動量おき、これらを微分してみると
+
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
+    =
+    r\left(
+    mr
+    \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
+    2mv_r\omega_\theta
+    \right)=
+    r
+    \left(
+        F_\theta+
+        mr\omega_\phi^2\sin\theta\cos\theta
+    \right)
+$$
+$$
+    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
+    =
+    r\sin\theta
+    \left(
+    mr
+    \frac{\mathrm{d}\omega_\phi}{\mathrm{d}t}
+    \sin\theta+
+    2mr\omega_\theta\omega_\phi\cos\theta+
+    2mv_r\omega_\phi\sin\theta
+    \right)=
+    r\sin\theta F_\phi
+$$
+
+$\theta$ 方向の第二項目については、$\phi$ 方向の回転に対する遠心力の $\theta$ 方向の成分であり、実際
+
+$$
+    f_{\theta,\phi}=
+    F_{x,y}\cos\theta-
+    F_z\sin\theta=
+    m(r\sin\theta)\omega_\phi^2\cos\theta+0=
+    mr\omega_\phi^2\sin\theta\cos\theta
+$$
+
+となることからも分かる。
+
+以上のことから、
+
+
+$$
+    m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
+    F_r+
+    (f_{r,\theta}+f_{r,\phi})、
+    f_{r,\theta}=
+    mr\omega_\theta^2、
+    f_{r,\phi}=
+    [m(r\sin\theta)\omega_\phi^2]\sin\theta
+$$
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
+    =
+    r(F_\theta+f_{\theta,\phi})、
+    L_\theta=
+    mr^2\omega_\theta、
+    f_{\theta,\phi}=
+    [m(r\sin\theta)\omega_\phi^2]\cos\theta
+$$
+$$
+    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
+    =
+    r\sin\theta F_\phi、
+    L_\phi=
+    m(r\sin\theta)^2\omega_\phi
+$$
+
+
+
+
+
+
+
 
 
 一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となると予想されるため
