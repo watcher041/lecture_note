@@ -672,10 +672,7 @@ $$
     mr\omega_\phi^2\sin\theta\cos\theta
 $$
 
-となることからも分かる。
-
-以上のことから、
-
+となることからも分かる。以上のことから、最終的に以下の形になることが分かる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
@@ -703,15 +700,7 @@ $$
     m(r\sin\theta)^2\omega_\phi
 $$
 
-
-
-
-
-
-
-
-
-一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となると予想されるため
+一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となるため
 
 $$
     L_x=m(yv_z-zv_y)、
@@ -774,20 +763,80 @@ $$
     -mr^2\omega_\phi\sin\theta\cos\theta
 $$
 
+となるが、ここで先ほどの極座標における角運動量と見比べてみると
 
+$$
+    L_\theta=
+    -L_x\sin\phi+L_y\cos\phi、
+    L_\phi=L_z
+$$
 
+であると予想される。確認のため、それぞれ時間微分をとってみるとまず $L_\theta$ については
 
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    \left(
+        -\frac{\mathrm{d}L_x}{\mathrm{d}t}
+        \sin\phi+
+        \frac{\mathrm{d}L_y}{\mathrm{d}t}
+        \cos\phi
+    \right)-
+    \omega_\phi
+    (L_x\cos\phi+L_y\sin\phi)
+$$
 
+であるが、ここで角運動量の時間微分に関して
 
+$$
+    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \bm{N}、
+    \bm{N}=\bm{r}\times\bm{F}
+$$
 
+が成り立つことから、これを直交座標系の各成分ごとに分けると
 
+$$
+    \frac{\mathrm{d}L_x}{\mathrm{d}t}=
+    yF_z-zF_y、
+    \frac{\mathrm{d}L_y}{\mathrm{d}t}=
+    zF_x-xF_z、
+    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    xF_y-yF_x
+$$
 
+であるため、これらを代入すると
 
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    z(-F_y\sin\phi+F_x\cos\theta)-
+    F_z(y\sin\phi+x\cos\phi)-
+    \omega_\phi
+    (L_x\cos\phi+L_y\sin\phi)
+$$
 
+となる。ここで、今までの関係式と見比べてみると
 
+$$
+    -F_y\sin\phi+F_x\cos\theta=F_{x,y}
+$$
+$$
+    y\sin\phi+x\cos\phi=r\sin\theta、
+    z=r\cos\theta
+$$
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
+$$
 
+であるから以下の通りとなる。
 
-
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    r(F_{x,y}\cos\theta-F_z\sin\theta)+
+    mr^2\omega_\phi^2\sin\theta\cos\theta=
+    rF_\theta+
+    mr^2\omega_\phi^2\sin\theta\cos\theta
+$$
 
 
 
