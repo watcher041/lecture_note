@@ -290,8 +290,7 @@ $$
     {\mathrm{d}t}=
     \bm{N}、
     \bm{L}=
-    m(\bm{r}\times\bm{v})=
-    I\bm{\omega}、
+    m(\bm{r}\times\bm{v})、
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
@@ -532,7 +531,7 @@ $$
     F_y\cos\phi
 $$
 
-これをさらに整理すると、2次元のときの力の関係式を踏まえると
+ここで、2次元のときの力の関係式を踏まえると
 
 $$
     F_{x,y}=
@@ -541,34 +540,7 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-というように $x,y$ 平面上の動径方向の力になるため、
-
-$$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    mr\omega_\theta^2-
-    mr\omega_\phi^2\sin^2\theta=
-    F_{x,y}\sin\theta+
-    F_z\cos\theta
-$$
-$$
-    mr
-    \frac{\mathrm{d}\omega_\theta}{\mathrm{d}t}+
-    2mv_r\omega_\theta-
-    mr\omega_\phi^2\sin\theta\cos\theta=
-    F_{x,y}\cos\theta-
-    F_z\sin\theta
-$$
-$$
-    mr
-    \frac{\mathrm{d}\omega_\phi}{\mathrm{d}t}
-    \sin\theta+
-    2mr\omega_\theta\omega_\phi\cos\theta+
-    2mv_r\omega_\phi\sin\theta=
-    F_\phi
-$$
-
-
-となるため、2次元のときの力の関係を踏まえると
+というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の力と、動径 $r$ 方向と角度 $\theta$ 方向の力も
 
 $$
     F_r=
@@ -579,7 +551,7 @@ $$
     F_z\sin\theta
 $$
 
-となるため、最終的に以下の形になる。
+という関係にあることから、最終的に以下の形になる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
