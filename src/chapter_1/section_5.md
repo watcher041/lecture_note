@@ -280,7 +280,7 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-以上のことが3次元でも成立するかを見てみると、まず直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ が
+ここまでのことは2次元の範囲であったため、今度は3次元でも成立するかを見てみる。まず、直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ が
 
 $$
     x=r\sin\theta\cos\phi、
@@ -824,36 +824,6 @@ $$
     mr^2\omega_\phi^2\sin\theta\cos\theta
 $$
 
-ちなみに、角運動量を慣性モーメントで書くとテンソルになることに注意すること。
-
-$$
-    \bm{L}=\bm{I}\bm{\omega}
-$$
-$$
-    \bm{I}=
-    \begin{pmatrix}
-        mr^2 & 0    & 0\\
-        0    & mr^2 & 0\\
-        0    & 0    & m(r\sin\theta)^2
-    \end{pmatrix}、
-    \bm{\omega}=
-    \begin{pmatrix}
-        -\omega_\theta\sin\phi
-        -\omega_\phi\sin\theta\cos\theta\cos\phi\\
-        \omega_\theta\cos\phi-
-        \omega_\phi\sin\theta\cos\theta\sin\phi\\
-        \omega_\phi
-    \end{pmatrix}
-$$
-
-
-
-
-
-
-
-
-
 　以上の内容を質点系に応用すると、通常の運動方程式
 
 $$
@@ -864,10 +834,8 @@ $$
     \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$
 
-であるが、Eulerの定理によると任意の回転は一つの回転軸を中心とした回転として表されるので、円筒座標に変換することで運動を表されると思われる。
+であるが、回転の場合どうなるか見るために $\bm{r}_i$ と外積をとって質点全体で総和をとると
 
-
-これをchaslesの定理と呼ぶ。
 $$
     \sum_{i=1}^N
     m_i
@@ -939,23 +907,120 @@ $$
     \bm{r}_i\times\bm{v}_i
     \right)
     \right]
+
 $$
 
-となり、以下の形になる。重心を用いて
+となり、以下のように質点系でも回転の運動方程式が成り立つことが分かる。
+
+$$
+    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \bm{N}、
+    \bm{L}=
+    \sum_{i=1}^N
+    m_i(\bm{r}_i\times\bm{v}_i)、
+    \bm{N}=
+    \sum_{i=1}^N
+    (\bm{r}_i\times\bm{F}_{i})
+$$
+
+前回と含めて質点系の並進および回転について述べてきたので整理してみる。まず、並進については物体を重心 $\bm{r}$ にある質量 $m$ 質点とみなして、そこに外力 $\bm{F}$ が働くことでなされるものと考えることができた。ここで、各物理量は
+
+$$
+    \bm{r}=
+    \frac{1}{m}
+    \sum_{i=1}^N
+    m_i\bm{r}_i、
+    m=
+    \sum_{i=1}^N
+    m_i、
+    \bm{F}=
+    \sum_{i=1}^N
+    \bm{F}_i
+$$
+
+という関係にある。次に回転については、これにも重心による運動が含まれていることが考えられる。そのため、回転の運動方程式がこのままだと重心の運動が重複して記述されることになる。そこで、以下のように質点系の各位置を重心からの位置に置き換える。
 
 $$
     \bm{r}_i=\bm{r}+\bm{R}_i、
     \bm{v}_i=\bm{v}+\bm{V}_i
 $$
 
-と書くと、これを代入することで
+このようにしたときに、まず角運動量は
 
 $$
+    \begin{align*}
+    \bm{L}=
+    \sum_{i=1}^N
+    m_i(\bm{r}_i\times\bm{v}_i)
+    &=
+    \sum_{i=1}^N
+    m_i
+    \left(
+        \bm{r}+\bm{R}_i
+    \right)
+    \times
+    (
+        \bm{v}+\bm{V}_i
+    )\\
+    &=
+    m(\bm{r}\times\bm{v})+
+    \bm{r}\times
+    \left(
+        \sum_{i=1}^N
+        m_i\bm{V}_i
+    \right)+
+    \left(
+        \sum_{i=1}^N
+        m_i\bm{R}_i
+    \right)\times\bm{v}+
+    \sum_{i=1}^N
+    m_i(\bm{R}_i\times\bm{V}_i)
+    \end{align*}
+$$
+
+となるが、ここで重心の関係式も踏まえて
+
+$$
+    \sum_{i=1}^N
+    m_i\bm{R}_i=
+    \sum_{i=1}^N
+    m_i(\bm{r}-\bm{r}_i)=
+    m\bm{r}-
+    \sum_{i=1}^N
+    m_i\bm{r}_i=\bm{0}
+$$
+
+となることから、これを時間微分することで
+
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
     \sum_{i=1}^N 
     m_i\bm{R}_i=
     \sum_{i=1}^N 
-    m_i\bm{r}_i-m\bm{r}=
+    m_i\bm{V}_i=
     \bm{0}
+$$
+
+となることから、角運動量は以下の通りとなる。
+
+$$
+    \bm{L}=
+    m(\bm{r}\times\bm{v})+
+    \sum_{i=1}^N
+    m_i(\bm{R}_i\times\bm{V}_i)=
+    \bm{L}_G+\bm{L}'
+$$
+
+同じように、モーメントについても
+
+$$
+    \bm{N}=
+    \sum_{i=1}^N
+    (\bm{r}_i\times\bm{F}_{i})=
+    (\bm{r}\times\bm{F})+
+    \sum_{i=1}^N
+    (\bm{R}_i\times\bm{F}_{i})=
+    \bm{N}_G+\bm{N}'
 $$
 
 であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。
