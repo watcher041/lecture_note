@@ -941,8 +941,8 @@ $$
 という関係にある。次に回転については、これにも重心による運動が含まれていることが考えられる。そのため、回転の運動方程式がこのままだと重心の運動が重複して記述されることになる。そこで、以下のように質点系の各位置を重心からの位置に置き換える。
 
 $$
-    \bm{r}_i=\bm{r}+\bm{R}_i、
-    \bm{v}_i=\bm{v}+\bm{V}_i
+    \bm{r}_i=\bm{r}+\bm{r}'_i、
+    \bm{v}_i=\bm{v}+\bm{v}'_i
 $$
 
 このようにしたときに、まず角運動量は
@@ -957,25 +957,25 @@ $$
     \sum_{i=1}^N
     m_i
     \left(
-        \bm{r}+\bm{R}_i
+        \bm{r}+\bm{r}'_i
     \right)
     \times
     (
-        \bm{v}+\bm{V}_i
+        \bm{v}+\bm{v}'_i
     )\\
     &=
     m(\bm{r}\times\bm{v})+
     \bm{r}\times
     \left(
         \sum_{i=1}^N
-        m_i\bm{V}_i
+        m_i\bm{v}'_i
     \right)+
     \left(
         \sum_{i=1}^N
-        m_i\bm{R}_i
+        m_i\bm{r}'_i
     \right)\times\bm{v}+
     \sum_{i=1}^N
-    m_i(\bm{R}_i\times\bm{V}_i)
+    m_i(\bm{r}'_i\times\bm{v}'_i)
     \end{align*}
 $$
 
@@ -983,7 +983,7 @@ $$
 
 $$
     \sum_{i=1}^N
-    m_i\bm{R}_i=
+    m_i\bm{r}'_i=
     \sum_{i=1}^N
     m_i(\bm{r}-\bm{r}_i)=
     m\bm{r}-
@@ -996,9 +996,9 @@ $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     \sum_{i=1}^N 
-    m_i\bm{R}_i=
+    m_i\bm{r}'_i=
     \sum_{i=1}^N 
-    m_i\bm{V}_i=
+    m_i\bm{v}'_i=
     \bm{0}
 $$
 
@@ -1008,7 +1008,7 @@ $$
     \bm{L}=
     m(\bm{r}\times\bm{v})+
     \sum_{i=1}^N
-    m_i(\bm{R}_i\times\bm{V}_i)=
+    m_i(\bm{r}'_i\times\bm{v}'_i)=
     \bm{L}_G+\bm{L}'
 $$
 
@@ -1020,7 +1020,7 @@ $$
     (\bm{r}_i\times\bm{F}_{i})=
     (\bm{r}\times\bm{F})+
     \sum_{i=1}^N
-    (\bm{R}_i\times\bm{F}_{i})=
+    (\bm{r}'_i\times\bm{F}_{i})=
     \bm{N}_G+\bm{N}'
 $$
 
