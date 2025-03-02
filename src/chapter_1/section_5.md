@@ -949,10 +949,11 @@ $$
 
 $$
     \begin{align*}
-    \bm{L}=
+    \bm{L}
+    &=
     \sum_{i=1}^N
     m_i(\bm{r}_i\times\bm{v}_i)
-    &=
+    =
     \sum_{i=1}^N
     m_i
     \left(
