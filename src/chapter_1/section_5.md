@@ -873,6 +873,27 @@ $$
 $$
 
 
+以下のようにテンソルの形になる
+$$
+    \bm{L}=
+    \bm{I}\bm{\omega}、
+    \bm{I}=
+    \begin{pmatrix}
+        my^2 & -mxy & -mxz\\
+        -mxy & mx^2 & -myz\\
+        0 & 0 & m(x^2+y^2)\\
+    \end{pmatrix}
+$$
+
+
+
+
+
+
+
+
+
+
 
 
 
