@@ -260,7 +260,8 @@ $$
         my
         \frac{\mathrm{d}x}{\mathrm{d}t}
     \right)=
-    (0,0,I\omega)
+    I\bm{\omega}、
+    \bm{\omega}=(0,0,\omega)
 $$
 
 というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転に関する運動方程式は以下の通りになる。
@@ -276,9 +277,24 @@ $$
     {\mathrm{d}t}=
     \bm{N}、
     \bm{L}=
-    m(\bm{r}\times\bm{v})、
+    m(\bm{r}\times\bm{v})=
+    I\bm{\omega}、
     \bm{N}=\bm{r}\times\bm{F}
 $$
+
+
+なおかつ、外積の元のベクトルと外積で求めたベクトルは直交している。
+
+
+
+
+
+
+
+
+
+
+
 
 ここまでのことは2次元の範囲であったため、今度は3次元でも成立するかを見てみる。まず、直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ が
 
@@ -824,6 +840,53 @@ $$
     mr^2\omega_\phi^2\sin\theta\cos\theta
 $$
 
+角速度が直交している関係から
+
+$$
+    \omega_\theta=
+    (
+        \omega_y\cos\phi-
+        \omega_x\sin\phi
+    )\sin^2\theta、
+    \omega_\phi=
+    \omega_z
+$$
+
+であることから、これを先ほどの角運動量の式に代入すると
+
+$$
+    L_x=
+    m(\omega_x y-\omega_y x)y
+    -m\omega_z xz
+$$
+$$
+    L_y=
+    m( 
+        \omega_y x-
+        \omega_x y
+    )x-
+    m\omega_z zy
+$$
+$$
+    L_z=
+    m(x^2+y^2)\omega_z
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 　以上の内容を質点系に応用すると、通常の運動方程式
 
 $$
@@ -995,8 +1058,10 @@ $$
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \sum_{i=1}^N 
-    m_i\bm{r}'_i=
+    \left(
+        \sum_{i=1}^N 
+        m_i\bm{r}'_i
+    \right)=
     \sum_{i=1}^N 
     m_i\bm{v}'_i=
     \bm{0}
@@ -1025,3 +1090,73 @@ $$
 $$
 
 であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。
+
+
+
+角運動量と夫々のベクトルの内積を求める。
+$$
+    \bm{\omega}\cdot\bm{r}=0、
+    \bm{\omega}\cdot\bm{v}=0
+$$
+
+$$
+    \omega_x\sin\theta\cos\phi+
+    \omega_y\sin\theta\sin\phi+
+    \omega_z\cos\theta=0
+$$
+$$
+    \begin{align*}
+    &v_r
+    (
+        \omega_x\sin\theta\cos\phi+
+        \omega_y\sin\theta\sin\phi+
+        \omega_z\cos\theta
+    )\\
+    +&
+    r\omega_\theta
+    (
+        \omega_x\cos\theta\cos\phi+
+        \omega_y\cos\theta\sin\phi-
+        \omega_z\sin\theta
+    )\\
+    -&
+    r\omega_\phi
+    (
+        \omega_x\sin\theta\sin\phi-
+        \omega_y\sin\theta\cos\phi
+    )=0
+    \end{align*}
+$$
+
+$$
+    (
+        \omega_x\cos\phi+
+        \omega_y\sin\phi
+    )\sin\theta+
+    \omega_z\cos\theta=0
+$$
+$$
+    \omega_\theta
+    [
+        (
+            \omega_x\cos\phi+
+            \omega_x\sin\phi
+        )\cos\theta-
+        \omega_z\sin\theta
+    ]-
+    \omega_\phi
+    (
+        \omega_x\sin\phi-
+        \omega_y\cos\phi
+    )\sin\theta=0
+$$
+
+$\sin\theta$ をかけて整理すると
+
+$$
+    \omega_\theta=
+    (
+        \omega_y\cos\phi-
+        \omega_x\sin\phi
+    )\sin^2\theta
+$$
