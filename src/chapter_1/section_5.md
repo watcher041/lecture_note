@@ -282,20 +282,6 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-
-なおかつ、外積の元のベクトルと外積で求めたベクトルは直交している。
-
-
-
-
-
-
-
-
-
-
-
-
 ここまでのことは2次元の範囲であったため、今度は3次元でも成立するかを見てみる。まず、直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ が
 
 $$
@@ -840,7 +826,75 @@ $$
     mr^2\omega_\phi^2\sin\theta\cos\theta
 $$
 
-角速度が直交している関係から
+
+角運動量と夫々のベクトルの内積を求める。
+$$
+    \bm{\omega}\cdot\bm{r}=0、
+    \bm{\omega}\cdot\bm{v}=0
+$$
+
+$$
+    \omega_x\sin\theta\cos\phi+
+    \omega_y\sin\theta\sin\phi+
+    \omega_z\cos\theta=0
+$$
+$$
+    \begin{align*}
+    &v_r
+    (
+        \omega_x\sin\theta\cos\phi+
+        \omega_y\sin\theta\sin\phi+
+        \omega_z\cos\theta
+    )\\
+    +&
+    r\omega_\theta
+    (
+        \omega_x\cos\theta\cos\phi+
+        \omega_y\cos\theta\sin\phi-
+        \omega_z\sin\theta
+    )\\
+    -&
+    r\omega_\phi
+    (
+        \omega_x\sin\theta\sin\phi-
+        \omega_y\sin\theta\cos\phi
+    )=0
+    \end{align*}
+$$
+
+$$
+    (
+        \omega_x\cos\phi+
+        \omega_y\sin\phi
+    )\sin\theta+
+    \omega_z\cos\theta=0
+$$
+$$
+    \omega_\theta
+    [
+        (
+            \omega_x\cos\phi+
+            \omega_y\sin\phi
+        )\cos\theta-
+        \omega_z\sin\theta
+    ]-
+    \omega_\phi
+    (
+        \omega_x\sin\phi-
+        \omega_y\cos\phi
+    )\sin\theta=0
+$$
+
+$\sin\theta$ をかけて整理すると
+
+$$
+    \omega_\theta\omega_z=
+    (
+        \omega_y\cos\phi-
+        \omega_x\sin\phi
+    )\sin^2\theta\omega_\phi
+$$
+
 
 $$
     \omega_\theta=
@@ -862,8 +916,8 @@ $$
 $$
     L_y=
     m( 
-        \omega_y x-
-        \omega_x y
+        -\omega_x y+
+        \omega_y x
     )x-
     m\omega_z zy
 $$
@@ -885,8 +939,60 @@ $$
     \end{pmatrix}
 $$
 
+これをもう少し整理すると、
 
+$$
+    \begin{align*}
+    L_z
+    &=
+    mr^2\omega_z(1-\cos^2\theta)\\
+    &=
+    mr^2
+    [
+        \omega_z+
+        (
+            \omega_x\cos\phi+
+            \omega_y\sin\phi
+        )\sin\theta\cos\theta
+    ]\\
+    &=
+    mr^2\omega_z+
+    m\omega_x xz+
+    m\omega_y yz\\
+    &=
+    mr^2\omega_z+
+    2mz
+    (\omega_x x+\omega_y y)-
+    m\omega_x xz-
+    m\omega_y yz\\
+    &=
+    mr^2\omega_z+
+    2mzr\sin\theta
+    (\omega_x\cos\phi+\omega_y\sin\phi)-
+    m\omega_x xz-
+    m\omega_y yz\\
+    &=
+    mr^2\omega_z-
+    2m\omega_z zr\sin\theta\cos\theta-
+    m\omega_x xz-
+    m\omega_y yz
+    \end{align*}
+$$
 
+となるが、ここで
+
+となるため、慣性モーメントは対称的な形になる。
+
+$$
+    \bm{L}=
+    \bm{I}\bm{\omega}、
+    \bm{I}=
+    \begin{pmatrix}
+        my^2 & -mxy & -mxz\\
+        -mxy & mx^2 & -myz\\
+        -mxz & -myz & mr^2\\
+    \end{pmatrix}
+$$
 
 
 
@@ -1112,72 +1218,31 @@ $$
 
 であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。
 
-
-
-角運動量と夫々のベクトルの内積を求める。
-$$
-    \bm{\omega}\cdot\bm{r}=0、
-    \bm{\omega}\cdot\bm{v}=0
-$$
+回転ベクトルの関係を使うと
 
 $$
-    \omega_x\sin\theta\cos\phi+
-    \omega_y\sin\theta\sin\phi+
-    \omega_z\cos\theta=0
-$$
-$$
-    \begin{align*}
-    &v_r
-    (
-        \omega_x\sin\theta\cos\phi+
-        \omega_y\sin\theta\sin\phi+
-        \omega_z\cos\theta
-    )\\
-    +&
-    r\omega_\theta
-    (
-        \omega_x\cos\theta\cos\phi+
-        \omega_y\cos\theta\sin\phi-
-        \omega_z\sin\theta
-    )\\
-    -&
-    r\omega_\phi
-    (
-        \omega_x\sin\theta\sin\phi-
-        \omega_y\sin\theta\cos\phi
-    )=0
-    \end{align*}
+    \bm{v}_\theta=
+    \bm{r}\times\bm{\omega}_\theta、
+    \bm{v}_\phi=
+    \bm{r}\times\bm{\omega}_\phi
 $$
 
 $$
-    (
-        \omega_x\cos\phi+
-        \omega_y\sin\phi
-    )\sin\theta+
-    \omega_z\cos\theta=0
-$$
-$$
-    \omega_\theta
-    [
-        (
-            \omega_x\cos\phi+
-            \omega_x\sin\phi
-        )\cos\theta-
-        \omega_z\sin\theta
-    ]-
-    \omega_\phi
-    (
-        \omega_x\sin\phi-
-        \omega_y\cos\phi
-    )\sin\theta=0
+    \bm{L}=
+    m(\bm{r}\times\bm{v})=
+    m(\bm{r}\times\bm{v}_\theta)+
+    m(\bm{r}\times\bm{v}_\phi)
 $$
 
-$\sin\theta$ をかけて整理すると
-
 $$
-    \omega_\theta=
-    (
-        \omega_y\cos\phi-
-        \omega_x\sin\phi
-    )\sin^2\theta
+    \bm{r}\times\bm{v}_\theta=
+    \bm{r}\times(\bm{r}\times\bm{\omega}_\theta)=
+    (\bm{r}\cdot\bm{\omega}_\theta)\cdot\bm{r}-
+    (\bm{r}\cdot\bm{r})\cdot\bm{\omega}_\theta
+$$
+$$
+    \bm{r}\times\bm{v}_\phi=
+    \bm{r}\times(\bm{r}\times\bm{\omega}_\phi)=
+    (\bm{r}\cdot\bm{\omega}_\phi)\cdot\bm{r}-
+    (\bm{r}\cdot\bm{r})\cdot\bm{\omega}_\phi
 $$
