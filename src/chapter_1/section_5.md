@@ -759,7 +759,7 @@ $$
     L_\phi=L_z
 $$
 
-であると予想される。確認のため、それぞれ時間微分をとってみるとまず $L_\theta$ については
+という関係があると予想される。確認のため、それぞれ時間微分をとってみるとまず $L_\theta$ については
 
 $$
     \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
@@ -825,6 +825,118 @@ $$
     rF_\theta+
     mr^2\omega_\phi^2\sin\theta\cos\theta
 $$
+
+そして、$L_\phi$ の時間微分については、
+
+$$
+    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
+    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    xF_y-yF_x
+$$
+
+となるため、ここで
+
+$$
+    x=r\sin\theta\cos\phi、
+    y=r\sin\theta\sin\phi、
+    F_\phi=F_y\cos\phi-F_x\sin\phi
+$$
+
+を踏まえて整理すると
+
+$$
+    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
+    r\sin\theta
+    (F_y\cos\phi-F_x\sin\phi)=
+    r\sin\theta F_\phi
+$$
+
+となる。そのため、3次元においても回転の運動方程式
+
+$$
+    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \bm{N}
+$$
+
+が成り立つことが分かるが、各成分の慣性モーメントもどうなるか見てみよう。ここで、改めて
+
+$$
+    -L_x\sin\phi+L_y\cos\phi=
+    mr^2\omega_\theta
+$$
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
+$$
+
+の関係に着目してみると、これは力の関係
+
+$$
+    F_{x,y}=
+    F_x\cos\phi+F_y\sin\phi、
+    F_\phi=
+    F_y\cos\phi-F_x\sin\phi
+$$
+
+と見比べてみると、同じ関係を表しているものと思われる。すなわち
+
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
+    \leftrightarrow
+    F_{x,y}=
+    F_x\cos\phi+F_y\sin\phi
+    
+$$
+$$
+    -L_x\sin\phi+L_y\cos\phi=
+    mr^2\omega_\theta
+    \leftrightarrow
+    F_\phi=
+    F_y\cos\phi-F_x\sin\phi
+$$
+
+というように対応しており、角運動量においても以下のように書けることになる。
+
+$$
+    L_{x,y}=
+    -mr^2\omega_\phi\sin\theta\cos\theta、
+    L_\theta=mr^2\omega_\theta
+$$
+
+そのため、直交座標系での角運動量の各成分は
+
+$$
+    L_x=
+    -L_\theta\sin\phi+L_{x,y}\cos\phi、
+    L_y=
+    L_\theta\cos\phi+L_{x,y}\sin\phi、
+    L_z=L_\phi
+$$
+
+$$
+    L_\theta=mr^2\omega_\theta、
+    L_{x,y}=
+    -mr^2\omega_\phi\sin\theta\cos\theta、
+    L_\phi=
+    mr^2\omega_\phi\sin^2\theta
+$$
+
+ということになる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 角運動量と夫々のベクトルの内積を求める。
