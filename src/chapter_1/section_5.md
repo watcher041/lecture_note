@@ -660,7 +660,7 @@ $$
     mr\omega_\phi^2\sin\theta\cos\theta
 $$
 
-となることからも分かる。以上のことから、最終的に以下の形になることが分かる。
+となることからも分かる。以上のことから、以下の形にまとめられることが分かる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
@@ -688,7 +688,16 @@ $$
     m(r\sin\theta)^2\omega_\phi
 $$
 
-一方で、角運動量は $\bm{L}=m(\bm{r}\times\bm{v})$ となるため
+ここで $L_\theta$ と $L_\phi$ の関係式が
+
+$$
+    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \bm{N}、
+    \bm{L}=(\bm{r}\times\bm{v})、
+    \bm{N}=\bm{r}\times\bm{F}
+$$
+
+に対応しているか見てみよう。まず、角運動量が直交座標系において
 
 $$
     L_x=m(yv_z-zv_y)、
@@ -696,7 +705,7 @@ $$
     L_z=m(xv_y-yv_x)
 $$
 
-とおく。そして、各速度が極座標により
+となるが、各速度が極座標により
 
 $$
     v_x=
@@ -750,6 +759,9 @@ $$
     L_x\cos\phi+L_y\sin\phi=
     -mr^2\omega_\phi\sin\theta\cos\theta
 $$
+$$
+    L_z=mr^2\omega_\phi\sin^2\theta
+$$
 
 となるが、ここで先ほどの極座標における角運動量と見比べてみると
 
@@ -773,15 +785,7 @@ $$
     (L_x\cos\phi+L_y\sin\phi)
 $$
 
-であるが、ここで角運動量の時間微分に関して
-
-$$
-    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
-    \bm{N}、
-    \bm{N}=\bm{r}\times\bm{F}
-$$
-
-が成り立つことから、これを直交座標系の各成分ごとに分けると
+であるが、ここで回転の運動方式から角運動量の時間微分に関して
 
 $$
     \frac{\mathrm{d}L_x}{\mathrm{d}t}=
@@ -792,7 +796,7 @@ $$
     xF_y-yF_x
 $$
 
-であるため、これらを代入すると
+が成り立つため、これらを代入すると
 
 $$
     \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
@@ -858,18 +862,20 @@ $$
     \bm{N}
 $$
 
-が成り立つことが分かるが、各成分の慣性モーメントもどうなるか見てみよう。ここで、改めて
+が成り立つことが分かる。
+
+このことを踏まえて、今度は角運動量が角速度でどのように表記されるか見てみよう。そのため、改めて
 
 $$
-    -L_x\sin\phi+L_y\cos\phi=
-    mr^2\omega_\theta
+    -L_x\sin\phi+L_y\cos\phi=L_\theta、
+    L_z=L_\phi
 $$
 $$
     L_x\cos\phi+L_y\sin\phi=
     -mr^2\omega_\phi\sin\theta\cos\theta
 $$
 
-の関係に着目してみると、これは力の関係
+に着目してみると、これらは力の関係
 
 $$
     F_{x,y}=
@@ -878,8 +884,7 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-と見比べてみると、同じ関係を表しているものと思われる。すなわち
-
+と見比べてみても分かるように以下のように対応している物と思われる。
 $$
     L_x\cos\phi+L_y\sin\phi=
     -mr^2\omega_\phi\sin\theta\cos\theta
@@ -896,33 +901,77 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-というように対応しており、角運動量においても以下のように書けることになる。
+そのため、角運動量においても以下のように書けることになる。
 
+$$
+    L_x\cos\phi+L_y\sin\phi=L_{x,y}、
+    -L_x\sin\phi+L_y\cos\phi=L_\theta、
+    L_z=L_\phi
+$$
 $$
     L_{x,y}=
     -mr^2\omega_\phi\sin\theta\cos\theta、
-    L_\theta=mr^2\omega_\theta
+    L_\theta=mr^2\omega_\theta、
+    L_\phi=mr^2\sin^2\theta\omega_\phi
 $$
 
-そのため、直交座標系での角運動量の各成分は
+このように角運動量で力と同じ方向に関する関係式がなりたつことを踏まえて、角速度においても
+
+$$
+    \omega_x\cos\phi+\omega_y\sin\phi=\omega_{x,y}、
+    -\omega_x\sin\phi+\omega_y\cos\phi=\omega_\theta、
+    \omega_z=\omega_\phi
+$$
+
+となると考えると、先ほどの角運動量の関係式に代入して整理することが分かる。そこで、これらの式を角運動量の式に代入すると以下の通りになる。
 
 $$
     L_x=
-    -L_\theta\sin\phi+L_{x,y}\cos\phi、
+    mr^2\sin^2\phi\omega_x-
+    mr^2\sin\phi\cos\phi\omega_y+
+    mr^2\sin\theta\cos\theta\cos\phi\omega_z
+$$
+$$
     L_y=
-    L_\theta\cos\phi+L_{x,y}\sin\phi、
-    L_z=L_\phi
+    -mr^2\sin\phi\cos\phi\omega_x+
+    mr^2\cos^2\phi\omega_y-
+    mr^2\sin\theta\cos\theta\sin\phi\omega_z
+$$
+$$
+    L_z=
+    m(r\sin\theta)^2\omega_z
 $$
 
-$$
-    L_\theta=mr^2\omega_\theta、
-    L_{x,y}=
-    -mr^2\omega_\phi\sin\theta\cos\theta、
-    L_\phi=
-    mr^2\omega_\phi\sin^2\theta
-$$
 
-ということになる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1105,6 +1154,11 @@ $$
         -mxz & -myz & mr^2\\
     \end{pmatrix}
 $$
+
+
+
+
+
 
 
 
