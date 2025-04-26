@@ -923,18 +923,18 @@ $$
     \omega_z=\omega_\phi
 $$
 
-となると考えると、先ほどの角運動量の関係式に代入して整理することが分かる。そこで、これらの式を角運動量の式に代入すると以下の通りになる。
+となると考えると、先ほどの角運動量の関係式に代入して成立することが分かる。そこで、これらの式を角運動量の式に代入すると以下の通りになる。
 
 $$
     L_x=
-    mr^2\sin^2\phi\omega_x-
-    mr^2\sin\phi\cos\phi\omega_y+
+    m(r\sin\phi)^2\omega_x-
+    mr^2\sin\phi\cos\phi\omega_y-
     mr^2\sin\theta\cos\theta\cos\phi\omega_z
 $$
 $$
     L_y=
-    -mr^2\sin\phi\cos\phi\omega_x+
-    mr^2\cos^2\phi\omega_y-
+    m(r\cos\phi)^2\omega_y-
+    mr^2\sin\phi\cos\phi\omega_x-
     mr^2\sin\theta\cos\theta\sin\phi\omega_z
 $$
 $$
