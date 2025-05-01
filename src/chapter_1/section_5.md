@@ -880,9 +880,7 @@ $$
     \bm{N}
 $$
 
-が成り立つことが分かる。
-
-このことを踏まえて、今度は角運動量が角速度でどのように表記されるか見てみよう。そのため、改めて
+が成り立つことが分かる。このことを踏まえて、今度は角運動量が角速度でどのように表記されるか見てみよう。そのため,
 
 $$
     -L_x\sin\phi+L_y\cos\phi=L_\theta、
@@ -893,7 +891,7 @@ $$
     -mr^2\omega_\phi\sin\theta\cos\theta
 $$
 
-に着目してみると、これらは力の関係
+に改めて着目すると、これらは力の関係
 
 $$
     F_{x,y}=
@@ -932,6 +930,144 @@ $$
     L_\theta=mr^2\omega_\theta、
     L_\phi=mr^2\sin^2\theta\omega_\phi
 $$
+
+
+
+
+
+また、角運動量と位置ベクトルおよび速度ベクトルが直交していることを踏まえて
+
+$$
+    \bm{r}\cdot\bm{L}=
+    L_x\sin\theta\cos\phi+
+    L_y\sin\theta\sin\phi+
+    L_z\cos\theta=0
+$$
+$$
+    
+    \begin{align*}
+    \bm{v}\cdot\bm{L}=
+    &v_r
+    (
+        L_x\sin\theta\cos\phi+
+        L_y\sin\theta\sin\phi+
+        L_z\cos\theta
+    )\\
+    &
+    +r\omega_\theta
+    (
+        L_x\cos\theta\cos\phi+
+        L_y\cos\theta\sin\phi-
+        L_z\sin\theta
+    )\\
+    &
+    -r\omega_\phi
+    (
+        L_x\sin\theta\sin\phi-
+        L_y\sin\theta\cos\phi
+    )=0
+    \end{align*}
+$$
+
+ここで1つめの式に関しては、
+
+$$
+    (L_x\cos\phi+L_y\sin\phi)\sin\theta+
+    L_z\cos\theta=0
+$$
+
+となることから、先ほどでも出てきた
+
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
+$$
+
+を利用すると、以下のように $L_z=L_\phi$ の関係式が得られる。
+
+$$
+    L_z=
+    mr^2\omega_\phi\sin^2\theta
+$$
+
+あるいは、$L_{x,y}$ により
+
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    L_{x,y}
+$$
+
+とおくと以下のように動径方向の角運動量 $L_r$ となり 0 となることが確認できる。
+
+$$
+    L_z\cos\theta+L_{x,y}\sin\theta=L_r=0
+$$
+
+2つ目の式についてもここまでに得られた式
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_\phi\sin\theta\cos\theta
+$$
+$$
+    -L_x\sin\phi+L_y\cos\phi=
+    mr^2\omega_\theta
+$$
+$$
+    L_x\sin\theta\cos\phi+
+    L_y\sin\theta\sin\phi+
+    L_z\cos\phi=0
+$$
+
+を用いて整理すると、
+
+$$
+    \begin{align*}
+    \bm{v}\cdot\bm{L}=
+    &
+    r\omega_\theta\cos\theta
+    (L_x\cos\phi+L_y\sin\phi)-
+    r\omega_\theta\sin\theta L_z\\
+    &
+    +r\omega_\phi\sin\theta
+    (-L_x\sin\phi+L_y\cos\phi)\\
+    =&
+    mr^3\omega_\theta\omega_\phi\sin\theta
+    (1-\cos^2\theta)-
+    r\omega_\theta\sin\theta L_z\\
+    =&
+    r\omega_\theta\sin\theta
+    (m\omega_\phi r^2\sin^2\theta-L_z)
+    =0
+    \end{align*}
+$$
+
+というように、こちらも $L_z=L_\phi$ となることが分かる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 また、$L_{x,y}$ が $\omega_{\phi}$ のみを含んでいることを踏まえて $L_{\phi}（=L_{z}）$ と見比べると
 
@@ -1039,40 +1175,10 @@ $$
 
 
 
-角運動量と夫々のベクトルの内積を求める。
-$$
-    \bm{\omega}\cdot\bm{r}=0、
-    \bm{\omega}\cdot\bm{v}=0
-$$
 
-$$
-    \omega_x\sin\theta\cos\phi+
-    \omega_y\sin\theta\sin\phi+
-    \omega_z\cos\theta=0
-$$
-$$
-    \begin{align*}
-    &v_r
-    (
-        \omega_x\sin\theta\cos\phi+
-        \omega_y\sin\theta\sin\phi+
-        \omega_z\cos\theta
-    )\\
-    +&
-    r\omega_\theta
-    (
-        \omega_x\cos\theta\cos\phi+
-        \omega_y\cos\theta\sin\phi-
-        \omega_z\sin\theta
-    )\\
-    -&
-    r\omega_\phi
-    (
-        \omega_x\sin\theta\sin\phi-
-        \omega_y\sin\theta\cos\phi
-    )=0
-    \end{align*}
-$$
+
+
+
 
 $$
     (
