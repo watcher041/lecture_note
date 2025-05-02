@@ -208,14 +208,6 @@ $$
     (0,0,N)
 $$
 
-また、外積で得たベクトルは元となったベクトルと直交しており、実際以下の関係が成り立つことからも伺える。
-
-$$
-    \bm{r}\cdot
-    (\bm{r}\times\bm{F})=0、
-    \bm{F}\cdot
-    (\bm{r}\times\bm{F})=0
-$$
 
 そのため、回転方向については $z$ 成分に関する方程式になっていると考えられる。そこで、運動方程式
 
@@ -273,16 +265,7 @@ $$
     \bm{\omega}=(0,0,\omega)
 $$
 
-というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。また、各外積の値の直交関係を見てみると
-
-$$
-    \bm{r}\cdot\bm{L}=0、
-    \bm{v}\cdot\bm{L}=0、
-    \bm{r}\cdot\bm{N}=0、
-    \bm{F}\cdot\bm{N}=0
-$$
-
-というようになっていることも直ちに求められる。そのため、最終的に回転に関する運動方程式は以下の通りになる。
+というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転に関する運動方程式は以下の通りになる。
 
 $$
     m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
@@ -423,7 +406,7 @@ $$
     \end{align*}
 $$
 
-となる。これらの式を見比べることで、極座標の各成分ごとの加速度を取り出してみると
+となる。これらの式から、極座標の各成分ごとの加速度を取り出してみると
 
 $$
     \left(
@@ -502,7 +485,7 @@ $$
     \right)
 $$
 
-とすると、以下の通りになる。
+と置くことで、以下の通りになる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
@@ -546,7 +529,7 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の力と、動径 $r$ 方向と角度 $\theta$ 方向の力も
+というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の力になり、動径 $r$ 方向と角度 $\theta$ 方向の力も
 
 $$
     F_r=
@@ -880,7 +863,7 @@ $$
     \bm{N}
 $$
 
-が成り立つことが分かる。このことを踏まえて、今度は角運動量が角速度でどのように表記されるか見てみよう。そのため,
+が成り立つことが分かる。ただ、ここまでに出てきた角運動量の関係式
 
 $$
     -L_x\sin\phi+L_y\cos\phi=L_\theta、
@@ -891,7 +874,7 @@ $$
     -mr^2\omega_\phi\sin\theta\cos\theta
 $$
 
-に改めて着目すると、これらは力の関係
+において三つ目の式が何を表しているのか述べていなかったので見てみると、これは力の関係
 
 $$
     F_{x,y}=
@@ -900,7 +883,7 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-と見比べてみても分かるように以下のように対応している物と思われる。
+と見比べると、以下のように対応しているものと思われる。
 
 $$
     L_x\cos\phi+L_y\sin\phi=
@@ -912,7 +895,7 @@ $$
 $$
 $$
     -L_x\sin\phi+L_y\cos\phi=
-    mr^2\omega_\theta
+    L_\theta
     \leftrightarrow
     F_\phi=
     F_y\cos\phi-F_x\sin\phi
@@ -932,71 +915,7 @@ $$
     L_\phi=mr^2\sin^2\theta\omega_\phi
 $$
 
-また、角運動量と位置ベクトルおよび速度ベクトルが直交していることを踏まえて
-
-$$
-    \bm{r}\cdot\bm{L}=
-    L_x\sin\theta\cos\phi+
-    L_y\sin\theta\sin\phi+
-    L_z\cos\theta=0
-$$
-$$
-    
-    \begin{align*}
-    \bm{v}\cdot\bm{L}=
-    &v_r
-    (
-        L_x\sin\theta\cos\phi+
-        L_y\sin\theta\sin\phi+
-        L_z\cos\theta
-    )\\
-    &
-    +r\omega_\theta
-    (
-        L_x\cos\theta\cos\phi+
-        L_y\cos\theta\sin\phi-
-        L_z\sin\theta
-    )\\
-    &
-    -r\omega_\phi
-    (
-        L_x\sin\theta\sin\phi-
-        L_y\sin\theta\cos\phi
-    )=0
-    \end{align*}
-$$
-
-これらを整理すると
-
-$$
-    (L_x\cos\phi+L_y\sin\phi)\sin\theta+
-    L_z\cos\theta=0
-$$
-$$
-    r\omega_\theta
-    [
-        (L_x\cos\phi+L_y\sin\phi
-        )\cos\theta-
-        L_z\sin\theta
-    ]
-    +r\omega_\phi
-    (-L_x\sin\phi+L_y\cos\phi)
-    \sin\theta=0
-$$
-
-となるが、ここで先ほどの角運動量の関係式を代入すると
-
-$$
-    L_{x,y}\sin\theta+L_z\cos\theta=0
-$$
-$$
-    r\omega_\theta
-    (L_{x,y}\cos\theta-L_z\sin\theta)
-    =-r\omega_\phi
-    L_\theta\sin\theta
-$$
-
-を得る。これらは、力の関係式
+また、$F_{x,y}$ に関しては
 
 $$
     F_r=
@@ -1007,7 +926,7 @@ $$
     F_z\sin\theta
 $$
 
-と見比べると、以下のように対応しているものと考えられる。
+という関係もあったため、これに当てはめてみると動径方向およびそれに直交する方向の角運動量の成分を $L_r,L_{r_\perp}$ とすると
 
 $$
     F_r=
@@ -1015,7 +934,8 @@ $$
     F_{x,y}\sin\theta
     \leftrightarrow
     L_r=
-    L_{x,y}\sin\theta+L_z\cos\theta
+    L_z\cos\theta+
+    L_{x,y}\sin\theta 
 $$
 $$
     F_\theta=
@@ -1023,63 +943,59 @@ $$
     F_z\sin\theta
     \leftrightarrow
     L_{r_\perp}=
-    L_{x,y}\cos\theta-L_z\sin\theta
+    L_{x,y}\cos\theta-
+    L_z\sin\theta
 $$
 
-そこで、先ほどの式は以下の通りになる物と思われる。
+というようになるため、これらに $L_{x,y},L_z$ を代入することで
 
 $$
-    L_r=0、
-    r\omega_\theta L_{r_\perp}
-    =-r\omega_\phi L_\theta\sin\theta
+    L_r=
+    (mr^2\sin^2\theta\omega_\phi)\cos\theta+
+    (-mr^2\omega_\phi\sin\theta\cos\theta)\sin\theta
+    =0
 $$
-
-そのため、角運動量の動径方向成分が0であること及び動径方向に直交する角運動量 $L_{r_\perp}$ が
-
 $$
-    r\omega_\theta L_{x,y,z}=
-    -r\omega_\phi L_\theta\sin\theta=
-    -mr^3\omega_\phi\omega_\theta\sin\theta
-    \rightarrow
     L_{r_\perp}=
-    -mr^2\omega_\phi\sin\theta
+    (-mr^2\omega_\phi\sin\theta\cos\theta)
+    \cos\theta-
+    (mr^2\sin^2\theta\omega_\phi)
+    \sin\theta=
+    -mr^2\sin\theta\omega_\phi
 $$
 
-となることが分かる。このように角運動量で力と同じ方向に関する関係式がなりたつことを踏まえて、角速度においても
+となる。このうち、動径方向の回転がない（$L_r=0$）ことから
 
 $$
-    \omega_x\cos\phi+\omega_y\sin\phi=\omega_{x,y}、
-    -\omega_x\sin\phi+\omega_y\cos\phi=\omega_\theta、
+    L_z\cos\theta+L_{x,y}\sin\theta=0
+    \rightarrow
+    L_{x,y}\sin\theta=-L_z\cos\theta
+$$
+
+であるため、最終的には以下の関係が成り立つことになる。
+
+$$
+    -L_x\sin\phi+L_y\cos\phi=L_\theta、
+    L_z=L_\phi
+$$
+$$
+    L_x\sin\theta\cos\phi+L_y\sin\theta\sin\phi=
+    L_{x,y}\sin\theta=-L_z\cos\theta
+$$
+
+
+このように角運動量で力と同じ方向に関する関係式がなりたつことを踏まえて、角速度においても
+
+$$
+    -\omega_x\sin\phi+\omega_y\cos\phi=
+    \omega_\theta、
     \omega_z=\omega_\phi
 $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$$
+    \omega_x\sin\theta\cos\phi+
+    \omega_y\sin\theta\sin\phi=
+    -\omega_z\cos\theta
+$$
 
 となると考えると、先ほどの角運動量の関係式に代入して成立することが分かる。そこで、これらの式を角運動量の式に代入すると以下の通りになる。
 
