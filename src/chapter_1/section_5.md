@@ -863,18 +863,40 @@ $$
     \bm{N}
 $$
 
-が成り立つことが分かる。ただ、ここまでに出てきた角運動量の関係式
+が成り立つことが分かる。あるいは角運動量を $\bm{L}=I\bm{\omega}$ とおくことで、
 
 $$
-    -L_x\sin\phi+L_y\cos\phi=L_\theta、
-    L_z=L_\phi
+    \omega_x=
+    -\omega_\theta\sin\phi-
+    \omega_\phi\sin\theta\cos\theta\cos\phi
 $$
 $$
-    L_x\cos\phi+L_y\sin\phi=
-    -mr^2\omega_\phi\sin\theta\cos\theta
+    \omega_y=
+    \omega_\theta\cos\phi-
+    \omega_\phi\sin\theta\sin\theta\sin\phi
+$$
+$$
+    \omega_z=
+    \omega_\phi\sin^2\theta
 $$
 
-において三つ目の式が何を表しているのか述べていなかったので見てみると、これは力の関係
+
+となることが予想される。これは別の書き方をすると
+
+$$
+    \omega_\theta=
+    -\omega_x\sin\phi+\omega_y\cos\phi
+$$
+$$
+    -\omega_\phi\sin\theta\cos\theta=
+    \omega_x\cos\phi+\omega_y\sin\phi
+$$
+$$
+    \omega_z=
+    \omega_\phi\sin^2\theta
+$$
+
+となる。このうち、一つ目と二つ目の式については力の関係
 
 $$
     F_{x,y}=
@@ -883,39 +905,37 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-と見比べると、以下のように対応しているものと思われる。
+と見比べることで、以下のように対応しているものと思われる。
 
 $$
-    L_x\cos\phi+L_y\sin\phi=
-    -mr^2\omega_\phi\sin\theta\cos\theta
+    -\omega_\phi\sin\theta\cos\theta=
+    \omega_x\cos\phi+\omega_y\sin\phi
     \leftrightarrow
     F_{x,y}=
     F_x\cos\phi+F_y\sin\phi
-    
 $$
 $$
-    -L_x\sin\phi+L_y\cos\phi=
-    L_\theta
+    \omega_\theta=
+    -\omega_x\sin\phi+\omega_y\cos\phi
     \leftrightarrow
     F_\phi=
     F_y\cos\phi-F_x\sin\phi
 $$
 
-そのため、角運動量においても以下のように書けることになる。
+そこで、以下のように書けるものとしてみる。
 
 $$
-    L_x\cos\phi+L_y\sin\phi=L_{x,y}、
-    -L_x\sin\phi+L_y\cos\phi=L_\theta、
-    L_z=L_\phi
+    \omega_x\cos\phi+\omega_y\sin\phi=
+    \omega_{x,y}、
+    \omega_{x,y}=
+    -\omega_\phi\sin\theta\cos\theta
 $$
 $$
-    L_{x,y}=
-    -mr^2\omega_\phi\sin\theta\cos\theta、
-    L_\theta=mr^2\omega_\theta、
-    L_\phi=mr^2\sin^2\theta\omega_\phi
+    -\omega_x\sin\phi+\omega_y\cos\phi=
+    \omega_\theta
 $$
 
-また、$F_{x,y}$ に関しては
+そうすると、同じように力の関係
 
 $$
     F_r=
@@ -926,278 +946,58 @@ $$
     F_z\sin\theta
 $$
 
-という関係もあったため、これに当てはめてみると動径方向およびそれに直交する方向の角運動量の成分を $L_r,L_{r_\perp}$ とすると
+を利用すると、動径方向およびそれに直交する方向の角運動量を $\omega_r,\omega_{r_\perp}$ とすると
 
 $$
     F_r=
     F_z\cos\theta+
     F_{x,y}\sin\theta
     \leftrightarrow
-    L_r=
-    L_z\cos\theta+
-    L_{x,y}\sin\theta 
+    \omega_r=
+    \omega_z\cos\theta+
+    \omega_{x,y}\sin\theta 
 $$
 $$
     F_\theta=
     F_{x,y}\cos\theta-
     F_z\sin\theta
     \leftrightarrow
-    L_{r_\perp}=
-    L_{x,y}\cos\theta-
-    L_z\sin\theta
+    \omega_{r_\perp}=
+    \omega_{x,y}\cos\theta-
+    \omega_z\sin\theta
 $$
 
-というようになるため、これらに $L_{x,y},L_z$ を代入することで
+となるため、これらに $\omega_{x,y},\omega_z$ を代入することで
 
 $$
-    L_r=
-    (mr^2\sin^2\theta\omega_\phi)\cos\theta+
-    (-mr^2\omega_\phi\sin\theta\cos\theta)\sin\theta
+    \omega_r=
+    (\omega_\phi\sin^2\theta)\cos\theta+
+    (-\omega_\phi\sin\theta\cos\theta)\sin\theta
     =0
 $$
 $$
-    L_{r_\perp}=
-    (-mr^2\omega_\phi\sin\theta\cos\theta)
+    \omega_{r_\perp}=
+    (-\omega_\phi\sin\theta\cos\theta)
     \cos\theta-
-    (mr^2\sin^2\theta\omega_\phi)
+    (\omega_\phi\sin^2\theta)
     \sin\theta=
-    -mr^2\sin\theta\omega_\phi
+    -\omega_\phi\sin\theta
 $$
 
-となる。このうち、動径方向の回転がない（$L_r=0$）ことから
+となることが分かる。ここで動径方向については回転成分はないため0となる。一方で垂直方向については $\omega_theta$ が常に $x,y$ 平面に沿った方向を向くため $z$ 方向には $\omega_\phi$ のものしか影響しないためこのような形になる。
 
-$$
-    L_z\cos\theta+L_{x,y}\sin\theta=0
-    \rightarrow
-    L_{x,y}\sin\theta=-L_z\cos\theta
-$$
 
-であるため、最終的には以下の関係が成り立つことになる。
 
-$$
-    -L_x\sin\phi+L_y\cos\phi=L_\theta、
-    L_z=L_\phi
-$$
-$$
-    L_x\sin\theta\cos\phi+L_y\sin\theta\sin\phi=
-    L_{x,y}\sin\theta=-L_z\cos\theta
-$$
 
 
-このように角運動量で力と同じ方向に関する関係式がなりたつことを踏まえて、角速度においても
 
-$$
-    -\omega_x\sin\phi+\omega_y\cos\phi=
-    \omega_\theta、
-    \omega_z=\omega_\phi
-$$
-$$
-    \omega_x\sin\theta\cos\phi+
-    \omega_y\sin\theta\sin\phi=
-    -\omega_z\cos\theta
-$$
 
-となると考えると、先ほどの角運動量の関係式に代入して成立することが分かる。そこで、これらの式を角運動量の式に代入すると以下の通りになる。
 
-$$
-    L_x=
-    m(r\sin\phi)^2\omega_x-
-    mr^2\sin\phi\cos\phi\omega_y-
-    mr^2\sin\theta\cos\theta\cos\phi\omega_z
-$$
-$$
-    L_y=
-    m(r\cos\phi)^2\omega_y-
-    mr^2\sin\phi\cos\phi\omega_x-
-    mr^2\sin\theta\cos\theta\sin\phi\omega_z
-$$
-$$
-    L_z=
-    m(r\sin\theta)^2\omega_z
-$$
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$$
-    (
-        \omega_x\cos\phi+
-        \omega_y\sin\phi
-    )\sin\theta+
-    \omega_z\cos\theta=0
-$$
-$$
-    \omega_\theta
-    [
-        (
-            \omega_x\cos\phi+
-            \omega_y\sin\phi
-        )\cos\theta-
-        \omega_z\sin\theta
-    ]-
-    \omega_\phi
-    (
-        \omega_x\sin\phi-
-        \omega_y\cos\phi
-    )\sin\theta=0
-$$
-
-$\sin\theta$ をかけて整理すると
-
-$$
-    \omega_\theta\omega_z=
-    (
-        \omega_y\cos\phi-
-        \omega_x\sin\phi
-    )\sin^2\theta\omega_\phi
-$$
-
-
-$$
-    \omega_\theta=
-    (
-        \omega_y\cos\phi-
-        \omega_x\sin\phi
-    )\sin^2\theta、
-    \omega_\phi=
-    \omega_z
-$$
-
-であることから、これを先ほどの角運動量の式に代入すると
-
-$$
-    L_x=
-    m(\omega_x y-\omega_y x)y
-    -m\omega_z xz
-$$
-$$
-    L_y=
-    m( 
-        -\omega_x y+
-        \omega_y x
-    )x-
-    m\omega_z zy
-$$
-$$
-    L_z=
-    m(x^2+y^2)\omega_z
-$$
-
-
-以下のようにテンソルの形になる
-$$
-    \bm{L}=
-    \bm{I}\bm{\omega}、
-    \bm{I}=
-    \begin{pmatrix}
-        my^2 & -mxy & -mxz\\
-        -mxy & mx^2 & -myz\\
-        0 & 0 & m(x^2+y^2)\\
-    \end{pmatrix}
-$$
-
-これをもう少し整理すると、
-
-$$
-    \begin{align*}
-    L_z
-    &=
-    mr^2\omega_z(1-\cos^2\theta)\\
-    &=
-    mr^2
-    [
-        \omega_z+
-        (
-            \omega_x\cos\phi+
-            \omega_y\sin\phi
-        )\sin\theta\cos\theta
-    ]\\
-    &=
-    mr^2\omega_z+
-    m\omega_x xz+
-    m\omega_y yz\\
-    &=
-    mr^2\omega_z+
-    2mz
-    (\omega_x x+\omega_y y)-
-    m\omega_x xz-
-    m\omega_y yz\\
-    &=
-    mr^2\omega_z+
-    2mzr\sin\theta
-    (\omega_x\cos\phi+\omega_y\sin\phi)-
-    m\omega_x xz-
-    m\omega_y yz\\
-    &=
-    mr^2\omega_z-
-    2m\omega_z zr\sin\theta\cos\theta-
-    m\omega_x xz-
-    m\omega_y yz
-    \end{align*}
-$$
-
-となるが、ここで
-
-となるため、慣性モーメントは対称的な形になる。
-
-$$
-    \bm{L}=
-    \bm{I}\bm{\omega}、
-    \bm{I}=
-    \begin{pmatrix}
-        my^2 & -mxy & -mxz\\
-        -mxy & mx^2 & -myz\\
-        -mxz & -myz & mr^2\\
-    \end{pmatrix}
-$$
 
 
 
@@ -1427,32 +1227,3 @@ $$
 $$
 
 であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。
-
-回転ベクトルの関係を使うと
-
-$$
-    \bm{v}_\theta=
-    \bm{r}\times\bm{\omega}_\theta、
-    \bm{v}_\phi=
-    \bm{r}\times\bm{\omega}_\phi
-$$
-
-$$
-    \bm{L}=
-    m(\bm{r}\times\bm{v})=
-    m(\bm{r}\times\bm{v}_\theta)+
-    m(\bm{r}\times\bm{v}_\phi)
-$$
-
-$$
-    \bm{r}\times\bm{v}_\theta=
-    \bm{r}\times(\bm{r}\times\bm{\omega}_\theta)=
-    (\bm{r}\cdot\bm{\omega}_\theta)\cdot\bm{r}-
-    (\bm{r}\cdot\bm{r})\cdot\bm{\omega}_\theta
-$$
-$$
-    \bm{r}\times\bm{v}_\phi=
-    \bm{r}\times(\bm{r}\times\bm{\omega}_\phi)=
-    (\bm{r}\cdot\bm{\omega}_\phi)\cdot\bm{r}-
-    (\bm{r}\cdot\bm{r})\cdot\bm{\omega}_\phi
-$$
