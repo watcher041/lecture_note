@@ -15,6 +15,7 @@ $$
     <img width="60%"
         src="images/simultaneous.png">
 </p>
+
 $$
     \left[c(t_{\rm C}-t_{\rm B})\right]^2=
     (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)
