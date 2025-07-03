@@ -1,7 +1,7 @@
 
 # Summary
 
-[物理学入門](./top.md)
+[物理学入門](top.md)
 - [物理学における研究法](chapter_0/section_0.md)
   - [単位と単位系](chapter_0/section_1.md)
   - [長さの単位](chapter_0/section_2.md)
@@ -52,6 +52,4 @@
   - [電子の波動説](chapter_8/section_3.md)
   - [粒子と波動の二重性](chapter_8/section_4.md)
   - [波動力学](chapter_8/section_5.md)
-- [参考文献](./references.md)
-- [メモ](memo/math.md)
-  - [物理数学](memo/math.md)
+- [参考文献](references.md)
