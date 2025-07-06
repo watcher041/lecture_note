@@ -594,7 +594,7 @@ $$
     m(r\sin\theta)\omega_\phi^2
 $$
 
-であり、先ほどの動径方向の関係式を利用すると
+であり、先ほどの動径方向の関係式を利用すると 
 
 $$
     f_{r,\phi}=
@@ -626,7 +626,7 @@ $$
     m(r\sin\theta)^2\omega_\phi
 $$
 
-と角運動量おき、これらを微分してみると
+と角運動量をおき、これらを微分してみると $\theta,\phi$ の運動方程式も利用することで
 
 $$
     \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
@@ -656,7 +656,7 @@ $$
     r\sin\theta F_\phi
 $$
 
-$\theta$ 方向の第二項目については、$\phi$ 方向の回転に対する遠心力の $\theta$ 方向の成分であり、実際
+が得られる。ここで、$L_\theta$ に関する式の第二項目については、$\phi$ 方向の回転に対する遠心力の $\theta$ 方向の成分であり、実際
 
 $$
     f_{\theta,\phi}=
@@ -865,7 +865,9 @@ $$
 
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
-    \bm{N}
+    \bm{N}、
+    \bm{L}=(\bm{r}\times\bm{v})、
+    \bm{N}=\bm{r}\times\bm{F}
 $$
 
 が成り立つことが分かる。あるいは角運動量を $\bm{L}=I\bm{\omega}$ とおくことで、
@@ -886,7 +888,7 @@ $$
 $$
 
 
-となることが予想される。これは別の書き方をすると
+となることが予想される。このうち一つ目と二つ目を整理すると
 
 $$
     \omega_\theta=
@@ -896,12 +898,8 @@ $$
     -\omega_\phi\sin\theta\cos\theta=
     \omega_x\cos\phi+\omega_y\sin\phi
 $$
-$$
-    \omega_z=
-    \omega_\phi\sin^2\theta
-$$
 
-となる。このうち、一つ目と二つ目の式については力の関係
+となるが、これらと力の関係
 
 $$
     F_{x,y}=
@@ -910,7 +908,7 @@ $$
     F_y\cos\phi-F_x\sin\phi
 $$
 
-と見比べることで、以下のように対応しているものと思われる。
+を見比べることで、以下のように対応しているものと思われる。
 
 $$
     -\omega_\phi\sin\theta\cos\theta=
@@ -930,14 +928,15 @@ $$
 そこで、以下のように書けるものとしてみる。
 
 $$
-    \omega_x\cos\phi+\omega_y\sin\phi=
-    \omega_{x,y}、
+    \omega_{x,y}=
+    \omega_x\cos\phi+\omega_y\sin\phi、
     \omega_{x,y}=
     -\omega_\phi\sin\theta\cos\theta
 $$
 $$
-    -\omega_x\sin\phi+\omega_y\cos\phi=
-    \omega_\theta
+    \omega_\theta=
+    -\omega_x\sin\phi+\omega_y\cos\phi
+    
 $$
 
 そうすると、同じように力の関係
@@ -951,7 +950,7 @@ $$
     F_z\sin\theta
 $$
 
-を利用すると、動径方向およびそれに直交する方向の角運動量を $\omega_r,\omega_{r_\perp}$ とすると
+を利用することで、動径方向およびそれに直交する方向の角運動量を $\omega_r,\omega_{r_\perp}$ は
 
 $$
     F_r=
@@ -972,7 +971,7 @@ $$
     \omega_z\sin\theta
 $$
 
-となるため、これらに $\omega_{x,y},\omega_z$ を代入することで
+となり、これらに $\omega_{x,y},\omega_z$ を代入することで
 
 $$
     \omega_r=
@@ -989,4 +988,10 @@ $$
     -\omega_\phi\sin\theta
 $$
 
-となることが分かる。ここで動径方向については回転成分はないため0となる。一方で垂直方向については $\omega_\theta$ が常に $x,y$ 平面に沿った方向を向くため $z$ 方向には $\omega_\phi$ のものしか影響しないためこのような形になる。
+が得られる。ここで動径方向については回転成分はないため0となる。一方で垂直方向については $\omega_\theta$ が常に $x,y$ 平面に沿った方向を向くため $z$ 方向には $\omega_\phi$ のものしか影響しないためこのような形になる。
+
+<p align="center">
+    <img width="44%"  
+        style="background-color:white;"
+        src="images/omega_picture.png">
+</p>
