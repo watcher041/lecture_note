@@ -1,7 +1,8 @@
 
+
 ## 剛体の力学
 
-　質点系における運動方程式というのは
+　前回の回転運動に関する内容を、今度は質点系においても適用してみよう。質点系での $i$ 番目の質点の運動方程式は
 $$
     m_i
     \frac{\mathrm{d}^2\bm{r}_i}
@@ -10,7 +11,7 @@ $$
     \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$
 
-であるが、前回扱った回転の場合だとどうなるか見るために $\bm{r}_i$ と外積をとって質点全体で総和をとると
+であったが、 $\bm{r}_i$ と外積をとって質点全体で総和をとると
 
 $$
     \sum_{i=1}^N
@@ -243,6 +244,8 @@ $$
     \bm{v}'=\bm{\omega}'\times\bm{r}'
 $$
 
+この $\bm{\omega}'$ が全ての質点で共通しているか？
+
 これを角運動量の式に代入すると
 
 $$
@@ -255,3 +258,58 @@ $$
         m_i(\bm{r}'_i\cdot\bm{\omega}_i')\cdot\bm{r}'_i
     \right]
 $$
+
+これを展開すると
+
+$$
+    L_x'=
+    \sum_{i=1}^N
+    m_i
+    \left[
+        (y_i'^2+z_i'^2)\omega_x'-
+        x_i'y_i'\omega_y'-
+        x_i'z_i'\omega_z'
+    \right]
+$$
+$$
+    L_y'=
+    \sum_{i=1}^N
+    m_i
+    \left[
+        -x_i'y_i'\omega_x'+
+        (x_i'^2+z_i'^2)\omega_y'-
+        y_i'z_i'\omega_z'
+    \right]
+$$
+$$
+    L_z'=
+    \sum_{i=1}^N
+    m_i
+    \left[
+        -x_i'z_i'\omega_x'-
+        y_i'z_i'\omega_y'+
+        (x_i'^2+y_i'^2)\omega_z'
+    \right]
+$$
+
+ということになることから、慣性モーメントを用いると
+
+$$
+    \bm{L}'=\bm{I}'\bm{\omega}'、
+    \bm{I}'=
+    \sum_{i=1}^{N}
+    m_i
+    \begin{pmatrix}
+        y_i'^2+z_i'^2 &
+        -x_i'y_i'     &
+        -x_i'z_i'     \\
+        -x_i'y_i'     &
+        y_i'^2+z_i'^2 &
+        -y_i'z_i'     \\
+        -x_i'z_i'     &
+        -y_i'z_i'     &
+        x_i'^2+y_i'^2    
+    \end{pmatrix}
+$$
+
+となる。
