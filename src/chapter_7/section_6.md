@@ -110,18 +110,14 @@ $$
 $$
     \bm{e}_x=\bm{e}_X、
     \bm{e}_y=
-    \left(
-        \frac{1}{\sqrt{2}}\bm{e}_X+
-        \frac{1}{\sqrt{2}}\bm{e}_Y
-    \right)
+    \frac{1}{\sqrt{2}}\bm{e}_X+
+    \frac{1}{\sqrt{2}}\bm{e}_Y
 $$
 $$
     \bm{e}_X=\bm{e}_x、
     \bm{e}_Y=
-    \left(
-        -\bm{e}_x+
-        \sqrt{2}\bm{e}_y
-    \right)
+    -\bm{e}_x+
+    \sqrt{2}\bm{e}_y
 $$
 
 このように、基本ベクトルを $\bm{e}_X,\bm{e}_Y$ から $\bm{e}_x,\bm{e}_y$ により置き換えることができれば、直交座標系から斜交座標系へ変換ができることが分かる。
@@ -129,31 +125,34 @@ $$
 　上記のことを踏まえて、一般的に直交座標系 $(X,Y)$ から任意の座標系 $(x,y)$ に変換することを考えると、
 
 $$
-    X=X(x,y)、Y=Y(x,y)
+    \bm{x}=\bm{x}(X,Y)=\bm{x}(x,y)
 $$
 
-と関数の形で与えられるため、ベクトル $\bm{x}$ は以下の通りとなる。
+というようにベクトル $\bm{x}$ が変換されるわけだが、この微小変化をとることで
 
-$$
-    \bm{x}=
-    X(x,y)\bm{e}_X+Y(x,y)\bm{e}_Y=
-    x\bm{e}_x+y\bm{e}_y
-$$
-
-
-<!-- 
-
-
-というように直交座標系と斜交座標系で表したものが等しいものとする。そして微小変化をとることで
 $$
     \mathrm{d}\bm{x}=
-    \bm{u}_X\mathrm{d}X+
-    \bm{u}_Y\mathrm{d}Y=
-    \bm{u}_x\mathrm{d}x+
-    \bm{u}_y\mathrm{d}y
-$$
-$$
     \left(
+        \frac{\partial \bm{x}}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial \bm{x}}{\partial Y}
+    \right)
+    \mathrm{d}Y=
+    \left(
+        \frac{\partial \bm{x}}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial \bm{x}}{\partial y}
+    \right)
+    \mathrm{d}y
+$$
+
+と展開できる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
+
+$$
     \bm{u}_X=
     \frac{\partial \bm{x}}{\partial X}、
     \bm{u}_Y=
@@ -162,33 +161,152 @@ $$
     \frac{\partial \bm{x}}{\partial x}、
     \bm{u}_y=
     \frac{\partial \bm{x}}{\partial y}
-    \right)
 $$
 
-と展開できる。すると、前の式と同じように各成分のベクトルの和になっていることが分かる。そこで、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）と考え
-
-$$
-    \bm{e}_X=
-    \frac{\bm{u}_X}{\left|\bm{u}_X\right|}、
-    \bm{e}_Y=
-    \frac{\bm{u}_Y}
-    {\left|\bm{u}_Y\right|}、
-    \bm{e}_x=
-    \frac{\bm{u}_x}{\left|\bm{u}_x\right|}、
-    \bm{e}_y=
-    \frac{\bm{u}_y}
-    {\left|\bm{u}_y\right|}
-$$
-
-という関係を満たしているとすると、上記の式は以下の通りになる。
+というように置くことで以下の形になることが分かる。
 
 $$
     \mathrm{d}\bm{x}=
-    \bm{e}_X\frac{\mathrm{d}X}{}+
-    \bm{e}_Y\mathrm{d}Y=
-    \bm{e}_x\mathrm{d}x+
-    \bm{e}_y\mathrm{d}y
+    \mathrm{d}X\bm{u}_X+
+    \mathrm{d}Y\bm{u}_Y=
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}y\bm{u}_y
 $$
+
+ここで、$\bm{u}$ に関して変数に関しても
+
+$$
+    X=X(x,y)、Y=Y(x,y)
+$$
+
+というように変換後の関数として書けることから、
+
+$$
+    \bm{u}_X=
+    \frac{\partial \bm{x}}{\partial X}=
+    \frac{\partial x}{\partial X}
+    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial y}{\partial X}
+    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial x}{\partial X}
+    \bm{u}_x+
+    \frac{\partial y}{\partial X}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_Y=
+    \frac{\partial \bm{x}}{\partial Y}=
+    \frac{\partial x}{\partial Y}
+    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial y}{\partial Y}
+    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial \bm{x}}{\partial Y}
+    \bm{u}_x+
+    \frac{\partial y}{\partial Y}
+    \bm{u}_y
+$$
+
+となり、逆に変換前の変数で
+
+$$
+    x=x(X,y)、y=y(X,y)
+$$
+
+とも書けるから、以下の通りになる。
+
+$$
+    \bm{u}_x=
+    \frac{\partial \bm{x}}{\partial x}=
+    \frac{\partial X}{\partial x}
+    \frac{\partial \bm{x}}{\partial X}+
+    \frac{\partial Y}{\partial x}
+    \frac{\partial \bm{x}}{\partial Y}=
+    \frac{\partial X}{\partial x}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial x}
+    \bm{u}_Y
+$$
+$$
+    \bm{u}_y=
+    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial X}{\partial y}
+    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial Y}{\partial y}
+    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial X}{\partial y}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial y}
+    \bm{u}_Y
+$$
+
+ここまでの結果を整理すると、
+
+$$
+    \bm{u}_X=
+    \frac{\partial x}{\partial X}
+    \bm{u}_x+
+    \frac{\partial y}{\partial X}
+    \bm{u}_y、
+    \bm{u}_Y=
+    \frac{\partial x}{\partial Y}
+    \bm{u}_x+
+    \frac{\partial y}{\partial Y}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_x=
+    \frac{\partial X}{\partial x}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial x}
+    \bm{u}_Y、
+    \bm{u}_y=
+    \frac{\partial X}{\partial y}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial y}
+    \bm{u}_Y
+$$
+
+というように、基底ベクトルの変換になっていることが分かる。試しに、先ほどの直交座標系と斜交座標系の場合だと
+
+$$
+    X = x+\frac{1}{\sqrt{2}}y、
+    Y = \frac{1}{\sqrt{2}}y
+    \rightarrow
+    \frac{\partial X}{\partial x}=1、
+    \frac{\partial Y}{\partial x}=0、
+    \frac{\partial X}{\partial y}=\frac{1}{\sqrt{2}}、
+    \frac{\partial Y}{\partial y}=\frac{1}{\sqrt{2}}
+$$
+
+$$
+    x = X - Y、
+    y = \sqrt{2}Y
+    \rightarrow
+    \frac{\partial x}{\partial X}=1、
+    \frac{\partial y}{\partial X}=0、
+    \frac{\partial x}{\partial Y}=-1、
+    \frac{\partial y}{\partial Y}=\sqrt{2}
+$$
+
+となることから、基底ベクトルは以下のようになる。
+
+$$
+    \bm{u}_X=\bm{u}_x、
+    \bm{u}_Y=
+    -\bm{u}_x+\sqrt{2}\bm{u}_y
+$$
+$$
+    \bm{u}_x=\bm{u}_X、
+    \bm{u}_y=
+    \frac{1}{\sqrt{2}}\bm{u}_X+
+    \frac{1}{\sqrt{2}}\bm{u}_Y
+$$
+
+<!-- 
+
+
+
+
 
 
 
