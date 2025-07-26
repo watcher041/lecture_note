@@ -354,73 +354,323 @@ $$
 
 そのため、全ての基本ベクトルと基底ベクトルが一致していることが分かる。
 
+　以上のことをふまえると、各座標系の基底ベクトルの関係とそれらの内積により座標系の変換ができることになるため、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見てみよう。まず、Galiei変換は
 
-各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
 $$
-    w'=w、x'=-\beta w+x、y'=y、z'=z、
+    w'=w、x=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
 $$
-という変換であったため、ベクトル $\bm{s}$ は以下の通りに書ける。
 $$
-    \bm{s}=
-    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    w'\bm{e}_w+
-    (x'+\beta w')\bm{e}_x+
-    y'\bm{e}_y+z'\bm{e}_z
-$$
-一方で、変換先の座標を用いて
-$$
-    \bm{s}=
-    w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
-    w'\bm{e}_w'+x'\bm{e}_x'+
-    y'\bm{e}_y'+z'\bm{e}_z'
-$$
-となるが、まず基底ベクトルの方は以下の通りになる。
-$$
-    \bm{u}_w'=
-    \frac{\partial\bm{s}}{\partial w'}=
-    \bm{e}_w+\beta\bm{e}_x、
-    \bm{u}_x'=
-    \frac{\partial\bm{s}}{\partial x'}=
-    \bm{e}_x、
-    \bm{u}_y'=
-    \frac{\partial\bm{s}}{\partial y'}=
-    \bm{e}_y、
-    \bm{u}_z'=
-    \frac{\partial\bm{s}}{\partial z'}=
-    \bm{e}_z
-$$
-ここで、基底ベクトルの内積が次のように**設定されている**ものとする。
-$$
-    \bm{e}_w\cdot\bm{e}_w=1、
-    \bm{e}_x\cdot\bm{e}_w=0、
-    \bm{e}_y\cdot\bm{e}_w=0、
-    \bm{e}_z\cdot\bm{e}_w=0
-$$
-$$
-    \bm{e}_w\cdot\bm{e}_x=0、
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_y\cdot\bm{e}_x=0、
-    \bm{e}_z\cdot\bm{e}_x=0
-$$
-$$
-    \bm{e}_w\cdot\bm{e}_y=0、
-    \bm{e}_x\cdot\bm{e}_y=0、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_z\cdot\bm{e}_y=0
-$$
-$$
-    \bm{e}_w\cdot\bm{e}_z=0、
-    \bm{e}_x\cdot\bm{e}_z=0、
-    \bm{e}_y\cdot\bm{e}_z=0、
-    \bm{e}_z\cdot\bm{e}_z=1
+    \leftrightarrow
+    w=w'、x=x'+\beta w'、y=y'、z=z'
 $$
 
-すると、基底ベクトルの大きさは以下の通りになる。
+という変換であるため、ベクトル $\bm{s}$ は直交座標系の基本ベクトル $\bm{e}_w,\bm{e}_x,\bm{e}_y,\bm{e}_z$ とGalilei変換後の基本ベクトル $\bm{e}_w',\bm{e}_x',\bm{e}_y',\bm{e}_z'$ を用いて以下の通りに書ける。
+
+$$
+    \bm{s}=
+    w\bm{e}_w+
+    x\bm{e}_x+
+    y\bm{e}_y+
+    z\bm{e}_z=
+    w'\bm{e}_w'+
+    x'\bm{e}_x'+
+    y'\bm{e}_y'+
+    z'\bm{e}_z'
+$$
+
+そして、この微小変化をとったものは直交座標系の基底ベクトル $\bm{u}_w,\bm{u}_x,\bm{u}_y,\bm{u}_z$ とGalilei変換後の基底ベクトル $\bm{u}_w',\bm{u}_x',\bm{u}_y',\bm{u}_z'$ を用いて以下の通りに書ける。
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}w\bm{u}_w+
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}y\bm{u}_y+
+    \mathrm{d}z\bm{u}_z=
+    \mathrm{d}w'\bm{u}_w'+
+    \mathrm{d}x'\bm{u}_x'+
+    \mathrm{d}y'\bm{u}_y'+
+    \mathrm{d}z'\bm{u}_z'
+$$
+
+そして、基底ベクトルの変換式は
+
+$$
+    \bm{u}_w=
+    \frac{\partial \bm{s}}{\partial w}=
+    \left(
+        \frac{\partial w'}{\partial w}
+    \right)
+    \bm{u}_w'+
+    \left(
+        \frac{\partial x'}{\partial w}
+    \right)
+    \bm{u}_x'+
+    \left(
+        \frac{\partial y'}{\partial w}
+    \right)
+    \bm{u}_y'+
+    \left(
+        \frac{\partial z'}{\partial w}
+    \right)
+    \bm{u}_z'
+$$
+$$
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
+    \left(
+        \frac{\partial w'}{\partial x}
+    \right)
+    \bm{u}_w'+
+    \left(
+        \frac{\partial x'}{\partial x}
+    \right)
+    \bm{u}_x'+
+    \left(
+        \frac{\partial y'}{\partial x}
+    \right)
+    \bm{u}_y'+
+    \left(
+        \frac{\partial z'}{\partial x}
+    \right)
+    \bm{u}_z'
+$$
+$$
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
+    \left(
+        \frac{\partial w'}{\partial y}
+    \right)
+    \bm{u}_w'+
+    \left(
+        \frac{\partial x'}{\partial y}
+    \right)
+    \bm{u}_x'+
+    \left(
+        \frac{\partial y'}{\partial y}
+    \right)
+    \bm{u}_y'+
+    \left(
+        \frac{\partial z'}{\partial y}
+    \right)
+    \bm{u}_z'
+$$
+$$
+    \bm{u}_z=
+    \frac{\partial \bm{s}}{\partial z}=
+    \left(
+        \frac{\partial w'}{\partial z}
+    \right)
+    \bm{u}_w'+
+    \left(
+        \frac{\partial x'}{\partial z}
+    \right)
+    \bm{u}_x'+
+    \left(
+        \frac{\partial y'}{\partial z}
+    \right)
+    \bm{u}_y'+
+    \left(
+        \frac{\partial z'}{\partial z}
+    \right)
+    \bm{u}_z'
+$$
+$$
+    \bm{u}_w'=
+    \frac{\partial \bm{s}}{\partial w'}=
+    \left(
+        \frac{\partial w}{\partial w'}
+    \right)
+    \bm{u}_w+
+    \left(
+        \frac{\partial x}{\partial w'}
+    \right)
+    \bm{u}_x+
+    \left(
+        \frac{\partial y}{\partial w'}
+    \right)
+    \bm{u}_y+
+    \left(
+        \frac{\partial z}{\partial w'}
+    \right)
+    \bm{u}_z
+$$
+$$
+    \bm{u}_x'=
+    \frac{\partial \bm{s}}{\partial x'}=
+    \left(
+        \frac{\partial w}{\partial x'}
+    \right)
+    \bm{u}_w+
+    \left(
+        \frac{\partial x}{\partial x'}
+    \right)
+    \bm{u}_x+
+    \left(
+        \frac{\partial y}{\partial x'}
+    \right)
+    \bm{u}_y+
+    \left(
+        \frac{\partial z}{\partial x'}
+    \right)
+    \bm{u}_z
+$$
+$$
+    \bm{u}_y'=
+    \frac{\partial \bm{s}}{\partial y'}=
+    \left(
+        \frac{\partial w}{\partial y'}
+    \right)
+    \bm{u}_w+
+    \left(
+        \frac{\partial x}{\partial y'}
+    \right)
+    \bm{u}_x+
+    \left(
+        \frac{\partial y}{\partial y'}
+    \right)
+    \bm{u}_y+
+    \left(
+        \frac{\partial z}{\partial y'}
+    \right)
+    \bm{u}_z
+$$
+$$
+    \bm{u}_z'=
+    \frac{\partial \bm{s}}{\partial z'}=
+    \left(
+        \frac{\partial w}{\partial z'}
+    \right)
+    \bm{u}_w+
+    \left(
+        \frac{\partial x}{\partial z'}
+    \right)
+    \bm{u}_x+
+    \left(
+        \frac{\partial y}{\partial z'}
+    \right)
+    \bm{u}_y+
+    \left(
+        \frac{\partial z}{\partial z'}
+    \right)
+    \bm{u}_z
+$$
+
+となるため、変換式を代入すると以下の式が得られる。
+
+$$
+    \bm{u}_w=
+    \bm{u}_w'-\beta\bm{u}_x'、
+    \bm{u}_x=\bm{u}_x'、
+    \bm{u}_y=\bm{u}_y'、
+    \bm{u}_z=\bm{u}_z'
+$$
+$$
+    \bm{u}_w'=
+    \bm{u}_w+\beta\bm{u}_x、
+    \bm{u}_x'=\bm{u}_x、
+    \bm{u}_y'=\bm{u}_y、
+    \bm{u}_z'=\bm{u}_z
+$$
+
+ここで、変換前の座標系が直交座標系であることを踏まえて**時間軸w以外**の内積
+
+$$
+    \bm{u}_x=\bm{e}_x、
+    \bm{u}_y=\bm{e}_y、
+    \bm{u}_z=\bm{e}_z
+$$
+$$
+    \bm{u}_x\cdot\bm{u}_x=1、
+    \bm{u}_y\cdot\bm{u}_x=0、
+    \bm{u}_z\cdot\bm{u}_x=0
+$$
+$$
+    \bm{u}_x\cdot\bm{u}_y=0、
+    \bm{u}_y\cdot\bm{u}_y=1、
+    \bm{u}_z\cdot\bm{u}_y=0
+$$
+$$
+    \bm{u}_x\cdot\bm{u}_z=0、
+    \bm{u}_y\cdot\bm{u}_z=0、
+    \bm{u}_z\cdot\bm{u}_z=1
+$$
+
+を利用して変換後の内積を求めると
+
+$$
+    \bm{u}_x'\cdot\bm{u}_x'=1、
+    \bm{u}_y'\cdot\bm{u}_x'=0、
+    \bm{u}_z'\cdot\bm{u}_x'=0
+$$
+$$
+    \bm{u}_x'\cdot\bm{u}_y'=0、
+    \bm{u}_y'\cdot\bm{u}_y'=1、
+    \bm{u}_z'\cdot\bm{u}_y'=0
+$$
+$$
+    \bm{u}_x'\cdot\bm{u}_z'=0、
+    \bm{u}_y'\cdot\bm{u}_z'=0、
+    \bm{u}_z'\cdot\bm{u}_z'=1
+$$
+
+となる。ここで、**時間軸wのみ**の変換式について
+
+$$
+    \bm{u}_w'\cdot\bm{u}_w'=
+    (\bm{u}_w\cdot\bm{u}_w)+
+    2\beta(\bm{u}_w\cdot\bm{u}_x)+
+    \beta^2、
+    \bm{u}_w'\cdot\bm{u}_x'=
+    (\bm{u}_w\cdot\bm{u}_x)+
+    \beta
+$$
+$$
+    \bm{u}_w\cdot\bm{u}_w=
+    (\bm{u}_w'\cdot\bm{u}_w')-
+    2\beta(\bm{u}_w'\cdot\bm{u}_x')+
+    \beta^2、
+    \bm{u}_w\cdot\bm{u}_x=
+    (\bm{u}_w'\cdot\bm{u}_x')-
+    \beta
+$$
+
+となるが、仮に
+
+$$
+    \bm{u}_w'\cdot\bm{u}_w'=
+    \bm{u}_w\cdot\bm{u}_w=1
+$$
+
+となるとすれば、
+
+$$
+    \bm{u}_w'\cdot\bm{u}_x'=
+    \frac{1}{2}\beta、
+    \bm{u}_w\cdot\bm{u}_x=
+    -\frac{1}{2}\beta
+$$
+
+となる。これを踏まえて変換前のベクトルの大きさは
+
+$$
+    |\bm{u}_w|=
+    \sqrt{\bm{u}_w\cdot\bm{u}_w}=1、
+    |\bm{u}_x|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1
+$$
+$$
+    |\bm{u}_y|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1、
+    |\bm{u}_z|=
+    \sqrt{\bm{u}_z\cdot\bm{u}_z}=1、
+$$
+
+であり、変換後の基底ベクトルの大きさは以下の通りになる。
+
 $$
     |\bm{u}_w'|=
-    \sqrt{\bm{u}_{w}'\cdot\bm{u}_{w}'}=
-    \sqrt{1+\beta^2}、
+    \sqrt{\bm{u}_{w}'\cdot\bm{u}_{w}'}=1、
     |\bm{u}_x'|=
     \sqrt{\bm{u}_{x}'\cdot\bm{u}_{x}'}=1、
 $$
@@ -432,24 +682,17 @@ $$
 $$
 
 そのため、Galilei変換後の基本ベクトルは
+
 $$
     \bm{e}_w'=
-    \frac{1}{\sqrt{1+\beta^2}}
-    (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}_w+\beta\bm{e}_x、
     \bm{e}_x'=
     \bm{e}_x'=\bm{e}_x、
     \bm{e}_y'=\bm{e}_y、
     \bm{e}_z''=\bm{e}_z'
 $$
-となることから、関係式は以下の通りになる。
 
-$$
-    w=\frac{w'}{\sqrt{1+\beta^2}}、
-    x=x'+\frac{\beta w'}{\sqrt{1+\beta^2}}、
-    y=y'、z=z'
-$$
-
-このように成立していないことが分かるため、内積の値に問題があることが予想される。そのため、
+となる。ここまでで内積について変換前が
 
 $$
     \bm{e}_w\cdot\bm{e}_w=1、
@@ -476,7 +719,7 @@ $$
     \bm{e}_z\cdot\bm{e}_z=1
 $$
 
-というようにしてみると、一方の内積も
+であり、変換後についても
 
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
@@ -505,7 +748,7 @@ $$
     \bm{e}_z'\cdot\bm{e}_z'=1
 $$
 
-となり変換式を満たすことが分かる。さらには、このときの各座標は以下の図のような関係にある。
+としていたが、ここで時間軸 $w$ と $x$ の内積について値を持つのは以下の図のような関係にあるためと考えられる。
 
 <p align="center">
     <img width="40%" src="images/galilei_space.png">
