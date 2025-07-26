@@ -754,19 +754,6 @@ $$
     <img width="40%" src="images/galilei_space.png">
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 　次にLorentz変換の場合、変換式は以下の通りであった。
 $$
     w'=\gamma(w-\beta x)、
@@ -777,48 +764,170 @@ $$
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
     \right)
 $$
-このときの基底ベクトルを求めてみると
+$$
+    \leftrightarrow
+    w=\gamma(w'+\beta x')、
+    x=\gamma(\beta w'+x')、
+    y=y'、
+    z=z'
+$$
+
+このときの基底ベクトルをGalilei変換と同様に求めてみると
+
+$$
+    \bm{u}_w=
+    \gamma (\bm{u}_w'+\beta\bm{u}_x')、
+    \bm{u}_x=
+    \gamma (\bm{u}_x'+\beta\bm{u}_w')
+$$
 $$
     \bm{u}'_w=
-    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \gamma (\bm{u}_w-\beta\bm{u}_x)、
     \bm{u}'_x=
-    \gamma (\bm{e}_x+\beta\bm{e}_w)
+    \gamma (\bm{u}_x-\beta\bm{u}_w)
 $$
-であり、このときも内積が不変な形になっていないため、こちらでも試しに
+
+であり、このうち**時間軸wを含む**内積をとると
+
 $$
-    (\bm{e}_w'\cdot\bm{e}_w')=
-    (\bm{e}_w\cdot\bm{e}_w)、
-    (\bm{e}_w'\cdot\bm{e}_x')=
-    (\bm{e}_w\cdot\bm{e}_x)
-$$
-というように内積が不変になるところがあるか見てみると
-$$
-    |\bm{u}'_w|^2(\bm{e}_w\cdot\bm{e}_w)=
+    (\bm{u}_w'\cdot\bm{u}_w')=
     \gamma^2[
-        (\bm{e}_w\cdot\bm{e}_w)+
-        2\beta(\bm{e}_w\cdot\bm{e}_x)+
+        (\bm{u}_w\cdot\bm{u}_w)+
+        2\beta(\bm{u}_w\cdot\bm{u}_x)+
+        \beta^2(\bm{u}_x\cdot\bm{u}_x)
+    ]
+$$
+$$
+    (\bm{u}_w'\cdot\bm{u}_x')=
+    \gamma^2[
+        (\bm{u}_w\cdot\bm{u}_x)+
+        (1+\beta^2)
+        (\bm{u}_w\cdot\bm{u}_w)+
+        \beta(\bm{u}_x\cdot\bm{u}_x)
+    ]
+$$
+$$
+    (\bm{u}_x'\cdot\bm{u}_x')=
+    \gamma^2[
+        1+
+        2\beta(\bm{u}_x\cdot\bm{u}_w)+
+        \beta^2
+        (\bm{u}_w\cdot\bm{u}_w)
+    ]
+$$
+
+となるが、**時間軸wを除いた分**の内積が
+
+$$
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+であるから以下の式が得られる。
+
+$$
+    (\bm{u}_w'\cdot\bm{u}_w')=
+    \gamma^2[
+        (\bm{u}_w\cdot\bm{u}_w)+
+        2\beta(\bm{u}_w\cdot\bm{u}_x)+
         \beta^2
     ]
 $$
 $$
-    |\bm{u}'_w|
-    |\bm{u}'_x|(\bm{e}_w\cdot\bm{e}_x)=
+    (\bm{u}_w'\cdot\bm{u}_x')=
     \gamma^2[
-        (\bm{e}_w\cdot\bm{e}_x)+
+        (\bm{u}_w\cdot\bm{u}_x)+
         (1+\beta^2)
-        (\bm{e}_w\cdot\bm{e}_w)+
+        (\bm{u}_w\cdot\bm{u}_w)+
         \beta
     ]
 $$
 $$
-    |\bm{u}'_x|^2=
     \gamma^2[
         1+
-        2\beta(\bm{e}_x\cdot\bm{e}_w)+
+        2\beta(\bm{u}_x\cdot\bm{u}_w)+
         \beta^2
-        (\bm{e}_w\cdot\bm{e}_w)
+        (\bm{u}_w\cdot\bm{u}_w)
+    ]=
+    1
+$$
+
+このうち、3つ目の式から
+
+$$
+    2(\bm{u}_x\cdot\bm{u}_w)=
+    \beta
+    \left[
+       (\bm{u}_w\cdot\bm{u}_w)-1
+    \right]
+$$
+
+をそれ以外の式に適用すると
+
+$$
+    (\bm{u}_w'\cdot\bm{u}_w')=
+    (\bm{u}_w\cdot\bm{u}_w)
+$$
+$$
+    (\bm{u}_w'\cdot\bm{u}_x')=
+    \gamma^2[
+        (\bm{u}_w\cdot\bm{u}_x)+
+        (1+\beta^2)
+        (\bm{u}_w\cdot\bm{u}_w)+
+        \beta
     ]
 $$
+
+
+
+
+
+
+
+変換前の内積が以下のようになっていたとする。
+
+$$
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_x=-\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
+$$
+$$
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
+$$
+
+
+
+
+
+
+というように内積が不変になるところがあるか見てみると
 
 
 
