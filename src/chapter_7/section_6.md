@@ -24,7 +24,7 @@ $$
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
 
-　一般的にベクトルは $\bm{x}$ というように太字で表記されるが、その中身は指定する座標系によって異なってくる。例えば、2次元直交座標系 $(X,Y)$ と2次元斜交座標系 $(x,y)$ の場合だと、それぞれ $\bm{x}=(X,Y)$ あるいは $\bm{x}=(x,y)$ と表される。形だけ見ると同じように感じるが、各座標系が仮に以下の図のようになっていたとすると、そのようになっていないことが分かる。
+　一般的にベクトルは $\bm{s}$ というように太字で表記されるが、その中身は指定する座標系によって異なってくる。例えば、2次元直交座標系 $(X,Y)$ と2次元斜交座標系 $(x,y)$ の場合だと、それぞれ $\bm{s}=(X,Y)$ あるいは $\bm{s}=(x,y)$ と表される。形だけ見ると同じように感じるが、各座標系が仮に以下の図のようになっていたとすると、そのようになっていないことが分かる。
 
 <p align="center">
     <img width="40%" src="images/oblique_system.png">
@@ -41,21 +41,21 @@ $$
 すなわち、各座標系において
 
 $$
-    \bm{x}=(X,Y)=
+    \bm{s}=(X,Y)=
     \left(
         x+\frac{1}{\sqrt{2}}y,
         \frac{1}{\sqrt{2}}y
     \right)　（直交座標系）
 $$
 $$
-    \bm{x}=(x,y)=
+    \bm{s}=(x,y)=
     (X-Y,\sqrt{2}Y)　（斜交座標系）
 $$
 
 となるわけだが、この表記だと一目見てどの座標系を利用しているのかが分からず不便である。そこで、どの座標系を利用しているか分かりやすくするために各座標系ごとに**基本ベクトル**（各成分の大きさ1のベクトル）というものを用意する。例として、直交座標系での基本ベクトルを $\bm{e}_X,\bm{e}_Y$ 、斜交座標系での基本ベクトルを $\bm{e}_x,\bm{e}_y$ として
 
 $$
-    \bm{x}=
+    \bm{s}=
     X\bm{e}_X+Y\bm{e}_Y=
     \left(
         x+\frac{1}{\sqrt{2}}y
@@ -65,7 +65,7 @@ $$
     \right)\bm{e}_Y
 $$
 $$
-    \bm{x}=
+    \bm{s}=
     x\bm{e}_x+y\bm{e}_y=
     (X-Y)\bm{e}_x+
     \sqrt{2}Y\bm{e}_y
@@ -79,7 +79,7 @@ $$
 さらに、基本ベクトルを用いると各座標系の間で
 
 $$
-    \bm{x}=
+    \bm{s}=
     X\bm{e}_X+Y\bm{e}_Y=
     x\bm{e}_x+y\bm{e}_y
 $$
@@ -87,7 +87,7 @@ $$
 が成り立つため、これに先ほどの式をそれぞれ代入すると
 
 $$
-    \bm{x}=
+    \bm{s}=
     x\bm{e}_X+
     y
     \left(
@@ -97,7 +97,7 @@ $$
     x\bm{e}_x+y\bm{e}_y
 $$
 $$
-    \bm{x}=
+    \bm{s}=
     X\bm{e}_X+Y\bm{e}_Y=
     X\bm{e}_x+
     Y
@@ -125,27 +125,27 @@ $$
 　上記のことを踏まえて、一般的に直交座標系 $(X,Y)$ から任意の座標系 $(x,y)$ への変換を考えると、
 
 $$
-    \bm{x}=\bm{x}(X,Y)=\bm{x}(x,y)
+    \bm{s}=\bm{s}(X,Y)=\bm{s}(x,y)
 $$
 
-というようにベクトル $\bm{x}$ が変換されるわけだが、この微小変化をとることで
+というようにベクトル $\bm{s}$ が変換されるわけだが、この微小変化をとることで
 
 $$
-    \mathrm{d}\bm{x}=
+    \mathrm{d}\bm{s}=
     \left(
-        \frac{\partial \bm{x}}{\partial X}
+        \frac{\partial \bm{s}}{\partial X}
     \right)
     \mathrm{d}X+
     \left(
-        \frac{\partial \bm{x}}{\partial Y}
+        \frac{\partial \bm{s}}{\partial Y}
     \right)
     \mathrm{d}Y=
     \left(
-        \frac{\partial \bm{x}}{\partial x}
+        \frac{\partial \bm{s}}{\partial x}
     \right)
     \mathrm{d}x+
     \left(
-        \frac{\partial \bm{x}}{\partial y}
+        \frac{\partial \bm{s}}{\partial y}
     \right)
     \mathrm{d}y
 $$
@@ -154,19 +154,19 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial \bm{x}}{\partial X}、
+    \frac{\partial \bm{s}}{\partial X}、
     \bm{u}_Y=
-    \frac{\partial \bm{x}}{\partial Y}、
+    \frac{\partial \bm{s}}{\partial Y}、
     \bm{u}_x=
-    \frac{\partial \bm{x}}{\partial x}、
+    \frac{\partial \bm{s}}{\partial x}、
     \bm{u}_y=
-    \frac{\partial \bm{x}}{\partial y}
+    \frac{\partial \bm{s}}{\partial y}
 $$
 
 というように置くことで以下の形になることが分かる。
 
 $$
-    \mathrm{d}\bm{x}=
+    \mathrm{d}\bm{s}=
     \mathrm{d}X\bm{u}_X+
     \mathrm{d}Y\bm{u}_Y=
     \mathrm{d}x\bm{u}_x+
@@ -183,11 +183,11 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial \bm{x}}{\partial X}=
+    \frac{\partial \bm{s}}{\partial X}=
     \frac{\partial x}{\partial X}
-    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial \bm{s}}{\partial x}+
     \frac{\partial y}{\partial X}
-    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial \bm{s}}{\partial y}=
     \frac{\partial x}{\partial X}
     \bm{u}_x+
     \frac{\partial y}{\partial X}
@@ -195,12 +195,12 @@ $$
 $$
 $$
     \bm{u}_Y=
-    \frac{\partial \bm{x}}{\partial Y}=
+    \frac{\partial \bm{s}}{\partial Y}=
     \frac{\partial x}{\partial Y}
-    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial \bm{s}}{\partial x}+
     \frac{\partial y}{\partial Y}
-    \frac{\partial \bm{x}}{\partial y}=
-    \frac{\partial \bm{x}}{\partial Y}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial \bm{s}}{\partial Y}
     \bm{u}_x+
     \frac{\partial y}{\partial Y}
     \bm{u}_y
@@ -216,11 +216,11 @@ $$
 
 $$
     \bm{u}_x=
-    \frac{\partial \bm{x}}{\partial x}=
+    \frac{\partial \bm{s}}{\partial x}=
     \frac{\partial X}{\partial x}
-    \frac{\partial \bm{x}}{\partial X}+
+    \frac{\partial \bm{s}}{\partial X}+
     \frac{\partial Y}{\partial x}
-    \frac{\partial \bm{x}}{\partial Y}=
+    \frac{\partial \bm{s}}{\partial Y}=
     \frac{\partial X}{\partial x}
     \bm{u}_X+
     \frac{\partial Y}{\partial x}
@@ -228,11 +228,11 @@ $$
 $$
 $$
     \bm{u}_y=
-    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial \bm{s}}{\partial y}=
     \frac{\partial X}{\partial y}
-    \frac{\partial \bm{x}}{\partial x}+
+    \frac{\partial \bm{s}}{\partial x}+
     \frac{\partial Y}{\partial y}
-    \frac{\partial \bm{x}}{\partial y}=
+    \frac{\partial \bm{s}}{\partial y}=
     \frac{\partial X}{\partial y}
     \bm{u}_X+
     \frac{\partial Y}{\partial y}
@@ -309,9 +309,15 @@ $$
     \bm{u}_Y=\bm{e}_Y
 $$
 $$
+    \bm{u}_X\cdot\bm{u}_X=
     \bm{e}_X\cdot\bm{e}_X=1、
+    \bm{u}_X\cdot\bm{u}_Y=
     \bm{e}_X\cdot\bm{e}_Y=0、
+$$
+$$
+    \bm{u}_Y\cdot\bm{u}_X=
     \bm{e}_Y\cdot\bm{e}_X=0、
+    \bm{u}_Y\cdot\bm{u}_Y=
     \bm{e}_Y\cdot\bm{e}_Y=1
 $$
 
@@ -319,20 +325,13 @@ $$
 
 $$
     |\bm{u}_X|=
-    \sqrt{\bm{u}_X\cdot\bm{u}_X}=
-    \sqrt{\bm{e}_X\cdot\bm{e}_X}=1
-$$
-$$
+    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1、
     |\bm{u}_Y|=
-    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=
-    \sqrt{\bm{e}_Y\cdot\bm{e}_Y}=1
+    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=1
 $$
 $$
     |\bm{u}_x|=
-    \sqrt{\bm{u}_x\cdot\bm{u}_x}=
-    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1
-$$
-$$
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
     |\bm{u}_y|=
     \sqrt{\bm{u}_y\cdot\bm{u}_y}=
     \frac{1}{2}
@@ -341,15 +340,12 @@ $$
         2(\bm{u}_X\cdot\bm{u}_Y)+
         \bm{u}_Y\cdot\bm{u}_Y
     }=
-    \frac{1}{2}
-    \sqrt{
-        2+
-        2(\bm{e}_X\cdot\bm{e}_Y)
-    }=
     1
 $$
 
 となることから、全ての基本ベクトルと基底ベクトルが一致していることが分かる。
+
+　実際の内積というのは
 
 <!-- 
 
@@ -361,51 +357,17 @@ $$
 
 
 
-となる。次に、基底ベクトルの大きさについては直交座標系において基本ベクトル同士の内積が
 
 
-
-と**設定されている**ことから、各成分の基底ベクトルの大きさも求められる。
-
-$$
-    \left|\bm{u}_X\right|=
-    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1、
-    \left|\bm{u}_Y\right|=
-    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=1、
-$$
-$$
-    \left|\bm{u}_x\right|=
-    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
-    \left|\bm{u}_y\right|=
-    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1
-$$
-
-したがって、各成分の基本ベクトルは
-$$
-    \bm{e}_x=\bm{e}_X、
-    \bm{e}_y=
-    \frac{1}{\sqrt{2}}(\bm{e}_X+\bm{e}_Y)
-$$
-と言う関係になっていることが分かる。そのため、この関係を先ほどの式に代入してみると
-
-$$
-    X=x+\frac{1}{\sqrt{2}}y、
-    Y=\frac{1}{\sqrt{2}}y
-$$
-
-というようになるが、先ほどの変換式と見比べてみることで全て0になることが分かる。
-$$
-    r_\theta=r_\phi=0
-$$
 
 各座標系の基底ベクトルの関係とそれらの内積が分かると座標系間の関係が導かれることになる。このことをふまえて、今度は前回までに登場した変換（Galielei変換、Lorentz変換）を見ていくと、まずGaliei変換は
 $$
     w'=w、x'=-\beta w+x、y'=y、z'=z、
     \left(\beta=\frac{V}{c}\right)
 $$
-という変換であったため、ベクトル $\bm{x}$ は以下の通りに書ける。
+という変換であったため、ベクトル $\bm{s}$ は以下の通りに書ける。
 $$
-    \bm{x}=
+    \bm{s}=
     w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     w'\bm{e}_w+
     (x'+\beta w')\bm{e}_x+
@@ -413,7 +375,7 @@ $$
 $$
 一方で、変換先の座標を用いて
 $$
-    \bm{x}=
+    \bm{s}=
     w\bm{e}_w+x\bm{e}_x+y\bm{e}_y+z\bm{e}_z=
     w'\bm{e}_w'+x'\bm{e}_x'+
     y'\bm{e}_y'+z'\bm{e}_z'
@@ -421,16 +383,16 @@ $$
 となるが、まず基底ベクトルの方は以下の通りになる。
 $$
     \bm{u}_w'=
-    \frac{\partial\bm{x}}{\partial w'}=
+    \frac{\partial\bm{s}}{\partial w'}=
     \bm{e}_w+\beta\bm{e}_x、
     \bm{u}_x'=
-    \frac{\partial\bm{x}}{\partial x'}=
+    \frac{\partial\bm{s}}{\partial x'}=
     \bm{e}_x、
     \bm{u}_y'=
-    \frac{\partial\bm{x}}{\partial y'}=
+    \frac{\partial\bm{s}}{\partial y'}=
     \bm{e}_y、
     \bm{u}_z'=
-    \frac{\partial\bm{x}}{\partial z'}=
+    \frac{\partial\bm{s}}{\partial z'}=
     \bm{e}_z
 $$
 ここで、基底ベクトルの内積が次のように**設定されている**ものとする。
@@ -652,7 +614,7 @@ $$
 <p align="center">
     <img width="40%" src="images/lorentz_space.png">
 </p>
-　このように既存の座標系の基本ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から基本ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{x}$ で関連つけられていたため、
+　このように既存の座標系の基本ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から基本ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{s}$ で関連つけられていたため、
 $$
     w=x^0、x=x^1、y=x^2、z=x^3、
     \bm{u}_w=\bm{u}_0、
@@ -660,15 +622,15 @@ $$
     \bm{u}_y=\bm{u}_2、
     \bm{u}_z=\bm{u}_3
 $$
-とおき、$\mathrm{d}\bm{x}$ を以下のように書く。
+とおき、$\mathrm{d}\bm{s}$ を以下のように書く。
 $$
-    \mathrm{d}\bm{x}=
+    \mathrm{d}\bm{s}=
     \sum_{\mu}\mathrm{d}x^\mu\bm{u}_\mu=
     \sum_{\mu'}\mathrm{d}x^{\mu'}\bm{u}_{\mu'}
 $$
 $$
     (\mathrm{d}s)^2=
-    \mathrm{d}\bm{x}\cdot\mathrm{d}\bm{x}=
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
     \sum_{\mu,\nu=0}^{3}
     (\bm{u}_\mu\cdot\bm{u}_\nu)
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
@@ -988,11 +950,11 @@ $$
 $$
 というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
 $$
-    \mathrm{d}\bm{x}'=
+    \mathrm{d}\bm{s}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \left(
         \bm{e}_{\nu}=
-        \frac{\partial \bm{x}'}
+        \frac{\partial \bm{s}'}
         {\partial x^\nu}
     \right)
 
@@ -1000,7 +962,7 @@ $$
 そして、この大きさを求めるために内積をとると
 $$
     \mathrm{d}s^2=
-    \mathrm{d}\bm{x}'\cdot\mathrm{d}\bm{x}'=
+    \mathrm{d}\bm{s}'\cdot\mathrm{d}\bm{s}'=
     (\bm{e}_\mu\cdot\bm{e}_\nu)\ 
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
     g_{\mu\nu}
