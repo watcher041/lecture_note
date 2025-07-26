@@ -302,14 +302,54 @@ $$
     \frac{1}{\sqrt{2}}\bm{u}_Y
 $$
 
-この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。そこで、基底ベクトルの大きさを $|\bm{u}|$ として基本ベクトルが大きさ1のベクトルであるから $\bm{e}=\bm{u}/|\bm{u}|$ とする。また、 $|\bm{u}|$ は $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$　というように内積から求められるため、直交座標系において基底ベクトルの内積が
+この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。そこで、基底ベクトルの大きさを $|\bm{u}|$ として基本ベクトルが大きさ1のベクトルであるから $\bm{e}=\bm{u}/|\bm{u}|$ とする。また、 $|\bm{u}|$ は $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$　というように内積から求められるため、直交座標系において
 
 $$
-    \bm{u}_X\cdot\bm{u}_X=1、
-    \bm{u}_X\cdot\bm{u}_Y=0、
-    \bm{u}_Y\cdot\bm{u}_X=0、
-    \bm{u}_Y\cdot\bm{u}_Y=1
+    \bm{u}_X=\bm{e}_X、
+    \bm{u}_Y=\bm{e}_Y
 $$
+$$
+    \bm{e}_X\cdot\bm{e}_X=1、
+    \bm{e}_X\cdot\bm{e}_Y=0、
+    \bm{e}_Y\cdot\bm{e}_X=0、
+    \bm{e}_Y\cdot\bm{e}_Y=1
+$$
+
+であることを利用すると、基底ベクトルの内積は
+
+$$
+    |\bm{u}_X|=
+    \sqrt{\bm{u}_X\cdot\bm{u}_X}=
+    \sqrt{\bm{e}_X\cdot\bm{e}_X}=1
+$$
+$$
+    |\bm{u}_Y|=
+    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=
+    \sqrt{\bm{e}_Y\cdot\bm{e}_Y}=1
+$$
+$$
+    |\bm{u}_x|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=
+    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1
+$$
+$$
+    |\bm{u}_y|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=
+    \frac{1}{2}
+    \sqrt{
+        \bm{u}_X\cdot\bm{u}_X+
+        2(\bm{u}_X\cdot\bm{u}_Y)+
+        \bm{u}_Y\cdot\bm{u}_Y
+    }=
+    \frac{1}{2}
+    \sqrt{
+        2+
+        2(\bm{e}_X\cdot\bm{e}_Y)
+    }=
+    1
+$$
+
+となることから、全ての基本ベクトルと基底ベクトルが一致していることが分かる。
 
 <!-- 
 
