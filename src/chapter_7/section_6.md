@@ -302,24 +302,47 @@ $$
     \frac{1}{\sqrt{2}}\bm{u}_Y
 $$
 
-この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。そこで、基底ベクトルの大きさを $|\bm{u}|$ として基本ベクトルが大きさ1のベクトルであるから $\bm{e}=\bm{u}/|\bm{u}|$ とする。また、 $|\bm{u}|$ は $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$　というように内積から求められるため、直交座標系において
+この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。また、基底ベクトルの大きさを $|\bm{u}|$ とすると基本ベクトルが $\bm{e}=\bm{u}/|\bm{u}|$ となることから、それらの関係がどうなるかを見てみよう。
+
+まず、基底ベクトルの大きさは $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$ というように内積から求められる。そのため、
 
 $$
-    \bm{u}_X=\bm{e}_X、
-    \bm{u}_Y=\bm{e}_Y
-$$
-$$
     \bm{u}_X\cdot\bm{u}_X=
-    \bm{e}_X\cdot\bm{e}_X=1、
-    \bm{u}_X\cdot\bm{u}_Y=
-    \bm{e}_X\cdot\bm{e}_Y=0、
-$$
-$$
-    \bm{u}_Y\cdot\bm{u}_X=
-    \bm{e}_Y\cdot\bm{e}_X=0、
+    \bm{u}_x\cdot\bm{u}_x、
     \bm{u}_Y\cdot\bm{u}_Y=
-    \bm{e}_Y\cdot\bm{e}_Y=1
+    \bm{u}_x\cdot\bm{u}_x-
+    2\sqrt{2} 
+    \left(
+        \bm{u}_x\cdot\bm{u}_y
+    \right)+
+    2
+    (\bm{u}_y\cdot\bm{u}_y)
 $$
+$$
+    \bm{u}_x\cdot\bm{u}_x=
+    \bm{u}_X\cdot\bm{u}_X、
+    \bm{u}_y\cdot\bm{u}_y=
+    \frac{1}{2}
+    (\bm{u}_X\cdot\bm{u}_X)+
+    (\bm{u}_X\cdot\bm{u}_Y)+
+    \frac{1}{2}
+    (\bm{u}_Y\cdot\bm{u}_Y)
+$$
+
+というように内積をとってみると、
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 であることを利用すると、変換後の内積は
 
