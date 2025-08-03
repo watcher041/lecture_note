@@ -314,6 +314,98 @@ $$
     \frac{1}{\sqrt{2}}\bm{u}_Y
 $$
 
+また、内積もとってみると
+
+$$
+    \begin{aligned}
+        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
+        &=
+        (\bm{u}_X\cdot\bm{u}_X)(\mathrm{d}X)^2+
+        2(\bm{u}_X\cdot\bm{u}_Y)
+        \mathrm{d}X\mathrm{d}Y+
+        (\bm{u}_Y\cdot\bm{u}_Y)(\mathrm{d}Y)^2\\
+        &=
+        (\bm{u}_x\cdot\bm{u}_x)(\mathrm{d}x)^2+
+        2(\bm{u}_x\cdot\bm{u}_y)
+        \mathrm{d}x\mathrm{d}y+
+        (\bm{u}_y\cdot\bm{u}_y)(\mathrm{d}y)^2
+    \end{aligned}
+$$
+
+$$
+    \mathrm{d}X=
+    \left(
+        \frac{\partial X}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial X}{\partial y}
+    \right)
+    \mathrm{d}y、
+    \mathrm{d}Y=
+    \left(
+        \frac{\partial Y}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial Y}{\partial y}
+    \right)
+    \mathrm{d}y
+$$
+$$
+    \mathrm{d}x=
+    \left(
+        \frac{\partial x}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial x}{\partial Y}
+    \right)
+    \mathrm{d}Y、
+    \mathrm{d}y=
+    \left(
+        \frac{\partial y}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial y}{\partial Y}
+    \right)
+    \mathrm{d}Y
+$$
+
+となるので、ここに先ほどの式を代入すると
+
+
+$$
+    \mathrm{d}X=
+    \mathrm{d}x+
+    \frac{1}{\sqrt{2}}
+    \mathrm{d}y、
+    \mathrm{d}Y=
+    \frac{1}{\sqrt{2}}
+    \mathrm{d}y、
+    \mathrm{d}x=
+    \mathrm{d}X-
+    \mathrm{d}Y、
+    \mathrm{d}y=
+    \sqrt{2}
+    \mathrm{d}Y
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。また、基底ベクトルの大きさを $|\bm{u}|$ とすると基本ベクトルが $\bm{e}=\bm{u}/|\bm{u}|$ となることから、それらの関係がどうなるかを見てみよう。
 
 まず、基底ベクトルの大きさは $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$ というように内積から求められる。そのため、
