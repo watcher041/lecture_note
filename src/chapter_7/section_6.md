@@ -328,7 +328,83 @@ $$
     \bm{e}_y
 $$
 
-といように基底ベクトルと基本ベクトルが同じということが得られる。
+といように基底ベクトルと基本ベクトルが同じであることが分かる。一方で、先ほどの定加速度系への変換は
+
+$$
+    x'=x-\frac{a}{2c^2}w^2、
+    w'=w
+    \leftrightarrow
+    x=x'+\frac{a}{2c^2}w'^2、
+    w=w'
+$$
+
+であったので、このときのベクトル $\bm{s}$ を
+
+$$
+    \bm{s}=
+    x\bm{e}_{x}+w\bm{e}_{w}=
+    x'\bm{e}_{x'}+w'\bm{e}_{w'}
+$$
+
+というように基本ベクトルで書けるものとする。すると、基本ベクトルは変換式を代入して
+
+$$
+    \bm{s}=
+    x\bm{e}_{x}+w\bm{e}_{w}=
+    x'\bm{e}_{x'}+w'\bm{e}_{w'}
+$$
+
+$$
+    x=x'+\frac{a}{2c^2}w'^2、
+    w=w'
+    \rightarrow
+    \frac{\partial x}{\partial x'}=1、
+    \frac{\partial w}{\partial x'}=0、
+    \frac{\partial x}{\partial w'}=\frac{a}{c^2}w'、
+    \frac{\partial w}{\partial w'}=1
+$$
+
+$$
+    x'=x-\frac{a}{2c^2}w^2、
+    w'=w
+    \rightarrow
+    \frac{\partial x'}{\partial x}=1、
+    \frac{\partial w'}{\partial x}=0、
+    \frac{\partial x'}{\partial w}=-\frac{a}{c^2}w、
+    \frac{\partial w'}{\partial w}=1
+$$
+
+$$
+    \bm{u}_x=\bm{u}_{x'}、
+    \bm{u}_w=
+    -\frac{a}{c^2}w
+    \bm{u}_{x'}+
+    \bm{u}_{w'}、
+    \bm{u}_{x'}=\bm{u}_x、
+    \bm{u}_{w'}=
+    \frac{a}{c^2}w'
+    \bm{u}_x+\bm{u}_w
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1060,22 +1136,6 @@ $$
     (\mathrm{d}z')^2
 $$
 そのため、これを内積として定義した空間（Minkofsky空間）を考えると、内積の形が不変となって便利であることがうかがえる。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 これを見ても分かるように内積から求めると変換式がおかしくなってしまうため、逆に
 
