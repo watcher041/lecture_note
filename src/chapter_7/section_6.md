@@ -121,18 +121,7 @@ $$
     \sqrt{2}\bm{e}_y
 $$
 
-このように、直交座標系から斜交座標系へ変換変換は基本ベクトルを $\bm{e}_X,\bm{e}_Y$ から $\bm{e}_x,\bm{e}_y$ へ置き換えることに相当していることが分かる。また、基本ベクトルの内積をとることで基本ベクトル自体の大きさが1であることと基本ベクトの関係（どのような座標系になっているか）を表すことができる。
-
-$$
-    \bm{e}_X\cdot\bm{e}_X=1、
-    \bm{e}_X\cdot\bm{e}_Y=0、
-    \bm{e}_Y\cdot\bm{e}_Y=1
-$$
-$$
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}、
-    \bm{e}_y\cdot\bm{e}_y=1
-$$
+このように、直交座標系から斜交座標系へ変換変換は基本ベクトルを $\bm{e}_X,\bm{e}_Y$ から $\bm{e}_x,\bm{e}_y$ へ置き換えることに相当していることが分かる。
 
 　上記のことを踏まえて、一般的に直交座標系 $(X,Y)$ から任意の座標系 $(x,y)$ への変換を考えると、
 
@@ -314,84 +303,32 @@ $$
     \frac{1}{\sqrt{2}}\bm{u}_Y
 $$
 
-また、内積もとってみると
+この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。このことは、実際
 
 $$
-    \begin{aligned}
-        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
-        &=
-        (\bm{u}_X\cdot\bm{u}_X)(\mathrm{d}X)^2+
-        2(\bm{u}_X\cdot\bm{u}_Y)
-        \mathrm{d}X\mathrm{d}Y+
-        (\bm{u}_Y\cdot\bm{u}_Y)(\mathrm{d}Y)^2\\
-        &=
-        (\bm{u}_x\cdot\bm{u}_x)(\mathrm{d}x)^2+
-        2(\bm{u}_x\cdot\bm{u}_y)
-        \mathrm{d}x\mathrm{d}y+
-        (\bm{u}_y\cdot\bm{u}_y)(\mathrm{d}y)^2
-    \end{aligned}
+    \bm{s}=
+    X\bm{e}_X+Y\bm{e}_Y=
+    x\bm{e}_x+y\bm{e}_y
 $$
 
-$$
-    \mathrm{d}X=
-    \left(
-        \frac{\partial X}{\partial x}
-    \right)
-    \mathrm{d}x+
-    \left(
-        \frac{\partial X}{\partial y}
-    \right)
-    \mathrm{d}y、
-    \mathrm{d}Y=
-    \left(
-        \frac{\partial Y}{\partial x}
-    \right)
-    \mathrm{d}x+
-    \left(
-        \frac{\partial Y}{\partial y}
-    \right)
-    \mathrm{d}y
-$$
-$$
-    \mathrm{d}x=
-    \left(
-        \frac{\partial x}{\partial X}
-    \right)
-    \mathrm{d}X+
-    \left(
-        \frac{\partial x}{\partial Y}
-    \right)
-    \mathrm{d}Y、
-    \mathrm{d}y=
-    \left(
-        \frac{\partial y}{\partial X}
-    \right)
-    \mathrm{d}X+
-    \left(
-        \frac{\partial y}{\partial Y}
-    \right)
-    \mathrm{d}Y
-$$
-
-となるので、ここに先ほどの式を代入すると
-
+であることと**基本ベクトルが位置によって変わらない**ことから、この偏微分をとることで
 
 $$
-    \mathrm{d}X=
-    \mathrm{d}x+
-    \frac{1}{\sqrt{2}}
-    \mathrm{d}y、
-    \mathrm{d}Y=
-    \frac{1}{\sqrt{2}}
-    \mathrm{d}y、
-    \mathrm{d}x=
-    \mathrm{d}X-
-    \mathrm{d}Y、
-    \mathrm{d}y=
-    \sqrt{2}
-    \mathrm{d}Y
+    \bm{u}_X=
+    \frac{\partial \bm{s}}{\partial X}=
+    \bm{e}_X、
+    \bm{u}_Y=
+    \frac{\partial \bm{s}}{\partial Y}=
+    \bm{e}_Y、
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
+    \bm{e}_x、
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
+    \bm{e}_y
 $$
 
+といように基底ベクトルと基本ベクトルが同じということが得られる。
 
 
 
@@ -400,13 +337,7 @@ $$
 
 
 
-
-
-
-
-
-
-この形から、基底ベクトル $\bm{u}$ と基本ベクトル $\bm{e}$ が同じであれば一致することが分かる。また、基底ベクトルの大きさを $|\bm{u}|$ とすると基本ベクトルが $\bm{e}=\bm{u}/|\bm{u}|$ となることから、それらの関係がどうなるかを見てみよう。
+また、基底ベクトルの大きさを $|\bm{u}|$ とすると基本ベクトルが $\bm{e}=\bm{u}/|\bm{u}|$ となることから、それらの関係がどうなるかを見てみよう。
 
 まず、基底ベクトルの大きさは $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$ というように内積から求められる。そのため、
 
