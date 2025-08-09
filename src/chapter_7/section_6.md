@@ -346,13 +346,7 @@ $$
     x'\bm{e}_{x'}+w'\bm{e}_{w'}
 $$
 
-というように基本ベクトルで書けるものとする。すると、基本ベクトルは変換式を代入して
-
-$$
-    \bm{s}=
-    x\bm{e}_{x}+w\bm{e}_{w}=
-    x'\bm{e}_{x'}+w'\bm{e}_{w'}
-$$
+というように基本ベクトルで書けるものとする。そして、このときの基底ベクトルを
 
 $$
     x=x'+\frac{a}{2c^2}w'^2、
@@ -374,79 +368,100 @@ $$
     \frac{\partial w'}{\partial w}=1
 $$
 
+を利用して求めてみると、以下のような関係式が得られる。
+
 $$
     \bm{u}_x=\bm{u}_{x'}、
     \bm{u}_w=
-    -\frac{a}{c^2}w
+    -\frac{a}{c^2}w'
     \bm{u}_{x'}+
     \bm{u}_{w'}、
     \bm{u}_{x'}=\bm{u}_x、
     \bm{u}_{w'}=
-    \frac{a}{c^2}w'
+    \frac{a}{c^2}w
     \bm{u}_x+\bm{u}_w
 $$
 
+先ほどまでは基底ベクトルの係数が定数であったが、このときは変数 $w,w'$ が含まれたものとなっている。そのため、基本ベクトルも $w,w'$ によって変化することになることが予想される。この場合には、一般的に基本ベクトル $\bm{e}$ が大きさ1のベクトルであることから、基底ベクトル $\bm{u}$ の大きさを $|\bm{u}|$ として $\bm{e}=\bm{u}/|\bm{u}|$ から関係を見る必要がある。このとき、基底ベクトルの大きさは $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$ というように内積から求められる。そのため、
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-また、基底ベクトルの大きさを $|\bm{u}|$ とすると基本ベクトルが $\bm{e}=\bm{u}/|\bm{u}|$ となることから、それらの関係がどうなるかを見てみよう。
-
-まず、基底ベクトルの大きさは $|\bm{u}|=\sqrt{\bm{u}\cdot\bm{u}}$ というように内積から求められる。そのため、
-
-$$
-    \bm{u}_X\cdot\bm{u}_X=
-    \bm{u}_x\cdot\bm{u}_x、
-    \bm{u}_Y\cdot\bm{u}_Y=
-    \bm{u}_x\cdot\bm{u}_x-
-    2\sqrt{2} 
-    \left(
-        \bm{u}_x\cdot\bm{u}_y
-    \right)+
-    2
-    (\bm{u}_y\cdot\bm{u}_y)
-$$
 $$
     \bm{u}_x\cdot\bm{u}_x=
-    \bm{u}_X\cdot\bm{u}_X、
-    \bm{u}_y\cdot\bm{u}_y=
-    \frac{1}{2}
-    (\bm{u}_X\cdot\bm{u}_X)+
-    (\bm{u}_X\cdot\bm{u}_Y)+
-    \frac{1}{2}
-    (\bm{u}_Y\cdot\bm{u}_Y)
+    \bm{u}_{x'}\cdot\bm{u}_{x'}、
+    \bm{u}_w\cdot\bm{u}_w=
+    \frac{a^2}{c^4}w'^2
+    (\bm{u}_{x'}\cdot\bm{u}_{x'})-
+    2\frac{a}{c^2}w'
+    \left(
+        \bm{u}_{x'}\cdot\bm{u}_{w'}
+    \right)+
+    (\bm{u}_{w'}\cdot\bm{u}_{w'})
+$$
+$$
+    \bm{u}_{x'}\cdot\bm{u}_{x'}=
+    \bm{u}_{x}\cdot\bm{u}_{x}、
+    \bm{u}_{w'}\cdot\bm{u}_{w'}=
+    \frac{a^2}{c^4}w^2
+    (\bm{u}_x\cdot\bm{u}_x)+
+    2\frac{a}{c^2}w
+    (\bm{u}_x\cdot\bm{u}_w)+
+    (\bm{u}_w\cdot\bm{u}_w)
+$$
+$$
+    \bm{u}_x\cdot\bm{u}_w=
+    -\frac{a}{c^2}w'
+    (\bm{u}_{x'}\cdot\bm{u}_{x'})+
+    (\bm{u}_{x'}\cdot\bm{u}_{w'})、
+    \bm{u}_{x'}\cdot\bm{u}_{w'}=
+    \frac{a}{c^2}w
+    (\bm{u}_{x}\cdot\bm{u}_{x})+
+    (\bm{u}_{x}\cdot\bm{u}_{w})
 $$
 
-というように内積をとってみると、
+というように内積をとってみると、直交座標系においては $\bm{u}_x=\bm{e}_x、\bm{u}_w=\bm{e}_w$ とおけたため
+
+$$
+    \bm{u}_x\cdot\bm{u}_x=
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{u}_w\cdot\bm{u}_w=
+    \bm{e}_w\cdot\bm{e}_w=1
+$$
 
 
+となり、$\bm{u}_{x'}$ も基本ベクトル $\bm{e}_{x'}$ となることが分かる。それを踏まえて内積の関係式を整理すると以下のようになる。
 
+$$
+    \bm{u}_{x}\cdot\bm{u}_{x}=
+    \bm{u}_{x'}\cdot\bm{u}_{x'}=1
+$$
+$$
+    1=
+    \frac{a^2}{c^4}w'^2-
+    2\frac{a}{c^2}w'
+    \left(
+        \bm{u}_{x'}\cdot\bm{u}_{w'}
+    \right)+
+    (\bm{u}_{w'}\cdot\bm{u}_{w'})
+$$
+$$
+    \bm{u}_{w'}\cdot\bm{u}_{w'}=
+    \frac{a^2}{c^4}w^2+
+    2\frac{a}{c^2}w
+    (\bm{u}_x\cdot\bm{u}_w)+1
+$$
+$$
+    \bm{u}_x\cdot\bm{u}_w=
+    -\frac{a}{c^2}w'+
+    (\bm{u}_{x'}\cdot\bm{u}_{w'})、
+    \bm{u}_{x'}\cdot\bm{u}_{w'}=
+    \frac{a}{c^2}w+
+    (\bm{u}_{x}\cdot\bm{u}_{w})
+$$
 
+これをさらに整理すると、
 
+$$
 
+$$
 
 
 
