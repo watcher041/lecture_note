@@ -42,7 +42,22 @@ $$
     \bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}
 $$
 
-というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。ここまでのことを踏まえて、次に直交座標系から斜交座標系に変換することを考えると、ベクトル $\bm{s}$ の関係から
+というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。ここまでのことを踏まえて、次に直交座標系から斜交座標系に変換する場合を考えるのだが、事前に変換前後の関係式（変換式）が分かっていないといけないので、次のようにして変換されているものとしておく。
+
+<p align="center">
+    <img width="40%" src="images/oblique_unit_vector.png">
+    <img width="42%" src="images/oblique_system.png">
+</p>
+
+$$
+    X = x+\frac{1}{\sqrt{2}}y、
+    Y = \frac{1}{\sqrt{2}}y
+    \ \leftrightarrow\ 
+    x = X - Y、
+    y = \sqrt{2}Y
+$$
+
+そのとき、ベクトル $\bm{s}$ についても
 
 $$
     \bm{s}=
@@ -50,26 +65,343 @@ $$
     x\bm{e}_x+y\bm{e}_y
 $$
 
-というようになるため、まず $\bm{e}_X,\bm{e}_Y$ の内積をとってみると
+というように変換されることから、これらに先ほどの変換式を代入してみると
 
 $$
-    X=
-    x(\bm{e}_x\cdot\bm{e}_X)+
-    y(\bm{e}_y\cdot\bm{e}_X)、
-    Y=
-    x(\bm{e}_x\cdot\bm{e}_Y)+
-    y(\bm{e}_y\cdot\bm{e}_Y)
+    \bm{s}=
+    \left(
+        x+\frac{1}{\sqrt{2}}y
+    \right)
+    \bm{e}_X+
+    \frac{1}{\sqrt{2}}y\bm{e}_Y=
+    x\bm{e}_X+
+    y
+    \left(
+        \frac{1}{\sqrt{2}}\bm{e}_X+
+        \frac{1}{\sqrt{2}}\bm{e}_Y
+    \right)=
+    x\bm{e}_x+y\bm{e}_y
+$$
+$$
+    \bm{s}=
+    \left(
+        X-Y
+    \right)
+    \bm{e}_x+
+    \sqrt{2}Y\bm{e}_y=
+    X\bm{e}_x+
+    Y
+    \left(
+        -\bm{e}_x+\sqrt{2}\bm{e}_y
+    \right)=
+    X\bm{e}_X+Y\bm{e}_Y
 $$
 
-であり、$\bm{e}_x,\bm{e}_y$ の内積をとると
+というようになるため、比較すると以下の式が成り立つことが分かる。
 
 $$
-    x+\frac{1}{\sqrt{2}}y=
-    X(\bm{e}_X\cdot\bm{e}_x)+
-    Y(\bm{e}_Y\cdot\bm{e}_x)、
-    \frac{1}{\sqrt{2}}x+y=
-    X(\bm{e}_X\cdot\bm{e}_y)+
-    Y(\bm{e}_Y\cdot\bm{e}_y)
+    \bm{e}_x=\bm{e}_X、
+    \bm{e}_y=
+    \frac{1}{\sqrt{2}}\bm{e}_X+
+    \frac{1}{\sqrt{2}}\bm{e}_Y、
+    \bm{e}_X=\bm{e}_x、
+    \bm{e}_Y=-\bm{e}_x+\sqrt{2}\bm{e}_y
 $$
 
-が得られる。
+この関係から、変換後の内積を求めてみると
+
+$$
+    \bm{e}_x\cdot\bm{e}_x=
+    \bm{e}_X\cdot\bm{e}_X=1
+$$
+$$
+    \bm{e}_y\cdot\bm{e}_y=
+    \frac{1}{2}(\bm{e}_X\cdot\bm{e}_X)+
+    (\bm{e}_X\cdot\bm{e}_Y)+
+    \frac{1}{2}(\bm{e}_Y\cdot\bm{e}_Y)=1
+$$
+$$
+    \bm{e}_x\cdot\bm{e}_y=
+    \frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_X)+
+    \frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_Y)=
+    \frac{1}{\sqrt{2}}
+$$
+
+というように、内積に関して斜交座標系のものになっていることが分かる。このように、座標変換には変換前の内積の情報と変換式が必要となることが予想される。そのため、先ほどの定加速度系での変換について考えてみると、変換前の直交座標系において
+
+$$
+    \bm{s}=x\bm{e}_x+w\bm{e}_w、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=0
+$$
+
+となっているものして、変換後に
+
+$$
+    \bm{s}=
+    x\bm{e}_x+w\bm{e}_w=
+    x'\bm{e}_{x'}+w'\bm{e}_{w'}
+$$
+
+というようになっているものとする。ところが、これについては問題として変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要がでてくることになる。そこで、$\bm{s}$ を一般的に
+
+$$
+    \bm{s}=\bm{s}(X,Y)=\bm{s}(x,y)
+$$
+
+というように変換されるものとして、この微小変化をとることで
+
+$$
+    \mathrm{d}\bm{s}=
+    \left(
+        \frac{\partial \bm{s}}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial \bm{s}}{\partial Y}
+    \right)
+    \mathrm{d}Y=
+    \left(
+        \frac{\partial \bm{s}}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial \bm{s}}{\partial y}
+    \right)
+    \mathrm{d}y
+$$
+
+と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
+
+$$
+    \bm{u}_X=
+    \frac{\partial \bm{s}}{\partial X}、
+    \bm{u}_Y=
+    \frac{\partial \bm{s}}{\partial Y}、
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}、
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}
+$$
+
+というように置くことで以下の形になることが分かる。
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}X\bm{u}_X+
+    \mathrm{d}Y\bm{u}_Y=
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}y\bm{u}_y
+$$
+
+
+ここで、$\bm{u}$ に関して変数に関しても
+
+$$
+    X=X(x,y)、Y=Y(x,y)
+$$
+
+というように変換後の関数として書けることから、
+
+$$
+    \bm{u}_X=
+    \frac{\partial \bm{s}}{\partial X}=
+    \frac{\partial x}{\partial X}
+    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial y}{\partial X}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial x}{\partial X}
+    \bm{u}_x+
+    \frac{\partial y}{\partial X}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_Y=
+    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial x}{\partial Y}
+    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial y}{\partial Y}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial \bm{s}}{\partial Y}
+    \bm{u}_x+
+    \frac{\partial y}{\partial Y}
+    \bm{u}_y
+$$
+
+となり、逆に変換前の変数で
+
+$$
+    x=x(X,Y)、y=y(X,Y)
+$$
+
+とも書けるから、以下の通りになる。
+
+$$
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
+    \frac{\partial X}{\partial x}
+    \frac{\partial \bm{s}}{\partial X}+
+    \frac{\partial Y}{\partial x}
+    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial X}{\partial x}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial x}
+    \bm{u}_Y
+$$
+$$
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial X}{\partial y}
+    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial Y}{\partial y}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial X}{\partial y}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial y}
+    \bm{u}_Y
+$$
+
+ここまでの結果を整理すると、
+
+$$
+    \bm{u}_X=
+    \frac{\partial x}{\partial X}
+    \bm{u}_x+
+    \frac{\partial y}{\partial X}
+    \bm{u}_y、
+    \bm{u}_Y=
+    \frac{\partial x}{\partial Y}
+    \bm{u}_x+
+    \frac{\partial y}{\partial Y}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_x=
+    \frac{\partial X}{\partial x}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial x}
+    \bm{u}_Y、
+    \bm{u}_y=
+    \frac{\partial X}{\partial y}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial y}
+    \bm{u}_Y
+$$
+
+というように、基底ベクトルの変換になっていることが分かる。例として、直交座標系から斜交座標系に変換する場合だと
+
+$$
+    X = x+\frac{1}{\sqrt{2}}y、
+    Y = \frac{1}{\sqrt{2}}y
+    \rightarrow
+    \frac{\partial X}{\partial x}=1、
+    \frac{\partial Y}{\partial x}=0、
+    \frac{\partial X}{\partial y}=\frac{1}{\sqrt{2}}、
+    \frac{\partial Y}{\partial y}=\frac{1}{\sqrt{2}}
+$$
+
+$$
+    x = X - Y、
+    y = \sqrt{2}Y
+    \rightarrow
+    \frac{\partial x}{\partial X}=1、
+    \frac{\partial y}{\partial X}=0、
+    \frac{\partial x}{\partial Y}=-1、
+    \frac{\partial y}{\partial Y}=\sqrt{2}
+$$
+
+となることから、以下のような式が得られる。
+
+$$
+    \bm{u}_X=\bm{u}_x、
+    \bm{u}_Y=
+    -\bm{u}_x+\sqrt{2}\bm{u}_y
+$$
+$$
+    \bm{u}_x=\bm{u}_X、
+    \bm{u}_y=
+    \frac{1}{\sqrt{2}}\bm{u}_X+
+    \frac{1}{\sqrt{2}}\bm{u}_Y
+$$
+
+ここで、直交座標系から斜交座標系への変換を考えると、基本ベクトルを用いて
+
+$$
+    \bm{s}=
+    X\bm{e}_X+Y\bm{e}_Y=
+    x\bm{e}_x+y\bm{e}_y
+$$
+
+と書けることと**基本ベクトルが位置によって変わらない**ことから、この偏微分をとることで
+
+$$
+    \bm{u}_X=
+    \frac{\partial \bm{s}}{\partial X}=
+    \bm{e}_X、
+    \bm{u}_Y=
+    \frac{\partial \bm{s}}{\partial Y}=
+    \bm{e}_Y、
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
+    \bm{e}_x、
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
+    \bm{e}_y
+$$
+
+といように基底ベクトルと基本ベクトルが同じになる。一方で、定加速度系については、変換後については基本ベクトルが各地点で同じにならないことから、以下の変換前の式しか成り立たないことになる。
+
+$$
+    \bm{s}=x\bm{e}_x+y\bm{e}_y、
+    \bm{u}_x=\bm{e}_x、
+    \bm{u}_y=\bm{e}_y
+$$
+
+そのため、まず基底ベクトルを
+
+$$
+    x=x'+\frac{a}{2c^2}w'^2、
+    w=w'
+    \rightarrow
+    \frac{\partial x}{\partial x'}=1、
+    \frac{\partial w}{\partial x'}=0、
+    \frac{\partial x}{\partial w'}=\frac{a}{c^2}w'、
+    \frac{\partial w}{\partial w'}=1
+$$
+
+$$
+    x'=x-\frac{a}{2c^2}w^2、
+    w'=w
+    \rightarrow
+    \frac{\partial x'}{\partial x}=1、
+    \frac{\partial w'}{\partial x}=0、
+    \frac{\partial x'}{\partial w}=-\frac{a}{c^2}w、
+    \frac{\partial w'}{\partial w}=1
+$$
+
+を利用して求めてみると、以下のような関係式が得られる。
+
+$$
+    \bm{u}_x=\bm{u}_{x'}、
+    \bm{u}_w=
+    -\frac{a}{c^2}w'
+    \bm{u}_{x'}+
+    \bm{u}_{w'}、
+    \bm{u}_{x'}=\bm{u}_x、
+    \bm{u}_{w'}=
+    \frac{a}{c^2}w
+    \bm{u}_x+\bm{u}_w
+$$
+
+そして、これから変換後の内積を求めると
+
+$$
+    \bm{u}_{x'}\cdot\bm{u}_{x'}=1、
+    \bm{u}_{w'}\cdot\bm{u}_{w'}=
+    1+\frac{a^2}{c^4}w'^2、
+    \bm{u}_{x'}\cdot\bm{u}_{w'}=
+    \frac{a}{c^2}w'
+$$
+
+というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。
