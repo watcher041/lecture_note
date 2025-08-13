@@ -42,4 +42,34 @@ $$
     \bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}
 $$
 
-というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。
+というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。ここまでのことを踏まえて、次に直交座標系から斜交座標系に変換することを考えると、ベクトル $\bm{s}$ の関係から
+
+$$
+    \bm{s}=
+    X\bm{e}_X+Y\bm{e}_Y=
+    x\bm{e}_x+y\bm{e}_y
+$$
+
+というようになるため、まず $\bm{e}_X,\bm{e}_Y$ の内積をとってみると
+
+$$
+    X=
+    x(\bm{e}_x\cdot\bm{e}_X)+
+    y(\bm{e}_y\cdot\bm{e}_X)、
+    Y=
+    x(\bm{e}_x\cdot\bm{e}_Y)+
+    y(\bm{e}_y\cdot\bm{e}_Y)
+$$
+
+であり、$\bm{e}_x,\bm{e}_y$ の内積をとると
+
+$$
+    x+\frac{1}{\sqrt{2}}y=
+    X(\bm{e}_X\cdot\bm{e}_x)+
+    Y(\bm{e}_Y\cdot\bm{e}_x)、
+    \frac{1}{\sqrt{2}}x+y=
+    X(\bm{e}_X\cdot\bm{e}_y)+
+    Y(\bm{e}_Y\cdot\bm{e}_y)
+$$
+
+が得られる。
