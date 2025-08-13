@@ -24,136 +24,22 @@ $$
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
 
-　一般的に、ある地点の位置を指定するときはベクトル $\bm{s}$ を用いて表記される。その中身は座標系を指定することで表すことができ、例えば $N$ 次元の座標系 $(x_1,x_2,\cdots,x_N)$ の場合だと $\bm{s}=\bm{s}(x_1,x_2,\cdots,x_N)$ となる。一方で、別の $N$ 次元の座標系 $(x'_1,x'_2,\cdots,x'_N)$ の場合だと $\bm{s}=\bm{s}(x'_1,x'_2,\cdots,x'_N)$ となるため、先ほどの座標系から別の座標系への変換を考えると
+　一般的に、ある地点の位置を指定するときはベクトルが用いられており、その中身は座標系を指定することで表すことができる。例えば、平面上の地点をベクトル $\bm{s}$ で表すとき座標系として二次元直交座標系 $(X,Y)$ を用いると $\bm{s}=(X,Y)$ となる。しかし、この表記だけだと二次元直交座標系かどうか判断ができない（二次元斜交座標系なども考えられる）ため、**基本ベクトル**（各成分の大きさ1のベクトル）というものが利用される。すなわち、二次元直交座標系の基本ベクトルを $\bm{e}_X,\bm{e}_Y$ として
 
 $$
-    \bm{s}=
-    \bm{s}(x_1,x_2,\cdots,x_N)=
-    \bm{s}(x'_1,x'_2,\cdots,x'_N)
+    \bm{s}=X\bm{e}_X+Y\bm{e}_Y、
+    \bm{e}_X\cdot\bm{e}_X=1、
+    \bm{e}_Y\cdot\bm{e}_Y=1、
+    \bm{e}_X\cdot\bm{e}_Y=0
 $$
 
-というようになる。これらの関係は微小変化をとることで確認できる。すなわち
+というようにすると、$\bm{s}$ を表記できなおかつ基本ベクトルの大きさが1で互いに直交している（直交座標系である）ことが分かる。同様に、二次元斜交座標系 $(x,y)$ において基本ベクトルを $\bm{e}_x,\bm{e}_y$ として
 
 $$
-    \mathrm{d}\bm{s}=
-    \sum_{i=1}^N
-    \left(
-        \frac{\partial\bm{s}}{\partial x_i}
-    \right)
-    \mathrm{d}x_i=
-    \sum_{j=1}^N
-    \left(
-        \frac{\partial\bm{s}}{\partial x'_j}
-    \right)
-    \mathrm{d}x'_j
+    \bm{s}=x\bm{e}_x+y\bm{e}_y、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}
 $$
 
-というようにしたときに、偏微分の部分について
-
-$$
-    x_i=x_i(x'_1,x'_2,\cdots,x'_N)、
-    x'_j=x'_j(x_1,x_2,\cdots,x_N)
-$$
-
-であることから、以下のような関係になっていることが分かる。
-
-$$
-    \frac{\partial\bm{s}}{\partial x_i}=
-    \sum_{k=1}^N
-    \left(
-        \frac{\partial\bm{s}}{\partial x'_k}
-    \right)
-    \frac{\partial x'_k}{\partial x_i}、
-    \frac{\partial\bm{s}}{\partial x'_j}=
-    \sum_{l=1}^N
-    \left(
-        \frac{\partial\bm{s}}{\partial x_l}
-    \right)
-    \frac{\partial x_l}{\partial x'_j}
-$$
-
-ここで、偏微分について
-
-$$
-    \bm{u}_i\equiv
-    \frac{\partial\bm{s}}{\partial x_i}、
-    \bm{u}'_j\equiv
-    \frac{\partial\bm{s}}{\partial x'_j}
-$$
-
-というように置くと、先ほどの式は
-
-$$
-    \bm{u}_i=
-    \sum_{k=1}^N
-    \frac{\partial x'_k}{\partial x_i}
-    \bm{u}'_k、
-    \bm{u}'_j=
-    \sum_{l=1}^N
-    \frac{\partial x_l}{\partial x'_j}
-    \bm{u}_l
-$$
-
-というようになるが、ここで仮に $\bm{s}$ が基本ベクトルにより
-
-$$
-    \bm{s}=
-    \sum_{i=1}^N x_i\bm{e}_i=
-    \sum_{j=1}^N x'_j\bm{e}'_j
-$$
-
-というように書けるものとすると、
-
-$$
-    \bm{u}_i=\bm{e}_i、
-    \bm{u}'_j=\bm{e}'_j
-$$
-
-というように基本ベクトルと一致し、先ほどの関係式は基本ベクトルの変換式になっていることが分かる。
-
-$$
-    \bm{e}_i=
-    \sum_{k=1}^N
-    \frac{\partial x'_k}{\partial x_i}
-    \bm{e}'_k、
-    \bm{e}'_j=
-    \sum_{l=1}^N
-    \frac{\partial x_l}{\partial x'_j}
-    \bm{e}_l
-$$
-
-このことから、先ほどの式は各地点での基底ベクトルの変換式になっていると考えられる。また、基底ベクトルを用いると最初の式も
-
-$$
-    \mathrm{d}\bm{s}=
-    \sum_{i=1}^N
-    \mathrm{d}x_i\bm{u}_i=
-    \sum_{j=1}^N
-    \mathrm{d}x'_j\bm{u}'_i
-$$
-
-というようになるが、ここで基底ベクトル同士の関係（座標系がどのような形になっているか）は内積をとった
-
-$$
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    \sum_{i=1}^N
-    \sum_{k=1}^N
-    \left(
-        \bm{u}_i\cdot\bm{u}_k
-    \right)
-    \mathrm{d}x_i\mathrm{d}x_k=
-    \sum_{j=1}^N
-    \sum_{l=1}^N
-    \left(
-        \bm{u}'_j\cdot\bm{u}'_l
-    \right)
-    \mathrm{d}x'_j\mathrm{d}x'_l
-$$
-
-の形が求まることで分かるので、ここでの基底ベクトル同士の内積を
-
-$$
-    g_ik=\bm{u}_i\cdot\bm{u}_k
-$$
-
-というように置くと、この形が求まることで座標系の形および座標変換前後の変位も求められることになる。この $g_ik$ がRiemann計量と呼ばれ、Riemann幾何学において重要な量となっている。
+というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。
