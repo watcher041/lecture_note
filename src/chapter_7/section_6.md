@@ -404,4 +404,52 @@ $$
     \frac{a}{c^2}w'
 $$
 
-というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。
+というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。また、各座標系ごとで基底ベクトル同士の内積は微小変位の内積により表現できる。
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}w\bm{u}_w
+$$
+$$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\bm{u}_x\cdot\bm{u}_x)
+    \mathrm{d}x\mathrm{d}x+
+    (\bm{u}_x\cdot\bm{u}_w)
+    \mathrm{d}x\mathrm{d}w+
+    (\bm{u}_w\cdot\bm{u}_x)
+    \mathrm{d}w\mathrm{d}x+
+    (\bm{u}_w\cdot\bm{u}_w)
+    \mathrm{d}w\mathrm{d}w
+$$
+
+変換後についても以下の通りになる。
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}{x'}\bm{u}_{x'}+
+    \mathrm{d}{w'}\bm{u}_{w'}
+$$
+$$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\bm{u}_{x'}\cdot\bm{u}_{x'})
+    \mathrm{d}{x'}\mathrm{d}{x'}+
+    (\bm{u}_{x'}\cdot\bm{u}_{w'})
+    \mathrm{d}{x'}\mathrm{d}{w'}+
+    (\bm{u}_{w'}\cdot\bm{u}_{x'})
+    \mathrm{d}{w'}\mathrm{d}{x'}+
+    (\bm{u}_{w'}\cdot\bm{u}_{w'})
+    \mathrm{d}{w'}\mathrm{d}{w'}
+$$
+
+ここで、これらの表記についてさらに簡略化するために、$w=x_0,x=x_1$ として以下のようにしてみる。
+
+$$
+    \mathrm{d}\bm{s}=
+    \sum_{i=0}^1
+    \mathrm{d}x_i\bm{u}_i、
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    \sum_{j=0}^1
+    \sum_{k=0}^1
+    (\bm{u}_j\cdot\bm{u}_k)
+    \mathrm{d}x_j\mathrm{d}x_k
+$$
