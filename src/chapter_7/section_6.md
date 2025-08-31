@@ -127,7 +127,7 @@ $$
     \frac{1}{\sqrt{2}}
 $$
 
-というように、内積に関して斜交座標系のものになっていることが分かる。このように、座標変換には変換前の内積の情報と変換式が必要となることが予想される。そのため、先ほどの定加速度系での変換について考えてみると、変換前の直交座標系において
+というように、内積に関して斜交座標系のものになっていることが分かる。このように、変換式を用いることで座標変換されるとともに変換前後の座標系の状態は基底ベクトルと内積によって確認できるものと予想される。そのため、先ほどの定加速度系での変換について考えてみると、変換前の直交座標系において
 
 $$
     \bm{s}=x\bm{e}_x+w\bm{e}_w、
@@ -404,52 +404,56 @@ $$
     \frac{a}{c^2}w'
 $$
 
-というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。また、各座標系ごとで基底ベクトル同士の内積は微小変位の内積により表現できる。
+というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。しかし、これだと一度基底ベクトルの関係を求めないといけないため、実際には
+
 $$
     \mathrm{d}\bm{s}=
     \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w
-$$
-$$
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    (\bm{u}_x\cdot\bm{u}_x)
-    \mathrm{d}x\mathrm{d}x+
-    (\bm{u}_x\cdot\bm{u}_w)
-    \mathrm{d}x\mathrm{d}w+
-    (\bm{u}_w\cdot\bm{u}_x)
-    \mathrm{d}w\mathrm{d}x+
-    (\bm{u}_w\cdot\bm{u}_w)
-    \mathrm{d}w\mathrm{d}w
-$$
-
-変換後についても以下の通りになる。
-
-$$
-    \mathrm{d}\bm{s}=
+    \mathrm{d}w\bm{u}_w=
     \mathrm{d}{x'}\bm{u}_{x'}+
     \mathrm{d}{w'}\bm{u}_{w'}
 $$
-$$
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    (\bm{u}_{x'}\cdot\bm{u}_{x'})
-    \mathrm{d}{x'}\mathrm{d}{x'}+
-    (\bm{u}_{x'}\cdot\bm{u}_{w'})
-    \mathrm{d}{x'}\mathrm{d}{w'}+
-    (\bm{u}_{w'}\cdot\bm{u}_{x'})
-    \mathrm{d}{w'}\mathrm{d}{x'}+
-    (\bm{u}_{w'}\cdot\bm{u}_{w'})
-    \mathrm{d}{w'}\mathrm{d}{w'}
-$$
 
-ここで、これらの表記についてさらに簡略化するために、$w=x_0,x=x_1$ として以下のようにしてみる。
+において、この内積を求めると
 
 $$
-    \mathrm{d}\bm{s}=
-    \sum_{i=0}^1
-    \mathrm{d}x_i\bm{u}_i、
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    \sum_{j=0}^1
-    \sum_{k=0}^1
-    (\bm{u}_j\cdot\bm{u}_k)
-    \mathrm{d}x_j\mathrm{d}x_k
+    \begin{aligned}
+        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
+        &=
+        (\bm{u}_x\cdot\bm{u}_x)
+        \mathrm{d}x\mathrm{d}x+
+        (\bm{u}_x\cdot\bm{u}_w)
+        \mathrm{d}x\mathrm{d}w+
+        (\bm{u}_w\cdot\bm{u}_x)
+        \mathrm{d}w\mathrm{d}x+
+        (\bm{u}_w\cdot\bm{u}_w)
+        \mathrm{d}w\mathrm{d}w\\
+        &=
+        (\bm{u}_{x'}\cdot\bm{u}_{x'})
+        \mathrm{d}{x'}\mathrm{d}{x'}+
+        (\bm{u}_{x'}\cdot\bm{u}_{w'})
+        \mathrm{d}{x'}\mathrm{d}{w'}+
+        (\bm{u}_{w'}\cdot\bm{u}_{x'})
+        \mathrm{d}{w'}\mathrm{d}{x'}+
+        (\bm{u}_{w'}\cdot\bm{u}_{w'})
+        \mathrm{d}{w'}\mathrm{d}{w'}
+    \end{aligned}
 $$
+
+であるから、これに変換前の内積の関係と変換式を代入すると
+
+
+$$
+        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+        \mathrm{d}x\mathrm{d}x+
+        \mathrm{d}w\mathrm{d}w=
+        \mathrm{d}{x'}\mathrm{d}{x'}+
+        2\frac{a}{c^2}w'
+        \mathrm{d}{x'}\mathrm{d}{w'}+
+        \left(
+            1+\frac{a^2}{c^4}w'^2
+        \right)
+        \mathrm{d}{w'}\mathrm{d}{w'}
+$$
+
+であるから比較することで、先ほどの内積の関係が得られる。
