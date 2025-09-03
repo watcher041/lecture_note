@@ -402,7 +402,8 @@ $$
     \frac{a}{c^2}w'
 $$
 
-というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。しかし、これだと一度基底ベクトルの関係を求めないといけないため、実際には
+というように、 $w'$ については $w'=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。あるいは、微小変位ベクトルを
+
 
 $$
     \mathrm{d}\bm{s}=
@@ -412,7 +413,7 @@ $$
     \mathrm{d}{w'}\bm{u}_{w'}
 $$
 
-において、この内積を求めると
+として、この内積を求めると
 
 $$
     \begin{aligned}
@@ -456,10 +457,38 @@ $$
 
 であるから比較することで、先ほどの内積の関係が得られる。
 
-以上のことを一般的な表記にすると、
-
+ここまでのことを踏まえて、一般的に座標系 $(x_1,x_2,\cdots,x_N)$ から座標系 $(x'_1,x'_2,\cdots,x'_{N'})$ に変換することを考えると、その間ではベクトル $\bm{s}$ の微小変位が基底ベクトル $\bm{u}$
+ により
 $$
     \mathrm{d}\bm{s}=
-    \sum_{\mu=1}^{f}
-    \mathrm{d}x^{\mu}\bm{u}^{\mu}
+    \sum_{i=1}^{N}
+    \mathrm{d}x_{i}\bm{u}_i=
+    \sum_{j=1}^{N'}
+    \mathrm{d}x'_{j}\bm{u}'_j、
+    \bm{u}_i=
+    \sum_{k=1}^{N'}
+    \left(
+        \frac{\partial x'_{k}}{\partial x_{i}}
+    \right)
+    \bm{u}'_k、
+    \bm{u}'_j=
+    \sum_{l=1}^{N}
+    \left(
+        \frac{\partial x_{l}}{\partial x'_{j}}
+    \right)
+    \bm{u}_l
 $$
+$$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\mathrm{d}\bm{s})^2=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    (\bm{u}_i\cdot\bm{u}_j)
+    \mathrm{d}x_{i}\mathrm{d}x_{j}=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    (\bm{u}'_i\cdot\bm{u}'_j)
+    \mathrm{d}x'_{i}\mathrm{d}x'_{j}
+$$
+
+という関係が成り立つことになる。
