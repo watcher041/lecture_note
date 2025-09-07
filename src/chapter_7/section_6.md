@@ -485,10 +485,91 @@ $$
     \sum_{j=1}^{N}
     (\bm{u}_i\cdot\bm{u}_j)
     \mathrm{d}x_{i}\mathrm{d}x_{j}=
-    \sum_{i=1}^{N}
-    \sum_{j=1}^{N}
+    \sum_{i=1}^{N'}
+    \sum_{j=1}^{N'}
     (\bm{u}'_i\cdot\bm{u}'_j)
     \mathrm{d}x'_{i}\mathrm{d}x'_{j}
 $$
 
-という関係が成り立つことになる。
+という関係が成り立つことになる。ここで、内積の式にまず基底ベクトルの関係式を入れてみると、
+
+$$
+    (\mathrm{d}\bm{s})^2=
+    \sum_{k=1}^{N'}
+    \sum_{l=1}^{N'}
+    (\bm{u}'_k\cdot\bm{u}'_l)
+    \left[
+        \sum_{i=1}^{N}
+        \sum_{j=1}^{N}
+        \left(
+            \frac{\partial x'_{k}}{\partial x_{i}}
+        \right)
+        \left(
+            \frac{\partial x'_{l}}{\partial x_{j}}
+        \right)
+        \mathrm{d}x_{i}\mathrm{d}x_{j}
+    \right]
+$$
+
+であり、比較すると以下の関係になっていることが分かる。
+
+$$
+    \mathrm{d}x'_{i}\mathrm{d}x'_{j}=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    \left(
+        \frac{\partial x'_{k}}{\partial x_{i}}
+    \right)
+    \left(
+        \frac{\partial x'_{l}}{\partial x_{j}}
+    \right)
+    \mathrm{d}x_{i}\mathrm{d}x_{j}
+$$
+
+一方で変換式の微小変化にて
+
+$$
+    \mathrm{d}x_{i}=
+    \sum_{k=1}^{N'}
+    \left(
+        \frac{\partial x_{i}}{\partial x'_{k}}
+    \right)
+    \mathrm{d}x'_{k}
+$$
+
+となることから、以下の関係も成り立つ。
+
+$$
+    (\mathrm{d}\bm{s})^2=
+    \sum_{k=1}^{N'}
+    \sum_{l=1}^{N'}
+    \left[
+        \sum_{i=1}^{N}
+        \sum_{j=1}^{N}
+        \left(
+            \frac{\partial x_{i}}{\partial x'_{k}}
+        \right)
+        \left(
+            \frac{\partial x_{j}}{\partial x'_{l}}
+        \right)
+        (\bm{u}_i\cdot\bm{u}_j)
+    \right]
+    \mathrm{d}x'_{k}\mathrm{d}x'_{l}
+$$
+
+そのため、比較すると以下の式が成り立つ。
+
+$$
+    (\bm{u}'_k\cdot\bm{u}'_l)=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    \left(
+        \frac{\partial x_{i}}{\partial x'_{k}}
+    \right)
+    \left(
+        \frac{\partial x_{j}}{\partial x'_{l}}
+    \right)
+    (\bm{u}_i\cdot\bm{u}_j)
+$$
+
+このように、内積の変換時にはベクトル成分によるものと基底ベクトルによるものの二通りがあるわけだが、これらの変換時に偏微分の分子と分母が逆になっていることが分かる。このことについて、次の章で見ていくことにする。
