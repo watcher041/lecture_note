@@ -195,74 +195,116 @@ $$
     \mathrm{d}y\bm{u}_y
 $$
 
-
-ここで、$\bm{u}$ に関して変数に関しても
+また、座標系間で変数が
 
 $$
     X=X(x,y)、Y=Y(x,y)
-$$
-
-というように変換後の関数として書けることから、
-
-$$
-    \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}=
-    \frac{\partial x}{\partial X}
-    \frac{\partial \bm{s}}{\partial x}+
-    \frac{\partial y}{\partial X}
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial x}{\partial X}
-    \bm{u}_x+
-    \frac{\partial y}{\partial X}
-    \bm{u}_y
-$$
-$$
-    \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}=
-    \frac{\partial x}{\partial Y}
-    \frac{\partial \bm{s}}{\partial x}+
-    \frac{\partial y}{\partial Y}
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial \bm{s}}{\partial Y}
-    \bm{u}_x+
-    \frac{\partial y}{\partial Y}
-    \bm{u}_y
-$$
-
-となり、逆に変換前の変数で
-
-$$
+    \leftrightarrow
     x=x(X,Y)、y=y(X,Y)
 $$
 
-とも書けるから、以下の通りになる。
+というように変換されているため、微小変化が
 
 $$
-    \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
-    \frac{\partial X}{\partial x}
-    \frac{\partial \bm{s}}{\partial X}+
-    \frac{\partial Y}{\partial x}
-    \frac{\partial \bm{s}}{\partial Y}=
-    \frac{\partial X}{\partial x}
-    \bm{u}_X+
-    \frac{\partial Y}{\partial x}
-    \bm{u}_Y
+    \mathrm{d}X=
+    \left(
+        \frac{\partial X}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial X}{\partial y}
+    \right)
+    \mathrm{d}y、
+    \mathrm{d}Y=
+    \left(
+        \frac{\partial Y}{\partial x}
+    \right)
+    \mathrm{d}x+
+    \left(
+        \frac{\partial Y}{\partial y}
+    \right)
+    \mathrm{d}y
 $$
 $$
-    \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial X}{\partial y}
-    \frac{\partial \bm{s}}{\partial x}+
-    \frac{\partial Y}{\partial y}
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial X}{\partial y}
-    \bm{u}_X+
-    \frac{\partial Y}{\partial y}
-    \bm{u}_Y
+    \mathrm{d}x=
+    \left(
+        \frac{\partial x}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial x}{\partial Y}
+    \right)
+    \mathrm{d}Y、
+    \mathrm{d}y=
+    \left(
+        \frac{\partial y}{\partial X}
+    \right)
+    \mathrm{d}X+
+    \left(
+        \frac{\partial y}{\partial Y}
+    \right)
+    \mathrm{d}Y
 $$
 
-ここまでの結果を整理すると、
+であるため、$\mathrm{d}\bm{s}$ の関係式に代入すると
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}X\bm{u}_X+
+    \mathrm{d}Y\bm{u}_Y=
+    \left[
+        \left(
+            \frac{\partial x}{\partial X}
+        \right)
+        \bm{u}_x+
+        \left(
+            \frac{\partial y}{\partial X}
+        \right)
+        \bm{u}_y
+    \right]
+    \mathrm{d}X+
+    \left[
+        \left(
+            \frac{\partial x}{\partial Y}
+        \right)
+        \bm{u}_x+
+        \left(
+            \frac{\partial y}{\partial Y}
+        \right)
+        \bm{u}_y
+    \right]
+    \mathrm{d}Y
+$$
+$$
+    \mathrm{d}\bm{s}=
+    \left[
+        \left(
+            \frac{\partial X}{\partial x}
+        \right)
+        \bm{u}_X+
+        \left(
+            \frac{\partial Y}{\partial x}
+        \right)
+        \bm{u}_Y
+    \right]
+    \mathrm{d}x+
+    \left[
+        \left(
+            \frac{\partial X}{\partial y}
+        \right)
+        \bm{u}_X+
+        \left(
+            \frac{\partial Y}{\partial y}
+        \right)
+        \bm{u}_Y
+    \right]
+    \mathrm{d}y=
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}y\bm{u}_y
+$$
+
+
+となるため、比較すると以下の関係式が得られる。
 
 $$
     \bm{u}_X=
@@ -289,7 +331,7 @@ $$
     \bm{u}_Y
 $$
 
-というように、基底ベクトルの変換になっていることが分かる。例として、直交座標系から斜交座標系に変換する場合だと
+これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
 
 $$
     X = x+\frac{1}{\sqrt{2}}y、
@@ -491,7 +533,26 @@ $$
     \mathrm{d}x'_{i}\mathrm{d}x'_{j}
 $$
 
-という関係が成り立つことになる。ここで、内積の式にまず基底ベクトルの関係式を入れてみると、
+という関係が成り立つことになる。これには、もう一つの見方がありベクトル成分の微小変位に対して
+
+$$
+    \mathrm{d}x_{i}=
+    \sum_{k=1}^{N'}
+    \left(
+        \frac{\partial x_{i}}{\partial x'_{k}}
+    \right)
+    \mathrm{d}x'_{k}、
+    \mathrm{d}x'_{i}=
+    \sum_{k=1}^{N}
+    \left(
+        \frac{\partial x'_{i}}{\partial x_{k}}
+    \right)
+    \mathrm{d}x
+    _{k}
+$$
+
+
+ここで、内積の式にまず基底ベクトルの関係式を入れてみると、
 
 $$
     (\mathrm{d}\bm{s})^2=
@@ -528,14 +589,7 @@ $$
 
 一方で変換式の微小変化にて
 
-$$
-    \mathrm{d}x_{i}=
-    \sum_{k=1}^{N'}
-    \left(
-        \frac{\partial x_{i}}{\partial x'_{k}}
-    \right)
-    \mathrm{d}x'_{k}
-$$
+
 
 となることから、以下の関係も成り立つ。
 
@@ -572,4 +626,4 @@ $$
     (\bm{u}_i\cdot\bm{u}_j)
 $$
 
-このように、内積の変換時にはベクトル成分によるものと基底ベクトルによるものの二通りがあるわけだが、これらの変換時に偏微分の分子と分母が逆になっていることが分かる。このことについて、次の章で見ていくことにする。
+このように、内積の変換時にはベクトル成分によるものと基底ベクトルによるものの二通りがあるわけだが、これらの変換時に偏微分の分子と分母が逆になっていることが分かる。
