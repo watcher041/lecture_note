@@ -203,7 +203,7 @@ $$
     x=x(X,Y)、y=y(X,Y)
 $$
 
-というように変換されているため、微小変化が
+というように変換式を満たしていることから、微小変化が
 
 $$
     \mathrm{d}X=
@@ -507,18 +507,7 @@ $$
     \mathrm{d}x_{i}\bm{u}_i=
     \sum_{j=1}^{N'}
     \mathrm{d}x'_{j}\bm{u}'_j、
-    \bm{u}_i=
-    \sum_{k=1}^{N'}
-    \left(
-        \frac{\partial x'_{k}}{\partial x_{i}}
-    \right)
-    \bm{u}'_k、
-    \bm{u}'_j=
-    \sum_{l=1}^{N}
-    \left(
-        \frac{\partial x_{l}}{\partial x'_{j}}
-    \right)
-    \bm{u}_l
+    
 $$
 $$
     \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
@@ -533,7 +522,8 @@ $$
     \mathrm{d}x'_{i}\mathrm{d}x'_{j}
 $$
 
-という関係が成り立つことになる。これには、もう一つの見方がありベクトル成分の微小変位に対して
+
+という関係が成り立つことになる。ただ、ここでの変換の仕方というのはベクトル成分と基底ベクトルの二通りあり、
 
 $$
     \mathrm{d}x_{i}=
@@ -547,83 +537,46 @@ $$
     \left(
         \frac{\partial x'_{i}}{\partial x_{k}}
     \right)
-    \mathrm{d}x
-    _{k}
+    \mathrm{d}x_{k}
 $$
-
-
-ここで、内積の式にまず基底ベクトルの関係式を入れてみると、
-
 $$
-    (\mathrm{d}\bm{s})^2=
+    \bm{u}_i=
     \sum_{k=1}^{N'}
-    \sum_{l=1}^{N'}
-    (\bm{u}'_k\cdot\bm{u}'_l)
-    \left[
-        \sum_{i=1}^{N}
-        \sum_{j=1}^{N}
-        \left(
-            \frac{\partial x'_{k}}{\partial x_{i}}
-        \right)
-        \left(
-            \frac{\partial x'_{l}}{\partial x_{j}}
-        \right)
-        \mathrm{d}x_{i}\mathrm{d}x_{j}
-    \right]
-$$
-
-であり、比較すると以下の関係になっていることが分かる。
-
-$$
-    \mathrm{d}x'_{i}\mathrm{d}x'_{j}=
-    \sum_{i=1}^{N}
-    \sum_{j=1}^{N}
     \left(
         \frac{\partial x'_{k}}{\partial x_{i}}
     \right)
+    \bm{u}'_k、
+    \bm{u}'_j=
+    \sum_{l=1}^{N}
     \left(
-        \frac{\partial x'_{l}}{\partial x_{j}}
+        \frac{\partial x_{l}}{\partial x'_{j}}
     \right)
-    \mathrm{d}x_{i}\mathrm{d}x_{j}
+    \bm{u}_l
 $$
 
-一方で変換式の微小変化にて
-
-
-
-となることから、以下の関係も成り立つ。
+というようになっているが、よく見ると係数の偏微分が分母と分子がそれぞれ逆になっていることが見て取れる。そこで試しに
 
 $$
-    (\mathrm{d}\bm{s})^2=
-    \sum_{k=1}^{N'}
-    \sum_{l=1}^{N'}
-    \left[
-        \sum_{i=1}^{N}
-        \sum_{j=1}^{N}
-        \left(
-            \frac{\partial x_{i}}{\partial x'_{k}}
-        \right)
-        \left(
-            \frac{\partial x_{j}}{\partial x'_{l}}
-        \right)
-        (\bm{u}_i\cdot\bm{u}_j)
-    \right]
-    \mathrm{d}x'_{k}\mathrm{d}x'_{l}
-$$
-
-そのため、比較すると以下の式が成り立つ。
-
-$$
-    (\bm{u}'_k\cdot\bm{u}'_l)=
-    \sum_{i=1}^{N}
-    \sum_{j=1}^{N}
+    \mathrm{d}x_{i,k}=
     \left(
         \frac{\partial x_{i}}{\partial x'_{k}}
     \right)
+    \mathrm{d}x'_{k}、
+    \bm{u}_{i,k}=
     \left(
-        \frac{\partial x_{j}}{\partial x'_{l}}
+        \frac{\partial x'_{k}}{\partial x_{i}}
     \right)
-    (\bm{u}_i\cdot\bm{u}_j)
+    \bm{u}'_k、
+    \mathrm{d}x'_{i,k}=
+    \left(
+        \frac{\partial x'_{i}}{\partial x_{k}}
+    \right)
+    \mathrm{d}x_{k}、
+    \bm{u}'_{j,l}=
+    \left(
+        \frac{\partial x_{l}}{\partial x'_{j}}
+    \right)
+    \bm{u}_l
 $$
 
-このように、内積の変換時にはベクトル成分によるものと基底ベクトルによるものの二通りがあるわけだが、これらの変換時に偏微分の分子と分母が逆になっていることが分かる。
+というようにして、ベクトル成分と基底ベクトルの変換にどういう違いがあるか見てみる。
