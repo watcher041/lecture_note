@@ -33,4 +33,53 @@ $$
     \right)
 $$
 
-というように表記される。
+というように表記される。同じように、微小ベクトル $\mathrm{d}\bm{s}$ についても以下のようになる。
+
+$$
+    \mathrm{d}\bm{s}=
+    \sum_{i=1}^{N}
+    \mathrm{d}x^{i}\bm{u}_i=
+    \sum_{j=1}^{N'}
+    \mathrm{d}x'^{j}\bm{u}'_j、
+    
+$$
+$$
+    (\mathrm{d}\bm{s})^2=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    (\bm{u}_i\cdot\bm{u}_j)
+    \mathrm{d}x^{i}\mathrm{d}x^{j}=
+    \sum_{i=1}^{N'}
+    \sum_{j=1}^{N'}
+    (\bm{u}'_i\cdot\bm{u}'_j)
+    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+$$
+
+ここまでで上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることから、よく省略（**Einsteinの縮約記法**）される。
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x^{i}\bm{u}_i=
+    \mathrm{d}x'^{j}\bm{u}'_j、
+    (\mathrm{d}\bm{s})^2=
+    (\bm{u}_i\cdot\bm{u}_j)
+    \mathrm{d}x^{i}\mathrm{d}x^{j}=
+    (\bm{u}'_i\cdot\bm{u}'_j)
+    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+$$
+
+また、基底ベクトル同士の内積というのは座標系の各地点の形状を示す重要な量となっており、
+
+$$
+    g_{ij}=\bm{u}_i\cdot\bm{u}_j
+$$
+
+というように、一般に**Riemann計量**と呼ばれている。そのため、内積のほうも以下のように表記される。
+
+$$
+    (\mathrm{d}\bm{s})^2=
+    g_{ij}
+    \mathrm{d}x^{i}\mathrm{d}x^{j}=
+    g'_{ij}
+    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+$$
