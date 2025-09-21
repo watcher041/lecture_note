@@ -331,6 +331,57 @@ $$
     \bm{u}_Y
 $$
 
+この関係式が正しいかは、次のように展開してみることで確認できる。
+
+$$
+    \bm{u}_X=
+    \frac{\partial \bm{s}}{\partial X}=
+    \frac{\partial x}{\partial X}
+    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial y}{\partial X}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial x}{\partial X}
+    \bm{u}_x+
+    \frac{\partial y}{\partial X}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_Y=
+    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial x}{\partial Y}
+    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial y}{\partial Y}
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial x}{\partial Y}
+    \bm{u}_x+
+    \frac{\partial y}{\partial Y}
+    \bm{u}_y
+$$
+$$
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
+    \frac{\partial X}{\partial x}
+    \frac{\partial \bm{s}}{\partial X}+
+    \frac{\partial Y}{\partial x}
+    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial X}{\partial x}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial x}
+    \bm{u}_Y
+$$
+$$
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial X}{\partial y}
+    \frac{\partial \bm{s}}{\partial X}+
+    \frac{\partial Y}{\partial y}
+    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial X}{\partial y}
+    \bm{u}_X+
+    \frac{\partial Y}{\partial y}
+    \bm{u}_Y
+$$
+
 これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
 
 $$
