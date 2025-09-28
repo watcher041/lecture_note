@@ -17,6 +17,64 @@ $$
     <img width="22%" src="images/rotate_after.png">
 </p>
 
+$$
+    x=r\cos\theta、
+    y=r\sin\theta、
+    r=\sqrt{x^2+y^2}、
+    \theta=\arctan\left(\frac{y}{x}\right)
+$$
+
+このような図になり、偏微分については、
+
+$$
+    \frac{\partial x}{\partial r}=
+    \cos\theta、
+    \frac{\partial x}{\partial \theta}=
+    -r\sin\theta、
+    \frac{\partial y}{\partial r}=
+    \sin\theta、
+    \frac{\partial y}{\partial \theta}=
+    r\cos\theta
+$$
+$$
+    \frac{\partial r}{\partial x}=
+    \cos\theta、
+    \frac{\partial r}{\partial y}=
+    \sin\theta、
+    \frac{\partial \theta}{\partial x}=
+    -\frac{1}{r}\sin\theta、
+    \frac{\partial \theta}{\partial y}=
+    \frac{1}{r}\cos\theta
+$$
+
+となることから、成分ベクトルと基底ベクトルの変換式は以下の通りとなる。
+
+$$
+    \mathrm{d}r=
+    \cos\theta\ \mathrm{d}x+\sin\theta\ \mathrm{d}y、
+    \mathrm{d}\theta=
+    -\frac{1}{r}\sin\theta\ \mathrm{d}x+
+    \frac{1}{r}\cos\theta\ \mathrm{d}y
+$$
+$$
+    \bm{u}_r=
+    \cos\theta\ \bm{u}_x+
+    \sin\theta\ \bm{u}_y、
+    \bm{u}_\theta=
+    -r\sin\theta\ \bm{u}_x+
+    r\cos\theta\ \bm{u}_y
+$$
+
+
+
+
+
+
+
+
+
+
+
 座標回転したときに、それは図にあるようにベクトルのほうは逆回転しているように見える。
 
 
