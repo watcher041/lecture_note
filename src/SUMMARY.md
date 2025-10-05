@@ -44,7 +44,7 @@
   - [相対論的力学](chapter_7/section_3.md)
   - [相対論的電磁気学](chapter_7/section_4.md)
   - [重力と慣性（等価原理）](chapter_7/section_5.md)
-  - [特殊相対論から一般相対論へ](chapter_7/section_6.md)
+  - [座標変換に関する基礎](chapter_7/section_6.md)
   - [共変ベクトルと反変ベクトル](chapter_7/section_7.md)
   - [測地線方程式](chapter_7/section_8.md)
 - [量子力学](chapter_8/section_0.md)

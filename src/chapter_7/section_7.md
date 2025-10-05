@@ -1,6 +1,9 @@
 
 ## 共変ベクトルと反変ベクトル
 
+　座標変換するとき、
+
+
 　ある二つの座標系において座標変換が行われたときに、ベクトルは以下の通り変換の方法によって二通りに分けられる。
 
 $$
@@ -10,77 +13,7 @@ $$
     \end{cases}
 $$
 
-例として、共変ベクトルは基底ベクトル $\bm{u}$ と同じ変換をするものであり、ベクトル成分の微小変位 $\mathrm{d}x$ はそれとは分子と分母が逆の変換を行われるため反変ベクトルとなる。そのため座標系も多くの場合、上付きで $(x^1,x^2,\cdots,x^N)$ というように表記される。しかし、ベクトル成分 $x$ 自体は必ずしも反変ベクトルとならないこともある。例として、座標を回転した場合を考えると、
-
-<p align="center">
-    <img width="40%" src="images/rotate_before.png">　　　
-    <img width="22%" src="images/rotate_after.png">
-</p>
-
-$$
-    x=r\cos\theta、
-    y=r\sin\theta、
-    r=\sqrt{x^2+y^2}、
-    \theta=\arctan\left(\frac{y}{x}\right)
-$$
-
-このような図になり、偏微分については、
-
-$$
-    \frac{\partial x}{\partial r}=
-    \cos\theta、
-    \frac{\partial x}{\partial \theta}=
-    -r\sin\theta、
-    \frac{\partial y}{\partial r}=
-    \sin\theta、
-    \frac{\partial y}{\partial \theta}=
-    r\cos\theta
-$$
-$$
-    \frac{\partial r}{\partial x}=
-    \cos\theta、
-    \frac{\partial r}{\partial y}=
-    \sin\theta、
-    \frac{\partial \theta}{\partial x}=
-    -\frac{1}{r}\sin\theta、
-    \frac{\partial \theta}{\partial y}=
-    \frac{1}{r}\cos\theta
-$$
-
-となることから、成分ベクトルと基底ベクトルの変換式は以下の通りとなる。
-
-$$
-    \mathrm{d}r=
-    \cos\theta\ \mathrm{d}x+\sin\theta\ \mathrm{d}y、
-    \mathrm{d}\theta=
-    -\frac{1}{r}\sin\theta\ \mathrm{d}x+
-    \frac{1}{r}\cos\theta\ \mathrm{d}y
-$$
-$$
-    \bm{u}_r=
-    \cos\theta\ \bm{u}_x+
-    \sin\theta\ \bm{u}_y、
-    \bm{u}_\theta=
-    -r\sin\theta\ \bm{u}_x+
-    r\cos\theta\ \bm{u}_y
-$$
-
-
-
-
-
-
-
-
-
-
-
-座標回転したときに、それは図にあるようにベクトルのほうは逆回転しているように見える。
-
-
-ただ、力についてはポテンシャルの偏微分で書けたりすることもあり、判別できないかもしれない。
-
-　そのことを踏まえて、座標系 $(x^1,x^2,\cdots,x^N)$ から座標系 $(x'^1,x'^2,\cdots,x'^{N'})$ に変換した場合、各ベクトルは
+これらのベクトルは、座標系 $(x^1,x^2,\cdots,x^N)$ から座標系 $(x'^1,x'^2,\cdots,x'^{N'})$ に変換した場合、
 
 $$
     a'_i=
@@ -101,7 +34,7 @@ $$
     \right)
 $$
 
-というように表記される。同じように、微小ベクトル $\mathrm{d}\bm{s}$ についても以下のようになる。
+というような変換式に従う。同じように、微小ベクトル $\mathrm{d}\bm{s}$ についても以下のようになる。
 
 $$
     \mathrm{d}\bm{s}=
@@ -122,6 +55,97 @@ $$
     (\bm{u}'_i\cdot\bm{u}'_j)
     \mathrm{d}x'^{i}\mathrm{d}x'^{j}
 $$
+
+
+
+
+
+
+例として、共変ベクトルは基底ベクトル $\bm{u}$ と同じ変換をするものであり、ベクトル成分の微小変位 $\mathrm{d}x$ はそれとは分子と分母が逆の変換を行われるため反変ベクトルとなる。そのため座標系も多くの場合、上付きで $(x^1,x^2,\cdots,x^N)$ というように表記される。しかし、ベクトル成分 $x$ 自体は必ずしも反変ベクトルとならないこともある。例として、座標を $\alpha$ だけ回転した場合を考える。
+
+<p align="center">
+    <img width="40%" src="images/rotate_before.png">　　　
+    <img width="22%" src="images/rotate_after.png">
+</p>
+
+このとき、各座標系での関係式は
+
+$$
+    x=r\cos\theta、
+    y=r\sin\theta
+$$
+
+を利用することで以下のように求められる。
+
+$$
+    x'=r\cos(\theta+\alpha)=
+    r\cos\theta\cos\alpha-r\sin\theta\sin\alpha=
+    x\cos\alpha-y\sin\alpha
+$$
+$$
+    y'=r\sin(\theta+\alpha)=
+    r\sin\theta\cos\alpha+r\cos\theta\sin\alpha=
+    y\cos\alpha+x\sin\alpha
+$$
+$$
+    x=x'\cos\alpha+y'\sin\alpha、
+    y=y'\cos\alpha-x'\sin\alpha
+$$
+
+このことから、偏微分については
+
+$$
+    \frac{\partial x'}{\partial x}=
+    \cos\alpha、
+    \frac{\partial x'}{\partial y}=
+    -\sin\alpha、
+    \frac{\partial y'}{\partial x}=
+    \sin\alpha、
+    \frac{\partial y'}{\partial y}=
+    \cos\alpha
+$$
+$$
+    \frac{\partial x}{\partial x'}=
+    \cos\alpha、
+    \frac{\partial x}{\partial y'}=
+    \sin\alpha、
+    \frac{\partial y}{\partial x'}=
+    -\sin\alpha、
+    \frac{\partial y}{\partial y'}=
+    \cos\alpha
+$$
+
+となることから、成分ベクトルと基底ベクトルの変換式は以下の通りとなる。
+
+$$
+    \mathrm{d}x'=
+    \cos\alpha\ \mathrm{d}x-\sin\alpha\ \mathrm{d}y、
+    \mathrm{d}y'=
+    \sin\alpha\ \mathrm{d}x+\cos\alpha\ \mathrm{d}y
+$$
+$$
+    \bm{u}_x'=
+    \cos\alpha\ \bm{u}_x-\sin\alpha\ \bm{u}_y、
+    \bm{u}_y'=
+    \sin\alpha\ \bm{u}_x+\cos\alpha\ \bm{u}_y
+$$
+
+この場合の変換はどちらも同じ形になることが分かる（共変と反変ベクトルの見分けがつかない）。一方で、斜交座標の場合だと
+
+
+
+
+
+
+
+
+
+座標回転したときに、それは図にあるようにベクトルのほうは逆回転しているように見える。
+
+
+ただ、力についてはポテンシャルの偏微分で書けたりすることもあり、判別できないかもしれない。
+
+　
 
 ここまでで上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることから、よく省略（**Einsteinの縮約記法**）される。
 
