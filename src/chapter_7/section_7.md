@@ -1,7 +1,64 @@
 
 ## 共変ベクトルと反変ベクトル
 
-　座標変換するとき、
+
+ここまでのことを踏まえて、一般的に座標系 $(x_1,x_2,\cdots,x_N)$ から座標系 $(x'_1,x'_2,\cdots,x'_{N'})$ に変換することを考えると、その間ではベクトル $\bm{s}$ の微小変位が基底ベクトル $\bm{u}$
+ により
+ 
+$$
+    \mathrm{d}\bm{s}=
+    \sum_{i=1}^{N}
+    \mathrm{d}x_{i}\bm{u}_i=
+    \sum_{j=1}^{N'}
+    \mathrm{d}x'_{j}\bm{u}'_j、
+    
+$$
+$$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\mathrm{d}\bm{s})^2=
+    \sum_{i=1}^{N}
+    \sum_{j=1}^{N}
+    (\bm{u}_i\cdot\bm{u}_j)
+    \mathrm{d}x_{i}\mathrm{d}x_{j}=
+    \sum_{i=1}^{N'}
+    \sum_{j=1}^{N'}
+    (\bm{u}'_i\cdot\bm{u}'_j)
+    \mathrm{d}x'_{i}\mathrm{d}x'_{j}
+$$
+
+
+という関係が成り立つことになる。ただ、ここでの変換の仕方というのはベクトル成分と基底ベクトルの二通りあり、
+
+$$
+    \mathrm{d}x_{i}=
+    \sum_{k=1}^{N'}
+    \left(
+        \frac{\partial x_{i}}{\partial x'_{k}}
+    \right)
+    \mathrm{d}x'_{k}、
+    \mathrm{d}x'_{i}=
+    \sum_{k=1}^{N}
+    \left(
+        \frac{\partial x'_{i}}{\partial x_{k}}
+    \right)
+    \mathrm{d}x_{k}
+$$
+$$
+    \bm{u}_i=
+    \sum_{k=1}^{N'}
+    \left(
+        \frac{\partial x'_{k}}{\partial x_{i}}
+    \right)
+    \bm{u}'_k、
+    \bm{u}'_j=
+    \sum_{l=1}^{N}
+    \left(
+        \frac{\partial x_{l}}{\partial x'_{j}}
+    \right)
+    \bm{u}_l
+$$
+
+というようになっているが、よく見ると係数の偏微分が分母と分子がそれぞれ逆になっていることが見て取れる。座標変換による変換というのは、この二つに大別されており、基底ベクトルと同じ変換を受けるベクトルのことを**共変ベクトル**、それとは逆の変換をするベクトルを**反変ベクトル**というように呼ぶ。次回では具体的に、これらのベクトルの観点からどのように座標変換が記述されるか見ていくことにする。
 
 
 　ある二つの座標系において座標変換が行われたときに、ベクトルは以下の通り変換の方法によって二通りに分けられる。
