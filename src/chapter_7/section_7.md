@@ -91,7 +91,7 @@ $$
     \end{cases}
 $$
 
-と置くことで以下のような形になる。
+と置くことで以下のような形になる（ここで $\mathrm{d}x^1$ は反変ベクトルであるが、$x^1$自体は必ずしも反変ベクトルにならないことに注意）。
 
 $$
     \mathrm{d}x'^1=
@@ -106,59 +106,25 @@ $$
     -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
-これらのベクトルは、座標系 $(x^1,x^2,\cdots,x^N)$ から座標系 $(x'^1,x'^2,\cdots,x'^{N'})$ に変換した場合、
-
-$$
-    a'_i=
-    \sum_{j=1}^N
-    \alpha_{i}^{j}
-    a_j、
-    \alpha_{i}^{j}=
-    \left(
-        \frac{\partial x'^j}{\partial x^i}
-    \right)、
-    b'^i=
-    \sum_{j=1}^N
-    \beta_{j}^{i}
-    b^j、
-    \beta_{i}^{j}=
-    \left(
-        \frac{\partial x^i}{\partial x'^j}
-    \right)
-$$
-
-というような変換式に従う。同じように、微小ベクトル $\mathrm{d}\bm{s}$ についても以下のようになる。
+この表記を用いると、ベクトル $\bm{s}$ に関する式も
 
 $$
     \mathrm{d}\bm{s}=
-    \sum_{i=1}^{N}
-    \mathrm{d}x^{i}\bm{u}_i=
-    \sum_{j=1}^{N'}
-    \mathrm{d}x'^{j}\bm{u}'_j、
-    
+    \sum_{\mu=1}^2\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu=1}^2\mathrm{d}x'^\mu\bm{u}'_\mu
 $$
 $$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
     (\mathrm{d}\bm{s})^2=
-    \sum_{i=1}^{N}
-    \sum_{j=1}^{N}
-    (\bm{u}_i\cdot\bm{u}_j)
-    \mathrm{d}x^{i}\mathrm{d}x^{j}=
-    \sum_{i=1}^{N'}
-    \sum_{j=1}^{N'}
-    (\bm{u}'_i\cdot\bm{u}'_j)
-    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+    \sum_{\mu=1}^2\sum_{\nu=1}^2
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    \sum_{\mu=1}^2\sum_{\nu=1}^2
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
 
-
-
-
-
-
-
-座標回転したときに、それは図にあるようにベクトルのほうは逆回転しているように見える。
-
-
-ただ、力についてはポテンシャルの偏微分で書けたりすることもあり、判別できないかもしれない。
+というように総和を用いた形で表記できる。
 
 　
 
