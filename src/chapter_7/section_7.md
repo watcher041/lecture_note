@@ -106,7 +106,76 @@ $$
     -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
-ここで注意として、$(\mathrm{d}x^1,\mathrm{d}x^2)$ は反変ベクトルとなるが $(x^1,x^2)$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。回転座標の場合だとそれらのベクトルの形が同じであったため、$(x^1,x^2)$ はどちらもベクトルとも言えることになる。すなわち $(x^1,x^2)=(x_1,x_2)$ となっていることになる。
+ここで注意として、$(\mathrm{d}x^1,\mathrm{d}x^2)$ は反変ベクトルとなるが $(x^1,x^2)$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。回転座標の場合だとそれらのベクトルの形が同じであったため、$(x^1,x^2)$ はどちらもベクトルとも言えることになる。すなわち $(x^1,x^2)=(x_1,x_2)$ となっていることになる。確認のため、前回出てきた座標変換ではどうなるかを見てみると、斜交座標の場合
+
+$$
+    X = x+\frac{1}{\sqrt{2}}y、
+    Y = \frac{1}{\sqrt{2}}y
+    \ \leftrightarrow\ 
+    x = X - Y、
+    y = \sqrt{2}Y
+$$
+
+であったため、まず共変ベクトルは
+
+$$
+    a'_1=
+    \left(
+        \frac{\partial X}{\partial x}
+    \right)
+    a_1+
+    \left(
+        \frac{\partial Y}{\partial x}
+    \right)
+    a_2=
+    a_1
+$$
+$$
+    a'_2=
+    \left(
+        \frac{\partial X}{\partial y}
+    \right)
+    a_1+
+    \left(
+        \frac{\partial Y}{\partial y}
+    \right)
+    a_2=
+    \frac{1}{\sqrt{2}}a_1+
+    \frac{1}{\sqrt{2}}a_2
+$$
+
+であり、反変ベクトルは以下の通りになる。
+
+$$
+    b'^1=
+    \left(
+        \frac{\partial x}{\partial X}
+    \right)
+    b^1+
+    \left(
+        \frac{\partial x}{\partial Y}
+    \right)
+    b^2=
+    b^1-b^2
+$$
+$$
+    b'^2=
+    \left(
+        \frac{\partial y}{\partial X}
+    \right)
+    b^1+
+    \left(
+        \frac{\partial y}{\partial Y}
+    \right)
+    b^2=
+    \sqrt{2}b^2
+$$
+
+これを見ると反変ベクトルの方と一致していることが分かるが、共変ベクトルについては以下の通り垂線を垂らしたものと一致していることが分かる。
+
+<p align="center">
+    <img width="40%" src="images/oblique.png">
+</p>
 
 
 この表記を用いると、ベクトル $\bm{s}$ に関する式も
