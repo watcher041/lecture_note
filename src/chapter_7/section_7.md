@@ -76,9 +76,34 @@ $$
 
 $$
     \begin{cases}
-        ・\bm{a}=(a_1,a_2,\cdots,a_N)&：共変ベクトル（下付き添え字で区別）\\
-        ・\bm{b}=(b^1,b^2,\cdots,b^{N})&：反変ベクトル（上付き添え字で区別）
+        ・\bm{a}=(a_1,a_2)=(a'_1,a'_2)
+        &：共変ベクトル（下付き添え字で区別）\\
+        ・\bm{b}=(b^1,b^2)=(b'^1,b'^2)&：反変ベクトル（上付き添え字で区別）
     \end{cases}
+$$
+
+上記の回転座標の場合だと、
+
+$$
+    \begin{cases}
+        ・\bm{u}=(u_1,u_2)=(u'_1,u'_2)&：共変ベクトル\\
+        ・\mathrm{d}\bm{s}=(\mathrm{d}x^1,\mathrm{d}x^2)=(\mathrm{d}x'^1,\mathrm{d}x'^2)&：反変ベクトル
+    \end{cases}
+$$
+
+と置くことで以下のような形になる。
+
+$$
+    \mathrm{d}x'^1=
+    \cos\alpha\ \mathrm{d}x^1+\sin\alpha\ \mathrm{d}x^2、
+    \mathrm{d}x'^2=
+    -\sin\alpha\ \mathrm{d}x^1+\cos\alpha\ \mathrm{d}x^1
+$$
+$$
+    \bm{u}'_1=
+    \cos\alpha\ \bm{u}_1+\sin\alpha\ \bm{u}_2、
+    \bm{u}'_2=
+    -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
 これらのベクトルは、座標系 $(x^1,x^2,\cdots,x^N)$ から座標系 $(x'^1,x'^2,\cdots,x'^{N'})$ に変換した場合、
