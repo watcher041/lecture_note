@@ -116,102 +116,40 @@ $$
 $$
     \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
     (\mathrm{d}\bm{s})^2=
-    \sum_{\mu=1}^2\sum_{\nu=1}^2
+    \sum_{\mu,\nu=1}^2
     (\bm{u}_\mu\cdot\bm{u}_\nu)
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
-    \sum_{\mu=1}^2\sum_{\nu=1}^2
+    \sum_{\mu,\nu=1}^2
     (\bm{u}'_\mu\cdot\bm{u}'_\nu)
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
 
-というように総和を用いた形で表記できる。
-
-　
-
-ここまでで上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることから、よく省略（**Einsteinの縮約記法**）される。
+というように総和を用いた形で表記できる。また、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（**Einsteinの縮約記法**）が用いられる。
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}x^{i}\bm{u}_i=
-    \mathrm{d}x'^{j}\bm{u}'_j、
+    \mathrm{d}x^{\mu}\bm{u}_\mu=
+    \mathrm{d}x'^{\mu}\bm{u}'_\mu、
     (\mathrm{d}\bm{s})^2=
-    (\bm{u}_i\cdot\bm{u}_j)
-    \mathrm{d}x^{i}\mathrm{d}x^{j}=
-    (\bm{u}'_i\cdot\bm{u}'_j)
-    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
+    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
 $$
 
-また、基底ベクトル同士の内積というのは座標系の各地点の形状を示す重要な量となっており、
+また、基底ベクトル同士の内積というのは座標系の各地点の形状を示す重要な量（**Riemann計量**）となっており、
 
 $$
-    g_{ij}=\bm{u}_i\cdot\bm{u}_j、
-    g'_{ij}=\bm{u}'_i\cdot\bm{u}'_j
+    g_{\mu\nu}=\bm{u}_\mu\cdot\bm{u}_\nu、
+    g'_{\mu\nu}=\bm{u}'_\mu\cdot\bm{u}'_\nu
 $$
 
-というように、一般に**Riemann計量**と呼ばれている。そのため、内積のほうも以下のように表記される。
+と表記すると、内積のほうも以下のように表記される。
 
 $$
     (\mathrm{d}\bm{s})^2=
-    g_{ij}
-    \mathrm{d}x^{i}\mathrm{d}x^{j}=
-    g'_{ij}
-    \mathrm{d}x'^{i}\mathrm{d}x'^{j}
+    g_{\mu\nu}
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    g'_{\mu\nu}
+    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
 $$
-
-ここまでのことを踏まえて、一般的に座標系 $(x_1,x_2,\cdots,x_N)$ から座標系 $(x'_1,x'_2,\cdots,x'_{N'})$ に変換することを考えると、その間ではベクトル $\bm{s}$ の微小変位が基底ベクトル $\bm{u}$
- により
- 
-$$
-    \mathrm{d}\bm{s}=
-    \sum_{i=1}^{N}
-    \mathrm{d}x_{i}\bm{u}_i=
-    \sum_{j=1}^{N'}
-    \mathrm{d}x'_{j}\bm{u}'_j、
-    
-$$
-$$
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    (\mathrm{d}\bm{s})^2=
-    \sum_{i=1}^{N}
-    \sum_{j=1}^{N}
-    (\bm{u}_i\cdot\bm{u}_j)
-    \mathrm{d}x_{i}\mathrm{d}x_{j}=
-    \sum_{i=1}^{N'}
-    \sum_{j=1}^{N'}
-    (\bm{u}'_i\cdot\bm{u}'_j)
-    \mathrm{d}x'_{i}\mathrm{d}x'_{j}
-$$
-
-
-という関係が成り立つことになる。ただ、ここでの変換の仕方というのはベクトル成分と基底ベクトルの二通りあり、
-
-$$
-    \mathrm{d}x_{i}=
-    \sum_{k=1}^{N'}
-    \left(
-        \frac{\partial x_{i}}{\partial x'_{k}}
-    \right)
-    \mathrm{d}x'_{k}、
-    \mathrm{d}x'_{i}=
-    \sum_{k=1}^{N}
-    \left(
-        \frac{\partial x'_{i}}{\partial x_{k}}
-    \right)
-    \mathrm{d}x_{k}
-$$
-$$
-    \bm{u}_i=
-    \sum_{k=1}^{N'}
-    \left(
-        \frac{\partial x'_{k}}{\partial x_{i}}
-    \right)
-    \bm{u}'_k、
-    \bm{u}'_j=
-    \sum_{l=1}^{N}
-    \left(
-        \frac{\partial x_{l}}{\partial x'_{j}}
-    \right)
-    \bm{u}_l
-$$
-
-というようになっているが、よく見ると係数の偏微分が分母と分子がそれぞれ逆になっていることが見て取れる。座標変換による変換というのは、この二つに大別されており、基底ベクトルと同じ変換を受けるベクトルのことを**共変ベクトル**、それとは逆の変換をするベクトルを**反変ベクトル**というように呼ぶ。次回では具体的に、これらのベクトルの観点からどのように座標変換が記述されるか見ていくことにする。
