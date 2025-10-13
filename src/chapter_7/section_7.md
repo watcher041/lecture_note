@@ -119,29 +119,29 @@ $$
 であったため、まず共変ベクトルは
 
 $$
-    a'_1=
+    x'_1=
     \left(
         \frac{\partial X}{\partial x}
     \right)
-    a_1+
+    x_1+
     \left(
         \frac{\partial Y}{\partial x}
     \right)
-    a_2=
-    a_1
+    x_2=
+    x_1
 $$
 $$
-    a'_2=
+    x'_2=
     \left(
         \frac{\partial X}{\partial y}
     \right)
-    a_1+
+    x_1+
     \left(
         \frac{\partial Y}{\partial y}
     \right)
-    a_2=
-    \frac{1}{\sqrt{2}}a_1+
-    \frac{1}{\sqrt{2}}a_2
+    x_2=
+    \frac{1}{\sqrt{2}}x_1+
+    \frac{1}{\sqrt{2}}x_2
 $$
 
 であり、反変ベクトルは以下の通りになる。
