@@ -1,7 +1,7 @@
 
 ## 共変ベクトルと反変ベクトル
 
-今度は直交座標系 $(x,y)$ を角度 $\alpha$ だけ回転した座標系 $(x',y')$ に変換した場合を考えてみよう。
+前回までは、ベクトル成分と基底ベクトルが互いに逆の変換になっていることを述べたが、このことを分かりやすくするため今度は直交座標系 $(x,y)$ を角度 $\alpha$ だけ回転した座標系 $(x',y')$ に変換した場合を考えてみよう。
 
 <p align="center">
     <img width="40%" src="images/rotate_before.png">　　　
@@ -147,34 +147,35 @@ $$
 であり、反変ベクトルは以下の通りになる。
 
 $$
-    b'^1=
+    x'^1=
     \left(
         \frac{\partial x}{\partial X}
     \right)
-    b^1+
+    x^1+
     \left(
         \frac{\partial x}{\partial Y}
     \right)
-    b^2=
-    b^1-b^2
+    x^2=
+    x^1-x^2
 $$
 $$
-    b'^2=
+    x'^2=
     \left(
         \frac{\partial y}{\partial X}
     \right)
-    b^1+
+    x^1+
     \left(
         \frac{\partial y}{\partial Y}
     \right)
-    b^2=
-    \sqrt{2}b^2
+    x^2=
+    \sqrt{2}x^2
 $$
 
 これを見ると反変ベクトルの方と一致していることが分かるが、共変ベクトルについては以下の通り垂線を垂らしたものと一致していることが分かる。
 
 <p align="center">
-    <img width="40%" src="images/oblique.png">
+    <img width="40%" src="images/oblique_contravariance.png">　　
+    <img width="36%" src="images/oblique_covariant.png">
 </p>
 
 
