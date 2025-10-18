@@ -162,8 +162,9 @@ $$
 となるため、以下の図からも分かるように反変ベクトルであることが分かる。
 
 <p align="center">
-    <img width="40%" src="images/oblique_contravariance.png">　　
     <img width="36%" src="images/oblique_covariant.png">
+    　　
+    <img width="40%" src="images/oblique_contravariance.png">
 </p>
 
 
