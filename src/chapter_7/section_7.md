@@ -167,6 +167,40 @@ $$
     <img width="40%" src="images/oblique_contravariance.png">
 </p>
 
+ここで、共変ベクトルについては各座標系に垂線を引いて読み取った値であることから、以下のような式が成り立つことが予想される。
+
+$$
+    x_1=\bm{s}\cdot\bm{e}_x、
+    x_2=\bm{s}\cdot\bm{e}_y、
+    x'_1=\bm{s}\cdot\bm{e}'_x、
+    x'_2=\bm{s}\cdot\bm{e}'_y
+$$
+
+曲がっている座標系でも微小な範囲では斜交座標系であるため、
+$$
+    \mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
+    \mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
+    \mathrm{d}x'_1=\mathrm{d}\bm{s}\cdot\bm{u}'_1、
+    \mathrm{d}x'_2=\mathrm{d}\bm{s}\cdot\bm{u}'_2
+$$
+
+となると、例えば一つ目の成分については
+
+$$
+    \mathrm{d}x_1=
+    (\mathrm{d}x^\mu\bm{u}_\mu)\cdot\bm{u}_1=
+    (\bm{u}_\mu\cdot\bm{u}_1)\mathrm{d}x^\mu=
+    g_{\mu 1}\mathrm{d}x^\mu
+$$
+
+というように共変ベクトルにRiemann計量を適用した形になっていることになる。
+
+
+
+
+
+
+
 
 この表記を用いると、ベクトル $\bm{s}$ に関する式も
 
