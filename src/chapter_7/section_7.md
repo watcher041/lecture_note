@@ -72,26 +72,22 @@ $$
     -\sin\alpha\ \bm{u}_x+\cos\alpha\ \bm{u}_y
 $$
 
-ここで、座標変換（座標軸の変更）に対して基底ベクトルは共に同じ方向に変換されているため**共変ベクトル**、ベクトル成分は逆方向に変換されているため**反変ベクトル**となる。より一般的には、これらは以下の通り添え字を用いて区別されることが多い。
+ここで、座標変換（座標軸の変更）に対して基底ベクトルは共に同じ方向に変換されているため**共変ベクトル**、ベクトル成分は逆方向に変換されているため**反変ベクトル**となる。より一般的には、これらは添え字を用いて区別されることが多く、
 
 $$
     \begin{cases}
-        ・\bm{a}=(a_1,a_2)=(a'_1,a'_2)
+        ・\bm{u}_x、\bm{u}_y
+        \rightarrow
+        \bm{u}_1、\bm{u}_2
         &：共変ベクトル（下付き添え字で区別）\\
-        ・\bm{b}=(b^1,b^2)=(b'^1,b'^2)&：反変ベクトル（上付き添え字で区別）
+        ・\mathrm{d}x、\mathrm{d}y
+        \rightarrow
+        \mathrm{d}x^1、\mathrm{d}x^2
+        &：反変ベクトル（上付き添え字で区別）
     \end{cases}
 $$
 
-上記の回転座標の場合だと、
-
-$$
-    \begin{cases}
-        ・\bm{u}=(u_1,u_2)=(u'_1,u'_2)&：共変ベクトル\\
-        ・\mathrm{d}\bm{s}=(\mathrm{d}x^1,\mathrm{d}x^2)=(\mathrm{d}x'^1,\mathrm{d}x'^2)&：反変ベクトル
-    \end{cases}
-$$
-
-と置くことで以下のような形になる。
+というように書けるため、先ほどの式は以下の通りになる。
 
 $$
     \mathrm{d}x'^1=
@@ -106,72 +102,64 @@ $$
     -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
-ここで注意として、$(\mathrm{d}x^1,\mathrm{d}x^2)$ は反変ベクトルとなるが $(x^1,x^2)$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。回転座標の場合だとそれらのベクトルの形が同じであったため、$(x^1,x^2)$ はどちらもベクトルとも言えることになる。すなわち $(x^1,x^2)=(x_1,x_2)$ となっていることになる。確認のため、前回出てきた座標変換ではどうなるかを見てみると、斜交座標の場合
+ここで注意として、$\mathrm{d}x$ は反変ベクトルとなるが $x$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。実際、回転座標ではどちらも同じ形になっていることからもうかがえる。また、前回でも出てきた斜交座標について
 
 $$
-    X = x+\frac{1}{\sqrt{2}}y、
-    Y = \frac{1}{\sqrt{2}}y
+    x' = x - y、
+    y' = \sqrt{2}y
     \ \leftrightarrow\ 
-    x = X - Y、
-    y = \sqrt{2}Y
+    x = x'+\frac{1}{\sqrt{2}}y'、
+    y = \frac{1}{\sqrt{2}}y'
 $$
 
-であったため、まず共変ベクトルは
-
+というように変換すると、共変ベクトルと反変ベクトルは
 $$
     x'_1=
     \left(
-        \frac{\partial X}{\partial x}
+        \frac{\partial x}{\partial x'}
     \right)
     x_1+
     \left(
-        \frac{\partial Y}{\partial x}
+        \frac{\partial y}{\partial x'}
     \right)
     x_2=
-    x_1
-$$
-$$
+    x_1、
     x'_2=
     \left(
-        \frac{\partial X}{\partial y}
+        \frac{\partial x}{\partial y'}
     \right)
     x_1+
     \left(
-        \frac{\partial Y}{\partial y}
+        \frac{\partial y}{\partial y'}
     \right)
     x_2=
     \frac{1}{\sqrt{2}}x_1+
     \frac{1}{\sqrt{2}}x_2
 $$
-
-であり、反変ベクトルは以下の通りになる。
-
 $$
     x'^1=
     \left(
-        \frac{\partial x}{\partial X}
+        \frac{\partial x'}{\partial x}
     \right)
     x^1+
     \left(
-        \frac{\partial x}{\partial Y}
+        \frac{\partial x'}{\partial y}
     \right)
     x^2=
-    x^1-x^2
-$$
-$$
+    x^1-x^2、
     x'^2=
     \left(
-        \frac{\partial y}{\partial X}
+        \frac{\partial y'}{\partial x}
     \right)
     x^1+
     \left(
-        \frac{\partial y}{\partial Y}
+        \frac{\partial y'}{\partial y}
     \right)
     x^2=
     \sqrt{2}x^2
 $$
 
-これを見ると反変ベクトルの方と一致していることが分かるが、共変ベクトルについては以下の通り垂線を垂らしたものと一致していることが分かる。
+となるため、以下の図からも分かるように反変ベクトルであることが分かる。
 
 <p align="center">
     <img width="40%" src="images/oblique_contravariance.png">　　
