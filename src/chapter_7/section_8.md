@@ -7,13 +7,13 @@ $$
     x'=\gamma(x-\beta w)、
     y'=y、
     z'=z、
-    w'=\gamma(w-\beta x)
+    w'=\gamma(w-\beta x)、
 $$
 $$
     x=\gamma(x'+\beta w')、
     y=y'、
     z=z'、
-    w=\gamma(w'+\beta x')
+    w=\gamma(w'+\beta x')、
 $$
 $$
     w=ct、
@@ -37,20 +37,37 @@ $$
     x^0=\gamma(x'^0+\beta x'^1)
 $$
 
-運動方程式は
+一方で、運動方程式についても
+
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
-    \bm{f}
-    \leftrightarrow
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
-    \bm{F}、
-    \left(
+    \bm{f}、
     \bm{p}=
     \frac{m_0\bm{v}}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \right)
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    \bm{f}=
+    \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    \mathrm{d}\tau=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
+    \mathrm{d}t
 $$
-という形で書けたわけなので、これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
+
+という形で書けたわけなので、これも反変ベクトルの形で書くと以下の通りになる。
+
+$$
+    \frac{\mathrm{d}p^\mu}{\mathrm{d}\tau}=
+    f^\mu、
+    p^\mu=
+    \frac{m_0v^\mu}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    f^\mu=
+    \frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    (\mu=0,1,2,3)
+$$
+
+
+
+これを解析力学へ応用してみることにする。まず、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて以下のようになっていた。
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     \left(
