@@ -102,9 +102,6 @@ $$
     -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
-
-
-
 また、この表記を用いることでベクトル $\bm{s}$ に関する式も
 
 $$
@@ -122,6 +119,34 @@ $$
     (\bm{u}'_\mu\cdot\bm{u}'_\nu)
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
+$$
+    \mathrm{d}x'^\mu=
+    \sum_{\nu=1}^2
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
+    \mathrm{d}x^\nu、
+    \mathrm{d}x^\nu=
+    \sum_{\mu=1}^2
+    \left(
+        \frac{\partial x^\nu}{\partial x'^\mu}
+    \right)
+    \mathrm{d}x'^\mu
+$$
+$$
+    \bm{u}'_\mu=
+    \sum_{\nu=1}^2
+    \left(
+        \frac{\partial x^\nu}{\partial x'^\mu}
+    \right)
+    \bm{u}_\nu、
+    \bm{u}_\nu=
+    \sum_{\mu=1}^2
+    \left(
+        \frac{\partial x'^\nu}{\partial x^\mu}
+    \right)
+    \bm{u}'_\mu
+$$
 
 というように総和を用いた形で表記されるが、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（**Einsteinの縮約記法**）が用いられる。
 
@@ -134,6 +159,28 @@ $$
     \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
     (\bm{u}'_\mu\cdot\bm{u}'_\nu)
     \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
+$$
+$$
+    \mathrm{d}x'^\mu=
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\nu}
+    \right)
+    \mathrm{d}x^\nu、
+    \mathrm{d}x^\nu=
+    \left(
+        \frac{\partial x^\nu}{\partial x'^\mu}
+    \right)
+    \mathrm{d}x'^\mu、
+    \bm{u}'_\mu=
+    \left(
+        \frac{\partial x^\nu}{\partial x'^\mu}
+    \right)
+    \bm{u}_\nu、
+    \bm{u}_\nu=
+    \left(
+        \frac{\partial x'^\nu}{\partial x^\mu}
+    \right)
+    \bm{u}'_\mu
 $$
 
 また、基底ベクトル同士の内積は座標系の各地点の形状を示す重要な量（**Riemann計量**）であるため、
@@ -278,7 +325,16 @@ $$
     \mathrm{d}x_\nu\mathrm{d}x^\nu
 $$
 
-というように内積の関係は共変ベクトルと反変ベクトルの積で書けることになる。そのため、逆変換についてもRiemann計量の逆数
+というように内積の関係は共変ベクトルと反変ベクトルの積で書けることになる。実際に、
+
+
+
+
+
+
+
+
+そのため、逆変換についてもRiemann計量の逆数
 
 $$
     \mathrm{d}x^\mu=
