@@ -330,95 +330,21 @@ $$
     \mathrm{d}x^\lambda
 $$
 
-というように、$g_{\lambda\xi}\mathrm{d}x^\lambda$ が共変ベクトルのふるまいをすることからもうかがえる。
-
-
-
-
-
-
-そのため、逆変換についてもRiemann計量の逆数
+というように、$g_{\lambda\xi}\mathrm{d}x^\lambda$ が共変ベクトルのふるまいをすることからもうかがえる。また、逆変換についてもRiemann計量の逆数
 
 $$
     \mathrm{d}x^\mu=
     g_{\mu\nu}^{-1}\mathrm{d}x_\nu
 $$
 
-によりかけるが、この逆数はどのような値になるかというと
-
-
-
-
-座標変換についても、
+によりかけるが、これだと縮約の規則にあてはまらないので $g_{\mu\nu}^{-1}=g^{\mu\nu}$ として
 
 $$
-    \mathrm{d}x'^\mu=
-    \left(
-        \frac{\partial x'^{\mu}}{\partial x^{\nu}}
-    \right)
-    \mathrm{d}x^\nu、
-    \bm{u}'_\mu=
-    \left(
-        \frac{\partial x^{\nu}}{\partial x'^{\mu}}
-    \right)
-    \bm{u}_\nu
+    \mathrm{d}x^\mu=
+    g^{\mu\nu}\mathrm{d}x_\nu
 $$
 
-というようにもかけるが、これらを代入することで
-
-$$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}x'^{\mu}\bm{u}'_\mu=
-    \left(
-        \frac{\partial x'^{\mu}}{\partial x^{\lambda}}
-    \right)
-    \left(
-        \frac{\partial x^{\tau}}{\partial x'^{\mu}}
-    \right)
-    \mathrm{d}x^{\lambda}\bm{u}_\tau=
-    \delta_{\lambda}^{\tau}
-    \mathrm{d}x^{\lambda}\bm{u}_\tau=
-    \mathrm{d}x^{\lambda}\bm{u}_\lambda
-$$
-
-
-
-
-
-
-
-
-
-
-
-$$
-    (\mathrm{d}\bm{s})^2=
-    \left(
-        \frac{\partial x^{\tau}}{\partial x'^{\mu}}
-    \right)
-    \left(
-        \frac{\partial x'^{\mu}}{\partial x^{\xi}}
-    \right)
-    \left(
-        \frac{\partial x^{\lambda}}{\partial x'^{\nu}}
-    \right)
-    \left(
-        \frac{\partial x'^{\nu}}{\partial x^{\eta}}
-    \right)
-    (\bm{u}_\tau\cdot\bm{u}_\lambda)
-    \mathrm{d}x^\xi
-    \mathrm{d}x^\eta=
-    \delta_{\xi}^{\tau}\delta_{\eta}^{\lambda}
-    g_{\tau\lambda}
-    \mathrm{d}x^\xi
-    \mathrm{d}x^\eta=
-    g_{\tau\lambda}
-    \mathrm{d}x^\tau
-    \mathrm{d}x^\lambda
-$$
-
-というように計算できることも分かる。
-
+とかく。この $g_{\mu\nu}$ あるいは $g^{\mu\nu}$ が特殊相対性理論から一般相対性理論に移るときに便利なものであるため、次回ではこれを用いて、これがどのように行われるかを見ていくことにする。
 
 
 
