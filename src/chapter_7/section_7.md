@@ -167,6 +167,8 @@ $$
     <img width="40%" src="images/oblique_contravariance.png">
 </p>
 
+
+
 ここで、共変ベクトルについては各座標系に垂線を引いて読み取った値であることから、以下のような式が成り立つことが予想される。
 
 $$
@@ -175,32 +177,6 @@ $$
     x'_1=\bm{s}\cdot\bm{e}'_x、
     x'_2=\bm{s}\cdot\bm{e}'_y
 $$
-
-曲がっている座標系でも微小な範囲では斜交座標系であるため、
-$$
-    \mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
-    \mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
-    \mathrm{d}x'_1=\mathrm{d}\bm{s}\cdot\bm{u}'_1、
-    \mathrm{d}x'_2=\mathrm{d}\bm{s}\cdot\bm{u}'_2
-$$
-
-となると、例えば一つ目の成分については
-
-$$
-    \mathrm{d}x_1=
-    (\mathrm{d}x^\mu\bm{u}_\mu)\cdot\bm{u}_1=
-    (\bm{u}_\mu\cdot\bm{u}_1)\mathrm{d}x^\mu=
-    g_{\mu 1}\mathrm{d}x^\mu
-$$
-
-というように共変ベクトルにRiemann計量を適用した形になっていることになる。
-
-
-
-
-
-
-
 
 この表記を用いると、ベクトル $\bm{s}$ に関する式も
 
@@ -251,3 +227,117 @@ $$
 $$
 
 この $g_{\mu\nu}$ を利用することで特殊相対性理論から一般相対性理論への移行が容易になるため、次回ではそのことについてみていくことにする。
+
+曲がっている座標系でも微小な範囲では斜交座標系であるため、
+$$
+    \mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
+    \mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
+    \mathrm{d}x'_1=\mathrm{d}\bm{s}\cdot\bm{u}'_1、
+    \mathrm{d}x'_2=\mathrm{d}\bm{s}\cdot\bm{u}'_2
+$$
+
+となると、例えば一つ目の成分については
+
+$$
+    \mathrm{d}x_1=
+    (\mathrm{d}x^\mu\bm{u}_\mu)\cdot\bm{u}_1=
+    (\bm{u}_\mu\cdot\bm{u}_1)\mathrm{d}x^\mu=
+    g_{\mu 1}\mathrm{d}x^\mu
+$$
+
+というように共変ベクトルにRiemann計量を適用した形になっていることになる。このことから、
+
+$$
+    \mathrm{d}x_\nu=
+    g_{\mu\nu}\mathrm{d}x^\mu
+    \rightarrow
+    (\mathrm{d}\bm{s})^2=
+    \mathrm{d}x_\nu\mathrm{d}x^\nu
+$$
+
+というように内積の関係は共変ベクトルと反変ベクトルの積で書けることになる。そのため、逆変換についてもRiemann計量の逆数
+
+$$
+    \mathrm{d}x^\mu=
+    g_{\mu\nu}^{-1}\mathrm{d}x_\nu
+$$
+
+によりかけるが、この逆数はどのような値になるかというと
+
+
+
+
+座標変換についても、
+
+$$
+    \mathrm{d}x'^\mu=
+    \left(
+        \frac{\partial x'^{\mu}}{\partial x^{\nu}}
+    \right)
+    \mathrm{d}x^\nu、
+    \bm{u}'_\mu=
+    \left(
+        \frac{\partial x^{\nu}}{\partial x'^{\mu}}
+    \right)
+    \bm{u}_\nu
+$$
+
+というようにもかけるが、これらを代入することで
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x'^{\mu}\bm{u}'_\mu=
+    \left(
+        \frac{\partial x'^{\mu}}{\partial x^{\lambda}}
+    \right)
+    \left(
+        \frac{\partial x^{\tau}}{\partial x'^{\mu}}
+    \right)
+    \mathrm{d}x^{\lambda}\bm{u}_\tau=
+    \delta_{\lambda}^{\tau}
+    \mathrm{d}x^{\lambda}\bm{u}_\tau=
+    \mathrm{d}x^{\lambda}\bm{u}_\lambda
+$$
+
+
+
+
+
+
+
+
+
+
+
+$$
+    (\mathrm{d}\bm{s})^2=
+    \left(
+        \frac{\partial x^{\tau}}{\partial x'^{\mu}}
+    \right)
+    \left(
+        \frac{\partial x'^{\mu}}{\partial x^{\xi}}
+    \right)
+    \left(
+        \frac{\partial x^{\lambda}}{\partial x'^{\nu}}
+    \right)
+    \left(
+        \frac{\partial x'^{\nu}}{\partial x^{\eta}}
+    \right)
+    (\bm{u}_\tau\cdot\bm{u}_\lambda)
+    \mathrm{d}x^\xi
+    \mathrm{d}x^\eta=
+    \delta_{\xi}^{\tau}\delta_{\eta}^{\lambda}
+    g_{\tau\lambda}
+    \mathrm{d}x^\xi
+    \mathrm{d}x^\eta=
+    g_{\tau\lambda}
+    \mathrm{d}x^\tau
+    \mathrm{d}x^\lambda
+$$
+
+というように計算できることも分かる。
+
+
+
+
+
