@@ -102,6 +102,81 @@ $$
     -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
+
+
+
+また、この表記を用いることでベクトル $\bm{s}$ に関する式も
+
+$$
+    \mathrm{d}\bm{s}=
+    \sum_{\mu=1}^2\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu=1}^2\mathrm{d}x'^\mu\bm{u}'_\mu
+$$
+$$
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\mathrm{d}\bm{s})^2=
+    \sum_{\mu,\nu=1}^2
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^\mu\mathrm{d}x^\nu=
+    \sum_{\mu,\nu=1}^2
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
+    \mathrm{d}x'^\mu\mathrm{d}x'^\nu
+$$
+
+というように総和を用いた形で表記されるが、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（**Einsteinの縮約記法**）が用いられる。
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x^{\mu}\bm{u}_\mu=
+    \mathrm{d}x'^{\mu}\bm{u}'_\mu、
+    (\mathrm{d}\bm{s})^2=
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
+    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
+$$
+
+また、基底ベクトル同士の内積は座標系の各地点の形状を示す重要な量（**Riemann計量**）であるため、
+
+$$
+    g_{\mu\nu}=\bm{u}_\mu\cdot\bm{u}_\nu、
+    g'_{\mu\nu}=\bm{u}'_\mu\cdot\bm{u}'_\nu
+$$
+
+と表記して、内積のほうも以下のように表記されることが多い。
+
+$$
+    (\mathrm{d}\bm{s})^2=
+    g_{\mu\nu}
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    g'_{\mu\nu}
+    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ここで注意として、$\mathrm{d}x$ は反変ベクトルとなるが $x$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。実際、回転座標ではどちらも同じ形になっていることからもうかがえる。また、前回でも出てきた斜交座標について
 
 $$
@@ -167,8 +242,6 @@ $$
     <img width="40%" src="images/oblique_contravariance.png">
 </p>
 
-
-
 ここで、共変ベクトルについては各座標系に垂線を引いて読み取った値であることから、以下のような式が成り立つことが予想される。
 
 $$
@@ -178,57 +251,7 @@ $$
     x'_2=\bm{s}\cdot\bm{e}'_y
 $$
 
-この表記を用いると、ベクトル $\bm{s}$ に関する式も
-
-$$
-    \mathrm{d}\bm{s}=
-    \sum_{\mu=1}^2\mathrm{d}x^\mu\bm{u}_\mu=
-    \sum_{\mu=1}^2\mathrm{d}x'^\mu\bm{u}'_\mu
-$$
-$$
-    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
-    (\mathrm{d}\bm{s})^2=
-    \sum_{\mu,\nu=1}^2
-    (\bm{u}_\mu\cdot\bm{u}_\nu)
-    \mathrm{d}x^\mu\mathrm{d}x^\nu=
-    \sum_{\mu,\nu=1}^2
-    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
-    \mathrm{d}x'^\mu\mathrm{d}x'^\nu
-$$
-
-というように総和を用いた形で表記できる。また、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（**Einsteinの縮約記法**）が用いられる。
-
-$$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}x^{\mu}\bm{u}_\mu=
-    \mathrm{d}x'^{\mu}\bm{u}'_\mu、
-    (\mathrm{d}\bm{s})^2=
-    (\bm{u}_\mu\cdot\bm{u}_\nu)
-    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
-    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
-$$
-
-また、基底ベクトル同士の内積というのは座標系の各地点の形状を示す重要な量（**Riemann計量**）となっており、
-
-$$
-    g_{\mu\nu}=\bm{u}_\mu\cdot\bm{u}_\nu、
-    g'_{\mu\nu}=\bm{u}'_\mu\cdot\bm{u}'_\nu
-$$
-
-と表記すると、内積のほうも以下のように表記される。
-
-$$
-    (\mathrm{d}\bm{s})^2=
-    g_{\mu\nu}
-    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-    g'_{\mu\nu}
-    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
-$$
-
-この $g_{\mu\nu}$ を利用することで特殊相対性理論から一般相対性理論への移行が容易になるため、次回ではそのことについてみていくことにする。
-
-曲がっている座標系でも微小な範囲では斜交座標系であるため、
+この関係は曲がっている座標系でも微小な範囲では斜交座標系であることから、以下の式が成り立つ。
 $$
     \mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
     \mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
@@ -236,7 +259,7 @@ $$
     \mathrm{d}x'_2=\mathrm{d}\bm{s}\cdot\bm{u}'_2
 $$
 
-となると、例えば一つ目の成分については
+例えば一つ目の成分については
 
 $$
     \mathrm{d}x_1=
