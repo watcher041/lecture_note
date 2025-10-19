@@ -200,30 +200,6 @@ $$
     \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
 $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ここで注意として、$\mathrm{d}x$ は反変ベクトルとなるが $x$ は必ずしも反変ベクトルとなるとは限らないことに注意する必要がある。実際、回転座標ではどちらも同じ形になっていることからもうかがえる。また、前回でも出てきた斜交座標について
 
 $$
@@ -327,7 +303,34 @@ $$
 
 というように内積の関係は共変ベクトルと反変ベクトルの積で書けることになる。実際に、
 
+$$
+    g'_{\mu\nu}
+    \mathrm{d}x'^{\mu}=
+    \left(
+        \frac{\partial x^\lambda}{\partial x'^\mu}
+    \right)
+    \left(
+        \frac{\partial x^\xi}{\partial x'^\nu}
+    \right)
+    \left(
+        \frac{\partial x'^\mu}{\partial x^\eta}
+    \right)
+    g_{\lambda\xi}
+    \mathrm{d}x^\eta=
+    \delta_{\eta}^{\lambda}
+    \left(
+        \frac{\partial x^\xi}{\partial x'^\nu}
+    \right)
+    g_{\lambda\xi}
+    \mathrm{d}x^\eta=
+    \left(
+        \frac{\partial x^\xi}{\partial x'^\nu}
+    \right)
+    g_{\lambda\xi}
+    \mathrm{d}x^\lambda
+$$
 
+というように、$g_{\lambda\xi}\mathrm{d}x^\lambda$ が共変ベクトルのふるまいをすることからもうかがえる。
 
 
 
