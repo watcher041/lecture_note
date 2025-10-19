@@ -1,7 +1,43 @@
 
 ## 特殊相対性理論から一般相対性理論へ
 
-　特殊相対性理論において、運動方程式は
+　特殊相対性理論では、座標系の変換としてLorentz変換が利用されていた。
+
+$$
+    x'=\gamma(x-\beta w)、
+    y'=y、
+    z'=z、
+    w'=\gamma(w-\beta x)
+$$
+$$
+    x=\gamma(x'+\beta w')、
+    y=y'、
+    z=z'、
+    w=\gamma(w'+\beta x')
+$$
+$$
+    w=ct、
+    w'=ct'、
+    \beta=\frac{V}{c}、
+    \gamma=\frac{1}{\sqrt{1-\beta^2}}
+$$
+
+このときは反変ベクトルとなるため、以下の通りになる（$w$ は時間を含む特別な変数なので、あえて $x^0$ としている）。
+
+$$
+    x'^1=\gamma(x^1-\beta x^0)、
+    x'^2=x^2、
+    x'^3=x^3、
+    x'^0=\gamma(x^0-\beta x^1)
+$$
+$$
+    x^1=\gamma(x'^1+\beta x'^0)、
+    x^2=x'^2、
+    x^3=x'^3、
+    x^0=\gamma(x'^0+\beta x'^1)
+$$
+
+運動方程式は
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \bm{f}
