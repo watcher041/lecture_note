@@ -42,6 +42,7 @@ $$
 $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \bm{f}、
+    
     \bm{p}=
     \frac{m_0\bm{v}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
@@ -51,18 +52,48 @@ $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
+$$
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
+    (\bm{f}\cdot\bm{v})、
+    E_K=
+    \frac{m_0c^2}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
 
-という形で書けたわけなので、これも反変ベクトルの形で書くと以下の通りになる。
+と書けたわけだが、ここで速度ベクトルと力は反変ベクトルの形で
+
+$$
+    u^0=c、
+    u^1=v_x、
+    u^2=v_y、
+    u^3=v_z
+$$
+$$
+    F^0=\frac{1}{c}(\bm{F}\cdot\bm{v})、
+    F^1=F_x、
+    F^2=F_y、
+    F^3=F_z
+$$
+
+というように書けるので、運動量と力は以下の通りにかける。
+
+$$
+    p^\mu=
+    \frac{m_0u^\mu}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    f^\mu=
+    \frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    (\mu=0,1,2,3)
+$$
+
+書くと以下の通りになる。
 
 $$
     \frac{\mathrm{d}p^\mu}{\mathrm{d}\tau}=
     f^\mu、
     p^\mu=
     \frac{m_0v^\mu}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    f^\mu=
-    \frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    (\mu=0,1,2,3)
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 ここで、固有時に関して
