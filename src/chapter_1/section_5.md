@@ -332,11 +332,93 @@ $$
     z=r\cos\theta
 $$
 
-であるため、各成分の加速度を求めると
+であるため、まず各成分の速度を求めると
+
+$$
+    v_x=
+    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \sin\theta\cos\phi+
+    r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta\cos\phi-
+    r\sin\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\phi
+$$
+$$
+    v_y=
+    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \sin\theta\sin\phi+
+    r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta\sin\phi+
+    r\sin\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\phi
+$$
+$$
+    v_z=
+    \frac{\mathrm{d}z}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \cos\theta-
+    r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \sin\theta
+$$
+
+となる。一方で極座標での速度 $v_r,v_\theta,v_\phi$ は二次元のときの関係式を利用すると、まず
+
+$$
+    v_{x,y}=v_x\cos\phi+v_y\sin\phi、
+    v_\phi=v_y\cos\phi-v_x\sin\phi
+$$
+
+というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の速度になり、動径 $r$ 方向と角度 $\phi$ 方向の速度も
+
+$$
+    v_r=v_z\cos\theta+v_{x,y}\sin\theta、
+    v_\theta=v_{x,y}\cos\theta-v_z\sin\theta
+$$
+
+<p align="center">
+    <img height="300px"  
+        style="background-color:white;"
+        src="images/3d_polar_velocity.png">
+</p>
+
+となることから、求めた速度を代入してみると
+
+$$
+    v_{x,y}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \sin\theta+
+    r
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta、
+    v_\phi=
+    r\sin\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}、
+    v_r=
+    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    v_\theta=
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+$$
+
+このうち、速度 $v_r,v_\theta,v_\phi$ については以下のように微小変化を見ることで正しいことが分かる。
+
+<p align="center">
+    <img height="200px"  
+        style="background-color:white;"
+        src="images/3d_polar_dr.png">
+</p>
+
+そして、加速度についても
 
 $$
     \begin{align*}
-        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        a_x=\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
         \left(
@@ -379,7 +461,7 @@ $$
 $$
 $$
     \begin{align*}
-        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        a_y=\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
         \left(
@@ -422,7 +504,7 @@ $$
 $$
 $$
     \begin{align*}
-        \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+        a_z=\frac{\mathrm{d}^2z}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
         \left(
@@ -447,18 +529,52 @@ $$
     \end{align*}
 $$
 
-となる。これらの式から、極座標の各成分ごとの加速度を取り出してみると
+となるが、先ほどの速度と同じように極座標において
 
 $$
-    \left(
-        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-        \cos\phi+
-        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-        \sin\phi
-    \right)
+    a_{x,y}=a_x\cos\phi+a_y\sin\phi、
+    a_\phi=a_y\cos\phi-a_x\sin\phi
+$$
+$$
+    a_r=a_z\cos\theta+a_{x,y}\sin\theta、
+    a_\theta=a_{x,y}\cos\theta-a_z\sin\theta
+$$
+
+が成り立つものとして代入してみると
+
+$$
+    a_{x,y}=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
     \sin\theta+
-    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
-    \cos\theta=
+    2\frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta+
+    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2
+    \sin\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \right)^2
+    \sin\theta
+$$
+$$
+    a_\phi=
+    2\frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta+
+    2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta+
+    r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+    \sin\theta
+$$
+$$
+    a_r=
     \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
     r
     \left(
@@ -471,15 +587,7 @@ $$
     \sin^2\theta
 $$
 $$
-    \left(
-        \frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-        \cos\phi+
-        \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-        \sin\phi
-    \right)
-    \cos\theta-
-    \frac{\mathrm{d}^2z}{\mathrm{d}t^2}
-    \sin\theta=
+    a_\theta=
     r
     \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
     2
@@ -490,23 +598,6 @@ $$
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
     \right)^2
     \sin\theta\cos\theta
-$$
-$$
-    -\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-    \sin\phi+
-    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-    \cos\phi=
-    r
-    \frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
-    \sin\theta+
-    2r
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \cos\theta+
-    2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \sin\theta
 $$
 
 となる。そのため、極座標での各成分の運動方程式は
