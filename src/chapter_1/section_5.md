@@ -15,9 +15,59 @@ $$
     y=r\sin\theta
 $$
 
-まず、各方向の加速度を置き換えると
+まず、各方向の速度を置き換えると
 
 $$
+    v_x=
+    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\cos\theta-
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\sin\theta
+$$
+$$
+    v_y=
+    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\sin\theta+
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
+$$
+
+となるが、ここで極座標での速度 $v_r,v_\theta$ は以下の図のように $r,\theta$ が増加する方向を正とした成分で表されることから
+
+$$
+    v_r=v_x\cos\theta+v_y\sin\theta、
+    v_\theta=v_y\cos\theta-v_x\sin\theta
+$$
+
+<p align="center">
+    <img height="150px"  
+        style="background-color:white;"
+        src="images/2d_velocity.png">
+    <img height="150px" 
+        style="background-color:white;"
+        src="images/2d_velocity_change.png">
+</p>
+
+である（$v_r$ に関しては赤線と青線の長さを足したもの、$v_\theta$ については 青線から赤線を引いた長さになっている）ことを踏まえ、この左辺に先ほど求めた速度を代入すると以下の式が求められる。
+
+$$
+    v_r=
+    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    v_\theta=
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+$$
+
+この形については、以下のように各方向の微小変化を見ることで正しいものと確認できる。
+
+<p align="center">
+    <img height="150px"  
+        style="background-color:white;"
+        src="images/2d_polar_dr.png">
+
+</p>
+
+次に、加速度についても同様に
+
+$$
+    a_x=
     \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
     \frac{\mathrm{d}^2r}
     {\mathrm{d}t^2}
@@ -39,8 +89,9 @@ $$
     \cos\theta
 $$
 $$
-     \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
-     \frac{\mathrm{d}^2r}
+    a_y=
+    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
+    \frac{\mathrm{d}^2r}
     {\mathrm{d}t^2}
     \sin\theta+
     2\frac{\mathrm{d}r}
@@ -60,58 +111,43 @@ $$
     \sin\theta
 $$
 
-となるが、ここで極座標 $r,\theta$ の二階微分のみが含まれるよう以下のように整理してみる。
+と置き換えたうえで、極座標での加速度 $a_r,a_\theta$ との関係が
 
 $$
-    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-    \cos\theta+
-    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-    \sin\theta=
-    m\left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}-
-        r
-        \left(
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
-        \right)^2
-    \right]=
-    F_x\cos\theta+F_y\sin\theta
-$$
-$$
-    -m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
-    \sin\theta+
-    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
-    \cos\theta=
-    m\left(
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}+
-        r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
-    \right)=
-    -F_x\sin\theta+F_y\cos\theta
+    a_r=a_x\cos\theta+a_y\sin\theta、
+    a_\theta=a_y\cos\theta-a_x\sin\theta
 $$
 
-ここで各式の右辺を見てみると、以下の図のように極座標の各成分の力になっていることが分かる（$F_r$ に関しては赤線と青線の長さを足したもの、$F_\theta$ については 青線から赤線を引いた長さになっている）。
+であることから、求めた加速度を代入してみると
 
 $$
-    F_r=F_x\cos\theta+F_y\sin\theta、
-    F_\theta=F_y\cos\theta-F_x\sin\theta
+    a_r=
+    \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2、
+    a_\theta=
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}+
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
 $$
 
-<p align="center">
-    <img width="44%"  
-        style="background-color:white;"
-        src="images/polor-2d_force.png">
-    <img width="40%"  
-        style="background-color:white;"
-        src="images/2d_force_change.png">
-</p>
+となるが、一方で加速度に質量をかけることで力になることから
 
-そのため、先ほどの式は極座標の各成分の運動方程式になっていることが分かる。
+$$
+    F_r=ma_r=
+    F_x\cos\theta+F_y\sin\theta、
+    F_\theta=ma_\theta=
+    F_y\cos\theta-F_x\sin\theta
+$$
+
+であることから、極座標での運動方程式は以下の通りになっていることが分かる。
 
 $$
     m\left[

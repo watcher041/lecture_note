@@ -1,21 +1,196 @@
 
-## 運動方程式
+## Newton形式
 
-　質量 $m$ の質点を考えよう。この質点の位置を示すのに、通常は太字 $\bm{r}$ で表す。その位置の変化はNewtonの運動方程式
+　質量 $m$ の質点がある場合、その位置 $\bm{r}$ の変化はNewtonの運動方程式
 
 $$
     m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
     \bm{F}
 $$
 
-に従う。ここで右辺の $\bm{F}$ はこの質点に働く力である。これを適当な初期条件のもとに解くと、質点の位置ベクトル $\bm{r}$ が定まる。この式は時間に関して2階の微分を含んでいるから、初期条件としてある条件 $t_0$ における質点の位置と速度の二つを与えるやると、$\bm{r}$ が定まることになる。運動方程式を含む時間微分の数と、初期条件として与えなければならない物理量の数とがこのように常に一致することは周知であろう。
+に従う。ここで右辺の $\bm{F}$ はこの質点に働く力である。これを適当な初期条件のもとに解くと、質点の位置ベクトル $\bm{r}$ が定まる。この式は時間に関して2階の微分を含んでいるから、初期条件としてある条件 $t_0$ における質点の位置と速度の二つを与えるやると、$\bm{r}$ が定まることになる。運動方程式を含む時間微分の数と、初期条件として与えなければならない物理量の数とがこのように常に一致することは周知であろう。このことを以下で具体的に見ていくことにしよう。
 
+　平面上（二次元）の運動の場合、$x,y$ 座標を用いて粒子を表してきたが、極座標 $r,\theta$ を用いて粒子の位置を表すこともできる。これらの関係は、
+
+$$
+    x=r\cos\theta、
+    y=r\sin\theta
+$$
+
+となることから、まず速度を求めると以下の通りになる。
+
+$$
+    v_x=
+    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\cos\theta-
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\sin\theta
+$$
+$$
+    v_y=
+    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\sin\theta+
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
+$$
+
+一方で、極座標における速度 $v_r,v_\theta$ は
 
 <p align="center">
-    <img width="60%" src="images/polar_coordinates.png">
+    <img width="40%"  
+        style="background-color:white;"
+        src="images/2d_velocity.png">
+    <img width="40%"  
+        style="background-color:white;"
+        src="images/2d_velocity_change.png">
 </p>
 
-　今まで、$(x,y,z)$ 座標を用いて粒子を表してきたが、球面極座標 $(r,\theta,\phi)$ を用いて粒子の位置を表すこともできる。これらの関係は、
+そして、加速度も求めると
+
+$$
+    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
+    \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \sin\theta-
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \sin\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \cos\theta
+$$
+$$
+     \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
+     \frac{\mathrm{d}^2r}
+    {\mathrm{d}t^2}
+    \sin\theta+
+    2\frac{\mathrm{d}r}
+    {\mathrm{d}t}
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \cos\theta+
+    r
+    \frac{\mathrm{d}^2\theta}
+    {\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+    \frac{\mathrm{d}\theta}
+    {\mathrm{d}t}
+    \right)^2
+    \sin\theta
+$$
+
+となるが、ここで $x,y$ 座標での運動方程式が
+
+$$
+    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}=F_x、
+    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=F_y
+$$
+
+
+であることをふまえて、極座標 $r,\theta$ の二階微分のみが含まれるよう以下のように整理してみる。
+
+$$
+    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \cos\theta+
+    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \sin\theta=
+    m\left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+    \right]=
+    F_x\cos\theta+F_y\sin\theta
+$$
+$$
+    -m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+    \sin\theta+
+    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+    \cos\theta=
+    m\left(
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+    \right)=
+    -F_x\sin\theta+F_y\cos\theta
+$$
+
+ここで各式の右辺を見てみると、以下の図のように極座標の各成分の力になっていることが分かる（$F_r$ に関しては赤線と青線の長さを足したもの、$F_\theta$ については 青線から赤線を引いた長さになっている）。
+
+$$
+    F_r=F_x\cos\theta+F_y\sin\theta、
+    F_\theta=F_y\cos\theta-F_x\sin\theta
+$$
+
+<p align="center">
+    <img width="44%"  
+        style="background-color:white;"
+        src="images/polor-2d_force.png">
+    <img width="40%"  
+        style="background-color:white;"
+        src="images/2d_force_change.png">
+</p>
+
+そのため、先ほどの式は極座標の各成分の運動方程式になっていることが分かる。
+
+$$
+    m\left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+    \right]=F_r、
+    m\left(
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+    \right)=F_\theta
+$$
+
+このことから、左辺についても極座標の加速度 $a_r,a_\theta$ は
+
+$$
+    a_r=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+    r\left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2、
+    a_\theta=
+    2
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+    r
+    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+$$
+
+となるわけだが、ここで $\theta$ に関する式の左辺が
+
+$$
+
+$$
 
 $$
     x=r\sin\theta\cos\phi、
@@ -61,6 +236,28 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}
     \sin\theta
 $$
+
+ここで、$r,\theta,\phi$ の一回微分が互いにひとつ含むように
+以下のように変形してみる。
+
+$$
+    v_x\sin\theta\cos\phi+
+    v_y\sin\theta\sin\phi+
+    v_z\cos\theta=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+$$
+$$
+    v_x\cos\theta\cos\phi+
+    v_y\cos\theta\sin\phi-
+    v_z\sin\theta=
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+$$
+$$
+    v_y\sin\theta\sin\phi-
+    v_x\sin\theta\cos\phi=
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+$$
+
 
 <p align="center">
     <img width="60%" src="images/polar_move.png">
