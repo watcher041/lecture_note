@@ -882,88 +882,46 @@ $$
     mr^2\omega_\phi\sin^2\theta
 $$
 
-これらを整理すると
+また、$x,y$ 平面上において動径 $r_{x,y}$ 方向および $r_{x,y}$ に垂直な方向（角度 $\theta$ に垂直な方向）の角運動量が
 
 $$
-    -L_x\sin\phi+L_y\cos\phi=
-    mr^2\omega_\theta
-$$
-$$
-    L_x\cos\phi+L_y\sin\phi=
-    -mr^2\omega_\phi\sin\theta\cos\theta
-$$
-$$
-    L_z=mr^2\omega_\phi\sin^2\theta
-$$
-
-となるが、ここで先ほどの極座標における角運動量と見比べてみると
-
-$$
+    L_{x,y}=
+    L_x\cos\phi+L_y\sin\phi、
     L_\theta=
-    -L_x\sin\phi+L_y\cos\phi、
-    L_\phi=L_z
+    L_y\cos\phi-L_x\sin\phi
 $$
 
-という関係があると予想される。確認のため、それぞれ時間微分をとってみるとまず $L_\theta$ については
+であり、動径 $r$ 方向と $r$ に垂直な方向についても
 
 $$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
-    \left(
-        -\frac{\mathrm{d}L_x}{\mathrm{d}t}
-        \sin\phi+
-        \frac{\mathrm{d}L_y}{\mathrm{d}t}
-        \cos\phi
-    \right)-
-    \omega_\phi
-    (L_x\cos\phi+L_y\sin\phi)
+    L_r=
+    L_z\cos\theta+
+    L_{x,y}\sin\theta、
+    L_{r_\perp}=
+    L_{x,y}\cos\theta-
+    L_z\sin\theta
 $$
 
-であるが、ここで回転の運動方式から角運動量の時間微分に関して
+であることから、これらに代入すると
 
 $$
-    \frac{\mathrm{d}L_x}{\mathrm{d}t}=
-    yF_z-zF_y、
-    \frac{\mathrm{d}L_y}{\mathrm{d}t}=
-    zF_x-xF_z、
-    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
-    xF_y-yF_x
+    L_{x,y}=
+    -mr^2\omega_\phi
+    \sin\theta\cos\theta、
+    L_\theta=
+    mr^2\omega_\theta、
+    L_r=0、
+    L_{r_\perp}=
+    -mr^2\omega_\phi\sin\theta
 $$
 
-が成り立つため、これらを代入すると
+<p align="center">
+    <img width="44%"  
+        style="background-color:white;"
+        src="images/3d_polar_L.png">
+</p>
 
-$$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
-    z(-F_y\sin\phi+F_x\cos\theta)-
-    F_z(y\sin\phi+x\cos\phi)-
-    \omega_\phi
-    (L_x\cos\phi+L_y\sin\phi)
-$$
-
-となる。ここで、今までの関係式と見比べてみると
-
-$$
-    -F_y\sin\phi+F_x\cos\theta=F_{x,y}
-$$
-$$
-    y\sin\phi+x\cos\phi=r\sin\theta、
-    z=r\cos\theta
-$$
-$$
-    L_x\cos\phi+L_y\sin\phi=
-    -mr^2\omega_\phi\sin\theta\cos\theta
-$$
-
-であるから以下の通りとなる。
-
-$$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
-    r(F_{x,y}\cos\theta-F_z\sin\theta)+
-    mr^2\omega_\phi^2\sin\theta\cos\theta=
-    rF_\theta+
-    mr^2\omega_\phi^2\sin\theta\cos\theta
-$$
-
-そして、$L_\phi$ の時間微分については、
+となる。このうち、$L_\theta$ は先ほど運動方程式から求めた形と一致していることが分かる。$L_\phi$ については、形を見比べると $L_\phi=L_z$ であるため、確認のため時間微分をとり
 
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
@@ -971,7 +929,7 @@ $$
     xF_y-yF_x
 $$
 
-となるため、ここで
+とすると、極座標において
 
 $$
     x=r\sin\theta\cos\phi、
@@ -979,7 +937,7 @@ $$
     F_\phi=F_y\cos\phi-F_x\sin\phi
 $$
 
-を踏まえて整理すると
+となることを踏まえて整理すると
 
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
@@ -997,7 +955,46 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-が成り立つことが分かる。あるいは角運動量を $\bm{L}=I\bm{\omega}$ とおくことで、
+が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関して角運動量と同じように
+
+$$
+    \omega_{x,y}=
+    \omega_x\cos\phi+\omega_y\sin\phi、
+    \omega_\theta=
+    \omega_y\cos\phi-\omega_x\sin\phi
+$$
+$$
+    \omega_r=
+    \omega_z\cos\theta+
+    \omega_{x,y}\sin\theta、
+    \omega_{r_\perp}=
+    \omega_{x,y}\cos\theta-
+    \omega_z\sin\theta
+$$
+
+とすると、$\omega_\theta$ に関して
+
+$$
+    L_\theta=
+    mr^2\omega_\theta=
+    mr^2\omega_y\cos\phi-
+    mr^2\omega_x\sin\phi
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+角運動量を $\bm{L}=I\bm{\omega}$ と
 
 $$
     \omega_x=
@@ -1117,8 +1114,3 @@ $$
 
 が得られる。ここで動径方向については回転成分はないため0となる。一方で垂直方向については $\omega_\theta$ が常に $x,y$ 平面に沿った方向を向くため $z$ 方向には $\omega_\phi$ のものしか影響しないためこのような形になる。
 
-<p align="center">
-    <img width="44%"  
-        style="background-color:white;"
-        src="images/omega_picture.png">
-</p>
