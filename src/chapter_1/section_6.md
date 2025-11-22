@@ -40,3 +40,17 @@ $$
     \right)
 $$
 
+これを整理すると、以下の式が得られる。
+
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        \frac{1}{2}
+        \bm{v}\cdot\bm{p}
+    \right)=
+    \frac{\mathrm{d}}{\mathrm{d}t}
+    \left(
+        \frac{1}{2}m\bm{v}^2
+    \right)=
+    \bm{v}\cdot\bm{F}
+$$
