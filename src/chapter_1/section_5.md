@@ -972,16 +972,29 @@ $$
     \omega_z\sin\theta
 $$
 
-とすると、$\omega_\theta$ に関して
+とすると、$\omega_\theta$ に関して $L_\theta$ が
 
 $$
-    L_\theta=
-    mr^2\omega_\theta=
-    mr^2\omega_y\cos\phi-
-    mr^2\omega_x\sin\phi
+    L_\theta=mr^2\omega_\theta=
+    L_y\cos\phi-L_x\sin\phi
 $$
 
+であることから、
 
+$$
+    \omega_x=
+    \frac{L_x}{mr^2}=
+    -(\omega_\theta\sin\phi+
+    \omega_\phi\sin\theta\cos\theta\cos\phi)
+$$
+$$
+    \omega_y=
+    \frac{L_y}{mr^2}=
+    \omega_\theta\cos\phi-
+    \omega_\phi\sin\theta\cos\theta\sin\phi
+$$
+
+であり、
 
 
 
