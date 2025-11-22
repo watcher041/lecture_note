@@ -138,16 +138,16 @@ $$
     {\mathrm{d}t^2}
 $$
 
-となるが、一方で加速度に質量をかけることで力になることから
+となるが、一方で力についても加速度と同様に
 
 $$
-    F_r=ma_r=
+    F_r=
     F_x\cos\theta+F_y\sin\theta、
-    F_\theta=ma_\theta=
+    F_\theta=
     F_y\cos\theta-F_x\sin\theta
 $$
 
-であることから、極座標での運動方程式は以下の通りになっていることが分かる。
+が成り立つことから、極座標での運動方程式は以下の通りになっていることが分かる。
 
 $$
     m\left[
@@ -236,7 +236,7 @@ $$
 $$
 
 <p align="center">
-    <img width="44%"  
+    <img height="200px"  
         style="background-color:white;"
         src="images/cross_product.png">
 </p>
@@ -306,7 +306,7 @@ $$
     \bm{\omega}=(0,0,\omega)
 $$
 
-というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転に関する運動方程式は以下の通りになる。
+というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転の運動方程式は以下の通りになる。
 
 $$
     m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
@@ -383,7 +383,7 @@ $$
 $$
 
 <p align="center">
-    <img height="300px"  
+    <img height="200px"  
         style="background-color:white;"
         src="images/3d_polar_velocity.png">
 </p>
