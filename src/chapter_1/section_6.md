@@ -28,8 +28,6 @@ $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     (\bm{v}\cdot\bm{p})=
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (m\bm{v}^2)=
     2m
     \left(
         \bm{v}\cdot
@@ -48,7 +46,18 @@ $$
     \frac{1}{2}
     \left(
         \bm{v}\cdot\bm{p}
-    \right)=
-    \frac{1}{2}m\bm{v}^2、
+    \right)、
     P=\bm{v}\cdot\bm{F}
+$$
+
+ここで $K$ は運動エネルギーと呼ばれ、以下の関係がある。
+
+$$
+    K=
+    \frac{1}{2}
+    \left(
+        \bm{v}\cdot\bm{p}
+    \right)=
+    \frac{\bm{p}^2}{2m}=
+    \frac{1}{2}m\bm{v}^2
 $$
