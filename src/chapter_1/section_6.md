@@ -43,13 +43,12 @@ $$
 これを整理すると、以下の式が得られる。
 
 $$
-    \frac{\mathrm{d}K}{\mathrm{d}t}=
-    \bm{P}、
+    \frac{\mathrm{d}K}{\mathrm{d}t}=P、
     K=
     \frac{1}{2}
     \left(
         \bm{v}\cdot\bm{p}
     \right)=
     \frac{1}{2}m\bm{v}^2、
-    \bm{P}=\bm{v}\cdot\bm{F}
+    P=\bm{v}\cdot\bm{F}
 $$
