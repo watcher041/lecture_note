@@ -994,136 +994,24 @@ $$
     \omega_\phi\sin\theta\cos\theta\sin\phi
 $$
 
-であり、
-
-
-
-
-
-
-
-
-
-
-
-
-角運動量を $\bm{L}=I\bm{\omega}$ と
+であり、これを $\omega_{x,y}$ の式に代入すると以下の通りになる。
 
 $$
-    \omega_x=
-    -\omega_\theta\sin\phi-
-    \omega_\phi\sin\theta\cos\theta\cos\phi
-$$
-$$
-    \omega_y=
-    \omega_\theta\cos\phi-
-    \omega_\phi\sin\theta\sin\theta\sin\phi
-$$
-$$
-    \omega_z=
-    \omega_\phi\sin^2\theta
-$$
-
-
-となることが予想される。このうち一つ目と二つ目を整理すると
-
-$$
-    \omega_\theta=
-    -\omega_x\sin\phi+\omega_y\cos\phi
-$$
-$$
-    -\omega_\phi\sin\theta\cos\theta=
-    \omega_x\cos\phi+\omega_y\sin\phi
-$$
-
-となるが、これらと力の関係
-
-$$
-    F_{x,y}=
-    F_x\cos\phi+F_y\sin\phi、
-    F_\phi=
-    F_y\cos\phi-F_x\sin\phi
-$$
-
-を見比べることで、以下のように対応しているものと思われる。
-
-$$
-    -\omega_\phi\sin\theta\cos\theta=
-    \omega_x\cos\phi+\omega_y\sin\phi
-    \leftrightarrow
-    F_{x,y}=
-    F_x\cos\phi+F_y\sin\phi
-$$
-$$
-    \omega_\theta=
-    -\omega_x\sin\phi+\omega_y\cos\phi
-    \leftrightarrow
-    F_\phi=
-    F_y\cos\phi-F_x\sin\phi
-$$
-
-そこで、以下のように書けるものとしてみる。
-
-$$
-    \omega_{x,y}=
-    \omega_x\cos\phi+\omega_y\sin\phi、
     \omega_{x,y}=
     -\omega_\phi\sin\theta\cos\theta
 $$
-$$
-    \omega_\theta=
-    -\omega_x\sin\phi+\omega_y\cos\phi
-    
-$$
 
-そうすると、同じように力の関係
+さらに、動径方向の回転成分がないことから $\omega_r=0$ であるため、$\omega_r$ の式から
 
 $$
-    F_r=
-    F_z\cos\theta+
-    F_{x,y}\sin\theta、
-    F_\theta=
-    F_{x,y}\cos\theta-
-    F_z\sin\theta
+    \omega_z=\omega_\phi\sin\phi
 $$
 
-を利用することで、動径方向およびそれに直交する方向の角運動量を $\omega_r,\omega_{r_\perp}$ は
+であり、これを最後の式に代入すると
 
-$$
-    F_r=
-    F_z\cos\theta+
-    F_{x,y}\sin\theta
-    \leftrightarrow
-    \omega_r=
-    \omega_z\cos\theta+
-    \omega_{x,y}\sin\theta 
-$$
-$$
-    F_\theta=
-    F_{x,y}\cos\theta-
-    F_z\sin\theta
-    \leftrightarrow
-    \omega_{r_\perp}=
-    \omega_{x,y}\cos\theta-
-    \omega_z\sin\theta
-$$
-
-となり、これらに $\omega_{x,y},\omega_z$ を代入することで
-
-$$
-    \omega_r=
-    (\omega_\phi\sin^2\theta)\cos\theta+
-    (-\omega_\phi\sin\theta\cos\theta)\sin\theta
-    =0
-$$
 $$
     \omega_{r_\perp}=
-    (-\omega_\phi\sin\theta\cos\theta)
-    \cos\theta-
-    (\omega_\phi\sin^2\theta)
-    \sin\theta=
     -\omega_\phi\sin\theta
 $$
 
-が得られる。ここで動径方向については回転成分はないため0となる。一方で垂直方向については $\omega_\theta$ が常に $x,y$ 平面に沿った方向を向くため $z$ 方向には $\omega_\phi$ のものしか影響しないためこのような形になる。
-
+であることになる。
