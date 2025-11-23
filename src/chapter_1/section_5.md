@@ -838,30 +838,10 @@ $$
     L_z=m(xv_y-yv_x)
 $$
 
-となるが、各速度が極座標により
+となることから、極座標では以下のようになる。
 
 $$
-    v_x=
-    v_r\sin\theta\cos\phi+
-    r\omega_\theta\cos\theta\cos\phi-
-    r\omega_\phi\sin\theta\sin\phi
-$$
-$$
-    v_y=
-    v_r\sin\theta\sin\phi+
-    r\omega_\theta\cos\theta\sin\phi+
-    r\omega_\phi\sin\theta\cos\phi
-$$
-$$
-    v_z=
-    v_r\cos\theta-
-    r\omega_\theta\sin\theta
-$$
-
-と書けるため、以下の通りになる。
-
-$$
-    L_x=m(yv_z-zv_y)=
+    L_x=
     -mr^2
     (
         \omega_\theta\sin\phi+
@@ -869,7 +849,7 @@ $$
     )
 $$
 $$
-    L_y=m(zv_x-xv_z)=
+    L_y=
     mr^2
     (
         \omega_\theta\cos\phi-
@@ -878,7 +858,7 @@ $$
     
 $$
 $$
-    L_z=m(xv_y-yv_x)=
+    L_z=
     mr^2\omega_\phi\sin^2\theta
 $$
 
@@ -1004,7 +984,7 @@ $$
 さらに、動径方向の回転成分がないことから $\omega_r=0$ であるため、$\omega_r$ の式から
 
 $$
-    \omega_z=\omega_\phi\sin\phi
+    \omega_z=\omega_\phi\sin^2\theta
 $$
 
 であり、これを最後の式に代入すると
@@ -1014,4 +994,4 @@ $$
     -\omega_\phi\sin\theta
 $$
 
-であることになる。
+であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。
