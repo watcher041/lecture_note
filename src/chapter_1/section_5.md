@@ -826,7 +826,7 @@ $$
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
     \bm{N}、
-    \bm{L}=(\bm{r}\times\bm{v})、
+    \bm{L}=\bm{r}\times\bm{p}、
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
