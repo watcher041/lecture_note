@@ -287,7 +287,7 @@ $$
         \frac{\bm{r}'}{r'}
     \right)\cdot
     \frac{\bm{v}'}{r'}=
-    \frac{1}{r'^2}(\bm{r}'\cdot\bm{v}')
+    \frac{\bm{r}'}{r'^2}(\bm{r}'\cdot\bm{v}')
     -\bm{v}'
 $$
 
@@ -310,7 +310,7 @@ $$
     \right]
 $$
 
-これを展開すると
+というように展開すると
 
 $$
     L_x'=
