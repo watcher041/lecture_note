@@ -257,59 +257,45 @@ $$
     (\bm{r}'\cdot\bm{v}')=0
 $$
 
-このことから、回転の速度ベクトルは位置ベクトルと直交した方向を向いていることが分かる。具体的には、直交座標系で記述すると
+このことから、回転の速度ベクトルは位置ベクトルと直交した方向を向いていることが分かる。一方で、角運動量において
 
 $$
-    x'v_x'+y'v_y'+z'v_z'=0
+    \bm{L}'=m(\bm{r}'\times\bm{v}')=
+    I\bm{\omega}、
+    I=mr'^2
 $$
 
-であるが、極座標においても
+というようになっていたことから、角速度が
 
 $$
-    x'=r'\sin\theta'\cos\phi'、
-    y'=r'\sin\theta'\sin\phi'、
-    z'=r'\cos\theta'
+    \omega=
+    \frac{\bm{r}'}{r'}\times
+    \frac{\bm{v}'}{r'}
 $$
 
-とすると、速度についても動径 $r'$ が変化しないことを考慮して
+となることから、左側から $\bm{r}'$ の外積をとってみるとベクトル三重積の公式から
 
 $$
-    v_x'=
-    \frac{\mathrm{d}x'}{\mathrm{d}t}=
-    r'\omega_\theta'
-    \cos\theta'\cos\phi'-
-    r'\omega_\phi'
-    \sin\theta'\sin\phi'
-$$
-$$
-    v_y'=
-    \frac{\mathrm{d}y'}{\mathrm{d}t}=
-    r'\omega_\theta'
-    \cos\theta'\sin\phi'+
-    r'\omega_\phi'
-    \sin\theta'\cos\phi'
-$$
-$$
-    v_z'=
-    \frac{\mathrm{d}z'}{\mathrm{d}t}=
-    -r'\omega_\theta'
-    \sin\theta'
+    \bm{r}'\times\bm{\omega}=
+    \left(
+        \bm{r}'\cdot
+        \frac{\bm{v}'}{r'}
+    \right)\cdot
+   \frac{\bm{r}'}{r'} -
+    \left(
+        \bm{r}'\cdot
+        \frac{\bm{r}'}{r'}
+    \right)\cdot
+    \frac{\bm{v}'}{r'}=
+    \frac{1}{r'^2}(\bm{r}'\cdot\bm{v}')
+    -\bm{v}'
 $$
 
-であるため直交座標系と同じ式が成り立つことが分かる。
-
-
-
-
-
-
-そのため、速度は外積の形で書けるものと思われる。
+となる。ここで、回転の速度ベクトルと位置ベクトルが直交していることも踏まえると、速度ベクトルは以下のようになる。
 
 $$
-    \bm{v}'=\bm{\omega}'\times\bm{r}'
+    \bm{v}'=\bm{\omega}\times\bm{r}'
 $$
-
-この $\bm{\omega}'$ が全ての質点で共通しているか？
 
 これを角運動量の式に代入すると
 
