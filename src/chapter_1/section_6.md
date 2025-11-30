@@ -297,7 +297,7 @@ $$
     \bm{v}'=\bm{\omega}\times\bm{r}'
 $$
 
-これを角運動量の式に代入すると
+そのため、これを
 
 $$
     \bm{L}'=
@@ -305,8 +305,8 @@ $$
     m_i(\bm{r}'_i\times\bm{v}'_i)=
     \sum_{i=1}^N
     \left[
-        m_i(\bm{r}'_i\cdot\bm{r}'_i)\cdot\bm{\omega}_i'-
-        m_i(\bm{r}'_i\cdot\bm{\omega}_i')\cdot\bm{r}'_i
+        m_i(\bm{r}'_i\cdot\bm{r}'_i)\cdot\bm{\omega}_i-
+        m_i(\bm{r}'_i\cdot\bm{\omega}_i)\cdot\bm{r}'_i
     \right]
 $$
 
@@ -317,9 +317,9 @@ $$
     \sum_{i=1}^N
     m_i
     \left[
-        (y_i'^2+z_i'^2)\omega_x'-
-        x_i'y_i'\omega_y'-
-        x_i'z_i'\omega_z'
+        (y_i'^2+z_i'^2)\omega_{i,x}-
+        x_i'y_i'\omega_{i,y}-
+        x_i'z_i'\omega_{i,z}
     \right]
 $$
 $$
@@ -327,9 +327,9 @@ $$
     \sum_{i=1}^N
     m_i
     \left[
-        -x_i'y_i'\omega_x'+
-        (x_i'^2+z_i'^2)\omega_y'-
-        y_i'z_i'\omega_z'
+        -x_i'y_i'\omega_{i,x}+
+        (x_i'^2+z_i'^2)\omega_{i,y}-
+        y_i'z_i'\omega_{i,z}
     \right]
 $$
 $$
@@ -337,9 +337,9 @@ $$
     \sum_{i=1}^N
     m_i
     \left[
-        -x_i'z_i'\omega_x'-
-        y_i'z_i'\omega_y'+
-        (x_i'^2+y_i'^2)\omega_z'
+        -x_i'z_i'\omega_{i,x}-
+        y_i'z_i'\omega_{i,y}+
+        (x_i'^2+y_i'^2)\omega_{i,z}
     \right]
 $$
 
