@@ -58,27 +58,45 @@ $$
 
 $$
     x^2_B+y^2_B+z^2_B=(ct_B)^2、
-    t_{\rm C}=2\frac{c^2}{c^2-V^2}
-    \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
+    t_{C}=2\frac{c^2}{c^2-V^2}
+    \left(t_{B}-\frac{V}{c^2}x_{B}\right)
 $$
 
+従来までは、この変換式としてGalilei変換が考えられており
 
-ここでC点において各観測者の間で
 $$
-    x_{\rm C}'\Leftrightarrow x_{\rm C}-Vt_{\rm C}、
-    y_{\rm C}'\Leftrightarrow y_{\rm C}、
-    z_{\rm C}'\Leftrightarrow z_{\rm C}、
-    t_{\rm C}'\Leftrightarrow t_{\rm C}、
+    x'=x-Vt、y'=y、z'=z、t'=t
+$$
 
-    t_{\rm B}'\Leftrightarrow 
-    \frac{c^2}{c^2-V^2}\left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
+となっていたが、これを代入しても上記のいずれも満たさないことが分かる。ただ、地点 C に関する式を見比べてみると
+
 $$
-という対応をしているものとして以下のように置いてみる。
+    t'_C=t_C、
+    t'_B=
+    \frac{c^2}{c^2-V^2}
+    \left(t_{B}-\frac{V}{c^2}x_{B}\right)
+$$
+
+というように対応しているものと考えられるため、試しに以下のように置いてみる。
+
 $$
     x'=x-Vt、y'=y、z'=z、
     t'=\frac{c^2}{c^2-V^2}\left(t-\frac{V}{c^2}x\right)
 $$
+
+このようにすると、地点 C での式は
+
+$$
+    t'_C=
+    \frac{c^2}{c^2-V^2}\left(t_C-\frac{V}{c^2}x_C\right)=
+    \frac{c^2}{c^2-V^2}\left(t_C-\frac{V}{c^2}Vt_C\right)=
+    t_C
+$$
+
+というように満たすことが分かる。
+
 しかし、B点での関係式は満たさないという問題が起きる。
+
 $$
     x'^2-(ct')^2\ne x^2-(ct)^2
 $$
