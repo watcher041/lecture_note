@@ -42,32 +42,26 @@ $$
 <img height="150px" src="images/K_motion.png">
 
 $$
-    x^2_B+y^2_B+z^2_B=c^2(t_B-0)^2=(ct_B)^2\\
+    x^2_B+y^2_B+z^2_B=c^2(t_B-0)^2\\
     (x_B-Vt_C)^2+y^2_B+z^2_B=c^2(t_C-t_B)^2
 $$
 
 </div>
 
-$$
-    \left[c(t_{\rm C}-t_{\rm B})\right]^2=
-    (ct_{\rm B})^2+(Vt_{\rm C})^2-2cVt_{\rm B}t_{\rm C}\left(\frac{x_{\rm B}}{ct_{\rm B}}\right)\\
-    x^2_B+y^2_B+z^2_B=c^2(t_B-0)^2=(ct_B)^2\\
-    (x_B-Vt_C)^2+y^2_B+z^2_B=c^2(t_C-t_B)^2
-$$
+まず、K' から見た時の式を整理すると以下のようになる。
 
 $$
-    x^2_{\rm B}+y^2_{\rm B}+z^2_{\rm B}=(ct_{\rm B})^2、
-    x_{\rm B}'^2+y_{\rm B}'^2+z_{\rm B}'^2=(ct_{\rm B}')^2
+    x'^2_B+y'^2_B+z'^2_B=(ct'_B)^2、t'_C=2t'_B
 $$
+
+次に、K から見た時の式も整理すると以下の式が得られる。
+
 $$
-    x_{\rm C}-Vt_{\rm C}=y_{\rm C}=z_{\rm C}=0、
-    x_{\rm C}'=y_{\rm C}'=z_{\rm C}'=0
-$$
-$$
+    x^2_B+y^2_B+z^2_B=(ct_B)^2、
     t_{\rm C}=2\frac{c^2}{c^2-V^2}
-    \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)、
-    t_{\rm C}'=2t_{\rm B}'
+    \left(t_{\rm B}-\frac{V}{c^2}x_{\rm B}\right)
 $$
+
 
 ここでC点において各観測者の間で
 $$
