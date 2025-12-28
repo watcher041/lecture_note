@@ -23,7 +23,6 @@
 - [電磁気学](chapter_3/section_0.md)
   - [電荷間に働く力](chapter_3/section_1.md)
   - [電磁気学での力の考え方](chapter_3/section_2.md)
-  - [導体](chapter_3/section_3.md)
 - [光学](chapter_4/section_0.md)
   - [幾何光学](chapter_4/section_1.md)
   - [Fermatの原理](chapter_4/section_2.md)
