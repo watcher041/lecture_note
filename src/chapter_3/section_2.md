@@ -53,11 +53,13 @@ $$
     <img height = "200px" src="images/hydrogen.png">
 </p>
 
-この原子の一番外にある電子が束縛されていると物体内で電荷の移動が起きにくく
+ここで、原子核に対して電子が安定して束縛されているような状況だと自由に移動ができずに電荷の移動も起きにくい。
 
 <p align="center">
     <img height = "100px" src="images/nonconductor.png">
 </p>
+
+一方で、電子の束縛が不安定な場合だと自由に移動が起こり電荷の移動も起きやすくなる。
 
 <p align="center">
     <img height = "100px" src="images/conductor.png">
