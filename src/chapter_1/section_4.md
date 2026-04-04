@@ -15,34 +15,34 @@
 
 $$
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
+    \frac{\mathrm{d}^2\boldsymbol{r}_i}
     {\mathrm{d}t^2}=
-    \bm{F}_{i}+
-    \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
+    \boldsymbol{F}_{i}+
+    \sum_{j=1(j\neq i)}^{N}\boldsymbol{F}_{ij}
 $$
 
-と書ける。ここで、$m_i、\bm{r}_i、\bm{F}_i、\bm{F}_{ij}、$ はそれぞれ質点の位置ベクトル、 位置ベクトル、外部からの力（外力）、別の $j$ 番目の質点との間に働く力（内力）を表している。さて、内力に関して作用・反作用の法則 $\bm{F}_{ij}=-\bm{F}_{ji}$ が成り立つため、先ほどの式を $i$ に対して総和をとると以下のように内力の項が相殺されて0となる。
+と書ける。ここで、$m_i、\boldsymbol{r}_i、\boldsymbol{F}_i、\boldsymbol{F}_{ij}、$ はそれぞれ質点の位置ベクトル、 位置ベクトル、外部からの力（外力）、別の $j$ 番目の質点との間に働く力（内力）を表している。さて、内力に関して作用・反作用の法則 $\boldsymbol{F}_{ij}=-\boldsymbol{F}_{ji}$ が成り立つため、先ほどの式を $i$ に対して総和をとると以下のように内力の項が相殺されて0となる。
 
 $$
     \sum_{i=1}^N
     \left(
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
+    \frac{\mathrm{d}^2\boldsymbol{r}_i}
     {\mathrm{d}t^2}
     \right)=
     \sum_{i=1}^N
-    \bm{F}_{i}+
+    \boldsymbol{F}_{i}+
     \sum_{i=1}^N
-    \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}=
+    \sum_{j=1(j\neq i)}^{N}\boldsymbol{F}_{ij}=
     \sum_{i=1}^N
-    \bm{F}_{i}
+    \boldsymbol{F}_{i}
 $$
 
 ここで、右辺が質点全体にかかる力（合力）であることから全体的に見て
 
 $$
-    m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
-    \bm{F}
+    m\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2}=
+    \boldsymbol{F}
 $$
 
 という形になっていると考えられる。そこで、$m$ を質点全体（物体自体）の質量として
@@ -50,31 +50,31 @@ $$
 $$
     \sum_{i=1}^N
     \left(
-    m_i\frac{\mathrm{d}^2\bm{r}_i}
+    m_i\frac{\mathrm{d}^2\boldsymbol{r}_i}
     {\mathrm{d}t^2}
     \right)=
     m
     \frac{\mathrm{d}^2}
     {\mathrm{d}t^2}
     \left(
-    \frac{1}{m}\sum_{i=1}^N m_i\bm{r}_i
+    \frac{1}{m}\sum_{i=1}^N m_i\boldsymbol{r}_i
     \right)
 $$
 
-というように変形して比較してみると、$\bm{r}$ は以下の形で置くことができる。
+というように変形して比較してみると、$\boldsymbol{r}$ は以下の形で置くことができる。
 
 $$
-    \bm{r}=\frac{1}{m}\sum_{i=1}^N m_i\bm{r}_i
+    \boldsymbol{r}=\frac{1}{m}\sum_{i=1}^N m_i\boldsymbol{r}_i
 $$
 
 　この位置ベクトルが指す地点は、例として質点が2個（$N=2$）の場合だと
 
 $$
-    \bm{r}=
-    \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
+    \boldsymbol{r}=
+    \frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
 $$
 
-となっているため、内分点の公式と同じ形になっていることが見て取れる（二体問題における $\bm{r}_G$ に相当）。
+となっているため、内分点の公式と同じ形になっていることが見て取れる（二体問題における $\boldsymbol{r}_G$ に相当）。
 
 <p align="center">
     <img width="50%"  
@@ -82,16 +82,16 @@ $$
         src="images/two_mass_point.png">
 </p>
 
-そのため、$\bm{r}$ は質点1と2の間を内分する地点の位置を指しており、この位置を物体の位置として扱うことになる。言い換えれば、物体を地点 $\bm{r}$ にある質量 $m(=m_1+m_2)$ の質点に置き換えるという操作を行っており、従来のときとほぼ同様なことをしていることが分かる。ただし、その位置はどこでもよいわけではなく、上式で制限されているところが従来と異なる。同じように、質点が3個の場合でも質量 $m$ の質点の位置は以下のようになる。このように、複数の質点をまとめて見た時に中心となる位置のことを一般的に **重心** と呼ぶ。
+そのため、$\boldsymbol{r}$ は質点1と2の間を内分する地点の位置を指しており、この位置を物体の位置として扱うことになる。言い換えれば、物体を地点 $\boldsymbol{r}$ にある質量 $m(=m_1+m_2)$ の質点に置き換えるという操作を行っており、従来のときとほぼ同様なことをしていることが分かる。ただし、その位置はどこでもよいわけではなく、上式で制限されているところが従来と異なる。同じように、質点が3個の場合でも質量 $m$ の質点の位置は以下のようになる。このように、複数の質点をまとめて見た時に中心となる位置のことを一般的に **重心** と呼ぶ。
 
 $$
-    \bm{r}=
-    \frac{m_1\bm{r}_1+m_2\bm{r}_2+m_3\bm{r}_3}
+    \boldsymbol{r}=
+    \frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2+m_3\boldsymbol{r}_3}
     {m_1+m_2+m_3}=
-    \frac{(m_1+m_2)\bm{r}_{12}+m_3\bm{r}_3}
+    \frac{(m_1+m_2)\boldsymbol{r}_{12}+m_3\boldsymbol{r}_3}
     {(m_1+m_2)+m_3}、
-    \bm{r}_{12}=
-    \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
+    \boldsymbol{r}_{12}=
+    \frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
 $$
 
 <p align="center">
@@ -100,7 +100,7 @@ $$
         src="images/three_mass_point.png">
 </p>
 
-　以上のことから、物体の重心 $\bm{r}$ に質量 $m$ の質点があるものとみなすことで運動を記述できることになる。しかし、力のつり合いが成り立っている状況でも引っかけた場合だと回転してしまうため、回転運動については別で考察が必要になるものと思われる。そのため、次頁では回転運動について具体的に見ていくことにしよう。
+　以上のことから、物体の重心 $\boldsymbol{r}$ に質量 $m$ の質点があるものとみなすことで運動を記述できることになる。しかし、力のつり合いが成り立っている状況でも引っかけた場合だと回転してしまうため、回転運動については別で考察が必要になるものと思われる。そのため、次頁では回転運動について具体的に見ていくことにしよう。
 
 <p align="center">
     <img width="20%"  

@@ -24,30 +24,30 @@ $$
 </p>
 このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
 
-　一般的に、ある地点の位置を指定するときはベクトルが用いられており、その中身は座標系を指定することで表すことができる。例えば、平面上の地点をベクトル $\bm{s}$ で表すとき座標系として二次元直交座標系 $(X,Y)$ を用いると $\bm{s}=(X,Y)$ となる。しかし、この表記だけだと二次元直交座標系かどうか判断ができない（二次元斜交座標系なども考えられる）ため、**基本ベクトル**（各成分の大きさ1のベクトル）というものが利用される。すなわち、二次元直交座標系の基本ベクトルを $\bm{e}_X,\bm{e}_Y$ として
+　一般的に、ある地点の位置を指定するときはベクトルが用いられており、その中身は座標系を指定することで表すことができる。例えば、平面上の地点をベクトル $\boldsymbol{s}$ で表すとき座標系として二次元直交座標系 $(X,Y)$ を用いると $\boldsymbol{s}=(X,Y)$ となる。しかし、この表記だけだと二次元直交座標系かどうか判断ができない（二次元斜交座標系なども考えられる）ため、**基本ベクトル**（各成分の大きさ1のベクトル）というものが利用される。すなわち、二次元直交座標系の基本ベクトルを $\boldsymbol{e}_X,\boldsymbol{e}_Y$ として
 
 $$
-    \bm{s}=X\bm{e}_X+Y\bm{e}_Y、
-    \bm{e}_X\cdot\bm{e}_X=1、
-    \bm{e}_Y\cdot\bm{e}_Y=1、
-    \bm{e}_X\cdot\bm{e}_Y=0
+    \boldsymbol{s}=X\boldsymbol{e}_X+Y\boldsymbol{e}_Y、
+    \boldsymbol{e}_X\cdot\boldsymbol{e}_X=1、
+    \boldsymbol{e}_Y\cdot\boldsymbol{e}_Y=1、
+    \boldsymbol{e}_X\cdot\boldsymbol{e}_Y=0
 $$
 
-というようにすると、$\bm{s}$ を表記できてなおかつ基本ベクトルの大きさが1で互いに直交している（直交座標系である）ことが分かる。同様に、二次元斜交座標系 $(x,y)$ において基本ベクトルを $\bm{e}_x,\bm{e}_y$ として
+というようにすると、$\boldsymbol{s}$ を表記できてなおかつ基本ベクトルの大きさが1で互いに直交している（直交座標系である）ことが分かる。同様に、二次元斜交座標系 $(x,y)$ において基本ベクトルを $\boldsymbol{e}_x,\boldsymbol{e}_y$ として
 
 $$
-    \bm{s}=x\bm{e}_x+y\bm{e}_y、
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_y\cdot\bm{e}_y=1、
-    \bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}
+    \boldsymbol{s}=x\boldsymbol{e}_x+y\boldsymbol{e}_y、
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
+    \boldsymbol{e}_y\cdot\boldsymbol{e}_y=1、
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_y=\frac{1}{\sqrt{2}}
 $$
 
-というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。このことを踏まえて、今度は直交座標系から斜交座標系に変換することを考えると、ベクトル $\bm{s}$ について
+というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。このことを踏まえて、今度は直交座標系から斜交座標系に変換することを考えると、ベクトル $\boldsymbol{s}$ について
 
 $$
-    \bm{s}=
-    X\bm{e}_X+Y\bm{e}_Y=
-    x\bm{e}_x+y\bm{e}_y
+    \boldsymbol{s}=
+    X\boldsymbol{e}_X+Y\boldsymbol{e}_Y=
+    x\boldsymbol{e}_x+y\boldsymbol{e}_y
 $$
 
 というように表記を置き換えることになる。しかし、このままだと互いにどのような関係になっているか分からない（色々取りうる可能性がある）ため、例として以下の変換式に基づいて座標変換される場合を考えてみる。
@@ -65,134 +65,134 @@ $$
     y = \sqrt{2}Y
 $$
 
-すると、先ほどのベクトル $\bm{s}$ の関係式に変換式を代入することで
+すると、先ほどのベクトル $\boldsymbol{s}$ の関係式に変換式を代入することで
 
 $$
-    \bm{s}=
+    \boldsymbol{s}=
     \left(
         x+\frac{1}{\sqrt{2}}y
     \right)
-    \bm{e}_X+
-    \frac{1}{\sqrt{2}}y\bm{e}_Y=
-    x\bm{e}_X+
+    \boldsymbol{e}_X+
+    \frac{1}{\sqrt{2}}y\boldsymbol{e}_Y=
+    x\boldsymbol{e}_X+
     y
     \left(
-        \frac{1}{\sqrt{2}}\bm{e}_X+
-        \frac{1}{\sqrt{2}}\bm{e}_Y
+        \frac{1}{\sqrt{2}}\boldsymbol{e}_X+
+        \frac{1}{\sqrt{2}}\boldsymbol{e}_Y
     \right)=
-    x\bm{e}_x+y\bm{e}_y
+    x\boldsymbol{e}_x+y\boldsymbol{e}_y
 $$
 $$
-    \bm{s}=
+    \boldsymbol{s}=
     \left(
         X-Y
     \right)
-    \bm{e}_x+
-    \sqrt{2}Y\bm{e}_y=
-    X\bm{e}_x+
+    \boldsymbol{e}_x+
+    \sqrt{2}Y\boldsymbol{e}_y=
+    X\boldsymbol{e}_x+
     Y
     \left(
-        -\bm{e}_x+\sqrt{2}\bm{e}_y
+        -\boldsymbol{e}_x+\sqrt{2}\boldsymbol{e}_y
     \right)=
-    X\bm{e}_X+Y\bm{e}_Y
+    X\boldsymbol{e}_X+Y\boldsymbol{e}_Y
 $$
 
 というようになるため、比較すると以下の式が得られる。
 
 $$
-    \bm{e}_x=\bm{e}_X、
-    \bm{e}_y=
-    \frac{1}{\sqrt{2}}\bm{e}_X+
-    \frac{1}{\sqrt{2}}\bm{e}_Y、
-    \bm{e}_X=\bm{e}_x、
-    \bm{e}_Y=-\bm{e}_x+\sqrt{2}\bm{e}_y
+    \boldsymbol{e}_x=\boldsymbol{e}_X、
+    \boldsymbol{e}_y=
+    \frac{1}{\sqrt{2}}\boldsymbol{e}_X+
+    \frac{1}{\sqrt{2}}\boldsymbol{e}_Y、
+    \boldsymbol{e}_X=\boldsymbol{e}_x、
+    \boldsymbol{e}_Y=-\boldsymbol{e}_x+\sqrt{2}\boldsymbol{e}_y
 $$
 
 この関係から、変換後の内積を求めてみると
 
 $$
-    \bm{e}_x\cdot\bm{e}_x=
-    \bm{e}_X\cdot\bm{e}_X=1
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=
+    \boldsymbol{e}_X\cdot\boldsymbol{e}_X=1
 $$
 $$
-    \bm{e}_y\cdot\bm{e}_y=
-    \frac{1}{2}(\bm{e}_X\cdot\bm{e}_X)+
-    (\bm{e}_X\cdot\bm{e}_Y)+
-    \frac{1}{2}(\bm{e}_Y\cdot\bm{e}_Y)=1
+    \boldsymbol{e}_y\cdot\boldsymbol{e}_y=
+    \frac{1}{2}(\boldsymbol{e}_X\cdot\boldsymbol{e}_X)+
+    (\boldsymbol{e}_X\cdot\boldsymbol{e}_Y)+
+    \frac{1}{2}(\boldsymbol{e}_Y\cdot\boldsymbol{e}_Y)=1
 $$
 $$
-    \bm{e}_x\cdot\bm{e}_y=
-    \frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_X)+
-    \frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_Y)=
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_y=
+    \frac{1}{\sqrt{2}}(\boldsymbol{e}_X\cdot\boldsymbol{e}_X)+
+    \frac{1}{\sqrt{2}}(\boldsymbol{e}_X\cdot\boldsymbol{e}_Y)=
     \frac{1}{\sqrt{2}}
 $$
 
 というように、内積に関して斜交座標系のものになっていることが分かる。このように、変換式を用いることで座標変換されるとともに変換前後の座標系の状態は基底ベクトルと内積によって確認できるものと予想される。そのため、先ほどの定加速度系での変換について考えてみると、変換前の直交座標系において
 
 $$
-    \bm{s}=x\bm{e}_x+w\bm{e}_w、
-    \bm{e}_x\cdot\bm{e}_x=1、
-    \bm{e}_w\cdot\bm{e}_w=1、
-    \bm{e}_x\cdot\bm{e}_w=0
+    \boldsymbol{s}=x\boldsymbol{e}_x+w\boldsymbol{e}_w、
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
+    \boldsymbol{e}_w\cdot\boldsymbol{e}_w=1、
+    \boldsymbol{e}_x\cdot\boldsymbol{e}_w=0
 $$
 
 となっているものして、変換後に
 
 $$
-    \bm{s}=
-    x\bm{e}_x+w\bm{e}_w=
-    x'\bm{e}_{x'}+w'\bm{e}_{w'}
+    \boldsymbol{s}=
+    x\boldsymbol{e}_x+w\boldsymbol{e}_w=
+    x'\boldsymbol{e}_{x'}+w'\boldsymbol{e}_{w'}
 $$
 
-というようになっているものとする。ところが、ここで変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要が出てくる。そこで $\bm{s}$ を一般に
+というようになっているものとする。ところが、ここで変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要が出てくる。そこで $\boldsymbol{s}$ を一般に
 
 $$
-    \bm{s}=\bm{s}(X,Y)=\bm{s}(x,y)
+    \boldsymbol{s}=\boldsymbol{s}(X,Y)=\boldsymbol{s}(x,y)
 $$
 
 というように変換されるものとして、この微小変化をとることで
 
 $$
-    \mathrm{d}\bm{s}=
+    \mathrm{d}\boldsymbol{s}=
     \left(
-        \frac{\partial \bm{s}}{\partial X}
+        \frac{\partial \boldsymbol{s}}{\partial X}
     \right)
     \mathrm{d}X+
     \left(
-        \frac{\partial \bm{s}}{\partial Y}
+        \frac{\partial \boldsymbol{s}}{\partial Y}
     \right)
     \mathrm{d}Y=
     \left(
-        \frac{\partial \bm{s}}{\partial x}
+        \frac{\partial \boldsymbol{s}}{\partial x}
     \right)
     \mathrm{d}x+
     \left(
-        \frac{\partial \bm{s}}{\partial y}
+        \frac{\partial \boldsymbol{s}}{\partial y}
     \right)
     \mathrm{d}y
 $$
 
-と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
+と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\boldsymbol{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
 
 $$
-    \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}、
-    \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}、
-    \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}、
-    \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}
+    \boldsymbol{u}_X=
+    \frac{\partial \boldsymbol{s}}{\partial X}、
+    \boldsymbol{u}_Y=
+    \frac{\partial \boldsymbol{s}}{\partial Y}、
+    \boldsymbol{u}_x=
+    \frac{\partial \boldsymbol{s}}{\partial x}、
+    \boldsymbol{u}_y=
+    \frac{\partial \boldsymbol{s}}{\partial y}
 $$
 
 というように置くことで以下の形になることが分かる。
 
 $$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}X\bm{u}_X+
-    \mathrm{d}Y\bm{u}_Y=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}y\bm{u}_y
+    \mathrm{d}\boldsymbol{s}=
+    \mathrm{d}X\boldsymbol{u}_X+
+    \mathrm{d}Y\boldsymbol{u}_Y=
+    \mathrm{d}x\boldsymbol{u}_x+
+    \mathrm{d}y\boldsymbol{u}_y
 $$
 
 また、座標系間で変数が
@@ -246,140 +246,140 @@ $$
     \mathrm{d}Y
 $$
 
-であるため、$\mathrm{d}\bm{s}$ の関係式に代入すると
+であるため、$\mathrm{d}\boldsymbol{s}$ の関係式に代入すると
 
 $$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}X\bm{u}_X+
-    \mathrm{d}Y\bm{u}_Y=
+    \mathrm{d}\boldsymbol{s}=
+    \mathrm{d}X\boldsymbol{u}_X+
+    \mathrm{d}Y\boldsymbol{u}_Y=
     \left[
         \left(
             \frac{\partial x}{\partial X}
         \right)
-        \bm{u}_x+
+        \boldsymbol{u}_x+
         \left(
             \frac{\partial y}{\partial X}
         \right)
-        \bm{u}_y
+        \boldsymbol{u}_y
     \right]
     \mathrm{d}X+
     \left[
         \left(
             \frac{\partial x}{\partial Y}
         \right)
-        \bm{u}_x+
+        \boldsymbol{u}_x+
         \left(
             \frac{\partial y}{\partial Y}
         \right)
-        \bm{u}_y
+        \boldsymbol{u}_y
     \right]
     \mathrm{d}Y
 $$
 $$
-    \mathrm{d}\bm{s}=
+    \mathrm{d}\boldsymbol{s}=
     \left[
         \left(
             \frac{\partial X}{\partial x}
         \right)
-        \bm{u}_X+
+        \boldsymbol{u}_X+
         \left(
             \frac{\partial Y}{\partial x}
         \right)
-        \bm{u}_Y
+        \boldsymbol{u}_Y
     \right]
     \mathrm{d}x+
     \left[
         \left(
             \frac{\partial X}{\partial y}
         \right)
-        \bm{u}_X+
+        \boldsymbol{u}_X+
         \left(
             \frac{\partial Y}{\partial y}
         \right)
-        \bm{u}_Y
+        \boldsymbol{u}_Y
     \right]
     \mathrm{d}y=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}y\bm{u}_y
+    \mathrm{d}x\boldsymbol{u}_x+
+    \mathrm{d}y\boldsymbol{u}_y
 $$
 
 
 となるため、比較すると以下の関係式が得られる。
 
 $$
-    \bm{u}_X=
+    \boldsymbol{u}_X=
     \frac{\partial x}{\partial X}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial y}{\partial X}
-    \bm{u}_y、
-    \bm{u}_Y=
+    \boldsymbol{u}_y、
+    \boldsymbol{u}_Y=
     \frac{\partial x}{\partial Y}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial y}{\partial Y}
-    \bm{u}_y
+    \boldsymbol{u}_y
 $$
 $$
-    \bm{u}_x=
+    \boldsymbol{u}_x=
     \frac{\partial X}{\partial x}
-    \bm{u}_X+
+    \boldsymbol{u}_X+
     \frac{\partial Y}{\partial x}
-    \bm{u}_Y、
-    \bm{u}_y=
+    \boldsymbol{u}_Y、
+    \boldsymbol{u}_y=
     \frac{\partial X}{\partial y}
-    \bm{u}_X+
+    \boldsymbol{u}_X+
     \frac{\partial Y}{\partial y}
-    \bm{u}_Y
+    \boldsymbol{u}_Y
 $$
 
 この関係式が正しいかは、次のように展開してみることで確認できる。
 
 $$
-    \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}=
+    \boldsymbol{u}_X=
+    \frac{\partial \boldsymbol{s}}{\partial X}=
     \frac{\partial x}{\partial X}
-    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial \boldsymbol{s}}{\partial x}+
     \frac{\partial y}{\partial X}
-    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial \boldsymbol{s}}{\partial y}=
     \frac{\partial x}{\partial X}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial y}{\partial X}
-    \bm{u}_y
+    \boldsymbol{u}_y
 $$
 $$
-    \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}=
+    \boldsymbol{u}_Y=
+    \frac{\partial \boldsymbol{s}}{\partial Y}=
     \frac{\partial x}{\partial Y}
-    \frac{\partial \bm{s}}{\partial x}+
+    \frac{\partial \boldsymbol{s}}{\partial x}+
     \frac{\partial y}{\partial Y}
-    \frac{\partial \bm{s}}{\partial y}=
+    \frac{\partial \boldsymbol{s}}{\partial y}=
     \frac{\partial x}{\partial Y}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial y}{\partial Y}
-    \bm{u}_y
+    \boldsymbol{u}_y
 $$
 $$
-    \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
+    \boldsymbol{u}_x=
+    \frac{\partial \boldsymbol{s}}{\partial x}=
     \frac{\partial X}{\partial x}
-    \frac{\partial \bm{s}}{\partial X}+
+    \frac{\partial \boldsymbol{s}}{\partial X}+
     \frac{\partial Y}{\partial x}
-    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial \boldsymbol{s}}{\partial Y}=
     \frac{\partial X}{\partial x}
-    \bm{u}_X+
+    \boldsymbol{u}_X+
     \frac{\partial Y}{\partial x}
-    \bm{u}_Y
+    \boldsymbol{u}_Y
 $$
 $$
-    \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
+    \boldsymbol{u}_y=
+    \frac{\partial \boldsymbol{s}}{\partial y}=
     \frac{\partial X}{\partial y}
-    \frac{\partial \bm{s}}{\partial X}+
+    \frac{\partial \boldsymbol{s}}{\partial X}+
     \frac{\partial Y}{\partial y}
-    \frac{\partial \bm{s}}{\partial Y}=
+    \frac{\partial \boldsymbol{s}}{\partial Y}=
     \frac{\partial X}{\partial y}
-    \bm{u}_X+
+    \boldsymbol{u}_X+
     \frac{\partial Y}{\partial y}
-    \bm{u}_Y
+    \boldsymbol{u}_Y
 $$
 
 これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
@@ -407,46 +407,46 @@ $$
 となることから、以下のような式が得られる。
 
 $$
-    \bm{u}_X=\bm{u}_x、
-    \bm{u}_Y=
-    -\bm{u}_x+\sqrt{2}\bm{u}_y、
-    \bm{u}_x=\bm{u}_X、
-    \bm{u}_y=
-    \frac{1}{\sqrt{2}}\bm{u}_X+
-    \frac{1}{\sqrt{2}}\bm{u}_Y
+    \boldsymbol{u}_X=\boldsymbol{u}_x、
+    \boldsymbol{u}_Y=
+    -\boldsymbol{u}_x+\sqrt{2}\boldsymbol{u}_y、
+    \boldsymbol{u}_x=\boldsymbol{u}_X、
+    \boldsymbol{u}_y=
+    \frac{1}{\sqrt{2}}\boldsymbol{u}_X+
+    \frac{1}{\sqrt{2}}\boldsymbol{u}_Y
 $$
 
-また、このときのベクトル $\bm{s}$ は基本ベクトルを用いて
+また、このときのベクトル $\boldsymbol{s}$ は基本ベクトルを用いて
 
 $$
-    \bm{s}=
-    X\bm{e}_X+Y\bm{e}_Y=
-    x\bm{e}_x+y\bm{e}_y
+    \boldsymbol{s}=
+    X\boldsymbol{e}_X+Y\boldsymbol{e}_Y=
+    x\boldsymbol{e}_x+y\boldsymbol{e}_y
 $$
 
 と書ける（**基本ベクトルが位置によって変わらない**）ことから、この偏微分をとることで
 
 $$
-    \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}=
-    \bm{e}_X、
-    \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}=
-    \bm{e}_Y、
-    \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
-    \bm{e}_x、
-    \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
-    \bm{e}_y
+    \boldsymbol{u}_X=
+    \frac{\partial \boldsymbol{s}}{\partial X}=
+    \boldsymbol{e}_X、
+    \boldsymbol{u}_Y=
+    \frac{\partial \boldsymbol{s}}{\partial Y}=
+    \boldsymbol{e}_Y、
+    \boldsymbol{u}_x=
+    \frac{\partial \boldsymbol{s}}{\partial x}=
+    \boldsymbol{e}_x、
+    \boldsymbol{u}_y=
+    \frac{\partial \boldsymbol{s}}{\partial y}=
+    \boldsymbol{e}_y
 $$
 
 といように基底ベクトルと基本ベクトルが同じものとなる。一方で、定加速度系については、変換後については基本ベクトルが各地点で同じにならないことから、以下の変換前の式しか成り立たないことになる。
 
 $$
-    \bm{s}=x\bm{e}_x+y\bm{e}_y、
-    \bm{u}_x=\bm{e}_x、
-    \bm{u}_y=\bm{e}_y
+    \boldsymbol{s}=x\boldsymbol{e}_x+y\boldsymbol{e}_y、
+    \boldsymbol{u}_x=\boldsymbol{e}_x、
+    \boldsymbol{u}_y=\boldsymbol{e}_y
 $$
 
 そのため、まず基底ベクトルを
@@ -474,24 +474,24 @@ $$
 を利用して求めてみると、以下のような関係式が得られる。
 
 $$
-    \bm{u}_x=\bm{u}_{x'}、
-    \bm{u}_w=
+    \boldsymbol{u}_x=\boldsymbol{u}_{x'}、
+    \boldsymbol{u}_w=
     -\frac{a}{c^2}w'
-    \bm{u}_{x'}+
-    \bm{u}_{w'}、
-    \bm{u}_{x'}=\bm{u}_x、
-    \bm{u}_{w'}=
+    \boldsymbol{u}_{x'}+
+    \boldsymbol{u}_{w'}、
+    \boldsymbol{u}_{x'}=\boldsymbol{u}_x、
+    \boldsymbol{u}_{w'}=
     \frac{a}{c^2}w
-    \bm{u}_x+\bm{u}_w
+    \boldsymbol{u}_x+\boldsymbol{u}_w
 $$
 
 そして、これから変換後の内積を求めると
 
 $$
-    \bm{u}_{x'}\cdot\bm{u}_{x'}=1、
-    \bm{u}_{w'}\cdot\bm{u}_{w'}=
+    \boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{x'}=1、
+    \boldsymbol{u}_{w'}\cdot\boldsymbol{u}_{w'}=
     1+\frac{a^2}{c^4}w'^2、
-    \bm{u}_{x'}\cdot\bm{u}_{w'}=
+    \boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{w'}=
     \frac{a}{c^2}w'
 $$
 
@@ -499,35 +499,35 @@ $$
 
 
 $$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_{x'}+
-    \mathrm{d}{w'}\bm{u}_{w'}
+    \mathrm{d}\boldsymbol{s}=
+    \mathrm{d}x\boldsymbol{u}_x+
+    \mathrm{d}w\boldsymbol{u}_w=
+    \mathrm{d}{x'}\boldsymbol{u}_{x'}+
+    \mathrm{d}{w'}\boldsymbol{u}_{w'}
 $$
 
 として、この内積を求めると
 
 $$
     \begin{aligned}
-        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
+        \mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}
         &=
-        (\bm{u}_x\cdot\bm{u}_x)
+        (\boldsymbol{u}_x\cdot\boldsymbol{u}_x)
         \mathrm{d}x\mathrm{d}x+
-        (\bm{u}_x\cdot\bm{u}_w)
+        (\boldsymbol{u}_x\cdot\boldsymbol{u}_w)
         \mathrm{d}x\mathrm{d}w+
-        (\bm{u}_w\cdot\bm{u}_x)
+        (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)
         \mathrm{d}w\mathrm{d}x+
-        (\bm{u}_w\cdot\bm{u}_w)
+        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_{x'}\cdot\bm{u}_{x'})
+        (\boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{x'})
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_{x'}\cdot\bm{u}_{w'})
+        (\boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{w'})
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{x'})
+        (\boldsymbol{u}_{w'}\cdot\boldsymbol{u}_{x'})
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{w'})
+        (\boldsymbol{u}_{w'}\cdot\boldsymbol{u}_{w'})
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -536,7 +536,7 @@ $$
 
 
 $$
-        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+        \mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}=
         \mathrm{d}x\mathrm{d}x+
         \mathrm{d}w\mathrm{d}w=
         \mathrm{d}{x'}\mathrm{d}{x'}+
@@ -550,36 +550,36 @@ $$
 
 であるから比較することで、先ほどの内積の関係が得られる。
 
-以上のことから、直交座標系 $(x,w)$ から加速度系 $(x',w')$ へ座標変換した場合ベクトル $\bm{s}$ に対して
+以上のことから、直交座標系 $(x,w)$ から加速度系 $(x',w')$ へ座標変換した場合ベクトル $\boldsymbol{s}$ に対して
 
 
 $$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_{x'}+
-    \mathrm{d}{w'}\bm{u}_{w'}
+    \mathrm{d}\boldsymbol{s}=
+    \mathrm{d}x\boldsymbol{u}_x+
+    \mathrm{d}w\boldsymbol{u}_w=
+    \mathrm{d}{x'}\boldsymbol{u}_{x'}+
+    \mathrm{d}{w'}\boldsymbol{u}_{w'}
 $$
 $$
     \begin{aligned}
-        \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
+        \mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}
         &=
-        (\bm{u}_x\cdot\bm{u}_x)
+        (\boldsymbol{u}_x\cdot\boldsymbol{u}_x)
         \mathrm{d}x\mathrm{d}x+
-        (\bm{u}_x\cdot\bm{u}_w)
+        (\boldsymbol{u}_x\cdot\boldsymbol{u}_w)
         \mathrm{d}x\mathrm{d}w+
-        (\bm{u}_w\cdot\bm{u}_x)
+        (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)
         \mathrm{d}w\mathrm{d}x+
-        (\bm{u}_w\cdot\bm{u}_w)
+        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_{x'}\cdot\bm{u}_{x'})
+        (\boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{x'})
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_{x'}\cdot\bm{u}_{w'})
+        (\boldsymbol{u}_{x'}\cdot\boldsymbol{u}_{w'})
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{x'})
+        (\boldsymbol{u}_{w'}\cdot\boldsymbol{u}_{x'})
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{w'})
+        (\boldsymbol{u}_{w'}\cdot\boldsymbol{u}_{w'})
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -610,16 +610,16 @@ $$
 と変換され、片方で基底ベクトルに対しては
 
 $$
-    \bm{u}_x'=
+    \boldsymbol{u}_x'=
     \frac{\partial x}{\partial x'}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial w}{\partial x'}
-    \bm{u}_w、
-    \bm{u}_w'=
+    \boldsymbol{u}_w、
+    \boldsymbol{u}_w'=
     \frac{\partial x}{\partial w'}
-    \bm{u}_x+
+    \boldsymbol{u}_x+
     \frac{\partial w}{\partial w'}
-    \bm{u}_w
+    \boldsymbol{u}_w
 $$
 
 となるが、互いによく見ると同じ変換ではなく係数が逆になっていることが分かる。このように、座標変換をすると少なくとも二通りの変換が行われており、一般的に一つ目の式の形で変換されるベクトルを**反変ベクトル**と、二つ目の式で変換されるベクトルを**共変ベクトル**というように呼ぶ。このことについて、次回で述べていくことにする。

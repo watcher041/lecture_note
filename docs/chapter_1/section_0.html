@@ -31,12 +31,15 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../option.css">
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -93,10 +96,13 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -147,7 +153,12 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,8 +178,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="古典力学"><a class="header" href="#古典力学">古典力学</a></h1>
+                        <h1 id="古典力学"><a class="header" href="#古典力学">古典力学</a></h1>
 <p>　昔々、まだ夜道を照らす灯もなく、人々の住まいは一日の半ば近くも真っ暗な闇の中に閉ざされ、その闇の奥から時折狼の遠吠えが、野原を渡る風の音に混じって気味悪く聞こえて来ていた頃、恐らく星は人々にとって今よりも遥かに身近で重要な存在だった。一日の仕事を終えて粗末な褥（しとね）に身を横たえる前のひとときや、東の空の白むのももどかしく眠りから目覚めた時、彼らが決まって振り仰ぐ星空には幾つもの親しみやすい図形が待ち受けていた。その或るものは美しい乙女が天に舞う姿を思わせたし、また或るものは大きな獅子となって頭上から彼らを威圧するかのように見えた。</p>
 <p>　そのような図形や相互の配置のおおよそを、恐らく多くの人々はそらんじていたのであろう。実際、満足なあかりも、そしてまた、その下で読むべき何物をも持たなかった人々にとって、星空は彼らの涯しない夢を育むただ一つの、そしてそれ故にこそ何回となく読み古された物語のようなものだった。</p>
 <p>　月日の流れを知る目安として、子は親から、親はまたその親から教えられたことであっただろうが、夜明け前の東の空や日没間もない西の空に輝く星の一団は、何故か季節によっていつも決まっているように見えた。天球上の太陽の通り道としての<strong>黄道</strong>（地球の公転軌道面と天球との公転）は、このようにしていつとはなしに人々の知るところとなった。</p>
@@ -243,6 +253,7 @@
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
+
 
 
     </div>

@@ -31,12 +31,15 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../option.css">
 
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -93,10 +96,13 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -147,7 +153,12 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -167,8 +178,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="熱力学"><a class="header" href="#熱力学">熱力学</a></h1>
+                        <h1 id="熱力学"><a class="header" href="#熱力学">熱力学</a></h1>
 <p>　現在のように熱力学と呼ぶようになったのは19世紀に入ってからであり、それ以前は単に熱学であった。熱学の研究の起源については、他の科学の歴史と同様に、古代ギリシャ、ローマにまで遡らなければならない。当時、自然現象を研究する基本的方法は、見たり感じたりなどする簡単な観察が行われた程度であった。すでに当時でも、最も簡単な熱作用の現れである蒸発、沸騰、融解などが知られていたが、これらの現象を説明しようとする試みは成功していなかった。</p>
 <p>　人間がこの分野における知識をはじめて充実させ、体系化して物理的解釈を与えたのはやっと17世紀になってからのことである。それは熱現象を単に観察するだけではなく、実験的に研究しようとするようになったからである。この頃になると温度計の発明がなされていた。たとえば、ガリレイは空気の熱膨張を利用した一種の気体を考案している。あとで述べるように、引き続いていろいろな温度計が作られた。こうして温度が定量的に測定できるようになると、それに応じて熱学も発展していった。特に18世紀に混乱をまねいた熱理論の2つの基本概念である温度と熱量を正確に区別することが可能となった。</p>
 <p>　実験に基づいた熱現象の研究は、いわゆる熱と呼ばれるものの性質についての問題解決へと近づいて行った。しかしながら、その本質が何であるかについては、18世紀の終わりごろまでは熱を運動の一形態と考える学者と、熱を一種の物質とする熱素説（カロリック説）をとる学者とがあった。熱素説は18世紀半ばすぎに起こった。提唱者はフランスのラヴォアジエで、1787年の命名である。熱という一種の物質があるとする考え方はギリシャ時代からもあったが、それが18世紀に復活した背景には、光と同様にニュートン物理学が有力に働いていたことも事実であろう、18世紀のはじめにニュートンは光の粒子説を唱えていた。したがって、熱現象を熱素によって説明することは、当時多くの学者たちにとって全く当然に思われたのである。のみならず、カロリックによって純熱学的現象を説明することにある程度成功したのである。例えば、イギリスのブラックは熱素説の立場から熱容量や潜熱の概念を明らかにした。一方で同じ頃、独立に比熱、潜熱、熱膨張などについて研究していたイギリスのキャベンディッシュは、ブラックの潜熱という表現に反対して、水蒸気が凝結するときは”熱が発生する”という表現をとった。彼は熱が物体中の粒子の内部運動であるという考えを基にして、今日の気体分子運動論的立場をとっていた。そのほか、ロシアのロモノソフは熱の本性が物体を構成する微粒子の回転運動によるものと考えていた。このように、物体を構成する微粒子の運動が熱の本質であるという考えをもとに、逆に完全に運動が静止するような温度が存在しなければならないという結論も下している。これは後にトムソンによって発見された温度（<strong>絶対零度</strong>）であったのだが、熱素説が注目されていた当時としては影が薄いものとなっていた。</p>
@@ -236,6 +246,7 @@
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
+
 
 
     </div>

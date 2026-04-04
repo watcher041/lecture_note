@@ -103,66 +103,66 @@ $$
     B_{y'}=\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)、
     B_{z'}=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
 $$
-確認の例として、電荷 $q$ の点電荷に電場 $\bm{E}$' と磁場 $\bm{B}'$ が働いているとすると
+確認の例として、電荷 $q$ の点電荷に電場 $\boldsymbol{E}$' と磁場 $\boldsymbol{B}'$ が働いているとすると
 $$
-    \frac{\mathrm{d}\bm{p}'}{\mathrm{d}\tau'}=\bm{f}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \frac{\mathrm{d}\boldsymbol{p}'}{\mathrm{d}\tau'}=\boldsymbol{f}=
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
     \left[
-    q\bm{E}'+q(\bm{v}'\times\bm{B}')
+    q\boldsymbol{E}'+q(\boldsymbol{v}'\times\boldsymbol{B}')
     \right]
 $$
 $$
     \frac{\mathrm{d}E'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
     \left[
-       q\bm{E}'+q(\bm{v}'\times\bm{B}') 
-    \right]\cdot\bm{v}'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    (\bm{v}'\cdot q\bm{E}')
+       q\boldsymbol{E}'+q(\boldsymbol{v}'\times\boldsymbol{B}') 
+    \right]\cdot\boldsymbol{v}'=
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
+    (\boldsymbol{v}'\cdot q\boldsymbol{E}')
 $$
 となるが、各成分に対して変換すると以下の通りになる。
 $$
     \frac{\mathrm{d}p_x'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \gamma
     \left[
         qE_x+
         q(v_yB_z-v_zB_y)-
-        \frac{V}{c^2}(\bm{v}\cdot q\bm{E})
+        \frac{V}{c^2}(\boldsymbol{v}\cdot q\boldsymbol{E})
     \right]
 $$
 $$
     \frac{\mathrm{d}p_y'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
         qE_y+q(v_zB_x-v_xB_z)
     \right]
 $$
 $$
     \frac{\mathrm{d}p_z'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
         qE_z+q(v_xB_y-v_yB_x)
     \right]
 $$
 $$
     \frac{\mathrm{d}E'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
-        (\bm{v}\cdot q\bm{E})-
+        (\boldsymbol{v}\cdot q\boldsymbol{E})-
         V\{E_x+q(v_yB_z-v_zB_y)\}
     \right]
 $$
 これにより、力に関して以下の対応になっていることが再確認できる。
 $$
     f_x'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
     \left[
         qE_x'+q(v_y'B_z'-v_z'B_y')
     \right]
     \leftrightarrow
     f_x=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
         qE_x+q(v_yB_z-v_zB_y)
     \right]
@@ -170,36 +170,36 @@ $$
 
 $$
     f_y'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
     \left[
         qE_y'+q(v_z'B_x'-v_x'B_z')
     \right]
     \leftrightarrow
     f_y=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
         qE_y+q(v_zB_x-v_xB_z)
     \right]
 $$
 $$
     f_z'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
     \left[
         qE_z'+q(v_x'B_y'-v_y'B_x')
     \right]
     \leftrightarrow
     f_z=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
     \left[
         qE_z+q(v_xB_y-v_yB_x)
     \right]
 $$
 $$
     f_w'=
-    \frac{1}{c\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    (\bm{v}'\cdot q\bm{E}')
+    \frac{1}{c\sqrt{1-\frac{\boldsymbol{v}'^2}{c^2}}}
+    (\boldsymbol{v}'\cdot q\boldsymbol{E}')
     \leftrightarrow
     f_w=
-    \frac{1}{c\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    (\bm{v}\cdot q\bm{E})
+    \frac{1}{c\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    (\boldsymbol{v}\cdot q\boldsymbol{E})
 $$

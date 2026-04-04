@@ -1,40 +1,40 @@
 
 ## 仕事とエネルギー
 
-回転運動においては位置と運動量の外積あるいは力の外積がそれぞれ角運動量 $\bm{L}$ と力のモーメント $\bm{N}$ になることを述べた。
+回転運動においては位置と運動量の外積あるいは力の外積がそれぞれ角運動量 $\boldsymbol{L}$ と力のモーメント $\boldsymbol{N}$ になることを述べた。
 
 $$
-    \bm{L}=\bm{r}\times\bm{P}、
-    \bm{N}=\bm{r}\times\bm{F}
+    \boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{P}、
+    \boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
 $$
 
 一方でこれらの内積の方にはどのような意味を持つかを見てみることにする。そこで、まず角運動量の外積を内積に置き換えた量を時間微分してみると、
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (\bm{r}\cdot\bm{p})=
+    (\boldsymbol{r}\cdot\boldsymbol{p})=
     m
     \left(
-        \bm{v}^2+
-        \bm{r}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+        \boldsymbol{v}^2+
+        \boldsymbol{r}\cdot
+        \frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
     \right)=
-    m\bm{v}^2+
-    \bm{r}\cdot\bm{F}
+    m\boldsymbol{v}^2+
+    \boldsymbol{r}\cdot\boldsymbol{F}
 $$
 
-というようになり特に意味がないように感じるが、これを踏まえて今度は $\bm{v}\cdot\bm{p}$ を時間微分してみると以下の通りになる。
+というようになり特に意味がないように感じるが、これを踏まえて今度は $\boldsymbol{v}\cdot\boldsymbol{p}$ を時間微分してみると以下の通りになる。
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (\bm{v}\cdot\bm{p})=
+    (\boldsymbol{v}\cdot\boldsymbol{p})=
     2m
     \left(
-        \bm{v}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+        \boldsymbol{v}\cdot
+        \frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
     \right)=
     2\left(
-        \bm{v}\cdot\bm{F}
+        \boldsymbol{v}\cdot\boldsymbol{F}
     \right)
 $$
 
@@ -45,9 +45,9 @@ $$
     K=
     \frac{1}{2}
     \left(
-        \bm{v}\cdot\bm{p}
+        \boldsymbol{v}\cdot\boldsymbol{p}
     \right)、
-    P=\bm{v}\cdot\bm{F}
+    P=\boldsymbol{v}\cdot\boldsymbol{F}
 $$
 
 ここで $K$ は運動エネルギーと呼ばれ、以下の関係がある。
@@ -56,8 +56,8 @@ $$
     K=
     \frac{1}{2}
     \left(
-        \bm{v}\cdot\bm{p}
+        \boldsymbol{v}\cdot\boldsymbol{p}
     \right)=
-    \frac{\bm{p}^2}{2m}=
-    \frac{1}{2}m\bm{v}^2
+    \frac{\boldsymbol{p}^2}{2m}=
+    \frac{1}{2}m\boldsymbol{v}^2
 $$

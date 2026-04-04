@@ -12,16 +12,16 @@
 　以上の考え方により、帯電体があると周囲の空間はそれ自身の性質によりゆがむと電磁気学では考える（先ほどで言う水がコルク球でへこんだ状態になったことに相当する）。この歪みを**電場**（電気工学系では電界）という。そして、電場の中に別の帯電体を置くことでクーロン力が生じるわけだが、ここで
 
 $$
-    \bm{F}(\bm{r}_q)=q\bm{E}_Q
-    (\bm{r}=\bm{r}_q)
+    \boldsymbol{F}(\boldsymbol{r}_q)=q\boldsymbol{E}_Q
+    (\boldsymbol{r}=\boldsymbol{r}_q)
 $$
 $$
-    \bm{E}_Q(\bm{r})=
-    \frac{kQ}{|\bm{r}-\bm{r}_{Q}|^2}
-    \frac{(\bm{r}-\bm{r}_Q)}{|\bm{r}-\bm{r}_{Q}|}
+    \boldsymbol{E}_Q(\boldsymbol{r})=
+    \frac{kQ}{|\boldsymbol{r}-\boldsymbol{r}_{Q}|^2}
+    \frac{(\boldsymbol{r}-\boldsymbol{r}_Q)}{|\boldsymbol{r}-\boldsymbol{r}_{Q}|}
 $$
 
-と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\bm{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\bm{r}$ に電場 $\bm{E}$ を作り、$\bm{r}=\bm{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\bm{F}$ の力が作用する。
+と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\boldsymbol{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\boldsymbol{r}$ に電場 $\boldsymbol{E}$ を作り、$\boldsymbol{r}=\boldsymbol{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\boldsymbol{F}$ の力が作用する。
 
 　電場がどのように発生するかを見るのに**電気力線**がよく用いられる。これは以下の図に示すように。その接線方向が電場の方向と一致するように線を描いたもので、一つの電荷の場合だと始点か終点のどちらかが無限遠に伸びた形になる。
 
@@ -32,13 +32,13 @@ $$
 これが2つになると、二つの電荷の電場を足したものになり、電荷の符号が同じか異なるかで電気力線の形が違ってくる（同じ電荷量であれば同じ本数だけ放出、吸収する、符号が反転すれば向きが逆になる）。
 
 $$
-    \bm{E}=\bm{E}_q(\bm{r})+\bm{E}_Q(\bm{r})=
+    \boldsymbol{E}=\boldsymbol{E}_q(\boldsymbol{r})+\boldsymbol{E}_Q(\boldsymbol{r})=
     k
     \left[
-        q\frac{(\bm{r}-\bm{r}_q)}
-        {|\bm{r}-\bm{r}_{q}|^3}+
-        Q\frac{(\bm{r}-\bm{r}_Q)}
-        {|\bm{r}-\bm{r}_{Q}|^3}
+        q\frac{(\boldsymbol{r}-\boldsymbol{r}_q)}
+        {|\boldsymbol{r}-\boldsymbol{r}_{q}|^3}+
+        Q\frac{(\boldsymbol{r}-\boldsymbol{r}_Q)}
+        {|\boldsymbol{r}-\boldsymbol{r}_{Q}|^3}
     \right]
 $$
 
@@ -59,7 +59,7 @@ $$
     r^2\sin\phi\ \mathrm{d}\theta\mathrm{d}\phi
 $$
 
-となるのだが、実際は電場と平面に垂直な単位ベクトル $\bm{n}$ のなす角度 $\alpha$ により
+となるのだが、実際は電場と平面に垂直な単位ベクトル $\boldsymbol{n}$ のなす角度 $\alpha$ により
 
 $$
     \mathrm{d}S=
@@ -72,16 +72,16 @@ $$
     <img width="60%" src="images/en_relation.png">
 </p>
 
-一方で、電場と $\bm{n}$ の内積が
+一方で、電場と $\boldsymbol{n}$ の内積が
 
 $$
-    \bm{E}\cdot\bm{n}=E\cos\alpha
+    \boldsymbol{E}\cdot\boldsymbol{n}=E\cos\alpha
 $$
 
 であるが、面上の $E$ の合計（積分）を求めるのに $\cos\alpha$ が余計なので
 
 $$
-    \oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
+    \oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
     \oint E\ \mathrm{d}S'=
     kQ\int_{0}^{2\pi}\mathrm{d}\theta
     \int_{0}^{\pi}\sin\phi\ \mathrm{d}\phi=
@@ -91,23 +91,23 @@ $$
 というようにすると、面上の電場の総和を求めることができる。ここで、左辺については一般的に
 
 $$
-    \oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
-    \oint\bm{E}\cdot\mathrm{d}\bm{S}
+    \oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
+    \oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}
 $$
 
 というように面積分と呼ばれる形で書かれる。任意の閉曲面の結果から、閉曲面の形によらず電場の総量は電荷量に比例していることが予想される。そのため、２個の電荷がある場合にも
 
 $$
-    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
-    \oint\bm{E}_q\cdot\mathrm{d}\bm{S}+
-    \oint\bm{E}_Q\cdot\mathrm{d}\bm{S}=
+    \oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
+    \oint\boldsymbol{E}_q\cdot\mathrm{d}\boldsymbol{S}+
+    \oint\boldsymbol{E}_Q\cdot\mathrm{d}\boldsymbol{S}=
     4\pi k (q+Q)
 $$
 
 というようになる。少しひねくれて、もし閉曲面の外部に電荷がある場合は電場が地点1から地点2に向けて出入りした場合は、
 
 $$
-    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
+    \oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
     E_1\cos(\pi-\alpha_1)
     \mathrm{d}S_1+
     E_2\cos(\alpha_2)
@@ -118,7 +118,7 @@ $$
 である。したがって、閉曲面から出てくる電場というのは、その閉曲面内にある電荷量 $Q$ に比例することになる。これを**Gaussの法則**と呼ぶ。
 
 $$
-    \oint\bm{E}\cdot\mathrm{d}\bm{S}=
+    \oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
     4\pi k Q
 $$
 

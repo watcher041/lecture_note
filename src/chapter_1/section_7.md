@@ -14,7 +14,7 @@ $$
     \rho_i=\frac{m_i}{V_i}　
     \rightarrow　m_i=\rho_i V_i
 $$
-これを見ると、密度が体積分だけあると質量になることが分かるので、１つの地点での値としてみなしても良く $\rho(\bm{r}_i)$ と書くことができる。一方で、作用する力は接触して働く力と離れていても働くものとの二種類あると考えられるため、それぞれ次のようにして作用しているものとする。
+これを見ると、密度が体積分だけあると質量になることが分かるので、１つの地点での値としてみなしても良く $\rho(\boldsymbol{r}_i)$ と書くことができる。一方で、作用する力は接触して働く力と離れていても働くものとの二種類あると考えられるため、それぞれ次のようにして作用しているものとする。
 
 $$
   \begin{cases}
@@ -25,48 +25,48 @@ $$
   \end{cases}
 $$
 
-これらの力は接触面全体あるいは内部領域全体に作用するものであるが、このうち前者の方は作用・反作用の法則により１つの面を境に２つの内部領域には同じ大きさの力が逆向きに働くので、各面ごとに異なる力が働くものと思われる。対して後者の方は、内部領域ごとに違う（質量など）ものであるため、先ほどの密度と同様な考え方で面全体あるいは内部領域全体にかかる力を $\bm{F}_{\mathrm{face}},\bm{F}_{\mathrm{body}}$ として
+これらの力は接触面全体あるいは内部領域全体に作用するものであるが、このうち前者の方は作用・反作用の法則により１つの面を境に２つの内部領域には同じ大きさの力が逆向きに働くので、各面ごとに異なる力が働くものと思われる。対して後者の方は、内部領域ごとに違う（質量など）ものであるため、先ほどの密度と同様な考え方で面全体あるいは内部領域全体にかかる力を $\boldsymbol{F}_{\mathrm{face}},\boldsymbol{F}_{\mathrm{body}}$ として
 
 $$
   \begin{cases}
     \begin{aligned}
-      &\cdot \bm{S}(\bm{r}_{1})=
-      \frac{\bm{F}_{\mathrm{face}}}{A}　（A:接触面の面積）\\
-      &\cdot \bm{B}(\bm{r}_{2})=
-      \frac{\bm{F}_{\mathrm{body}}}{V}　（V:内部領域の体積）
+      &\cdot \boldsymbol{S}(\boldsymbol{r}_{1})=
+      \frac{\boldsymbol{F}_{\mathrm{face}}}{A}　（A:接触面の面積）\\
+      &\cdot \boldsymbol{B}(\boldsymbol{r}_{2})=
+      \frac{\boldsymbol{F}_{\mathrm{body}}}{V}　（V:内部領域の体積）
     \end{aligned}
   \end{cases}
 $$
 
-というように、面積力 $\bm{S}$ と体積力 $\bm{B}$ を定義してみる（このようにすると、図のように位置を指定することができる）。このようにした上で、内部領域に働く力を議論してみることにしよう。まず、面積力の方は内部領域を多面体（平面で囲まれている）と考えると以下のような力があると考えられる。剪断（せんだん）応力と垂直応力のふたつ。ただ、そうなると面の傾きが必要となり
+というように、面積力 $\boldsymbol{S}$ と体積力 $\boldsymbol{B}$ を定義してみる（このようにすると、図のように位置を指定することができる）。このようにした上で、内部領域に働く力を議論してみることにしよう。まず、面積力の方は内部領域を多面体（平面で囲まれている）と考えると以下のような力があると考えられる。剪断（せんだん）応力と垂直応力のふたつ。ただ、そうなると面の傾きが必要となり
 
 $$
-    \bm{S}=\bm{P}+\bm{T}=（垂直応力）+（剪断応力）
+    \boldsymbol{S}=\boldsymbol{P}+\boldsymbol{T}=（垂直応力）+（剪断応力）
 $$
 $$
-    \bm{P}=-(\bm{S}\cdot\bm{n})\cdot\bm{n}　\bm{T}=\bm{S}-\bm{P}=
-    \bm{S}+(\bm{S}\cdot\bm{n})\cdot\bm{n}
+    \boldsymbol{P}=-(\boldsymbol{S}\cdot\boldsymbol{n})\cdot\boldsymbol{n}　\boldsymbol{T}=\boldsymbol{S}-\boldsymbol{P}=
+    \boldsymbol{S}+(\boldsymbol{S}\cdot\boldsymbol{n})\cdot\boldsymbol{n}
 $$
 
 もし、多面体が立方体であれば
 
 $$
   \begin{align*}
-    \bm{S}
+    \boldsymbol{S}
    &=
-    \bm{S}_{\mathrm{l}}+\bm{S}_{\mathrm{r}}+\bm{S}_{\mathrm{f}}+\bm{S}_{\mathrm{b}}+
-    \bm{S}_{\mathrm{u}}+\bm{S}_{\mathrm{d}}\\
+    \boldsymbol{S}_{\mathrm{l}}+\boldsymbol{S}_{\mathrm{r}}+\boldsymbol{S}_{\mathrm{f}}+\boldsymbol{S}_{\mathrm{b}}+
+    \boldsymbol{S}_{\mathrm{u}}+\boldsymbol{S}_{\mathrm{d}}\\
    &=
     \left[
-      \bm{S}(-\bm{e}_{y})+\bm{S}(\bm{e}_{y})
+      \boldsymbol{S}(-\boldsymbol{e}_{y})+\boldsymbol{S}(\boldsymbol{e}_{y})
     \right]
     \Delta x_{i}\Delta z_{i}+
     \left[
-      \bm{S}(-\bm{e}_{x})+\bm{S}(\bm{e}_{x})
+      \boldsymbol{S}(-\boldsymbol{e}_{x})+\boldsymbol{S}(\boldsymbol{e}_{x})
     \right]
     \Delta y_{i}\Delta z_{i}+
     \left[
-      \bm{S}(-\bm{e}_{z})+\bm{S}(\bm{e}_{z})
+      \boldsymbol{S}(-\boldsymbol{e}_{z})+\boldsymbol{S}(\boldsymbol{e}_{z})
     \right]
     \Delta x_{i}\Delta y_{i}
   \end{align*}
@@ -77,13 +77,13 @@ $$
 $$
   \begin{equation}
     \left(
-      \rho(\bm{r}_{i})V_{i}
+      \rho(\boldsymbol{r}_{i})V_{i}
     \right)
-    \frac{\mathrm{d}^2\bm{r}_{i}}
+    \frac{\mathrm{d}^2\boldsymbol{r}_{i}}
     {\mathrm{d}t^2}=
     \sum_{i=1(\neq j)}^{\mathrm{N}}
-    \bm{F}_{\mathrm{ij}}+
-    \bm{F}_{i}、
+    \boldsymbol{F}_{\mathrm{ij}}+
+    \boldsymbol{F}_{i}、
     \left( 
       i=1,\cdots,\mathrm{N}
     \right)
@@ -115,42 +115,42 @@ $$
 
   \chapter{連続体による記述}
   ここに連続体とみなせる物体があったとする。すると、物体は質点が連続的に集まったものであ
-  るものとしてみなせるわけだが、その形は物体内で連続的に引き詰められるようなものでなければならないので、図のような形にとる（引き詰められる形であれば何でも良いので、ここでは直交座標と対応させ易くするため直方体にしている）。そして、ある一つの質点の位置を$\bm{r}$というように位置ベクトルで指定すると、このときの質量は分布関数$\rho(\bm{r})$により指定することができる。この値自体は内部領域内で共通しており、
+  るものとしてみなせるわけだが、その形は物体内で連続的に引き詰められるようなものでなければならないので、図のような形にとる（引き詰められる形であれば何でも良いので、ここでは直交座標と対応させ易くするため直方体にしている）。そして、ある一つの質点の位置を$\boldsymbol{r}$というように位置ベクトルで指定すると、このときの質量は分布関数$\rho(\boldsymbol{r})$により指定することができる。この値自体は内部領域内で共通しており、
   \begin{equation}
-    m=\rho(\bm{r})
+    m=\rho(\boldsymbol{r})
   \end{equation}
 
 
   １つの質点で成立する運動方程式を質点系の力学と同様な考えで
   \begin{equation}
-      m_{i}\dd{^2\bm{r}_{i}}{t^2}=
-      \sum_{\mj\nei}\bm{F}_{\mathrm{ij}}+\bm{F}_{i}
+      m_{i}\dd{^2\boldsymbol{r}_{i}}{t^2}=
+      \sum_{\mj\nei}\boldsymbol{F}_{\mathrm{ij}}+\boldsymbol{F}_{i}
   \end{equation}
   とする。ここで質点の質量$m_{i}$は内部領域の質量であり、各内部領域ごとに
   異なる値をとるものとなっている。そのため、単純に
 
-というように、物体の運動を代表点の位置$\bm{r}_{\mathrm{G}}$の動きで論じていたが、ここで質量が密度で
+というように、物体の運動を代表点の位置$\boldsymbol{r}_{\mathrm{G}}$の動きで論じていたが、ここで質量が密度で
 \begin{equation}
-  m=\int_{\Omega}\rho(\bm{r})\md\bm{r}　
+  m=\int_{\Omega}\rho(\boldsymbol{r})\md\boldsymbol{r}　
   \lr{\ \Omega:物体内の全内部領域\ }
 \end{equation}
 というように書けることから、
 ()式を$\Omega$の範囲で積分してみると()式の形になると考えられる。
 そこで実際に、
 \begin{equation}
-  \int_{\Omega}\lr{\rho(\bm{r})\dd{^2\bm{r}}{t^2}}\md\bm{r}=
-  \int_{\Omega}\bm{f}(\bm{r})\md\bm{r}
+  \int_{\Omega}\lr{\rho(\boldsymbol{r})\dd{^2\boldsymbol{r}}{t^2}}\md\boldsymbol{r}=
+  \int_{\Omega}\boldsymbol{f}(\boldsymbol{r})\md\boldsymbol{r}
 \end{equation}
 とすると、右辺は全質点にかかる力を重ねあわせたものとなっており
 
 すると、これは物体自体の運動方程式になっているものとみなせるため、
 \begin{equation}
-  \bm{r}_{\mathrm{G}}=
-  \frac{1}{m}\int_{\Omega}\rho(\bm{r})\bm{r}\md\bm{r}　　
-  \bm{F}_{\mathrm{G}}=\int_{\Omega}\bm{F}(\bm{r})\md\bm{r}
+  \boldsymbol{r}_{\mathrm{G}}=
+  \frac{1}{m}\int_{\Omega}\rho(\boldsymbol{r})\boldsymbol{r}\md\boldsymbol{r}　　
+  \boldsymbol{F}_{\mathrm{G}}=\int_{\Omega}\boldsymbol{F}(\boldsymbol{r})\md\boldsymbol{r}
 \end{equation}
-とおくと、位置$\bm{r}_{\mathrm{G}}$にいる質点（質量$m$）に関する運動方程式になる。
-つまり、物体にかかる力は全て$\bm{r}_{\mathrm{G}}$にかかるものと考えることができる。
+とおくと、位置$\boldsymbol{r}_{\mathrm{G}}$にいる質点（質量$m$）に関する運動方程式になる。
+つまり、物体にかかる力は全て$\boldsymbol{r}_{\mathrm{G}}$にかかるものと考えることができる。
 この地点を\tb{重心}と呼び、これを古典力学では代表点として議論していた。そのため、
 この運動方程式を見ていくというのは、前に述べたことを再び辿ることと等価であると言える
 （重心の動きで物体の運動を論じる）。ただ、ここで重心の動きと言えども物体の視点からすると
@@ -189,9 +189,9 @@ $$
 
 古典力学においては、物体の運動を位置と速度により記述していたが、ここに質点という概念を取り入れると、それをより正確に行うことができる。そのため、弦を質点とみなせるほど細かく分けて、その一つ一つを質点として扱っていくことにする。 そして、そのうちの一つに着目して運動方程式を立ててから、その高さを求めるということをするのだが、この結果は全ての質点で共通していることなので、全ての質点をわざわざ見る必要がないことは予め言っておく。
 
-以上のことをふまえた上で、まずある一つの質点の運動方程式を質量$m$,外力$\bm{F}$、位置ベクトル$\bm{r}$により表すと 
+以上のことをふまえた上で、まずある一つの質点の運動方程式を質量$m$,外力$\boldsymbol{F}$、位置ベクトル$\boldsymbol{r}$により表すと 
 \begin{equation}
-   m\dd{^2\bm{r}}{t^2}=\bm{F}
+   m\dd{^2\boldsymbol{r}}{t^2}=\boldsymbol{F}
    \label{eq:string1}
 \end{equation}
 となる（ここで、$m$は質点によらず一定であるとしているが、これは糸の質量の分布が一様という仮定から来ている）。次に、この式を各成分に分けて書くと、次の通りになる。
@@ -205,7 +205,7 @@ $$
   \end{aligned}
   \right.
 \end{equation*}
-（右図は質点を拡大したものであり、外力は$\bm{T}(x)$と$\bm{T}(x+\Delta x)$が働いているものとしている）
+（右図は質点を拡大したものであり、外力は$\boldsymbol{T}(x)$と$\boldsymbol{T}(x+\Delta x)$が働いているものとしている）
 
 そして、各成分ごとに運動方程式を解くと、以下のようになる。
 \begin{enumerate}

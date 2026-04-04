@@ -1,13 +1,13 @@
 
 ## 二体問題（惑星の運動）
 
-　ここまでは一つの物体のみ取り扱っていたが、もしもう一体物体がある場合は万有引力が働くことも考慮する必要がある。例として物体1と物体2の質量、位置ベクトルを $m_1,\bm{r}_1,m_2,\bm{r}_2$ とすると、物体1にかかる力は
+　ここまでは一つの物体のみ取り扱っていたが、もしもう一体物体がある場合は万有引力が働くことも考慮する必要がある。例として物体1と物体2の質量、位置ベクトルを $m_1,\boldsymbol{r}_1,m_2,\boldsymbol{r}_2$ とすると、物体1にかかる力は
 
 $$
-    \bm{F}=
-    G\frac{m_1m_2}{|\bm{r}_2-\bm{r}_1|^2}
+    \boldsymbol{F}=
+    G\frac{m_1m_2}{|\boldsymbol{r}_2-\boldsymbol{r}_1|^2}
     \left(
-    \frac{\bm{r}_2-\bm{r}_1}{|\bm{r}_2-\bm{r}_1|}
+    \frac{\boldsymbol{r}_2-\boldsymbol{r}_1}{|\boldsymbol{r}_2-\boldsymbol{r}_1|}
     \right)
 $$
 
@@ -21,11 +21,11 @@ $$
 
 $$
     m_1
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
-    \bm{F}、
+    \frac{\mathrm{d}^2\boldsymbol{r}_1}{\mathrm{d}t^2}=
+    \boldsymbol{F}、
     m_2
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
-    -\bm{F}
+    \frac{\mathrm{d}^2\boldsymbol{r}_2}{\mathrm{d}t^2}=
+    -\boldsymbol{F}
 $$
 
 ここで二つの式の和をとった場合には
@@ -34,32 +34,32 @@ $$
     (m_1+m_2)
     \frac{\mathrm{d}^2}{\mathrm{d}t^2}
     \left(
-        \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
+        \frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
     \right)=
     0
 $$
 
-というように全体の運動方程式となり、このときの質量 $m_G$ と位置 $\bm{r}_G$ は
+というように全体の運動方程式となり、このときの質量 $m_G$ と位置 $\boldsymbol{r}_G$ は
 
 $$
     m_G = m_1+m_2、
-    \bm{r}_G=
-    \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
+    \boldsymbol{r}_G=
+    \frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
 $$ 
 
 とおけることから、全体的に見た場合には以下の式が成り立つ（ 2つの質点を質量 $m_G$ の質点に置き換えてると、運動が変化しないあるいは慣性の法則に従う）。
 
 $$
-    m_G\frac{\mathrm{d}^2\bm{r}_G}{\mathrm{d}t^2}=0
+    m_G\frac{\mathrm{d}^2\boldsymbol{r}_G}{\mathrm{d}t^2}=0
 $$
 
 一方で、万有引力の形を踏まえて2つの方程式を
 
 $$
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
-    \frac{\bm{F}}{m_1}、
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
-    -\frac{\bm{F}}{m_2}
+    \frac{\mathrm{d}^2\boldsymbol{r}_1}{\mathrm{d}t^2}=
+    \frac{\boldsymbol{F}}{m_1}、
+    \frac{\mathrm{d}^2\boldsymbol{r}_2}{\mathrm{d}t^2}=
+    -\frac{\boldsymbol{F}}{m_2}
 $$
 
 として2番目の式から1番目の式を差し引くと以下の式が得られる。
@@ -69,22 +69,22 @@ $$
         \frac{m_1m_2}{m_1+m_2}
     \right)
     \frac{\mathrm{d}^2}{\mathrm{d}t^2}
-    (\bm{r}_2-\bm{r}_1)=
-    -\bm{F}
+    (\boldsymbol{r}_2-\boldsymbol{r}_1)=
+    -\boldsymbol{F}
 $$
 
-この式は物体1から見た物体2の運動方程式となっており、質量 $\mu$（換算質量） と相対位置 $\bm{r}$ は
+この式は物体1から見た物体2の運動方程式となっており、質量 $\mu$（換算質量） と相対位置 $\boldsymbol{r}$ は
 
 $$
     \mu=\frac{m_1m_2}{m_1+m_2}、
-    \bm{r}=\bm{r}_2-\bm{r}_1
+    \boldsymbol{r}=\boldsymbol{r}_2-\boldsymbol{r}_1
 $$
 
 と書ける。そのため、上記の運動方程式は以下のようになる。
 
 $$
-    \mu\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
-    -G\frac{m_1m_2}{r^3}\bm{r}
+    \mu\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2}=
+    -G\frac{m_1m_2}{r^3}\boldsymbol{r}
 $$
 
 <p align="center">

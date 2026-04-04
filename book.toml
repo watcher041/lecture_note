@@ -1,17 +1,18 @@
 [book]
+title = "物理学入門"
 authors = ["watcher041"]
 language = "ja"
-multilingual = false
 src = "src"
-title = "物理学入門"
 
 [output.html]
 additional-css = ["option.css"]
+mathjax-support = true
 
 [preprocessor.katex]
 after = ["links"]
 
-# cargo install mdbook-katex mdbook
+# cargo install mdbook --version 0.4.52
+# cargo install mdbook-katex
 # github pagesのため、docs にビルド結果を出力
 # mdbook serve --dest-dir docs
 # 数式は以下のように記載する
