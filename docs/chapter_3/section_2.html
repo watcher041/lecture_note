@@ -186,15 +186,15 @@
 <p>今、水を容器に入れて、その上に水をはじくようロウを塗ったコルク球を2個浮かべてみる。すると、コルク球の周りの水面はへこんでゆがんだ状態になる。この2つのコルク球を数mm程度まで近づけて手を離すと、コルク球は互いに引き寄せられ、そして接触する。これは、水がその表面張力によって表面積をできるだけ小さくしようとするためである。今、仮に人間にこの水が見えないものとすると、我々には2個のコルク球間に引力が作用しているように感じられるだろう。このようにコルク球がその周りの水面をゆがめ、その歪みが次々と水面上を伝わって、ほかのコルク球に力を与えるとする考え方を<strong>近接作用</strong>という（相対性理論になると、万有引力も同じように考えることができるが難解なためここでは述べないことにする）。</p>
 <p>　以上の考え方により、帯電体があると周囲の空間はそれ自身の性質によりゆがむと電磁気学では考える（先ほどで言う水がコルク球でへこんだ状態になったことに相当する）。この歪みを<strong>電場</strong>（電気工学系では電界）という。そして、電場の中に別の帯電体を置くことでクーロン力が生じるわけだが、ここで</p>
 <p>$$
-\boldsymbol{F}(\boldsymbol{r}_q)=q\boldsymbol{E}_Q
-(\boldsymbol{r}=\boldsymbol{r}_q)
+\bm{F}(\bm{r}_q)=q\bm{E}_Q
+(\bm{r}=\bm{r}_q)
 $$
 $$
-\boldsymbol{E}<em>Q(\boldsymbol{r})=
-\frac{kQ}{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|^2}
-\frac{(\boldsymbol{r}-\boldsymbol{r}<em>Q)}{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|}
+\bm{E}<em>Q(\bm{r})=
+\frac{kQ}{|\bm{r}-\bm{r}</em>{Q}|^2}
+\frac{(\bm{r}-\bm{r}<em>Q)}{|\bm{r}-\bm{r}</em>{Q}|}
 $$</p>
-<p>と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\boldsymbol{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\boldsymbol{r}$ に電場 $\boldsymbol{E}$ を作り、$\boldsymbol{r}=\boldsymbol{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\boldsymbol{F}$ の力が作用する。</p>
+<p>と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\bm{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\bm{r}$ に電場 $\bm{E}$ を作り、$\bm{r}=\bm{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\bm{F}$ の力が作用する。</p>
 <p>　電場がどのように発生するかを見るのに<strong>電気力線</strong>がよく用いられる。これは以下の図に示すように。その接線方向が電場の方向と一致するように線を描いたもので、一つの電荷の場合だと始点か終点のどちらかが無限遠に伸びた形になる。</p>
 <p align="center">
     <img width="60%" src="images/flux_line_mono.png">
@@ -202,13 +202,13 @@ $$</p>
 
 <p>これが2つになると、二つの電荷の電場を足したものになり、電荷の符号が同じか異なるかで電気力線の形が違ってくる（同じ電荷量であれば同じ本数だけ放出、吸収する、符号が反転すれば向きが逆になる）。</p>
 <p>$$
-\boldsymbol{E}=\boldsymbol{E}_q(\boldsymbol{r})+\boldsymbol{E}_Q(\boldsymbol{r})=
+\bm{E}=\bm{E}_q(\bm{r})+\bm{E}_Q(\bm{r})=
 k
 \left[
-q\frac{(\boldsymbol{r}-\boldsymbol{r}<em>q)}
-{|\boldsymbol{r}-\boldsymbol{r}</em>{q}|^3}+
-Q\frac{(\boldsymbol{r}-\boldsymbol{r}<em>Q)}
-{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|^3}
+q\frac{(\bm{r}-\bm{r}<em>q)}
+{|\bm{r}-\bm{r}</em>{q}|^3}+
+Q\frac{(\bm{r}-\bm{r}<em>Q)}
+{|\bm{r}-\bm{r}</em>{Q}|^3}
 \right]
 $$</p>
 <p align="center">
@@ -224,7 +224,7 @@ $$</p>
 \mathrm{d}S’=
 r^2\sin\phi\ \mathrm{d}\theta\mathrm{d}\phi
 $$</p>
-<p>となるのだが、実際は電場と平面に垂直な単位ベクトル $\boldsymbol{n}$ のなす角度 $\alpha$ により</p>
+<p>となるのだが、実際は電場と平面に垂直な単位ベクトル $\bm{n}$ のなす角度 $\alpha$ により</p>
 <p>$$
 \mathrm{d}S=
 \frac{\mathrm{d}S’}{\cos\alpha}
@@ -234,13 +234,13 @@ $$</p>
     <img width="60%" src="images/en_relation.png">
 </p>
 
-<p>一方で、電場と $\boldsymbol{n}$ の内積が</p>
+<p>一方で、電場と $\bm{n}$ の内積が</p>
 <p>$$
-\boldsymbol{E}\cdot\boldsymbol{n}=E\cos\alpha
+\bm{E}\cdot\bm{n}=E\cos\alpha
 $$</p>
 <p>であるが、面上の $E$ の合計（積分）を求めるのに $\cos\alpha$ が余計なので</p>
 <p>$$
-\oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
+\oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
 \oint E\ \mathrm{d}S’=
 kQ\int_{0}^{2\pi}\mathrm{d}\theta
 \int_{0}^{\pi}\sin\phi\ \mathrm{d}\phi=
@@ -248,19 +248,19 @@ kQ\int_{0}^{2\pi}\mathrm{d}\theta
 $$</p>
 <p>というようにすると、面上の電場の総和を求めることができる。ここで、左辺については一般的に</p>
 <p>$$
-\oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}
+\oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}
 $$</p>
 <p>というように面積分と呼ばれる形で書かれる。任意の閉曲面の結果から、閉曲面の形によらず電場の総量は電荷量に比例していることが予想される。そのため、２個の電荷がある場合にも</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
-\oint\boldsymbol{E}_q\cdot\mathrm{d}\boldsymbol{S}+
-\oint\boldsymbol{E}_Q\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
+\oint\bm{E}_q\cdot\mathrm{d}\bm{S}+
+\oint\bm{E}_Q\cdot\mathrm{d}\bm{S}=
 4\pi k (q+Q)
 $$</p>
 <p>というようになる。少しひねくれて、もし閉曲面の外部に電荷がある場合は電場が地点1から地点2に向けて出入りした場合は、</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
 E_1\cos(\pi-\alpha_1)
 \mathrm{d}S_1+
 E_2\cos(\alpha_2)
@@ -269,7 +269,7 @@ E_2\cos(\alpha_2)
 $$</p>
 <p>である。したがって、閉曲面から出てくる電場というのは、その閉曲面内にある電荷量 $Q$ に比例することになる。これを<strong>Gaussの法則</strong>と呼ぶ。</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
 4\pi k Q
 $$</p>
 <p>この法則に従うことで、物体に電荷がない場合や同じ正負の電荷が存在している場合は打ち消して電場が生じないことが言える。</p>

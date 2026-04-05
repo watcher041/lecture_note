@@ -360,61 +360,61 @@ N=rF_\theta=
 r\cos\theta F_y - r\sin\theta F_x =
 xF_y - yF_x
 $$</p>
-<p>となるが、これは外積と呼ばれる関係になっていることが予想される。例えば、ベクトル $\boldsymbol{a},\boldsymbol{b}$ が以下の図のようになっており
+<p>となるが、これは外積と呼ばれる関係になっていることが予想される。例えば、ベクトル $\bm{a},\bm{b}$ が以下の図のようになっており
 $$
-\boldsymbol{a}=(a_x,a_y,0)、\boldsymbol{b}=(b_x,b_y,0)
+\bm{a}=(a_x,a_y,0)、\bm{b}=(b_x,b_y,0)
 $$</p>
-<p>とすると、外積 $\boldsymbol{c}$ は以下の形で表される。</p>
+<p>とすると、外積 $\bm{c}$ は以下の形で表される。</p>
 <p>$$
-\boldsymbol{c}=\boldsymbol{a}\times\boldsymbol{b}=
+\bm{c}=\bm{a}\times\bm{b}=
 (0,0,a_xb_y-a_yb_x)
 $$</p>
 <p align="center">
     <img height="200px" style="background-color:white;" src="images/cross_product.png">
 </p>
 
-<p>試しに $\boldsymbol{a}=\boldsymbol{r},\boldsymbol{b}=\boldsymbol{F}$ として外積をとると、以下の通り $z$ 成分が先ほどの $N$ と一致していることが分かる。</p>
+<p>試しに $\bm{a}=\bm{r},\bm{b}=\bm{F}$ として外積をとると、以下の通り $z$ 成分が先ほどの $N$ と一致していることが分かる。</p>
 <p>$$
-\boldsymbol{r}\times\boldsymbol{F}=
+\bm{r}\times\bm{F}=
 (0,0,xF_y-yF_x)=
 (0,0,N)
 $$</p>
 <p>そのため、回転方向については $z$ 成分に関する方程式になっていると考えられる。そこで、運動方程式</p>
 <p>$$
-m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}=\boldsymbol{F}
+m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=\bm{F}
 $$</p>
-<p>に外積をとることで一般的に回転の運動方程式がどのようになるかを見てみることにする。まず、両辺に $\boldsymbol{r}$ と外積をとると</p>
+<p>に外積をとることで一般的に回転の運動方程式がどのようになるかを見てみることにする。まず、両辺に $\bm{r}$ と外積をとると</p>
 <p>$$
 m
 \left(
-\boldsymbol{r}\times
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+\bm{r}\times
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \right)
-=\boldsymbol{N}、
-\boldsymbol{N} = \boldsymbol{r}\times\boldsymbol{F}
+=\bm{N}、
+\bm{N} = \bm{r}\times\bm{F}
 $$</p>
-<p>というように右辺がモーメント $\boldsymbol{N}$ となるので、左辺を変形してみると</p>
+<p>というように右辺がモーメント $\bm{N}$ となるので、左辺を変形してみると</p>
 <p>$$
 \left(
-\boldsymbol{r}\times
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+\bm{r}\times
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \right)=
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})-
-(\boldsymbol{v}\times\boldsymbol{v})=
+(\bm{r}\times\bm{v})-
+(\bm{v}\times\bm{v})=
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})
+(\bm{r}\times\bm{v})
 $$</p>
 <p>となるので以下の通りになる。</p>
 <p>$$
 m
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})=
-\boldsymbol{N}
+(\bm{r}\times\bm{v})=
+\bm{N}
 $$</p>
 <p>そして、左辺を極座標で整理することで</p>
 <p>$$
-m(\boldsymbol{r}\times\boldsymbol{v})=
+m(\bm{r}\times\bm{v})=
 \left(
 0,0,
 mx
@@ -422,8 +422,8 @@ mx
 my
 \frac{\mathrm{d}x}{\mathrm{d}t}
 \right)=
-I\boldsymbol{\omega}、
-\boldsymbol{\omega}=(0,0,\omega)
+I\bm{\omega}、
+\bm{\omega}=(0,0,\omega)
 $$</p>
 <p>というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転の運動方程式は以下の通りになる。</p>
 <p>$$
@@ -433,13 +433,13 @@ f_{r,\theta}=
 mr\omega^2
 $$
 $$
-\frac{\mathrm{d}\boldsymbol{L}}
+\frac{\mathrm{d}\bm{L}}
 {\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=
-m(\boldsymbol{r}\times\boldsymbol{v})=
-I\boldsymbol{\omega}、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\bm{N}、
+\bm{L}=
+m(\bm{r}\times\bm{v})=
+I\bm{\omega}、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
 <p>ここまでは話を簡単にするため2次元を扱ってきたが、同様に3次元においても成立するかを見てみる。まず、直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ に置き換えると</p>
 <p>$$
@@ -890,10 +890,10 @@ m(r\sin\theta)^2\omega_\phi
 $$</p>
 <p>ここで $L_\theta$ と $L_\phi$ の関係式が</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}、
+\bm{L}=\bm{r}\times\bm{p}、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
 <p>に対応しているか見てみよう。まず、角運動量が直交座標系において</p>
 <p>$$
@@ -974,12 +974,12 @@ r\sin\theta F_\phi
 $$</p>
 <p>となる。そのため、3次元においても回転の運動方程式</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=(\boldsymbol{r}\times\boldsymbol{v})、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}、
+\bm{L}=(\bm{r}\times\bm{v})、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
-<p>が成り立つことが分かる。あるいは角速度 $\boldsymbol{\omega}$ に関して角運動量と同じように</p>
+<p>が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関して角運動量と同じように</p>
 <p>$$
 \omega_{x,y}=
 \omega_x\cos\phi+\omega_y\sin\phi、
@@ -1026,7 +1026,7 @@ $$</p>
 \omega_{r_\perp}=
 -\omega_\phi\sin\theta
 $$</p>
-<p>であることになる。このことから、$I=mr^2$ とすることで $\boldsymbol{L}=I\boldsymbol{\omega}$ と表されることが分かる。</p>
+<p>であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。</p>
 <p>　以上のように、回転運動を取り扱うには通常の運動方程式とは異なる方程式を利用する必要があることが分かる。そのため、次項で改めて物体自体の回転運動を取り扱うことにする。</p>
 
                     </main>

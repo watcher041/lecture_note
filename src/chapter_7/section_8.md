@@ -40,24 +40,24 @@ $$
 一方で、運動方程式についても
 
 $$
-    \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}=
-    \boldsymbol{f}、
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
+    \bm{f}、
     
-    \boldsymbol{p}=
-    \frac{m_0\boldsymbol{v}}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
-    \boldsymbol{f}=
-    \frac{\boldsymbol{F}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+    \bm{p}=
+    \frac{m_0\bm{v}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    \bm{f}=
+    \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     \mathrm{d}\tau=
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
 $$
     \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
-    (\boldsymbol{f}\cdot\boldsymbol{v})、
+    (\bm{f}\cdot\bm{v})、
     E_K=
     \frac{m_0c^2}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 と書けたわけだが、ここで速度ベクトルと力は反変ベクトルの形で
@@ -69,7 +69,7 @@ $$
     u^3=v_z
 $$
 $$
-    F^0=\frac{1}{c}(\boldsymbol{F}\cdot\boldsymbol{v})、
+    F^0=\frac{1}{c}(\bm{F}\cdot\bm{v})、
     F^1=F_x、
     F^2=F_y、
     F^3=F_z
@@ -80,9 +80,9 @@ $$
 $$
     p^\mu=
     \frac{m_0u^\mu}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     f^\mu=
-    \frac{F^\mu}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+    \frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     (\mu=0,1,2,3)
 $$
 
@@ -93,7 +93,7 @@ $$
     f^\mu、
     p^\mu=
     \frac{m_0v^\mu}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 ここで、固有時に関して
@@ -101,9 +101,9 @@ $$
 $$
     \mathrm{d}\tau=
     \mathrm{d}t'
-    \sqrt{1-\frac{\boldsymbol{v'}^2}{c^2}}=
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
     \mathrm{d}t
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 
 となっていたわけだが、これを少し整理してみると反変ベクトルにより
@@ -123,7 +123,7 @@ $$
 というように書けるため、ちょうど微小ベクトルの内積の形で不変な形をしていることから
 
 $$
-    (\mathrm{d}\boldsymbol{s})^2=(c\mathrm{d}\tau)^2=
+    (\mathrm{d}\bm{s})^2=(c\mathrm{d}\tau)^2=
     \eta_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
     \eta_{\mu\nu}\mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
 $$
@@ -164,13 +164,13 @@ $$
 $$
     \frac{\partial\mathcal{L}}{\partial v_x}=
     \frac{m_0v_x}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     \frac{\partial\mathcal{L}}{\partial v_y}=
     \frac{m_0v_y}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     \frac{\partial\mathcal{L}}{\partial v_z}=
     \frac{m_0v_z}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 $$
     \frac{\partial\mathcal{L}}{\partial x}=
@@ -189,13 +189,13 @@ $$
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 $$
     \mathcal{L}=
-    -m_0c^2\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}-U
+    -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
     \simeq
-    \frac{1}{2}m\boldsymbol{v}^2-(m_0c^2+U)
+    \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
 $$
 次に、前回でも登場した計量 $g_{\mu\nu}$ により
 $$
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
     \left(
     \frac{\mathrm{d}s}{\mathrm{d}t}
@@ -341,20 +341,20 @@ $$
     \frac{\partial g_{\lambda\mu}}
     {\partial x^\nu}=
     \frac{\partial}{\partial x^\nu}
-    (\boldsymbol{e}_\lambda\cdot\boldsymbol{e}_\mu)=
-    \frac{\partial\boldsymbol{e}_\lambda}
-    {\partial x^\nu}\cdot\boldsymbol{e}_\mu+
-    \boldsymbol{e}_\lambda\cdot
-    \frac{\partial\boldsymbol{e}_\mu}
+    (\bm{e}_\lambda\cdot\bm{e}_\mu)=
+    \frac{\partial\bm{e}_\lambda}
+    {\partial x^\nu}\cdot\bm{e}_\mu+
+    \bm{e}_\lambda\cdot
+    \frac{\partial\bm{e}_\mu}
     {\partial x^\nu}
 $$
 であり、ここで**第１種クリストフェル記号**を
 $$
     \Gamma_{\nu\lambda,\mu}=
-    \frac{\partial\boldsymbol{e}_\lambda}
-    {\partial x^\nu}\cdot\boldsymbol{e}_\mu=
-    \boldsymbol{e}_\mu\cdot
-    \frac{\partial\boldsymbol{e}_\lambda}
+    \frac{\partial\bm{e}_\lambda}
+    {\partial x^\nu}\cdot\bm{e}_\mu=
+    \bm{e}_\mu\cdot
+    \frac{\partial\bm{e}_\lambda}
     {\partial x^\nu}
 $$
 というように定義することで、
@@ -440,14 +440,14 @@ $$
         \eta_{\mu\nu}
         \dot{x}^{\mu} \dot{x}^{\nu}
     }=
-    \sqrt{c^2-\boldsymbol{v}^2}
+    \sqrt{c^2-\bm{v}^2}
 $$
 となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
 $$
     \mathrm{d}\tau=
     \frac{\dot{s}}{c}\mathrm{d}t=
     \frac{\mathrm{d}s}{c}=
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
 とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて

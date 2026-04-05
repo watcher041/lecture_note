@@ -44,12 +44,12 @@ $$
 一般的にクーロン力というのは、その方向をも指定して決まるベクトル量である。そのため、以下の図において電荷 $Q$ が電荷 $q$ に作用する力をベクトルを用いて表すと次のようになる。
 
  $$
-    \boldsymbol{F}(\boldsymbol{r}_q)=
-    k\frac{qQ}{|\boldsymbol{r}_q-\boldsymbol{r}_Q|^2}
-    \frac{(\boldsymbol{r}_q-\boldsymbol{r}_Q)}{|\boldsymbol{r}_q-\boldsymbol{r}_Q|}
+    \bm{F}(\bm{r}_q)=
+    k\frac{qQ}{|\bm{r}_q-\bm{r}_Q|^2}
+    \frac{(\bm{r}_q-\bm{r}_Q)}{|\bm{r}_q-\bm{r}_Q|}
  $$
 
- ここで、ベクトル $\boldsymbol{r}_q=(x_q,y_q,z_q)$ と $\boldsymbol{r}_Q=(x_Q,y_Q,z_Q)$ は、それぞれ図の原点Oから測った電荷 $q$ と $Q$ の位置ベクトルであり、$\boldsymbol{F}(\boldsymbol{r}_q)$ は電荷 $q$ に作用する力を表す。
+ ここで、ベクトル $\bm{r}_q=(x_q,y_q,z_q)$ と $\bm{r}_Q=(x_Q,y_Q,z_Q)$ は、それぞれ図の原点Oから測った電荷 $q$ と $Q$ の位置ベクトルであり、$\bm{F}(\bm{r}_q)$ は電荷 $q$ に作用する力を表す。
 
 <p align="center">
     <img height="200px" 

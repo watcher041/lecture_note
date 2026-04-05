@@ -66,19 +66,19 @@ $$
     -\sin\alpha\ \mathrm{d}x+\cos\alpha\ \mathrm{d}y
 $$
 $$
-    \boldsymbol{u}_x'=
-    \cos\alpha\ \boldsymbol{u}_x+\sin\alpha\ \boldsymbol{u}_y、
-    \boldsymbol{u}_y'=
-    -\sin\alpha\ \boldsymbol{u}_x+\cos\alpha\ \boldsymbol{u}_y
+    \bm{u}_x'=
+    \cos\alpha\ \bm{u}_x+\sin\alpha\ \bm{u}_y、
+    \bm{u}_y'=
+    -\sin\alpha\ \bm{u}_x+\cos\alpha\ \bm{u}_y
 $$
 
 ここで、座標変換（座標軸の変更）に対して基底ベクトルは共に同じ方向に変換されているため**共変ベクトル**、ベクトル成分は逆方向に変換されているため**反変ベクトル**となる。より一般的には、これらは添え字を用いて区別されることが多く、
 
 $$
     \begin{cases}
-        ・\boldsymbol{u}_x、\boldsymbol{u}_y
+        ・\bm{u}_x、\bm{u}_y
         \rightarrow
-        \boldsymbol{u}_1、\boldsymbol{u}_2
+        \bm{u}_1、\bm{u}_2
         &：共変ベクトル（下付き添え字で区別）\\
         ・\mathrm{d}x、\mathrm{d}y
         \rightarrow
@@ -96,27 +96,27 @@ $$
     -\sin\alpha\ \mathrm{d}x^1+\cos\alpha\ \mathrm{d}x^1
 $$
 $$
-    \boldsymbol{u}'_1=
-    \cos\alpha\ \boldsymbol{u}_1+\sin\alpha\ \boldsymbol{u}_2、
-    \boldsymbol{u}'_2=
-    -\sin\alpha\ \boldsymbol{u}_1+\cos\alpha\ \boldsymbol{u}_1
+    \bm{u}'_1=
+    \cos\alpha\ \bm{u}_1+\sin\alpha\ \bm{u}_2、
+    \bm{u}'_2=
+    -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$
 
-また、この表記を用いることでベクトル $\boldsymbol{s}$ に関する式も
+また、この表記を用いることでベクトル $\bm{s}$ に関する式も
 
 $$
-    \mathrm{d}\boldsymbol{s}=
-    \sum_{\mu=1}^2\mathrm{d}x^\mu\boldsymbol{u}_\mu=
-    \sum_{\mu=1}^2\mathrm{d}x'^\mu\boldsymbol{u}'_\mu
+    \mathrm{d}\bm{s}=
+    \sum_{\mu=1}^2\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu=1}^2\mathrm{d}x'^\mu\bm{u}'_\mu
 $$
 $$
-    \mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}=
-    (\mathrm{d}\boldsymbol{s})^2=
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+    (\mathrm{d}\bm{s})^2=
     \sum_{\mu,\nu=1}^2
-    (\boldsymbol{u}_\mu\cdot\boldsymbol{u}_\nu)
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
     \sum_{\mu,\nu=1}^2
-    (\boldsymbol{u}'_\mu\cdot\boldsymbol{u}'_\nu)
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
     \mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
 $$
@@ -134,30 +134,30 @@ $$
     \mathrm{d}x'^\mu
 $$
 $$
-    \boldsymbol{u}'_\mu=
+    \bm{u}'_\mu=
     \sum_{\nu=1}^2
     \left(
         \frac{\partial x^\nu}{\partial x'^\mu}
     \right)
-    \boldsymbol{u}_\nu、
-    \boldsymbol{u}_\nu=
+    \bm{u}_\nu、
+    \bm{u}_\nu=
     \sum_{\mu=1}^2
     \left(
         \frac{\partial x'^\nu}{\partial x^\mu}
     \right)
-    \boldsymbol{u}'_\mu
+    \bm{u}'_\mu
 $$
 
 というように総和を用いた形で表記されるが、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（**Einsteinの縮約記法**）が用いられる。
 
 $$
-    \mathrm{d}\boldsymbol{s}=
-    \mathrm{d}x^{\mu}\boldsymbol{u}_\mu=
-    \mathrm{d}x'^{\mu}\boldsymbol{u}'_\mu、
-    (\mathrm{d}\boldsymbol{s})^2=
-    (\boldsymbol{u}_\mu\cdot\boldsymbol{u}_\nu)
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x^{\mu}\bm{u}_\mu=
+    \mathrm{d}x'^{\mu}\bm{u}'_\mu、
+    (\mathrm{d}\bm{s})^2=
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
     \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-    (\boldsymbol{u}'_\mu\cdot\boldsymbol{u}'_\nu)
+    (\bm{u}'_\mu\cdot\bm{u}'_\nu)
     \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
 $$
 $$
@@ -171,29 +171,29 @@ $$
         \frac{\partial x^\nu}{\partial x'^\mu}
     \right)
     \mathrm{d}x'^\mu、
-    \boldsymbol{u}'_\mu=
+    \bm{u}'_\mu=
     \left(
         \frac{\partial x^\nu}{\partial x'^\mu}
     \right)
-    \boldsymbol{u}_\nu、
-    \boldsymbol{u}_\nu=
+    \bm{u}_\nu、
+    \bm{u}_\nu=
     \left(
         \frac{\partial x'^\nu}{\partial x^\mu}
     \right)
-    \boldsymbol{u}'_\mu
+    \bm{u}'_\mu
 $$
 
 また、基底ベクトル同士の内積は座標系の各地点の形状を示す重要な量（**Riemann計量**）であるため、
 
 $$
-    g_{\mu\nu}=\boldsymbol{u}_\mu\cdot\boldsymbol{u}_\nu、
-    g'_{\mu\nu}=\boldsymbol{u}'_\mu\cdot\boldsymbol{u}'_\nu
+    g_{\mu\nu}=\bm{u}_\mu\cdot\bm{u}_\nu、
+    g'_{\mu\nu}=\bm{u}'_\mu\cdot\bm{u}'_\nu
 $$
 
 と表記して、内積のほうも以下のように表記されることが多い。
 
 $$
-    (\mathrm{d}\boldsymbol{s})^2=
+    (\mathrm{d}\bm{s})^2=
     g_{\mu\nu}
     \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
     g'_{\mu\nu}
@@ -268,26 +268,26 @@ $$
 ここで、共変ベクトルについては各座標系に垂線を引いて読み取った値であることから、以下のような式が成り立つことが予想される。
 
 $$
-    x_1=\boldsymbol{s}\cdot\boldsymbol{e}_x、
-    x_2=\boldsymbol{s}\cdot\boldsymbol{e}_y、
-    x'_1=\boldsymbol{s}\cdot\boldsymbol{e}'_x、
-    x'_2=\boldsymbol{s}\cdot\boldsymbol{e}'_y
+    x_1=\bm{s}\cdot\bm{e}_x、
+    x_2=\bm{s}\cdot\bm{e}_y、
+    x'_1=\bm{s}\cdot\bm{e}'_x、
+    x'_2=\bm{s}\cdot\bm{e}'_y
 $$
 
 この関係は曲がっている座標系でも微小な範囲では斜交座標系であることから、以下の式が成り立つ。
 $$
-    \mathrm{d}x_1=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}_1、
-    \mathrm{d}x_2=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}_2、
-    \mathrm{d}x'_1=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}'_1、
-    \mathrm{d}x'_2=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}'_2
+    \mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
+    \mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
+    \mathrm{d}x'_1=\mathrm{d}\bm{s}\cdot\bm{u}'_1、
+    \mathrm{d}x'_2=\mathrm{d}\bm{s}\cdot\bm{u}'_2
 $$
 
 例えば一つ目の成分については
 
 $$
     \mathrm{d}x_1=
-    (\mathrm{d}x^\mu\boldsymbol{u}_\mu)\cdot\boldsymbol{u}_1=
-    (\boldsymbol{u}_\mu\cdot\boldsymbol{u}_1)\mathrm{d}x^\mu=
+    (\mathrm{d}x^\mu\bm{u}_\mu)\cdot\bm{u}_1=
+    (\bm{u}_\mu\cdot\bm{u}_1)\mathrm{d}x^\mu=
     g_{\mu 1}\mathrm{d}x^\mu
 $$
 
@@ -297,7 +297,7 @@ $$
     \mathrm{d}x_\nu=
     g_{\mu\nu}\mathrm{d}x^\mu
     \rightarrow
-    (\mathrm{d}\boldsymbol{s})^2=
+    (\mathrm{d}\bm{s})^2=
     \mathrm{d}x_\nu\mathrm{d}x^\nu
 $$
 

@@ -3,32 +3,32 @@
 であることを利用すると、変換後の内積は
 
 $$
-    \boldsymbol{u}_x\cdot\boldsymbol{u}_x=
-    \boldsymbol{u}_X\cdot\boldsymbol{u}_X=1
+    \bm{u}_x\cdot\bm{u}_x=
+    \bm{u}_X\cdot\bm{u}_X=1
 $$
 $$
-    \boldsymbol{u}_y\cdot\boldsymbol{u}_y=
+    \bm{u}_y\cdot\bm{u}_y=
     \frac{1}{2}
     \left(
-        \boldsymbol{u}_X\cdot\boldsymbol{u}_X+
-        2(\boldsymbol{u}_X\cdot\boldsymbol{u}_Y)+
-        \boldsymbol{u}_Y\cdot\boldsymbol{u}_Y
+        \bm{u}_X\cdot\bm{u}_X+
+        2(\bm{u}_X\cdot\bm{u}_Y)+
+        \bm{u}_Y\cdot\bm{u}_Y
     \right)=1
 $$
 
 となることから、基底ベクトルの大きさは以下の通りとなる。
 
 $$
-    |\boldsymbol{u}_X|=
-    \sqrt{\boldsymbol{u}_X\cdot\boldsymbol{u}_X}=1、
-    |\boldsymbol{u}_Y|=
-    \sqrt{\boldsymbol{u}_Y\cdot\boldsymbol{u}_Y}=1
+    |\bm{u}_X|=
+    \sqrt{\bm{u}_X\cdot\bm{u}_X}=1、
+    |\bm{u}_Y|=
+    \sqrt{\bm{u}_Y\cdot\bm{u}_Y}=1
 $$
 $$
-    |\boldsymbol{u}_x|=
-    \sqrt{\boldsymbol{u}_x\cdot\boldsymbol{u}_x}=1、
-    |\boldsymbol{u}_y|=
-    \sqrt{\boldsymbol{u}_y\cdot\boldsymbol{u}_y}=1
+    |\bm{u}_x|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1、
+    |\bm{u}_y|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1
 $$
 
 そのため、全ての基本ベクトルと基底ベクトルが一致していることが分かる。
@@ -44,387 +44,387 @@ $$
     w=w'、x=x'+\beta w'、y=y'、z=z'
 $$
 
-という変換であるため、ベクトル $\boldsymbol{s}$ は直交座標系の基本ベクトル $\boldsymbol{e}_w,\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$ とGalilei変換後の基本ベクトル $\boldsymbol{e}_w',\boldsymbol{e}_x',\boldsymbol{e}_y',\boldsymbol{e}_z'$ を用いて以下の通りに書ける。
+という変換であるため、ベクトル $\bm{s}$ は直交座標系の基本ベクトル $\bm{e}_w,\bm{e}_x,\bm{e}_y,\bm{e}_z$ とGalilei変換後の基本ベクトル $\bm{e}_w',\bm{e}_x',\bm{e}_y',\bm{e}_z'$ を用いて以下の通りに書ける。
 
 $$
-    \boldsymbol{s}=
-    w\boldsymbol{e}_w+
-    x\boldsymbol{e}_x+
-    y\boldsymbol{e}_y+
-    z\boldsymbol{e}_z=
-    w'\boldsymbol{e}_w'+
-    x'\boldsymbol{e}_x'+
-    y'\boldsymbol{e}_y'+
-    z'\boldsymbol{e}_z'
+    \bm{s}=
+    w\bm{e}_w+
+    x\bm{e}_x+
+    y\bm{e}_y+
+    z\bm{e}_z=
+    w'\bm{e}_w'+
+    x'\bm{e}_x'+
+    y'\bm{e}_y'+
+    z'\bm{e}_z'
 $$
 
-そして、この微小変化をとったものは直交座標系の基底ベクトル $\boldsymbol{u}_w,\boldsymbol{u}_x,\boldsymbol{u}_y,\boldsymbol{u}_z$ とGalilei変換後の基底ベクトル $\boldsymbol{u}_w',\boldsymbol{u}_x',\boldsymbol{u}_y',\boldsymbol{u}_z'$ を用いて以下の通りに書ける。
+そして、この微小変化をとったものは直交座標系の基底ベクトル $\bm{u}_w,\bm{u}_x,\bm{u}_y,\bm{u}_z$ とGalilei変換後の基底ベクトル $\bm{u}_w',\bm{u}_x',\bm{u}_y',\bm{u}_z'$ を用いて以下の通りに書ける。
 
 $$
-    \mathrm{d}\boldsymbol{s}=
-    \mathrm{d}w\boldsymbol{u}_w+
-    \mathrm{d}x\boldsymbol{u}_x+
-    \mathrm{d}y\boldsymbol{u}_y+
-    \mathrm{d}z\boldsymbol{u}_z=
-    \mathrm{d}w'\boldsymbol{u}_w'+
-    \mathrm{d}x'\boldsymbol{u}_x'+
-    \mathrm{d}y'\boldsymbol{u}_y'+
-    \mathrm{d}z'\boldsymbol{u}_z'
+    \mathrm{d}\bm{s}=
+    \mathrm{d}w\bm{u}_w+
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}y\bm{u}_y+
+    \mathrm{d}z\bm{u}_z=
+    \mathrm{d}w'\bm{u}_w'+
+    \mathrm{d}x'\bm{u}_x'+
+    \mathrm{d}y'\bm{u}_y'+
+    \mathrm{d}z'\bm{u}_z'
 $$
 
 そして、基底ベクトルの変換式は
 
 $$
-    \boldsymbol{u}_w=
-    \frac{\partial \boldsymbol{s}}{\partial w}=
+    \bm{u}_w=
+    \frac{\partial \bm{s}}{\partial w}=
     \left(
         \frac{\partial w'}{\partial w}
     \right)
-    \boldsymbol{u}_w'+
+    \bm{u}_w'+
     \left(
         \frac{\partial x'}{\partial w}
     \right)
-    \boldsymbol{u}_x'+
+    \bm{u}_x'+
     \left(
         \frac{\partial y'}{\partial w}
     \right)
-    \boldsymbol{u}_y'+
+    \bm{u}_y'+
     \left(
         \frac{\partial z'}{\partial w}
     \right)
-    \boldsymbol{u}_z'
+    \bm{u}_z'
 $$
 $$
-    \boldsymbol{u}_x=
-    \frac{\partial \boldsymbol{s}}{\partial x}=
+    \bm{u}_x=
+    \frac{\partial \bm{s}}{\partial x}=
     \left(
         \frac{\partial w'}{\partial x}
     \right)
-    \boldsymbol{u}_w'+
+    \bm{u}_w'+
     \left(
         \frac{\partial x'}{\partial x}
     \right)
-    \boldsymbol{u}_x'+
+    \bm{u}_x'+
     \left(
         \frac{\partial y'}{\partial x}
     \right)
-    \boldsymbol{u}_y'+
+    \bm{u}_y'+
     \left(
         \frac{\partial z'}{\partial x}
     \right)
-    \boldsymbol{u}_z'
+    \bm{u}_z'
 $$
 $$
-    \boldsymbol{u}_y=
-    \frac{\partial \boldsymbol{s}}{\partial y}=
+    \bm{u}_y=
+    \frac{\partial \bm{s}}{\partial y}=
     \left(
         \frac{\partial w'}{\partial y}
     \right)
-    \boldsymbol{u}_w'+
+    \bm{u}_w'+
     \left(
         \frac{\partial x'}{\partial y}
     \right)
-    \boldsymbol{u}_x'+
+    \bm{u}_x'+
     \left(
         \frac{\partial y'}{\partial y}
     \right)
-    \boldsymbol{u}_y'+
+    \bm{u}_y'+
     \left(
         \frac{\partial z'}{\partial y}
     \right)
-    \boldsymbol{u}_z'
+    \bm{u}_z'
 $$
 $$
-    \boldsymbol{u}_z=
-    \frac{\partial \boldsymbol{s}}{\partial z}=
+    \bm{u}_z=
+    \frac{\partial \bm{s}}{\partial z}=
     \left(
         \frac{\partial w'}{\partial z}
     \right)
-    \boldsymbol{u}_w'+
+    \bm{u}_w'+
     \left(
         \frac{\partial x'}{\partial z}
     \right)
-    \boldsymbol{u}_x'+
+    \bm{u}_x'+
     \left(
         \frac{\partial y'}{\partial z}
     \right)
-    \boldsymbol{u}_y'+
+    \bm{u}_y'+
     \left(
         \frac{\partial z'}{\partial z}
     \right)
-    \boldsymbol{u}_z'
+    \bm{u}_z'
 $$
 $$
-    \boldsymbol{u}_w'=
-    \frac{\partial \boldsymbol{s}}{\partial w'}=
+    \bm{u}_w'=
+    \frac{\partial \bm{s}}{\partial w'}=
     \left(
         \frac{\partial w}{\partial w'}
     \right)
-    \boldsymbol{u}_w+
+    \bm{u}_w+
     \left(
         \frac{\partial x}{\partial w'}
     \right)
-    \boldsymbol{u}_x+
+    \bm{u}_x+
     \left(
         \frac{\partial y}{\partial w'}
     \right)
-    \boldsymbol{u}_y+
+    \bm{u}_y+
     \left(
         \frac{\partial z}{\partial w'}
     \right)
-    \boldsymbol{u}_z
+    \bm{u}_z
 $$
 $$
-    \boldsymbol{u}_x'=
-    \frac{\partial \boldsymbol{s}}{\partial x'}=
+    \bm{u}_x'=
+    \frac{\partial \bm{s}}{\partial x'}=
     \left(
         \frac{\partial w}{\partial x'}
     \right)
-    \boldsymbol{u}_w+
+    \bm{u}_w+
     \left(
         \frac{\partial x}{\partial x'}
     \right)
-    \boldsymbol{u}_x+
+    \bm{u}_x+
     \left(
         \frac{\partial y}{\partial x'}
     \right)
-    \boldsymbol{u}_y+
+    \bm{u}_y+
     \left(
         \frac{\partial z}{\partial x'}
     \right)
-    \boldsymbol{u}_z
+    \bm{u}_z
 $$
 $$
-    \boldsymbol{u}_y'=
-    \frac{\partial \boldsymbol{s}}{\partial y'}=
+    \bm{u}_y'=
+    \frac{\partial \bm{s}}{\partial y'}=
     \left(
         \frac{\partial w}{\partial y'}
     \right)
-    \boldsymbol{u}_w+
+    \bm{u}_w+
     \left(
         \frac{\partial x}{\partial y'}
     \right)
-    \boldsymbol{u}_x+
+    \bm{u}_x+
     \left(
         \frac{\partial y}{\partial y'}
     \right)
-    \boldsymbol{u}_y+
+    \bm{u}_y+
     \left(
         \frac{\partial z}{\partial y'}
     \right)
-    \boldsymbol{u}_z
+    \bm{u}_z
 $$
 $$
-    \boldsymbol{u}_z'=
-    \frac{\partial \boldsymbol{s}}{\partial z'}=
+    \bm{u}_z'=
+    \frac{\partial \bm{s}}{\partial z'}=
     \left(
         \frac{\partial w}{\partial z'}
     \right)
-    \boldsymbol{u}_w+
+    \bm{u}_w+
     \left(
         \frac{\partial x}{\partial z'}
     \right)
-    \boldsymbol{u}_x+
+    \bm{u}_x+
     \left(
         \frac{\partial y}{\partial z'}
     \right)
-    \boldsymbol{u}_y+
+    \bm{u}_y+
     \left(
         \frac{\partial z}{\partial z'}
     \right)
-    \boldsymbol{u}_z
+    \bm{u}_z
 $$
 
 となるため、変換式を代入すると以下の式が得られる。
 
 $$
-    \boldsymbol{u}_w=
-    \boldsymbol{u}_w'-\beta\boldsymbol{u}_x'、
-    \boldsymbol{u}_x=\boldsymbol{u}_x'、
-    \boldsymbol{u}_y=\boldsymbol{u}_y'、
-    \boldsymbol{u}_z=\boldsymbol{u}_z'
+    \bm{u}_w=
+    \bm{u}_w'-\beta\bm{u}_x'、
+    \bm{u}_x=\bm{u}_x'、
+    \bm{u}_y=\bm{u}_y'、
+    \bm{u}_z=\bm{u}_z'
 $$
 $$
-    \boldsymbol{u}_w'=
-    \boldsymbol{u}_w+\beta\boldsymbol{u}_x、
-    \boldsymbol{u}_x'=\boldsymbol{u}_x、
-    \boldsymbol{u}_y'=\boldsymbol{u}_y、
-    \boldsymbol{u}_z'=\boldsymbol{u}_z
+    \bm{u}_w'=
+    \bm{u}_w+\beta\bm{u}_x、
+    \bm{u}_x'=\bm{u}_x、
+    \bm{u}_y'=\bm{u}_y、
+    \bm{u}_z'=\bm{u}_z
 $$
 
 ここで、変換前の座標系が直交座標系であることを踏まえて**時間軸w以外**の内積
 
 $$
-    \boldsymbol{u}_x=\boldsymbol{e}_x、
-    \boldsymbol{u}_y=\boldsymbol{e}_y、
-    \boldsymbol{u}_z=\boldsymbol{e}_z
+    \bm{u}_x=\bm{e}_x、
+    \bm{u}_y=\bm{e}_y、
+    \bm{u}_z=\bm{e}_z
 $$
 $$
-    \boldsymbol{u}_x\cdot\boldsymbol{u}_x=1、
-    \boldsymbol{u}_y\cdot\boldsymbol{u}_x=0、
-    \boldsymbol{u}_z\cdot\boldsymbol{u}_x=0
+    \bm{u}_x\cdot\bm{u}_x=1、
+    \bm{u}_y\cdot\bm{u}_x=0、
+    \bm{u}_z\cdot\bm{u}_x=0
 $$
 $$
-    \boldsymbol{u}_x\cdot\boldsymbol{u}_y=0、
-    \boldsymbol{u}_y\cdot\boldsymbol{u}_y=1、
-    \boldsymbol{u}_z\cdot\boldsymbol{u}_y=0
+    \bm{u}_x\cdot\bm{u}_y=0、
+    \bm{u}_y\cdot\bm{u}_y=1、
+    \bm{u}_z\cdot\bm{u}_y=0
 $$
 $$
-    \boldsymbol{u}_x\cdot\boldsymbol{u}_z=0、
-    \boldsymbol{u}_y\cdot\boldsymbol{u}_z=0、
-    \boldsymbol{u}_z\cdot\boldsymbol{u}_z=1
+    \bm{u}_x\cdot\bm{u}_z=0、
+    \bm{u}_y\cdot\bm{u}_z=0、
+    \bm{u}_z\cdot\bm{u}_z=1
 $$
 
 を利用して変換後の内積を求めると
 
 $$
-    \boldsymbol{u}_x'\cdot\boldsymbol{u}_x'=1、
-    \boldsymbol{u}_y'\cdot\boldsymbol{u}_x'=0、
-    \boldsymbol{u}_z'\cdot\boldsymbol{u}_x'=0
+    \bm{u}_x'\cdot\bm{u}_x'=1、
+    \bm{u}_y'\cdot\bm{u}_x'=0、
+    \bm{u}_z'\cdot\bm{u}_x'=0
 $$
 $$
-    \boldsymbol{u}_x'\cdot\boldsymbol{u}_y'=0、
-    \boldsymbol{u}_y'\cdot\boldsymbol{u}_y'=1、
-    \boldsymbol{u}_z'\cdot\boldsymbol{u}_y'=0
+    \bm{u}_x'\cdot\bm{u}_y'=0、
+    \bm{u}_y'\cdot\bm{u}_y'=1、
+    \bm{u}_z'\cdot\bm{u}_y'=0
 $$
 $$
-    \boldsymbol{u}_x'\cdot\boldsymbol{u}_z'=0、
-    \boldsymbol{u}_y'\cdot\boldsymbol{u}_z'=0、
-    \boldsymbol{u}_z'\cdot\boldsymbol{u}_z'=1
+    \bm{u}_x'\cdot\bm{u}_z'=0、
+    \bm{u}_y'\cdot\bm{u}_z'=0、
+    \bm{u}_z'\cdot\bm{u}_z'=1
 $$
 
 となる。ここで、**時間軸wのみ**の変換式について
 
 $$
-    \boldsymbol{u}_w'\cdot\boldsymbol{u}_w'=
-    (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
-    2\beta(\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+    \bm{u}_w'\cdot\bm{u}_w'=
+    (\bm{u}_w\cdot\bm{u}_w)+
+    2\beta(\bm{u}_w\cdot\bm{u}_x)+
     \beta^2、
-    \boldsymbol{u}_w'\cdot\boldsymbol{u}_x'=
-    (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+    \bm{u}_w'\cdot\bm{u}_x'=
+    (\bm{u}_w\cdot\bm{u}_x)+
     \beta
 $$
 $$
-    \boldsymbol{u}_w\cdot\boldsymbol{u}_w=
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_w')-
-    2\beta(\boldsymbol{u}_w'\cdot\boldsymbol{u}_x')+
+    \bm{u}_w\cdot\bm{u}_w=
+    (\bm{u}_w'\cdot\bm{u}_w')-
+    2\beta(\bm{u}_w'\cdot\bm{u}_x')+
     \beta^2、
-    \boldsymbol{u}_w\cdot\boldsymbol{u}_x=
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_x')-
+    \bm{u}_w\cdot\bm{u}_x=
+    (\bm{u}_w'\cdot\bm{u}_x')-
     \beta
 $$
 
 となるが、仮に
 
 $$
-    \boldsymbol{u}_w'\cdot\boldsymbol{u}_w'=
-    \boldsymbol{u}_w\cdot\boldsymbol{u}_w=1
+    \bm{u}_w'\cdot\bm{u}_w'=
+    \bm{u}_w\cdot\bm{u}_w=1
 $$
 
 となるとすれば、
 
 $$
-    \boldsymbol{u}_w'\cdot\boldsymbol{u}_x'=
+    \bm{u}_w'\cdot\bm{u}_x'=
     \frac{1}{2}\beta、
-    \boldsymbol{u}_w\cdot\boldsymbol{u}_x=
+    \bm{u}_w\cdot\bm{u}_x=
     -\frac{1}{2}\beta
 $$
 
 となる。これを踏まえて変換前のベクトルの大きさは
 
 $$
-    |\boldsymbol{u}_w|=
-    \sqrt{\boldsymbol{u}_w\cdot\boldsymbol{u}_w}=1、
-    |\boldsymbol{u}_x|=
-    \sqrt{\boldsymbol{u}_x\cdot\boldsymbol{u}_x}=1
+    |\bm{u}_w|=
+    \sqrt{\bm{u}_w\cdot\bm{u}_w}=1、
+    |\bm{u}_x|=
+    \sqrt{\bm{u}_x\cdot\bm{u}_x}=1
 $$
 $$
-    |\boldsymbol{u}_y|=
-    \sqrt{\boldsymbol{u}_y\cdot\boldsymbol{u}_y}=1、
-    |\boldsymbol{u}_z|=
-    \sqrt{\boldsymbol{u}_z\cdot\boldsymbol{u}_z}=1、
+    |\bm{u}_y|=
+    \sqrt{\bm{u}_y\cdot\bm{u}_y}=1、
+    |\bm{u}_z|=
+    \sqrt{\bm{u}_z\cdot\bm{u}_z}=1、
 $$
 
 であり、変換後の基底ベクトルの大きさは以下の通りになる。
 
 $$
-    |\boldsymbol{u}_w'|=
-    \sqrt{\boldsymbol{u}_{w}'\cdot\boldsymbol{u}_{w}'}=1、
-    |\boldsymbol{u}_x'|=
-    \sqrt{\boldsymbol{u}_{x}'\cdot\boldsymbol{u}_{x}'}=1、
+    |\bm{u}_w'|=
+    \sqrt{\bm{u}_{w}'\cdot\bm{u}_{w}'}=1、
+    |\bm{u}_x'|=
+    \sqrt{\bm{u}_{x}'\cdot\bm{u}_{x}'}=1、
 $$
 $$
-    |\boldsymbol{u}_y'|=
-    \sqrt{\boldsymbol{u}_{y}'\cdot\boldsymbol{u}_{y}'}=1、
-    |\boldsymbol{u}_z'|=
-    \sqrt{\boldsymbol{u}_{z}'\cdot\boldsymbol{u}_{z}'}=1
+    |\bm{u}_y'|=
+    \sqrt{\bm{u}_{y}'\cdot\bm{u}_{y}'}=1、
+    |\bm{u}_z'|=
+    \sqrt{\bm{u}_{z}'\cdot\bm{u}_{z}'}=1
 $$
 
 そのため、Galilei変換後の基本ベクトルは
 
 $$
-    \boldsymbol{e}_w'=
-    \boldsymbol{e}_w+\beta\boldsymbol{e}_x、
-    \boldsymbol{e}_x'=
-    \boldsymbol{e}_x'=\boldsymbol{e}_x、
-    \boldsymbol{e}_y'=\boldsymbol{e}_y、
-    \boldsymbol{e}_z''=\boldsymbol{e}_z'
+    \bm{e}_w'=
+    \bm{e}_w+\beta\bm{e}_x、
+    \bm{e}_x'=
+    \bm{e}_x'=\bm{e}_x、
+    \bm{e}_y'=\bm{e}_y、
+    \bm{e}_z''=\bm{e}_z'
 $$
 
 となる。ここまでで内積について変換前が
 
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_w=1、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_w=-\frac{1}{2}\beta、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_w=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_w=0
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_x=-\frac{1}{2}\beta、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_x=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_x=0
+    \bm{e}_w\cdot\bm{e}_x=-\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_y=0、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_y=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_y=1、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_y=0
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_z=1
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
 $$
 
 であり、変換後についても
 
 $$
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_w'=1、
-    \boldsymbol{e}_x'\cdot\boldsymbol{e}_w'=
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_x'\cdot\bm{e}_w'=
     \frac{1}{2}\beta、
-    \boldsymbol{e}_y'\cdot\boldsymbol{e}_w'=0、
-    \boldsymbol{e}_z'\cdot\boldsymbol{e}_w'=0
+    \bm{e}_y'\cdot\bm{e}_w'=0、
+    \bm{e}_z'\cdot\bm{e}_w'=0
 $$
 $$
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_x'=
+    \bm{e}_w'\cdot\bm{e}_x'=
     \frac{1}{2}\beta、
-    \boldsymbol{e}_x'\cdot\boldsymbol{e}_x'=1、
-    \boldsymbol{e}_y'\cdot\boldsymbol{e}_x'=0、
-    \boldsymbol{e}_z'\cdot\boldsymbol{e}_x'=0
+    \bm{e}_x'\cdot\bm{e}_x'=1、
+    \bm{e}_y'\cdot\bm{e}_x'=0、
+    \bm{e}_z'\cdot\bm{e}_x'=0
 $$
 $$
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_y'=0、
-    \boldsymbol{e}_x'\cdot\boldsymbol{e}_y'=0、
-    \boldsymbol{e}_y'\cdot\boldsymbol{e}_y'=1、
-    \boldsymbol{e}_z'\cdot\boldsymbol{e}_y'=0
+    \bm{e}_w'\cdot\bm{e}_y'=0、
+    \bm{e}_x'\cdot\bm{e}_y'=0、
+    \bm{e}_y'\cdot\bm{e}_y'=1、
+    \bm{e}_z'\cdot\bm{e}_y'=0
 $$
 $$
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_z'=0、
-    \boldsymbol{e}_x'\cdot\boldsymbol{e}_z'=0、
-    \boldsymbol{e}_y'\cdot\boldsymbol{e}_z'=0、
-    \boldsymbol{e}_z'\cdot\boldsymbol{e}_z'=1
+    \bm{e}_w'\cdot\bm{e}_z'=0、
+    \bm{e}_x'\cdot\bm{e}_z'=0、
+    \bm{e}_y'\cdot\bm{e}_z'=0、
+    \bm{e}_z'\cdot\bm{e}_z'=1
 $$
 
 としていたが、ここで時間軸 $w$ と $x$ の内積について値を持つのは以下の図のような関係にあるためと考えられる。
@@ -454,90 +454,90 @@ $$
 このときの基底ベクトルをGalilei変換と同様に求めてみると
 
 $$
-    \boldsymbol{u}_w=
-    \gamma (\boldsymbol{u}_w'+\beta\boldsymbol{u}_x')、
-    \boldsymbol{u}_x=
-    \gamma (\boldsymbol{u}_x'+\beta\boldsymbol{u}_w')
+    \bm{u}_w=
+    \gamma (\bm{u}_w'+\beta\bm{u}_x')、
+    \bm{u}_x=
+    \gamma (\bm{u}_x'+\beta\bm{u}_w')
 $$
 $$
-    \boldsymbol{u}'_w=
-    \gamma (\boldsymbol{u}_w-\beta\boldsymbol{u}_x)、
-    \boldsymbol{u}'_x=
-    \gamma (\boldsymbol{u}_x-\beta\boldsymbol{u}_w)
+    \bm{u}'_w=
+    \gamma (\bm{u}_w-\beta\bm{u}_x)、
+    \bm{u}'_x=
+    \gamma (\bm{u}_x-\beta\bm{u}_w)
 $$
 
 であり、このうち**時間軸wを含む**内積をとると
 
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_w')=
+    (\bm{u}_w'\cdot\bm{u}_w')=
     \gamma^2[
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
-        2\beta(\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
-        \beta^2(\boldsymbol{u}_x\cdot\boldsymbol{u}_x)
+        (\bm{u}_w\cdot\bm{u}_w)+
+        2\beta(\bm{u}_w\cdot\bm{u}_x)+
+        \beta^2(\bm{u}_x\cdot\bm{u}_x)
     ]
 $$
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_x')=
+    (\bm{u}_w'\cdot\bm{u}_x')=
     \gamma^2[
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+        (\bm{u}_w\cdot\bm{u}_x)+
         (1+\beta^2)
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
-        \beta(\boldsymbol{u}_x\cdot\boldsymbol{u}_x)
+        (\bm{u}_w\cdot\bm{u}_w)+
+        \beta(\bm{u}_x\cdot\bm{u}_x)
     ]
 $$
 $$
-    (\boldsymbol{u}_x'\cdot\boldsymbol{u}_x')=
+    (\bm{u}_x'\cdot\bm{u}_x')=
     \gamma^2[
         1+
-        2\beta(\boldsymbol{u}_x\cdot\boldsymbol{u}_w)+
+        2\beta(\bm{u}_x\cdot\bm{u}_w)+
         \beta^2
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)
+        (\bm{u}_w\cdot\bm{u}_w)
     ]
 $$
 
 となるが、**時間軸wを除いた分**の内積が
 
 $$
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_x=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_x=0
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
 $$
 $$
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_y=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_y=1、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_y=0
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
 $$
 $$
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_z=1
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
 $$
 
 であるから以下の式が得られる。
 
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_w')=
+    (\bm{u}_w'\cdot\bm{u}_w')=
     \gamma^2[
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
-        2\beta(\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+        (\bm{u}_w\cdot\bm{u}_w)+
+        2\beta(\bm{u}_w\cdot\bm{u}_x)+
         \beta^2
     ]
 $$
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_x')=
+    (\bm{u}_w'\cdot\bm{u}_x')=
     \gamma^2[
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+        (\bm{u}_w\cdot\bm{u}_x)+
         (1+\beta^2)
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
+        (\bm{u}_w\cdot\bm{u}_w)+
         \beta
     ]
 $$
 $$
     \gamma^2[
         1+
-        2\beta(\boldsymbol{u}_x\cdot\boldsymbol{u}_w)+
+        2\beta(\bm{u}_x\cdot\bm{u}_w)+
         \beta^2
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)
+        (\bm{u}_w\cdot\bm{u}_w)
     ]=
     1
 $$
@@ -545,25 +545,25 @@ $$
 このうち、3つ目の式から
 
 $$
-    2(\boldsymbol{u}_x\cdot\boldsymbol{u}_w)=
+    2(\bm{u}_x\cdot\bm{u}_w)=
     \beta
     \left[
-       (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)-1
+       (\bm{u}_w\cdot\bm{u}_w)-1
     \right]
 $$
 
 をそれ以外の式に適用すると
 
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_w')=
-    (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)
+    (\bm{u}_w'\cdot\bm{u}_w')=
+    (\bm{u}_w\cdot\bm{u}_w)
 $$
 $$
-    (\boldsymbol{u}_w'\cdot\boldsymbol{u}_x')=
+    (\bm{u}_w'\cdot\bm{u}_x')=
     \gamma^2[
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_x)+
+        (\bm{u}_w\cdot\bm{u}_x)+
         (1+\beta^2)
-        (\boldsymbol{u}_w\cdot\boldsymbol{u}_w)+
+        (\bm{u}_w\cdot\bm{u}_w)+
         \beta
     ]
 $$
@@ -577,28 +577,28 @@ $$
 変換前の内積が以下のようになっていたとする。
 
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_w=1、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_w=-\frac{1}{2}\beta、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_w=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_w=0
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_x\cdot\bm{e}_w=-\frac{1}{2}\beta、
+    \bm{e}_y\cdot\bm{e}_w=0、
+    \bm{e}_z\cdot\bm{e}_w=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_x=-\frac{1}{2}\beta、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_x=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_x=0
+    \bm{e}_w\cdot\bm{e}_x=-\frac{1}{2}\beta、
+    \bm{e}_x\cdot\bm{e}_x=1、
+    \bm{e}_y\cdot\bm{e}_x=0、
+    \bm{e}_z\cdot\bm{e}_x=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_y=0、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_y=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_y=1、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_y=0
+    \bm{e}_w\cdot\bm{e}_y=0、
+    \bm{e}_x\cdot\bm{e}_y=0、
+    \bm{e}_y\cdot\bm{e}_y=1、
+    \bm{e}_z\cdot\bm{e}_y=0
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_y\cdot\boldsymbol{e}_z=0、
-    \boldsymbol{e}_z\cdot\boldsymbol{e}_z=1
+    \bm{e}_w\cdot\bm{e}_z=0、
+    \bm{e}_x\cdot\bm{e}_z=0、
+    \bm{e}_y\cdot\bm{e}_z=0、
+    \bm{e}_z\cdot\bm{e}_z=1
 $$
 
 
@@ -615,23 +615,23 @@ $$
 
 、基本ベクトルの関係とそれらの内積を求めてみると
 $$
-    \boldsymbol{e}'_w=
-    \gamma (\boldsymbol{e}_w+\beta\boldsymbol{e}_x)、
-    \boldsymbol{e}'_x=
-    \gamma (\boldsymbol{e}_x+\beta\boldsymbol{e}_w)
+    \bm{e}'_w=
+    \gamma (\bm{e}_w+\beta\bm{e}_x)、
+    \bm{e}'_x=
+    \gamma (\bm{e}_x+\beta\bm{e}_w)
 $$
 $$
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_w=1、
-    \boldsymbol{e}_w\cdot\boldsymbol{e}_x=
-    \boldsymbol{e}_x\cdot\boldsymbol{e}_w=-\beta=
+    \bm{e}_w\cdot\bm{e}_w=1、
+    \bm{e}_w\cdot\bm{e}_x=
+    \bm{e}_x\cdot\bm{e}_w=-\beta=
     \cos\left(
         \frac{\pi}{2}+\alpha
     \right)
 $$
 $$
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_w'=1、
-    \boldsymbol{e}_w'\cdot\boldsymbol{e}_x'=
-    \boldsymbol{e}_x'\cdot\boldsymbol{e}_w'=\beta=
+    \bm{e}_w'\cdot\bm{e}_w'=1、
+    \bm{e}_w'\cdot\bm{e}_x'=
+    \bm{e}_x'\cdot\bm{e}_w'=\beta=
     \cos\left(
         \frac{\pi}{2}-\alpha
     \right)
@@ -640,28 +640,28 @@ $$
 <p align="center">
     <img width="40%" src="images/lorentz_space.png">
 </p>
-　このように既存の座標系の基本ベクトル（$\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z$など）から基底ベクトル $\boldsymbol{u}$ とその内積 $\boldsymbol{u}\cdot\boldsymbol{u}$ から基本ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\boldsymbol{s}$ で関連つけられていたため、
+　このように既存の座標系の基本ベクトル（$\bm{e}_x,\bm{e}_y,\bm{e}_z$など）から基底ベクトル $\bm{u}$ とその内積 $\bm{u}\cdot\bm{u}$ から基本ベクトルを求めることで変換前と後の座標系がどのような関係にあるか分かることになる。ただ、そもそも基底ベクトルは微小ベクトル $\mathrm{d}\bm{s}$ で関連つけられていたため、
 $$
     w=x^0、x=x^1、y=x^2、z=x^3、
-    \boldsymbol{u}_w=\boldsymbol{u}_0、
-    \boldsymbol{u}_x=\boldsymbol{u}_1、
-    \boldsymbol{u}_y=\boldsymbol{u}_2、
-    \boldsymbol{u}_z=\boldsymbol{u}_3
+    \bm{u}_w=\bm{u}_0、
+    \bm{u}_x=\bm{u}_1、
+    \bm{u}_y=\bm{u}_2、
+    \bm{u}_z=\bm{u}_3
 $$
-とおき、$\mathrm{d}\boldsymbol{s}$ を以下のように書く。
+とおき、$\mathrm{d}\bm{s}$ を以下のように書く。
 $$
-    \mathrm{d}\boldsymbol{s}=
-    \sum_{\mu}\mathrm{d}x^\mu\boldsymbol{u}_\mu=
-    \sum_{\mu'}\mathrm{d}x^{\mu'}\boldsymbol{u}_{\mu'}
+    \mathrm{d}\bm{s}=
+    \sum_{\mu}\mathrm{d}x^\mu\bm{u}_\mu=
+    \sum_{\mu'}\mathrm{d}x^{\mu'}\bm{u}_{\mu'}
 $$
 $$
     (\mathrm{d}s)^2=
-    \mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}=
+    \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
     \sum_{\mu,\nu=0}^{3}
-    (\boldsymbol{u}_\mu\cdot\boldsymbol{u}_\nu)
+    (\bm{u}_\mu\cdot\bm{u}_\nu)
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
     \sum_{\mu',\nu'=0}^{3}
-    (\boldsymbol{u}_{\mu'}\cdot\boldsymbol{u}_{\nu'})
+    (\bm{u}_{\mu'}\cdot\bm{u}_{\nu'})
     \mathrm{d}x^{\mu'}\mathrm{d}x^{\nu'}
 $$
 ここで片方の内積が分かることで、もう片方の内積や返還前後の関係が分かるため、これはリーマン計量と呼ばれている。
@@ -960,11 +960,11 @@ $$
 $$
 というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
 $$
-    \mathrm{d}\boldsymbol{s}'=
-    \mathrm{d}x^{\nu}\boldsymbol{e}_{\nu}　
+    \mathrm{d}\bm{s}'=
+    \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \left(
-        \boldsymbol{e}_{\nu}=
-        \frac{\partial \boldsymbol{s}'}
+        \bm{e}_{\nu}=
+        \frac{\partial \bm{s}'}
         {\partial x^\nu}
     \right)
 
@@ -972,12 +972,12 @@ $$
 そして、この大きさを求めるために内積をとると
 $$
     \mathrm{d}s^2=
-    \mathrm{d}\boldsymbol{s}'\cdot\mathrm{d}\boldsymbol{s}'=
-    (\boldsymbol{e}_\mu\cdot\boldsymbol{e}_\nu)\ 
+    \mathrm{d}\bm{s}'\cdot\mathrm{d}\bm{s}'=
+    (\bm{e}_\mu\cdot\bm{e}_\nu)\ 
     \mathrm{d}x^\mu\mathrm{d}x^\nu=
     g_{\mu\nu}
     \mathrm{d}x^\mu\mathrm{d}x^\nu　
-    (g_{\mu\nu}=\boldsymbol{e}_\mu\cdot\boldsymbol{e}_\nu)
+    (g_{\mu\nu}=\bm{e}_\mu\cdot\bm{e}_\nu)
 $$
 となるが、ここで現れる $g_{\mu\nu}$ が**計量**と呼ばれており、Riemann幾何学では重要な役目を果たすものとなっている。実際、この大きさを次の通りにすると互いに不変な形で記載することができる。
 $$
@@ -987,9 +987,9 @@ $$
     g_{\lambda\tau}
     \mathrm{d}x^\lambda\mathrm{d}x^\tau、
     （g'_{\mu\nu}=
-    \boldsymbol{e}'_\mu\cdot\boldsymbol{e}'_\nu、
+    \bm{e}'_\mu\cdot\bm{e}'_\nu、
     g_{\lambda\tau}=
-    \boldsymbol{e}_\lambda\cdot\boldsymbol{e}_\tau
+    \bm{e}_\lambda\cdot\bm{e}_\tau
     ）
 $$
 この関係が成り立つかどうかは、まず
@@ -1075,9 +1075,9 @@ $$
 実は、この関係が成り立つことは相対論的力学でも出てきており、このときは
 $$
     \mathrm{d}t'
-    \sqrt{1-\frac{\boldsymbol{v'}^2}{c^2}}=
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
     \mathrm{d}t
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 であったが、変位の形に整理して二乗にすると不変な形をしていることが分かる（Galilei変換、等加速度系の変換でも別の形で不変な形になる）。
 $$
@@ -1102,26 +1102,26 @@ $$
 $$
 しかし、このままだと各座標ごとの基本ベクトルが
 $$
-    \boldsymbol{e}_0=
+    \bm{e}_0=
     \begin{pmatrix}
         \gamma \\ -\gamma\beta \\ 0 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_1=
+    \bm{e}_1=
     \begin{pmatrix}
         -\gamma\beta \\ \gamma \\ 0 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_2=
+    \bm{e}_2=
     \begin{pmatrix}
         0 \\ 0 \\ 1 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_3=
+    \bm{e}_3=
     \begin{pmatrix}
         0 \\ 0 \\ 0 \\ 1
     \end{pmatrix}
 $$
 であることから、計量の値は
 $$
-    g_{00}=\boldsymbol{e}_0\cdot\boldsymbol{e}_0=
+    g_{00}=\bm{e}_0\cdot\bm{e}_0=
     \frac{1+\beta^2}{1-\beta^2}\neq 1、
     g_{11}\cdots
 $$
@@ -1137,23 +1137,23 @@ $$
 $$
 というようにすると、基本ベクトルが
 $$
-    \boldsymbol{e}_0=
+    \bm{e}_0=
     \begin{pmatrix}
         \gamma \\ 
         \mathrm{i}\gamma\beta \\ 
         0 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_1=
+    \bm{e}_1=
     \begin{pmatrix}
         -\mathrm{i}\gamma\beta \\ 
         \gamma \\ 
         0 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_2=
+    \bm{e}_2=
     \begin{pmatrix}
         0 \\ 0 \\ 1 \\ 0
     \end{pmatrix}、
-    \boldsymbol{e}_3=
+    \bm{e}_3=
     \begin{pmatrix}
         0 \\ 0 \\ 0 \\ 1
     \end{pmatrix}

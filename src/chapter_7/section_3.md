@@ -18,23 +18,23 @@ $$
 $$
     V<c、v_x<c
 $$
-このことから、物体の速度というのは光速を超えることがなく、力が働いて加速しても光速で頭打ちになることがうかがえる。これは別の見方だと、速度が増すことで加速しにくくなる（質量が増す）ことになるため、質量が速度に依存しているともいえる。古典力学においても質量が速度（というより時間）に依存している場合は以下の方程式を解くことで運動を記述することができた。ここで $\boldsymbol{p}$ は運動量、$\boldsymbol{F}$ は外部からの力である。
+このことから、物体の速度というのは光速を超えることがなく、力が働いて加速しても光速で頭打ちになることがうかがえる。これは別の見方だと、速度が増すことで加速しにくくなる（質量が増す）ことになるため、質量が速度に依存しているともいえる。古典力学においても質量が速度（というより時間）に依存している場合は以下の方程式を解くことで運動を記述することができた。ここで $\bm{p}$ は運動量、$\bm{F}$ は外部からの力である。
 $$
-    \boldsymbol{F}=\frac{{\rm d}\boldsymbol{p}}{{\rm d}t}、
-    \boldsymbol{p}=m\boldsymbol{v}
+    \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
+    \bm{p}=m\bm{v}
 $$
 今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでにN.LwisとC.Tolmanの論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 $$
-    m(\boldsymbol{v})=\frac{m_0}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+    m(\bm{v})=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 というようになるとされている。ここで $m_0$ は物体が静止しているときの質量としている。では、観測者ごとにどうなるかを見ていくと、まず質量に関して
 $$
-    m(\boldsymbol{v}')=
-    \frac{m_0}{\sqrt{1-\frac{\boldsymbol{v'}^2}{c^2}}}
+    m(\bm{v}')=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v'}^2}{c^2}}}
 $$
 であり、速度に関しては
 $$
-    \boldsymbol{v}'^2=v_x'^2+v_y'^2+v_z'^2=
+    \bm{v}'^2=v_x'^2+v_y'^2+v_z'^2=
     \frac{1}{
         \left(
             1-\frac{v_xV}{c^2}
@@ -50,18 +50,18 @@ $$
 $$
 となることから、以下のようになる。
 $$
-    m(\boldsymbol{v}')=
+    m(\bm{v}')=
     \gamma
     \left(
         1-\frac{v_xV}{c^2}
     \right)
     \frac{m_0}{
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
     }=
     \gamma\left(
         1-\frac{v_xV}{c^2}
-    \right) m(\boldsymbol{v})=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m(\boldsymbol{v})
+    \right) m(\bm{v})=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m(\bm{v})
 $$
 ただし、ここで以下の関係式を利用している。
 $$
@@ -71,14 +71,14 @@ $$
 そのため、運動方程式の左辺については以下の通りとなる。
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\boldsymbol{v}')v_x')=
+    (m(\bm{v}')v_x')=
     \gamma
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \left[
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\boldsymbol{v})v_x)-
+        (m(\bm{v})v_x)-
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\boldsymbol{v})V)
+        (m(\bm{v})V)
     \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \gamma
@@ -88,32 +88,32 @@ $$
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\boldsymbol{v}')v_y')=
+    (m(\bm{v}')v_y')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (m(\boldsymbol{v})v_y)=
+    (m(\bm{v})v_y)=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     F_y
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\boldsymbol{v}')v_z')=
+    (m(\bm{v}')v_z')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (m(\boldsymbol{v})v_z)=
+    (m(\bm{v})v_z)=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     F_z
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\boldsymbol{v}')v_w')=
+    (m(\bm{v}')v_w')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \left[
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\boldsymbol{v})c)-
+        (m(\bm{v})c)-
         \frac{V}{c}
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\boldsymbol{v})v_x)
+        (m(\bm{v})v_x)
     \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \gamma
@@ -138,46 +138,46 @@ $$
 $$
 となり、力積（運動量の変化）が等しい形になる。そのため
 $$
-    \mathrm{d}\boldsymbol{p}'=\mathrm{d}\boldsymbol{p}
+    \mathrm{d}\bm{p}'=\mathrm{d}\bm{p}
 $$
 であるが、このままだと時間の部分が抜けた形になってしまっていることが分かる。一方で、質量の関係式をもう少し展開していくと
 $$
     \frac{m_0}{
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}}=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{m_0}{
-    \sqrt{1-\frac{\boldsymbol{v'}^2}{c^2}}}
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}}
 $$
 であるから、時間に関して以下の等式が成り立つ。
 $$
     \mathrm{d}t'
-    \sqrt{1-\frac{\boldsymbol{v'}^2}{c^2}}=
+    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
     \mathrm{d}t
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 こちらの量も変換に対して不変な形をしており、
 時間の代わりに扱うと同じ形で置き換えられることが分かる。そこで、
 $$
     \mathrm{d}\tau\equiv
     \mathrm{d}t
-    \sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+    \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 として、運動方程式を以下のようにしてみよう。
 $$
-    \boldsymbol{f}=
-    \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}、
-    \boldsymbol{f}\equiv\gamma(\boldsymbol{v})\boldsymbol{F}
+    \bm{f}=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \bm{f}\equiv\gamma(\bm{v})\bm{F}
 $$
 こちらも同じように見ていくと、質量に関しては同じとなる一方で各成分についてはそれぞれ
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\boldsymbol{v}')v_x')=
+    (m(\bm{v}')v_x')=
     \gamma
     \left[
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\boldsymbol{v})v_x)-
+        (m(\bm{v})v_x)-
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\boldsymbol{v})V)
+        (m(\bm{v})V)
     \right]=
     \gamma
     \left(
@@ -186,26 +186,26 @@ $$
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\boldsymbol{v}')v_y')=
+    (m(\bm{v}')v_y')=
     \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\boldsymbol{v})v_y)=f_y
+    (m(\bm{v})v_y)=f_y
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\boldsymbol{v}')v_z')=
+    (m(\bm{v}')v_z')=
     \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\boldsymbol{v})v_z)=f_z
+    (m(\bm{v})v_z)=f_z
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\boldsymbol{v}')v_w')=
+    (m(\bm{v}')v_w')=
     \gamma
     \left[
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\boldsymbol{v})c)-
+        (m(\bm{v})c)-
         \frac{V}{c}
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\boldsymbol{v})v_x)
+        (m(\bm{v})v_x)
     \right]=
     \gamma
     \left(
@@ -228,50 +228,50 @@ $$
 $$
 また、運動量に対してエネルギーも保存するため、まずエネルギー（運動エネルギー）がどのような形になるか確認するため仕事率（力と速度の内積）を求めてみると
 $$
-    \boldsymbol{f}\cdot\boldsymbol{v}=
+    \bm{f}\cdot\bm{v}=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(\frac{m_0\boldsymbol{v}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}\right)\cdot\boldsymbol{v}=
+    \left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
     \frac{{\rm d}}{{\rm d}\tau}
     \left(
         \frac{m_0c^2}
-        {\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+        {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     \right)=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(m(\boldsymbol{v})c^2\right)
+    \left(m(\bm{v})c^2\right)
 $$
 となるため、エネルギーは以下の形になることが分かる。
 $$
-    E_K=m(\boldsymbol{v})c^2=
-    m_0c^2+\frac{1}{2}m_0\boldsymbol{v}^2+\cdots
+    E_K=m(\bm{v})c^2=
+    m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており以下の関係がある。
 $$
     f_w=
-    \frac{1}{c}(\boldsymbol{f}\cdot\boldsymbol{v})=
+    \frac{1}{c}(\bm{f}\cdot\bm{v})=
     \frac{1}{c}
     \frac{{\rm d}E_K}{{\rm d}\tau}
 $$
 
 以上を踏まえて、運動方程式と変換式を整理すると以下のようになる。
 $$
-    \boldsymbol{f}=
-    \frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}、
-    (\boldsymbol{f}\cdot\boldsymbol{v})=
+    \bm{f}=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    (\bm{f}\cdot\bm{v})=
     \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
-    \boldsymbol{p}=m(\boldsymbol{v})\boldsymbol{v}、E_K=m(\boldsymbol{v})c^2
+    \bm{p}=m(\bm{v})\bm{v}、E_K=m(\bm{v})c^2
 $$
 $$
     f_x'=
     \gamma\left[
         f_x-
-        \frac{V}{c^2}(\boldsymbol{f}\cdot\boldsymbol{v})
+        \frac{V}{c^2}(\bm{f}\cdot\bm{v})
     \right]、
     f_y'=f_y、
     f_z'=f_z
     \rightarrow
-    (\boldsymbol{f}'\cdot\boldsymbol{v}')=
+    (\bm{f}'\cdot\bm{v}')=
     \gamma\left[
-        (\boldsymbol{f}\cdot\boldsymbol{v})-
+        (\bm{f}\cdot\bm{v})-
         Vf_x
     \right]
 $$
@@ -280,18 +280,18 @@ $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau}
     \left(
-        \frac{m_0\boldsymbol{v}}
-        {\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
+        \frac{m_0\bm{v}}
+        {\sqrt{1-\frac{\bm{v}^2}{c}}}
     \right)=
-    \frac{m_0\boldsymbol{g}}
-    {\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}、
+    \frac{m_0\bm{g}}
+    {\sqrt{1-\frac{\bm{v}^2}{c}}}、
     \frac{\mathrm{d}}{\mathrm{d}\tau}
     \left(
         \frac{m_0c^2}
-        {\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
+        {\sqrt{1-\frac{\bm{v}^2}{c}}}
     \right)=
-    \frac{m_0}{\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
-    (\boldsymbol{g}\cdot\boldsymbol{v})
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c}}}
+    (\bm{g}\cdot\bm{v})
 $$
 
 というようになるが、これを見ると重力での質量の増加分 $\gamma$ は固有時のものと打ち消しあうことでなくなることが分かる。このことから、$\gamma$ という項は質量が増加するためによるというよりも時間が固有時になる影響で発生するもの（速度の形の変化）により発生したものと考えることができる。式については z 成分しかなく位置 $z_0$ で初速度が 0 であるとすると

@@ -429,46 +429,46 @@ $$
     <img width="40%" src="chapter_1/images/motion.png">
 </p>
 
-<p>物体の位置を記述するとき、必ずなんらかの基準から見たものとなる。例えばAさんとBさんの二人がいて、AさんがBさんに床に置かれた物体の位置を伝えようとすると「<strong>Bさんから見て</strong>右側」というようになることからも伺えるであろう。それを聞いたBさんも右側を見て、自分を基準として目分量で物体の位置がこれぐらいだと把握するであろう。このように、物体の位置を把握するためには基準点O（Bさん自身の地点）を中心として座標系K（Bさんの目分量）を用意する必要がある。さらに物体自体が点ではなく大きさを持つことから、その位置を指定できるよう<strong>質点</strong>（質量を持つ点）というものに置き換える必要がある。仮に質点が地点Pにある場合、その位置は基準点O（または<strong>原点</strong>）から見た位置として記号 \(\vec{\rm OP}\) で表記される。あるいは、太文字で \(\boldsymbol{r}\) と表すと長さOPは \(|\boldsymbol{r}|\) または単に \(r\) と書くため、一般的に太文字で書くと長さに加えて向きまで含めたものとなる。このときの \(\boldsymbol{r}\) を<strong>位置ベクトル</strong>という（ベクトルの中でも長さしか持たない量は<strong>スカラー量</strong>と呼ばれる）。また、ここでは座標系KをBさんの目分量としていたが、それだと見る人によって大きさが異なってしまうため、一般的に下図のように直交直線座標（デカルト座標）が多く用いられる。</p>
+<p>物体の位置を記述するとき、必ずなんらかの基準から見たものとなる。例えばAさんとBさんの二人がいて、AさんがBさんに床に置かれた物体の位置を伝えようとすると「<strong>Bさんから見て</strong>右側」というようになることからも伺えるであろう。それを聞いたBさんも右側を見て、自分を基準として目分量で物体の位置がこれぐらいだと把握するであろう。このように、物体の位置を把握するためには基準点O（Bさん自身の地点）を中心として座標系K（Bさんの目分量）を用意する必要がある。さらに物体自体が点ではなく大きさを持つことから、その位置を指定できるよう<strong>質点</strong>（質量を持つ点）というものに置き換える必要がある。仮に質点が地点Pにある場合、その位置は基準点O（または<strong>原点</strong>）から見た位置として記号 \(\vec{\rm OP}\) で表記される。あるいは、太文字で \(\bm{r}\) と表すと長さOPは \(|\bm{r}|\) または単に \(r\) と書くため、一般的に太文字で書くと長さに加えて向きまで含めたものとなる。このときの \(\bm{r}\) を<strong>位置ベクトル</strong>という（ベクトルの中でも長さしか持たない量は<strong>スカラー量</strong>と呼ばれる）。また、ここでは座標系KをBさんの目分量としていたが、それだと見る人によって大きさが異なってしまうため、一般的に下図のように直交直線座標（デカルト座標）が多く用いられる。</p>
 <p align="center">
     <img width="50%" src="chapter_1/images/rectangular_system.png">
 </p>
 
-<p>このときのP点の位置ベクトル \(\boldsymbol{r}\) は座標 \((x,y,z)\) を用いて</p>
-<p>$$ \boldsymbol{r}=(x,y,z) $$</p>
-<p>で与えられる。例として、上図でもあるように \(x,y,z\) 軸の正の方向に向かう単位の大きさのベクトル（基本ベクトル）をそれぞれ \(\boldsymbol{e}_x,\boldsymbol{e}_y,\boldsymbol{e}_z\) とすると</p>
+<p>このときのP点の位置ベクトル \(\bm{r}\) は座標 \((x,y,z)\) を用いて</p>
+<p>$$ \bm{r}=(x,y,z) $$</p>
+<p>で与えられる。例として、上図でもあるように \(x,y,z\) 軸の正の方向に向かう単位の大きさのベクトル（基本ベクトル）をそれぞれ \(\bm{e}_x,\bm{e}_y,\bm{e}_z\) とすると</p>
 <p>$$
-\boldsymbol{e}_x=(1,0,0)、
-\boldsymbol{e}_y=(0,1,0)、
-\boldsymbol{e}_z=(0,0,1)
+\bm{e}_x=(1,0,0)、
+\bm{e}_y=(0,1,0)、
+\bm{e}_z=(0,0,1)
 $$</p>
-<p>と表されるが、これを用いると位置ベクトル \(\boldsymbol{r}\) は</p>
-<p>$$ \boldsymbol{r}=x\boldsymbol{e}_x+y\boldsymbol{e}_y+z\boldsymbol{e}_z $$</p>
+<p>と表されるが、これを用いると位置ベクトル \(\bm{r}\) は</p>
+<p>$$ \bm{r}=x\bm{e}_x+y\bm{e}_y+z\bm{e}_z $$</p>
 <p>と書くこともできる。このようにすると、後にも出てくるが別の座標系に変更した際にどの座標系で表現されているか区別しやすくなる。また、このときの原点から質点までの距離  \(r\) は</p>
 <p>$$
-r=|\boldsymbol{r}|=\sqrt{x^2+y^2+z^2}
+r=|\bm{r}|=\sqrt{x^2+y^2+z^2}
 $$</p>
 <p>で与えられる（三平方の定理により求めることが可能）。</p>
-<p>　ここまで位置ベクトルについて述べたが、これは質点の運動において時刻 \(t\) ごと変化するため \(\boldsymbol{r}(t)\) というように \(t\) の関数として表すことができる。そのため、仮に時刻 \(t\) で位置ベクトル \(\boldsymbol{r}(t)\) なるA点にあった質点が、時間 \(\Delta t\) の後に \(\boldsymbol{r}(t+\Delta t)\) なるB点まで動いたとする。このときの質点の変位（displacement）\(\Delta\boldsymbol{r}\) は、以下の図に図示されたようなベクトル算法を用いて</p>
+<p>　ここまで位置ベクトルについて述べたが、これは質点の運動において時刻 \(t\) ごと変化するため \(\bm{r}(t)\) というように \(t\) の関数として表すことができる。そのため、仮に時刻 \(t\) で位置ベクトル \(\bm{r}(t)\) なるA点にあった質点が、時間 \(\Delta t\) の後に \(\bm{r}(t+\Delta t)\) なるB点まで動いたとする。このときの質点の変位（displacement）\(\Delta\bm{r}\) は、以下の図に図示されたようなベクトル算法を用いて</p>
 <p>$$
-\Delta\boldsymbol{r}=\boldsymbol{r}(t+\Delta t)-\boldsymbol{r}(t)
+\Delta\bm{r}=\bm{r}(t+\Delta t)-\bm{r}(t)
 $$</p>
-<p>と書ける。また、変位 \(\Delta\boldsymbol{r}\) の長さも</p>
+<p>と書ける。また、変位 \(\Delta\bm{r}\) の長さも</p>
 <p>$$
-\Delta r=|\boldsymbol{r}(t+\Delta t)-\boldsymbol{r}(t) |
+\Delta r=|\bm{r}(t+\Delta t)-\bm{r}(t) |
 $$</p>
-<p>となるが、同じ \(\Delta t\) という時間でも変位が大きければ大きいほど速いということになり、同じ \(\Delta r\) という変位でも時間が短ければ短いほど速くなるので、速さを表す度合い（<strong>速度</strong>）は \(\boldsymbol{v}\) として</p>
+<p>となるが、同じ \(\Delta t\) という時間でも変位が大きければ大きいほど速いということになり、同じ \(\Delta r\) という変位でも時間が短ければ短いほど速くなるので、速さを表す度合い（<strong>速度</strong>）は \(\bm{v}\) として</p>
 <p>$$
-\boldsymbol{v} \equiv
-\frac{\boldsymbol{r}(t+\Delta t)-\boldsymbol{r}(t)}{\Delta t}=
-\frac{\Delta\boldsymbol{r}}{\Delta t}
+\bm{v} \equiv
+\frac{\bm{r}(t+\Delta t)-\bm{r}(t)}{\Delta t}=
+\frac{\Delta\bm{r}}{\Delta t}
 $$</p>
-<p>と定義すればよいと考えられる（\(\equiv\)は定義することを指しており、右側にその内容を記載する）。この方向は変位 \(\Delta\boldsymbol{r}\) と同じであり、細かく言うと<strong>平均速度</strong>と呼ばれる量となる。一方で、速度というのは一般的に各時刻ごとに異なる（極端に短い時間で変化する）量であるため</p>
+<p>と定義すればよいと考えられる（\(\equiv\)は定義することを指しており、右側にその内容を記載する）。この方向は変位 \(\Delta\bm{r}\) と同じであり、細かく言うと<strong>平均速度</strong>と呼ばれる量となる。一方で、速度というのは一般的に各時刻ごとに異なる（極端に短い時間で変化する）量であるため</p>
 <p>$$
-\boldsymbol{v} \equiv
+\bm{v} \equiv
 \lim_{\Delta t\to 0}
-\frac{\boldsymbol{r}(t+\Delta t)-\boldsymbol{r}(t)}{\Delta t}=
-\frac{{\rm d}\boldsymbol{r}}{{\rm d}t}
+\frac{\bm{r}(t+\Delta t)-\bm{r}(t)}{\Delta t}=
+\frac{{\rm d}\bm{r}}{{\rm d}t}
 $$</p>
 <p>というように記載すると厳密なものとなる（こちらは<strong>瞬間速度</strong>と呼ばれる）。この方向は先ほどと異なり、下図のようにA点において引かれた質点の軌道に対する接線の方向に等しく、その大きさは軌道に沿っての質点の速さ（speed）に等しくなる。</p>
 <p align="center">
@@ -477,7 +477,7 @@ $$</p>
 
 <p>ちなみに、先ほどのデカルト座標を用いると速度は以下の通りに書ける。</p>
 <p>$$
-\boldsymbol{v}\equiv
+\bm{v}\equiv
 (v_x,v_y,v_z)=
 \left(
 \frac{{\rm d}x}{{\rm d}t},
@@ -505,30 +505,30 @@ $$</p>
 </li>
 </ol>
 <p>　全ての物体は、他の物体の影響が完全にない状況において運動状態を変えることなく、その状態をいつまでも持続するであろう。多くの経験から予想されるこのような物体の性質を<strong>慣性</strong>（inertia）という。この性質があるということを第1法則で掲示した上で、外部からの影響が働いた時の運動の変化を第2、3の法則により述べている。これらを質点で言い換えると、質点の運動状態はその速さと運動方向（速度ベクトル）を指定することにより決定されるわけであるから、すべての質点は単独で速度ベクトルを変えずに保とうとする性質を持つといえる。すなわち、運動する質点の速度ベクトルの変化を追うことで第2法則により質点に働く刻々の力を求めることはできる。ただ、それだけだと質点の運動状態の変化を力という言葉に置き換えただけに過ぎないため、力学現象をより深く理解することには何等寄与もしていない。そのため、色々な運動の度重なる観測に基づいて、どのような種類の力がどのような状況のもとで働くのかを予め調べる必要が出てくる。Newtonが発見した万有引力の法則は、その一つの例であるといえる。そして、現在ではそれらの力（既知の力）のもとに質点の運動を第2法則から予測することが可能となっている。</p>
-<p>　では、いよいよ第２法則の解析的表現に取り組むことにしよう。まず、速度 \(\boldsymbol{v}\) で動いている質量 \(m\) の質点の<strong>運動量</strong>を</p>
+<p>　では、いよいよ第２法則の解析的表現に取り組むことにしよう。まず、速度 \(\bm{v}\) で動いている質量 \(m\) の質点の<strong>運動量</strong>を</p>
 <p>$$
-\boldsymbol{p}\equiv m\boldsymbol{v}
+\bm{p}\equiv m\bm{v}
 $$</p>
-<p>によって定義する。この量は質点に力 \(\boldsymbol{F}\) が働くとき変化するが、両者の間には</p>
+<p>によって定義する。この量は質点に力 \(\bm{F}\) が働くとき変化するが、両者の間には</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}t}=\boldsymbol{F}
+\frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=\bm{F}
 $$</p>
 <p>という関係が成り立つ。これがNewtonの第二法則の内容である。この式に運動量の定義式を代入すると</p>
 <p>$$
 \frac{\mathrm{d}m}{\mathrm{d}t}
-\boldsymbol{v}+
+\bm{v}+
 m
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}=
-\boldsymbol{F}
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=
+\bm{F}
 $$</p>
 <p>となるが、仮に質量が時間によって変化しない（時間に依存しない）場合は、左辺の第一項目が消えて加速度を \(a\) とすると</p>
 <p>$$
-m\boldsymbol{a}=
-\boldsymbol{F}、
-\boldsymbol{a}=
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+m\bm{a}=
+\bm{F}、
+\bm{a}=
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 $$</p>
-<p>という、よく教科書などで見られる方程式が得られる。このときの質量に関する仮定は大抵の場合正しいが、ガスを噴射しながら進むロケットの本体に着目する場合などには適用できないことに注意されたし。また、我々が力についての具体的な知識を十分持っており、力 \(\boldsymbol{F}\) の形が既知のものであれば、この式により速度あるいは位置が求められる。つまりは、その運動が求まることになるため、通常この式は<strong>運動方程式</strong>と呼ばれる。</p>
+<p>という、よく教科書などで見られる方程式が得られる。このときの質量に関する仮定は大抵の場合正しいが、ガスを噴射しながら進むロケットの本体に着目する場合などには適用できないことに注意されたし。また、我々が力についての具体的な知識を十分持っており、力 \(\bm{F}\) の形が既知のものであれば、この式により速度あるいは位置が求められる。つまりは、その運動が求まることになるため、通常この式は<strong>運動方程式</strong>と呼ばれる。</p>
 <p>　ここからは、運動方程式を解くには既知の力が必要であることを述べたので、実際にどのような力があるのか見ていくことにしよう（どの位置にいるか見る必要がないため、ここでは質点ではなく実際の物体を扱っている）。</p>
 <ol>
 <li>
@@ -540,7 +540,7 @@ $$</p>
 
 <p>　何もしていない状態だと静止し続ける。そこに下図のように力をかけ続けると動き始め、この様子を運動方程式を用いてみる。</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=F \
@@ -549,7 +549,7 @@ ma_y=F_y=0
 $$</p>
 <p>このことから、\(x\)方向に対しては \(F/m\) の加速度で進むが、\(y\) 方向へは一定の速度（今は静止したまま）で動くことが分かる。だが、すぐ動き出すわけではなく最初はある程度静止し続けてから動き出す。これは、摩擦力 \(F_W\) が働いているものと考える。</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=F-F_W=0 \
@@ -566,7 +566,7 @@ $$</p>
 
 <p>先ほどと同様な考え方で</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=F\cos\theta-F_W=0 \
@@ -584,7 +584,7 @@ $$</p>
 
 <p>　物体を持ち上げて離すと落下するわけだが、このとき重力 \(F_G\) （地球と物体の間に働く万有引力の一種）が働いている。そのため、このときの運動方程式は以下の形になることが分かる。</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=0 \
@@ -593,7 +593,7 @@ ma_y=F_y=-F_G
 $$</p>
 <p>この重力が働くということを踏まえて、改めて先ほどの状況を考えてみる。この場合だと、重力と上にひく力が釣り合っていると思えるが、すると何も力が働いていないときに静止していることの説明がつかない。そのため、重力により下へ引き付けることで地面へ力がかかり地面から反発力（反作用）が働くものと考えられる。</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=0 \
@@ -605,7 +605,7 @@ $$</p>
 <p><u>事象4（事象2に重力を考慮した場合）</u></p>
 <p>改めて事象2を重力を考慮して記述すると以下のようになる。</p>
 <p>$$
-m\boldsymbol{a}=\boldsymbol{F}
+m\bm{a}=\bm{F}
 \leftrightarrow
 \begin{cases}
 ma_x=F_x=F\cos\theta-F_W=0 \
@@ -648,12 +648,12 @@ $$</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="二体問題惑星の運動-1"><a href="#二体問題惑星の運動-1" class="header">二体問題（惑星の運動）</a></h1>
 <h2 id="二体問題惑星の運動"><a class="header" href="#二体問題惑星の運動">二体問題（惑星の運動）</a></h2>
-<p>　ここまでは一つの物体のみ取り扱っていたが、もしもう一体物体がある場合は万有引力が働くことも考慮する必要がある。例として物体1と物体2の質量、位置ベクトルを \(m_1,\boldsymbol{r}_1,m_2,\boldsymbol{r}_2\) とすると、物体1にかかる力は</p>
+<p>　ここまでは一つの物体のみ取り扱っていたが、もしもう一体物体がある場合は万有引力が働くことも考慮する必要がある。例として物体1と物体2の質量、位置ベクトルを \(m_1,\bm{r}_1,m_2,\bm{r}_2\) とすると、物体1にかかる力は</p>
 <p>$$
-\boldsymbol{F}=
-G\frac{m_1m_2}{|\boldsymbol{r}_2-\boldsymbol{r}_1|^2}
+\bm{F}=
+G\frac{m_1m_2}{|\bm{r}_2-\bm{r}_1|^2}
 \left(
-\frac{\boldsymbol{r}_2-\boldsymbol{r}_1}{|\boldsymbol{r}_2-\boldsymbol{r}_1|}
+\frac{\bm{r}_2-\bm{r}_1}{|\bm{r}_2-\bm{r}_1|}
 \right)
 $$</p>
 <p>というように書ける（\(G\)：重力定数）。</p>
@@ -664,37 +664,37 @@ $$</p>
 <p>そして、この２体の運動方程式を記載すると以下の通りとなる。</p>
 <p>$$
 m_1
-\frac{\mathrm{d}^2\boldsymbol{r}_1}{\mathrm{d}t^2}=
-\boldsymbol{F}、
+\frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
+\bm{F}、
 m_2
-\frac{\mathrm{d}^2\boldsymbol{r}_2}{\mathrm{d}t^2}=
--\boldsymbol{F}
+\frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
+-\bm{F}
 $$</p>
 <p>ここで二つの式の和をとった場合には</p>
 <p>$$
 (m_1+m_2)
 \frac{\mathrm{d}^2}{\mathrm{d}t^2}
 \left(
-\frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
+\frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 \right)=
 0
 $$</p>
-<p>というように全体の運動方程式となり、このときの質量 \(m_G\) と位置 \(\boldsymbol{r}_G\) は</p>
+<p>というように全体の運動方程式となり、このときの質量 \(m_G\) と位置 \(\bm{r}_G\) は</p>
 <p>$$
 m_G = m_1+m_2、
-\boldsymbol{r}_G=
-\frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
+\bm{r}_G=
+\frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 $$</p>
 <p>とおけることから、全体的に見た場合には以下の式が成り立つ（ 2つの質点を質量 \(m_G\) の質点に置き換えてると、運動が変化しないあるいは慣性の法則に従う）。</p>
 <p>$$
-m_G\frac{\mathrm{d}^2\boldsymbol{r}_G}{\mathrm{d}t^2}=0
+m_G\frac{\mathrm{d}^2\bm{r}_G}{\mathrm{d}t^2}=0
 $$</p>
 <p>一方で、万有引力の形を踏まえて2つの方程式を</p>
 <p>$$
-\frac{\mathrm{d}^2\boldsymbol{r}_1}{\mathrm{d}t^2}=
-\frac{\boldsymbol{F}}{m_1}、
-\frac{\mathrm{d}^2\boldsymbol{r}_2}{\mathrm{d}t^2}=
--\frac{\boldsymbol{F}}{m_2}
+\frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
+\frac{\bm{F}}{m_1}、
+\frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
+-\frac{\bm{F}}{m_2}
 $$</p>
 <p>として2番目の式から1番目の式を差し引くと以下の式が得られる。</p>
 <p>$$
@@ -702,18 +702,18 @@ $$</p>
 \frac{m_1m_2}{m_1+m_2}
 \right)
 \frac{\mathrm{d}^2}{\mathrm{d}t^2}
-(\boldsymbol{r}_2-\boldsymbol{r}_1)=
--\boldsymbol{F}
+(\bm{r}_2-\bm{r}_1)=
+-\bm{F}
 $$</p>
-<p>この式は物体1から見た物体2の運動方程式となっており、質量 \(\mu\)（換算質量） と相対位置 \(\boldsymbol{r}\) は</p>
+<p>この式は物体1から見た物体2の運動方程式となっており、質量 \(\mu\)（換算質量） と相対位置 \(\bm{r}\) は</p>
 <p>$$
 \mu=\frac{m_1m_2}{m_1+m_2}、
-\boldsymbol{r}=\boldsymbol{r}_2-\boldsymbol{r}_1
+\bm{r}=\bm{r}_2-\bm{r}_1
 $$</p>
 <p>と書ける。そのため、上記の運動方程式は以下のようになる。</p>
 <p>$$
-\mu\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2}=
--G\frac{m_1m_2}{r^3}\boldsymbol{r}
+\mu\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
+-G\frac{m_1m_2}{r^3}\bm{r}
 $$</p>
 <p align="center">
     <img width="40%" src="chapter_1/images/polar-2d.png">
@@ -1061,74 +1061,74 @@ $$</p>
 <p>　今、物体を質点の集合体としてその内 $i$ 番目の運動方程式を記述すると</p>
 <p>$$
 m_i
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}=
-\boldsymbol{F}</em>{i}+
-\sum_{j=1(j\neq i)}^{N}\boldsymbol{F}_{ij}
+\bm{F}</em>{i}+
+\sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$</p>
-<p>と書ける。ここで、$m_i、\boldsymbol{r}<em>i、\boldsymbol{F}<em>i、\boldsymbol{F}</em>{ij}、$ はそれぞれ質点の位置ベクトル、 位置ベクトル、外部からの力（外力）、別の $j$ 番目の質点との間に働く力（内力）を表している。さて、内力に関して作用・反作用の法則 $\boldsymbol{F}</em>{ij}=-\boldsymbol{F}_{ji}$ が成り立つため、先ほどの式を $i$ に対して総和をとると以下のように内力の項が相殺されて0となる。</p>
+<p>と書ける。ここで、$m_i、\bm{r}<em>i、\bm{F}<em>i、\bm{F}</em>{ij}、$ はそれぞれ質点の位置ベクトル、 位置ベクトル、外部からの力（外力）、別の $j$ 番目の質点との間に働く力（内力）を表している。さて、内力に関して作用・反作用の法則 $\bm{F}</em>{ij}=-\bm{F}_{ji}$ が成り立つため、先ほどの式を $i$ に対して総和をとると以下のように内力の項が相殺されて0となる。</p>
 <p>$$
 \sum_{i=1}^N
 \left(
 m_i
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}
 \right)=
 \sum</em>{i=1}^N
-\boldsymbol{F}<em>{i}+
+\bm{F}<em>{i}+
 \sum</em>{i=1}^N
-\sum_{j=1(j\neq i)}^{N}\boldsymbol{F}<em>{ij}=
+\sum_{j=1(j\neq i)}^{N}\bm{F}<em>{ij}=
 \sum</em>{i=1}^N
-\boldsymbol{F}_{i}
+\bm{F}_{i}
 $$</p>
 <p>ここで、右辺が質点全体にかかる力（合力）であることから全体的に見て</p>
 <p>$$
-m\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t^2}=
-\boldsymbol{F}
+m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
+\bm{F}
 $$</p>
 <p>という形になっていると考えられる。そこで、$m$ を質点全体（物体自体）の質量として</p>
 <p>$$
 \sum_{i=1}^N
 \left(
-m_i\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+m_i\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}
 \right)=
 m
 \frac{\mathrm{d}^2}
 {\mathrm{d}t^2}
 \left(
-\frac{1}{m}\sum</em>{i=1}^N m_i\boldsymbol{r}_i
+\frac{1}{m}\sum</em>{i=1}^N m_i\bm{r}_i
 \right)
 $$</p>
-<p>というように変形して比較してみると、$\boldsymbol{r}$ は以下の形で置くことができる。</p>
+<p>というように変形して比較してみると、$\bm{r}$ は以下の形で置くことができる。</p>
 <p>$$
-\boldsymbol{r}=\frac{1}{m}\sum_{i=1}^N m_i\boldsymbol{r}_i
+\bm{r}=\frac{1}{m}\sum_{i=1}^N m_i\bm{r}_i
 $$</p>
 <p>　この位置ベクトルが指す地点は、例として質点が2個（$N=2$）の場合だと</p>
 <p>$$
-\boldsymbol{r}=
-\frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
+\bm{r}=
+\frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 $$</p>
-<p>となっているため、内分点の公式と同じ形になっていることが見て取れる（二体問題における $\boldsymbol{r}_G$ に相当）。</p>
+<p>となっているため、内分点の公式と同じ形になっていることが見て取れる（二体問題における $\bm{r}_G$ に相当）。</p>
 <p align="center">
     <img width="50%" style="background-color:white;" src="chapter_1/images/two_mass_point.png">
 </p>
 
-<p>そのため、$\boldsymbol{r}$ は質点1と2の間を内分する地点の位置を指しており、この位置を物体の位置として扱うことになる。言い換えれば、物体を地点 $\boldsymbol{r}$ にある質量 $m(=m_1+m_2)$ の質点に置き換えるという操作を行っており、従来のときとほぼ同様なことをしていることが分かる。ただし、その位置はどこでもよいわけではなく、上式で制限されているところが従来と異なる。同じように、質点が3個の場合でも質量 $m$ の質点の位置は以下のようになる。このように、複数の質点をまとめて見た時に中心となる位置のことを一般的に <strong>重心</strong> と呼ぶ。</p>
+<p>そのため、$\bm{r}$ は質点1と2の間を内分する地点の位置を指しており、この位置を物体の位置として扱うことになる。言い換えれば、物体を地点 $\bm{r}$ にある質量 $m(=m_1+m_2)$ の質点に置き換えるという操作を行っており、従来のときとほぼ同様なことをしていることが分かる。ただし、その位置はどこでもよいわけではなく、上式で制限されているところが従来と異なる。同じように、質点が3個の場合でも質量 $m$ の質点の位置は以下のようになる。このように、複数の質点をまとめて見た時に中心となる位置のことを一般的に <strong>重心</strong> と呼ぶ。</p>
 <p>$$
-\boldsymbol{r}=
-\frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2+m_3\boldsymbol{r}<em>3}
+\bm{r}=
+\frac{m_1\bm{r}_1+m_2\bm{r}_2+m_3\bm{r}<em>3}
 {m_1+m_2+m_3}=
-\frac{(m_1+m_2)\boldsymbol{r}</em>{12}+m_3\boldsymbol{r}<em>3}
+\frac{(m_1+m_2)\bm{r}</em>{12}+m_3\bm{r}<em>3}
 {(m_1+m_2)+m_3}、
-\boldsymbol{r}</em>{12}=
-\frac{m_1\boldsymbol{r}_1+m_2\boldsymbol{r}_2}{m_1+m_2}
+\bm{r}</em>{12}=
+\frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
 $$</p>
 <p align="center">
     <img width="50%" style="background-color:white;" src="chapter_1/images/three_mass_point.png">
 </p>
 
-<p>　以上のことから、物体の重心 $\boldsymbol{r}$ に質量 $m$ の質点があるものとみなすことで運動を記述できることになる。しかし、力のつり合いが成り立っている状況でも引っかけた場合だと回転してしまうため、回転運動については別で考察が必要になるものと思われる。そのため、次頁では回転運動について具体的に見ていくことにしよう。</p>
+<p>　以上のことから、物体の重心 $\bm{r}$ に質量 $m$ の質点があるものとみなすことで運動を記述できることになる。しかし、力のつり合いが成り立っている状況でも引っかけた場合だと回転してしまうため、回転運動については別で考察が必要になるものと思われる。そのため、次頁では回転運動について具体的に見ていくことにしよう。</p>
 <p align="center">
     <img width="20%" style="background-color:white;" src="chapter_1/images/rotation_motion.png">
 </p>
@@ -1317,61 +1317,61 @@ N=rF_\theta=
 r\cos\theta F_y - r\sin\theta F_x =
 xF_y - yF_x
 $$</p>
-<p>となるが、これは外積と呼ばれる関係になっていることが予想される。例えば、ベクトル $\boldsymbol{a},\boldsymbol{b}$ が以下の図のようになっており
+<p>となるが、これは外積と呼ばれる関係になっていることが予想される。例えば、ベクトル $\bm{a},\bm{b}$ が以下の図のようになっており
 $$
-\boldsymbol{a}=(a_x,a_y,0)、\boldsymbol{b}=(b_x,b_y,0)
+\bm{a}=(a_x,a_y,0)、\bm{b}=(b_x,b_y,0)
 $$</p>
-<p>とすると、外積 $\boldsymbol{c}$ は以下の形で表される。</p>
+<p>とすると、外積 $\bm{c}$ は以下の形で表される。</p>
 <p>$$
-\boldsymbol{c}=\boldsymbol{a}\times\boldsymbol{b}=
+\bm{c}=\bm{a}\times\bm{b}=
 (0,0,a_xb_y-a_yb_x)
 $$</p>
 <p align="center">
     <img height="200px" style="background-color:white;" src="chapter_1/images/cross_product.png">
 </p>
 
-<p>試しに $\boldsymbol{a}=\boldsymbol{r},\boldsymbol{b}=\boldsymbol{F}$ として外積をとると、以下の通り $z$ 成分が先ほどの $N$ と一致していることが分かる。</p>
+<p>試しに $\bm{a}=\bm{r},\bm{b}=\bm{F}$ として外積をとると、以下の通り $z$ 成分が先ほどの $N$ と一致していることが分かる。</p>
 <p>$$
-\boldsymbol{r}\times\boldsymbol{F}=
+\bm{r}\times\bm{F}=
 (0,0,xF_y-yF_x)=
 (0,0,N)
 $$</p>
 <p>そのため、回転方向については $z$ 成分に関する方程式になっていると考えられる。そこで、運動方程式</p>
 <p>$$
-m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}=\boldsymbol{F}
+m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=\bm{F}
 $$</p>
-<p>に外積をとることで一般的に回転の運動方程式がどのようになるかを見てみることにする。まず、両辺に $\boldsymbol{r}$ と外積をとると</p>
+<p>に外積をとることで一般的に回転の運動方程式がどのようになるかを見てみることにする。まず、両辺に $\bm{r}$ と外積をとると</p>
 <p>$$
 m
 \left(
-\boldsymbol{r}\times
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+\bm{r}\times
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \right)
-=\boldsymbol{N}、
-\boldsymbol{N} = \boldsymbol{r}\times\boldsymbol{F}
+=\bm{N}、
+\bm{N} = \bm{r}\times\bm{F}
 $$</p>
-<p>というように右辺がモーメント $\boldsymbol{N}$ となるので、左辺を変形してみると</p>
+<p>というように右辺がモーメント $\bm{N}$ となるので、左辺を変形してみると</p>
 <p>$$
 \left(
-\boldsymbol{r}\times
-\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+\bm{r}\times
+\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \right)=
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})-
-(\boldsymbol{v}\times\boldsymbol{v})=
+(\bm{r}\times\bm{v})-
+(\bm{v}\times\bm{v})=
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})
+(\bm{r}\times\bm{v})
 $$</p>
 <p>となるので以下の通りになる。</p>
 <p>$$
 m
 \frac{\mathrm{d}}{\mathrm{d}t}
-(\boldsymbol{r}\times\boldsymbol{v})=
-\boldsymbol{N}
+(\bm{r}\times\bm{v})=
+\bm{N}
 $$</p>
 <p>そして、左辺を極座標で整理することで</p>
 <p>$$
-m(\boldsymbol{r}\times\boldsymbol{v})=
+m(\bm{r}\times\bm{v})=
 \left(
 0,0,
 mx
@@ -1379,8 +1379,8 @@ mx
 my
 \frac{\mathrm{d}x}{\mathrm{d}t}
 \right)=
-I\boldsymbol{\omega}、
-\boldsymbol{\omega}=(0,0,\omega)
+I\bm{\omega}、
+\bm{\omega}=(0,0,\omega)
 $$</p>
 <p>というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転の運動方程式は以下の通りになる。</p>
 <p>$$
@@ -1390,13 +1390,13 @@ f_{r,\theta}=
 mr\omega^2
 $$
 $$
-\frac{\mathrm{d}\boldsymbol{L}}
+\frac{\mathrm{d}\bm{L}}
 {\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=
-m(\boldsymbol{r}\times\boldsymbol{v})=
-I\boldsymbol{\omega}、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\bm{N}、
+\bm{L}=
+m(\bm{r}\times\bm{v})=
+I\bm{\omega}、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
 <p>ここまでは話を簡単にするため2次元を扱ってきたが、同様に3次元においても成立するかを見てみる。まず、直交座標系 $(x,y,z)$ と極座標 $(r,\theta,\phi)$ に置き換えると</p>
 <p>$$
@@ -1847,10 +1847,10 @@ m(r\sin\theta)^2\omega_\phi
 $$</p>
 <p>ここで $L_\theta$ と $L_\phi$ の関係式が</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}、
+\bm{L}=\bm{r}\times\bm{p}、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
 <p>に対応しているか見てみよう。まず、角運動量が直交座標系において</p>
 <p>$$
@@ -1931,12 +1931,12 @@ r\sin\theta F_\phi
 $$</p>
 <p>となる。そのため、3次元においても回転の運動方程式</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=(\boldsymbol{r}\times\boldsymbol{v})、
-\boldsymbol{N}=\boldsymbol{r}\times\boldsymbol{F}
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}、
+\bm{L}=(\bm{r}\times\bm{v})、
+\bm{N}=\bm{r}\times\bm{F}
 $$</p>
-<p>が成り立つことが分かる。あるいは角速度 $\boldsymbol{\omega}$ に関して角運動量と同じように</p>
+<p>が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関して角運動量と同じように</p>
 <p>$$
 \omega_{x,y}=
 \omega_x\cos\phi+\omega_y\sin\phi、
@@ -1983,7 +1983,7 @@ $$</p>
 \omega_{r_\perp}=
 -\omega_\phi\sin\theta
 $$</p>
-<p>であることになる。このことから、$I=mr^2$ とすることで $\boldsymbol{L}=I\boldsymbol{\omega}$ と表されることが分かる。</p>
+<p>であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。</p>
 <p>　以上のように、回転運動を取り扱うには通常の運動方程式とは異なる方程式を利用する必要があることが分かる。そのため、次項で改めて物体自体の回転運動を取り扱うことにする。</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="剛体の力学-1"><a href="#剛体の力学-1" class="header">剛体の力学</a></h1>
@@ -1991,67 +1991,67 @@ $$</p>
 <p>　前回の回転運動に関する内容を、今度は質点系においても適用してみよう。質点系での $i$ 番目の質点の運動方程式は
 $$
 m_i
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}=
-\boldsymbol{F}</em>{i}+
-\sum_{j=1(j\neq i)}^{N}\boldsymbol{F}_{ij}
+\bm{F}</em>{i}+
+\sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$</p>
-<p>であったが、 $\boldsymbol{r}_i$ と外積をとって質点全体で総和をとると</p>
+<p>であったが、 $\bm{r}_i$ と外積をとって質点全体で総和をとると</p>
 <p>$$
 \sum_{i=1}^N
 m_i
 \left(
-\boldsymbol{r}<em>i\times
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\bm{r}<em>i\times
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}
 \right)=
 \sum</em>{i=1}^N
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{i})+
+(\bm{r}<em>i\times\bm{F}</em>{i})+
 \sum</em>{i=1}^N
 \sum_{j=1(j\neq i)}^{N}
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{ij})
+(\bm{r}<em>i\times\bm{F}</em>{ij})
 $$</p>
-<p>となり、ここで右辺第2項目に関して $\boldsymbol{F}<em>{ij}=-\boldsymbol{F}</em>{ji}$ を利用すれば</p>
+<p>となり、ここで右辺第2項目に関して $\bm{F}<em>{ij}=-\bm{F}</em>{ji}$ を利用すれば</p>
 <p>$$
 \sum_{i=1}^N
 \sum_{j=1(j\neq i)}^{N}
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{ij})=
+(\bm{r}<em>i\times\bm{F}</em>{ij})=
 \frac{1}{2}
 \sum_{i=1}^N
 \sum_{j=1(j\neq i)}^{N}
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{ij}+
-\boldsymbol{r}<em>j\times\boldsymbol{F}</em>{ji})=
+(\bm{r}<em>i\times\bm{F}</em>{ij}+
+\bm{r}<em>j\times\bm{F}</em>{ji})=
 \sum_{i=1}^N
 \sum_{j=1(j\neq i)}^{N}
-(\boldsymbol{r}_i-\boldsymbol{r}<em>j)
-\times\boldsymbol{F}</em>{ij}
+(\bm{r}_i-\bm{r}<em>j)
+\times\bm{F}</em>{ij}
 $$</p>
-<p>であるため、$\boldsymbol{r}_i-\boldsymbol{r}<em>j$ と $\boldsymbol{F}</em>{ij}$ が平行であることから0になる。そのため、最終的には以下の形になる。</p>
+<p>であるため、$\bm{r}_i-\bm{r}<em>j$ と $\bm{F}</em>{ij}$ が平行であることから0になる。そのため、最終的には以下の形になる。</p>
 <p>$$
 \sum_{i=1}^N
 m_i
 \left(
-\boldsymbol{r}_i\times
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\bm{r}_i\times
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}
 \right)=
 \sum</em>{i=1}^N
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{i})
+(\bm{r}<em>i\times\bm{F}</em>{i})
 $$</p>
 <p>更に速度の形に変形すると、左辺は</p>
 <p>$$
 \sum_{i=1}^N
 m_i
 \left(
-\boldsymbol{r}_i\times
-\frac{\mathrm{d}^2\boldsymbol{r}<em>i}
+\bm{r}_i\times
+\frac{\mathrm{d}^2\bm{r}<em>i}
 {\mathrm{d}t^2}
 \right)=
 \sum</em>{i=1}^N
 m_i
 \left(
-\boldsymbol{r}_i\times
-\frac{\mathrm{d}\boldsymbol{v}<em>i}
+\bm{r}_i\times
+\frac{\mathrm{d}\bm{v}<em>i}
 {\mathrm{d}t}
 \right)=
 \frac{\mathrm{d}}{\mathrm{d}t}
@@ -2059,197 +2059,197 @@ m_i
 \sum</em>{i=1}^N
 m_i
 \left(
-\boldsymbol{r}_i\times\boldsymbol{v}_i
+\bm{r}_i\times\bm{v}_i
 \right)
 \right]</p>
 <p>$$</p>
 <p>となり、以下のように質点系でも回転の運動方程式が成り立つことが分かる。</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}、
-\boldsymbol{L}=
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}、
+\bm{L}=
 \sum_{i=1}^N
-m_i(\boldsymbol{r}_i\times\boldsymbol{v}<em>i)、
-\boldsymbol{N}=
+m_i(\bm{r}_i\times\bm{v}<em>i)、
+\bm{N}=
 \sum</em>{i=1}^N
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{i})
+(\bm{r}<em>i\times\bm{F}</em>{i})
 $$</p>
-<p>並進運動を取り扱った際に、重心 $\boldsymbol{r}_G$ に外力 $\boldsymbol{F}$ が働くものとしていたが回転でも同様にいえるため、</p>
+<p>並進運動を取り扱った際に、重心 $\bm{r}_G$ に外力 $\bm{F}$ が働くものとしていたが回転でも同様にいえるため、</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}_G}{\mathrm{d}t}=
-\boldsymbol{N}_G、
-\boldsymbol{L}_G=m(\boldsymbol{r}_G\times\boldsymbol{v}_G)、
-\boldsymbol{N}_G=\boldsymbol{r}_G\times\boldsymbol{F}
+\frac{\mathrm{d}\bm{L}_G}{\mathrm{d}t}=
+\bm{N}_G、
+\bm{L}_G=m(\bm{r}_G\times\bm{v}_G)、
+\bm{N}_G=\bm{r}_G\times\bm{F}
 $$
 $$
-\boldsymbol{r}<em>G=
+\bm{r}<em>G=
 \frac{1}{m}
 \sum</em>{i=1}^N
-m_i\boldsymbol{r}<em>i、
-\boldsymbol{v}<em>G=
+m_i\bm{r}<em>i、
+\bm{v}<em>G=
 \frac{1}{m}
 \sum</em>{i=1}^N
-m_i\boldsymbol{v}<em>i、
+m_i\bm{v}<em>i、
 m=
 \sum</em>{i=1}^N
 m_i、
-\boldsymbol{F}=
+\bm{F}=
 \sum</em>{i=1}^N
-\boldsymbol{F}_i
+\bm{F}_i
 $$</p>
-<p>という関係もあることになる。ここで先ほどの回転の運動方程式にて重心がどのように関係しているかを重心からの質点の位置と速度を $\boldsymbol{r}_i’,\boldsymbol{v}_i’$ として以下のように置き換えてみる。</p>
+<p>という関係もあることになる。ここで先ほどの回転の運動方程式にて重心がどのように関係しているかを重心からの質点の位置と速度を $\bm{r}_i’,\bm{v}_i’$ として以下のように置き換えてみる。</p>
 <p>$$
-\boldsymbol{r}_i=\boldsymbol{r}_G+\boldsymbol{r}‘_i、
-\boldsymbol{v}_i=\boldsymbol{v}_G+\boldsymbol{v}’_i
+\bm{r}_i=\bm{r}_G+\bm{r}‘_i、
+\bm{v}_i=\bm{v}_G+\bm{v}’_i
 $$</p>
 <p>このようにしたときに、まず角運動量は</p>
 <p>$$
 \begin{align*}
-\boldsymbol{L}
+\bm{L}
 &amp;=
 \sum_{i=1}^N
-m_i(\boldsymbol{r}_i\times\boldsymbol{v}<em>i)
+m_i(\bm{r}_i\times\bm{v}<em>i)
 =
 \sum</em>{i=1}^N
 m_i
 \left(
-\boldsymbol{r}_G+\boldsymbol{r}‘_i
+\bm{r}_G+\bm{r}‘_i
 \right)
 \times
 (
-\boldsymbol{v}_G+\boldsymbol{v}’_i
+\bm{v}_G+\bm{v}’_i
 )\
 &amp;=
-m(\boldsymbol{r}_G\times\boldsymbol{v}_G)+
-\boldsymbol{r}<em>G\times
+m(\bm{r}_G\times\bm{v}_G)+
+\bm{r}<em>G\times
 \left(
 \sum</em>{i=1}^N
-m_i\boldsymbol{v}‘<em>i
+m_i\bm{v}‘<em>i
 \right)+
 \left(
 \sum</em>{i=1}^N
-m_i\boldsymbol{r}’_i
-\right)\times\boldsymbol{v}<em>G+
+m_i\bm{r}’_i
+\right)\times\bm{v}<em>G+
 \sum</em>{i=1}^N
-m_i(\boldsymbol{r}‘_i\times\boldsymbol{v}’_i)
+m_i(\bm{r}‘_i\times\bm{v}’_i)
 \end{align*}
 $$</p>
 <p>となるが、ここで重心の関係式も踏まえて</p>
 <p>$$
 \sum_{i=1}^N
-m_i\boldsymbol{r}’<em>i=
+m_i\bm{r}’<em>i=
 \sum</em>{i=1}^N
-m_i(\boldsymbol{r}_G-\boldsymbol{r}_i)=
-m\boldsymbol{r}<em>G-
+m_i(\bm{r}_G-\bm{r}_i)=
+m\bm{r}<em>G-
 \sum</em>{i=1}^N
-m_i\boldsymbol{r}_i=\boldsymbol{0}
+m_i\bm{r}_i=\bm{0}
 $$</p>
 <p>となることから、これを時間微分することで</p>
 <p>$$
 \frac{\mathrm{d}}{\mathrm{d}t}
 \left(
 \sum_{i=1}^N
-m_i\boldsymbol{r}‘<em>i
+m_i\bm{r}‘<em>i
 \right)=
 \sum</em>{i=1}^N
-m_i\boldsymbol{v}’_i=
-\boldsymbol{0}
+m_i\bm{v}’_i=
+\bm{0}
 $$</p>
 <p>となることから、角運動量は以下の通りとなる。</p>
 <p>$$
-\boldsymbol{L}=
-m(\boldsymbol{r}_G\times\boldsymbol{v}<em>G)+
+\bm{L}=
+m(\bm{r}_G\times\bm{v}<em>G)+
 \sum</em>{i=1}^N
-m_i(\boldsymbol{r}‘_i\times\boldsymbol{v}’_i)=
-\boldsymbol{L}_G+\boldsymbol{L}’
+m_i(\bm{r}‘_i\times\bm{v}’_i)=
+\bm{L}_G+\bm{L}’
 $$</p>
 <p>同じように、モーメントについても</p>
 <p>$$
-\boldsymbol{N}=
+\bm{N}=
 \sum_{i=1}^N
-(\boldsymbol{r}<em>i\times\boldsymbol{F}</em>{i})=
-(\boldsymbol{r}<em>G\times\boldsymbol{F})+
+(\bm{r}<em>i\times\bm{F}</em>{i})=
+(\bm{r}<em>G\times\bm{F})+
 \sum</em>{i=1}^N
-(\boldsymbol{r}‘<em>i\times\boldsymbol{F}</em>{i})=
-\boldsymbol{N}_G+\boldsymbol{N}’
+(\bm{r}‘<em>i\times\bm{F}</em>{i})=
+\bm{N}_G+\bm{N}’
 $$</p>
 <p>であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。ところが、重心の回転運動については前回の重心の運動方程式にも含まれている（重心が回転しているかも分かる）ため、回転については最終的に重心周りの運動のみ取り扱えばよいことになる。</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{L}‘}{\mathrm{d}t}=
-\boldsymbol{N}’、
-\boldsymbol{L}‘=
+\frac{\mathrm{d}\bm{L}‘}{\mathrm{d}t}=
+\bm{N}’、
+\bm{L}‘=
 \sum_{i=1}^N
-m_i(\boldsymbol{r}_i’\times\boldsymbol{v}<em>i’)、
-\boldsymbol{N}‘=
+m_i(\bm{r}_i’\times\bm{v}<em>i’)、
+\bm{N}‘=
 \sum</em>{i=1}^N
-(\boldsymbol{r}_i’\times\boldsymbol{F}_i)
+(\bm{r}_i’\times\bm{F}_i)
 $$</p>
 <p>　ここまでのことを踏まえて、一般的に運動は以下の二つの式によって導出されるものと考えられる。</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}t}=
-\boldsymbol{F}
+\frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+\bm{F}
 （重心の並進運動を記述）
 $$
 $$
-\frac{\mathrm{d}\boldsymbol{L}}{\mathrm{d}t}=
-\boldsymbol{N}
+\frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+\bm{N}
 （重心周りの回転運動を記述）
 $$</p>
-<p>しかし、これらは物体の変形を考慮されておらず<strong>変形しない物体にしか適用されない</strong>ものとなっている。そのため、この二つの式のみ従う物体はよく<strong>剛体</strong>（変形しない物体）と呼ばれている。また、変形しないというのは重心からの質点までの変位 $|\boldsymbol{r}’|$ が変化しないということであるため、以下の関係が成りたつことになる。</p>
+<p>しかし、これらは物体の変形を考慮されておらず<strong>変形しない物体にしか適用されない</strong>ものとなっている。そのため、この二つの式のみ従う物体はよく<strong>剛体</strong>（変形しない物体）と呼ばれている。また、変形しないというのは重心からの質点までの変位 $|\bm{r}’|$ が変化しないということであるため、以下の関係が成りたつことになる。</p>
 <p>$$
 \frac{\mathrm{d}}{\mathrm{d}t}
-|\boldsymbol{r}‘|=
+|\bm{r}‘|=
 \frac{\mathrm{d}r’}{\mathrm{d}t}=0、
-\boldsymbol{r}’=\boldsymbol{r}-\boldsymbol{r}_G
+\bm{r}’=\bm{r}-\bm{r}_G
 $$</p>
-<p>あるいは、$|\boldsymbol{r}‘|=\sqrt{\boldsymbol{r}’\cdot\boldsymbol{r}’}$ であることから以下の形でも表される。</p>
+<p>あるいは、$|\bm{r}‘|=\sqrt{\bm{r}’\cdot\bm{r}’}$ であることから以下の形でも表される。</p>
 <p>$$
 \frac{\mathrm{d}}{\mathrm{d}t}
-\sqrt{\boldsymbol{r}‘\cdot\boldsymbol{r}’}=0
+\sqrt{\bm{r}‘\cdot\bm{r}’}=0
 \rightarrow
-(\boldsymbol{r}‘\cdot\boldsymbol{v}’)=0
+(\bm{r}‘\cdot\bm{v}’)=0
 $$</p>
 <p>このことから、回転の速度ベクトルは位置ベクトルと直交した方向を向いていることが分かる。一方で、角運動量において</p>
 <p>$$
-\boldsymbol{L}‘=m(\boldsymbol{r}’\times\boldsymbol{v}‘)=
-I\boldsymbol{\omega}、
+\bm{L}‘=m(\bm{r}’\times\bm{v}‘)=
+I\bm{\omega}、
 I=mr’^2
 $$</p>
 <p>というようになっていたことから、角速度が</p>
 <p>$$
 \omega=
-\frac{\boldsymbol{r}‘}{r’}\times
-\frac{\boldsymbol{v}‘}{r’}
+\frac{\bm{r}‘}{r’}\times
+\frac{\bm{v}‘}{r’}
 $$</p>
-<p>であることから、左側から $\boldsymbol{r}’$ の外積をとってみるとベクトル三重積の公式から</p>
+<p>であることから、左側から $\bm{r}’$ の外積をとってみるとベクトル三重積の公式から</p>
 <p>$$
-\boldsymbol{r}‘\times\boldsymbol{\omega}=
+\bm{r}‘\times\bm{\omega}=
 \left(
-\boldsymbol{r}’\cdot
-\frac{\boldsymbol{v}‘}{r’}
+\bm{r}’\cdot
+\frac{\bm{v}‘}{r’}
 \right)\cdot
-\frac{\boldsymbol{r}‘}{r’} -
+\frac{\bm{r}‘}{r’} -
 \left(
-\boldsymbol{r}‘\cdot
-\frac{\boldsymbol{r}’}{r’}
+\bm{r}‘\cdot
+\frac{\bm{r}’}{r’}
 \right)\cdot
-\frac{\boldsymbol{v}‘}{r’}=
-\frac{\boldsymbol{r}‘}{r’^2}(\boldsymbol{r}‘\cdot\boldsymbol{v}’)
--\boldsymbol{v}’
+\frac{\bm{v}‘}{r’}=
+\frac{\bm{r}‘}{r’^2}(\bm{r}‘\cdot\bm{v}’)
+-\bm{v}’
 $$</p>
 <p>となる。ここで、回転の速度ベクトルと位置ベクトルが直交していることも踏まえると、速度ベクトルは以下のようになる。</p>
 <p>$$
-\boldsymbol{v}‘=\boldsymbol{\omega}\times\boldsymbol{r}’
+\bm{v}‘=\bm{\omega}\times\bm{r}’
 $$</p>
 <p>そのため、これを</p>
 <p>$$
-\boldsymbol{L}‘=
+\bm{L}‘=
 \sum_{i=1}^N
-m_i(\boldsymbol{r}’_i\times\boldsymbol{v}‘<em>i)=
+m_i(\bm{r}’_i\times\bm{v}‘<em>i)=
 \sum</em>{i=1}^N
 \left[
-m_i(\boldsymbol{r}’_i\cdot\boldsymbol{r}‘_i)\cdot\boldsymbol{\omega}_i-
-m_i(\boldsymbol{r}’_i\cdot\boldsymbol{\omega}_i)\cdot\boldsymbol{r}’_i
+m_i(\bm{r}’_i\cdot\bm{r}‘_i)\cdot\bm{\omega}_i-
+m_i(\bm{r}’_i\cdot\bm{\omega}_i)\cdot\bm{r}’_i
 \right]
 $$</p>
 <p>というように展開すると</p>
@@ -2285,8 +2285,8 @@ y_i’z_i’\omega_{i,y}+
 $$</p>
 <p>ということになることから、慣性モーメントを用いると</p>
 <p>$$
-\boldsymbol{L}‘=\boldsymbol{I}’\boldsymbol{\omega}‘、
-\boldsymbol{I}’=
+\bm{L}‘=\bm{I}’\bm{\omega}‘、
+\bm{I}’=
 \sum_{i=1}^{N}
 m_i
 \begin{pmatrix}
@@ -2314,7 +2314,7 @@ $$
 \rho_i=\frac{m_i}{V_i}　
 \rightarrow　m_i=\rho_i V_i
 $$
-これを見ると、密度が体積分だけあると質量になることが分かるので、１つの地点での値としてみなしても良く $\rho(\boldsymbol{r}_i)$ と書くことができる。一方で、作用する力は接触して働く力と離れていても働くものとの二種類あると考えられるため、それぞれ次のようにして作用しているものとする。</p>
+これを見ると、密度が体積分だけあると質量になることが分かるので、１つの地点での値としてみなしても良く $\rho(\bm{r}_i)$ と書くことができる。一方で、作用する力は接触して働く力と離れていても働くものとの二種類あると考えられるため、それぞれ次のようにして作用しているものとする。</p>
 <p>$$
 \begin{cases}
 \begin{aligned}
@@ -2323,43 +2323,43 @@ $$
 \end{aligned}
 \end{cases}
 $$</p>
-<p>これらの力は接触面全体あるいは内部領域全体に作用するものであるが、このうち前者の方は作用・反作用の法則により１つの面を境に２つの内部領域には同じ大きさの力が逆向きに働くので、各面ごとに異なる力が働くものと思われる。対して後者の方は、内部領域ごとに違う（質量など）ものであるため、先ほどの密度と同様な考え方で面全体あるいは内部領域全体にかかる力を $\boldsymbol{F}<em>{\mathrm{face}},\boldsymbol{F}</em>{\mathrm{body}}$ として</p>
+<p>これらの力は接触面全体あるいは内部領域全体に作用するものであるが、このうち前者の方は作用・反作用の法則により１つの面を境に２つの内部領域には同じ大きさの力が逆向きに働くので、各面ごとに異なる力が働くものと思われる。対して後者の方は、内部領域ごとに違う（質量など）ものであるため、先ほどの密度と同様な考え方で面全体あるいは内部領域全体にかかる力を $\bm{F}<em>{\mathrm{face}},\bm{F}</em>{\mathrm{body}}$ として</p>
 <p>$$
 \begin{cases}
 \begin{aligned}
-&amp;\cdot \boldsymbol{S}(\boldsymbol{r}<em>{1})=
-\frac{\boldsymbol{F}</em>{\mathrm{face}}}{A}　（A:接触面の面積）\
-&amp;\cdot \boldsymbol{B}(\boldsymbol{r}<em>{2})=
-\frac{\boldsymbol{F}</em>{\mathrm{body}}}{V}　（V:内部領域の体積）
+&amp;\cdot \bm{S}(\bm{r}<em>{1})=
+\frac{\bm{F}</em>{\mathrm{face}}}{A}　（A:接触面の面積）\
+&amp;\cdot \bm{B}(\bm{r}<em>{2})=
+\frac{\bm{F}</em>{\mathrm{body}}}{V}　（V:内部領域の体積）
 \end{aligned}
 \end{cases}
 $$</p>
-<p>というように、面積力 $\boldsymbol{S}$ と体積力 $\boldsymbol{B}$ を定義してみる（このようにすると、図のように位置を指定することができる）。このようにした上で、内部領域に働く力を議論してみることにしよう。まず、面積力の方は内部領域を多面体（平面で囲まれている）と考えると以下のような力があると考えられる。剪断（せんだん）応力と垂直応力のふたつ。ただ、そうなると面の傾きが必要となり</p>
+<p>というように、面積力 $\bm{S}$ と体積力 $\bm{B}$ を定義してみる（このようにすると、図のように位置を指定することができる）。このようにした上で、内部領域に働く力を議論してみることにしよう。まず、面積力の方は内部領域を多面体（平面で囲まれている）と考えると以下のような力があると考えられる。剪断（せんだん）応力と垂直応力のふたつ。ただ、そうなると面の傾きが必要となり</p>
 <p>$$
-\boldsymbol{S}=\boldsymbol{P}+\boldsymbol{T}=（垂直応力）+（剪断応力）
+\bm{S}=\bm{P}+\bm{T}=（垂直応力）+（剪断応力）
 $$
 $$
-\boldsymbol{P}=-(\boldsymbol{S}\cdot\boldsymbol{n})\cdot\boldsymbol{n}　\boldsymbol{T}=\boldsymbol{S}-\boldsymbol{P}=
-\boldsymbol{S}+(\boldsymbol{S}\cdot\boldsymbol{n})\cdot\boldsymbol{n}
+\bm{P}=-(\bm{S}\cdot\bm{n})\cdot\bm{n}　\bm{T}=\bm{S}-\bm{P}=
+\bm{S}+(\bm{S}\cdot\bm{n})\cdot\bm{n}
 $$</p>
 <p>もし、多面体が立方体であれば</p>
 <p>$$
 \begin{align*}
-\boldsymbol{S}
+\bm{S}
 &amp;=
-\boldsymbol{S}<em>{\mathrm{l}}+\boldsymbol{S}</em>{\mathrm{r}}+\boldsymbol{S}<em>{\mathrm{f}}+\boldsymbol{S}</em>{\mathrm{b}}+
-\boldsymbol{S}<em>{\mathrm{u}}+\boldsymbol{S}</em>{\mathrm{d}}\
+\bm{S}<em>{\mathrm{l}}+\bm{S}</em>{\mathrm{r}}+\bm{S}<em>{\mathrm{f}}+\bm{S}</em>{\mathrm{b}}+
+\bm{S}<em>{\mathrm{u}}+\bm{S}</em>{\mathrm{d}}\
 &amp;=
 \left[
-\boldsymbol{S}(-\boldsymbol{e}<em>{y})+\boldsymbol{S}(\boldsymbol{e}</em>{y})
+\bm{S}(-\bm{e}<em>{y})+\bm{S}(\bm{e}</em>{y})
 \right]
 \Delta x_{i}\Delta z_{i}+
 \left[
-\boldsymbol{S}(-\boldsymbol{e}<em>{x})+\boldsymbol{S}(\boldsymbol{e}</em>{x})
+\bm{S}(-\bm{e}<em>{x})+\bm{S}(\bm{e}</em>{x})
 \right]
 \Delta y_{i}\Delta z_{i}+
 \left[
-\boldsymbol{S}(-\boldsymbol{e}<em>{z})+\boldsymbol{S}(\boldsymbol{e}</em>{z})
+\bm{S}(-\bm{e}<em>{z})+\bm{S}(\bm{e}</em>{z})
 \right]
 \Delta x_{i}\Delta y_{i}
 \end{align*}
@@ -2368,13 +2368,13 @@ $$</p>
 <p>$$
 \begin{equation}
 \left(
-\rho(\boldsymbol{r}<em>{i})V</em>{i}
+\rho(\bm{r}<em>{i})V</em>{i}
 \right)
-\frac{\mathrm{d}^2\boldsymbol{r}<em>{i}}
+\frac{\mathrm{d}^2\bm{r}<em>{i}}
 {\mathrm{d}t^2}=
 \sum</em>{i=1(\neq j)}^{\mathrm{N}}
-\boldsymbol{F}<em>{\mathrm{ij}}+
-\boldsymbol{F}</em>{i}、
+\bm{F}<em>{\mathrm{ij}}+
+\bm{F}</em>{i}、
 \left(
 i=1,\cdots,\mathrm{N}
 \right)
@@ -2404,42 +2404,42 @@ $$</p>
 
   \chapter{連続体による記述}
   ここに連続体とみなせる物体があったとする。すると、物体は質点が連続的に集まったものであ
-  るものとしてみなせるわけだが、その形は物体内で連続的に引き詰められるようなものでなければならないので、図のような形にとる（引き詰められる形であれば何でも良いので、ここでは直交座標と対応させ易くするため直方体にしている）。そして、ある一つの質点の位置を$\boldsymbol{r}$というように位置ベクトルで指定すると、このときの質量は分布関数$\rho(\boldsymbol{r})$により指定することができる。この値自体は内部領域内で共通しており、
+  るものとしてみなせるわけだが、その形は物体内で連続的に引き詰められるようなものでなければならないので、図のような形にとる（引き詰められる形であれば何でも良いので、ここでは直交座標と対応させ易くするため直方体にしている）。そして、ある一つの質点の位置を$\bm{r}$というように位置ベクトルで指定すると、このときの質量は分布関数$\rho(\bm{r})$により指定することができる。この値自体は内部領域内で共通しており、
   \begin{equation}
-    m=\rho(\boldsymbol{r})
+    m=\rho(\bm{r})
   \end{equation}
 
 
   １つの質点で成立する運動方程式を質点系の力学と同様な考えで
   \begin{equation}
-      m_{i}\dd{^2\boldsymbol{r}_{i}}{t^2}=
-      \sum_{\mj\nei}\boldsymbol{F}_{\mathrm{ij}}+\boldsymbol{F}_{i}
+      m_{i}\dd{^2\bm{r}_{i}}{t^2}=
+      \sum_{\mj\nei}\bm{F}_{\mathrm{ij}}+\bm{F}_{i}
   \end{equation}
   とする。ここで質点の質量$m_{i}$は内部領域の質量であり、各内部領域ごとに
   異なる値をとるものとなっている。そのため、単純に
 
-というように、物体の運動を代表点の位置$\boldsymbol{r}_{\mathrm{G}}$の動きで論じていたが、ここで質量が密度で
+というように、物体の運動を代表点の位置$\bm{r}_{\mathrm{G}}$の動きで論じていたが、ここで質量が密度で
 \begin{equation}
-  m=\int_{\Omega}\rho(\boldsymbol{r})\md\boldsymbol{r}　
+  m=\int_{\Omega}\rho(\bm{r})\md\bm{r}　
   \lr{\ \Omega:物体内の全内部領域\ }
 \end{equation}
 というように書けることから、
 ()式を$\Omega$の範囲で積分してみると()式の形になると考えられる。
 そこで実際に、
 \begin{equation}
-  \int_{\Omega}\lr{\rho(\boldsymbol{r})\dd{^2\boldsymbol{r}}{t^2}}\md\boldsymbol{r}=
-  \int_{\Omega}\boldsymbol{f}(\boldsymbol{r})\md\boldsymbol{r}
+  \int_{\Omega}\lr{\rho(\bm{r})\dd{^2\bm{r}}{t^2}}\md\bm{r}=
+  \int_{\Omega}\bm{f}(\bm{r})\md\bm{r}
 \end{equation}
 とすると、右辺は全質点にかかる力を重ねあわせたものとなっており
 
 すると、これは物体自体の運動方程式になっているものとみなせるため、
 \begin{equation}
-  \boldsymbol{r}_{\mathrm{G}}=
-  \frac{1}{m}\int_{\Omega}\rho(\boldsymbol{r})\boldsymbol{r}\md\boldsymbol{r}　　
-  \boldsymbol{F}_{\mathrm{G}}=\int_{\Omega}\boldsymbol{F}(\boldsymbol{r})\md\boldsymbol{r}
+  \bm{r}_{\mathrm{G}}=
+  \frac{1}{m}\int_{\Omega}\rho(\bm{r})\bm{r}\md\bm{r}　　
+  \bm{F}_{\mathrm{G}}=\int_{\Omega}\bm{F}(\bm{r})\md\bm{r}
 \end{equation}
-とおくと、位置$\boldsymbol{r}_{\mathrm{G}}$にいる質点（質量$m$）に関する運動方程式になる。
-つまり、物体にかかる力は全て$\boldsymbol{r}_{\mathrm{G}}$にかかるものと考えることができる。
+とおくと、位置$\bm{r}_{\mathrm{G}}$にいる質点（質量$m$）に関する運動方程式になる。
+つまり、物体にかかる力は全て$\bm{r}_{\mathrm{G}}$にかかるものと考えることができる。
 この地点を\tb{重心}と呼び、これを古典力学では代表点として議論していた。そのため、
 この運動方程式を見ていくというのは、前に述べたことを再び辿ることと等価であると言える
 （重心の動きで物体の運動を論じる）。ただ、ここで重心の動きと言えども物体の視点からすると
@@ -2478,9 +2478,9 @@ $$</p>
 
 古典力学においては、物体の運動を位置と速度により記述していたが、ここに質点という概念を取り入れると、それをより正確に行うことができる。そのため、弦を質点とみなせるほど細かく分けて、その一つ一つを質点として扱っていくことにする。 そして、そのうちの一つに着目して運動方程式を立ててから、その高さを求めるということをするのだが、この結果は全ての質点で共通していることなので、全ての質点をわざわざ見る必要がないことは予め言っておく。
 
-以上のことをふまえた上で、まずある一つの質点の運動方程式を質量$m$,外力$\boldsymbol{F}$、位置ベクトル$\boldsymbol{r}$により表すと 
+以上のことをふまえた上で、まずある一つの質点の運動方程式を質量$m$,外力$\bm{F}$、位置ベクトル$\bm{r}$により表すと 
 \begin{equation}
-   m\dd{^2\boldsymbol{r}}{t^2}=\boldsymbol{F}
+   m\dd{^2\bm{r}}{t^2}=\bm{F}
    \label{eq:string1}
 \end{equation}
 となる（ここで、$m$は質点によらず一定であるとしているが、これは糸の質量の分布が一様という仮定から来ている）。次に、この式を各成分に分けて書くと、次の通りになる。
@@ -2494,7 +2494,7 @@ $$</p>
   \end{aligned}
   \right.
 \end{equation*}
-（右図は質点を拡大したものであり、外力は$\boldsymbol{T}(x)$と$\boldsymbol{T}(x+\Delta x)$が働いているものとしている）
+（右図は質点を拡大したものであり、外力は$\bm{T}(x)$と$\bm{T}(x+\Delta x)$が働いているものとしている）
 
 そして、各成分ごとに運動方程式を解くと、以下のようになる。
 \begin{enumerate}
@@ -2660,11 +2660,11 @@ $$
 という、とてつもない巨大な値になる。このように、クーロン力は重力と比較して圧倒的に大きく、電荷がある場合だとほぼ重力の効果は無視できる。それにも関わらず地球上の物体あるいは天体間に重力が作用する理由は、正と負の電荷が互いに打ち消しあうことで見かけ上電荷がなくなり、クーロン力が生じる状態にならなくなったことによるものと考えられる。</p>
 <p>一般的にクーロン力というのは、その方向をも指定して決まるベクトル量である。そのため、以下の図において電荷 $Q$ が電荷 $q$ に作用する力をベクトルを用いて表すと次のようになる。</p>
 <p>$$
-\boldsymbol{F}(\boldsymbol{r}_q)=
-k\frac{qQ}{|\boldsymbol{r}_q-\boldsymbol{r}_Q|^2}
-\frac{(\boldsymbol{r}_q-\boldsymbol{r}_Q)}{|\boldsymbol{r}_q-\boldsymbol{r}_Q|}
+\bm{F}(\bm{r}_q)=
+k\frac{qQ}{|\bm{r}_q-\bm{r}_Q|^2}
+\frac{(\bm{r}_q-\bm{r}_Q)}{|\bm{r}_q-\bm{r}_Q|}
 $$</p>
-<p>ここで、ベクトル $\boldsymbol{r}_q=(x_q,y_q,z_q)$ と $\boldsymbol{r}_Q=(x_Q,y_Q,z_Q)$ は、それぞれ図の原点Oから測った電荷 $q$ と $Q$ の位置ベクトルであり、$\boldsymbol{F}(\boldsymbol{r}_q)$ は電荷 $q$ に作用する力を表す。</p>
+<p>ここで、ベクトル $\bm{r}_q=(x_q,y_q,z_q)$ と $\bm{r}_Q=(x_Q,y_Q,z_Q)$ は、それぞれ図の原点Oから測った電荷 $q$ と $Q$ の位置ベクトルであり、$\bm{F}(\bm{r}_q)$ は電荷 $q$ に作用する力を表す。</p>
 <p align="center">
     <img height="200px" src="chapter_3/images/Coulomb_force.png">
 </p>
@@ -2680,15 +2680,15 @@ $$</p>
 <p>今、水を容器に入れて、その上に水をはじくようロウを塗ったコルク球を2個浮かべてみる。すると、コルク球の周りの水面はへこんでゆがんだ状態になる。この2つのコルク球を数mm程度まで近づけて手を離すと、コルク球は互いに引き寄せられ、そして接触する。これは、水がその表面張力によって表面積をできるだけ小さくしようとするためである。今、仮に人間にこの水が見えないものとすると、我々には2個のコルク球間に引力が作用しているように感じられるだろう。このようにコルク球がその周りの水面をゆがめ、その歪みが次々と水面上を伝わって、ほかのコルク球に力を与えるとする考え方を<strong>近接作用</strong>という（相対性理論になると、万有引力も同じように考えることができるが難解なためここでは述べないことにする）。</p>
 <p>　以上の考え方により、帯電体があると周囲の空間はそれ自身の性質によりゆがむと電磁気学では考える（先ほどで言う水がコルク球でへこんだ状態になったことに相当する）。この歪みを<strong>電場</strong>（電気工学系では電界）という。そして、電場の中に別の帯電体を置くことでクーロン力が生じるわけだが、ここで</p>
 <p>$$
-\boldsymbol{F}(\boldsymbol{r}_q)=q\boldsymbol{E}_Q
-(\boldsymbol{r}=\boldsymbol{r}_q)
+\bm{F}(\bm{r}_q)=q\bm{E}_Q
+(\bm{r}=\bm{r}_q)
 $$
 $$
-\boldsymbol{E}<em>Q(\boldsymbol{r})=
-\frac{kQ}{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|^2}
-\frac{(\boldsymbol{r}-\boldsymbol{r}<em>Q)}{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|}
+\bm{E}<em>Q(\bm{r})=
+\frac{kQ}{|\bm{r}-\bm{r}</em>{Q}|^2}
+\frac{(\bm{r}-\bm{r}<em>Q)}{|\bm{r}-\bm{r}</em>{Q}|}
 $$</p>
-<p>と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\boldsymbol{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\boldsymbol{r}$ に電場 $\boldsymbol{E}$ を作り、$\boldsymbol{r}=\boldsymbol{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\boldsymbol{F}$ の力が作用する。</p>
+<p>と表わすと次のように考えることができる。点電荷 $q$ のあるなしに関わらず、位置 $\bm{r}_Q$ にある点電荷 $Q$ は空間のあらゆる場所 $\bm{r}$ に電場 $\bm{E}$ を作り、$\bm{r}=\bm{r}_q$ の位置にもう一つの点電荷 $q$ があると、それに $\bm{F}$ の力が作用する。</p>
 <p>　電場がどのように発生するかを見るのに<strong>電気力線</strong>がよく用いられる。これは以下の図に示すように。その接線方向が電場の方向と一致するように線を描いたもので、一つの電荷の場合だと始点か終点のどちらかが無限遠に伸びた形になる。</p>
 <p align="center">
     <img width="60%" src="chapter_3/images/flux_line_mono.png">
@@ -2696,13 +2696,13 @@ $$</p>
 
 <p>これが2つになると、二つの電荷の電場を足したものになり、電荷の符号が同じか異なるかで電気力線の形が違ってくる（同じ電荷量であれば同じ本数だけ放出、吸収する、符号が反転すれば向きが逆になる）。</p>
 <p>$$
-\boldsymbol{E}=\boldsymbol{E}_q(\boldsymbol{r})+\boldsymbol{E}_Q(\boldsymbol{r})=
+\bm{E}=\bm{E}_q(\bm{r})+\bm{E}_Q(\bm{r})=
 k
 \left[
-q\frac{(\boldsymbol{r}-\boldsymbol{r}<em>q)}
-{|\boldsymbol{r}-\boldsymbol{r}</em>{q}|^3}+
-Q\frac{(\boldsymbol{r}-\boldsymbol{r}<em>Q)}
-{|\boldsymbol{r}-\boldsymbol{r}</em>{Q}|^3}
+q\frac{(\bm{r}-\bm{r}<em>q)}
+{|\bm{r}-\bm{r}</em>{q}|^3}+
+Q\frac{(\bm{r}-\bm{r}<em>Q)}
+{|\bm{r}-\bm{r}</em>{Q}|^3}
 \right]
 $$</p>
 <p align="center">
@@ -2718,7 +2718,7 @@ $$</p>
 \mathrm{d}S’=
 r^2\sin\phi\ \mathrm{d}\theta\mathrm{d}\phi
 $$</p>
-<p>となるのだが、実際は電場と平面に垂直な単位ベクトル $\boldsymbol{n}$ のなす角度 $\alpha$ により</p>
+<p>となるのだが、実際は電場と平面に垂直な単位ベクトル $\bm{n}$ のなす角度 $\alpha$ により</p>
 <p>$$
 \mathrm{d}S=
 \frac{\mathrm{d}S’}{\cos\alpha}
@@ -2728,13 +2728,13 @@ $$</p>
     <img width="60%" src="chapter_3/images/en_relation.png">
 </p>
 
-<p>一方で、電場と $\boldsymbol{n}$ の内積が</p>
+<p>一方で、電場と $\bm{n}$ の内積が</p>
 <p>$$
-\boldsymbol{E}\cdot\boldsymbol{n}=E\cos\alpha
+\bm{E}\cdot\bm{n}=E\cos\alpha
 $$</p>
 <p>であるが、面上の $E$ の合計（積分）を求めるのに $\cos\alpha$ が余計なので</p>
 <p>$$
-\oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
+\oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
 \oint E\ \mathrm{d}S’=
 kQ\int_{0}^{2\pi}\mathrm{d}\theta
 \int_{0}^{\pi}\sin\phi\ \mathrm{d}\phi=
@@ -2742,19 +2742,19 @@ kQ\int_{0}^{2\pi}\mathrm{d}\theta
 $$</p>
 <p>というようにすると、面上の電場の総和を求めることができる。ここで、左辺については一般的に</p>
 <p>$$
-\oint(\boldsymbol{E}\cdot\boldsymbol{n})\mathrm{d}S=
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}
+\oint(\bm{E}\cdot\bm{n})\mathrm{d}S=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}
 $$</p>
 <p>というように面積分と呼ばれる形で書かれる。任意の閉曲面の結果から、閉曲面の形によらず電場の総量は電荷量に比例していることが予想される。そのため、２個の電荷がある場合にも</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
-\oint\boldsymbol{E}_q\cdot\mathrm{d}\boldsymbol{S}+
-\oint\boldsymbol{E}_Q\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
+\oint\bm{E}_q\cdot\mathrm{d}\bm{S}+
+\oint\bm{E}_Q\cdot\mathrm{d}\bm{S}=
 4\pi k (q+Q)
 $$</p>
 <p>というようになる。少しひねくれて、もし閉曲面の外部に電荷がある場合は電場が地点1から地点2に向けて出入りした場合は、</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
 E_1\cos(\pi-\alpha_1)
 \mathrm{d}S_1+
 E_2\cos(\alpha_2)
@@ -2763,7 +2763,7 @@ E_2\cos(\alpha_2)
 $$</p>
 <p>である。したがって、閉曲面から出てくる電場というのは、その閉曲面内にある電荷量 $Q$ に比例することになる。これを<strong>Gaussの法則</strong>と呼ぶ。</p>
 <p>$$
-\oint\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{S}=
+\oint\bm{E}\cdot\mathrm{d}\bm{S}=
 4\pi k Q
 $$</p>
 <p>この法則に従うことで、物体に電荷がない場合や同じ正負の電荷が存在している場合は打ち消して電場が生じないことが言える。</p>
@@ -2871,9 +2871,9 @@ $$
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="fermatの原理-1"><a href="#fermatの原理-1" class="header">Fermatの原理</a></h1>
 <h2 id="fermatの原理"><a class="header" href="#fermatの原理">Fermatの原理</a></h2>
-<p>　屈折率が場所によって僅かずつ異なるような物質中を光がとおるときには、光線は曲がるがその場合の光の進路を決める法則は<strong>Fermatの原理</strong>として知られている。これは、光の進む道はその近傍の経路と比べて光学距離が極値（正しくは停留値）になるようなものであるという表現される。<strong>光学距離</strong>とは、屈折率を経路に沿って積分したもので、$\boldsymbol{r}$を空間座標、$ds$を経路に沿った不精な線要素とすると、A点からB点までの経路では、
+<p>　屈折率が場所によって僅かずつ異なるような物質中を光がとおるときには、光線は曲がるがその場合の光の進路を決める法則は<strong>Fermatの原理</strong>として知られている。これは、光の進む道はその近傍の経路と比べて光学距離が極値（正しくは停留値）になるようなものであるという表現される。<strong>光学距離</strong>とは、屈折率を経路に沿って積分したもので、$\bm{r}$を空間座標、$ds$を経路に沿った不精な線要素とすると、A点からB点までの経路では、
 $$
-L(A,B)=\int_A^B n(\boldsymbol{r})ds
+L(A,B)=\int_A^B n(\bm{r})ds
 $$
 と書くことができる、これは、AB間の経路の距離が光学的には真空中を伝わる平面波に換算して $L(A,B)$ であること、つまりB点の位相のA点のそれに比べた遅れが、真空中を平面波が距離 $L(A,B)$ だけ行ったときの億例に等しいことを意味している。この原理は、実際の経路についてはそれからの任意の無限小のずれに対して光学距離の変化分が零、つまり
 $$
@@ -2984,10 +2984,10 @@ $$
 <h1 id="newton形式-1"><a href="#newton形式-1" class="header">Newton形式</a></h1>
 <h2 id="newton形式"><a class="header" href="#newton形式">Newton形式</a></h2>
 <p>　物体の運動は運動方程式を用いることで記述することができるわけだが、中には複数の手順を踏んで解かなければいけない場合が存在する。その代表例として、よく振り子の運動があげれられるため、これについて述べていくことにする。</p>
-<p>　振り子の運動というのは、天井から質点を糸で吊るして揺らしたときの運動を指しており、質点の位置を $\boldsymbol{r}$、質量を $\boldsymbol{r},m$ 、外力として糸の張力 $\boldsymbol{T}$、重力 $\boldsymbol{G}$ が働いているとすると運動方程式は</p>
+<p>　振り子の運動というのは、天井から質点を糸で吊るして揺らしたときの運動を指しており、質点の位置を $\bm{r}$、質量を $\bm{r},m$ 、外力として糸の張力 $\bm{T}$、重力 $\bm{G}$ が働いているとすると運動方程式は</p>
 <p>$$
-m\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}t}=
-\boldsymbol{T}+\boldsymbol{G}
+m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t}=
+\bm{T}+\bm{G}
 $$</p>
 <p>となる。ここで、各成分に分けて書くと</p>
 <p>$$
@@ -3038,82 +3038,82 @@ $$</p>
 <h1 id="lagrange形式-1"><a href="#lagrange形式-1" class="header">Lagrange形式</a></h1>
 <h2 id="lagrange形式"><a class="header" href="#lagrange形式">Lagrange形式</a></h2>
 <p>　従来の運動方程式
-以前まで、物体の運動は運動方程式を用いて見てきたわけだが、拘束力が働く場合は、その方向とは垂直に運動を行うため結果的に方程式から姿を消すことが多い。そのため、予め拘束力を考える必要がない方程式を考えると便利なように思う。そこで、拘束力 $\boldsymbol{R}$ とは垂直の方向に $\delta\boldsymbol{r}$ だけの変位（同じ時間で二つの位置の差を測る）を考えると、以下のように仕事が0になることが分かる。
+以前まで、物体の運動は運動方程式を用いて見てきたわけだが、拘束力が働く場合は、その方向とは垂直に運動を行うため結果的に方程式から姿を消すことが多い。そのため、予め拘束力を考える必要がない方程式を考えると便利なように思う。そこで、拘束力 $\bm{R}$ とは垂直の方向に $\delta\bm{r}$ だけの変位（同じ時間で二つの位置の差を測る）を考えると、以下のように仕事が0になることが分かる。
 $$
-\boldsymbol{R}\cdot\delta\boldsymbol{r}=0
+\bm{R}\cdot\delta\bm{r}=0
 $$
 これは仮想仕事の原理というように呼ぶ。次に、運動方程式では
 $$
-m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}=
-\boldsymbol{R}+\boldsymbol{F}
+m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=
+\bm{R}+\bm{F}
 $$
 というように拘束力と外力とで力を分けて記載できるため、
 $$
-\left(m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}-
-\boldsymbol{F}\right)
-\cdot\delta\boldsymbol{r}=0
+\left(m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}-
+\bm{F}\right)
+\cdot\delta\bm{r}=0
 $$
-となる。次に、このベクトルが $f$ 個の変数で書けるものとして $\boldsymbol{r}(q_1,q_2,\cdots,q_f)$ とすると</p>
+となる。次に、このベクトルが $f$ 個の変数で書けるものとして $\bm{r}(q_1,q_2,\cdots,q_f)$ とすると</p>
 <p>$$
-\delta \boldsymbol{r}=
+\delta \bm{r}=
 \sum_{i=1}^{f}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \delta q_i
 $$</p>
 <p>となるので、以下のようになる。
 $$
 \sum_{i=1}^{f}
 \left[
-m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)-
-\boldsymbol{F}\cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)-
+\bm{F}\cdot
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \right]\delta q_i=0
 $$</p>
 <p>ここで、第1辺を整理して</p>
 <p>$$
-m\frac{\mathrm{d}\boldsymbol{v}}{\mathrm{d}t}
+m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
 \cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)=
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)=
 \frac{\mathrm{d}}{\mathrm{d}t}
 \left[
-m\boldsymbol{v}\cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+m\bm{v}\cdot
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \right]-
-m\boldsymbol{v}\cdot
+m\bm{v}\cdot
 \frac{\mathrm{d}}{\mathrm{d}t}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 $$</p>
 <p>とすると、各項目について</p>
 <p>$$
-\frac{\partial \boldsymbol{v}}{\partial \dot{q}_i}=
+\frac{\partial \bm{v}}{\partial \dot{q}_i}=
 \frac{\partial}{\partial \dot{q}<em>i}
 \left[
 \sum</em>{j=1}^{f}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \dot{q}<em>i+
-\frac{\partial \boldsymbol{r}}{\partial t}
+\frac{\partial \bm{r}}{\partial t}
 \right]=
-\frac{\partial \boldsymbol{r}}{\partial q_i}
+\frac{\partial \bm{r}}{\partial q_i}
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}t}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)=
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)=
 \sum</em>{j=1}^{f}
 \frac{\partial}{\partial q_j}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \dot{q}<em>j+
 \frac{\partial}{\partial t}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)=
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)=
 \frac{\partial}{\partial q_i}
 \left[
 \sum</em>{j=1}^{f}
-\left(\frac{\partial \boldsymbol{r}}{\partial q_j}\right)
+\left(\frac{\partial \bm{r}}{\partial q_j}\right)
 \dot{q}<em>j+
-\frac{\partial \boldsymbol{r}}{\partial t}
+\frac{\partial \bm{r}}{\partial t}
 \right]=
-\frac{\partial \boldsymbol{v}}{\partial q_i}
+\frac{\partial \bm{v}}{\partial q_i}
 $$
 となるため、これらを代入すると以下の通りになる。
 $$
@@ -3122,16 +3122,16 @@ $$
 \frac{\mathrm{d}}{\mathrm{d}t}
 \frac{\partial}{\partial \dot{q}_i}
 \left(
-\frac{1}{2}m\boldsymbol{v}^2
+\frac{1}{2}m\bm{v}^2
 \right)
 -
 \frac{\partial}{\partial q_i}
 \left(
-\frac{1}{2}m\boldsymbol{v}^2
+\frac{1}{2}m\bm{v}^2
 \right)
 -
-\boldsymbol{F}\cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+\bm{F}\cdot
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 \right]\delta q_i=0
 $$
 任意の仮想変位に対して成立するためには、中の項目が0になる必要があるため</p>
@@ -3146,18 +3146,18 @@ $$
 (i=1,\cdots,f)
 $$
 $$
-K=\frac{1}{2}m\boldsymbol{v}^2、
-Q_i=\boldsymbol{F}\cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)
+K=\frac{1}{2}m\bm{v}^2、
+Q_i=\bm{F}\cdot
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)
 $$
 が成り立つ。この運動方程式は一般的な座標に関して成立するものであり、Euler=lagrange方程式と呼ぶ。ただ、通常は力を保存力として
 $$
-\boldsymbol{F}=-\frac{\partial U}{\partial\boldsymbol{r}}
+\bm{F}=-\frac{\partial U}{\partial\bm{r}}
 $$
 として、一般化力を以下のようにする。
 $$
-Q_i=-\frac{\partial U}{\partial\boldsymbol{r}}\cdot
-\left(\frac{\partial \boldsymbol{r}}{\partial q_i}\right)=
+Q_i=-\frac{\partial U}{\partial\bm{r}}\cdot
+\left(\frac{\partial \bm{r}}{\partial q_i}\right)=
 -\frac{\partial U}{\partial q_i}
 $$
 すると、以下のように書くこともできる。
@@ -3211,7 +3211,7 @@ $$
 <p>　気体が分子で構成されているものとみなした場合、容器内ではまず壁への衝突による力（圧力）が働くことが考えられる。そのため容器の壁に及ぼす圧力を考えると、圧力 $P$ は壁の単位面積が受ける力（撃力）の垂直成分の時間平均として定義される。そのため力の時間平均は分子の受ける力積の単位時間内総量に等しく、更にこれは運動量の変化の単位時間内総量に等しい。速さ $v$ の分子が壁に衝突して、<strong>弾性的に反発されるとすれば</strong>分子の運動量変化は壁に垂直に $2mv_{\perp}$ となる。そのため、単位時間当たりの力は以下のようになる。
 $$
 \bar{F}=\frac{2mv_{\perp}}{\Delta t}、
-(\boldsymbol{v}=\boldsymbol{v}<em>{\perp}+\boldsymbol{v}</em>{//})
+(\bm{v}=\bm{v}<em>{\perp}+\bm{v}</em>{//})
 $$
 ただ、実際は一つの分子による力のみがかかるわけではなく、同じ速度の分子の数（ $N(v_{\perp})$ ）だけ力が働く。この個数というのは時間 $\Delta t$ の間に範囲 $\Delta S$ に力が生じるものとして、数密度 $n(v_{\perp})$ により
 $$
@@ -5006,23 +5006,23 @@ $$
 $$
 V&lt;c、v_x&lt;c
 $$
-このことから、物体の速度というのは光速を超えることがなく、力が働いて加速しても光速で頭打ちになることがうかがえる。これは別の見方だと、速度が増すことで加速しにくくなる（質量が増す）ことになるため、質量が速度に依存しているともいえる。古典力学においても質量が速度（というより時間）に依存している場合は以下の方程式を解くことで運動を記述することができた。ここで $\boldsymbol{p}$ は運動量、$\boldsymbol{F}$ は外部からの力である。
+このことから、物体の速度というのは光速を超えることがなく、力が働いて加速しても光速で頭打ちになることがうかがえる。これは別の見方だと、速度が増すことで加速しにくくなる（質量が増す）ことになるため、質量が速度に依存しているともいえる。古典力学においても質量が速度（というより時間）に依存している場合は以下の方程式を解くことで運動を記述することができた。ここで $\bm{p}$ は運動量、$\bm{F}$ は外部からの力である。
 $$
-\boldsymbol{F}=\frac{{\rm d}\boldsymbol{p}}{{\rm d}t}、
-\boldsymbol{p}=m\boldsymbol{v}
+\bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
+\bm{p}=m\bm{v}
 $$
 今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでにN.LwisとC.Tolmanの論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 $$
-m(\boldsymbol{v})=\frac{m_0}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+m(\bm{v})=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 というようになるとされている。ここで $m_0$ は物体が静止しているときの質量としている。では、観測者ごとにどうなるかを見ていくと、まず質量に関して
 $$
-m(\boldsymbol{v}‘)=
-\frac{m_0}{\sqrt{1-\frac{\boldsymbol{v’}^2}{c^2}}}
+m(\bm{v}‘)=
+\frac{m_0}{\sqrt{1-\frac{\bm{v’}^2}{c^2}}}
 $$
 であり、速度に関しては
 $$
-\boldsymbol{v}‘^2=v_x’^2+v_y’^2+v_z’^2=
+\bm{v}‘^2=v_x’^2+v_y’^2+v_z’^2=
 \frac{1}{
 \left(
 1-\frac{v_xV}{c^2}
@@ -5038,18 +5038,18 @@ $$
 $$
 となることから、以下のようになる。
 $$
-m(\boldsymbol{v}‘)=
+m(\bm{v}‘)=
 \gamma
 \left(
 1-\frac{v_xV}{c^2}
 \right)
 \frac{m_0}{
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 }=
 \gamma\left(
 1-\frac{v_xV}{c^2}
-\right) m(\boldsymbol{v})=
-\frac{\mathrm{d}t’}{\mathrm{d}t}m(\boldsymbol{v})
+\right) m(\bm{v})=
+\frac{\mathrm{d}t’}{\mathrm{d}t}m(\bm{v})
 $$
 ただし、ここで以下の関係式を利用している。
 $$
@@ -5059,14 +5059,14 @@ $$
 そのため、運動方程式の左辺については以下の通りとなる。
 $$
 \frac{\mathrm{d}}{\mathrm{d}t’}
-(m(\boldsymbol{v}‘)v_x’)=
+(m(\bm{v}‘)v_x’)=
 \gamma
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \left[
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})v_x)-
+(m(\bm{v})v_x)-
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})V)
+(m(\bm{v})V)
 \right]=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \gamma
@@ -5076,32 +5076,32 @@ F_x-\frac{V}{c}F_w
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}t’}
-(m(\boldsymbol{v}‘)v_y’)=
+(m(\bm{v}‘)v_y’)=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})v_y)=
+(m(\bm{v})v_y)=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 F_y
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}t’}
-(m(\boldsymbol{v}‘)v_z’)=
+(m(\bm{v}‘)v_z’)=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})v_z)=
+(m(\bm{v})v_z)=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 F_z
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}t’}
-(m(\boldsymbol{v}‘)v_w’)=
+(m(\bm{v}‘)v_w’)=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \left[
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})c)-
+(m(\bm{v})c)-
 \frac{V}{c}
 \frac{\mathrm{d}}{\mathrm{d}t}
-(m(\boldsymbol{v})v_x)
+(m(\bm{v})v_x)
 \right]=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \gamma
@@ -5126,46 +5126,46 @@ F_w-\frac{V}{c}F_x
 $$
 となり、力積（運動量の変化）が等しい形になる。そのため
 $$
-\mathrm{d}\boldsymbol{p}‘=\mathrm{d}\boldsymbol{p}
+\mathrm{d}\bm{p}‘=\mathrm{d}\bm{p}
 $$
 であるが、このままだと時間の部分が抜けた形になってしまっていることが分かる。一方で、質量の関係式をもう少し展開していくと
 $$
 \frac{m_0}{
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}=
+\sqrt{1-\frac{\bm{v}^2}{c^2}}}=
 \frac{\mathrm{d}t}{\mathrm{d}t’}
 \frac{m_0}{
-\sqrt{1-\frac{\boldsymbol{v’}^2}{c^2}}}
+\sqrt{1-\frac{\bm{v’}^2}{c^2}}}
 $$
 であるから、時間に関して以下の等式が成り立つ。
 $$
 \mathrm{d}t’
-\sqrt{1-\frac{\boldsymbol{v’}^2}{c^2}}=
+\sqrt{1-\frac{\bm{v’}^2}{c^2}}=
 \mathrm{d}t
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 こちらの量も変換に対して不変な形をしており、
 時間の代わりに扱うと同じ形で置き換えられることが分かる。そこで、
 $$
 \mathrm{d}\tau\equiv
 \mathrm{d}t
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 として、運動方程式を以下のようにしてみよう。
 $$
-\boldsymbol{f}=
-\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}、
-\boldsymbol{f}\equiv\gamma(\boldsymbol{v})\boldsymbol{F}
+\bm{f}=
+\frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+\bm{f}\equiv\gamma(\bm{v})\bm{F}
 $$
 こちらも同じように見ていくと、質量に関しては同じとなる一方で各成分についてはそれぞれ
 $$
 \frac{\mathrm{d}}{\mathrm{d}\tau’}
-(m(\boldsymbol{v}‘)v_x’)=
+(m(\bm{v}‘)v_x’)=
 \gamma
 \left[
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})v_x)-
+(m(\bm{v})v_x)-
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})V)
+(m(\bm{v})V)
 \right]=
 \gamma
 \left(
@@ -5174,26 +5174,26 @@ f_x-\frac{V}{c}f_w
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}\tau’}
-(m(\boldsymbol{v}‘)v_y’)=
+(m(\bm{v}‘)v_y’)=
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})v_y)=f_y
+(m(\bm{v})v_y)=f_y
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}\tau’}
-(m(\boldsymbol{v}‘)v_z’)=
+(m(\bm{v}‘)v_z’)=
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})v_z)=f_z
+(m(\bm{v})v_z)=f_z
 $$
 $$
 \frac{\mathrm{d}}{\mathrm{d}\tau’}
-(m(\boldsymbol{v}‘)v_w’)=
+(m(\bm{v}‘)v_w’)=
 \gamma
 \left[
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})c)-
+(m(\bm{v})c)-
 \frac{V}{c}
 \frac{\mathrm{d}}{\mathrm{d}\tau}
-(m(\boldsymbol{v})v_x)
+(m(\bm{v})v_x)
 \right]=
 \gamma
 \left(
@@ -5216,49 +5216,49 @@ f_w-\frac{V}{c}f_x
 $$
 また、運動量に対してエネルギーも保存するため、まずエネルギー（運動エネルギー）がどのような形になるか確認するため仕事率（力と速度の内積）を求めてみると
 $$
-\boldsymbol{f}\cdot\boldsymbol{v}=
+\bm{f}\cdot\bm{v}=
 \frac{{\rm d}}{{\rm d}\tau}
-\left(\frac{m_0\boldsymbol{v}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}\right)\cdot\boldsymbol{v}=
+\left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
 \frac{{\rm d}}{{\rm d}\tau}
 \left(
 \frac{m_0c^2}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \right)=
 \frac{{\rm d}}{{\rm d}\tau}
-\left(m(\boldsymbol{v})c^2\right)
+\left(m(\bm{v})c^2\right)
 $$
 となるため、エネルギーは以下の形になることが分かる。
 $$
-E_K=m(\boldsymbol{v})c^2=
-m_0c^2+\frac{1}{2}m_0\boldsymbol{v}^2+\cdots
+E_K=m(\bm{v})c^2=
+m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており以下の関係がある。
 $$
 f_w=
-\frac{1}{c}(\boldsymbol{f}\cdot\boldsymbol{v})=
+\frac{1}{c}(\bm{f}\cdot\bm{v})=
 \frac{1}{c}
 \frac{{\rm d}E_K}{{\rm d}\tau}
 $$</p>
 <p>以上を踏まえて、運動方程式と変換式を整理すると以下のようになる。
 $$
-\boldsymbol{f}=
-\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}、
-(\boldsymbol{f}\cdot\boldsymbol{v})=
+\bm{f}=
+\frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+(\bm{f}\cdot\bm{v})=
 \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
-\boldsymbol{p}=m(\boldsymbol{v})\boldsymbol{v}、E_K=m(\boldsymbol{v})c^2
+\bm{p}=m(\bm{v})\bm{v}、E_K=m(\bm{v})c^2
 $$
 $$
 f_x’=
 \gamma\left[
 f_x-
-\frac{V}{c^2}(\boldsymbol{f}\cdot\boldsymbol{v})
+\frac{V}{c^2}(\bm{f}\cdot\bm{v})
 \right]、
 f_y’=f_y、
 f_z’=f_z
 \rightarrow
-(\boldsymbol{f}‘\cdot\boldsymbol{v}’)=
+(\bm{f}‘\cdot\bm{v}’)=
 \gamma\left[
-(\boldsymbol{f}\cdot\boldsymbol{v})-
+(\bm{f}\cdot\bm{v})-
 Vf_x
 \right]
 $$
@@ -5266,18 +5266,18 @@ $$
 <p>$$
 \frac{\mathrm{d}}{\mathrm{d}\tau}
 \left(
-\frac{m_0\boldsymbol{v}}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
+\frac{m_0\bm{v}}
+{\sqrt{1-\frac{\bm{v}^2}{c}}}
 \right)=
-\frac{m_0\boldsymbol{g}}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}、
+\frac{m_0\bm{g}}
+{\sqrt{1-\frac{\bm{v}^2}{c}}}、
 \frac{\mathrm{d}}{\mathrm{d}\tau}
 \left(
 \frac{m_0c^2}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
+{\sqrt{1-\frac{\bm{v}^2}{c}}}
 \right)=
-\frac{m_0}{\sqrt{1-\frac{\boldsymbol{v}^2}{c}}}
-(\boldsymbol{g}\cdot\boldsymbol{v})
+\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c}}}
+(\bm{g}\cdot\bm{v})
 $$</p>
 <p>というようになるが、これを見ると重力での質量の増加分 $\gamma$ は固有時のものと打ち消しあうことでなくなることが分かる。このことから、$\gamma$ という項は質量が増加するためによるというよりも時間が固有時になる影響で発生するもの（速度の形の変化）により発生したものと考えることができる。式については z 成分しかなく位置 $z_0$ で初速度が 0 であるとすると
 $$
@@ -5308,10 +5308,10 @@ $$
 <h2 id="相対論的電磁気学"><a class="header" href="#相対論的電磁気学">相対論的電磁気学</a></h2>
 <p>電磁気学においては、以下のMaxwell方程式を用いて説明することができた。
 $$
-\mathrm{div}\boldsymbol{D}=\rho、
-\mathrm{div}\boldsymbol{B}=0、
-\mathrm{rot}\boldsymbol{E}=-\frac{\partial \boldsymbol{B}}{\partial t}、
-\mathrm{rot}\boldsymbol{H}=\boldsymbol{i}+\frac{\partial \boldsymbol{D}}{\partial t}
+\mathrm{div}\bm{D}=\rho、
+\mathrm{div}\bm{B}=0、
+\mathrm{rot}\bm{E}=-\frac{\partial \bm{B}}{\partial t}、
+\mathrm{rot}\bm{H}=\bm{i}+\frac{\partial \bm{D}}{\partial t}
 $$</p>
 <p>このうち、２番目と３番目の式に関して
 $$
@@ -5407,104 +5407,104 @@ B_{x’}=B_{x}、
 B_{y’}=\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)、
 B_{z’}=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
 $$
-確認の例として、電荷 $q$ の点電荷に電場 $\boldsymbol{E}$’ と磁場 $\boldsymbol{B}‘$ が働いているとすると
+確認の例として、電荷 $q$ の点電荷に電場 $\bm{E}$’ と磁場 $\bm{B}‘$ が働いているとすると
 $$
-\frac{\mathrm{d}\boldsymbol{p}’}{\mathrm{d}\tau’}=\boldsymbol{f}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
+\frac{\mathrm{d}\bm{p}’}{\mathrm{d}\tau’}=\bm{f}=
+\frac{1}{\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
 \left[
-q\boldsymbol{E}’+q(\boldsymbol{v}‘\times\boldsymbol{B}’)
+q\bm{E}’+q(\bm{v}‘\times\bm{B}’)
 \right]
 $$
 $$
 \frac{\mathrm{d}E’}{\mathrm{d}\tau’}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
 \left[
-q\boldsymbol{E}’+q(\boldsymbol{v}‘\times\boldsymbol{B}’)
-\right]\cdot\boldsymbol{v}‘=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}’^2}{c^2}}}
-(\boldsymbol{v}‘\cdot q\boldsymbol{E}’)
+q\bm{E}’+q(\bm{v}‘\times\bm{B}’)
+\right]\cdot\bm{v}‘=
+\frac{1}{\sqrt{1-\frac{\bm{v}’^2}{c^2}}}
+(\bm{v}‘\cdot q\bm{E}’)
 $$
 となるが、各成分に対して変換すると以下の通りになる。
 $$
 \frac{\mathrm{d}p_x’}{\mathrm{d}\tau’}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \gamma
 \left[
 qE_x+
 q(v_yB_z-v_zB_y)-
-\frac{V}{c^2}(\boldsymbol{v}\cdot q\boldsymbol{E})
+\frac{V}{c^2}(\bm{v}\cdot q\bm{E})
 \right]
 $$
 $$
 \frac{\mathrm{d}p_y’}{\mathrm{d}\tau’}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
 qE_y+q(v_zB_x-v_xB_z)
 \right]
 $$
 $$
 \frac{\mathrm{d}p_z’}{\mathrm{d}\tau’}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
 qE_z+q(v_xB_y-v_yB_x)
 \right]
 $$
 $$
 \frac{\mathrm{d}E’}{\mathrm{d}\tau’}=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
-(\boldsymbol{v}\cdot q\boldsymbol{E})-
+(\bm{v}\cdot q\bm{E})-
 V{E_x+q(v_yB_z-v_zB_y)}
 \right]
 $$
 これにより、力に関して以下の対応になっていることが再確認できる。
 $$
 f_x’=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
 \left[
 qE_x’+q(v_y’B_z’-v_z’B_y’)
 \right]
 \leftrightarrow
 f_x=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
 qE_x+q(v_yB_z-v_zB_y)
 \right]
 $$</p>
 <p>$$
 f_y’=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
 \left[
 qE_y’+q(v_z’B_x’-v_x’B_z’)
 \right]
 \leftrightarrow
 f_y=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
 qE_y+q(v_zB_x-v_xB_z)
 \right]
 $$
 $$
 f_z’=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
 \left[
 qE_z’+q(v_x’B_y’-v_y’B_x’)
 \right]
 \leftrightarrow
 f_z=
-\frac{1}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+\frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 \left[
 qE_z+q(v_xB_y-v_yB_x)
 \right]
 $$
 $$
 f_w’=
-\frac{1}{c\sqrt{1-\frac{\boldsymbol{v}‘^2}{c^2}}}
-(\boldsymbol{v}’\cdot q\boldsymbol{E}’)
+\frac{1}{c\sqrt{1-\frac{\bm{v}‘^2}{c^2}}}
+(\bm{v}’\cdot q\bm{E}’)
 \leftrightarrow
 f_w=
-\frac{1}{c\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
-(\boldsymbol{v}\cdot q\boldsymbol{E})
+\frac{1}{c\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+(\bm{v}\cdot q\bm{E})
 $$</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="重力と慣性等価原理-1"><a href="#重力と慣性等価原理-1" class="header">重力と慣性（等価原理）</a></h1>
@@ -5526,7 +5526,7 @@ $$
 というようにすると、あたかも重力が変化したように見ることもできる。これ以外にも、加速する系では慣性力と重力が働いているが、互いに等価的なものとしてみなすことができる。実際、Newtonの運動方程式において
 $$
 m_I
-\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}s^2}=\boldsymbol{F}
+\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=\bm{F}
 $$
 と書かれるが、ここに現れる質量は物体の慣性の度合いを表すものであるので<strong>慣性質量</strong>と呼ばれる。必要なときには添え字 $I$ をつけて表す。 Newton力学にはもう一つ別の種類の質量が登場する。それは万有引力の法則
 $$
@@ -5543,12 +5543,12 @@ $$
 で与えられる。さて、地球上での質点の自由落下の方程式というのは、簡単に鉛直方向 $z$ だけを考慮すると
 $$
 m_I
-\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}s^2}=
+\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=
 -m_G g
 $$
 となる。この式の両辺を $m_I$ で割ると
 $$
-\frac{\mathrm{d}^2\boldsymbol{r}}{\mathrm{d}s^2}=
+\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}s^2}=
 -\frac{m_G}{m_I} g
 $$
 を得る。すなわち自由落下の加速度は比 $m_G/m_I$ に比例する。ところがGalileiの有名なPisaの斜塔の実験以降、他の摩擦力などなければ自由落下の加速度は全ての物体で等しいことが知られている。これは $m_G/m_I$ が<strong>全ての物体について等しい値を持つ</strong>ことを意味する。</p>
@@ -5576,25 +5576,25 @@ $$</p>
 </p>
 
 このことから、加速する座標への変換というのは曲がったものになることが予想される。この曲がった座標へ変換する理論としてRiemann幾何学というものがある。だが、この分野はかなり難解であるため、まずRiemann幾何学の記法について述べていくことにする。
-<p>　一般的に、ある地点の位置を指定するときはベクトルが用いられており、その中身は座標系を指定することで表すことができる。例えば、平面上の地点をベクトル $\boldsymbol{s}$ で表すとき座標系として二次元直交座標系 $(X,Y)$ を用いると $\boldsymbol{s}=(X,Y)$ となる。しかし、この表記だけだと二次元直交座標系かどうか判断ができない（二次元斜交座標系なども考えられる）ため、<strong>基本ベクトル</strong>（各成分の大きさ1のベクトル）というものが利用される。すなわち、二次元直交座標系の基本ベクトルを $\boldsymbol{e}_X,\boldsymbol{e}_Y$ として</p>
+<p>　一般的に、ある地点の位置を指定するときはベクトルが用いられており、その中身は座標系を指定することで表すことができる。例えば、平面上の地点をベクトル $\bm{s}$ で表すとき座標系として二次元直交座標系 $(X,Y)$ を用いると $\bm{s}=(X,Y)$ となる。しかし、この表記だけだと二次元直交座標系かどうか判断ができない（二次元斜交座標系なども考えられる）ため、<strong>基本ベクトル</strong>（各成分の大きさ1のベクトル）というものが利用される。すなわち、二次元直交座標系の基本ベクトルを $\bm{e}_X,\bm{e}_Y$ として</p>
 <p>$$
-\boldsymbol{s}=X\boldsymbol{e}_X+Y\boldsymbol{e}_Y、
-\boldsymbol{e}_X\cdot\boldsymbol{e}_X=1、
-\boldsymbol{e}_Y\cdot\boldsymbol{e}_Y=1、
-\boldsymbol{e}_X\cdot\boldsymbol{e}_Y=0
+\bm{s}=X\bm{e}_X+Y\bm{e}_Y、
+\bm{e}_X\cdot\bm{e}_X=1、
+\bm{e}_Y\cdot\bm{e}_Y=1、
+\bm{e}_X\cdot\bm{e}_Y=0
 $$</p>
-<p>というようにすると、$\boldsymbol{s}$ を表記できてなおかつ基本ベクトルの大きさが1で互いに直交している（直交座標系である）ことが分かる。同様に、二次元斜交座標系 $(x,y)$ において基本ベクトルを $\boldsymbol{e}_x,\boldsymbol{e}_y$ として</p>
+<p>というようにすると、$\bm{s}$ を表記できてなおかつ基本ベクトルの大きさが1で互いに直交している（直交座標系である）ことが分かる。同様に、二次元斜交座標系 $(x,y)$ において基本ベクトルを $\bm{e}_x,\bm{e}_y$ として</p>
 <p>$$
-\boldsymbol{s}=x\boldsymbol{e}_x+y\boldsymbol{e}_y、
-\boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
-\boldsymbol{e}_y\cdot\boldsymbol{e}_y=1、
-\boldsymbol{e}_x\cdot\boldsymbol{e}_y=\frac{1}{\sqrt{2}}
+\bm{s}=x\bm{e}_x+y\bm{e}_y、
+\bm{e}_x\cdot\bm{e}_x=1、
+\bm{e}_y\cdot\bm{e}_y=1、
+\bm{e}_x\cdot\bm{e}_y=\frac{1}{\sqrt{2}}
 $$</p>
-<p>というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。このことを踏まえて、今度は直交座標系から斜交座標系に変換することを考えると、ベクトル $\boldsymbol{s}$ について</p>
+<p>というようにすると、今度は互いに45度の角度をなす座標系になっていることが分かる。このことを踏まえて、今度は直交座標系から斜交座標系に変換することを考えると、ベクトル $\bm{s}$ について</p>
 <p>$$
-\boldsymbol{s}=
-X\boldsymbol{e}_X+Y\boldsymbol{e}_Y=
-x\boldsymbol{e}_x+y\boldsymbol{e}_y
+\bm{s}=
+X\bm{e}_X+Y\bm{e}_Y=
+x\bm{e}_x+y\bm{e}_y
 $$</p>
 <p>というように表記を置き換えることになる。しかし、このままだと互いにどのような関係になっているか分からない（色々取りうる可能性がある）ため、例として以下の変換式に基づいて座標変換される場合を考えてみる。</p>
 <p align="center">
@@ -5609,117 +5609,117 @@ Y = \frac{1}{\sqrt{2}}y
 x = X - Y、
 y = \sqrt{2}Y
 $$</p>
-<p>すると、先ほどのベクトル $\boldsymbol{s}$ の関係式に変換式を代入することで</p>
+<p>すると、先ほどのベクトル $\bm{s}$ の関係式に変換式を代入することで</p>
 <p>$$
-\boldsymbol{s}=
+\bm{s}=
 \left(
 x+\frac{1}{\sqrt{2}}y
 \right)
-\boldsymbol{e}_X+
-\frac{1}{\sqrt{2}}y\boldsymbol{e}_Y=
-x\boldsymbol{e}_X+
+\bm{e}_X+
+\frac{1}{\sqrt{2}}y\bm{e}_Y=
+x\bm{e}_X+
 y
 \left(
-\frac{1}{\sqrt{2}}\boldsymbol{e}_X+
-\frac{1}{\sqrt{2}}\boldsymbol{e}_Y
+\frac{1}{\sqrt{2}}\bm{e}_X+
+\frac{1}{\sqrt{2}}\bm{e}_Y
 \right)=
-x\boldsymbol{e}_x+y\boldsymbol{e}_y
+x\bm{e}_x+y\bm{e}_y
 $$
 $$
-\boldsymbol{s}=
+\bm{s}=
 \left(
 X-Y
 \right)
-\boldsymbol{e}_x+
-\sqrt{2}Y\boldsymbol{e}_y=
-X\boldsymbol{e}_x+
+\bm{e}_x+
+\sqrt{2}Y\bm{e}_y=
+X\bm{e}_x+
 Y
 \left(
--\boldsymbol{e}_x+\sqrt{2}\boldsymbol{e}_y
+-\bm{e}_x+\sqrt{2}\bm{e}_y
 \right)=
-X\boldsymbol{e}_X+Y\boldsymbol{e}_Y
+X\bm{e}_X+Y\bm{e}_Y
 $$</p>
 <p>というようになるため、比較すると以下の式が得られる。</p>
 <p>$$
-\boldsymbol{e}_x=\boldsymbol{e}_X、
-\boldsymbol{e}_y=
-\frac{1}{\sqrt{2}}\boldsymbol{e}_X+
-\frac{1}{\sqrt{2}}\boldsymbol{e}_Y、
-\boldsymbol{e}_X=\boldsymbol{e}_x、
-\boldsymbol{e}_Y=-\boldsymbol{e}_x+\sqrt{2}\boldsymbol{e}_y
+\bm{e}_x=\bm{e}_X、
+\bm{e}_y=
+\frac{1}{\sqrt{2}}\bm{e}_X+
+\frac{1}{\sqrt{2}}\bm{e}_Y、
+\bm{e}_X=\bm{e}_x、
+\bm{e}_Y=-\bm{e}_x+\sqrt{2}\bm{e}_y
 $$</p>
 <p>この関係から、変換後の内積を求めてみると</p>
 <p>$$
-\boldsymbol{e}_x\cdot\boldsymbol{e}_x=
-\boldsymbol{e}_X\cdot\boldsymbol{e}_X=1
+\bm{e}_x\cdot\bm{e}_x=
+\bm{e}_X\cdot\bm{e}_X=1
 $$
 $$
-\boldsymbol{e}_y\cdot\boldsymbol{e}_y=
-\frac{1}{2}(\boldsymbol{e}_X\cdot\boldsymbol{e}_X)+
-(\boldsymbol{e}_X\cdot\boldsymbol{e}_Y)+
-\frac{1}{2}(\boldsymbol{e}_Y\cdot\boldsymbol{e}_Y)=1
+\bm{e}_y\cdot\bm{e}_y=
+\frac{1}{2}(\bm{e}_X\cdot\bm{e}_X)+
+(\bm{e}_X\cdot\bm{e}_Y)+
+\frac{1}{2}(\bm{e}_Y\cdot\bm{e}_Y)=1
 $$
 $$
-\boldsymbol{e}_x\cdot\boldsymbol{e}_y=
-\frac{1}{\sqrt{2}}(\boldsymbol{e}_X\cdot\boldsymbol{e}_X)+
-\frac{1}{\sqrt{2}}(\boldsymbol{e}_X\cdot\boldsymbol{e}_Y)=
+\bm{e}_x\cdot\bm{e}_y=
+\frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_X)+
+\frac{1}{\sqrt{2}}(\bm{e}_X\cdot\bm{e}_Y)=
 \frac{1}{\sqrt{2}}
 $$</p>
 <p>というように、内積に関して斜交座標系のものになっていることが分かる。このように、変換式を用いることで座標変換されるとともに変換前後の座標系の状態は基底ベクトルと内積によって確認できるものと予想される。そのため、先ほどの定加速度系での変換について考えてみると、変換前の直交座標系において</p>
 <p>$$
-\boldsymbol{s}=x\boldsymbol{e}_x+w\boldsymbol{e}_w、
-\boldsymbol{e}_x\cdot\boldsymbol{e}_x=1、
-\boldsymbol{e}_w\cdot\boldsymbol{e}_w=1、
-\boldsymbol{e}_x\cdot\boldsymbol{e}_w=0
+\bm{s}=x\bm{e}_x+w\bm{e}_w、
+\bm{e}_x\cdot\bm{e}_x=1、
+\bm{e}_w\cdot\bm{e}_w=1、
+\bm{e}_x\cdot\bm{e}_w=0
 $$</p>
 <p>となっているものして、変換後に</p>
 <p>$$
-\boldsymbol{s}=
-x\boldsymbol{e}<em>x+w\boldsymbol{e}<em>w=
-x’\boldsymbol{e}</em>{x’}+w’\boldsymbol{e}</em>{w’}
+\bm{s}=
+x\bm{e}<em>x+w\bm{e}<em>w=
+x’\bm{e}</em>{x’}+w’\bm{e}</em>{w’}
 $$</p>
-<p>というようになっているものとする。ところが、ここで変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要が出てくる。そこで $\boldsymbol{s}$ を一般に</p>
+<p>というようになっているものとする。ところが、ここで変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要が出てくる。そこで $\bm{s}$ を一般に</p>
 <p>$$
-\boldsymbol{s}=\boldsymbol{s}(X,Y)=\boldsymbol{s}(x,y)
+\bm{s}=\bm{s}(X,Y)=\bm{s}(x,y)
 $$</p>
 <p>というように変換されるものとして、この微小変化をとることで</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
+\mathrm{d}\bm{s}=
 \left(
-\frac{\partial \boldsymbol{s}}{\partial X}
+\frac{\partial \bm{s}}{\partial X}
 \right)
 \mathrm{d}X+
 \left(
-\frac{\partial \boldsymbol{s}}{\partial Y}
+\frac{\partial \bm{s}}{\partial Y}
 \right)
 \mathrm{d}Y=
 \left(
-\frac{\partial \boldsymbol{s}}{\partial x}
+\frac{\partial \bm{s}}{\partial x}
 \right)
 \mathrm{d}x+
 \left(
-\frac{\partial \boldsymbol{s}}{\partial y}
+\frac{\partial \bm{s}}{\partial y}
 \right)
 \mathrm{d}y
 $$</p>
-<p>と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\boldsymbol{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として</p>
+<p>と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として</p>
 <p>$$
-\boldsymbol{u}_X=
-\frac{\partial \boldsymbol{s}}{\partial X}、
-\boldsymbol{u}_Y=
-\frac{\partial \boldsymbol{s}}{\partial Y}、
-\boldsymbol{u}_x=
-\frac{\partial \boldsymbol{s}}{\partial x}、
-\boldsymbol{u}_y=
-\frac{\partial \boldsymbol{s}}{\partial y}
+\bm{u}_X=
+\frac{\partial \bm{s}}{\partial X}、
+\bm{u}_Y=
+\frac{\partial \bm{s}}{\partial Y}、
+\bm{u}_x=
+\frac{\partial \bm{s}}{\partial x}、
+\bm{u}_y=
+\frac{\partial \bm{s}}{\partial y}
 $$</p>
 <p>というように置くことで以下の形になることが分かる。</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\mathrm{d}X\boldsymbol{u}_X+
-\mathrm{d}Y\boldsymbol{u}_Y=
-\mathrm{d}x\boldsymbol{u}_x+
-\mathrm{d}y\boldsymbol{u}_y
+\mathrm{d}\bm{s}=
+\mathrm{d}X\bm{u}_X+
+\mathrm{d}Y\bm{u}_Y=
+\mathrm{d}x\bm{u}_x+
+\mathrm{d}y\bm{u}_y
 $$</p>
 <p>また、座標系間で変数が</p>
 <p>$$
@@ -5768,134 +5768,134 @@ $$
 \right)
 \mathrm{d}Y
 $$</p>
-<p>であるため、$\mathrm{d}\boldsymbol{s}$ の関係式に代入すると</p>
+<p>であるため、$\mathrm{d}\bm{s}$ の関係式に代入すると</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\mathrm{d}X\boldsymbol{u}_X+
-\mathrm{d}Y\boldsymbol{u}_Y=
+\mathrm{d}\bm{s}=
+\mathrm{d}X\bm{u}_X+
+\mathrm{d}Y\bm{u}_Y=
 \left[
 \left(
 \frac{\partial x}{\partial X}
 \right)
-\boldsymbol{u}_x+
+\bm{u}_x+
 \left(
 \frac{\partial y}{\partial X}
 \right)
-\boldsymbol{u}_y
+\bm{u}_y
 \right]
 \mathrm{d}X+
 \left[
 \left(
 \frac{\partial x}{\partial Y}
 \right)
-\boldsymbol{u}_x+
+\bm{u}_x+
 \left(
 \frac{\partial y}{\partial Y}
 \right)
-\boldsymbol{u}_y
+\bm{u}_y
 \right]
 \mathrm{d}Y
 $$
 $$
-\mathrm{d}\boldsymbol{s}=
+\mathrm{d}\bm{s}=
 \left[
 \left(
 \frac{\partial X}{\partial x}
 \right)
-\boldsymbol{u}_X+
+\bm{u}_X+
 \left(
 \frac{\partial Y}{\partial x}
 \right)
-\boldsymbol{u}_Y
+\bm{u}_Y
 \right]
 \mathrm{d}x+
 \left[
 \left(
 \frac{\partial X}{\partial y}
 \right)
-\boldsymbol{u}_X+
+\bm{u}_X+
 \left(
 \frac{\partial Y}{\partial y}
 \right)
-\boldsymbol{u}_Y
+\bm{u}_Y
 \right]
 \mathrm{d}y=
-\mathrm{d}x\boldsymbol{u}_x+
-\mathrm{d}y\boldsymbol{u}_y
+\mathrm{d}x\bm{u}_x+
+\mathrm{d}y\bm{u}_y
 $$</p>
 <p>となるため、比較すると以下の関係式が得られる。</p>
 <p>$$
-\boldsymbol{u}_X=
+\bm{u}_X=
 \frac{\partial x}{\partial X}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial y}{\partial X}
-\boldsymbol{u}_y、
-\boldsymbol{u}_Y=
+\bm{u}_y、
+\bm{u}_Y=
 \frac{\partial x}{\partial Y}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial y}{\partial Y}
-\boldsymbol{u}_y
+\bm{u}_y
 $$
 $$
-\boldsymbol{u}_x=
+\bm{u}_x=
 \frac{\partial X}{\partial x}
-\boldsymbol{u}_X+
+\bm{u}_X+
 \frac{\partial Y}{\partial x}
-\boldsymbol{u}_Y、
-\boldsymbol{u}_y=
+\bm{u}_Y、
+\bm{u}_y=
 \frac{\partial X}{\partial y}
-\boldsymbol{u}_X+
+\bm{u}_X+
 \frac{\partial Y}{\partial y}
-\boldsymbol{u}_Y
+\bm{u}_Y
 $$</p>
 <p>この関係式が正しいかは、次のように展開してみることで確認できる。</p>
 <p>$$
-\boldsymbol{u}_X=
-\frac{\partial \boldsymbol{s}}{\partial X}=
+\bm{u}_X=
+\frac{\partial \bm{s}}{\partial X}=
 \frac{\partial x}{\partial X}
-\frac{\partial \boldsymbol{s}}{\partial x}+
+\frac{\partial \bm{s}}{\partial x}+
 \frac{\partial y}{\partial X}
-\frac{\partial \boldsymbol{s}}{\partial y}=
+\frac{\partial \bm{s}}{\partial y}=
 \frac{\partial x}{\partial X}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial y}{\partial X}
-\boldsymbol{u}_y
+\bm{u}_y
 $$
 $$
-\boldsymbol{u}_Y=
-\frac{\partial \boldsymbol{s}}{\partial Y}=
+\bm{u}_Y=
+\frac{\partial \bm{s}}{\partial Y}=
 \frac{\partial x}{\partial Y}
-\frac{\partial \boldsymbol{s}}{\partial x}+
+\frac{\partial \bm{s}}{\partial x}+
 \frac{\partial y}{\partial Y}
-\frac{\partial \boldsymbol{s}}{\partial y}=
+\frac{\partial \bm{s}}{\partial y}=
 \frac{\partial x}{\partial Y}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial y}{\partial Y}
-\boldsymbol{u}_y
+\bm{u}_y
 $$
 $$
-\boldsymbol{u}_x=
-\frac{\partial \boldsymbol{s}}{\partial x}=
+\bm{u}_x=
+\frac{\partial \bm{s}}{\partial x}=
 \frac{\partial X}{\partial x}
-\frac{\partial \boldsymbol{s}}{\partial X}+
+\frac{\partial \bm{s}}{\partial X}+
 \frac{\partial Y}{\partial x}
-\frac{\partial \boldsymbol{s}}{\partial Y}=
+\frac{\partial \bm{s}}{\partial Y}=
 \frac{\partial X}{\partial x}
-\boldsymbol{u}_X+
+\bm{u}_X+
 \frac{\partial Y}{\partial x}
-\boldsymbol{u}_Y
+\bm{u}_Y
 $$
 $$
-\boldsymbol{u}_y=
-\frac{\partial \boldsymbol{s}}{\partial y}=
+\bm{u}_y=
+\frac{\partial \bm{s}}{\partial y}=
 \frac{\partial X}{\partial y}
-\frac{\partial \boldsymbol{s}}{\partial X}+
+\frac{\partial \bm{s}}{\partial X}+
 \frac{\partial Y}{\partial y}
-\frac{\partial \boldsymbol{s}}{\partial Y}=
+\frac{\partial \bm{s}}{\partial Y}=
 \frac{\partial X}{\partial y}
-\boldsymbol{u}_X+
+\bm{u}_X+
 \frac{\partial Y}{\partial y}
-\boldsymbol{u}_Y
+\bm{u}_Y
 $$</p>
 <p>これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると</p>
 <p>$$
@@ -5918,40 +5918,40 @@ y = \sqrt{2}Y
 $$</p>
 <p>となることから、以下のような式が得られる。</p>
 <p>$$
-\boldsymbol{u}_X=\boldsymbol{u}_x、
-\boldsymbol{u}_Y=
--\boldsymbol{u}_x+\sqrt{2}\boldsymbol{u}_y、
-\boldsymbol{u}_x=\boldsymbol{u}_X、
-\boldsymbol{u}_y=
-\frac{1}{\sqrt{2}}\boldsymbol{u}_X+
-\frac{1}{\sqrt{2}}\boldsymbol{u}_Y
+\bm{u}_X=\bm{u}_x、
+\bm{u}_Y=
+-\bm{u}_x+\sqrt{2}\bm{u}_y、
+\bm{u}_x=\bm{u}_X、
+\bm{u}_y=
+\frac{1}{\sqrt{2}}\bm{u}_X+
+\frac{1}{\sqrt{2}}\bm{u}_Y
 $$</p>
-<p>また、このときのベクトル $\boldsymbol{s}$ は基本ベクトルを用いて</p>
+<p>また、このときのベクトル $\bm{s}$ は基本ベクトルを用いて</p>
 <p>$$
-\boldsymbol{s}=
-X\boldsymbol{e}_X+Y\boldsymbol{e}_Y=
-x\boldsymbol{e}_x+y\boldsymbol{e}_y
+\bm{s}=
+X\bm{e}_X+Y\bm{e}_Y=
+x\bm{e}_x+y\bm{e}_y
 $$</p>
 <p>と書ける（<strong>基本ベクトルが位置によって変わらない</strong>）ことから、この偏微分をとることで</p>
 <p>$$
-\boldsymbol{u}_X=
-\frac{\partial \boldsymbol{s}}{\partial X}=
-\boldsymbol{e}_X、
-\boldsymbol{u}_Y=
-\frac{\partial \boldsymbol{s}}{\partial Y}=
-\boldsymbol{e}_Y、
-\boldsymbol{u}_x=
-\frac{\partial \boldsymbol{s}}{\partial x}=
-\boldsymbol{e}_x、
-\boldsymbol{u}_y=
-\frac{\partial \boldsymbol{s}}{\partial y}=
-\boldsymbol{e}_y
+\bm{u}_X=
+\frac{\partial \bm{s}}{\partial X}=
+\bm{e}_X、
+\bm{u}_Y=
+\frac{\partial \bm{s}}{\partial Y}=
+\bm{e}_Y、
+\bm{u}_x=
+\frac{\partial \bm{s}}{\partial x}=
+\bm{e}_x、
+\bm{u}_y=
+\frac{\partial \bm{s}}{\partial y}=
+\bm{e}_y
 $$</p>
 <p>といように基底ベクトルと基本ベクトルが同じものとなる。一方で、定加速度系については、変換後については基本ベクトルが各地点で同じにならないことから、以下の変換前の式しか成り立たないことになる。</p>
 <p>$$
-\boldsymbol{s}=x\boldsymbol{e}_x+y\boldsymbol{e}_y、
-\boldsymbol{u}_x=\boldsymbol{e}_x、
-\boldsymbol{u}_y=\boldsymbol{e}_y
+\bm{s}=x\bm{e}_x+y\bm{e}_y、
+\bm{u}_x=\bm{e}_x、
+\bm{u}_y=\bm{e}_y
 $$</p>
 <p>そのため、まず基底ベクトルを</p>
 <p>$$
@@ -5974,59 +5974,59 @@ w’=w
 $$</p>
 <p>を利用して求めてみると、以下のような関係式が得られる。</p>
 <p>$$
-\boldsymbol{u}<em>x=\boldsymbol{u}</em>{x’}、
-\boldsymbol{u}<em>w=
+\bm{u}<em>x=\bm{u}</em>{x’}、
+\bm{u}<em>w=
 -\frac{a}{c^2}w’
-\boldsymbol{u}</em>{x’}+
-\boldsymbol{u}<em>{w’}、
-\boldsymbol{u}</em>{x’}=\boldsymbol{u}<em>x、
-\boldsymbol{u}</em>{w’}=
+\bm{u}</em>{x’}+
+\bm{u}<em>{w’}、
+\bm{u}</em>{x’}=\bm{u}<em>x、
+\bm{u}</em>{w’}=
 \frac{a}{c^2}w
-\boldsymbol{u}_x+\boldsymbol{u}_w
+\bm{u}_x+\bm{u}_w
 $$</p>
 <p>そして、これから変換後の内積を求めると</p>
 <p>$$
-\boldsymbol{u}<em>{x’}\cdot\boldsymbol{u}</em>{x’}=1、
-\boldsymbol{u}<em>{w’}\cdot\boldsymbol{u}</em>{w’}=
+\bm{u}<em>{x’}\cdot\bm{u}</em>{x’}=1、
+\bm{u}<em>{w’}\cdot\bm{u}</em>{w’}=
 1+\frac{a^2}{c^4}w’^2、
-\boldsymbol{u}<em>{x’}\cdot\boldsymbol{u}</em>{w’}=
+\bm{u}<em>{x’}\cdot\bm{u}</em>{w’}=
 \frac{a}{c^2}w’
 $$</p>
 <p>というように、 $w’$ については $w’=0$ では基底ベクトルは基本ベクトルとなっているが、それ以外では別の値になることが分かる。あるいは、微小変位ベクトルを</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\mathrm{d}x\boldsymbol{u}<em>x+
-\mathrm{d}w\boldsymbol{u}<em>w=
-\mathrm{d}{x’}\boldsymbol{u}</em>{x’}+
-\mathrm{d}{w’}\boldsymbol{u}</em>{w’}
+\mathrm{d}\bm{s}=
+\mathrm{d}x\bm{u}<em>x+
+\mathrm{d}w\bm{u}<em>w=
+\mathrm{d}{x’}\bm{u}</em>{x’}+
+\mathrm{d}{w’}\bm{u}</em>{w’}
 $$</p>
 <p>として、この内積を求めると</p>
 <p>$$
 \begin{aligned}
-\mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}
+\mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
 &amp;=
-(\boldsymbol{u}<em>x\cdot\boldsymbol{u}<em>x)
+(\bm{u}<em>x\cdot\bm{u}<em>x)
 \mathrm{d}x\mathrm{d}x+
-(\boldsymbol{u}<em>x\cdot\boldsymbol{u}<em>w)
+(\bm{u}<em>x\cdot\bm{u}<em>w)
 \mathrm{d}x\mathrm{d}w+
-(\boldsymbol{u}<em>w\cdot\boldsymbol{u}<em>x)
+(\bm{u}<em>w\cdot\bm{u}<em>x)
 \mathrm{d}w\mathrm{d}x+
-(\boldsymbol{u}<em>w\cdot\boldsymbol{u}<em>w)
+(\bm{u}<em>w\cdot\bm{u}<em>w)
 \mathrm{d}w\mathrm{d}w\
 &amp;=
-(\boldsymbol{u}</em>{x’}\cdot\boldsymbol{u}</em>{x’})
+(\bm{u}</em>{x’}\cdot\bm{u}</em>{x’})
 \mathrm{d}{x’}\mathrm{d}{x’}+
-(\boldsymbol{u}</em>{x’}\cdot\boldsymbol{u}</em>{w’})
+(\bm{u}</em>{x’}\cdot\bm{u}</em>{w’})
 \mathrm{d}{x’}\mathrm{d}{w’}+
-(\boldsymbol{u}</em>{w’}\cdot\boldsymbol{u}</em>{x’})
+(\bm{u}</em>{w’}\cdot\bm{u}</em>{x’})
 \mathrm{d}{w’}\mathrm{d}{x’}+
-(\boldsymbol{u}</em>{w’}\cdot\boldsymbol{u}</em>{w’})
+(\bm{u}</em>{w’}\cdot\bm{u}</em>{w’})
 \mathrm{d}{w’}\mathrm{d}{w’}
 \end{aligned}
 $$</p>
 <p>であるから、これに変換前の内積の関係と変換式を代入すると</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}=
+\mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
 \mathrm{d}x\mathrm{d}x+
 \mathrm{d}w\mathrm{d}w=
 \mathrm{d}{x’}\mathrm{d}{x’}+
@@ -6038,34 +6038,34 @@ $$</p>
 \mathrm{d}{w’}\mathrm{d}{w’}
 $$</p>
 <p>であるから比較することで、先ほどの内積の関係が得られる。</p>
-<p>以上のことから、直交座標系 $(x,w)$ から加速度系 $(x’,w’)$ へ座標変換した場合ベクトル $\boldsymbol{s}$ に対して</p>
+<p>以上のことから、直交座標系 $(x,w)$ から加速度系 $(x’,w’)$ へ座標変換した場合ベクトル $\bm{s}$ に対して</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\mathrm{d}x\boldsymbol{u}<em>x+
-\mathrm{d}w\boldsymbol{u}<em>w=
-\mathrm{d}{x’}\boldsymbol{u}</em>{x’}+
-\mathrm{d}{w’}\boldsymbol{u}</em>{w’}
+\mathrm{d}\bm{s}=
+\mathrm{d}x\bm{u}<em>x+
+\mathrm{d}w\bm{u}<em>w=
+\mathrm{d}{x’}\bm{u}</em>{x’}+
+\mathrm{d}{w’}\bm{u}</em>{w’}
 $$
 $$
 \begin{aligned}
-\mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}
+\mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
 &amp;=
-(\boldsymbol{u}<em>x\cdot\boldsymbol{u}<em>x)
+(\bm{u}<em>x\cdot\bm{u}<em>x)
 \mathrm{d}x\mathrm{d}x+
-(\boldsymbol{u}<em>x\cdot\boldsymbol{u}<em>w)
+(\bm{u}<em>x\cdot\bm{u}<em>w)
 \mathrm{d}x\mathrm{d}w+
-(\boldsymbol{u}<em>w\cdot\boldsymbol{u}<em>x)
+(\bm{u}<em>w\cdot\bm{u}<em>x)
 \mathrm{d}w\mathrm{d}x+
-(\boldsymbol{u}<em>w\cdot\boldsymbol{u}<em>w)
+(\bm{u}<em>w\cdot\bm{u}<em>w)
 \mathrm{d}w\mathrm{d}w\
 &amp;=
-(\boldsymbol{u}</em>{x’}\cdot\boldsymbol{u}</em>{x’})
+(\bm{u}</em>{x’}\cdot\bm{u}</em>{x’})
 \mathrm{d}{x’}\mathrm{d}{x’}+
-(\boldsymbol{u}</em>{x’}\cdot\boldsymbol{u}</em>{w’})
+(\bm{u}</em>{x’}\cdot\bm{u}</em>{w’})
 \mathrm{d}{x’}\mathrm{d}{w’}+
-(\boldsymbol{u}</em>{w’}\cdot\boldsymbol{u}</em>{x’})
+(\bm{u}</em>{w’}\cdot\bm{u}</em>{x’})
 \mathrm{d}{w’}\mathrm{d}{x’}+
-(\boldsymbol{u}</em>{w’}\cdot\boldsymbol{u}</em>{w’})
+(\bm{u}</em>{w’}\cdot\bm{u}</em>{w’})
 \mathrm{d}{w’}\mathrm{d}{w’}
 \end{aligned}
 $$</p>
@@ -6092,16 +6092,16 @@ $$</p>
 $$</p>
 <p>と変換され、片方で基底ベクトルに対しては</p>
 <p>$$
-\boldsymbol{u}_x’=
+\bm{u}_x’=
 \frac{\partial x}{\partial x’}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial w}{\partial x’}
-\boldsymbol{u}_w、
-\boldsymbol{u}_w’=
+\bm{u}_w、
+\bm{u}_w’=
 \frac{\partial x}{\partial w’}
-\boldsymbol{u}_x+
+\bm{u}_x+
 \frac{\partial w}{\partial w’}
-\boldsymbol{u}_w
+\bm{u}_w
 $$</p>
 <p>となるが、互いによく見ると同じ変換ではなく係数が逆になっていることが分かる。このように、座標変換をすると少なくとも二通りの変換が行われており、一般的に一つ目の式の形で変換されるベクトルを<strong>反変ベクトル</strong>と、二つ目の式で変換されるベクトルを<strong>共変ベクトル</strong>というように呼ぶ。このことについて、次回で述べていくことにする。</p>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -6163,17 +6163,17 @@ $$</p>
 -\sin\alpha\ \mathrm{d}x+\cos\alpha\ \mathrm{d}y
 $$
 $$
-\boldsymbol{u}_x’=
-\cos\alpha\ \boldsymbol{u}_x+\sin\alpha\ \boldsymbol{u}_y、
-\boldsymbol{u}_y’=
--\sin\alpha\ \boldsymbol{u}_x+\cos\alpha\ \boldsymbol{u}_y
+\bm{u}_x’=
+\cos\alpha\ \bm{u}_x+\sin\alpha\ \bm{u}_y、
+\bm{u}_y’=
+-\sin\alpha\ \bm{u}_x+\cos\alpha\ \bm{u}_y
 $$</p>
 <p>ここで、座標変換（座標軸の変更）に対して基底ベクトルは共に同じ方向に変換されているため<strong>共変ベクトル</strong>、ベクトル成分は逆方向に変換されているため<strong>反変ベクトル</strong>となる。より一般的には、これらは添え字を用いて区別されることが多く、</p>
 <p>$$
 \begin{cases}
-・\boldsymbol{u}_x、\boldsymbol{u}_y
+・\bm{u}_x、\bm{u}_y
 \rightarrow
-\boldsymbol{u}_1、\boldsymbol{u}_2
+\bm{u}_1、\bm{u}_2
 &amp;：共変ベクトル（下付き添え字で区別）\
 ・\mathrm{d}x、\mathrm{d}y
 \rightarrow
@@ -6189,25 +6189,25 @@ $$</p>
 -\sin\alpha\ \mathrm{d}x^1+\cos\alpha\ \mathrm{d}x^1
 $$
 $$
-\boldsymbol{u}‘_1=
-\cos\alpha\ \boldsymbol{u}_1+\sin\alpha\ \boldsymbol{u}_2、
-\boldsymbol{u}’_2=
--\sin\alpha\ \boldsymbol{u}_1+\cos\alpha\ \boldsymbol{u}_1
+\bm{u}‘_1=
+\cos\alpha\ \bm{u}_1+\sin\alpha\ \bm{u}_2、
+\bm{u}’_2=
+-\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
 $$</p>
-<p>また、この表記を用いることでベクトル $\boldsymbol{s}$ に関する式も</p>
+<p>また、この表記を用いることでベクトル $\bm{s}$ に関する式も</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\sum_{\mu=1}^2\mathrm{d}x^\mu\boldsymbol{u}<em>\mu=
-\sum</em>{\mu=1}^2\mathrm{d}x’^\mu\boldsymbol{u}‘<em>\mu
+\mathrm{d}\bm{s}=
+\sum_{\mu=1}^2\mathrm{d}x^\mu\bm{u}<em>\mu=
+\sum</em>{\mu=1}^2\mathrm{d}x’^\mu\bm{u}‘<em>\mu
 $$
 $$
-\mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}=
-(\mathrm{d}\boldsymbol{s})^2=
+\mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}=
+(\mathrm{d}\bm{s})^2=
 \sum</em>{\mu,\nu=1}^2
-(\boldsymbol{u}<em>\mu\cdot\boldsymbol{u}</em>\nu)
+(\bm{u}<em>\mu\cdot\bm{u}</em>\nu)
 \mathrm{d}x^\mu\mathrm{d}x^\nu=
 \sum_{\mu,\nu=1}^2
-(\boldsymbol{u}’<em>\mu\cdot\boldsymbol{u}‘</em>\nu)
+(\bm{u}’<em>\mu\cdot\bm{u}‘</em>\nu)
 \mathrm{d}x’^\mu\mathrm{d}x’^\nu
 $$
 $$
@@ -6225,28 +6225,28 @@ $$
 \mathrm{d}x’^\mu
 $$
 $$
-\boldsymbol{u}‘<em>\mu=
+\bm{u}‘<em>\mu=
 \sum</em>{\nu=1}^2
 \left(
 \frac{\partial x^\nu}{\partial x’^\mu}
 \right)
-\boldsymbol{u}<em>\nu、
-\boldsymbol{u}</em>\nu=
+\bm{u}<em>\nu、
+\bm{u}</em>\nu=
 \sum_{\mu=1}^2
 \left(
 \frac{\partial x’^\nu}{\partial x^\mu}
 \right)
-\boldsymbol{u}’_\mu
+\bm{u}’_\mu
 $$</p>
 <p>というように総和を用いた形で表記されるが、上付き文字と下付き文字が同じ添え字がついているものというのは決まって総和になっていることを踏まえて、よく総和の記号を省略した記法（<strong>Einsteinの縮約記法</strong>）が用いられる。</p>
 <p>$$
-\mathrm{d}\boldsymbol{s}=
-\mathrm{d}x^{\mu}\boldsymbol{u}<em>\mu=
-\mathrm{d}x’^{\mu}\boldsymbol{u}‘</em>\mu、
-(\mathrm{d}\boldsymbol{s})^2=
-(\boldsymbol{u}<em>\mu\cdot\boldsymbol{u}</em>\nu)
+\mathrm{d}\bm{s}=
+\mathrm{d}x^{\mu}\bm{u}<em>\mu=
+\mathrm{d}x’^{\mu}\bm{u}‘</em>\mu、
+(\mathrm{d}\bm{s})^2=
+(\bm{u}<em>\mu\cdot\bm{u}</em>\nu)
 \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-(\boldsymbol{u}’<em>\mu\cdot\boldsymbol{u}‘</em>\nu)
+(\bm{u}’<em>\mu\cdot\bm{u}‘</em>\nu)
 \mathrm{d}x’^{\mu}\mathrm{d}x’^{\nu}
 $$
 $$
@@ -6260,25 +6260,25 @@ $$
 \frac{\partial x^\nu}{\partial x’^\mu}
 \right)
 \mathrm{d}x’^\mu、
-\boldsymbol{u}‘<em>\mu=
+\bm{u}‘<em>\mu=
 \left(
 \frac{\partial x^\nu}{\partial x’^\mu}
 \right)
-\boldsymbol{u}</em>\nu、
-\boldsymbol{u}<em>\nu=
+\bm{u}</em>\nu、
+\bm{u}<em>\nu=
 \left(
 \frac{\partial x’^\nu}{\partial x^\mu}
 \right)
-\boldsymbol{u}’</em>\mu
+\bm{u}’</em>\mu
 $$</p>
 <p>また、基底ベクトル同士の内積は座標系の各地点の形状を示す重要な量（<strong>Riemann計量</strong>）であるため、</p>
 <p>$$
-g_{\mu\nu}=\boldsymbol{u}<em>\mu\cdot\boldsymbol{u}</em>\nu、
-g’<em>{\mu\nu}=\boldsymbol{u}‘</em>\mu\cdot\boldsymbol{u}’_\nu
+g_{\mu\nu}=\bm{u}<em>\mu\cdot\bm{u}</em>\nu、
+g’<em>{\mu\nu}=\bm{u}‘</em>\mu\cdot\bm{u}’_\nu
 $$</p>
 <p>と表記して、内積のほうも以下のように表記されることが多い。</p>
 <p>$$
-(\mathrm{d}\boldsymbol{s})^2=
+(\mathrm{d}\bm{s})^2=
 g_{\mu\nu}
 \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
 g’_{\mu\nu}
@@ -6347,23 +6347,23 @@ $$</p>
 
 <p>ここで、共変ベクトルについては各座標系に垂線を引いて読み取った値であることから、以下のような式が成り立つことが予想される。</p>
 <p>$$
-x_1=\boldsymbol{s}\cdot\boldsymbol{e}_x、
-x_2=\boldsymbol{s}\cdot\boldsymbol{e}_y、
-x’_1=\boldsymbol{s}\cdot\boldsymbol{e}‘_x、
-x’_2=\boldsymbol{s}\cdot\boldsymbol{e}’_y
+x_1=\bm{s}\cdot\bm{e}_x、
+x_2=\bm{s}\cdot\bm{e}_y、
+x’_1=\bm{s}\cdot\bm{e}‘_x、
+x’_2=\bm{s}\cdot\bm{e}’_y
 $$</p>
 <p>この関係は曲がっている座標系でも微小な範囲では斜交座標系であることから、以下の式が成り立つ。
 $$
-\mathrm{d}x_1=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}_1、
-\mathrm{d}x_2=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}_2、
-\mathrm{d}x’_1=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}‘_1、
-\mathrm{d}x’_2=\mathrm{d}\boldsymbol{s}\cdot\boldsymbol{u}’_2
+\mathrm{d}x_1=\mathrm{d}\bm{s}\cdot\bm{u}_1、
+\mathrm{d}x_2=\mathrm{d}\bm{s}\cdot\bm{u}_2、
+\mathrm{d}x’_1=\mathrm{d}\bm{s}\cdot\bm{u}‘_1、
+\mathrm{d}x’_2=\mathrm{d}\bm{s}\cdot\bm{u}’_2
 $$</p>
 <p>例えば一つ目の成分については</p>
 <p>$$
 \mathrm{d}x_1=
-(\mathrm{d}x^\mu\boldsymbol{u}_\mu)\cdot\boldsymbol{u}<em>1=
-(\boldsymbol{u}</em>\mu\cdot\boldsymbol{u}<em>1)\mathrm{d}x^\mu=
+(\mathrm{d}x^\mu\bm{u}_\mu)\cdot\bm{u}<em>1=
+(\bm{u}</em>\mu\cdot\bm{u}<em>1)\mathrm{d}x^\mu=
 g</em>{\mu 1}\mathrm{d}x^\mu
 $$</p>
 <p>というように共変ベクトルにRiemann計量を適用した形になっていることになる。このことから、</p>
@@ -6371,7 +6371,7 @@ $$</p>
 \mathrm{d}x_\nu=
 g_{\mu\nu}\mathrm{d}x^\mu
 \rightarrow
-(\mathrm{d}\boldsymbol{s})^2=
+(\mathrm{d}\bm{s})^2=
 \mathrm{d}x_\nu\mathrm{d}x^\nu
 $$</p>
 <p>というように内積の関係は共変ベクトルと反変ベクトルの積で書けることになる。実際に、</p>
@@ -6449,24 +6449,24 @@ x^0=\gamma(x’^0+\beta x’^1)
 $$</p>
 <p>一方で、運動方程式についても</p>
 <p>$$
-\frac{\mathrm{d}\boldsymbol{p}}{\mathrm{d}\tau}=
-\boldsymbol{f}、</p>
-<pre><code>\boldsymbol{p}=
-\frac{m_0\boldsymbol{v}}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
-\boldsymbol{f}=
-\frac{\boldsymbol{F}}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+\frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
+\bm{f}、</p>
+<pre><code>\bm{p}=
+\frac{m_0\bm{v}}
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+\bm{f}=
+\frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
 \mathrm{d}\tau=
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 \mathrm{d}t
 </code></pre>
 <p>$$
 $$
 \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
-(\boldsymbol{f}\cdot\boldsymbol{v})、
+(\bm{f}\cdot\bm{v})、
 E_K=
 \frac{m_0c^2}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$</p>
 <p>と書けたわけだが、ここで速度ベクトルと力は反変ベクトルの形で</p>
 <p>$$
@@ -6476,7 +6476,7 @@ u^2=v_y、
 u^3=v_z
 $$
 $$
-F^0=\frac{1}{c}(\boldsymbol{F}\cdot\boldsymbol{v})、
+F^0=\frac{1}{c}(\bm{F}\cdot\bm{v})、
 F^1=F_x、
 F^2=F_y、
 F^3=F_z
@@ -6485,9 +6485,9 @@ $$</p>
 <p>$$
 p^\mu=
 \frac{m_0u^\mu}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
 f^\mu=
-\frac{F^\mu}{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+\frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
 (\mu=0,1,2,3)
 $$</p>
 <p>書くと以下の通りになる。</p>
@@ -6496,15 +6496,15 @@ $$</p>
 f^\mu、
 p^\mu=
 \frac{m_0v^\mu}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$</p>
 <p>ここで、固有時に関して</p>
 <p>$$
 \mathrm{d}\tau=
 \mathrm{d}t’
-\sqrt{1-\frac{\boldsymbol{v’}^2}{c^2}}=
+\sqrt{1-\frac{\bm{v’}^2}{c^2}}=
 \mathrm{d}t
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$</p>
 <p>となっていたわけだが、これを少し整理してみると反変ベクトルにより</p>
 <p>$$
@@ -6520,7 +6520,7 @@ $$</p>
 $$</p>
 <p>というように書けるため、ちょうど微小ベクトルの内積の形で不変な形をしていることから</p>
 <p>$$
-(\mathrm{d}\boldsymbol{s})^2=(c\mathrm{d}\tau)^2=
+(\mathrm{d}\bm{s})^2=(c\mathrm{d}\tau)^2=
 \eta_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
 \eta_{\mu\nu}\mathrm{d}x’^{\mu}\mathrm{d}x’^{\nu}
 $$</p>
@@ -6556,13 +6556,13 @@ $$
 $$
 \frac{\partial\mathcal{L}}{\partial v_x}=
 \frac{m_0v_x}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
 \frac{\partial\mathcal{L}}{\partial v_y}=
 \frac{m_0v_y}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}、
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
 \frac{\partial\mathcal{L}}{\partial v_z}=
 \frac{m_0v_z}
-{\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}}
+{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 $$
 \frac{\partial\mathcal{L}}{\partial x}=
@@ -6581,13 +6581,13 @@ $$
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 $$
 \mathcal{L}=
--m_0c^2\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}-U
+-m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
 \simeq
-\frac{1}{2}m\boldsymbol{v}^2-(m_0c^2+U)
+\frac{1}{2}m\bm{v}^2-(m_0c^2+U)
 $$
 次に、前回でも登場した計量 $g_{\mu\nu}$ により
 $$
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}=
+\sqrt{1-\frac{\bm{v}^2}{c^2}}=
 \frac{1}{c}
 \left(
 \frac{\mathrm{d}s}{\mathrm{d}t}
@@ -6733,20 +6733,20 @@ $$
 \frac{\partial g_{\lambda\mu}}
 {\partial x^\nu}=
 \frac{\partial}{\partial x^\nu}
-(\boldsymbol{e}<em>\lambda\cdot\boldsymbol{e}</em>\mu)=
-\frac{\partial\boldsymbol{e}<em>\lambda}
-{\partial x^\nu}\cdot\boldsymbol{e}</em>\mu+
-\boldsymbol{e}<em>\lambda\cdot
-\frac{\partial\boldsymbol{e}</em>\mu}
+(\bm{e}<em>\lambda\cdot\bm{e}</em>\mu)=
+\frac{\partial\bm{e}<em>\lambda}
+{\partial x^\nu}\cdot\bm{e}</em>\mu+
+\bm{e}<em>\lambda\cdot
+\frac{\partial\bm{e}</em>\mu}
 {\partial x^\nu}
 $$
 であり、ここで<strong>第１種クリストフェル記号</strong>を
 $$
 \Gamma_{\nu\lambda,\mu}=
-\frac{\partial\boldsymbol{e}<em>\lambda}
-{\partial x^\nu}\cdot\boldsymbol{e}</em>\mu=
-\boldsymbol{e}<em>\mu\cdot
-\frac{\partial\boldsymbol{e}</em>\lambda}
+\frac{\partial\bm{e}<em>\lambda}
+{\partial x^\nu}\cdot\bm{e}</em>\mu=
+\bm{e}<em>\mu\cdot
+\frac{\partial\bm{e}</em>\lambda}
 {\partial x^\nu}
 $$
 というように定義することで、
@@ -6831,14 +6831,14 @@ $$
 \eta_{\mu\nu}
 \dot{x}^{\mu} \dot{x}^{\nu}
 }=
-\sqrt{c^2-\boldsymbol{v}^2}
+\sqrt{c^2-\bm{v}^2}
 $$
 となるが、ここで $s$ の時間微分に関して<strong>固有時</strong> $\tau$ を
 $$
 \mathrm{d}\tau=
 \frac{\dot{s}}{c}\mathrm{d}t=
 \frac{\mathrm{d}s}{c}=
-\sqrt{1-\frac{\boldsymbol{v}^2}{c^2}}
+\sqrt{1-\frac{\bm{v}^2}{c^2}}
 \mathrm{d}t
 $$
 とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
