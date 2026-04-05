@@ -31,31 +31,17 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../option.css">
 
-        <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
     </head>
     <body>
-    <div id="mdbook-help-container">
-        <div id="mdbook-help-popup">
-            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
-            <div>
-                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
-                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
-                <p>Press <kbd>?</kbd> to show this help</p>
-                <p>Press <kbd>Esc</kbd> to hide this help</p>
-            </div>
-        </div>
-    </div>
     <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
@@ -96,13 +82,10 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
-                sidebar_toggle.checked = false;
             }
-            if (sidebar === 'visible') {
-                sidebar_toggle.checked = true;
-            } else {
-                html.classList.remove('sidebar-visible');
-            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -136,7 +119,7 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -153,12 +136,7 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <div class="search-wrapper">
-                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                            <div class="spinner-wrapper">
-                                <i class="fa fa-spinner fa-spin"></i>
-                            </div>
-                        </div>
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -178,7 +156,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="相対性理論"><a class="header" href="#相対性理論">相対性理論</a></h1>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="相対性理論"><a class="header" href="#相対性理論">相対性理論</a></h1>
 <p>　晴れた日に空を見上げると、朝から夕方にかけて太陽が東側から西側へと移動し、夜になると幾つもの星が流れていく様子を見ることができます。一見すると、全てのものが自分（地球）を中心に回っているように思われます。実際、2世紀ごろアレクサンドリアにいたプトレマイオスが\tb{天動説}を唱え、15世紀になるまで信じられてきました。ところが、それ以降に Nicolaus Copernicusや Galileo Galilei などが独自の考察や天体の観測をもとに<strong>地動説</strong>（地球の方が太陽を中心として周囲を回っているという説）を提唱したことで、その状況が変わり始めます。当時としては、宗教的にも天動説が信じられていたので、宗教裁判なるものまでかけられるまでの大事になりました。しかし、ここで互いに見たときの運動の様子は違うけれども、運動の法則自体は同じものであるということにもなります。</p>
 <p>　しかし、慣性の法則は”絶対空間”に対して一様な速度で運動しているすべてのゆがむことのない準拠系に対しても成り立つ。それは自由な粒子は、このような座標系に対しても一様な並進運動をするからである。慣性の法則が成り立つような準拠系が全て慣性系という。慣性系全体は互いに他に対して等速直線運動をする歪まない準拠系の三重に無限の集合である。これらのうちの１つが恒星全体に対して静止している絶対系であるけれども、慣性の法則が成り立つという点では、どの慣性系も完全に同等である。</p>
 <p>　さて、力学における相対性原理というのは、すべての慣性系は、慣性の法則に対してのみならず他のあらゆる力学法則に対しても完全に同等であることを述べたものである。もしこれが正しいならば、力学現象はどの観測系においても同じ推移の経過をたどることになるから、このような現象を観察することによって、この系全体が”絶対空間”に対して行っている一様な運動を検知することは不可能である。したがって力学現象を調べるだけで”絶対”系を決定することはできない。</p>
@@ -246,7 +225,6 @@
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
-
 
 
     </div>
