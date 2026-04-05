@@ -6,7 +6,9 @@ src = "src"
 
 [output.html]
 additional-css = ["option.css"]
-mathjax-support = true
+
+[preprocessor.katex]
+after = ["links"]
 
 # cargo install mdbook 
 # github pagesのため、docs にビルド結果を出力
