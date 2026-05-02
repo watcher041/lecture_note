@@ -4,18 +4,24 @@
 　ここからは、どのように回転運動を扱うかを述べていくことにする。そもそも回転というのは、ある一点を軸にその周囲を運動することを言う。その様子を記述するとき、ちょうど二体問題で扱った極座標が便利であるため、通常の運動方程式
 
 $$
+    m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=\bm{F}
+$$
+
+において、まず直交座標系 $(x,y)$ を用いて
+
+$$
     m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}=F_x、
     m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=F_y
 $$
 
-を以下のように置き換えてみることにする。
+となるが、ここで以下のように極座標 $(r,\theta)$ で置き換えてみることにする。
 
 $$
     x=r\cos\theta、
     y=r\sin\theta
 $$
 
-まず、各方向の速度を置き換えると
+すると、各方向の速度を求めたときに
 
 $$
     v_x=
@@ -30,7 +36,17 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、ここで極座標での速度 $v_r,v_\theta$ は以下の図のように $r,\theta$ が増加する方向を正とした成分で表されることから
+となるが、$r$ の方向（動径方向）にだけ移動する場合
+
+$$
+    v_x=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\cos\theta、
+    v_y=
+    \frac{\mathrm{d}r}{\mathrm{d}t}\sin\theta
+$$
+
+
+ここで極座標での速度 $v_r,v_\theta$ は以下の図のように $r,\theta$ が増加する方向を正とした成分で表されることから
 
 $$
     v_r=v_x\cos\theta+v_y\sin\theta、
