@@ -25,7 +25,7 @@ $$
 とおき、試しに $x$ と $w$ との関係を座標で描いてみると以下の図の通りになる。
 
 <p align="center">
-    <img width="60%" src="images/minkofsky.png">
+    <img width="40%" src="images/minkofsky.png">
 </p>
 
 この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w'$ 軸とのなす角をそれぞれ$\theta$、$\phi$とすると
