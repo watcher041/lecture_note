@@ -22,7 +22,40 @@ $$
     y=r\sin\theta
 $$
 
-そのため、各方向の速度を極座標の形であらわすと
+この関係式というのは、座標を回転させたときに得られる変換式の一つの利用例となっている。実際、座標系 $(x,y)$ を原点Oを軸に角度 $\theta$ だけ回転させて座標系 $(X,Y)$ に変換したものとすると、
+
+<p align="center">
+    <img width="50%" src="images/rotate_coordinate.png">
+</p>
+
+$$
+    X=x\cos\theta+y\sin\theta、
+    Y=-x\sin\theta+y\cos\theta
+$$
+
+となるが、この逆変換を求めると
+
+$$
+    x=X\cos\theta-Y\sin\theta、
+    y=X\sin\theta+Y\cos\theta
+$$
+
+であり、$X=r,Y=r_\theta=0$ とすると、極座標の形になること分かる。同様に、力や速度、加速度も同じ変換が適用されるため、
+
+$$
+    F_x=F_r\cos\theta-F_\theta\sin\theta、
+    F_y=F_r\sin\theta+F_\theta\cos\theta
+$$
+$$
+    v_x=v_r\cos\theta-v_\theta\sin\theta、
+    v_y=v_r\sin\theta+v_\theta\cos\theta
+$$
+$$
+    a_x=a_r\cos\theta-a_\theta\sin\theta、
+    a_y=a_r\sin\theta+a_\theta\cos\theta
+$$
+
+も成り立つ。このことを踏まえたうえで、まず各方向の速度を極座標の形であらわすと
 
 $$
     v_x=
@@ -37,33 +70,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、$r$ の方向（動径方向）にだけ移動する場合
-
-$$
-    v_x=
-    \frac{\mathrm{d}r}{\mathrm{d}t}\cos\theta、
-    v_y=
-    \frac{\mathrm{d}r}{\mathrm{d}t}\sin\theta
-$$
-
-
-ここで極座標での速度 $v_r,v_\theta$ は以下の図のように $r,\theta$ が増加する方向を正とした成分で表されることから
-
-$$
-    v_r=v_x\cos\theta+v_y\sin\theta、
-    v_\theta=v_y\cos\theta-v_x\sin\theta
-$$
-
-<p align="center">
-    <img height="150px"  
-        style="background-color:white;"
-        src="images/2d_velocity.png">
-    <img height="150px" 
-        style="background-color:white;"
-        src="images/2d_velocity_change.png">
-</p>
-
-である（$v_r$ に関しては赤線と青線の長さを足したもの、$v_\theta$ については 青線から赤線を引いた長さになっている）ことを踏まえ、この左辺に先ほど求めた速度を代入すると以下の式が求められる。
+となるが、これを先ほどの速度の極座標への変換式に代入して $v_r,v_\theta$ を求めると以下の式が得られる。
 
 $$
     v_r=
@@ -128,14 +135,7 @@ $$
     \sin\theta
 $$
 
-と置き換えたうえで、極座標での加速度 $a_r,a_\theta$ との関係が
-
-$$
-    a_r=a_x\cos\theta+a_y\sin\theta、
-    a_\theta=a_y\cos\theta-a_x\sin\theta
-$$
-
-であることから、求めた加速度を代入してみると
+となるため、こちらも先ほどの変換式に代入して $a_r,a_\theta$ を求めると
 
 $$
     a_r=
@@ -155,16 +155,7 @@ $$
     {\mathrm{d}t^2}
 $$
 
-となるが、一方で力についても加速度と同様に
-
-$$
-    F_r=
-    F_x\cos\theta+F_y\sin\theta、
-    F_\theta=
-    F_y\cos\theta-F_x\sin\theta
-$$
-
-が成り立つことから、極座標での運動方程式は以下の通りになっていることが分かる。
+となるため、力の変換式も踏まえて極座標での運動方程式は以下の通りになっていることが分かる。
 
 $$
     m\left[
