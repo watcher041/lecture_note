@@ -340,7 +340,49 @@ $$
     z=r\cos\theta
 $$
 
-であるため、まず各成分の速度を求めると
+であるが、これも3次元回転座標系の一例となっている。実際、まず以下の図のようにz軸を中心に角度 $\phi$ だけ回転させると
+
+<p align="center">
+    <img width="40%" src="images/3d_xy_convertion.png">
+</p>
+
+$$
+    x'=x\cos\phi+y\sin\phi、
+    y'=-x\sin\phi+y\cos\phi、
+    z'=z
+$$
+
+というような変換になる。そして、$y'$ 軸を中心に角度 $\theta$ だけ回転させると以下のような変換になる。
+
+$$
+    z''=z'\cos\theta+x'\sin\theta=
+    x\sin\theta\cos\phi+y\sin\theta\sin\phi+z\cos\theta
+
+$$
+$$
+    x''=-z'\sin\theta+x'\cos\theta=
+    x\cos\theta\cos\phi+y\cos\theta\sin\phi-z\sin\theta
+$$
+$$
+    y''=y'=
+    -x\sin\phi+y\cos\phi
+$$
+
+そのため、この逆変換を求めると
+
+$$
+    x=x''\cos\theta\cos\phi
+    -y''\sin\phi+z''\sin\theta\cos\phi
+$$
+$$
+    y=x''\cos\theta\sin\phi
+    +y''\sin\phi+z''\sin\theta\sin\phi
+$$
+$$
+    z=-x''\sin\theta+z''\cos\theta
+$$
+
+となることから、$x''=0,y''=0,z''=r$ とすると極座標の変換になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
 
 $$
     v_x=
@@ -376,35 +418,24 @@ $$
     \sin\theta
 $$
 
-となる。一方で極座標での速度 $v_r,v_\theta,v_\phi$ は二次元のときの関係式を利用すると、まず
+となる。これに速度の変換式
 
 $$
-    v_{x,y}=v_x\cos\phi+v_y\sin\phi、
-    v_\phi=v_y\cos\phi-v_x\sin\phi
+    v_x=v_\theta\cos\theta\cos\phi
+    -v_\phi\sin\phi+v_r\sin\theta\cos\phi
+$$
+$$
+    v_y=v_\theta\cos\theta\sin\phi
+    +v_\phi\sin\phi+v_r\sin\theta\sin\phi
+$$
+$$
+    v_z=-v_\theta\sin\theta+v_r\cos\theta
 $$
 
-というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の速度になり、動径 $r$ 方向と角度 $\phi$ 方向の速度も
+
+を代入すると、以下の関係式が得られる。
 
 $$
-    v_r=v_z\cos\theta+v_{x,y}\sin\theta、
-    v_\theta=v_{x,y}\cos\theta-v_z\sin\theta
-$$
-
-<p align="center">
-    <img height="200px"  
-        style="background-color:white;"
-        src="images/3d_polar_velocity.png">
-</p>
-
-となることから、求めた速度を代入してみると
-
-$$
-    v_{x,y}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \sin\theta+
-    r
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \cos\theta、
     v_\phi=
     r\sin\theta
     \frac{\mathrm{d}\phi}{\mathrm{d}t}、
@@ -414,7 +445,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}
 $$
 
-このうち、速度 $v_r,v_\theta,v_\phi$ については以下のように微小変化を見ることで正しいことが分かる。
+これらの速度は、以下のように微小変化を見ることで正しいことが分かる。
 
 <p align="center">
     <img height="200px"  
