@@ -571,14 +571,16 @@ $$
 となるが、先ほどの速度と同じように極座標において
 
 $$
-    a_{x,y}=a_x\cos\phi+a_y\sin\phi、
-    a_\phi=a_y\cos\phi-a_x\sin\phi
+    a_x=a_\theta\cos\theta\cos\phi
+    -a_\phi\sin\phi+a_r\sin\theta\cos\phi
 $$
 $$
-    a_r=a_z\cos\theta+a_{x,y}\sin\theta、
-    a_\theta=a_{x,y}\cos\theta-a_z\sin\theta
+    a_y=a_\theta\cos\theta\sin\phi
+    +a_\phi\sin\phi+a_r\sin\theta\sin\phi
 $$
-
+$$
+    a_z=-a_\theta\sin\theta+a_r\cos\theta
+$$
 が成り立つものとして代入してみると
 
 $$
@@ -691,24 +693,18 @@ $$
     F_y\cos\phi
 $$
 
-ここで、2次元のときの力の関係式を踏まえると
+ここで、力に関しても速度と同じように
 
 $$
-    F_{x,y}=
-    F_x\cos\phi+F_y\sin\phi、
-    F_\phi=
-    F_y\cos\phi-F_x\sin\phi
+    F_x=F_\theta\cos\theta\cos\phi
+    -F_\phi\sin\phi+F_r\sin\theta\cos\phi
 $$
-
-というように $x,y$ 平面上の動径 $r_{x,y}$ 方向および角度 $\phi$ 方向の力になり、動径 $r$ 方向と角度 $\theta$ 方向の力も
-
 $$
-    F_r=
-    F_z\cos\theta+
-    F_{x,y}\sin\theta、
-    F_\theta=
-    F_{x,y}\cos\theta-
-    F_z\sin\theta
+    F_y=F_\theta\cos\theta\sin\phi
+    +F_\phi\sin\phi+F_r\sin\theta\sin\phi
+$$
+$$
+    F_z=-F_\theta\sin\theta+F_r\cos\theta
 $$
 
 という関係にあることから、最終的に以下の形になる。
