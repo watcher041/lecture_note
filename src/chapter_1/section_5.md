@@ -584,26 +584,6 @@ $$
 が成り立つものとして代入してみると
 
 $$
-    a_{x,y}=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-    \sin\theta+
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \cos\theta+
-    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-    \cos\theta-
-    r
-    \left(
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
-    \sin\theta-
-    r
-    \left(
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)^2
-    \sin\theta
-$$
-$$
     a_\phi=
     2\frac{\mathrm{d}r}{\mathrm{d}t}
     \frac{\mathrm{d}\phi}{\mathrm{d}t}
@@ -897,44 +877,49 @@ $$
     mr^2\omega_\phi\sin^2\theta
 $$
 
-また、$x,y$ 平面上において動径 $r_{x,y}$ 方向および $r_{x,y}$ に垂直な方向（角度 $\theta$ に垂直な方向）の角運動量が
+また、速度と同じように極座標での変換では
 
 $$
-    L_{x,y}=
-    L_x\cos\phi+L_y\sin\phi、
-    L_\theta=
-    L_y\cos\phi-L_x\sin\phi
+    L_x=L_\phi\cos\theta\cos\phi
+    -L_\theta\sin\phi+L_r\sin\theta\cos\phi
+$$
+$$
+    L_y=L_\phi\cos\theta\sin\phi
+    +L_\theta\sin\phi+L_r\sin\theta\sin\phi
+$$
+$$
+    L_z=-L_\phi\sin\theta+L_r\cos\theta
 $$
 
-であり、動径 $r$ 方向と $r$ に垂直な方向についても
 
-$$
-    L_r=
-    L_z\cos\theta+
-    L_{x,y}\sin\theta、
-    L_{r_\perp}=
-    L_{x,y}\cos\theta-
-    L_z\sin\theta
-$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 であることから、これらに代入すると
 
 $$
-    L_{x,y}=
-    -mr^2\omega_\phi
-    \sin\theta\cos\theta、
     L_\theta=
     mr^2\omega_\theta、
     L_r=0、
     L_{r_\perp}=
     -mr^2\omega_\phi\sin\theta
 $$
-
-<p align="center">
-    <img width="44%"  
-        style="background-color:white;"
-        src="images/3d_polar_L.png">
-</p>
 
 となる。このうち、$L_\theta$ は先ほど運動方程式から求めた形と一致していることが分かる。$L_\phi$ については、形を見比べると $L_\phi=L_z$ であるため、確認のため時間微分をとり
 
