@@ -354,6 +354,10 @@ $$
 
 というような変換になる。そして、$y'$ 軸を中心に角度 $\theta$ だけ回転させると以下のような変換になる。
 
+<p align="center">
+    <img width="40%" src="images/3d_xz_convertion.png">
+</p>
+
 $$
     z''=z'\cos\theta+x'\sin\theta=
     x\sin\theta\cos\phi+y\sin\theta\sin\phi+z\cos\theta
@@ -382,7 +386,7 @@ $$
     z=-x''\sin\theta+z''\cos\theta
 $$
 
-となることから、$x''=0,y''=0,z''=r$ とすると極座標の変換になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
+となることから、 $x''=0、y''=0、z''=r$ とすると極座標の変換になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
 
 $$
     v_x=
@@ -880,15 +884,15 @@ $$
 また、速度と同じように極座標での変換では
 
 $$
-    L_x=L_\phi\cos\theta\cos\phi
-    -L_\theta\sin\phi+L_r\sin\theta\cos\phi
+    L_x=L_\theta\cos\theta\cos\phi
+    -L_\phi\sin\phi+L_r\sin\theta\cos\phi
 $$
 $$
-    L_y=L_\phi\cos\theta\sin\phi
-    +L_\theta\sin\phi+L_r\sin\theta\sin\phi
+    L_y=L_\theta\cos\theta\sin\phi
+    +L_\phi\sin\phi+L_r\sin\theta\sin\phi
 $$
 $$
-    L_z=-L_\phi\sin\theta+L_r\cos\theta
+    L_z=-L_\theta\sin\theta+L_r\cos\theta
 $$
 
 
@@ -914,10 +918,10 @@ $$
 であることから、これらに代入すると
 
 $$
-    L_\theta=
-    mr^2\omega_\theta、
     L_r=0、
-    L_{r_\perp}=
+    L_\theta=
+    -mr^2\omega_\theta\sin\theta、
+    L_\phi=
     -mr^2\omega_\phi\sin\theta
 $$
 
