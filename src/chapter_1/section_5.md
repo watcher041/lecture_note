@@ -632,11 +632,11 @@ $$
     \left(
         \frac{\mathrm{d}r}{\mathrm{d}t}
     \right)、
-    \omega_{r_\theta}=
+    \omega_{\theta}=
      \left(
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \right)、
-    \omega_{r_\phi}=
+    \omega_{\phi}=
      \left(
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
     \right)
@@ -646,8 +646,8 @@ $$
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    mr\omega_{r_\theta}^2-
-    mr\omega_{r_\phi}^2\sin^2\theta=
+    mr\omega_{\theta}^2-
+    mr\omega_{\phi}^2\sin^2\theta=
     \left(
         F_x\cos\phi+
         F_y\sin\phi
@@ -657,9 +657,9 @@ $$
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{r_\theta}}{\mathrm{d}t}+
-    2mv_r\omega_{r_\theta}-
-    mr\omega_{r_\phi}^2\sin\theta\cos\theta=
+    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    2mv_r\omega_{\theta}-
+    mr\omega_{\phi}^2\sin\theta\cos\theta=
     \left(
         F_x\cos\phi+
         F_y\sin\phi
@@ -669,10 +669,10 @@ $$
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{r_\phi}}{\mathrm{d}t}
+    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
     \sin\theta+
-    2mr\omega_{r_\theta}\omega_{r_\phi}\cos\theta+
-    2mv_r\omega_{r_\phi}\sin\theta=
+    2mr\omega_{\theta}\omega_{\phi}\cos\theta+
+    2mv_r\omega_{\phi}\sin\theta=
     -F_x\sin\phi+
     F_y\cos\phi
 $$
@@ -695,23 +695,23 @@ $$
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    mr\omega_{r_\theta}^2-
-    mr\omega_{r_\phi}^2\sin^2\theta=
+    mr\omega_{\theta}^2-
+    mr\omega_{\phi}^2\sin^2\theta=
     F_r
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{r_\theta}}{\mathrm{d}t}+
-    2mv_r\omega_{r_\theta}-
-    mr\omega_{r_\phi}^2\sin\theta\cos\theta=
+    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    2mv_r\omega_{\theta}-
+    mr\omega_{\phi}^2\sin\theta\cos\theta=
     F_{r_\theta}
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{r_\phi}}{\mathrm{d}t}
+    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
     \sin\theta+
-    2mr\omega_{r_\theta}\omega_{r_\phi}\cos\theta+
-    2mv_r\omega_{r_\phi}\sin\theta=
+    2mr\omega_{\theta}\omega_{\phi}\cos\theta+
+    2mv_r\omega_{\phi}\sin\theta=
     F_{r_\phi}
 $$
 
@@ -720,8 +720,8 @@ $$
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
     \left(
-        mr\omega_{r_\theta}^2+
-        mr\omega_{r_\phi}^2\sin^2\theta
+        mr\omega_{\theta}^2+
+        mr\omega_{\phi}^2\sin^2\theta
     \right)=
     F_r
 $$
@@ -730,14 +730,14 @@ $$
 
 $$
     f_{r,\theta}=
-    mr\omega_{r_\theta}^2
+    mr\omega_{\theta}^2
 $$
 
 となる。第2項目については、$x,y$ 平面上での遠心力が
 
 $$
     f_{x,y}=
-    m(r\sin\theta)\omega_{r_\phi}^2
+    m(r\sin\theta)\omega_{\phi}^2
 $$
 
 であり、先ほどの動径方向の関係式を利用すると 
@@ -747,7 +747,7 @@ $$
     F_z\cos\theta+
     F_{x,y}\sin\theta=
     0+f_{x,y}\sin\theta=
-    mr\omega_{r_\phi}^2\sin^2\theta
+    mr\omega_{\phi}^2\sin^2\theta
 $$
 
 というように第2項目の力になっていることが分かる。そのため、動径方向については以下のようになると思われる。
@@ -757,9 +757,9 @@ $$
     F_r+
     (f_{r,\theta}+f_{r,\phi})、
     f_{r,\theta}=
-    mr\omega_{r_\theta}^2、
+    mr\omega_{\theta}^2、
     f_{r,\phi}=
-    [m(r\sin\theta)\omega_{r_\phi}^2]\sin\theta
+    [m(r\sin\theta)\omega_{\phi}^2]\sin\theta
 $$
 
 
@@ -767,9 +767,9 @@ $$
 
 $$
     L_\theta=
-    mr^2\omega_{r_\theta}、
+    mr^2\omega_{\theta}、
     L_\phi=
-    m(r\sin\theta)^2\omega_{r_\phi}
+    m(r\sin\theta)^2\omega_{\phi}
 $$
 
 と角運動量をおき、これらを微分してみると $\theta,\phi$ の運動方程式も利用することで
@@ -779,13 +779,13 @@ $$
     =
     r\left(
     mr
-    \frac{\mathrm{d}\omega_{r_\theta}}{\mathrm{d}t}+
-    2mv_r\omega_{r_\theta}
+    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    2mv_r\omega_{\theta}
     \right)=
     r
     \left(
         F_{r_\theta}+
-        mr\omega_{r_\phi}^2\sin\theta\cos\theta
+        mr\omega_{\phi}^2\sin\theta\cos\theta
     \right)
 $$
 $$
@@ -794,10 +794,10 @@ $$
     r\sin\theta
     \left(
     mr
-    \frac{\mathrm{d}\omega_{r_\phi}}{\mathrm{d}t}
+    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
     \sin\theta+
-    2mr\omega_{r_\theta}\omega_{r_\phi}\cos\theta+
-    2mv_r\omega_{r_\phi}\sin\theta
+    2mr\omega_{\theta}\omega_{\phi}\cos\theta+
+    2mv_r\omega_{\phi}\sin\theta
     \right)=
     r\sin\theta F_{r_\phi}
 $$
@@ -808,8 +808,8 @@ $$
     f_{\theta,\phi}=
     F_{x,y}\cos\theta-
     F_z\sin\theta=
-    m(r\sin\theta)\omega_{r_\phi}^2\cos\theta+0=
-    mr\omega_{r_\phi}^2\sin\theta\cos\theta
+    m(r\sin\theta)\omega_{\phi}^2\cos\theta+0=
+    mr\omega_{\phi}^2\sin\theta\cos\theta
 $$
 
 となることからも分かる。以上のことから、以下の形にまとめられることが分かる。
@@ -819,25 +819,25 @@ $$
     F_r+
     (f_{r,\theta}+f_{r,\phi})、
     f_{r,\theta}=
-    mr\omega_{r_\theta}^2、
+    mr\omega_{\theta}^2、
     f_{r,\phi}=
-    [m(r\sin\theta)\omega_{r_\phi}^2]\sin\theta
+    [m(r\sin\theta)\omega_{\phi}^2]\sin\theta
 $$
 $$
     \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
     =
     r(F_{r_\theta}+f_{\theta,\phi})、
     L_\theta=
-    mr^2\omega_{r_\theta}、
+    mr^2\omega_{\theta}、
     f_{\theta,\phi}=
-    [m(r\sin\theta)\omega_{r_\phi}^2]\cos\theta
+    [m(r\sin\theta)\omega_{\phi}^2]\cos\theta
 $$
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
     =
     r\sin\theta F_{r_\phi}、
     L_\phi=
-    m(r\sin\theta)^2\omega_{r_\phi}
+    m(r\sin\theta)^2\omega_{\phi}
 $$
 
 ここで $L_\theta$ と $L_\phi$ の関係式が
@@ -863,22 +863,22 @@ $$
     L_x=
     -mr^2
     (
-        \omega_{r_\theta}\sin\phi+
-        \omega_{r_\phi}\sin\theta\cos\theta\cos\phi
+        \omega_{\theta}\sin\phi+
+        \omega_{\phi}\sin\theta\cos\theta\cos\phi
     )
 $$
 $$
     L_y=
     mr^2
     (
-        \omega_{r_\theta}\cos\phi-
-        \omega_{r_\phi}\sin\theta\cos\theta\sin\phi
+        \omega_{\theta}\cos\phi-
+        \omega_{\phi}\sin\theta\cos\theta\sin\phi
     )
     
 $$
 $$
     L_z=
-    mr^2\omega_{r_\phi}\sin^2\theta
+    mr^2\omega_{\phi}\sin^2\theta
 $$
 
 また、速度と同じように極座標での変換では
@@ -920,9 +920,9 @@ $$
 $$
     L_r=0、
     L_\theta=
-    -mr^2\omega_{r_\theta}\sin\theta、
+    -mr^2\omega_{\theta}\sin\theta、
     L_\phi=
-    -mr^2\omega_{r_\phi}\sin\theta
+    -mr^2\omega_{\phi}\sin\theta
 $$
 
 となる。このうち、$L_\theta$ は先ほど運動方程式から求めた形と一致していることが分かる。$L_\phi$ については、形を見比べると $L_\phi=L_z$ であるため、確認のため時間微分をとり
@@ -964,22 +964,22 @@ $$
 $$
     \omega_{x,y}=
     \omega_x\cos\phi+\omega_y\sin\phi、
-    \omega_{r_\theta}=
+    \omega_{\theta}=
     \omega_y\cos\phi-\omega_x\sin\phi
 $$
 $$
     \omega_r=
     \omega_z\cos\theta+
     \omega_{x,y}\sin\theta、
-    \omega_{r_\perp}=
+    \omega_{\perp}=
     \omega_{x,y}\cos\theta-
     \omega_z\sin\theta
 $$
 
-とすると、$\omega_{r_\theta}$ に関して $L_\theta$ が
+とすると、$\omega_{\theta}$ に関して $L_\theta$ が
 
 $$
-    L_\theta=mr^2\omega_{r_\theta}=
+    L_\theta=mr^2\omega_{\theta}=
     L_y\cos\phi-L_x\sin\phi
 $$
 
@@ -988,34 +988,34 @@ $$
 $$
     \omega_x=
     \frac{L_x}{mr^2}=
-    -(\omega_{r_\theta}\sin\phi+
-    \omega_{r_\phi}\sin\theta\cos\theta\cos\phi)
+    -(\omega_{\theta}\sin\phi+
+    \omega_{\phi}\sin\theta\cos\theta\cos\phi)
 $$
 $$
     \omega_y=
     \frac{L_y}{mr^2}=
-    \omega_{r_\theta}\cos\phi-
-    \omega_{r_\phi}\sin\theta\cos\theta\sin\phi
+    \omega_{\theta}\cos\phi-
+    \omega_{\phi}\sin\theta\cos\theta\sin\phi
 $$
 
 であり、これを $\omega_{x,y}$ の式に代入すると以下の通りになる。
 
 $$
     \omega_{x,y}=
-    -\omega_{r_\phi}\sin\theta\cos\theta
+    -\omega_{\phi}\sin\theta\cos\theta
 $$
 
 さらに、動径方向の回転成分がないことから $\omega_r=0$ であるため、$\omega_r$ の式から
 
 $$
-    \omega_z=\omega_{r_\phi}\sin^2\theta
+    \omega_z=\omega_{\phi}\sin^2\theta
 $$
 
 であり、これを最後の式に代入すると
 
 $$
-    \omega_{r_\perp}=
-    -\omega_{r_\phi}\sin\theta
+    \omega_{\perp}=
+    -\omega_{\phi}\sin\theta
 $$
 
 であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。
