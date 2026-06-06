@@ -797,7 +797,7 @@ $$
     m(r\sin\theta)\omega_{\phi}^2\cos\theta
 $$
 
-として、両辺に $r$ をかけて整理することで以下のようになる。
+として、両辺に $r$ をかけて整理することで以下のようになる。この式は角度 $\theta$ に関する回転の運動方程式となっている。
 
 $$
     \frac{\mathrm{d}L_{\theta}}{\mathrm{d}t}=
@@ -807,7 +807,7 @@ $$
     [m(r\sin\theta)\omega_{\phi}^2]\cos\theta
 $$
 
-同じ要領で角度 $\phi$ に関しても遠心力の影響がないことと両辺に $r\sin\theta$ をかけて整理することで
+同じ要領で角度 $\phi$ に関して位置 $r\sin\theta$ で回転していることを踏まえて両辺に $r\sin\theta$ をかけて整理してみると
 
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
@@ -817,7 +817,7 @@ $$
     m(r\sin\theta)^2\omega_{\phi}
 $$
 
-となる。ここで $L_\theta$ と $L_\phi$ の関係式が
+というように角度 $\phi$ に対する回転の運動方程式になる。ここで $L_\theta$ と $L_\phi$ の関係式が
 
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
