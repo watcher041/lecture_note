@@ -585,6 +585,7 @@ $$
 $$
     a_z=-a_{r_\theta}\sin\theta+a_r\cos\theta
 $$
+
 が成り立つため、これを代入してみると
 
 $$
@@ -648,8 +649,8 @@ $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
     mr\omega_{\theta}^2-
     mr\omega_{\phi}^2\sin^2\theta=
-    F_x\cos\phi\sin\theta+
-    F_y\sin\phi\sin\theta+
+    F_x\sin\theta\cos\phi+
+    F_y\sin\theta\sin\phi+
     F_z\cos\theta
 $$
 $$
@@ -657,8 +658,8 @@ $$
     \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
     2mv_r\omega_{\theta}-
     mr\omega_{\phi}^2\sin\theta\cos\theta=
-    F_x\cos\phi\cos\theta+
-    F_y\sin\phi\cos\theta-
+    F_x\cos\theta\cos\phi+
+    F_y\cos\theta\sin\phi-
     F_z\sin\theta
 $$
 $$
@@ -671,21 +672,27 @@ $$
     F_y\cos\phi
 $$
 
-ここで、力に関しても速度と同じように
+ここで、右辺に関しては回転座標の変換（逆変換ではない）を力に置き換えた式
 
 $$
-    F_x=F_{r_\theta}\cos\theta\cos\phi
-    -F_{r_\phi}\sin\phi+F_r\sin\theta\cos\phi
+    F_r=
+    F_x\sin\theta\cos\phi+
+    F_y\sin\theta\sin\phi+
+    F_z\cos\theta
+
 $$
 $$
-    F_y=F_{r_\theta}\cos\theta\sin\phi
-    +F_{r_\phi}\sin\phi+F_r\sin\theta\sin\phi
+    F_{r_\theta}=
+    F_x\cos\theta\cos\phi+
+    F_y\cos\theta\sin\phi-
+    F_z\sin\theta
 $$
 $$
-    F_z=-F_{r_\theta}\sin\theta+F_r\cos\theta
+    F_{r_\phi}=
+    -F_x\sin\phi+F_y\cos\phi
 $$
 
-という関係にあることから、最終的に以下の形になる。
+と同じであることから、最終的に以下の形になる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
@@ -720,41 +727,36 @@ $$
     F_r
 $$
 
-となるが、括弧内の部分は遠心力となっている。実際、第１項目については、$x,y$ と $z$ 平面での遠心力となるため、
+となるが、括弧内の部分は遠心力となっている。実際、第１項目については、位置 $r$ において角度 $\theta$ で回転したことによる遠心力であり、
 
 $$
     f_{r,\theta}=
     mr\omega_{\theta}^2
 $$
 
-となる。第2項目については、$x,y$ 平面上での遠心力が
+となる（動径方向にしかかからない）。第2項目については、位置 $r\sin\theta$ において角度 $\phi$ で回転した時の遠心力であり
 
 $$
     f_{x,y}=
     m(r\sin\theta)\omega_{\phi}^2
 $$
 
-であり、先ほどの動径方向の関係式を利用すると 
+となるが、以下の図のように　$x,y$ 平面上でしか働かないため、
+
+<p align="center">
+    <img height="200px"  
+        style="background-color:white;"
+        src="images/3d_centrifugal_force.png">
+</p>
 
 $$
-    f_{r,\phi}=
-    F_z\cos\theta+
-    F_{x,y}\sin\theta=
-    0+f_{x,y}\sin\theta=
-    mr\omega_{\phi}^2\sin^2\theta
+    f_{x,y}\cos\phi（x成分）、
+    f_{x,y}\sin\phi（y成分）、
+    0（z成分）
 $$
 
-というように第2項目の力になっていることが分かる。そのため、動径方向については以下のようになると思われる。
+というような成分を持つ力となっている。そのため、極座標においては
 
-$$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
-    F_r+
-    (f_{r,\theta}+f_{r,\phi})、
-    f_{r,\theta}=
-    mr\omega_{\theta}^2、
-    f_{r,\phi}=
-    [m(r\sin\theta)\omega_{\phi}^2]\sin\theta
-$$
 
 
 このことからも伺えるように $\theta$ の方向には $r$ 、$\phi$ の方向には $r\sin\theta$ の位置で回転することから
