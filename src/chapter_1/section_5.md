@@ -858,6 +858,34 @@ $$
     mr^2\omega_{\phi}\sin^2\theta
 $$
 
+ここで、$L_z$ をよく見ると $L_\phi$ と同じになっていることが分かる。また、$L_x,L_y$ の両辺に $\sin\theta$ をかけても $L_\phi$ が出てくることから、試しに
+
+$$
+    L_x\sin\theta=
+    -L_\theta\sin\theta\sin\phi-
+    L_\phi\cos\theta\cos\phi
+$$
+$$
+    L_y\sin\theta=
+    L_\theta\sin\theta\cos\phi-
+    L_\phi\cos\theta\sin\phi
+$$
+$$
+    L_z=L_\phi
+$$
+
+とすると、これらを整理することで
+
+$$
+    L_\theta=
+    -L_x\sin\phi+L_y\cos\phi、
+    L_\phi=L_z
+$$
+
+という関係式が成り立つことが分かる。
+
+
+
 また、速度と同じように極座標での変換では
 
 $$
