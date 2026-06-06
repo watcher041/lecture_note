@@ -882,78 +882,85 @@ $$
     L_\phi=L_z
 $$
 
-という関係式が成り立つことが分かる。
+という関係式が成り立つことが分かる。そこで、これを時間微分して先ほどの式が得られるかを確認してみる。まず、時間微分すると
 
-
-
-また、速度と同じように極座標での変換では
 
 $$
-    L_x=L_\theta\cos\theta\cos\phi
-    -L_\phi\sin\phi+L_r\sin\theta\cos\phi
-$$
-$$
-    L_y=L_\theta\cos\theta\sin\phi
-    +L_\phi\sin\phi+L_r\sin\theta\sin\phi
-$$
-$$
-    L_z=-L_\theta\sin\theta+L_r\cos\theta
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    -\frac{\mathrm{d}L_x}{\mathrm{d}t}\sin\phi-
+    L_x\omega_\phi\cos\phi+
+    \frac{\mathrm{d}L_y}{\mathrm{d}t}\cos\phi-
+    L_y\omega_\phi\sin\phi、
+    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
+    \frac{\mathrm{d}L_z}{\mathrm{d}t}
 $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-であることから、これらに代入すると
+となるが、$L_x,L_y,L_z$ の時間微分
 
 $$
-    L_r=0、
-    L_\theta=
-    -mr^2\omega_{\theta}\sin\theta、
-    L_\phi=
-    -mr^2\omega_{\phi}\sin\theta
+    \frac{\mathrm{d}L_x}{\mathrm{d}t}=
+    yF_z-zF_y、
+    \frac{\mathrm{d}L_y}{\mathrm{d}t}=
+    zF_x-xF_z、
+    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    xF_y-yF_x
 $$
 
-となる。このうち、$L_\theta$ は先ほど運動方程式から求めた形と一致していることが分かる。$L_\phi$ については、形を見比べると $L_\phi=L_z$ であるため、確認のため時間微分をとり
+を代入すると以下の通りになる。
 
+$$
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    z(F_x\cos\phi+
+    F_y\sin\phi)-
+    (y\sin\phi+x\cos\phi)F_z-
+    (L_x\cos\phi+L_y\sin\phi)\omega_\phi
+$$
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
     \frac{\mathrm{d}L_z}{\mathrm{d}t}=
     xF_y-yF_x
 $$
 
-とすると、極座標において
+そして $x,y,z$ を極座標の形になおすと
 
 $$
-    x=r\sin\theta\cos\phi、
-    y=r\sin\theta\sin\phi、
-    F_{r_\phi}=F_y\cos\phi-F_x\sin\phi
+    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    r
+    (F_x\cos\theta\cos\phi+
+    F_y\cos\theta\sin\phi-
+    F_z\sin\theta)-
+    (L_x\cos\phi+L_y\sin\phi)\omega_\phi
 $$
-
-となることを踏まえて整理すると
-
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
-    r\sin\theta
-    (F_y\cos\phi-F_x\sin\phi)=
-    r\sin\theta F_{r_\phi}
+    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    r\sin\theta(-F_x\sin\phi+F_y\cos\phi)
 $$
+
+であるため、以前求めた変換式から
+
+$$
+    F_x\cos\theta\cos\phi+
+    F_y\cos\theta\sin\phi-
+    F_z\sin\theta=
+    F_{r_\theta}
+$$
+$$
+    -F_x\sin\phi+F_y\cos\phi=F_{r_\phi}
+$$
+$$
+    L_x\cos\phi+L_y\sin\phi=
+    -mr^2\omega_{\phi}\sin\theta\cos\theta
+$$
+
+
+
+
+
+
+
+
+
 
 となる。そのため、3次元においても回転の運動方程式
 
