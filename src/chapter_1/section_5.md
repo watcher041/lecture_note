@@ -440,13 +440,13 @@ $$
 を代入すると、以下の関係式が得られる。
 
 $$
-    v_{r_\phi}=
-    r\sin\theta
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}、
     v_r=
     \frac{\mathrm{d}r}{\mathrm{d}t}、
     v_{r_\theta}=
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}、
+    v_{r_\phi}=
+    r\sin\theta
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
 $$
 
 これらの速度は、以下のように微小変化を見ることで正しいことが分かる。
@@ -588,17 +588,6 @@ $$
 が成り立つため、これを代入してみると
 
 $$
-    a_{r_\phi}=
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \sin\theta+
-    2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \cos\theta+
-    r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
-    \sin\theta
-$$
-$$
     a_r=
     \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
     r
@@ -624,6 +613,17 @@ $$
     \right)^2
     \sin\theta\cos\theta
 $$
+$$
+    a_{r_\phi}=
+    2\frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \sin\theta+
+    2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \cos\theta+
+    r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+    \sin\theta
+$$
 
 となる。そのため、極座標での各成分の運動方程式は
 
@@ -648,11 +648,8 @@ $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
     mr\omega_{\theta}^2-
     mr\omega_{\phi}^2\sin^2\theta=
-    \left(
-        F_x\cos\phi+
-        F_y\sin\phi
-    \right)
-    \sin\theta+
+    F_x\cos\phi\sin\theta+
+    F_y\sin\phi\sin\theta+
     F_z\cos\theta
 $$
 $$
@@ -660,11 +657,8 @@ $$
     \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
     2mv_r\omega_{\theta}-
     mr\omega_{\phi}^2\sin\theta\cos\theta=
-    \left(
-        F_x\cos\phi+
-        F_y\sin\phi
-    \right)
-    \cos\theta-
+    F_x\cos\phi\cos\theta+
+    F_y\sin\phi\cos\theta-
     F_z\sin\theta
 $$
 $$
