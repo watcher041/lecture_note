@@ -750,84 +750,65 @@ $$
 </p>
 
 $$
-    f_{x,y}\cos\phi（x成分）、
-    f_{x,y}\sin\phi（y成分）、
-    0（z成分）
+    f_x=f_{x,y}\cos\phi、
+    f_y=f_{x,y}\sin\phi、
+    f_z=0
 $$
 
-というような成分を持つ力となっている。そのため、極座標においては
-
-
-
-このことからも伺えるように $\theta$ の方向には $r$ 、$\phi$ の方向には $r\sin\theta$ の位置で回転することから
+というような成分を持つ力となっている。そのため、極座標においては先ほどの力の変換を用いると
 
 $$
-    L_\theta=
-    mr^2\omega_{\theta}、
-    L_\phi=
-    m(r\sin\theta)^2\omega_{\phi}
+    f_r=
+    f_x\sin\theta\cos\phi+
+    f_y\sin\theta\sin\phi+
+    f_z\cos\theta=
+    f_{x,y}\sin\theta
+$$
+$$
+    f_{r_\theta}=
+    f_x\cos\theta\cos\phi+
+    f_y\cos\theta\sin\phi-
+    f_z\sin\theta=
+    f_{x,y}\cos\theta
+$$
+$$
+    f_{r_\phi}=
+    -f_x\sin\phi+f_y\cos\phi=0
 $$
 
-と角運動量をおき、これらを微分してみると $\theta,\phi$ の運動方程式も利用することで
-
-$$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
-    =
-    r\left(
-    mr
-    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
-    2mv_r\omega_{\theta}
-    \right)=
-    r
-    \left(
-        F_{r_\theta}+
-        mr\omega_{\phi}^2\sin\theta\cos\theta
-    \right)
-$$
-$$
-    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
-    =
-    r\sin\theta
-    \left(
-    mr
-    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
-    \sin\theta+
-    2mr\omega_{\theta}\omega_{\phi}\cos\theta+
-    2mv_r\omega_{\phi}\sin\theta
-    \right)=
-    r\sin\theta F_{r_\phi}
-$$
-
-が得られる。ここで、$L_\theta$ に関する式の第二項目については、$\phi$ 方向の回転に対する遠心力の $\theta$ 方向の成分であり、実際
-
-$$
-    f_{\theta,\phi}=
-    F_{x,y}\cos\theta-
-    F_z\sin\theta=
-    m(r\sin\theta)\omega_{\phi}^2\cos\theta+0=
-    mr\omega_{\phi}^2\sin\theta\cos\theta
-$$
-
-となることからも分かる。以上のことから、以下の形にまとめられることが分かる。
+というように動径方向に対して $f_r$ の分だけ働いていることになる。そのため、動径方向に対する運動方程式は以下の通りになる。
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
-    F_r+
-    (f_{r,\theta}+f_{r,\phi})、
-    f_{r,\theta}=
-    mr\omega_{\theta}^2、
+    F_r+f_{r,\theta}+f_{r,\phi}、
+    f_{r,\theta}=mr\omega_{\theta}^2、
     f_{r,\phi}=
     [m(r\sin\theta)\omega_{\phi}^2]\sin\theta
 $$
+
+一方で、角度 $\theta$ に関する運動方程式は先ほどの遠心力で $f_{r_\theta}$ が存在することから
+
 $$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}
-    =
+    mr
+    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    2mv_r\omega_{\theta}=
+    F_{r_\theta}+f_{\theta,\phi}、
+    f_{\theta,\phi}=
+    m(r\sin\theta)\omega_{\phi}^2\cos\theta
+$$
+
+として、両辺に $r$ をかけて整理することで以下のようになる。
+
+$$
+    \frac{\mathrm{d}L_{\theta}}{\mathrm{d}t}=
     r(F_{r_\theta}+f_{\theta,\phi})、
-    L_\theta=
-    mr^2\omega_{\theta}、
+    L_{\theta}=mr^2\omega_{\theta}、
     f_{\theta,\phi}=
     [m(r\sin\theta)\omega_{\phi}^2]\cos\theta
 $$
+
+同じ要領で角度 $\phi$ に関しても遠心力の影響がないことと両辺に $r\sin\theta$ をかけて整理することで
+
 $$
     \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
     =
@@ -836,7 +817,7 @@ $$
     m(r\sin\theta)^2\omega_{\phi}
 $$
 
-ここで $L_\theta$ と $L_\phi$ の関係式が
+となる。ここで $L_\theta$ と $L_\phi$ の関係式が
 
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
