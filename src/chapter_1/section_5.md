@@ -818,7 +818,7 @@ $$
     [m(r\sin\theta)\omega_{\phi}^2]\sin\theta
 $$
 
-一方で、角度 $\theta$ に関する運動方程式は先ほどの遠心力で $f_{r_\theta}$ が存在することから
+このうち、$L_z$ の形をよく見てみると $L_\phi$ と同じ形になっていることが分かる。一方で、角度 $\theta$ に関する運動方程式は先ほどの遠心力で $f_{r_\theta}$ が存在することから
 
 $$
     mr
@@ -890,23 +890,44 @@ $$
     mr^2\omega_{\phi}\sin^2\theta
 $$
 
-ここで、$L_z$ をよく見ると $L_\phi$ と同じになっていることが分かる。また、$L_x,L_y$ の両辺に $\sin\theta$ をかけても $L_\phi$ が出てくることから、試しに
+一方で、角運動量を極座標に置き換えると
 
 $$
-    L_x\sin\theta=
-    -L_\theta\sin\theta\sin\phi-
-    L_\phi\cos\theta\cos\phi
+    L_r=
+    L_x\sin\theta\cos\phi+
+    L_y\sin\theta\sin\phi+
+    L_z\cos\theta
+
 $$
 $$
-    L_y\sin\theta=
-    L_\theta\sin\theta\cos\phi-
-    L_\phi\cos\theta\sin\phi
+    L_{r_\theta}=
+    L_x\cos\theta\cos\phi+
+    L_y\cos\theta\sin\phi-
+    L_z\sin\theta
 $$
 $$
-    L_z=L_\phi
+    L_{r_\phi}=
+    -L_x\sin\phi+L_y\cos\phi
 $$
 
-とすると、これらを整理することで
+となるため、これに先ほどの式を代入すると以下のようになる。
+
+$$
+    L_r=0、
+    L_{r_\theta}=
+    -mr^2\omega_\phi\sin\theta、
+    L_{r_\phi}=mr^2\omega_\theta
+$$
+
+ここで、この式と $L_\theta,L_\phi$ と比較すると
+
+$$
+    L_r=0、
+    L_{r_\theta}\sin\theta=-L_\phi、
+    L_{r_\phi}=L_\theta
+$$
+
+という関係になっていることが分かるため、$L_\theta,L_\phi$ は $L_x,L_y,L_z$ により
 
 $$
     L_\theta=
@@ -915,7 +936,6 @@ $$
 $$
 
 という関係式が成り立つことが分かる。そこで、これを時間微分して先ほどの式が得られるかを確認してみる。まず、時間微分すると
-
 
 $$
     \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
@@ -1065,3 +1085,5 @@ $$
 であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。
 
 　以上のように、回転運動を取り扱うには通常の運動方程式とは異なる方程式を利用する必要があることが分かる。そのため、次項で改めて物体自体の回転運動を取り扱うことにする。
+
+
