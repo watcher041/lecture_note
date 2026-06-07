@@ -1010,11 +1010,28 @@ $$
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
     \bm{N}、
-    \bm{L}=(\bm{r}\times\bm{v})、
+    \bm{L}=m(\bm{r}\times\bm{v})、
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関して角運動量と同じように
+が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関しては二次元と同じように $\bm{L}=I\bm{\omega}=mr^2\bm{\omega}$ とすると
+
+$$
+    \omega_x=
+    -\omega_{\theta}\sin\phi-
+    \omega_{\phi}\sin\theta\cos\theta\cos\phi
+$$
+$$
+    \omega_y=
+    \omega_{\theta}\cos\phi-
+    \omega_{\phi}\sin\theta\cos\theta\sin\phi
+$$
+$$
+    \omega_z=
+    \omega_{\phi}\sin^2\theta
+$$
+
+となるが、これを角速度の変換式
 
 $$
     \omega_r=
@@ -1034,90 +1051,16 @@ $$
     -\omega_x\sin\phi+\omega_y\cos\phi
 $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+に代入すると、以下の式が得られる。
 
 $$
-    \omega_{x,y}=
-    \omega_x\cos\phi+\omega_y\sin\phi、
-    \omega_{\theta}=
-    \omega_y\cos\phi-\omega_x\sin\phi
-$$
-$$
-    \omega_r=
-    \omega_z\cos\theta+
-    \omega_{x,y}\sin\theta、
-    \omega_{\perp}=
-    \omega_{x,y}\cos\theta-
-    \omega_z\sin\theta
+    \omega_r=0、
+    \omega_{r_\theta}=
+    -\omega_\phi\sin\theta、
+    \omega_{r_\phi}=\omega_\theta
 $$
 
-とすると、$\omega_{\theta}$ に関して $L_\theta$ が
-
-$$
-    L_\theta=mr^2\omega_{\theta}=
-    L_y\cos\phi-L_x\sin\phi
-$$
-
-であることから、
-
-$$
-    \omega_x=
-    \frac{L_x}{mr^2}=
-    -(\omega_{\theta}\sin\phi+
-    \omega_{\phi}\sin\theta\cos\theta\cos\phi)
-$$
-$$
-    \omega_y=
-    \frac{L_y}{mr^2}=
-    \omega_{\theta}\cos\phi-
-    \omega_{\phi}\sin\theta\cos\theta\sin\phi
-$$
-
-であり、これを $\omega_{x,y}$ の式に代入すると以下の通りになる。
-
-$$
-    \omega_{x,y}=
-    -\omega_{\phi}\sin\theta\cos\theta
-$$
-
-さらに、動径方向の回転成分がないことから $\omega_r=0$ であるため、$\omega_r$ の式から
-
-$$
-    \omega_z=\omega_{\phi}\sin^2\theta
-$$
-
-であり、これを最後の式に代入すると
-
-$$
-    \omega_{\perp}=
-    -\omega_{\phi}\sin\theta
-$$
-
-であることになる。このことから、$I=mr^2$ とすることで $\bm{L}=I\bm{\omega}$ と表されることが分かる。
+この両辺に $mr^2$ をかけて角速度での関係式と比べることで合っていることがわかり、改めて $\bm{L}=I\bm{\omega}$ と表すことができることが確認できる。
 
 　以上のように、回転運動を取り扱うには通常の運動方程式とは異なる方程式を利用する必要があることが分かる。そのため、次項で改めて物体自体の回転運動を取り扱うことにする。
 
