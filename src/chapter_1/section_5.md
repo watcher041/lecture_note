@@ -1005,15 +1005,6 @@ $$
     -mr^2\omega_{\phi}\sin\theta\cos\theta
 $$
 
-
-
-
-
-
-
-
-
-
 となる。そのため、3次元においても回転の運動方程式
 
 $$
@@ -1024,6 +1015,50 @@ $$
 $$
 
 が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関して角運動量と同じように
+
+$$
+    \omega_r=
+    \omega_x\sin\theta\cos\phi+
+    \omega_y\sin\theta\sin\phi+
+    \omega_z\cos\theta
+
+$$
+$$
+    \omega_{r_\theta}=
+    \omega_x\cos\theta\cos\phi+
+    \omega_y\cos\theta\sin\phi-
+    \omega_z\sin\theta
+$$
+$$
+    \omega_{r_\phi}=
+    -\omega_x\sin\phi+\omega_y\cos\phi
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $$
     \omega_{x,y}=
