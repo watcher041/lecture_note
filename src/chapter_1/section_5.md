@@ -22,7 +22,7 @@ $$
     y=r\sin\theta
 $$
 
-この関係式というのは、座標を回転させたときに得られる変換式の一つの利用例となっている。実際、座標系 $(x,y)$ を原点Oを軸に角度 $\theta$ だけ回転させて座標系 $(X,Y)$ に変換したものとすると、
+この関係式というのは、座標を回転させたときに得られる変換式の一つの応用例となっている。実際、原点Oを軸に座標系 $(x,y)$ を角度 $\theta$ だけ回転させて座標系 $(X,Y)$ に変換した際、
 
 <p align="center">
     <img width="50%" src="images/rotate_coordinate.png">
@@ -40,7 +40,7 @@ $$
     y=X\sin\theta+Y\cos\theta
 $$
 
-であり、$X=r,Y=r_\theta=0$ とすると、極座標の形になること分かる。同様に、力や速度、加速度も同じ変換が適用されるため、
+であるため、$X=r,Y=r_\theta=0$ とすると極座標の形になること分かる。同様に、力や速度、加速度も同じ変換が適用されることから、
 
 $$
     F_x=F_r\cos\theta-F_{r_\theta}\sin\theta、
@@ -70,7 +70,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、これを先ほどの速度の極座標への変換式に代入して $v_r,v_{r_\theta}$ を求めると以下の式が得られる。
+となるが、これを先ほどの速度の変換式に代入して $v_r,v_{r_\theta}$ を求めると以下の式が得られる。
 
 $$
     v_r=
@@ -135,7 +135,7 @@ $$
     \sin\theta
 $$
 
-となるため、こちらも先ほどの変換式に代入して $a_r,a_{r_\theta}$ を求めると
+となるため、こちらも先ほどの加速度の変換式に代入して $a_r,a_{r_\theta}$ を求めると以下の式が得られる。
 
 $$
     a_r=
@@ -155,7 +155,39 @@ $$
     {\mathrm{d}t^2}
 $$
 
-となるが、力の変換式も踏まえて極座標での運動方程式は以下の通りになっていることが分かる。
+そのため、運動方程式は
+
+$$
+    m\left[
+        \frac{\mathrm{d}^2r}
+        {\mathrm{d}t^2}-
+        r
+        \left(
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}
+        \right)^2
+    \right]=F_x\cos\theta+F_y\sin\theta
+$$
+$$
+    m\left(
+        2\frac{\mathrm{d}r}
+        {\mathrm{d}t}
+        \frac{\mathrm{d}\theta}
+        {\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}
+        {\mathrm{d}t^2}
+    \right)=-F_x\sin\theta+F_y\cos\theta
+$$
+
+となるが、これらの右辺について力の変換式（逆変換ではない）が
+
+$$
+    F_r=F_x\cos\theta+F_y\sin\theta、
+    F_{r_\theta}=-F_x\sin\theta+F_y\cos\theta
+$$
+
+であることを踏まえて、以下の通りになっていることが分かる。
 
 $$
     m\left[
