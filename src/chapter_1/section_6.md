@@ -47,8 +47,8 @@ $$
 であり、Z軸上のある一点（$Y=0,v_X=v_Y=0$）での策度は
 
 $$
-    v_x=X\omega\cos\theta、
-    v_y=X\omega\sin\theta
+    v_x=-X\omega\sin\theta、
+    v_y=X\omega\cos\theta
 $$
 
-となる。
+となる（極座標はこの場合にあたる）。
