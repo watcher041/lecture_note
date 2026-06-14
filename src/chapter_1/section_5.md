@@ -162,8 +162,8 @@ $$
 となるが、このときの右辺が回転座標の変換式（逆変換ではない）と見比べて
 
 $$
-    F_x=F_r\cos\theta-F_{r_\theta}\sin\theta、
-    F_y=F_r\sin\theta+F_{r_\theta}\cos\theta
+    F_r=F_x\cos\theta+F_y\sin\theta、
+    F_{r_\theta}=-F_x\sin\theta+F_y\cos\theta
 $$
 
 となっていることから、以下の通りになっていることが分かる。
