@@ -40,22 +40,7 @@ $$
     y=X\sin\theta+Y\cos\theta
 $$
 
-であるため、$X=r,Y=r_\theta=0$ とすると極座標の形になること分かる。同様に、力や速度、加速度も同じ変換が適用されることから、
-
-$$
-    F_x=F_r\cos\theta-F_{r_\theta}\sin\theta、
-    F_y=F_r\sin\theta+F_{r_\theta}\cos\theta
-$$
-$$
-    v_x=v_r\cos\theta-v_{r_\theta}\sin\theta、
-    v_y=v_r\sin\theta+v_{r_\theta}\cos\theta
-$$
-$$
-    a_x=a_r\cos\theta-a_{r_\theta}\sin\theta、
-    a_y=a_r\sin\theta+a_{r_\theta}\cos\theta
-$$
-
-も成り立つ。このことを踏まえたうえで、まず各方向の速度を極座標の形であらわすと
+であるため、$X=r,Y=r_\theta=0$ とすると極座標の形になること分かる。このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
 
 $$
     v_x=
@@ -70,7 +55,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、これを先ほどの速度の変換式に代入して $v_r,v_{r_\theta}$ を求めると以下の式が得られる。
+となるが、回転座標の逆変換の式と見比べてみると以下のようになっているものと予想される。
 
 $$
     v_r=
@@ -79,7 +64,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}
 $$
 
-この形については、以下のように各方向の微小変化を見ることで正しいものと確認できる。
+この形については、以下の図のように各方向の微小変化を見ることで正しいものと確認できる。
 
 <p align="center">
     <img height="150px"  
@@ -93,49 +78,43 @@ $$
 $$
     a_x=
     \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
-    \frac{\mathrm{d}^2r}
-    {\mathrm{d}t^2}
+    \left[
+        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+        r
+        \left(
+            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \right)^2
+    \right]
     \cos\theta-
-    2\frac{\mathrm{d}r}
-    {\mathrm{d}t}
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \sin\theta-
-    r
-    \frac{\mathrm{d}^2\theta}
-    {\mathrm{d}t^2}
-    \sin\theta-
-    r
-    \left(
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \right)^2
-    \cos\theta
+    \left[
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \right]
+    \sin\theta
 $$
 $$
     a_y=
     \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
-    \frac{\mathrm{d}^2r}
-    {\mathrm{d}t^2}
+    \left[
+        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+        r
+        \left(
+            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \right)^2
+    \right]
     \sin\theta+
-    2\frac{\mathrm{d}r}
-    {\mathrm{d}t}
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \cos\theta+
-    r
-    \frac{\mathrm{d}^2\theta}
-    {\mathrm{d}t^2}
-    \cos\theta-
-    r
-    \left(
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \right)^2
-    \sin\theta
+    \left[
+        2\frac{\mathrm{d}r}{\mathrm{d}t}
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+        r
+        \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \right]
+    \cos\theta
 $$
 
-となるため、こちらも先ほどの加速度の変換式に代入して $a_r,a_{r_\theta}$ を求めると以下の式が得られる。
+となるため、こちらも回転座標の逆変換の式と見比べると以下のようになっていることが分かる。
 
 $$
     a_r=
@@ -180,14 +159,14 @@ $$
     \right)=-F_x\sin\theta+F_y\cos\theta
 $$
 
-となるが、これらの右辺について力の変換式（逆変換ではない）が
+となるが、このときの右辺が回転座標の変換式（逆変換ではない）と見比べて
 
 $$
-    F_r=F_x\cos\theta+F_y\sin\theta、
-    F_{r_\theta}=-F_x\sin\theta+F_y\cos\theta
+    F_x=F_r\cos\theta-F_{r_\theta}\sin\theta、
+    F_y=F_r\sin\theta+F_{r_\theta}\cos\theta
 $$
 
-であることを踏まえて、以下の通りになっていることが分かる。
+となっていることから、以下の通りになっていることが分かる。
 
 $$
     m\left[
@@ -412,7 +391,7 @@ $$
 $$
 $$
     y=x''\cos\theta\sin\phi
-    +y''\sin\phi+z''\sin\theta\sin\phi
+    +y''\cos\phi+z''\sin\theta\sin\phi
 $$
 $$
     z=-x''\sin\theta+z''\cos\theta
@@ -423,53 +402,38 @@ $$
 $$
     v_x=
     \frac{\mathrm{d}x}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \sin\theta\cos\phi+
     r
     \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \cos\theta\cos\phi-
     r\sin\theta
     \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \sin\phi
+    \sin\phi+
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \sin\theta\cos\phi
 $$
 $$
     v_y=
     \frac{\mathrm{d}y}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \sin\theta\sin\phi+
     r
     \frac{\mathrm{d}\theta}{\mathrm{d}t}
     \cos\theta\sin\phi+
     r\sin\theta
     \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \cos\phi
+    \cos\phi+
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \sin\theta\sin\phi
 $$
 $$
     v_z=
     \frac{\mathrm{d}z}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \cos\theta-
-    r
+    -r
     \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \sin\theta
+    \sin\theta+
+    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \cos\theta
 $$
 
-となる。これに速度の変換式
-
-$$
-    v_x=v_{r_\theta}\cos\theta\cos\phi
-    -v_{r_\phi}\sin\phi+v_r\sin\theta\cos\phi
-$$
-$$
-    v_y=v_{r_\theta}\cos\theta\sin\phi
-    +v_{r_\phi}\sin\phi+v_r\sin\theta\sin\phi
-$$
-$$
-    v_z=-v_{r_\theta}\sin\theta+v_r\cos\theta
-$$
-
-
-を代入すると、以下の関係式が得られる。
+となる。こららと回転座標の逆変換を見比べてみると以下のようになっていることが予想される。
 
 $$
     v_r=
@@ -481,7 +445,7 @@ $$
     \frac{\mathrm{d}\phi}{\mathrm{d}t}
 $$
 
-これらの速度は、以下のように微小変化を見ることで正しいことが分かる。
+これらの速度は、以下の図のように微小変化を見ることで正しいことが分かる。
 
 <p align="center">
     <img height="200px"  
@@ -505,32 +469,36 @@ $$
             \sin\theta\sin\phi
         \right)\\
         &=
-        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-        \sin\theta\cos\phi+
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \cos\theta\cos\phi-
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \sin\theta\sin\phi\\
-        &+
-        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-        \cos\theta\cos\phi-
-        r
-        \left(
+        \left[
+            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+            2\frac{\mathrm{d}r}{\mathrm{d}t}
             \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \right)^2
-        \sin\theta\cos\phi-
-        2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \cos\theta\sin\phi\\
+        \right]
+        \cos\theta\cos\phi\\
         &-
-        r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
-        \sin\theta\sin\phi-
-        r
-        \left(
+        \left[
+            r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+            \sin\theta+
+            2\frac{\mathrm{d}r}{\mathrm{d}t}
             \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \right)^2
+            \sin\theta+
+            2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \cos\theta
+        \right]
+        \sin\phi\\
+        &+
+        \left[
+            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            r
+            \left(
+                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \right)^2-
+            r
+            \left(
+                \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \right)^2
+        \right]
         \sin\theta\cos\phi
     \end{align*}
 $$
@@ -548,32 +516,36 @@ $$
             \sin\theta\cos\phi
         \right)\\
         &=
-        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-        \sin\theta\sin\phi+
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \cos\theta\sin\phi+
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \sin\theta\cos\phi\\
-        &+
-        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-        \cos\theta\sin\phi-
-        r
-        \left(
+        \left[
+            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+            2\frac{\mathrm{d}r}{\mathrm{d}t}
             \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \right)^2
-        \sin\theta\sin\phi+
-        2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \cos\theta\cos\phi\\
-        &+
-        r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
-        \sin\theta\cos\phi-
-        r
-        \left(
+        \right]
+        \cos\theta\sin\phi\\
+        &+ 
+        \left[
+            r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+            \sin\theta+
+            2\frac{\mathrm{d}r}{\mathrm{d}t}
             \frac{\mathrm{d}\phi}{\mathrm{d}t}
-        \right)^2
+            \sin\theta+
+            2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \cos\theta
+        \right]
+        \cos\phi\\
+        &+
+        \left[
+            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            r
+            \left(
+                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \right)^2-
+            r
+            \left(
+                \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            \right)^2
+        \right]
         \sin\theta\sin\phi
     \end{align*}
 $$
@@ -589,36 +561,44 @@ $$
             \sin\theta
         \right)\\
         &=
-        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
-        \cos\theta-
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \sin\theta-
-        r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
-        \sin\theta-
-        r
-        \left(
+        -\left[
+            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+            2\frac{\mathrm{d}r}{\mathrm{d}t}
             \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \right)^2
+        \right]
+        \sin\theta+
+        \left[
+            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            r
+            \left(
+                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \right)^2
+        \right]
         \cos\theta
     \end{align*}
 $$
 
-となるが、先ほどの速度と同じように極座標において
+となるが、このまま回転座標の逆変換と見比べてもどう対応しているか分からないので、変換式
+
 
 $$
-    a_x=a_{r_\theta}\cos\theta\cos\phi
-    -a_{r_\phi}\sin\phi+a_r\sin\theta\cos\phi
+    a_r=
+    a_x\sin\theta\cos\phi+
+    a_y\sin\theta\sin\phi+
+    a_z\cos\theta
 $$
 $$
-    a_y=a_{r_\theta}\cos\theta\sin\phi
-    +a_{r_\phi}\sin\phi+a_r\sin\theta\sin\phi
+    a_{r_\theta}=
+    a_x\cos\theta\cos\phi+
+    a_y\cos\theta\sin\phi-
+    a_z\sin\theta
 $$
 $$
-    a_z=-a_{r_\theta}\sin\theta+a_r\cos\theta
+    a_{r_\phi}=
+    -a_x\sin\phi+a_y\cos\phi
 $$
 
-が成り立つため、これを代入してみると
+に代入して整理すると、
 
 $$
     a_r=
