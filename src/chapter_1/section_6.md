@@ -44,7 +44,7 @@ $$
     v_y=-Y\omega\sin\theta
 $$
 
-であり、Z軸上のある一点（$Y=0,v_X=v_Y=0$）での策度は
+であり、X軸上のある一点（$Y=0,v_X=v_Y=0$）での策度は
 
 $$
     v_x=-X\omega\sin\theta、
