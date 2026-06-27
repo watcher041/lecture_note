@@ -37,25 +37,25 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、これは座標を回転させたときに得られる逆変換と同じものとなっている。実際、原点を軸に座標系 $(v_x,v_y)$ を角度 $\theta$ だけ回転させて座標系 $(v_r,v_{r_\theta})$ に変換した場合、
+となるが、これは座標を回転させたときに得られる逆変換と同じものとなっている。実際、原点を軸に座標系 $(v_x,v_y)$ を角度 $\theta$ だけ回転させて座標系 $(v_x',v_y')$ に変換した場合、
 
 <p align="center">
     <img width="30%" src="images/2d_velocity_rotate.png">
 </p>
 
 $$
-    v_r=v_x\cos\theta+v_y\sin\theta、
-    v_{r_\theta}=-v_x\sin\theta+v_y\cos\theta
+    v_x'=v_x\cos\theta+v_y\sin\theta、
+    v_y'=-v_x\sin\theta+v_y\cos\theta
 $$
 
 となるが、この逆変換を求めると
 
 $$
-    v_x=v_r\cos\theta-v_{r_\theta}\sin\theta、
-    v_y=v_r\sin\theta+v_{r_\theta}\cos\theta
+    v_x=v_x'\cos\theta-v_y'\sin\theta、
+    v_y=v_x'\sin\theta+v_y'\cos\theta
 $$
 
-であるため、先ほどの速度の関係式と見比べてみると以下のようになっているものと予想される。
+であるため、$v_x'=v_r、v_y'=v_{r_\theta}$ として先ほどの速度の関係式と見比べてみると以下のようになっているものと予想される。
 
 $$
     v_r=
@@ -351,51 +351,7 @@ $$
     z=r\cos\theta
 $$
 
-であるが、これも3次元回転座標系の一例となっている。実際、まず以下の図のようにz軸を中心に角度 $\phi$ だけ回転させると
-
-<p align="center">
-    <img width="40%" src="images/3d_xy_convertion.png">
-</p>
-
-$$
-    x'=x\cos\phi+y\sin\phi、
-    y'=-x\sin\phi+y\cos\phi、
-    z'=z
-$$
-
-というような変換になる。そして、$y'$ 軸を中心に角度 $\theta$ だけ回転させると以下のような変換になる。
-
-<p align="center">
-    <img width="40%" src="images/3d_xz_convertion.png">
-</p>
-
-$$
-    z''=z'\cos\theta+x'\sin\theta=
-    x\sin\theta\cos\phi+y\sin\theta\sin\phi+z\cos\theta
-
-$$
-$$
-    x''=-z'\sin\theta+x'\cos\theta=
-    x\cos\theta\cos\phi+y\cos\theta\sin\phi-z\sin\theta
-$$
-$$
-    y''=y'=
-    -x\sin\phi+y\cos\phi
-$$
-
-そのため、この逆変換を求めると
-
-$$
-    x=x''\cos\theta\cos\phi
-    -y''\sin\phi+z''\sin\theta\cos\phi
-$$
-$$
-    y=x''\cos\theta\sin\phi
-    +y''\cos\phi+z''\sin\theta\sin\phi
-$$
-$$
-    z=-x''\sin\theta+z''\cos\theta
-$$
+であるが、
 
 となることから、 $z''=r、x''=r_\theta=0、y''=r_\phi=0$ とすると極座標の変換になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
 
@@ -433,7 +389,59 @@ $$
     \cos\theta
 $$
 
-となる。こららと回転座標の逆変換を見比べてみると以下のようになっていることが予想される。
+となるが、これも3次元回転座標系の逆変換の同じ形となっている。実際、まず以下の図のように $v_z$ 軸を中心に角度 $\phi$ だけ回転させると
+
+<p align="center">
+    <img width="40%" src="images/3d_v_xy_rotate.png">
+</p>
+
+$$
+    v_{x'}=v_x\cos\phi+v_y\sin\phi、
+    v_{y'}=-v_x\sin\phi+v_y\cos\phi、
+    v_z=v_z
+$$
+
+というような変換になる。そして、$v_{y'}$ 軸を中心に角度 $\theta$ だけ回転させると以下のような変換になる。
+
+<p align="center">
+    <img width="40%" src="images/3d_v_xz_rotate.png">
+</p>
+
+$$
+    v_{z'}=
+    v_z\cos\theta+v_{x'}\sin\theta=
+    v_x\sin\theta\cos\phi+
+    v_y\sin\theta\sin\phi+
+    v_z\cos\theta
+
+$$
+$$
+    v_{x''}=
+    -v_z\sin\theta+v_{x'}\cos\theta=
+    v_x\cos\theta\cos\phi+
+    v_y\cos\theta\sin\phi-
+    v_z\sin\theta
+$$
+$$
+    v_{y'}=
+    -v_x\sin\phi+v_y\cos\phi
+$$
+
+そのため、この逆変換を求めると
+
+$$
+    v_x=v_{x''}\cos\theta\cos\phi
+    -v_{y'}\sin\phi+v_{z'}\sin\theta\cos\phi
+$$
+$$
+    v_y=v_{x''}\cos\theta\sin\phi
+    +v_{y'}\cos\phi+v_{z'}\sin\theta\sin\phi
+$$
+$$
+    v_z=-v_{x''}\sin\theta+v_{z'}\cos\theta
+$$
+
+というようになるため、$v_{z'}=v_r、v_{x''}=v_{r_\theta}、v_{y'}= v_{r_\phi}$ として見比べてみると以下のようになっていることが予想される。
 
 $$
     v_r=
