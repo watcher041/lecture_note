@@ -22,25 +22,7 @@ $$
     y=r\sin\theta
 $$
 
-この関係式というのは、座標を回転させたときに得られる変換式の一つの応用例となっている。実際、原点Oを軸に座標系 $(x,y)$ を角度 $\theta$ だけ回転させて座標系 $(X,Y)$ に変換した際、
-
-<p align="center">
-    <img width="50%" src="images/rotate_coordinate.png">
-</p>
-
-$$
-    X=x\cos\theta+y\sin\theta、
-    Y=-x\sin\theta+y\cos\theta
-$$
-
-となるが、この逆変換を求めると
-
-$$
-    x=X\cos\theta-Y\sin\theta、
-    y=X\sin\theta+Y\cos\theta
-$$
-
-であるため、$X=r,Y=r_\theta=0$ とすると極座標の形になること分かる。このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
+このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
 
 $$
     v_x=
@@ -55,7 +37,25 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、回転座標の逆変換の式と見比べてみると以下のようになっているものと予想される。
+となるが、これは座標を回転させたときに得られる逆変換と同じものとなっている。実際、原点を軸に座標系 $(v_x,v_y)$ を角度 $\theta$ だけ回転させて座標系 $(v_r,v_{r_\theta})$ に変換した場合、
+
+<p align="center">
+    <img width="30%" src="images/2d_velocity_rotate.png">
+</p>
+
+$$
+    v_r=v_x\cos\theta+v_y\sin\theta、
+    v_{r_\theta}=-v_x\sin\theta+v_y\cos\theta
+$$
+
+となるが、この逆変換を求めると
+
+$$
+    v_x=v_r\cos\theta-v_{r_\theta}\sin\theta、
+    v_y=v_r\sin\theta+v_{r_\theta}\cos\theta
+$$
+
+であるため、先ほどの速度の関係式と見比べてみると以下のようになっているものと予想される。
 
 $$
     v_r=
