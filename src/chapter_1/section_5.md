@@ -22,7 +22,26 @@ $$
     y=r\sin\theta
 $$
 
-このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
+
+これは座標を回転させたときに得られる変換式と同じものとなっている。実際、原点を軸に座標系 $(x,y)$ を角度 $\alpha$ だけ回転させて座標系 $(x',y')$ に変換した場合、
+
+<p align="center">
+    <img width="30%" src="images/2d_r_rotate.png">
+</p>
+
+$$
+    x'=x\cos\alpha+y\sin\alpha、
+    y'=-x\sin\alpha+y\cos\alpha
+$$
+
+となるが、この逆変換を求めると
+
+$$
+    x=x'\cos\alpha-y'\sin\alpha、
+    y=x'\sin\alpha+y'\cos\alpha
+$$
+
+であるため、$x'=r、y'=r_\theta=0、\alpha=\theta$ というように質点と同じ回転をする座標系で見てみると、同じ形になることが分かる。このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
 
 $$
     v_x=
@@ -37,25 +56,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、これは座標を回転させたときに得られる変換式と同じものとなっている。実際、原点を軸に座標系 $(v_x,v_y)$ を角度 $\theta$ だけ回転させて座標系 $(v_x',v_y')$ に変換した場合、
-
-<p align="center">
-    <img width="30%" src="images/2d_velocity_rotate.png">
-</p>
-
-$$
-    v_x'=v_x\cos\theta+v_y\sin\theta、
-    v_y'=-v_x\sin\theta+v_y\cos\theta
-$$
-
-となるが、この逆変換を求めると
-
-$$
-    v_x=v_x'\cos\theta-v_y'\sin\theta、
-    v_y=v_x'\sin\theta+v_y'\cos\theta
-$$
-
-であるため、$v_x'=v_r、v_y'=v_{r_\theta}$ として先ほどの速度の関係式と見比べてみると以下のようになっているものと予想される。
+となるが、この形は以下のように置くと先ほどの逆変換の式に相当していることが予想される。
 
 $$
     v_r=
@@ -351,9 +352,59 @@ $$
     z=r\cos\theta
 $$
 
-であるが、
+であるが、これも3次元回転座標系の変換式と類似したものとなっている。実際、まず以下の図のように $z$ 軸を中心に角度 $\alpha$ だけ回転させると
 
-となることから、 $z''=r、x''=r_\theta=0、y''=r_\phi=0$ とすると極座標の変換になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
+<p align="center">
+    <img width="40%" src="images/3d_r_xy_rotate.png">
+</p>
+
+$$
+    x'=x\cos\alpha+y\sin\alpha、
+    y'=-x\sin\alpha+y\cos\alpha、
+    z=z
+$$
+
+というような変換になる。そして、$y'$ 軸を中心に角度 $\beta$ だけ回転させると以下のような変換になる。
+
+<p align="center">
+    <img width="40%" src="images/3d_r_xz_rotate.png">
+</p>
+
+$$
+    z'=
+    z\cos\beta+x'\sin\beta=
+    x\sin\beta\cos\alpha+
+    y\sin\beta\sin\alpha+
+    z\cos\beta
+
+$$
+$$
+    x''=
+    -z\sin\beta+x'\cos\beta=
+    x\cos\beta\cos\alpha+
+    y\cos\beta\sin\alpha-
+    z\sin\beta
+$$
+$$
+    y'=
+    -x\sin\alpha+y\cos\alpha
+$$
+
+そのため、この逆変換を求めると
+
+$$
+    x=x''\cos\beta\cos\alpha
+    -y'\sin\alpha+z'\sin\beta\cos\alpha
+$$
+$$
+    y=x''\cos\beta\sin\alpha
+    +y'\cos\alpha+z'\sin\beta\sin\alpha
+$$
+$$
+    z=-x''\sin\beta+z'\cos\beta
+$$
+
+というようになるため、$z'=r、x''=r_\theta=0、y'= r_\phi=0、\alpha=\phi、\beta=\theta$ として見比べてみると同じ形になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
 
 $$
     v_x=
@@ -389,59 +440,7 @@ $$
     \cos\theta
 $$
 
-となるが、これも3次元回転座標系の逆変換の式と同じ形をしている。実際、まず以下の図のように $v_z$ 軸を中心に角度 $\phi$ だけ回転させると
-
-<p align="center">
-    <img width="40%" src="images/3d_v_xy_rotate.png">
-</p>
-
-$$
-    v_{x'}=v_x\cos\phi+v_y\sin\phi、
-    v_{y'}=-v_x\sin\phi+v_y\cos\phi、
-    v_z=v_z
-$$
-
-というような変換になる。そして、$v_{y'}$ 軸を中心に角度 $\theta$ だけ回転させると以下のような変換になる。
-
-<p align="center">
-    <img width="40%" src="images/3d_v_xz_rotate.png">
-</p>
-
-$$
-    v_{z'}=
-    v_z\cos\theta+v_{x'}\sin\theta=
-    v_x\sin\theta\cos\phi+
-    v_y\sin\theta\sin\phi+
-    v_z\cos\theta
-
-$$
-$$
-    v_{x''}=
-    -v_z\sin\theta+v_{x'}\cos\theta=
-    v_x\cos\theta\cos\phi+
-    v_y\cos\theta\sin\phi-
-    v_z\sin\theta
-$$
-$$
-    v_{y'}=
-    -v_x\sin\phi+v_y\cos\phi
-$$
-
-そのため、この逆変換を求めると
-
-$$
-    v_x=v_{x''}\cos\theta\cos\phi
-    -v_{y'}\sin\phi+v_{z'}\sin\theta\cos\phi
-$$
-$$
-    v_y=v_{x''}\cos\theta\sin\phi
-    +v_{y'}\cos\phi+v_{z'}\sin\theta\sin\phi
-$$
-$$
-    v_z=-v_{x''}\sin\theta+v_{z'}\cos\theta
-$$
-
-というようになるため、$v_{z'}=v_r、v_{x''}=v_{r_\theta}、v_{y'}= v_{r_\phi}$ として見比べてみると以下のようになっていることが予想される。
+となるが、以下のようにすると先ほどの逆変換と同じ形になっていることが分かる。
 
 $$
     v_r=
