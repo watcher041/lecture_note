@@ -1,22 +1,22 @@
 
 ## 見かけの力（慣性力）
 
-前回までは極座標を扱ってきたが、今度は一般的な回転座標だとどうなるかを見ていくことにする。まず原点を軸に座標系 $({x'},{y'})$ を角度 $\alpha$ だけ回転させて座標系 $({x'}',{y'}')$ に変換したものとすると
+前回までは極座標を扱ってきたが、今度は一般的な回転座標だとどうなるかを見ていくことにする。まず原点を軸に座標系 $({x'},{y'})$ を角度 $\alpha$ だけ回転させて座標系 $({x'},{y'})$ に変換したものとすると
 
 <p align="center">
     <img width="50%" src="images/2d_r_rotate.png">
 </p>
 
 $$
-    {x'}'={x'}\cos\alpha+{y'}\sin\alpha、
-    {y'}'=-{x'}\sin\alpha+{y'}\cos\alpha
+    {x'}={x'}\cos\alpha+{y'}\sin\alpha、
+    {y'}=-{x'}\sin\alpha+{y'}\cos\alpha
 $$
 
 という変換式が成り立つ。そのため、逆変換を求めると
 
 $$
-    {x'}={x'}'\cos\alpha-{y'}'\sin\alpha、
-    {y'}={x'}'\sin\alpha+{y'}'\cos\alpha
+    {x'}={x'}\cos\alpha-{y'}\sin\alpha、
+    {y'}={x'}\sin\alpha+{y'}\cos\alpha
 $$
 
 であるから、速度を求めると以下の通りとなる。ここで、$\omega_\alpha=\dot{\alpha}$ と置いている。
