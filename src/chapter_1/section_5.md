@@ -22,26 +22,7 @@ $$
     y=r\sin\theta
 $$
 
-
-これは座標を回転させたときに得られる変換の一例となっている。実際、原点を軸に座標系 $(x,y)$ を角度 $\alpha$ だけ回転させて座標系 $(x',y')$ に変換した場合、
-
-<p align="center">
-    <img width="30%" src="images/2d_r_rotate.png">
-</p>
-
-$$
-    x'=x\cos\alpha+y\sin\alpha、
-    y'=-x\sin\alpha+y\cos\alpha
-$$
-
-となるが、この逆変換を求めると
-
-$$
-    x=x'\cos\alpha-y'\sin\alpha、
-    y=x'\sin\alpha+y'\cos\alpha
-$$
-
-であるため、$x'=r、y'=r_\theta=0、\alpha=\theta$ というように質点と同じ回転をする座標系で見てみると、同じ形になることが分かる。このことを踏まえたうえで、まず各方向の速度を極座標であらわすと
+この関係を微分することで以下のように速度が求められる。
 
 $$
     v_x=
@@ -56,16 +37,7 @@ $$
     r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
 $$
 
-となるが、この形は以下のように置くと先ほどの逆変換の式に相当していることが予想される。
-
-$$
-    v_r=
-    \frac{\mathrm{d}r}{\mathrm{d}t}、
-    v_{r_\theta}=
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-$$
-
-この形については、以下の図のように各方向の微小変化を見ることで正しいものと確認できる。
+ここで速度がある時間での位置の変化ということなので、$r,\theta$ が変化することでどうなるか見てみると以下の図の通りとなる。
 
 <p align="center">
     <img height="150px"  
@@ -74,11 +46,85 @@ $$
 
 </p>
 
-次に、加速度についても同様に
+このことから、$r,\theta$ に対する速度 $v_r,v_{r_\theta}$ というのは次のようになっていることが予想される。
+
+$$
+    v_r=
+    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    v_{r_\theta}=
+    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+$$
+
+確認のため、先ほど微分した式を
+
+$$
+    v_x=
+    v_r\cos\theta-
+    v_{r_\theta}\sin\theta、
+    v_y=
+    v_r\sin\theta+
+    v_{r_\theta}\cos\theta
+$$
+
+として、$v_r,v_{r_\theta}$ を求めると
+
+$$
+    v_r=
+    v_x\cos\theta+
+    v_y\sin\theta、
+    v_{r_\theta}=
+    -v_x\sin\theta+
+    v_y\cos\theta
+$$
+
+となることから図で関係を見ると、先ほどの図と同じ位置関係にあることが分かる。
+
+<p align="center">
+    <img height="200px"  
+        style="background-color:white;"
+        src="images/2d_v_rotate.png">
+
+</p>
+
+そしてさらに速度を微分することで加速度も
 
 $$
     a_x=
-    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
+    \frac{\mathrm{d}v_x}{\mathrm{d}t}=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \cos\theta-
+    2\frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \sin\theta-
+    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \sin\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2
+    \cos\theta
+$$
+$$
+    a_y=
+    \frac{\mathrm{d}v_y}{\mathrm{d}t}=
+    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \sin\theta+
+    2\frac{\mathrm{d}r}{\mathrm{d}t}
+    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \cos\theta+
+    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    \cos\theta-
+    r
+    \left(
+        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \right)^2
+    \sin\theta
+$$
+
+となるが、こちらも速度と同じ形で
+
+$$
+    a_x=
     \left[
         \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
         r
@@ -97,7 +143,6 @@ $$
 $$
 $$
     a_y=
-    \frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
     \left[
         \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
         r
@@ -115,7 +160,7 @@ $$
     \cos\theta
 $$
 
-となるため、こちらも回転座標の逆変換の式と見比べると以下のようになっていることが分かる。
+と整理することができるため、以下の関係式を満たすことが分かる。
 
 $$
     a_r=
@@ -160,7 +205,7 @@ $$
     \right)=-F_x\sin\theta+F_y\cos\theta
 $$
 
-となるが、このときの右辺が回転座標の変換式（逆変換ではない）と見比べて
+となるが、このとき力に関しても速度や加速度と同じように
 
 $$
     F_r=F_x\cos\theta+F_y\sin\theta、
