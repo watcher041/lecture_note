@@ -397,59 +397,7 @@ $$
     z=r\cos\theta
 $$
 
-であるが、これも3次元回転座標系への変換の一例となっている。実際、まず以下の図のように $z$ 軸を中心に角度 $\alpha$ だけ回転させると
-
-<p align="center">
-    <img width="40%" src="images/3d_r_xy_rotate.png">
-</p>
-
-$$
-    x'=x\cos\alpha+y\sin\alpha、
-    y'=-x\sin\alpha+y\cos\alpha、
-    z=z
-$$
-
-というような変換になる。そして、$y'$ 軸を中心に角度 $\beta$ だけ回転させると以下のような変換になる。
-
-<p align="center">
-    <img width="40%" src="images/3d_r_xz_rotate.png">
-</p>
-
-$$
-    z'=
-    z\cos\beta+x'\sin\beta=
-    x\sin\beta\cos\alpha+
-    y\sin\beta\sin\alpha+
-    z\cos\beta
-
-$$
-$$
-    x''=
-    -z\sin\beta+x'\cos\beta=
-    x\cos\beta\cos\alpha+
-    y\cos\beta\sin\alpha-
-    z\sin\beta
-$$
-$$
-    y'=
-    -x\sin\alpha+y\cos\alpha
-$$
-
-そのため、この逆変換を求めると
-
-$$
-    x=x''\cos\beta\cos\alpha
-    -y'\sin\alpha+z'\sin\beta\cos\alpha
-$$
-$$
-    y=x''\cos\beta\sin\alpha
-    +y'\cos\alpha+z'\sin\beta\sin\alpha
-$$
-$$
-    z=-x''\sin\beta+z'\cos\beta
-$$
-
-というようになるため、$z'=r、x''=r_\theta=0、y'= r_\phi=0、\alpha=\phi、\beta=\theta$ として見比べてみると同じ形になっていることが分かる。そのため、速度なども同じ形で変換されることになる。それを踏まえたうえで、まず各成分の速度を求めると
+であるため、これらを微分して速度を求めると以下の通りとなる。
 
 $$
     v_x=
@@ -485,7 +433,15 @@ $$
     \cos\theta
 $$
 
-となるが、以下のようにすると先ほどの逆変換と同じ形になっていることが分かる。
+ここで、$r,\theta,\phi$ の変化をしたときは以下の図のようになる。
+
+<p align="center">
+    <img height="200px"  
+        style="background-color:white;"
+        src="images/3d_polar_dr.png">
+</p>
+
+このことから、各成分に対する速度 $v_r,v_{r_\theta},v_{r_\phi}$ は
 
 $$
     v_r=
@@ -497,13 +453,134 @@ $$
     \frac{\mathrm{d}\phi}{\mathrm{d}t}
 $$
 
-これらの速度は、以下の図のように微小変化を見ることで正しいことが分かる。
+となることから、先ほどの速度の式に当てはめると
+
+$$
+    v_x=
+    v_{r_\theta}
+    \cos\theta\cos\phi-
+    v_{r_\phi}
+    \sin\phi+
+    v_r
+    \sin\theta\cos\phi
+$$
+$$
+    v_y=
+    v_{r_\theta}
+    \cos\theta\sin\phi+
+    v_{r_\phi}
+    \cos\phi+
+    v_r
+    \sin\theta\sin\phi
+$$
+$$
+    v_z=
+    -v_{r_\theta}
+    \sin\theta+
+    v_r
+    \cos\theta
+$$
+
+となる。このままだとよくわからないので、少し整理して
+
+$$
+    v_x=
+    -
+    v_{r_\phi}
+    \sin\phi+
+    (
+        v_{r_\theta}
+        \cos\theta+
+        v_r
+        \sin\theta
+    )
+    \cos\phi
+$$
+$$
+    v_y=
+    v_{r_\phi}
+    \cos\phi+
+    (
+        v_{r_\theta}
+        \cos\theta+
+        v_r
+        \sin\theta
+    )
+    \sin\phi
+$$
+$$
+    v_z=
+    -v_{r_\theta}
+    \sin\theta+
+    v_r
+    \cos\theta
+$$
+
+というようにすると、
+
+$$
+    v_{x,y}=
+    v_{r_\theta}
+    \cos\theta+
+    v_r
+    \sin\theta
+$$
+
+とおくことで、以下のような関係式になっていることが分かる。
+
+$$
+    v_x=
+    -
+    v_{r_\phi}
+    \sin\phi+
+    v_{x,y}
+    \cos\phi、
+    v_y=
+    v_{r_\phi}
+    \cos\phi+
+    v_{x,y}
+    \sin\phi
+$$
+$$
+    v_z=
+    -v_{r_\theta}
+    \sin\theta+
+    v_r
+    \cos\theta、
+    v_{x,y}=
+    v_{r_\theta}
+    \cos\theta+
+    v_r
+    \sin\theta
+$$
+
+また、各関係式は以下の図のように各平面上において二次元と同じようなものになっている。
 
 <p align="center">
-    <img height="200px"  
+    <img height="150px"  
         style="background-color:white;"
-        src="images/3d_polar_dr.png">
+        src="images/3d_phi_rotate.png">
+    <img height="150px"  
+        style="background-color:white;"
+        src="images/3d_theta_rotate.png">
 </p>
+
+ここで、$v_{x,y}$ については $r\sin\theta$ が動径となっているので
+
+$$
+    \frac{\mathrm{d}}{\mathrm{d}t}(r\sin\theta)=
+    v_{r_\theta}
+    \cos\theta+
+    v_r
+    \sin\theta=
+    v_{x,y}
+$$
+
+というように式が成り立つことも確認できる。
+
+
+
+
 
 そして、加速度についても
 
