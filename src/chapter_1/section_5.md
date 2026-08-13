@@ -180,7 +180,18 @@ $$
     {\mathrm{d}t^2}
 $$
 
-そのため、運動方程式は
+また、先ほどの速度と同じように加速度においても
+
+$$
+    a_r=
+    a_x\cos\theta+
+    a_y\sin\theta、
+    a_{r_\theta}=
+    -a_x\sin\theta+
+    a_y\cos\theta
+$$
+
+が成立することから、運動方程式は
 
 $$
     m\left[
@@ -441,7 +452,7 @@ $$
         src="images/3d_polar_dr.png">
 </p>
 
-このことから、各成分に対する速度 $v_r,v_{r_\theta},v_{r_\phi}$ は
+このことから、$r,\theta,\phi$ に対する速度 $v_r,v_{r_\theta},v_{r_\phi}$ は
 
 $$
     v_r=
