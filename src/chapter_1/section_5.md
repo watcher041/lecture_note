@@ -492,91 +492,88 @@ $$
     \cos\theta
 $$
 
-となる。このままだとよくわからないので、少し整理して
+となる。そのため、これらの式から $v_r,v_{r_\theta},v_{r_\phi}$ と求めると以下の通りになる。
 
 $$
-    v_x=
-    -
-    v_{r_\phi}
-    \sin\phi+
+    v_r=
+    v_x\sin\theta\cos\phi+
+    v_y\sin\theta\sin\phi+
+    v_z\cos\theta
+$$
+$$
+    v_{r_\theta}=
+    v_x\cos\theta\cos\phi+
+    v_y\cos\theta\sin\phi-
+    v_z\sin\theta
+$$
+$$
+    v_{r_\phi}=
+    -v_x\sin\phi+v_y\cos\phi
+$$
+
+ただ、このままだとよく分からないので、少し整理して
+
+$$
+    v_r=
+    v_z\cos\theta+
     (
-        v_{r_\theta}
-        \cos\theta+
-        v_r
-        \sin\theta
+        v_x\cos\phi+
+        v_y\sin\phi
     )
-    \cos\phi
+    \sin\theta
 $$
 $$
-    v_y=
-    v_{r_\phi}
-    \cos\phi+
+    v_{r_\theta}=
+    -v_z\sin\theta+
     (
-        v_{r_\theta}
-        \cos\theta+
-        v_r
-        \sin\theta
+        v_x\cos\phi+
+        v_y\sin\phi
     )
-    \sin\phi
-$$
-$$
-    v_z=
-    -v_{r_\theta}
-    \sin\theta+
-    v_r
     \cos\theta
 $$
+$$
+    v_{r_\phi}=
+    -v_x\sin\phi+v_y\cos\phi
+$$
 
-というようにすると、
+というようにおき、括弧内の式を
 
 $$
     v_{x,y}=
-    v_{r_\theta}
-    \cos\theta+
-    v_r
-    \sin\theta
+    v_x\cos\phi+
+    v_y\sin\phi
 $$
 
-とおくことで、以下のような関係式になっていることが分かる。ただし、ここで $\bm{v}=\bm{v}_1+\bm{v}_2$ となっていることに注意。
+とすることで、以下のように各行それぞれ $\theta,\phi$ に対する変換式になっていることが分かる。
 
 $$
-    v_x=
-    -
-    v_{r_\phi}
-    \sin\phi+
-    v_{x,y}
-    \cos\phi、
-    v_y=
-    v_{r_\phi}
-    \cos\phi+
-    v_{x,y}
-    \sin\phi
+    v_r=
+    v_z\cos\theta+
+    v_{x,y}\sin\theta、
+    v_{r_\theta}=
+    -v_z\sin\theta+
+    v_{x,y}\cos\theta
 $$
 $$
-    v_z=
-    -v_{r_\theta}
-    \sin\theta+
-    v_r
-    \cos\theta、
     v_{x,y}=
-    v_{r_\theta}
-    \cos\theta+
-    v_r
-    \sin\theta
+    v_x\cos\phi+
+    v_y\sin\phi、
+    v_{r_\phi}=
+    -v_x\sin\phi+
+    v_y\cos\phi
 $$
-
-また、各関係式は以下の図のように各平面上において二次元と同じようなものになっている。
 
 <p align="center">
     <img height="150px"  
         style="background-color:white;"
-        src="images/3d_phi_rotate.png">
+        src="images/3d_theta_rotate.png">
+    　
     <img height="150px"  
         style="background-color:white;"
-        src="images/3d_theta_rotate.png">
+        src="images/3d_phi_rotate.png">
 </p>
 
-ここで、$v_{x,y}$ については $r\sin\theta$ が動径となっているので
+ここで、$v_{x,y}$ については右図から $r\sin\theta$ が動径となっているため、試しに微分をとってみると
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}(r\sin\theta)=
@@ -587,7 +584,11 @@ $$
     v_{x,y}
 $$
 
-というように式が成り立つことも確認できる。
+というように同じものとなっていることが分かる。
+
+
+
+
 
 
 
