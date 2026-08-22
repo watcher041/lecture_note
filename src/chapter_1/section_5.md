@@ -1140,6 +1140,7 @@ $$
 
 $$
     \bm{\omega}=
+    \frac{1}{r^2}(\bm{r}\times\bm{v})=
     \frac{\bm{L}}{mr^2}
 $$
 
@@ -1192,6 +1193,23 @@ $$
     \omega_{r_\phi}=\omega_\theta
 $$
 
-この両辺に $mr^2$ をかけて角速度での関係式と比べて合致していることがわかり、改めて $\bm{L}=I\bm{\omega}$ となることが確認できる。
+これらの式を改めて $\omega_x,\omega_y,\omega_z$ に代入すると
+
+$$
+    \omega_x=
+    \omega_{r_\theta}\cos\theta\cos\phi
+    -\omega_{r_\phi}\sin\phi
+$$
+$$
+    \omega_y=
+    \omega_{r_\theta}\cos\theta\sin\phi+
+    \omega_{r_\phi}\cos\phi
+$$
+$$
+    \omega_z=
+    -\omega_{r_\theta}\sin\theta
+$$
+
+というように、$\omega_r=0$ であることに気を付けると変換と逆変換の形になっていることが確認できる。 
 
 　以上のように、回転運動を取り扱うには通常の運動方程式とは異なる方程式を利用する必要があることが分かる。ただ、このとき直交座標にはなかった遠心力なるものが極座標系において現れたため、こちらに関して述べていくことにする。
