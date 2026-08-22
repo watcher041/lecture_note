@@ -972,15 +972,6 @@ $$
     I=mr^2
 $$
 
-
-
-
-
-
-
-
-
-
 に対応しているか見てみよう。まず、角運動量が直交座標において
 
 $$
@@ -1137,24 +1128,42 @@ $$
     \bm{N}=\bm{r}\times\bm{F}
 $$
 
-が成り立つことが分かる。あるいは角速度 $\bm{\omega}$ に関しては二次元と同じように $\bm{L}=I\bm{\omega}=mr^2\bm{\omega}$ とすると
+が成り立つことが分かる。また、角速度 $\bm{\omega}$ に関しては 
+
+$$
+    \bm{L}=
+    m(\bm{r}\times\bm{v})=
+    mr^2\bm{\omega}
+$$
+
+の関係から以下の式から求められることが予想される。
+
+$$
+    \bm{\omega}=
+    \frac{\bm{L}}{mr^2}
+$$
+
+そのため、この式から各成分の角速度を求めると
 
 $$
     \omega_x=
+    \frac{L_x}{mr^2}=
     -\omega_{\theta}\sin\phi-
     \omega_{\phi}\sin\theta\cos\theta\cos\phi
 $$
 $$
     \omega_y=
+    \frac{L_y}{mr^2}=
     \omega_{\theta}\cos\phi-
     \omega_{\phi}\sin\theta\cos\theta\sin\phi
 $$
 $$
     \omega_z=
+    \frac{L_z}{mr^2}=
     \omega_{\phi}\sin^2\theta
 $$
 
-となるが、これを角速度の変換式
+となるが、角速度に対しても速度と同じように
 
 $$
     \omega_r=
@@ -1174,7 +1183,7 @@ $$
     -\omega_x\sin\phi+\omega_y\cos\phi
 $$
 
-に代入すると、以下の式が得られる。
+が成り立つことから、以下の式が得られる。
 
 $$
     \omega_r=0、
