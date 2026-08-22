@@ -965,9 +965,21 @@ $$
 $$
     \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
     \bm{N}、
-    \bm{L}=\bm{r}\times\bm{p}、
-    \bm{N}=\bm{r}\times\bm{F}
+    \bm{N}=\bm{r}\times\bm{F}、
+    \bm{L}=
+    m(\bm{r}\times\bm{v})=
+    I\bm{\omega}、
+    I=mr^2
 $$
+
+
+
+
+
+
+
+
+
 
 に対応しているか見てみよう。まず、角運動量が直交座標において
 
