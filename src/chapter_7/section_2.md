@@ -2,26 +2,34 @@
 ## Lorentz変換
 
 先ほど導いた変換式を改めて記載してみると
+
 $$
     x'=\gamma(x-Vt)、y'=y、z'=z、
     t'=\gamma\left(t-\frac{V}{c^2}x\right)　
     \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
 $$
+
 となるわけだが、これらが何を意味しているのか考えてみることにする。従来から変換式としてはGalilei変換が利用されており
+
 $$
     x'=x-Vt、y'=y、z'=z、t'=t
 $$
+
 という形であるが、 $V/c\to 0$ と観測者が光速に比べて低速で動いている場合は近似的にこの形になることが分かる。そのため、変換式を以下のように変形してみる。
+
 $$
     x'=\gamma(x-\beta ct)、y'=y、z'=z、
     ct'=\gamma\left(ct-\beta x\right)　
     \left(\gamma=\frac{1}{\sqrt{1-\beta^2}}、\beta=\frac{V}{c}\right)
 $$
+
 すると、$ct$ が $x$ と同じような座標の一部としてみなせるので $w$ として
+
 $$
     x'=\gamma(x-\beta w)、
     w'=\gamma\left(w-\beta x\right)
 $$
+
 とおき、試しに $x$ と $w$ との関係を座標で描いてみると以下の図の通りになる。
 
 <p align="center">
@@ -29,32 +37,53 @@ $$
 </p>
 
 この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w'$ 軸とのなす角をそれぞれ$\theta$、$\phi$とすると
+
 $$
     w=w'\sin\phi+x'\sin\theta、
     x=w'\cos\phi+x'\cos\theta
 $$
+
 となるため、Lorentz変換を逆変換したもの
+
 $$
     w=\gamma\left(w'+\beta x'\right)、
     x=\gamma(x'+\beta w')
     
 $$
+
 と比較すると以下の関係が成り立つことが予想される。
+
 $$
     \sin\phi=\gamma、
     \sin\theta=\gamma\beta、
     \cos\phi=\gamma\beta、
     \cos\theta=\gamma
 $$
-しかし、これでは三角関数の公式を満たさない。
+
+しかし、これだと三角関数の公式を満たさない。
+
 $$
     \sin^2\theta+\cos^2\theta=
-    \frac{\beta^2+1}{1-\beta^2}\neq 1、
+    \frac{1+\beta^2}{1-\beta^2}\neq 1、
     \sin^2\phi+\cos^2\phi=
     \frac{1+\beta^2}{1-\beta^2}\neq 1
 $$
 
-そこで分子と分母の符号が反対であることを踏まると、双曲線関数であれば等式が成り立つことが分かる。実際、先ほどの三角関数と同じように
+ところが、ここでもし分子の $\beta^2$ の符号が反転すると
+
+$$
+    \gamma^2-(\gamma\beta)^2=
+    \frac{1-\beta^2}{1-\beta^2}=
+    1
+$$
+
+というようになることから三角関数ではなく、双曲線関数の関係式
+
+$$
+    \cosh^2\theta-\sinh^2\theta=1
+$$
+
+を満たすものと思われる。実際、先ほどの三角関数と同じように
 $$
     \sinh\phi=\gamma、
     \sinh\theta=\gamma\beta、
