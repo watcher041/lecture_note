@@ -207,8 +207,7 @@ $$
 となり、以下の関係式が得られる。
 
 $$
-    V\left(t_{\rm B}-t_{\rm A}\right)=
-    \beta^2 \Delta x、
+    V\Delta t=\beta^2 \Delta x、
     \Delta x'=\sqrt{1-\frac{V^2}{c^2}}\Delta x<\Delta x
 $$
 
