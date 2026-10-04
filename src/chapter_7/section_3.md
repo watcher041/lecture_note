@@ -1,18 +1,59 @@
 
 ## 相対論的力学
 
-前回までの議論によりLorentz変換を満たすことが確認できたが、そのうえで改めて質点の運動がどうなるかを見てみることにしよう。速度の式を求めてみると
+前回までのことをふまえて改めて質点の運動がどうなるかを見てみることにしよう。まず、K' 系においての速度は
+
+$$
+    v_x'=
+    \frac{{\mathrm d}x'}{{\mathrm d}t'}、
+    v_y'=
+    \frac{{\mathrm d}y'}{{\mathrm d}t'}、
+    v_z'=
+    \frac{{\mathrm d}z'}{{\mathrm d}t'}
+$$
+
+となり、 K 系においての速度は
+
+$$
+    v_x=
+    \frac{{\mathrm d}x}{{\mathrm d}t}、
+    v_y=
+    \frac{{\mathrm d}y}{{\mathrm d}t}、
+    v_z=
+    \frac{{\mathrm d}z}{{\mathrm d}t}
+$$
+
+であるものとする。そうすると、K' での速度はLorentz変換
+
+$$
+    x'=\gamma(x-Vt)、y'=y、z'=z、
+    t'=\gamma\left(t-\frac{V}{c^2}x\right)　
+    \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
+$$
+
+を $t$ で微分すすことで求められる
+
+$$
+    \frac{{\mathrm d}x'}{{\mathrm d}t}=
+    \gamma(v_x-V)、
+    \frac{{\mathrm d}y'}{{\mathrm d}t}=v_y、
+    \frac{{\mathrm d}y'}{{\mathrm d}t}=v_z、
+    \frac{{\mathrm d}t'}{{\mathrm d}t}=
+    \gamma\left(1-\frac{V}{c^2}v_x\right)
+$$
+
+
+速度の式を求めてみると以下の通りとなる。
 
 $$
     v_x'=\frac{v_x-V}{1-\frac{v_xV}{c^2}}、
     v_y'=\frac{v_y}{
     \gamma\left(1-\frac{v_xV}{c^2}\right)}、
     v_z'=\frac{v_z}{
-    \gamma\left(1-\frac{v_xV}{c^2}\right)}、
-    v'_w=c
+    \gamma\left(1-\frac{v_xV}{c^2}\right)}
 $$
 
-となるが、ここで $v_x'$ に着目すると分母が
+となるが、ここで $v_x'$ に着目すると分母（それ以外にも同じ項目が時間の影響で出てきている）が
 
 $$
     1-\frac{v_xV}{c^2}=0
@@ -39,12 +80,22 @@ $$
     \beta^2v_x
 $$
 
-となる。これは二つの地点を同時に測った時の関係式となっているため、もしこれが先ほど質点においても成り立っているとすると K' 系で質点が同時に二つの地点にいることになり矛盾する。
+となる。これは二つの地点を同時に測った時の関係式となっているため、もしこれが先ほど質点においても成り立っているとすると K' 系で質点が同時に二つの地点にいることになり矛盾する。もう一つ、時間の変換式でも同じ項目が出てきているため、
 
+$$
+    V\frac{{\mathrm d}t'}{{\mathrm d}t}=
+    \gamma\left(V-\beta^2v_x\right)
+$$
 
+としてみると、仮に 右辺が負の値でも時間が逆行してしまうことになるため矛盾している。このことから、右辺については正の値になることになる。
 
+$$
+    V-\beta^2v_x>0
+    \rightarrow
+    1>\frac{Vv_x}{c^2}
+$$
 
-
+また、$\gamma$ が虚数にならないことから $c>V$ であることをふまえると、$v_x<c$ になることが予想される。
 
 
 
