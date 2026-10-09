@@ -39,8 +39,8 @@ $$
 この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w'$ 軸とのなす角をそれぞれ$\theta$、$\phi$とすると
 
 $$
-    w=w'\sin\phi+x'\sin\theta、
-    x=w'\cos\phi+x'\cos\theta
+    w=w'\cos\phi+x'\sin\theta、
+    x=w'\sin\phi+x'\cos\theta
 $$
 
 となるため、Lorentz変換を逆変換したもの
@@ -54,9 +54,9 @@ $$
 と比較すると以下の関係が成り立つことが予想される。
 
 $$
-    \sin\phi=\gamma、
+    \cos\phi=\gamma、
     \sin\theta=\gamma\beta、
-    \cos\phi=\gamma\beta、
+    \sin\phi=\gamma\beta、
     \cos\theta=\gamma
 $$
 
@@ -86,9 +86,9 @@ $$
 を満たすものと思われる。実際、先ほどの三角関数と同じように
 
 $$
-    \sinh\phi=\gamma、
+    \cosh\phi=\gamma、
     \sinh\theta=\gamma\beta、
-    \cosh\phi=\gamma\beta、
+    \sinh\phi=\gamma\beta、
     \cosh\theta=\gamma
 $$
 
@@ -96,24 +96,26 @@ $$
 
 $$
     \cosh^2\theta-\sinh^2\theta=1、
-    \cosh^2\phi-\sinh^2\phi=-1
+    \cosh^2\phi-\sinh^2\phi=1
 $$
 
-そのため、Lonrentz変換は以下のように書けることになる。
+また、$\theta$ に関する式と $\phi$ に関する式を見比べてみると同じ値をしていることから単に
 
 $$
-    w=w'\sinh\phi+x'\sinh\theta、
-    (\sinh\phi=\gamma、
-    \sinh\theta=\gamma\beta)
-$$
-$$
-    x=w'\cosh\phi+x'\cosh\theta、
-    (\cosh\phi=\gamma\beta、
-    \cosh\theta=\gamma)
+    \sinh\theta=\gamma\beta、
+    \cosh\theta=\gamma、
+    \tanh\theta=\beta
 $$
 
-この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、角度 $\phi$ に関しては $\phi\to\infty$ であることから,
-$\beta\to 1\ (V\to c)$ というように観測者の速度が光速を上限とした値になっていると考えられる（ $\theta$ も $\beta$ に依存するため同じようになっているといえる）。
+と表すことができるため、Lonrentz変換は以下のように書けることになる。
+
+$$
+    w=w'\sinh\theta+x'\sinh\theta、
+    x=w'\cosh\theta+x'\cosh\theta
+$$
+
+この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、角度 $\theta$ に関しては $\theta\to\infty$ であることから,
+$\beta\to 1\ (V\to c)$ というように観測者の速度が光速を上限とした値になっていると考えられる。
 
 <p align="center">
     <img width="60%" src="images/hyperbola.png">

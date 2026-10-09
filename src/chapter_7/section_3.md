@@ -37,7 +37,7 @@ $$
     \frac{{\mathrm d}x'}{{\mathrm d}t}=
     \gamma(v_x-V)、
     \frac{{\mathrm d}y'}{{\mathrm d}t}=v_y、
-    \frac{{\mathrm d}y'}{{\mathrm d}t}=v_z、
+    \frac{{\mathrm d}z'}{{\mathrm d}t}=v_z、
     \frac{{\mathrm d}t'}{{\mathrm d}t}=
     \gamma\left(1-\frac{V}{c^2}v_x\right)
 $$
