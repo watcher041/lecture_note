@@ -110,8 +110,8 @@ $$
 と表すことができるため、Lonrentz変換は以下のように書けることになる。
 
 $$
-    w=w'\sinh\theta+x'\sinh\theta、
-    x=w'\cosh\theta+x'\cosh\theta
+    w=w'\cosh\theta+x'\sinh\theta、
+    x=w'\sinh\theta+x'\cosh\theta
 $$
 
 この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、角度 $\theta$ に関しては $\theta\to\infty$ であることから,
