@@ -92,7 +92,7 @@ $$
     \cosh\theta=\gamma
 $$
 
-としてみる（$\theta,\phi$ は）と、以下の関係式が得られる。
+としてみると、以下の関係式が得られる。
 
 $$
     \cosh^2\theta-\sinh^2\theta=1、
