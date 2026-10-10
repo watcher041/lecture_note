@@ -118,7 +118,7 @@ $$
     \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
     \bm{p}=m\bm{v}
 $$
-今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでにN.LwisとC.Tolmanの論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
+今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでに G.N.Lewis と R.C.Tolman の論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 $$
     m(\bm{v})=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
