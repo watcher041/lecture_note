@@ -1,7 +1,7 @@
 
 ## 相対論的力学
 
-前回までのことをふまえて改めて質点の運動がどうなるかを見てみることにしよう。まず、K' 系においての速度は
+前回までのことをふまえて、改めてLorentz変換を用いて質点の運動がどうなるかを見てみることにしよう。まず、K' 系においての速度は
 
 $$
     v_x'=
@@ -9,7 +9,10 @@ $$
     v_y'=
     \frac{{\mathrm d}y'}{{\mathrm d}t'}、
     v_z'=
-    \frac{{\mathrm d}z'}{{\mathrm d}t'}
+    \frac{{\mathrm d}z'}{{\mathrm d}t'}、
+    v_w'=
+    \frac{{\mathrm d}w'}{{\mathrm d}t'}、
+    (w'=ct')
 $$
 
 となり、 K 系においての速度は
@@ -20,7 +23,10 @@ $$
     v_y=
     \frac{{\mathrm d}y}{{\mathrm d}t}、
     v_z=
-    \frac{{\mathrm d}z}{{\mathrm d}t}
+    \frac{{\mathrm d}z}{{\mathrm d}t}、
+    v_w=
+    \frac{{\mathrm d}w}{{\mathrm d}t'}、
+     (w=ct)
 $$
 
 であるものとする。そうすると、K' での速度はLorentz変換
@@ -38,22 +44,27 @@ $$
     \gamma(v_x-V)、
     \frac{{\mathrm d}y'}{{\mathrm d}t}=v_y、
     \frac{{\mathrm d}z'}{{\mathrm d}t}=v_z、
+$$
+$$
+    \frac{{\mathrm d}w'}{{\mathrm d}t}=
+    \gamma\left(c-\beta v_x\right)
+    \rightarrow
     \frac{{\mathrm d}t'}{{\mathrm d}t}=
-    \gamma\left(1-\frac{V}{c^2}v_x\right)
+    \gamma\left(1-\frac{v_xV}{c^2}\right)
 $$
 
-
-速度の式を求めてみると以下の通りとなる。
+を利用して、速度の式を求めてみると以下の通りとなる。
 
 $$
     v_x'=\frac{v_x-V}{1-\frac{v_xV}{c^2}}、
     v_y'=\frac{v_y}{
     \gamma\left(1-\frac{v_xV}{c^2}\right)}、
     v_z'=\frac{v_z}{
-    \gamma\left(1-\frac{v_xV}{c^2}\right)}
+    \gamma\left(1-\frac{v_xV}{c^2}\right)}、
+    v_w'=c
 $$
 
-となるが、ここで $v_x'$ に着目すると分母（それ以外にも同じ項目が時間の影響で出てきている）が
+ここで $v_x'$ に着目すると分母（それ以外にも同じ項目が時間の影響で出てきている）が
 
 $$
     1-\frac{v_xV}{c^2}=0
