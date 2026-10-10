@@ -36,7 +36,7 @@ $$
     <img width="40%" src="images/minkofsky.png">
 </p>
 
-この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w$ 軸と $w'$ 軸とのなす角をそれぞれ $\theta$、$\phi$とすると
+この形を見ると斜交座標の形をしていることから仮に $x$ 軸と $x'$ 軸あるいは $w$ 軸と $w'$ 軸とのなす角をそれぞれ $\theta$、$\phi$ とすると
 
 $$
     w=w'\cos\phi+x'\sin\theta、
@@ -60,7 +60,7 @@ $$
     \cos\theta=\gamma
 $$
 
-しかし、これだと三角関数の公式を満たさない。
+しかし、これだと以下の三角関数の公式を満たさない上に $\beta<1$ から $\gamma>1$ と三角関数の範囲を超えてしまう。
 
 $$
     \sin^2\theta+\cos^2\theta=
@@ -83,7 +83,7 @@ $$
     \cosh^2\theta-\sinh^2\theta=1
 $$
 
-を満たすものと思われる。実際、先ほどの三角関数と同じように
+を満たすものと思われる。試しに、先ほどの三角関数と同じように
 
 $$
     \cosh\phi=\gamma、
@@ -92,29 +92,36 @@ $$
     \cosh\theta=\gamma
 $$
 
-としてみると、以下の関係式が成り立つことが分かる。
+としてみる（$\theta,\phi$ は）と、以下の関係式が得られる。
 
 $$
     \cosh^2\theta-\sinh^2\theta=1、
     \cosh^2\phi-\sinh^2\phi=1
 $$
 
-また、$\theta$ に関する式と $\phi$ に関する式を見比べてみると同じ形をしていることから単に
+また、$\theta$ に関する式と $\phi$ に関する式を見比べてみると
 
 $$
-    \sinh\theta=\gamma\beta、
-    \cosh\theta=\gamma、
-    \tanh\theta=\beta
+    \cosh\theta=\cosh\phi=\gamma、
+    \sinh\theta=\sinh\phi=\gamma\beta
 $$
 
-と表すことができるため、Lonrentz変換は以下のように書けることになる。
+と同じ値となっていることから $\phi=\theta=\alpha$  として
 
 $$
-    w=w'\cosh\theta+x'\sinh\theta、
-    x=w'\sinh\theta+x'\cosh\theta
+    \sinh\alpha=\gamma\beta、
+    \cosh\alpha=\gamma、
+    \tanh\alpha=\beta
 $$
 
-この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、角度 $\theta$ に関しては $\theta\to\infty$ であることから,
+と表すことができる。ここでの $\alpha$ は、図の上で $x$ 軸と $x'$ 軸が実際になす角度ではなく、以下で述べるように双曲線上で定まる角度(双曲角)である。これを用いると、Lorentz変換は以下のように書ける。
+
+$$
+    w=w'\cosh\alpha+x'\sinh\alpha、
+    x=w'\sinh\alpha+x'\cosh\alpha
+$$
+
+この変換自体は以下の図のように双曲線に沿って回転するものとなっており、通常の回転とは異なっていることが分かる。一例として $w'$ 軸が回転することで点線（漸近線）に近づいていき、やがて $w'$ 軸は $w=x$ の直線と一致する。このとき、$\alpha$ に関しては $\alpha\to\infty$ であることから,
 $\beta\to 1\ (V\to c)$ というように観測者の速度が光速を上限とした値になっていると考えられる。
 
 <p align="center">
@@ -213,4 +220,4 @@ $$
     \Delta x'=\sqrt{1-\frac{V^2}{c^2}}\Delta x<\Delta x
 $$
 
-このことから、K' で同時に測定した2地点も、K から見ると同時ではなく、その間に $\beta^2 \Delta x$ だけ余分に測定点が移動しており、その分 $\Delta x$ から引いて $\gamma$ をかけることで、K' と同じ長さの基準で見た値（Δx′）が短く見えてしまうという結果（**Lorentz収縮**）が得られる。
+このことから、K' で2地点を同時に測定しても、 K から見ると同時ではなく、測定の間に K′ が $\beta^2 \Delta x$ だけ移動している。この分を $\Delta x$ から引いて $\gamma$ をかけると、$\Delta x'=\Delta x/\gamma$ となり、K 系で静止している2地点間の長さ $\Delta x$ に比べ、K′ で測った長さ $\Delta x'$ は短く見える。この現象は**Lorentz収縮**と呼ばれている。
