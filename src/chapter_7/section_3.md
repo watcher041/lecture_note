@@ -120,11 +120,11 @@ $$
 $$
 今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでに G.N.Lewis と R.C.Tolman の論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 $$
-    m(\bm{v})=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    m=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 というようになるとされている。ここで $m_0$ は物体が静止しているときの質量としている。では、観測者ごとにどうなるかを見ていくと、まず質量に関して
 $$
-    m(\bm{v}')=
+    m'=
     \frac{m_0}{\sqrt{1-\frac{\bm{v'}^2}{c^2}}}
 $$
 であり、速度に関しては
@@ -145,7 +145,7 @@ $$
 $$
 となることから、以下のようになる。
 $$
-    m(\bm{v}')=
+    m'=
     \gamma
     \left(
         1-\frac{v_xV}{c^2}
@@ -155,8 +155,8 @@ $$
     }=
     \gamma\left(
         1-\frac{v_xV}{c^2}
-    \right) m(\bm{v})=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m(\bm{v})
+    \right) m=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m
 $$
 ただし、ここで以下の関係式を利用している。
 $$
@@ -166,14 +166,14 @@ $$
 そのため、運動方程式の左辺については以下の通りとなる。
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\bm{v}')v_x')=
+    (m'v_x')=
     \gamma
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \left[
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})v_x)-
+        (mv_x)-
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})V)
+        (mV)
     \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \gamma
@@ -183,32 +183,32 @@ $$
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\bm{v}')v_y')=
+    (m'v_y')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (m(\bm{v})v_y)=
+    (mv_y)=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     F_y
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\bm{v}')v_z')=
+    (m'v_z')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{\mathrm{d}}{\mathrm{d}t}
-    (m(\bm{v})v_z)=
+    (mv_z)=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     F_z
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m(\bm{v}')v_w')=
+    (m'v_w')=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \left[
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})c)-
+        (mc)-
         \frac{V}{c}
         \frac{\mathrm{d}}{\mathrm{d}t}
-        (m(\bm{v})v_x)
+        (mv_x)
     \right]=
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \gamma
@@ -266,13 +266,13 @@ $$
 こちらも同じように見ていくと、質量に関しては同じとなる一方で各成分についてはそれぞれ
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_x')=
+    (m'v_x')=
     \gamma
     \left[
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})v_x)-
+        (mv_x)-
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})V)
+        (mV)
     \right]=
     \gamma
     \left(
@@ -281,26 +281,26 @@ $$
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_y')=
+    (m'v_y')=
     \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\bm{v})v_y)=f_y
+    (mv_y)=f_y
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_z')=
+    (m'v_z')=
     \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (m(\bm{v})v_z)=f_z
+    (mv_z)=f_z
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m(\bm{v}')v_w')=
+    (m'v_w')=
     \gamma
     \left[
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})c)-
+        (mc)-
         \frac{V}{c}
         \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (m(\bm{v})v_x)
+        (mv_x)
     \right]=
     \gamma
     \left(
@@ -332,11 +332,11 @@ $$
         {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     \right)=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(m(\bm{v})c^2\right)
+    \left(mc^2\right)
 $$
 となるため、エネルギーは以下の形になることが分かる。
 $$
-    E_K=m(\bm{v})c^2=
+    E_K=mc^2=
     m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており以下の関係がある。
@@ -353,7 +353,7 @@ $$
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
     (\bm{f}\cdot\bm{v})=
     \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
-    \bm{p}=m(\bm{v})\bm{v}、E_K=m(\bm{v})c^2
+    \bm{p}=m\bm{v}、E_K=mc^2
 $$
 $$
     f_x'=
