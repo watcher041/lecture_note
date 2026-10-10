@@ -333,7 +333,7 @@ $$
 $$
 となるため、エネルギーは以下の形になることが分かる。
 $$
-    E_K=mc^2=
+    E=mc^2=
     m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 このように、$v$ が $c$ に比べて低速の場合は静止エネルギーと古典力学での運動エネルギーの和になることがわかる。また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており以下の関係がある。
@@ -341,7 +341,7 @@ $$
     f_w=
     \frac{1}{c}(\bm{f}\cdot\bm{v})=
     \frac{1}{c}
-    \frac{{\rm d}E_K}{{\rm d}\tau}
+    \frac{{\rm d}E}{{\rm d}\tau}
 $$
 
 以上を踏まえて、運動方程式と変換式を整理すると以下のようになる。
@@ -349,8 +349,8 @@ $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
     (\bm{f}\cdot\bm{v})=
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
-    \bm{p}=m\bm{v}、E_K=mc^2
+    \frac{\mathrm{d}E}{\mathrm{d}\tau}、
+    \bm{p}=m\bm{v}、E=mc^2
 $$
 $$
     f_x'=
