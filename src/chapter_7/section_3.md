@@ -161,19 +161,31 @@ $$
 これらのことを踏まえて、まず質量については速度の二乗について
 
 $$
-    \bm{v}'^2=v_x'^2+v_y'^2+v_z'^2=
+    1-\frac{\bm{v}'^2}{c^2}=
     \frac{1}{
         \left(
-            1-\frac{v_xV}{c^2}
+            c-\frac{v_xV}{c}
         \right)^2
     }
     \left[
-        (v_x-V)^2+
+        \left(
+            c-\frac{v_xV}{c}
+        \right)^2-
+        (v_x-V)^2-
         \left(
             1-\frac{V^2}{c^2}
         \right)
         (v_y^2+v_z^2)
-    \right]
+    \right]=
+    \frac{
+        \left(
+            1-\frac{\bm{v}^2}{c^2}
+        \right)
+    }{
+        \gamma^2\left(
+            1-\frac{v_xV}{c^2}
+        \right)^2
+    }
 $$
 
 となることから質量は以下のようになる。
