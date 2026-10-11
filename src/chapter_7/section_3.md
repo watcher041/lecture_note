@@ -274,38 +274,20 @@ $$
     (F_x-\beta F_w)
 $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-となり、力積（運動量）に対して変換則が成り立つ。そのため、
+運動量についてはLorentz変換と同じ形で変換されているが、力については時間の微分が余計についてしまっていることが見て取れる。これについては、運動量の微小変化の変換式
 
 $$
-    \mathrm{d}p_x'=
-    \gamma(\mathrm{d}p_x-\beta\mathrm{d}p_w)、
-    \mathrm{d}p_y'=\mathrm{d}p_y、
-    \mathrm{d}p_z'=\mathrm{d}p_z、
-    \mathrm{d}p_w'=
-    \gamma(\mathrm{d}p_w-\beta\mathrm{d}p_x)
+    {\mathrm d}p_x'=
+    \gamma({\mathrm d}p_x-\beta {\mathrm d}p_w)、
+    {\mathrm d}p_y'=
+    {\mathrm d}p_y、
+    {\mathrm d}p_z'=
+    {\mathrm d}p_z、
+    {\mathrm d}p_w'=
+    \gamma({\mathrm d}p_w-\beta {\mathrm d}p_x)
 $$
 
-となるため、運動量に関しての変換式は以下の通りとなる。
-
-$$
-
-$$
-
-であるが、このままだと時間の部分が抜けた形になってしまっていることが分かる。一方で、質量の関係式をもう少し展開していくと
+までは変換が成り立っていること。一方で、質量の関係式をもう少し展開していくと
 
 $$
     \frac{m_0}{
