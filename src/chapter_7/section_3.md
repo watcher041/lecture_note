@@ -128,25 +128,25 @@ $$
 
 $$
     \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
-    \bm{p}=m\bm{v}、
+    \bm{p}=m_r\bm{v}、
     F_w=\frac{{\rm d}p_w}{{\rm d}t}、
-    p_w=mv_w
+    p_w=m_rv_w
 $$
 
 今回もこれと同様の式が成立しているものとして、質量がどのように速度に依存しているか確認してみることにする。これについてはすでに G.N.Lewis と R.C.Tolman の論文（The Principle of Relativity and Non-Newtonian Mechanics）において示されており、これでは外部の力がない状態において運動量が保存されることを利用して導いている。これによると
 
 $$
-    m=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    m_r=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 というようになるとされている。ここで $m_0$ は物体が静止しているときの質量としている。これを踏まえた上で、相対性原理をもとに各観測者間で運動がどのように記述されるかみていくことにしよう。まず、K' 系において $\bm{p}'$ を運動量、$\bm{F}'$ を外部からの力、$w'$ 成分の運動量と力をそれぞれ $p_w',F_w'$ とすると、運動方程式は以下の通りとなる。
 
 $$
     \bm{F}'=\frac{{\rm d}\bm{p}'}{{\rm d}t'}、
-    \bm{p}'=m'\bm{v}'、
+    \bm{p}'=m_r'\bm{v}'、
     F_w'=\frac{{\rm d}p_w'}{{\rm d}t'}、
-    p_w'=m'v_w'、
-    m'=
+    p_w'=m_r'v_w'、
+    m_r'=
     \frac{m_0}{\sqrt{1-\frac{\bm{v'}^2}{c^2}}}
 $$
 
@@ -154,10 +154,10 @@ $$
 
 $$
     \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
-    \bm{p}=m\bm{v}、
+    \bm{p}=m_r\bm{v}、
     F_w=\frac{{\rm d}p_w}{{\rm d}t}、
-    p_w=mv_w、
-    m=
+    p_w=m_rv_w、
+    m_r=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
@@ -194,7 +194,7 @@ $$
 となることから質量は以下のようになる。
 
 $$
-    m'=
+    m_r'=
     \gamma
     \left(
         1-\frac{v_xV}{c^2}
@@ -204,43 +204,43 @@ $$
     }=
     \gamma\left(
         1-\frac{v_xV}{c^2}
-    \right) m=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m
+    \right) m_r=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
 $$
 
 このことから、運動量についても
 
 $$
-    p_x'=m'v_x'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m
+    p_x'=m_r'v_x'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
     \left(
         \frac{v_x-V}{1-\frac{v_xV}{c^2}}
     \right)=
-    \gamma(mv_x-mV)=
+    \gamma(m_rv_x-m_rV)=
     \gamma(p_x-\beta p_w)
 $$
 $$
-    p_y'=m'v_y'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m
+    p_y'=m_r'v_y'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
     \left[
         \frac{v_y}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
     \right]=
-    mv_y=
+    m_rv_y=
     p_y
 $$
 $$
-    p_z'=m'v_z'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m
+    p_z'=m_r'v_z'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
     \left[
         \frac{v_z}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
     \right]=
-    mv_z=
+    m_rv_z=
     p_z
 $$
 $$
-    p_w'=m'v_w'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}mc=
-    \gamma(mc-\beta mv_x)=
+    p_w'=m_r'v_w'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m_rc=
+    \gamma(m_rc-\beta m_rv_x)=
     \gamma(p_w-\beta p_x)
 $$
 
@@ -393,9 +393,9 @@ $$
     {\mathrm d}t\sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 $$
-    \bm{p}=m\bm{v}、
-    p_w=mv_w、
-    m=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \bm{p}=m_r\bm{v}、
+    p_w=m_rv_w、
+    m_r=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 となるものと思われる。一方で、運動方程式に速度ベクトルの内積をとることで運動エネルギーに関する式が得られたため、試しに力と速度の内積（仕事率）を求めてみると
@@ -419,27 +419,27 @@ $$
         {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     \right)=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(mc^2\right)
+    \left(m_rc^2\right)
 $$
 
 となるため、運動エネルギーは以下の形になることが分かる。
 
 $$
-    mc^2=
+    m_rc^2=
     \frac{m_0c^2}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 従来の古典力学との対応を確認するため、$v$ が $c$ に比べて低速の場合を考えると
 
 $$
-    mc^2\simeq
+    m_rc^2\simeq
     m_0c^2+\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 
 というように、既知の運動エネルギーに加えて静止エネルギー $m_0c^2$ が出てくる。そのため、質点自体が持つエネルギー $E_K$ は静止エネルギーと運動エネルギーの和で表されることになる。
 
 $$
-    E_K=mc^2=E_0+K、
+    E_K=m_rc^2=E_0+K、
     E_0=m_0c^2、
     K=\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
@@ -447,7 +447,7 @@ $$
 また、$w$ 成分の運動方程式に関しても
 
 $$
-    p_w=mv_w=mc=\frac{E_K}{c}、
+    p_w=m_rv_w=m_rc=\frac{E_K}{c}、
     f_w=
     \frac{\mathrm{d}p_w}{\mathrm{d}\tau}=
     \frac{1}{c}
@@ -461,9 +461,10 @@ $$
 $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
-   \bm{p}=m\bm{v}、
+   \bm{p}=m_r\bm{v}、
     (\bm{f}\cdot\bm{v})=
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、E_K=mc^2
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
+    E_K=m_rc^2
 $$
 
 ただ、ここまでで $\tau$ についてはあくまで
