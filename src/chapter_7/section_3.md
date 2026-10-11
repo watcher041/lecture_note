@@ -461,8 +461,8 @@ $$
 $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
-   \bm{p}=m_r\bm{v}、
-    (\bm{f}\cdot\bm{v})=
+    \bm{p}=m_r\bm{v}、
+    \bm{f}\cdot\bm{v}=
     \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
     E_K=m_rc^2
 $$
