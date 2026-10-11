@@ -32,9 +32,12 @@ $$
 であるものとする。そうすると、K' での速度はLorentz変換
 
 $$
-    x'=\gamma(x-Vt)、y'=y、z'=z、
-    t'=\gamma\left(t-\frac{V}{c^2}x\right)　
-    \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
+    x'=\gamma(x-\beta w)、y'=y、z'=z、
+    w'=\gamma\left(w-\beta x\right)、
+    \left(
+        \beta=\frac{V}{c}、
+        \gamma=\frac{1}{\sqrt{1-\beta^2}}
+    \right)
 $$
 
 を $t$ で微分することで求められる
@@ -273,17 +276,17 @@ $$
     F_z
 $$
 $$
-    F_x'=
-    \frac{{\mathrm d}p_x'}{{\mathrm d}t'}=
+    F_w'=
+    \frac{{\mathrm d}p_w'}{{\mathrm d}t'}=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
     \left(
-        \frac{{\mathrm d}p_x}{{\mathrm d}t}-
-        \beta \frac{{\mathrm d}p_w}{{\mathrm d}t}
+        \frac{{\mathrm d}p_w}{{\mathrm d}t}-
+        \beta \frac{{\mathrm d}p_x}{{\mathrm d}t}
     \right)=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
-    (F_x-\beta F_w)
+    (F_w-\beta F_x)
 $$
 
 運動量についてはLorentz変換と同じ形で変換されているが、力については時間の微分が余計についてしまっていることが見て取れる。これについては、運動量の微小変化の変換式
@@ -299,7 +302,7 @@ $$
     \gamma({\mathrm d}p_w-\beta {\mathrm d}p_x)
 $$
 
-までは変換が成り立っていること。一方で、質量の関係式をもう少し展開していくと
+までは変換が成り立っていることと、質量の関係式をもう少し展開していくと
 
 $$
     \frac{m_0}{
@@ -307,95 +310,129 @@ $$
     \frac{\mathrm{d}t}{\mathrm{d}t'}
     \frac{m_0}{
     \sqrt{1-\frac{\bm{v'}^2}{c^2}}}
-$$
-
-であるから、時間に関して以下の等式が成り立つ。
-
-$$
+    \rightarrow
     \mathrm{d}t'
     \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
     \mathrm{d}t
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 
-こちらの量も変換に対して不変な形をしており、
-時間の代わりに扱うと同じ形で置き換えられることが分かる。そこで、
+というように時間に関して変換が不変な形をしていることから、
 
 $$
+    \mathrm{d}\tau'\equiv
+    \mathrm{d}t'
+    \sqrt{1-\frac{\bm{v}'^2}{c^2}}、
     \mathrm{d}\tau\equiv
     \mathrm{d}t
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 
-として、運動方程式を以下のようにしてみよう。
+として、運動方程式を以下のようにしてみることで解消されるものと思われる。
 
 $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
-    \bm{f}\equiv\gamma(\bm{v})\bm{F}
+    \bm{f}\equiv
+    \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    f_w=
+    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}、
+    f_w\equiv
+    \frac{F_w}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
-こちらも同じように見ていくと、質量に関しては同じとなる一方で各成分についてはそれぞれ
-
-$$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m'v_x')=
-    \gamma
-    \left[
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (mv_x)-
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (mV)
-    \right]=
-    \gamma
-    \left(
-        f_x-\frac{V}{c}f_w
-    \right)
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m'v_y')=
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (mv_y)=f_y
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m'v_z')=
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    (mv_z)=f_z
-$$
-$$
-    \frac{\mathrm{d}}{\mathrm{d}\tau'}
-    (m'v_w')=
-    \gamma
-    \left[
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (mc)-
-        \frac{V}{c}
-        \frac{\mathrm{d}}{\mathrm{d}\tau}
-        (mv_x)
-    \right]=
-    \gamma
-    \left(
-        f_w-\frac{V}{c}f_x
-    \right)
-$$
-
-となる。このことから、下記のように力に関して対応していることが分かる。
+試しに力の変換式がどうなるか見てみると、
 
 $$
     f_x'=
-    \gamma\left(
-        f_x-\frac{V}{c}f_w
-    \right)、
-    f_y'=f_y、
-    f_z'=f_z、
-    f_w'=
+    \frac{{\mathrm d}p_x'}{{\mathrm d}\tau'}=
     \gamma
     \left(
-        f_w-\frac{V}{c}f_x
-    \right)
+        \frac{{\mathrm d}p_x}{{\mathrm d}\tau}-
+        \beta \frac{{\mathrm d}p_w}{{\mathrm d}\tau}
+    \right)=
+    \gamma
+    (f_x-\beta f_w)
 $$
+$$
+    f_y'=
+    \frac{{\mathrm d}p_y'}{{\mathrm d}\tau'}=
+    \frac{{\mathrm d}p_y}{{\mathrm d}\tau}=
+    f_y
+$$
+$$
+    f_z'=
+    \frac{{\mathrm d}p_z'}{{\mathrm d}\tau'}=
+    \frac{{\mathrm d}p_z}{{\mathrm d}\tau}=
+    f_z
+$$
+$$
+    f_w'=
+    \frac{{\mathrm d}p_w'}{{\mathrm d}\tau'}=
+    \gamma
+    \left(
+        \frac{{\mathrm d}p_w}{{\mathrm d}\tau}-
+        \beta \frac{{\mathrm d}p_x}{{\mathrm d}\tau}
+    \right)=
+    \gamma
+    (f_w-\beta f_x)
+$$
+
+というように、こちらもLorentz変換に対応した形になる。
+
+以上のことから運動方程式としては、
+
+$$
+    \bm{f}=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \bm{f}\equiv
+    \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    f_w=
+    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}、
+    f_w\equiv
+    \frac{F_w}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    {\mathrm d}\tau=
+    {\mathrm d}t\sqrt{1-\frac{\bm{v}^2}{c^2}}
+$$
+$$
+    \bm{p}=m\bm{v}、
+    p_w=mv_w、
+    m=\frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
+
+となるものと思われるが、中でも $w$ 成分に関しては何を表しているか気になるので見ていくことにする。まず、$p_w$ について
+
+$$
+    p_w=mv_w=
+    \frac{m_0c}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
+
+となるため、これを $\tau$ で微分すると以下の通りになる。
+
+$$
+    \frac{{\mathrm d}p_w}{{\mathrm d}\tau}=
+    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{{\mathrm d}}{{\mathrm d}t}
+    \left(
+        \frac{m_0c}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \right)=
+    \frac{m_0}{c}
+    \frac{
+        \left(
+            \bm{v}\cdot
+            \frac{{\mathrm d}\bm{v}}{{\mathrm d}t}
+        \right)
+    }{
+        \left(
+            1-\frac{\bm{v}^2}{c^2}
+        \right)^2
+    }
+$$
+
+
+
+
+
 
 また、運動量に対してエネルギーも保存するため、まずエネルギー（運動エネルギー）がどのような形になるか確認するため仕事率（力と速度の内積）を求めてみると
 
