@@ -406,6 +406,15 @@ $$
     \bm{f}\cdot\bm{v}=
     \frac{{\rm d}}{{\rm d}\tau}
     \left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
+    \frac{m_0}{
+        \left(
+            1-\frac{\bm{v}^2}{c^2}
+        \right)^{3/2}
+    }
+    \left(
+        \bm{v}\cdot
+        \frac{{\rm d}\bm{v}}{{\rm d}\tau}
+    \right)=
     \frac{{\rm d}}{{\rm d}\tau}
     \left(
         \frac{m_0c^2}
@@ -414,6 +423,14 @@ $$
     \frac{{\rm d}}{{\rm d}\tau}
     \left(mc^2\right)
 $$
+
+
+
+
+
+
+
+
 
 となるため、運動エネルギーは以下の形になることが分かる。
 
@@ -437,44 +454,26 @@ $$
     K=\frac{1}{2}m_0\bm{v}^2+\cdots
 $$
 
-
-
-
-
-
-
-また、仕事率の形を見ると $f_w$ とほぼ同じような形をしており以下の関係がある。
+また、$w$ 成分の運動方程式に関しても
 
 $$
+    p_w=mv_w=mc=\frac{E_K}{c}、
     f_w=
-    \frac{1}{c}(\bm{f}\cdot\bm{v})=
+    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}=
     \frac{1}{c}
-    \frac{{\rm d}E}{{\rm d}\tau}
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
+    \frac{1}{c}
+    (\bm{f}\cdot\bm{v})
 $$
 
-以上を踏まえて、運動方程式と変換式を整理すると以下のようになる。
+というようにエネルギーに関する式になっていることが分かる。そのため、運動方程式を整理すると以下のようになる。
 
 $$
     \bm{f}=
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
     (\bm{f}\cdot\bm{v})=
-    \frac{\mathrm{d}E}{\mathrm{d}\tau}、
-    \bm{p}=m\bm{v}、E=mc^2
-$$
-$$
-    f_x'=
-    \gamma\left[
-        f_x-
-        \frac{V}{c^2}(\bm{f}\cdot\bm{v})
-    \right]、
-    f_y'=f_y、
-    f_z'=f_z
-    \rightarrow
-    (\bm{f}'\cdot\bm{v}')=
-    \gamma\left[
-        (\bm{f}\cdot\bm{v})-
-        Vf_x
-    \right]
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
+    \bm{p}=m\bm{v}、E_K=mc^2
 $$
 
 これらの式に基づいて、実際に重力がかかる場合の運動を考えてみる。重力が働いている場合、
