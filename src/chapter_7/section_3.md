@@ -150,6 +150,17 @@ $$
 一方で、K 系において $\bm{p}$ を運動量、$\bm{F}$ を外部からの力、$w$ 成分の運動量と力をそれぞれ $p_w,F_w$ とすると、運動方程式は以下の通りとなる。
 
 $$
+    \bm{F}=\frac{{\rm d}\bm{p}}{{\rm d}t}、
+    \bm{p}=m\bm{v}、
+    F_w=\frac{{\rm d}p_w}{{\rm d}t}、
+    p_w=mv_w、
+    m=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
+
+これらのことを踏まえて、まず質量については速度の二乗について
+
+$$
     \bm{v}'^2=v_x'^2+v_y'^2+v_z'^2=
     \frac{1}{
         \left(
@@ -165,7 +176,7 @@ $$
     \right]
 $$
 
-となることから、まず質量は以下のようになる。
+となることから質量は以下のようになる。
 
 $$
     m'=
@@ -190,96 +201,92 @@ $$
     \left(
         \frac{v_x-V}{1-\frac{v_xV}{c^2}}
     \right)=
-    \gamma(mv_x-mV)
+    \gamma(mv_x-mV)=
+    \gamma(p_x-\beta p_w)
 $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-そのため、運動方程式の左辺については以下の通りとなる。
-
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m'v_x')=
-    \gamma
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    p_y'=m'v_y'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m
     \left[
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (mv_x)-
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (mV)
+        \frac{v_y}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
     \right]=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    mv_y=
+    p_y
+$$
+$$
+    p_z'=m'v_z'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}m
+    \left[
+        \frac{v_z}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
+    \right]=
+    mv_z=
+    p_z
+$$
+$$
+    p_w'=m'v_w'=
+    \frac{\mathrm{d}t'}{\mathrm{d}t}mc=
+    \gamma(mc-\beta mv_x)=
+    \gamma(p_w-\beta p_x)
+$$
+
+というようになることから、力も以下の形になる。
+
+$$
+    F_x'=
+    \frac{{\mathrm d}p_x'}{{\mathrm d}t'}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
     \left(
-        F_x-\frac{V}{c}F_w
-    \right)
+        \frac{{\mathrm d}p_x}{{\mathrm d}t}-
+        \beta \frac{{\mathrm d}p_w}{{\mathrm d}t}
+    \right)=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \gamma
+    (F_x-\beta F_w)
 $$
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m'v_y')=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (mv_y)=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    F_y'=
+    \frac{{\mathrm d}p_y'}{{\mathrm d}t'}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \frac{{\mathrm d}p_y}{{\mathrm d}t}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
     F_y
 $$
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m'v_z')=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    (mv_z)=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    F_z'=
+    \frac{{\mathrm d}p_z'}{{\mathrm d}t'}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \frac{{\mathrm d}p_z}{{\mathrm d}t}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
     F_z
 $$
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t'}
-    (m'v_w')=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
-    \gamma
-    \left[
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (mc)-
-        \frac{V}{c}
-        \frac{\mathrm{d}}{\mathrm{d}t}
-        (mv_x)
-    \right]=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    F_x'=
+    \frac{{\mathrm d}p_x'}{{\mathrm d}t'}=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
     \left(
-        F_w-\frac{V}{c}F_x
-    \right)
+        \frac{{\mathrm d}p_x}{{\mathrm d}t}-
+        \beta \frac{{\mathrm d}p_w}{{\mathrm d}t}
+    \right)=
+    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \gamma
+    (F_x-\beta F_w)
 $$
 
-ここで、右辺は力に等しいとしているため
 
-$$
-    F_x'\mathrm{d}t'=
-    \gamma
-    \left(
-        F_x-\frac{V}{c}F_w
-    \right)\mathrm{d}t、
-    F_y'\mathrm{d}t'=F_y\mathrm{d}t、
-    F_z'\mathrm{d}t'=F_z\mathrm{d}t、
-    F_w'\mathrm{d}t'=
-    \gamma
-    \left(
-        F_w-\frac{V}{c}F_x
-    \right)\mathrm{d}t
-$$
+
+
+
+
+
+
+
+
+
+
+
+
 
 となり、力積（運動量）に対して変換則が成り立つ。そのため、
 
