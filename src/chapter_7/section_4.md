@@ -247,7 +247,7 @@ $$
     \right)
 $$
 
-これらの式から、以下の関係式が成り立つことがわかる。
+これらの式から、以下の関係式が成り立つことが予想される。
 
 $$
     E_{x}=E_{x}'、
@@ -260,7 +260,18 @@ $$
     B_{z}=\gamma\left(B_{z}'+\frac{V}{c^2}E_{y}'\right)
 $$
 
+確認のため、これらの逆変換を求めるとこちらも符号が反転しているだけで対照的な形となっている。
 
+$$
+    E_{x}'=E_{x}、
+    E_{y}'=\gamma\left(E_{y}-VB_{z}\right)、
+    E_{z}'=\gamma\left(E_{z}+VB_{y}\right)
+$$
+$$
+    B_{x}'=B_{x}、
+    B_{y}'=\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)、
+    B_{z}'=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
+$$
 
 
 
