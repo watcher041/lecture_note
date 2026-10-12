@@ -178,7 +178,7 @@ $$
     -\frac{\partial B_x'}{\partial t}
 $$
 
-残りの３，４番目の式も整理することで
+残りの３，４番目の式も整理することで以下の通りとなる。
 
 $$
     \frac{\partial E_{x}'}{\partial z}-
