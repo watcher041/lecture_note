@@ -559,7 +559,7 @@ $$
 $$
     v_z=
     -\frac{gt}
-    {\sqrt{1+\left(\frac{gt}{c}\right)^2}}、
+    {\sqrt{1+\left(\frac{gt}{c}\right)^2}}
     
 $$
 
