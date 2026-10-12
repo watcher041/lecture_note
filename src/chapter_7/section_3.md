@@ -514,32 +514,40 @@ $$
 これらの式に基づいて、実際に重力がかかる場合の運動を考えてみる。重力加速度 $\bm{g}$ で重力 $m_0\bm{g}$ が働いている場合、
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    \left(
-        \frac{m_0\bm{v}}
-        {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \right)=
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
     \frac{m_0\bm{g}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
-    \left(
-        \frac{m_0c^2}
-        {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \right)=
+    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     (\bm{g}\cdot\bm{v})
 $$
 
-というようになる。ここで $z$ 成分しかなく位置 $z_0$ で初速度が 0 であるとすると
+となるが、固有時に関して以下の値が両辺にあることで打ち消しあう。
 
 $$
-    \frac{m_0v_z}
-    {\sqrt{1-\frac{v_z^2}{c^2}}}=-m_0gt、
-    E_K=m_0c^2-
-    m_0g(z-z_0)
+    \frac{\mathrm{d}t}{\mathrm{d}\tau}=
+    \frac{1}{\sqrt{1-\boldsymbol{v}^2/c^2}}
 $$
 
-となる。ここで、一つ目の式を整理すると速度と位置が求められる。
+そのため、運動方程式は以下の通りとなる。
+
+$$
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    m_0\bm{g}、
+    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
+    m_0(\bm{g}\cdot\bm{v})
+$$
+
+ここで $z$ 成分しかなく位置 $z_0$ で初速度が 0 であるとすると、
+
+$$
+    p_z=-m_0gt、
+    E_K=
+    m_0c^2-m_0g(z-z_0)、
+    p_z=\frac{m_0v_z}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
+
+となる。ここで、速度については $\bm{v}^2=v_z^2$ と $z$ 成分しか存在しないため、$v_z,z$ について解くと
 
 $$
     v_z=
