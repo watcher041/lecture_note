@@ -203,3 +203,44 @@ $$
     \frac{1}{c\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     (\bm{v}\cdot q\bm{E})
 $$
+
+
+
+
+
+
+
+
+
+次に電荷 $q$ を持つ粒子が電場 $\bm{E}$ と磁場 $\bm{B}$ の中を運動する場合を考える。この粒子にはローレンツ力
+
+$$
+    \bm{F}=q(\bm{E}+\bm{v}\times\bm{B})
+$$
+
+がはたらく。重力と違い、磁場による力は速度 $\bm{v}$ に依存する。力の法則そのものは電磁気学で与えられるものとして、これを $\bm{f}=\gamma\bm{F}$ として運動方程式に入れると、$\mathrm{d}t/\mathrm{d}\tau$ を掛けて戻すことで
+
+$$
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    q(\bm{E}+\bm{v}\times\bm{B})、
+    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
+    q(\bm{E}\cdot\bm{v})
+$$
+
+となる。エネルギーの式で磁場の項が現れないのは、$(\bm{v}\times\bm{B})\cdot\bm{v}=0$ より、磁場による力は仕事をしないためである。ここでは $q$ は観測者によらない量とし、電場と磁場は粒子の運動の影響を受けずに与えられているものとする。
+
+まず磁場だけがある場合（$\bm{E}=0$）を考える。$E_K$ が一定なので $|\bm{v}|$ も一定で、$\gamma$ も一定になる。したがって $m_0\gamma\,\mathrm{d}\bm{v}/\mathrm{d}t=q\bm{v}\times\bm{B}$ となり、$\bm{B}$ に垂直な面内で等速円運動をする。その角速度と半径は
+
+$$
+\omega=\frac{qB}{m_0\gamma}、\quad r=\frac{|\bm{p}|}{qB}
+$$
+
+である。速さが大きいほど、円運動の周期は長く、半径は大きくなる。
+
+次に、一様な電場 $\bm{E}=(0,0,E)$ だけがある場合を考える。$t=0$ に位置 $z_0$ で初速度が 0 であるとすると、$\mathrm{d}p_z/\mathrm{d}t=qE$ より $p_z=qEt$ となり、重力の場合の $m_0g$ を $-qE$ に置き換えた形になる。そのため
+
+$$
+v_z=\frac{qEt/m_0}{\sqrt{1+\left(\dfrac{qEt}{m_0c}\right)^2}}、\quad z=z_0+\frac{m_0c^2}{qE}\left(\sqrt{1+\left(\frac{qEt}{m_0c}\right)^2}-1\right)
+$$
+
+が得られ、$v_z$ は $c$ を超えない。$qEt\ll m_0c$ では $v_z=qEt/m_0$、$z=z_0+qEt^2/(2m_0)$ となり、従来の結果に一致する。
