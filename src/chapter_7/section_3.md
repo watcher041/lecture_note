@@ -520,18 +520,23 @@ $$
     (\bm{g}\cdot\bm{v})
 $$
 
-となるが、固有時に関して以下の値が両辺にあることで打ち消しあう。
+となるが、固有時に関する微分 $\mathrm{d}t/\mathrm{d}\tau$ が出てくることから以下の形になる。
 
 $$
-    \frac{\mathrm{d}t}{\mathrm{d}\tau}=
-    \frac{1}{\sqrt{1-\bm{v}^2/c^2}}
-$$
-
-そのため、運動方程式は以下の通りとなる。
-
-$$
+    \frac{\mathrm{d}t}{\mathrm{d}\tau}
     \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
-    m_0\bm{g}、
+    \frac{m_0\bm{g}}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \rightarrow
+    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    m_0\bm{g}
+$$
+$$
+    \frac{\mathrm{d}t}{\mathrm{d}\tau}
+    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    (\bm{g}\cdot\bm{v})
+    \rightarrow
     \frac{\mathrm{d}E_K}{\mathrm{d}t}=
     m_0(\bm{g}\cdot\bm{v})
 $$
