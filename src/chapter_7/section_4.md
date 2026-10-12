@@ -139,7 +139,7 @@ $$
     \frac{\partial B_{z}'}{\partial t}
 $$
 
-であるが、２番目の式を
+このうち、２番目の式を
 
 $$
     \gamma
