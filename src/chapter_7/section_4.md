@@ -2,14 +2,16 @@
 ## 相対論的電磁気学
 
 電磁気学においては、以下のMaxwell方程式を用いて説明することができた。
+
 $$
-  \mathrm{div}\bm{D}=\rho、
-  \mathrm{div}\bm{B}=0、
-  \mathrm{rot}\bm{E}=-\frac{\partial \bm{B}}{\partial t}、
-  \mathrm{rot}\bm{H}=\bm{i}+\frac{\partial \bm{D}}{\partial t}
+  \nabla\cdot\bm{D}=\rho、
+  \nabla\cdot\bm{B}=0、
+  \nabla\times\bm{E}=-\frac{\partial \bm{B}}{\partial t}、
+  \nabla\times\bm{H}=\bm{i}+\frac{\partial \bm{D}}{\partial t}
 $$
 
-このうち、２番目と３番目の式に関して
+ここで、$\bm{E}$ は電場、$\bm{B}$ は磁束密度、$\bm{D}$ は電束密度、$\bm{H}$ は磁場（磁界の強さ）、$\rho$ は電荷密度、$\bm{i}$ は電流密度、$t$ は時間である。真空になると $\bm{D}=\epsilon_0\bm{E}$、$\bm{H}=\bm{B}/\mu_0$ となる。ここで $\epsilon_0$ は真空の誘電率、$\mu_0$ は真空の透磁率である。さて、Maxwell方程式にて２番目と３番目の式に関して
+
 $$
   \frac{\partial B_{x}}{\partial x}+\frac{\partial B_{y}}{\partial y}+\frac{\partial B_{z}}{\partial z}=0
 $$
