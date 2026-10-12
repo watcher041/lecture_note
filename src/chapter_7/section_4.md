@@ -10,25 +10,97 @@ $$
   \nabla\times\bm{H}=\bm{i}+\frac{\partial \bm{D}}{\partial t}
 $$
 
-ここで、$\bm{E}$ は電場、$\bm{B}$ は磁束密度、$\bm{D}$ は電束密度、$\bm{H}$ は磁場（磁界の強さ）、$\rho$ は電荷密度、$\bm{i}$ は電流密度である。真空になると $\bm{D}=\epsilon_0\bm{E}$、$\bm{B}=\mu_0\bm{H}$ となる。ここで $\epsilon_0$ は真空の誘電率、$\mu_0$ は真空の透磁率である。さて、Maxwell方程式にて２番目と３番目の式に関して
+ここで、$\bm{E}$ は電場、$\bm{B}$ は磁束密度、$\bm{D}$ は電束密度、$\bm{H}$ は磁場（磁界の強さ）、$\rho$ は電荷密度、$\bm{i}$ は電流密度である。真空になると $\bm{D}=\epsilon_0\bm{E}$、$\bm{B}=\mu_0\bm{H}$ となる。ここで $\epsilon_0$ は真空の誘電率、$\mu_0$ は真空の透磁率である。ここまでのことをふまえて、まず K' 系においてのMaxwell方程式を
 
 $$
-  \frac{\partial B_{x}}{\partial x}+\frac{\partial B_{y}}{\partial y}+\frac{\partial B_{z}}{\partial z}=0
+  \nabla'\cdot\bm{D}'=\rho'、
+  \nabla'\cdot\bm{B}'=0、
+  \nabla'\times\bm{E}'=
+  -\frac{\partial \bm{B}'}{\partial t'}、
+  \nabla'\times\bm{H}'=
+  \bm{i}'+\frac{\partial \bm{D}'}{\partial t'}
+$$
+
+と相対性原理をもとに表せたとする。このうち、２番目と３番目の式は
+
+$$
+  \frac{\partial B_{x}'}{\partial x'}+
+  \frac{\partial B_{y}'}{\partial y'}+
+  \frac{\partial B_{z}'}{\partial z'}=0
 $$
 $$
-  \frac{\partial E_{z}}{\partial y}-\frac{\partial E_{y}}{\partial z}=-\frac{\partial B_{x}}{\partial t}、
-  \frac{\partial E_{x}}{\partial z}-\frac{\partial E_{z}}{\partial x}=-\frac{\partial B_{y}}{\partial t}、
-  \frac{\partial E_{y}}{\partial x}-\frac{\partial E_{x}}{\partial y}=-\frac{\partial B_{z}}{\partial t}
+  \frac{\partial E_{z}'}{\partial y'}-
+  \frac{\partial E_{y}'}{\partial z'}=
+  -\frac{\partial B_{x}'}{\partial t'}、
+  \frac{\partial E_{x}'}{\partial z'}-
+  \frac{\partial E_{z}'}{\partial x'}=
+  -\frac{\partial B_{y}'}{\partial t'}、
+  \frac{\partial E_{y}'}{\partial x'}-
+  \frac{\partial E_{x}'}{\partial y'}=
+  -\frac{\partial B_{z}'}{\partial t'}
 $$
-と各成分ごとに書き下せるが、ここでLotrentz変換を導入すると
+
+と各成分ごとに書き下せるが、ここでLotrentz変換
+
 $$
-    \frac{\partial}{\partial x}=
-    \gamma\frac{\partial}{\partial x'}-\gamma\frac{V}{c^2}\frac{\partial}{\partial t'}、
-    \frac{\partial}{\partial y}= \frac{\partial}{\partial y'}、
-    \frac{\partial}{\partial z}= \frac{\partial}{\partial z'}、
-    \frac{\partial}{\partial t}=
-    -\gamma V\frac{\partial}{\partial x'}+\gamma\frac{\partial}{\partial t'}
+    x'=\gamma(x-\beta w)、y'=y、z'=z、
+    w'=\gamma\left(w-\beta x\right)、
+    \left(
+        \beta=\frac{V}{c}、
+        \gamma=\frac{1}{\sqrt{1-\beta^2}}
+    \right)
 $$
+
+から逆変換を求めると
+
+$$
+    x=\gamma(x'+\beta w')、y=y'、z=z'、
+    w=\gamma\left(w'+\beta x'\right)
+$$
+
+
+となることから、各偏微分は以下の通り変換される。
+
+$$
+    \frac{\partial}{\partial x'}=
+    \frac{\partial x}{\partial x'}
+    \frac{\partial}{\partial x}+
+    \frac{\partial w}{\partial x'}
+    \frac{\partial}{\partial w}=
+    \gamma\frac{\partial}{\partial x}-
+    \gamma\beta
+    \frac{\partial}{\partial w}
+$$
+$$
+    \frac{\partial}{\partial y'}=
+    \frac{\partial y}{\partial y'}
+    \frac{\partial}{\partial y}=
+    \frac{\partial}{\partial y}
+$$
+$$
+    \frac{\partial}{\partial z'}=
+    \frac{\partial z}{\partial z'}
+    \frac{\partial}{\partial z}=
+    \frac{\partial}{\partial z}
+$$
+$$
+    \frac{\partial}{\partial t'}=
+    \frac{\partial w'}{\partial t'}
+    \frac{\partial}{\partial w'}=
+    c
+    \left(
+        \frac{\partial x}{\partial w'}
+        \frac{\partial}{\partial x}+
+        \frac{\partial w}{\partial w'}
+        \frac{\partial}{\partial w}
+    \right)
+    =
+    \gamma V
+    \frac{\partial}{\partial x}+
+    \gamma
+    \frac{\partial}{\partial t}
+$$
+
 となるため、これらを適用すると以下の形が得られる。
 $$
     \gamma\frac{\partial B_x}{\partial x'}+
