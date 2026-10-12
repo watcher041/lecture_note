@@ -467,9 +467,38 @@ $$
     E_K=m_rc^2
 $$
 
-ただ、ここまでで $\mathrm{d}\tau$ については、運動方程式が相対性原理を満たすように導入しただけのものであったが、実は時間の遅れの関係式そのものである。質点が静止して見える座標系では $\boldsymbol{v}=0$ なので $\mathrm{d}\tau=\mathrm{d}t$ となり、$\tau$ は質点とともに動く時計が刻む時間（固有時）にあたる。
+ただ、ここまでで $\mathrm{d}\tau$ については、運動方程式が相対性原理を満たすように導入しただけのものであったが、よく見ると時間の遅れの関係式そのものとなっている。質点が静止して見える座標系では $\boldsymbol{v}=0$ なので $\mathrm{d}\tau=\mathrm{d}t$ となり、$\tau$ は観測者から見た質点とともに動く時計が刻む時刻ということになる。これは**固有時**と呼ばれている。このことから、運動方程式は固有時を考慮したものとなっているわけだが、そうなると運動量に関しても
 
+$$
+    p_x=m_rv_x=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    m_0u_x、
+    u_x=\frac{\mathrm{d}x}{\mathrm{d}\tau}
+$$
+$$
+    p_y=m_rv_y=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    m_0u_y、
+    u_y=\frac{\mathrm{d}y}{\mathrm{d}\tau}
+$$
+$$
+    p_z=m_rv_z=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{\mathrm{d}z}{\mathrm{d}t}=
+    m_0u_z、
+    u_z=\frac{\mathrm{d}z}{\mathrm{d}\tau}
+$$
+$$
+    p_w=m_rv_w=
+    \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    \frac{\mathrm{d}w}{\mathrm{d}t}=
+    m_0u_w、
+    u_w=\frac{\mathrm{d}w}{\mathrm{d}\tau}
+$$
 
+というように、速度 $u$ の固有時の影響で質量が速度変化したように感じていたことになる。
 
 
 
@@ -481,14 +510,14 @@ $$
 これらの式に基づいて、実際に重力がかかる場合の運動を考えてみる。重力が働いている場合、
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
+    \frac\mathrm{d}{\mathrm{d}\tau}
     \left(
         \frac{m_0\bm{v}}
         {\sqrt{1-\frac{\bm{v}^2}{c}}}
     \right)=
     \frac{m_0\bm{g}}
     {\sqrt{1-\frac{\bm{v}^2}{c}}}、
-    \frac{\mathrm{d}}{\mathrm{d}\tau}
+    \frac\mathrm{d}{\mathrm{d}\tau}
     \left(
         \frac{m_0c^2}
         {\sqrt{1-\frac{\bm{v}^2}{c}}}
