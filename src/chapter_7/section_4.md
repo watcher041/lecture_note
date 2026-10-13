@@ -273,155 +273,56 @@ $$
     B_{z}'=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
 $$
 
-
-
-
-
-
-
-
-
-
-
-
-確認の例として、電荷 $q$ の点電荷に電場 $\bm{E}$' と磁場 $\bm{B}'$ が働いているとすると
-$$
-    \frac{\mathrm{d}\bm{p}'}{\mathrm{d}\tau'}=\bm{f}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \left[
-    q\bm{E}'+q(\bm{v}'\times\bm{B}')
-    \right]
-$$
-$$
-    \frac{\mathrm{d}E'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \left[
-       q\bm{E}'+q(\bm{v}'\times\bm{B}') 
-    \right]\cdot\bm{v}'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    (\bm{v}'\cdot q\bm{E}')
-$$
-となるが、各成分に対して変換すると以下の通りになる。
-$$
-    \frac{\mathrm{d}p_x'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \gamma
-    \left[
-        qE_x+
-        q(v_yB_z-v_zB_y)-
-        \frac{V}{c^2}(\bm{v}\cdot q\bm{E})
-    \right]
-$$
-$$
-    \frac{\mathrm{d}p_y'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        qE_y+q(v_zB_x-v_xB_z)
-    \right]
-$$
-$$
-    \frac{\mathrm{d}p_z'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        qE_z+q(v_xB_y-v_yB_x)
-    \right]
-$$
-$$
-    \frac{\mathrm{d}E'}{\mathrm{d}\tau'}=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        (\bm{v}\cdot q\bm{E})-
-        V\{E_x+q(v_yB_z-v_zB_y)\}
-    \right]
-$$
-これにより、力に関して以下の対応になっていることが再確認できる。
-$$
-    f_x'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \left[
-        qE_x'+q(v_y'B_z'-v_z'B_y')
-    \right]
-    \leftrightarrow
-    f_x=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        qE_x+q(v_yB_z-v_zB_y)
-    \right]
-$$
+ここで、さらに**真空中であることを考慮する（光速が真空中での速度であるため）と**
 
 $$
-    f_y'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \left[
-        qE_y'+q(v_z'B_x'-v_x'B_z')
-    \right]
-    \leftrightarrow
-    f_y=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        qE_y+q(v_zB_x-v_xB_z)
-    \right]
+    c=\frac{1}{\sqrt{\epsilon_0\mu_0}}
+$$
+
+であるから、上記の変換式は　
+
+$$
+    \bm{D}'=\epsilon_0\bm{E}'、
+    \bm{B}'=\mu_0\bm{H}'、
+    \bm{D}=\epsilon_0\bm{E}、
+    \bm{B}=\mu_0\bm{H}
+$$
+
+の関係式から以下の通りとなる。
+
+$$
+    D_{x}'=D_{x}、
+    D_{y}'=\gamma\left(D_{y}-\frac{V}{c^2}H_{z}\right)、
+    D_{z}'=\gamma\left(D_{z}+\frac{V}{c^2}H_{y}\right)
 $$
 $$
-    f_z'=
-    \frac{1}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \left[
-        qE_z'+q(v_x'B_y'-v_y'B_x')
-    \right]
-    \leftrightarrow
-    f_z=
-    \frac{1}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \left[
-        qE_z+q(v_xB_y-v_yB_x)
-    \right]
-$$
-$$
-    f_w'=
-    \frac{1}{c\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    (\bm{v}'\cdot q\bm{E}')
-    \leftrightarrow
-    f_w=
-    \frac{1}{c\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    (\bm{v}\cdot q\bm{E})
+    H_{x}'=H_{x}、
+    H_{y}'=\gamma\left(H_{y}+VD_{z}\right)、
+    H_{z}'=\gamma\left(H_{z}-VD_{y}\right)
 $$
 
 
+### 媒質中の場合（補足）
 
+ここまでは真空中で考えてきたが、水やガラスのような媒質の中ではどうなるだろうか。
 
+まず光の速さについて、媒質中では屈折率 $n$ を用いて $c/n$ となる。これは媒質が静止している系での値であり、Lorentz変換に現れる $c$ とは別のものである。実際、媒質が静止している系では誘電率 $\epsilon$、透磁率 $\mu$ を用いて $D=\epsilon E$、$B=\mu H$ となるため、電磁波の速さは $1/\sqrt{\epsilon\mu}=c/n$ となる。$c$ はどの慣性系でも同じ値をとる速さの上限であるのに対し、$c/n$ は媒質の静止系で決まる値である。
 
+次に変換則について、前に求めた $E, B$ の変換則は $\nabla\cdot B=0$ と $\nabla\times E=-\partial B/\partial t$ のみから導いたため、媒質があっても変わらない。同様に、自由電荷・自由電流に対する $\nabla\cdot D=\rho$ と $\nabla\times H=i+\partial D/\partial t$ からは
 
+$$D_x=D_x'、D_y=\gamma\left(D_y'+\frac{V}{c^2}H_z'\right)、D_z=\gamma\left(D_z'-\frac{V}{c^2}H_y'\right)$$
+$$H_x=H_x'、H_y=\gamma\left(H_y'-VD_z'\right)、H_z=\gamma\left(H_z'+VD_y'\right)$$
 
+が得られ、これも媒質があっても同じ形になる。変わるのは $D$ と $E$、$B$ と $H$ の関係であり、$D=\epsilon E$、$B=\mu H$ は媒質が静止している系でのみ成り立つ。媒質が速度 $v$ で動いて見える系では、
 
+$$D+\frac{v\times H}{c^2}=\epsilon(E+v\times B)、B-\frac{v\times E}{c^2}=\mu(H-v\times D)$$
 
-次に電荷 $q$ を持つ粒子が電場 $\bm{E}$ と磁場 $\bm{B}$ の中を運動する場合を考える。この粒子にはローレンツ力
+という関係に置き換わる。
 
-$$
-    \bm{F}=q(\bm{E}+\bm{v}\times\bm{B})
-$$
+最後に、動いている媒質の中での光の速さを考える。K' 系で媒質が静止していて、光が $x$ 方向に速さ $c/n$ で進むとすると、K 系での光の速さ $u$ は、速度の変換式の逆変換から
 
-がはたらく。重力と違い、磁場による力は速度 $\bm{v}$ に依存する。力の法則そのものは電磁気学で与えられるものとして、これを $\bm{f}=\gamma\bm{F}$ として運動方程式に入れると、$\mathrm{d}t/\mathrm{d}\tau$ を掛けて戻すことで
+$$u=\frac{c/n+V}{1+V/(nc)}\simeq\frac{c}{n}+V\left(1-\frac{1}{n^2}\right)$$
 
-$$
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
-    q(\bm{E}+\bm{v}\times\bm{B})、
-    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
-    q(\bm{E}\cdot\bm{v})
-$$
+となる（$V\ll c$ の最低次まで）。媒質の速さ $V$ に対して $1-1/n^2$ だけ引きずられることになり、これはFresnelの引きずり係数と呼ばれ、Fizeauの流水の実験で確かめられている。なお $n>1$、$V<c$ のとき $u<c$ である。
 
-となる。エネルギーの式で磁場の項が現れないのは、$(\bm{v}\times\bm{B})\cdot\bm{v}=0$ より、磁場による力は仕事をしないためである。ここでは $q$ は観測者によらない量とし、電場と磁場は粒子の運動の影響を受けずに与えられているものとする。
-
-まず磁場だけがある場合（$\bm{E}=0$）を考える。$E_K$ が一定なので $|\bm{v}|$ も一定で、$\gamma$ も一定になる。したがって $m_0\gamma\,\mathrm{d}\bm{v}/\mathrm{d}t=q\bm{v}\times\bm{B}$ となり、$\bm{B}$ に垂直な面内で等速円運動をする。その角速度と半径は
-
-$$
-\omega=\frac{qB}{m_0\gamma}、\quad r=\frac{|\bm{p}|}{qB}
-$$
-
-である。速さが大きいほど、円運動の周期は長く、半径は大きくなる。
-
-次に、一様な電場 $\bm{E}=(0,0,E)$ だけがある場合を考える。$t=0$ に位置 $z_0$ で初速度が 0 であるとすると、$\mathrm{d}p_z/\mathrm{d}t=qE$ より $p_z=qEt$ となり、重力の場合の $m_0g$ を $-qE$ に置き換えた形になる。そのため
-
-$$
-v_z=\frac{qEt/m_0}{\sqrt{1+\left(\dfrac{qEt}{m_0c}\right)^2}}、\quad z=z_0+\frac{m_0c^2}{qE}\left(\sqrt{1+\left(\frac{qEt}{m_0c}\right)^2}-1\right)
-$$
-
-が得られ、$v_z$ は $c$ を超えない。$qEt\ll m_0c$ では $v_z=qEt/m_0$、$z=z_0+qEt^2/(2m_0)$ となり、従来の結果に一致する。
+また、媒質中では荷電粒子が $c/n$ より速く進むことができ（Cherenkov放射）、このとき $c$ は超えない。以上のように、媒質中の光が遅いことは、光速度不変の原理や相対性原理と矛盾しない。
