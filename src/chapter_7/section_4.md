@@ -273,7 +273,7 @@ $$
     B_{z}'=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
 $$
 
-ここで、さらに**真空中であることを考慮する（光速が真空中での速度であるため）と**
+ここで、さらに**真空中であることを考慮する（光速が真空中での速度であるため）と**光速が
 
 $$
     c=\frac{1}{\sqrt{\epsilon_0\mu_0}}
@@ -300,6 +300,102 @@ $$
     H_{y}'=\gamma\left(H_{y}+VD_{z}\right)、
     H_{z}'=\gamma\left(H_{z}-VD_{y}\right)
 $$
+
+これらの式を用いると、Maxwell方程式の１番目の式と4番目の式が
+
+$$
+    \frac{\partial D_x'}{\partial x'}+
+    \frac{\partial D_y'}{\partial y'}+
+    \frac{\partial D_z'}{\partial z'}=
+    \rho'
+$$
+
+$$
+    \frac{\partial H_z'}{\partial y'}-
+    \frac{\partial H_y'}{\partial z'}=
+    i_x'+
+    \frac{\partial D_x'}{\partial t'}、
+    \frac{\partial H_x'}{\partial z'}-
+    \frac{\partial H_z'}{\partial x'}=
+    i_y'+
+    \frac{\partial D_y'}{\partial t'}、
+    \frac{\partial H_y'}{\partial x'}-
+    \frac{\partial H_x'}{\partial y'}=
+    i_z'+
+    \frac{\partial D_z'}{\partial t'}
+$$
+
+となるため、電荷密度と電流は以下の通りとなる。
+
+$$
+    \rho'=
+    \gamma
+    \left(
+        \frac{\partial D_x}{\partial x}+
+        \frac{\partial D_y}{\partial y}+
+        \frac{\partial D_z}{\partial z}
+    \right)+
+    \gamma\frac{V}{c^2}
+    \left[
+        \frac{\partial D_x}{\partial t}-
+        \left(
+            \frac{\partial H_z}{\partial y}-
+            \frac{\partial H_y}{\partial z}
+        \right)
+    \right]=
+    \gamma
+    \left(
+        \rho-\frac{V}{c^2}i_x
+    \right)
+$$
+$$
+    i_x'=
+    \gamma
+    \left[
+        \left(
+            \frac{\partial H_z}{\partial y}-
+            \frac{\partial H_y}{\partial z}
+        \right)-
+        \frac{\partial D_x}{\partial t}
+    \right]-
+    \gamma V
+    \left(
+        \frac{\partial D_x}{\partial x}+
+        \frac{\partial D_y}{\partial y}+
+        \frac{\partial D_z}{\partial z}
+    \right)=
+    \gamma
+    \left(
+        i_x-V\rho
+    \right)
+$$
+$$
+    i_y'=
+    \left(
+        \frac{\partial H_x}{\partial z}-
+        \frac{\partial H_z}{\partial x}
+    \right)-
+    \frac{\partial D_y}{\partial t}=
+    i_y
+$$
+$$
+    i_z'=
+    \left(
+        \frac{\partial H_y}{\partial x}-
+        \frac{\partial H_x}{\partial y}
+    \right)-
+    \frac{\partial D_z}{\partial t}=
+    i_z
+$$
+
+
+
+
+
+
+
+
+
 
 
 ### 媒質中の場合（補足）
