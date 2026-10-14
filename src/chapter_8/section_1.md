@@ -157,8 +157,8 @@ $$
 
 $$
     Z=
-    \sum_{n_1,\cdots,n_f}
-    \mathcal{W}(n_1,\cdots,n_f)
+    \sum_{\vars{n}{f}}
+    \mathcal{W}(\vars{n}{f})
     e^{-(n_1+\cdots+n_f)\beta h\nu}
 $$
 
@@ -172,7 +172,7 @@ $$
 であり、状態数も区別がつかないことを考慮して
 
 $$
-    \mathcal{W}(n_1,\cdots,n_f)=
+    \mathcal{W}(\vars{n}{f})=
     \frac{f!}{N_0!N_1!\cdots N_n!\cdots}
 $$
 
