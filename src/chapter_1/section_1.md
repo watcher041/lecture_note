@@ -77,11 +77,11 @@ $$
 $$
     \bm{v}\equiv
     (v_x,v_y,v_z)=
-    \left(
-        \frac{{\rm d}x}{{\rm d}t},
-        \frac{{\rm d}y}{{\rm d}t},
-        \frac{{\rm d}z}{{\rm d}t}
-    \right)
+    \lr{
+        \dd{x}{t},
+        \dd{y}{t},
+        \dd{z}{t}
+    }
 $$
 
 　ここまで運動をどのように表現するかを述べたが、次からは実際に運動がどのような法則に従ってなされるのかを見ていくことにする。

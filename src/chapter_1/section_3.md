@@ -6,9 +6,9 @@
 $$
     \bm{F}=
     G\frac{m_1m_2}{|\bm{r}_2-\bm{r}_1|^2}
-    \left(
-    \frac{\bm{r}_2-\bm{r}_1}{|\bm{r}_2-\bm{r}_1|}
-    \right)
+    \lr{
+        \frac{\bm{r}_2-\bm{r}_1}{|\bm{r}_2-\bm{r}_1|}
+    }
 $$
 
 というように書ける（$G$：重力定数）。
@@ -21,10 +21,10 @@ $$
 
 $$
     m_1
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
+    \dd{^2\bm{r}_1}{t^2}=
     \bm{F}、
     m_2
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
+    \dd{^2\bm{r}_2}{t^2}=
     -\bm{F}
 $$
 
@@ -32,11 +32,10 @@ $$
 
 $$
     (m_1+m_2)
-    \frac{\mathrm{d}^2}{\mathrm{d}t^2}
-    \left(
+    \dd{^2}{t^2}
+    \lr{
         \frac{m_1\bm{r}_1+m_2\bm{r}_2}{m_1+m_2}
-    \right)=
-    0
+    }=0
 $$
 
 というように全体の運動方程式となり、このときの質量 $m_G$ と位置 $\bm{r}_G$ は
@@ -50,25 +49,25 @@ $$
 とおけることから、全体的に見た場合には以下の式が成り立つ（ 2つの質点を質量 $m_G$ の質点に置き換えてると、運動が変化しないあるいは慣性の法則に従う）。
 
 $$
-    m_G\frac{\mathrm{d}^2\bm{r}_G}{\mathrm{d}t^2}=0
+    m_G\dd{^2\bm{r}_G}{t^2}=0
 $$
 
 一方で、万有引力の形を踏まえて2つの方程式を
 
 $$
-    \frac{\mathrm{d}^2\bm{r}_1}{\mathrm{d}t^2}=
+    \dd{^2\bm{r}_1}{t^2}=
     \frac{\bm{F}}{m_1}、
-    \frac{\mathrm{d}^2\bm{r}_2}{\mathrm{d}t^2}=
+    \dd{^2\bm{r}_2}{t^2}=
     -\frac{\bm{F}}{m_2}
 $$
 
 として2番目の式から1番目の式を差し引くと以下の式が得られる。
 
 $$
-    \left(
+    \lr{
         \frac{m_1m_2}{m_1+m_2}
-    \right)
-    \frac{\mathrm{d}^2}{\mathrm{d}t^2}
+    }
+    \dd{^2}{t^2}
     (\bm{r}_2-\bm{r}_1)=
     -\bm{F}
 $$
@@ -83,7 +82,7 @@ $$
 と書ける。そのため、上記の運動方程式は以下のようになる。
 
 $$
-    \mu\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
+    \mu\dd{^2\bm{r}}{t^2}=
     -G\frac{m_1m_2}{r^3}\bm{r}
 $$
 
@@ -94,10 +93,10 @@ $$
 仮に二次元の場合で考えてみると、直交座標系 $x,y$ で記述すると
 
 $$
-    \mu\frac{\mathrm{d}^2x}{\mathrm{d}t^2}=
+    \mu\dd{^2x}{t^2}=
     -G\frac{m_1m_2}{r^2}
     \frac{x}{r}、
-    \mu\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=
+    \mu\dd{^2y}{t^2}=
     -G\frac{m_1m_2}{r^2}
     \frac{y}{r}
 $$
@@ -116,77 +115,58 @@ $$
 
 $$
 \begin{align*}
-    \frac{\mathrm{d}^2}
-    {\mathrm{d}t^2}
+    \dd{^2}{t^2}
     (r\cos\theta)
     &=
-    \frac{\mathrm{d}}
-    {\mathrm{d}t}
-    \left(
-        \frac{\mathrm{d}r}
-        {\mathrm{d}t}
+    \dd{}{t}
+    \lr{
+        \dd{r}{t}
         \cos\theta-
         r
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        \dd{\theta}{t}
         \sin\theta
-    \right)\\
+    }\\
     &=
-    \frac{\mathrm{d}^2r}
-    {\mathrm{d}t^2}
+    \dd{^2r}{t^2}
     \cos\theta-
-    2\frac{\mathrm{d}r}
-    {\mathrm{d}t}
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
+    2\dd{r}{t}
+    \dd{\theta}{t}
     \sin\theta-
     r
-    \frac{\mathrm{d}^2\theta}
-    {\mathrm{d}t^2}
+    \dd{^2\theta}{t^2}
     \sin\theta-
     r
-    \left(
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \right)^2
+    \lr{
+    \dd{\theta}{t}
+    }^2
     \cos\theta
 \end{align*}
 $$
 $$
 \begin{align*}
-    \frac{\mathrm{d}^2}
-    {\mathrm{d}t^2}
+    \dd{^2}{t^2}
     (r\sin\theta)
     &=
-    \frac{\mathrm{d}}
-    {\mathrm{d}t}
-    \left(
-        \frac{\mathrm{d}r}
-        {\mathrm{d}t}
+    \dd{}{t}
+    \lr{
+        \dd{r}{t}
         \sin\theta+
-        r
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        r\dd{\theta}{t}
         \cos\theta
-    \right)\\
+    }\\
     &=
-    \frac{\mathrm{d}^2r}
-    {\mathrm{d}t^2}
+    \dd{^2r}{t^2}
     \sin\theta+
-    2\frac{\mathrm{d}r}
-    {\mathrm{d}t}
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
+    2\dd{r}{t}
+    \dd{\theta}{t}
     \cos\theta+
     r
-    \frac{\mathrm{d}^2\theta}
-    {\mathrm{d}t^2}
+    \dd{^2\theta}{t^2}
     \cos\theta-
     r
-    \left(
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}
-    \right)^2
+    \lr{
+    \dd{\theta}{t}
+    }^2
     \sin\theta
 \end{align*}
 $$
@@ -195,52 +175,42 @@ $$
 
 $$
     \mu
-    \left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}
+    \LR{
+        \dd{^2r}{t^2}
         \cos\theta-
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        2\dd{r}{t}
+        \dd{\theta}{t}
         \sin\theta-
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
+        \dd{^2\theta}{t^2}
         \sin\theta-
         r
-        \left(
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
-        \right)^2
+        \lr{
+            \dd{\theta}{t}
+        }^2
         \cos\theta
-    \right]
+    }
     =
     -G\frac{m_1m_2}{r^2}
     \cos\theta
 $$
 $$
     \mu
-    \left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}
+    \LR{
+        \dd{^2r}{t^2}
         \sin\theta+
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        2\dd{r}{t}
+        \dd{\theta}{t}
         \cos\theta+
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
+        \dd{^2\theta}{t^2}
         \cos\theta-
         r
-        \left(
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
-        \right)^2
+        \lr{
+            \dd{\theta}{t}
+        }^2
         \sin\theta
-    \right]
+    }
     =
     -G\frac{m_1m_2}{r^2}
     \sin\theta
@@ -250,15 +220,13 @@ $$
 
 $$
     \mu
-    \left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}-
+    \LR{
+        \dd{^2r}{t^2}-
         r
-        \left(
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
-        \right)^2
-    \right]
+        \lr{
+            \dd{\theta}{t}
+        }^2
+    }
     =
     -G\frac{m_1m_2}{r^2}
 $$
@@ -267,15 +235,12 @@ $$
 
 $$
     \mu
-    \left[
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}+
+    \LR{
+        2\dd{r}{t}
+        \dd{\theta}{t}+
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
-    \right]
+        \dd{^2\theta}{t^2}
+    }
     =0
 $$
 
@@ -283,26 +248,26 @@ $$
 
 $$
     \mu r^2
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+    \dd{^2\theta}{t^2}+
     2\mu r
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}=
-    \frac{\mathrm{d}L}{\mathrm{d}t}=0、
+    \dd{r}{t}
+    \dd{\theta}{t}=
+    \dd{L}{t}=0、
     L=\mu r^2
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}  
+    \dd{\theta}{t}  
 $$
 
 と変形できることから、$L$ という量が保存されている（定数になる）ことが分かる。そこで、これを変形して
 
 $$
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}=
+    \dd{\theta}{t}=
     \frac{L}{\mu r^2}
 $$
 
 として、一つ目の式に代入してみる。
 
 $$
-    \mu\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    \mu\dd{^2r}{t^2}=
     \frac{L^2}{\mu r^3}-
     G\frac{m_1m_2}{r^2}
 $$
@@ -311,45 +276,45 @@ $$
 
 $$
     \mu\frac{1}{u^2}
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    \dd{^2r}{t^2}=
     \frac{L^2}{\mu}u-Gm_1m_2、
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}=
+    \dd{\theta}{t}=
     \frac{L}{\mu}u^2
 $$
 
 となるが、ここで $r$ の時間微分がどうなるか見てみると
 
 $$
-    \frac{\mathrm{d}r}{\mathrm{d}t}=
+    \dd{r}{t}=
     -\frac{1}{u^2}
-    \frac{\mathrm{d}u}{\mathrm{d}t}=
+    \dd{u}{t}=
     -\frac{L}{\mu}
-    \frac{\mathrm{d}t}{\mathrm{d}\theta}
-    \frac{\mathrm{d}u}{\mathrm{d}t}=
+    \dd{t}{\theta}
+    \dd{u}{t}=
     -\frac{L}{\mu}
-    \frac{\mathrm{d}u}{\mathrm{d}\theta}
+    \dd{u}{\theta}
 $$
 
 であることから、二階微分は次の通りとなる。
 
 $$
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    \dd{^2r}{t^2}=
     -\frac{L}{\mu}
-    \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
-    \frac{\mathrm{d}u}{\mathrm{d}\theta}
-    \right)=
+    \dd{}{t}
+    \lr{
+    \dd{u}{\theta}
+    }=
     -\frac{L}{\mu}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \frac{\mathrm{d}^2u}{\mathrm{d}\theta^2}=
+    \dd{\theta}{t}
+    \dd{^2u}{\theta^2}=
     -\frac{L^2}{\mu^2}u^2
-    \frac{\mathrm{d}^2u}{\mathrm{d}\theta^2}
+    \dd{^2u}{\theta^2}
 $$
 
 そのため、運動方程式は以下の形に整理される。
 
 $$
-    \frac{\mathrm{d}^2u}{\mathrm{d}\theta^2}=
+    \dd{^2u}{\theta^2}=
     -u+\frac{Gm_1m_2\mu}{L^2}
 $$
 
@@ -393,9 +358,9 @@ $$
 先ほどの物体について、物体1を太陽、物体2を地球として考えると、離心率は0.0167になり範囲内にあることはわかる。次に、面積速度については以下のように動径によらずに一定になることが分かる。
 
 $$
-    \frac{\mathrm{d}S}{\mathrm{d}t}=
+    \dd{S}{t}=
     \frac{1}{2}r^2
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}=
+    \dd{\theta}{t}=
     \frac{L}{2\mu}
 $$
 
@@ -404,19 +369,19 @@ $$
 $$
     a=
     \frac{1}{2}
-    \left(
+    \lr{
         \frac{l}{1-\epsilon}+
         \frac{l}{1+\epsilon}
-    \right)=
+    }=
     \frac{l}{1-\epsilon^2}、
     b=
     \sqrt{
-    \left(
+    \lr{
         \frac{l}{1-\epsilon}
-    \right)
-    \left(
+    }
+    \lr{
         \frac{l}{1+\epsilon}
-    \right)}=
+    }}=
     \frac{l}{\sqrt{1-\epsilon^2}}
 $$
 
@@ -431,12 +396,12 @@ $$
 $$
     S=
     \int_0^T
-    \frac{\mathrm{d}S}{\mathrm{d}t}\mathrm{d}t=
+    \dd{S}{t}\mathrm{d}t=
     \frac{1}{2}
     \int_0^T r^2
-    \left(
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)
+    \lr{
+    \dd{\theta}{t}
+    }
     \mathrm{d}t=
     \frac{LT}{2\mu}
 $$
