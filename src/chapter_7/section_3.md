@@ -88,7 +88,7 @@ $$
 において二つの地点の位置関係が微小で微小時間で考えたときに
 
 $$
-    V{\mathrm d}t=\beta^2{\mathrm d}x
+    V\mathrm{d}t=\beta^2\mathrm{d}x
     \rightarrow
     V=\beta^2\dd{x}{t}=
     \beta^2v_x
@@ -292,14 +292,14 @@ $$
 運動量についてはLorentz変換と同じ形で変換されているが、力については時間の微分が余計についてしまっていることが見て取れる。ただ、よく見ると力の方は力積（運動量の変化）の形であれば同じ形で変換されており、
 
 $$
-    {\mathrm d}p_x'=
-    \gamma({\mathrm d}p_x-\beta {\mathrm d}p_w)、
-    {\mathrm d}p_y'=
-    {\mathrm d}p_y、
-    {\mathrm d}p_z'=
-    {\mathrm d}p_z、
-    {\mathrm d}p_w'=
-    \gamma({\mathrm d}p_w-\beta {\mathrm d}p_x)
+    \mathrm{d}p_x'=
+    \gamma(\mathrm{d}p_x-\beta \mathrm{d}p_w)、
+    \mathrm{d}p_y'=
+    \mathrm{d}p_y、
+    \mathrm{d}p_z'=
+    \mathrm{d}p_z、
+    \mathrm{d}p_w'=
+    \gamma(\mathrm{d}p_w-\beta \mathrm{d}p_x)
 $$
 
 となっている。また、質量の関係式をもう少し展開していくと
@@ -389,8 +389,8 @@ $$
     \dd{p_w}{\tau}、
     f_w\equiv
     \frac{F_w}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    {\mathrm d}\tau=
-    {\mathrm d}t\sqrt{1-\frac{\bm{v}^2}{c^2}}
+    \mathrm{d}\tau=
+    \mathrm{d}t\sqrt{1-\frac{\bm{v}^2}{c^2}}
 $$
 $$
     \bm{p}=m_r\bm{v}、
