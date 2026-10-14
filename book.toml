@@ -9,6 +9,7 @@ additional-css = ["option.css"]
 
 [preprocessor.katex]
 after = ["links"]
+macros = "macros.txt"
 
 # cargo install mdbook
 # cargo install mdbook-katex

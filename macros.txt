@@ -1,0 +1,8 @@
+
+\lr:\left(#1\right)
+\LR:\left[#1\right]
+
+\dd:\frac{\mathrm{d}#1}{\mathrm{d}#2}
+\pp:\frac{\partial #1}{\partial #2}
+
+\vars:#1_{1},#1_{2},\cdots,#1_{#2}
