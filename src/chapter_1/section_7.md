@@ -28,8 +28,8 @@
 
 $$
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}=
+    \dd{^2\bm{r}_i}
+    {t^2}=
     \bm{F}_{i}+
     \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$
@@ -117,7 +117,7 @@ $$
     \bm{S}
    &=
     \bm{S}_{\mathrm{l}}+\bm{S}_{\mathrm{r}}+\bm{S}_{\mathrm{f}}+\bm{S}_{\mathrm{b}}+
-    \bm{S}_{\mathrm{u}}+\bm{S}_{\mathrm{d}}\\
+    \bm{S}_{\mathrm{u}}+\bm{S}_{}\\
    &=
     \left[
       \bm{S}(-\bm{e}_{y})+\bm{S}(\bm{e}_{y})
@@ -141,8 +141,8 @@ $$
     \lr{
       \rho(\bm{r}_{i})V_{i}
     }
-    \frac{\mathrm{d}^2\bm{r}_{i}}
-    {\mathrm{d}t^2}=
+    \dd{^2\bm{r}_{i}}
+    {t^2}=
     \sum_{i=1(\neq j)}^{\mathrm{N}}
     \bm{F}_{\mathrm{ij}}+
     \bm{F}_{i}、

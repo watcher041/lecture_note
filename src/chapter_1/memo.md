@@ -11,13 +11,13 @@ $$
 一方でこれらの内積の方にはどのような意味を持つかを見てみることにする。そこで、まず角運動量の外積を内積に置き換えた量を時間微分してみると、
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     (\bm{r}\cdot\bm{p})=
     m
     \lr{
         \bm{v}^2+
         \bm{r}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+        \dd{\bm{v}}{t}
     }=
     m\bm{v}^2+
     \bm{r}\cdot\bm{F}
@@ -26,12 +26,12 @@ $$
 というようになり特に意味がないように感じるが、これを踏まえて今度は $\bm{v}\cdot\bm{p}$ を時間微分してみると以下の通りになる。
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     (\bm{v}\cdot\bm{p})=
     2m
     \lr{
         \bm{v}\cdot
-        \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+        \dd{\bm{v}}{t}
     }=
     2\lr{
         \bm{v}\cdot\bm{F}
@@ -41,7 +41,7 @@ $$
 これを整理すると、以下の式が得られる。
 
 $$
-    \frac{\mathrm{d}K}{\mathrm{d}t}=P、
+    \dd{K}{t}=P、
     K=
     \frac{1}{2}
     \lr{

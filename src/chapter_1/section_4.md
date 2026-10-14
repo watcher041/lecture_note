@@ -15,8 +15,8 @@
 
 $$
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}=
+    \dd{^2\bm{r}_i}
+    {t^2}=
     \bm{F}_{i}+
     \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$
@@ -27,8 +27,8 @@ $$
     \sum_{i=1}^N
     \lr{
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}
+    \dd{^2\bm{r}_i}
+    {t^2}
     }=
     \sum_{i=1}^N
     \bm{F}_{i}+
@@ -41,7 +41,7 @@ $$
 ここで、右辺が質点全体にかかる力（合力）であることから全体的に見て
 
 $$
-    m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=
+    m\dd{^2\bm{r}}{t^2}=
     \bm{F}
 $$
 
@@ -50,12 +50,12 @@ $$
 $$
     \sum_{i=1}^N
     \lr{
-    m_i\frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}
+    m_i\dd{^2\bm{r}_i}
+    {t^2}
     }=
     m
-    \frac{\mathrm{d}^2}
-    {\mathrm{d}t^2}
+    \dd{^2}
+    {t^2}
     \lr{
     \frac{1}{m}\sum_{i=1}^N m_i\bm{r}_i
     }

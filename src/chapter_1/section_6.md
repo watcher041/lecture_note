@@ -5,8 +5,8 @@
 　前回の回転運動に関する内容を、今度は質点系においても適用してみよう。質点系での $i$ 番目の質点の運動方程式は
 $$
     m_i
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}=
+    \dd{^2\bm{r}_i}
+    {t^2}=
     \bm{F}_{i}+
     \sum_{j=1(j\neq i)}^{N}\bm{F}_{ij}
 $$
@@ -18,8 +18,8 @@ $$
     m_i
     \lr{
     \bm{r}_i\times
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}
+    \dd{^2\bm{r}_i}
+    {t^2}
     }=
     \sum_{i=1}^N
     (\bm{r}_i\times\bm{F}_{i})+
@@ -52,8 +52,8 @@ $$
     m_i
     \lr{
     \bm{r}_i\times
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}
+    \dd{^2\bm{r}_i}
+    {t^2}
     }=
     \sum_{i=1}^N
     (\bm{r}_i\times\bm{F}_{i})
@@ -66,17 +66,17 @@ $$
     m_i
     \lr{
     \bm{r}_i\times
-    \frac{\mathrm{d}^2\bm{r}_i}
-    {\mathrm{d}t^2}
+    \dd{^2\bm{r}_i}
+    {t^2}
     }=
     \sum_{i=1}^N
     m_i
     \lr{
     \bm{r}_i\times
-    \frac{\mathrm{d}\bm{v}_i}
-    {\mathrm{d}t}
+    \dd{\bm{v}_i}
+    {t}
     }=
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \left[
     \sum_{i=1}^N
     m_i
@@ -90,7 +90,7 @@ $$
 となり、以下のように質点系でも回転の運動方程式が成り立つことが分かる。
 
 $$
-    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \dd{\bm{L}}{t}=
     \bm{N}、
     \bm{L}=
     \sum_{i=1}^N
@@ -103,7 +103,7 @@ $$
 並進運動を取り扱った際に、重心 $\bm{r}_G$ に外力 $\bm{F}$ が働くものとしていたが回転でも同様にいえるため、
 
 $$
-    \frac{\mathrm{d}\bm{L}_G}{\mathrm{d}t}=
+    \dd{\bm{L}_G}{t}=
     \bm{N}_G、
     \bm{L}_G=m(\bm{r}_G\times\bm{v}_G)、
     \bm{N}_G=\bm{r}_G\times\bm{F}
@@ -181,7 +181,7 @@ $$
 となることから、これを時間微分することで
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{
         \sum_{i=1}^N 
         m_i\bm{r}'_i
@@ -216,7 +216,7 @@ $$
 であるから、重心自体の回転と重心の周囲の回転との二つに分けることができる。ところが、重心の回転運動については前回の重心の運動方程式にも含まれている（重心が回転しているかも分かる）ため、回転については最終的に重心周りの運動のみ取り扱えばよいことになる。
 
 $$
-    \frac{\mathrm{d}\bm{L}'}{\mathrm{d}t}=
+    \dd{\bm{L}'}{t}=
     \bm{N}'、
     \bm{L}'=
     \sum_{i=1}^N 
@@ -229,12 +229,12 @@ $$
 　ここまでのことを踏まえて、一般的に運動は以下の二つの式によって導出されるものと考えられる。
 
 $$
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    \dd{\bm{p}}{t}=
     \bm{F}
     （重心の並進運動を記述）
 $$
 $$
-    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \dd{\bm{L}}{t}=
     \bm{N}
     （重心周りの回転運動を記述）
 $$
@@ -242,16 +242,16 @@ $$
 しかし、これらは物体の変形を考慮されておらず**変形しない物体にしか適用されない**ものとなっている。そのため、この二つの式のみ従う物体はよく**剛体**（変形しない物体）と呼ばれている。また、変形しないというのは重心からの質点までの変位 $|\bm{r}'|$ が変化しないということであるため、以下の関係が成りたつことになる。
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     |\bm{r}'|=
-    \frac{\mathrm{d}r'}{\mathrm{d}t}=0、
+    \dd{r'}{t}=0、
     \bm{r}'=\bm{r}-\bm{r}_G
 $$
 
 あるいは、$|\bm{r}'|=\sqrt{\bm{r}'\cdot\bm{r}'}$ であることから以下の形でも表される。
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \sqrt{\bm{r}'\cdot\bm{r}'}=0
     \rightarrow
     (\bm{r}'\cdot\bm{v}')=0

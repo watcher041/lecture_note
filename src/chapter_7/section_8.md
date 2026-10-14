@@ -40,7 +40,7 @@ $$
 一方で、運動方程式についても
 
 $$
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
+    \dd{\bm{p}}{\tau}=
     \bm{f}、
     
     \bm{p}=
@@ -53,7 +53,7 @@ $$
     \mathrm{d}t
 $$
 $$
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
+    \dd{E_K}{\tau}=
     (\bm{f}\cdot\bm{v})、
     E_K=
     \frac{m_0c^2}
@@ -89,7 +89,7 @@ $$
 書くと以下の通りになる。
 
 $$
-    \frac{\mathrm{d}p^\mu}{\mathrm{d}\tau}=
+    \dd{p^\mu}{\tau}=
     f^\mu、
     p^\mu=
     \frac{m_0v^\mu}
@@ -150,7 +150,7 @@ $$
 
 というようになる。このことから、固有時を通じてRiemann計量を扱うことができるため、一旦運動方程式を一般化してから置き換えることで加速度系の方程式を得ることができると考えられる。そこで、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{
         \frac{\partial\mathcal{L}}
         {\partial \dot{q}}
@@ -198,13 +198,13 @@ $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
     \lr{
-    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \dd{s}{t}
     }、
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \dd{s}{t}=
     \sqrt{
     \eta_{\mu\nu}
-    \frac{\mathrm{d}x^\mu}{\mathrm{d}t}
-    \frac{\mathrm{d}x^\nu}{\mathrm{d}t}}
+    \dd{x^\mu}{t}
+    \dd{x^\nu}{t}}
     \rightarrow
     \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
 $$
@@ -223,8 +223,8 @@ $$
     -m_0c
     \lr{
     g_{\lambda\mu}
-    \frac{\mathrm{d}x^{\mu}}
-    {\mathrm{d}s}
+    \dd{x^{\mu}}
+    {s}
     }
 $$
 $$
@@ -240,10 +240,10 @@ $$
     \lr{
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-        \frac{\mathrm{d}x^{\mu}}
-        {\mathrm{d}s}
-        \frac{\mathrm{d}x^{\nu}}
-        {\mathrm{d}s}
+        \dd{x^{\mu}}
+        {s}
+        \dd{x^{\nu}}
+        {s}
     }-
     \frac{\partial U}{\partial x^\lambda}
 $$
@@ -252,40 +252,40 @@ $$
 $$
     m_0c\dot{s}
     \left[
-    \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} s}
-    \frac{\mathrm{d}x^{\mu}}
-    {\mathrm{d}s}+
+    \dd{ g_{\lambda\mu}}
+    { s}
+    \dd{x^{\mu}}
+    {s}+
     g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}-
+    \dd{^2x^{\mu}}
+    {s^2}-
     \frac{1}{2}
     \lr{
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-        \frac{\mathrm{d}x^{\mu}}
-        {\mathrm{d}s}
-        \frac{\mathrm{d}x^{\nu}}
-        {\mathrm{d}s}
+        \dd{x^{\mu}}
+        {s}
+        \dd{x^{\nu}}
+        {s}
     }\right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
 ここで、計量に関しての微分が
 $$
-    \frac{\mathrm{d} g_{\lambda\mu}}
-    {\mathrm{d} s}=
+    \dd{ g_{\lambda\mu}}
+    { s}=
     \frac{\partial g_{\lambda\mu}}
     {\partial x^\nu}
-    \frac{\mathrm{d} x^\nu}
-    {\mathrm{d} s}
+    \dd{ x^\nu}
+    { s}
 $$
 であるため、これを踏まえて整理すると次の通りになる。
 $$
     m_0c\dot{s}
     \left[
     g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}+
+    \dd{^2x^{\mu}}
+    {s^2}+
     \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
@@ -293,16 +293,16 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     }
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}
     \right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
 仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
 $$
     g_{\lambda\mu}
-    \frac{\mathrm{d}^2x^{\mu}}
-    {\mathrm{d}s^2}+
+    \dd{^2x^{\mu}}
+    {s^2}+
     \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
@@ -310,8 +310,8 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     }
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}=0
 $$
 となるわけだが、ここで以下のように変形する。
 $$
@@ -322,8 +322,8 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     }
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}=
     \frac{1}{2}
     \lr{
         \frac{\partial g_{\lambda\mu}}
@@ -333,8 +333,8 @@ $$
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
     }
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}
 $$
 そして、計量の微分を展開してみると
 $$
@@ -391,12 +391,12 @@ $$
 
 そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
 $$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
+    \dd{^2x^k}
+    {s^2}+
     g^{k\lambda}
     \Gamma_{\mu\nu,\lambda}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}=0
 $$
 これは**第２種クリストッフェル記号**を用いて
 $$
@@ -415,17 +415,17 @@ $$
 $$
 により、次の**測地線方程式**の形で記載される。
 $$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}+
+    \dd{^2x^k}
+    {s^2}+
     \Gamma^{k}_{\mu\nu}
-    \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
-    \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
+    \dd{x^{\mu}}{s}
+    \dd{x^{\nu}}{s}=0
 $$
 この式は物体がRiemann空間内を最短距離で通るということを前提にして求められるもので、例として点Aから点Bへ物体が移動するものとすると
 $$
     s=\int_A^B\mathrm{d}s=
     \int_A^B
-    \frac{\mathrm{d}s}{\mathrm{d}t}
+    \dd{s}{t}
     \mathrm{d}t=
     \int_A^B
     \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
@@ -433,9 +433,9 @@ $$
 $$
 が最小となる（$\delta s=0$）ときの関係式からも確認できる。特殊相対性理論においては、$g_{\mu\nu}=\eta_{\mu\nu}$（Lorentz変換）とするとクリストッフェル記号は0となり
 $$
-    \frac{\mathrm{d}^2x^k}
-    {\mathrm{d}s^2}=0、
-    \frac{\mathrm{d}s}{\mathrm{d}t}=
+    \dd{^2x^k}
+    {s^2}=0、
+    \dd{s}{t}=
     \sqrt{
         \eta_{\mu\nu}
         \dot{x}^{\mu} \dot{x}^{\nu}
@@ -446,21 +446,21 @@ $$
 $$
     \mathrm{d}\tau=
     \frac{\dot{s}}{c}\mathrm{d}t=
-    \frac{\mathrm{d}s}{c}=
+    \dd{s}{c}=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
 とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
 $$
     m_0c\dot{s}
-    \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=0
+    \dd{^2x^k}{s^2}=0
     \rightarrow
-    \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
+    \dd{p^k}{\tau}=0、
     \lr{
         p^k=
         m_0
-        \frac{\mathrm{d}x^k}
-        {\mathrm{d}\tau}
+        \dd{x^k}
+        {\tau}
     }
 $$
 というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量呼ばれており、右辺に力がある場合には $f^k$ （4元力）となる。このように、今までは速度に応じて質量が変化するものと思われてきたが、実は時間の進み方が変化していたことが分かる。
@@ -468,15 +468,15 @@ $$
 
 測地線方程式において、第二項目を右辺に移項し両辺に $m_0c$ をかけると $p^k=m_0cv^k$ であるため
 $$
-    \frac{\mathrm{d}p^k}
-    {\mathrm{d}\tau}=
+    \dd{p^k}
+    {\tau}=
     -\frac{1}{m_0c}\Gamma^{k}_{\mu\nu}
     p^{\mu}p^{\nu}
 $$
 となるが、ここで右辺が慣性力によるものになると思われる。そこで、まずは簡単に地球上の重力を考慮して
 
 $$
-    \frac{\mathrm{d}p^3}
-    {\mathrm{d}t}=
+    \dd{p^3}
+    {t}=
     -\frac{Gm_0M_0}{(x^3+R_0)^2}
 $$

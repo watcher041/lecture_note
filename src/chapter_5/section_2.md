@@ -8,12 +8,12 @@ $$
 $$
 これは仮想仕事の原理というように呼ぶ。次に、運動方程式では
 $$
-    m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=
+    m\dd{\bm{v}}{t}=
     \bm{R}+\bm{F}
 $$
 というように拘束力と外力とで力を分けて記載できるため、
 $$
-    \lr{m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}-
+    \lr{m\dd{\bm{v}}{t}-
     \bm{F}}
     \cdot\delta\bm{r}=0
 $$
@@ -30,7 +30,7 @@ $$
 $$
     \sum_{i=1}^{f}
     \left[
-        m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+        m\dd{\bm{v}}{t}
         \cdot
         \lr{\frac{\partial \bm{r}}{\partial q_i}}-
         \bm{F}\cdot
@@ -41,16 +41,16 @@ $$
 ここで、第1辺を整理して
 
 $$
-    m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+    m\dd{\bm{v}}{t}
     \cdot
     \lr{\frac{\partial \bm{r}}{\partial q_i}}=
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \left[
         m\bm{v}\cdot
         \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \right]-
     m\bm{v}\cdot
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{\frac{\partial \bm{r}}{\partial q_i}}
 $$
 
@@ -68,7 +68,7 @@ $$
     \frac{\partial \bm{r}}{\partial q_i}
 $$
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{\frac{\partial \bm{r}}{\partial q_i}}=
     \sum_{j=1}^{f}
     \frac{\partial}{\partial q_j}
@@ -89,7 +89,7 @@ $$
 $$
     \sum_{i=1}^{f}
     \left[
-        \frac{\mathrm{d}}{\mathrm{d}t}
+        \dd{}{t}
         \frac{\partial}{\partial \dot{q}_i}
         \lr{
             \frac{1}{2}m\bm{v}^2
@@ -107,7 +107,7 @@ $$
 任意の仮想変位に対して成立するためには、中の項目が0になる必要があるため
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{
         \frac{\partial K}{\partial \dot{q}_i}
     }
@@ -133,10 +133,10 @@ $$
 $$
 すると、以下のように書くこともできる。
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{\frac{\partial L}{\partial \dot{q}_i}}-
     \frac{\partial L}{\partial q_i}=0、
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     \lr{\frac{\partial U}{\partial \dot{q}_i}}=0
 $$
 $$

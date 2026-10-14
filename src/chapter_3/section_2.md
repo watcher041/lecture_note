@@ -63,7 +63,7 @@ $$
 
 $$
     \mathrm{d}S=
-    \frac{\mathrm{d}S'}{\cos\alpha}
+    \dd{S'}{\cos\alpha}
 $$
 
 だけの面積を貫く。

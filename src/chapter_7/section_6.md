@@ -5,8 +5,8 @@
 
 $$
 
-    \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=a、
-    \frac{\mathrm{d}^2x'}{\mathrm{d}t'^2}=0、
+    \dd{^2x}{t^2}=a、
+    \dd{^2x'}{t'^2}=0、
     t'=t
 $$
 

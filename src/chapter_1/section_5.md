@@ -4,15 +4,15 @@
 　ここからは、どのようにして回転運動を扱っていくのかを述べていくことにする。そもそも回転というのは、ある一点を軸にその周囲を運動することを言う。その様子を記述するとき、ちょうど二体問題で扱った極座標 $(r,\theta)$ が便利であるため、試しに運動方程式
 
 $$
-    m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t^2}=\bm{F}
+    m\dd{^2\bm{r}}{t^2}=\bm{F}
     
 $$
 
 を変形してどのように記述されるかを見てみよう。ここで、$\bm{r}$ は質点の位置、$\bm{F}$ は質点に働く力、 $m$ は質点の質量としている 。まず、直交座標 $(x,y)$ を用いると各成分の運動方程式は
 
 $$
-    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}=F_x、
-    m\frac{\mathrm{d}^2y}{\mathrm{d}t^2}=F_y
+    m\dd{^2x}{t^2}=F_x、
+    m\dd{^2y}{t^2}=F_y
 $$
 
 となるが、ここで直交座標と極座標との間では以下の関係式が成り立つ。
@@ -26,15 +26,15 @@ $$
 
 $$
     v_x=
-    \frac{\mathrm{d}x}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}\cos\theta-
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\sin\theta
+    \dd{x}{t}=
+    \dd{r}{t}\cos\theta-
+    r\dd{\theta}{t}\sin\theta
 $$
 $$
     v_y=
-    \frac{\mathrm{d}y}{\mathrm{d}t}=
-    \frac{\mathrm{d}r}{\mathrm{d}t}\sin\theta+
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}\cos\theta
+    \dd{y}{t}=
+    \dd{r}{t}\sin\theta+
+    r\dd{\theta}{t}\cos\theta
 $$
 
 一方で、速度がある時間での位置の変化であることから、$r,\theta$ が変化するとどうなるか見てみると、以下の図の通りとなる。
@@ -50,9 +50,9 @@ $$
 
 $$
     v_r=
-    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    \dd{r}{t}、
     v_{r_\theta}=
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+    r\dd{\theta}{t}
 $$
 
 そのため、先ほど微分した式は
@@ -90,33 +90,33 @@ $$
 
 $$
     a_x=
-    \frac{\mathrm{d}v_x}{\mathrm{d}t}=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \dd{v_x}{t}=
+    \dd{^2r}{t^2}
     \cos\theta-
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    2\dd{r}{t}
+    \dd{\theta}{t}
     \sin\theta-
-    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    r\dd{^2\theta}{t^2}
     \sin\theta-
     r
     \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }^2
     \cos\theta
 $$
 $$
     a_y=
-    \frac{\mathrm{d}v_y}{\mathrm{d}t}=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}
+    \dd{v_y}{t}=
+    \dd{^2r}{t^2}
     \sin\theta+
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    2\dd{r}{t}
+    \dd{\theta}{t}
     \cos\theta+
-    r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+    r\dd{^2\theta}{t^2}
     \cos\theta-
     r
     \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }^2
     \sin\theta
 $$
@@ -126,36 +126,36 @@ $$
 $$
     a_x=
     \left[
-        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+        \dd{^2r}{t^2}-
         r
         \lr{
-            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \dd{\theta}{t}
         }^2
     \right]
     \cos\theta-
     \left[
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+        2\dd{r}{t}
+        \dd{\theta}{t}+
         r
-        \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+        \dd{^2\theta}{t^2}
     \right]
     \sin\theta
 $$
 $$
     a_y=
     \left[
-        \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+        \dd{^2r}{t^2}-
         r
         \lr{
-            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            \dd{\theta}{t}
         }^2
     \right]
     \sin\theta+
     \left[
-        2\frac{\mathrm{d}r}{\mathrm{d}t}
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}+
+        2\dd{r}{t}
+        \dd{\theta}{t}+
         r
-        \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
+        \dd{^2\theta}{t^2}
     \right]
     \cos\theta
 $$
@@ -164,20 +164,20 @@ $$
 
 $$
     a_r=
-    \frac{\mathrm{d}^2r}
-    {\mathrm{d}t^2}-
+    \dd{^2r}
+    {t^2}-
     r
     \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }^2、
     a_{r_\theta}=
-    2\frac{\mathrm{d}r}
-    {\mathrm{d}t}
-    \frac{\mathrm{d}\theta}
-    {\mathrm{d}t}+
+    2\dd{r}
+    {t}
+    \dd{\theta}
+    {t}+
     r
-    \frac{\mathrm{d}^2\theta}
-    {\mathrm{d}t^2}
+    \dd{^2\theta}
+    {t^2}
 $$
 
 また、先ほどの速度と同じように加速度においても
@@ -195,24 +195,24 @@ $$
 
 $$
     m\left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}-
+        \dd{^2r}
+        {t^2}-
         r
         \lr{
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        \dd{\theta}
+        {t}
         }^2
     \right]=F_x\cos\theta+F_y\sin\theta
 $$
 $$
     m\lr{
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}+
+        2\dd{r}
+        {t}
+        \dd{\theta}
+        {t}+
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
+        \dd{^2\theta}
+        {t^2}
     }=-F_x\sin\theta+F_y\cos\theta
 $$
 
@@ -227,44 +227,44 @@ $$
 
 $$
     m\left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}-
+        \dd{^2r}
+        {t^2}-
         r
         \lr{
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        \dd{\theta}
+        {t}
         }^2
     \right]=F_r、
     m\lr{
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}+
+        2\dd{r}
+        {t}
+        \dd{\theta}
+        {t}+
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
+        \dd{^2\theta}
+        {t^2}
     }=F_{r_\theta}
 $$
 
 これらの式を詳しく見ていくと、動径方向については
 
 $$
-    m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    m\dd{^2r}{t^2}=
     F_r+f_{r,\theta}、
     f_{r,\theta}=
     mr
     \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }^2
 $$
 
 というように、極座標に変換することで別の力 $f_{r,\theta}$ （遠心力）が遠ざかる方向に働いている**ように見える**形になっている。次に、角度方向については二体問題と同じように $r$ をかけて整理すると
 
 $$
-    \frac{\mathrm{d}L}{\mathrm{d}t}=
+    \dd{L}{t}=
     rF_{r_\theta}、
     L=
-    mr^2\frac{\mathrm{d}\theta}{\mathrm{d}t}
+    mr^2\dd{\theta}{t}
 $$
 
 というように $L$ を用いて書ける。ここで回転する条件を考えたとき、角度方向に動いていれば回転することから角度の時間微分（**角速度**）が常に0でないものと思われる。そこで、角速度を $\omega$ として先ほどの式を表記し直すと
@@ -274,7 +274,7 @@ $$
     mr\omega^2、
     L=mr^2\omega、
     \omega=
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \dd{\theta}{t}
 $$
 
 となるが、このうち $L$ は従来の運動量が質量（慣性質量）と速度の掛け算であったことを踏まえ
@@ -287,7 +287,7 @@ $$
 というように $I$（**慣性モーメント**）を用いると、$L$ は角度方向の運動量（**角運動量**）として扱うことができる。すると、$rF_{r_\theta}$ は回転運動を変化させる量として $N$（**モーメント**）としてみなすことができ、
 
 $$
-    \frac{\mathrm{d}L}{\mathrm{d}t}=N、
+    \dd{L}{t}=N、
     L=I\omega、N=rF_{r_\theta}
 $$
 
@@ -329,7 +329,7 @@ $$
 そのため、回転方向については $z$ 成分に関する方程式になっていると考えられる。そこで、運動方程式
 
 $$
-    m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}=\bm{F}
+    m\dd{\bm{v}}{t}=\bm{F}
 $$
 
 に外積をとることで一般的に回転の運動方程式がどのようになるかを見てみることにする。まず、両辺に $\bm{r}$ と外積をとると
@@ -338,7 +338,7 @@ $$
     m
     \lr{
     \bm{r}\times
-    \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+    \dd{\bm{v}}{t}
     }
     =\bm{N}、
     \bm{N} = \bm{r}\times\bm{F}
@@ -349,12 +349,12 @@ $$
 $$
     \lr{
     \bm{r}\times
-    \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
+    \dd{\bm{v}}{t}
     }=
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     (\bm{r}\times\bm{v})-
     (\bm{v}\times\bm{v})=
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     (\bm{r}\times\bm{v})
 $$
 
@@ -362,7 +362,7 @@ $$
 
 $$
     m
-    \frac{\mathrm{d}}{\mathrm{d}t}
+    \dd{}{t}
     (\bm{r}\times\bm{v})=
     \bm{N}
 $$
@@ -374,9 +374,9 @@ $$
     \lr{
         0,0,
         mx
-        \frac{\mathrm{d}y}{\mathrm{d}t}-
+        \dd{y}{t}-
         my
-        \frac{\mathrm{d}x}{\mathrm{d}t}
+        \dd{x}{t}
     }=
     I\bm{\omega}、
     \bm{\omega}=(0,0,\omega)
@@ -385,14 +385,14 @@ $$
 というように角運動量 $L$ の $z$ 成分と同じ形になっていることが分かる。そのため、最終的に回転の運動方程式は以下の通りになる。
 
 $$
-    m\frac{\mathrm{d}^2r}{\mathrm{d}t^2}=
+    m\dd{^2r}{t^2}=
     F_r+f_{r,\theta}、
     f_{r,\theta}=
     mr\omega^2
 $$
 $$
-    \frac{\mathrm{d}\bm{L}}
-    {\mathrm{d}t}=
+    \dd{\bm{L}}
+    {t}=
     \bm{N}、
     \bm{L}=
     m(\bm{r}\times\bm{v})=
@@ -412,35 +412,35 @@ $$
 
 $$
     v_x=
-    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    \dd{x}{t}=
     r
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \dd{\theta}{t}
     \cos\theta\cos\phi-
     r\sin\theta
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \dd{\phi}{t}
     \sin\phi+
-    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \dd{r}{t}
     \sin\theta\cos\phi
 $$
 $$
     v_y=
-    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    \dd{y}{t}=
     r
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \dd{\theta}{t}
     \cos\theta\sin\phi+
     r\sin\theta
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \dd{\phi}{t}
     \cos\phi+
-    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \dd{r}{t}
     \sin\theta\sin\phi
 $$
 $$
     v_z=
-    \frac{\mathrm{d}z}{\mathrm{d}t}=
+    \dd{z}{t}=
     -r
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \dd{\theta}{t}
     \sin\theta+
-    \frac{\mathrm{d}r}{\mathrm{d}t}
+    \dd{r}{t}
     \cos\theta
 $$
 
@@ -456,12 +456,12 @@ $$
 
 $$
     v_r=
-    \frac{\mathrm{d}r}{\mathrm{d}t}、
+    \dd{r}{t}、
     v_{r_\theta}=
-    r\frac{\mathrm{d}\theta}{\mathrm{d}t}、
+    r\dd{\theta}{t}、
     v_{r_\phi}=
     r\sin\theta
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    \dd{\phi}{t}
 $$
 
 となることから、先ほどの速度の式に当てはめると
@@ -576,7 +576,7 @@ $$
 ここで、$v_{x,y}$ については右図から $r\sin\theta$ が動径となっているため、試しに微分をとってみると
 
 $$
-    \frac{\mathrm{d}}{\mathrm{d}t}(r\sin\theta)=
+    \dd{}{t}(r\sin\theta)=
     v_{r_\theta}
     \cos\theta+
     v_r
@@ -588,46 +588,46 @@ $$
 
 $$
     \begin{align*}
-        a_x=\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
+        a_x=\dd{^2x}{t^2}
         &=
-        \frac{\mathrm{d}}{\mathrm{d}t}
+        \dd{}{t}
         \lr{
-            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \dd{r}{t}
             \sin\theta\cos\phi+
-            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{\theta}{t}
             \cos\theta\cos\phi-
-            r\frac{\mathrm{d}\phi}{\mathrm{d}t}
+            r\dd{\phi}{t}
             \sin\theta\sin\phi
         }\\
         &=
         \left[
-            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-            2\frac{\mathrm{d}r}{\mathrm{d}t}
-            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{^2\theta}{t^2}+
+            2\dd{r}{t}
+            \dd{\theta}{t}
         \right]
         \cos\theta\cos\phi\\
         &-
         \left[
-            r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+            r\dd{^2\phi}{t^2}
             \sin\theta+
-            2\frac{\mathrm{d}r}{\mathrm{d}t}
-            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            2\dd{r}{t}
+            \dd{\phi}{t}
             \sin\theta+
-            2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            2r\dd{\theta}{t}
+            \dd{\phi}{t}
             \cos\theta
         \right]
         \sin\phi\\
         &+
         \left[
-            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            \dd{^2r}{t^2}-
             r
             \lr{
-                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+                \dd{\theta}{t}
             }^2-
             r
             \lr{
-                \frac{\mathrm{d}\phi}{\mathrm{d}t}
+                \dd{\phi}{t}
             }^2
         \right]
         \sin\theta\cos\phi
@@ -635,46 +635,46 @@ $$
 $$
 $$
     \begin{align*}
-        a_y=\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
+        a_y=\dd{^2y}{t^2}
         &=
-        \frac{\mathrm{d}}{\mathrm{d}t}
+        \dd{}{t}
         \lr{
-            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \dd{r}{t}
             \sin\theta\sin\phi+
-            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{\theta}{t}
             \cos\theta\sin\phi+
-            r\frac{\mathrm{d}\phi}{\mathrm{d}t}
+            r\dd{\phi}{t}
             \sin\theta\cos\phi
         }\\
         &=
         \left[
-            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-            2\frac{\mathrm{d}r}{\mathrm{d}t}
-            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{^2\theta}{t^2}+
+            2\dd{r}{t}
+            \dd{\theta}{t}
         \right]
         \cos\theta\sin\phi\\
         &+ 
         \left[
-            r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+            r\dd{^2\phi}{t^2}
             \sin\theta+
-            2\frac{\mathrm{d}r}{\mathrm{d}t}
-            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            2\dd{r}{t}
+            \dd{\phi}{t}
             \sin\theta+
-            2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-            \frac{\mathrm{d}\phi}{\mathrm{d}t}
+            2r\dd{\theta}{t}
+            \dd{\phi}{t}
             \cos\theta
         \right]
         \cos\phi\\
         &+
         \left[
-            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            \dd{^2r}{t^2}-
             r
             \lr{
-                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+                \dd{\theta}{t}
             }^2-
             r
             \lr{
-                \frac{\mathrm{d}\phi}{\mathrm{d}t}
+                \dd{\phi}{t}
             }^2
         \right]
         \sin\theta\sin\phi
@@ -682,27 +682,27 @@ $$
 $$
 $$
     \begin{align*}
-        a_z=\frac{\mathrm{d}^2z}{\mathrm{d}t^2}
+        a_z=\dd{^2z}{t^2}
         &=
-        \frac{\mathrm{d}}{\mathrm{d}t}
+        \dd{}{t}
         \lr{
-            \frac{\mathrm{d}r}{\mathrm{d}t}
+            \dd{r}{t}
             \cos\theta-
-            r\frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{\theta}{t}
             \sin\theta
         }\\
         &=
         -\left[
-            r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
-            2\frac{\mathrm{d}r}{\mathrm{d}t}
-            \frac{\mathrm{d}\theta}{\mathrm{d}t}
+            r\dd{^2\theta}{t^2}+
+            2\dd{r}{t}
+            \dd{\theta}{t}
         \right]
         \sin\theta+
         \left[
-            \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+            \dd{^2r}{t^2}-
             r
             \lr{
-                \frac{\mathrm{d}\theta}{\mathrm{d}t}
+                \dd{\theta}{t}
             }^2
         \right]
         \cos\theta
@@ -733,39 +733,39 @@ $$
 
 $$
     a_r=
-    \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
+    \dd{^2r}{t^2}-
     r
     \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }^2-
     r
     \lr{
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \dd{\phi}{t}
     }^2
     \sin^2\theta
 $$
 $$
     a_{r_\theta}=
     r
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
+    \dd{^2\theta}{t^2}+
     2
-    \frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}-
+    \dd{r}{t}
+    \dd{\theta}{t}-
     r
     \lr{
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \dd{\phi}{t}
     }^2
     \sin\theta\cos\theta
 $$
 $$
     a_{r_\phi}=
-    2\frac{\mathrm{d}r}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    2\dd{r}{t}
+    \dd{\phi}{t}
     \sin\theta+
-    2r\frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \frac{\mathrm{d}\phi}{\mathrm{d}t}
+    2r\dd{\theta}{t}
+    \dd{\phi}{t}
     \cos\theta+
-    r\frac{\mathrm{d}^2\phi}{\mathrm{d}t^2}
+    r\dd{^2\phi}{t^2}
     \sin\theta
 $$
 
@@ -774,22 +774,22 @@ $$
 $$
     v_r=
     \lr{
-        \frac{\mathrm{d}r}{\mathrm{d}t}
+        \dd{r}{t}
     }、
     \omega_{\theta}=
      \lr{
-        \frac{\mathrm{d}\theta}{\mathrm{d}t}
+        \dd{\theta}{t}
     }、
     \omega_{\phi}=
      \lr{
-        \frac{\mathrm{d}\phi}{\mathrm{d}t}
+        \dd{\phi}{t}
     }
 $$
 
 と置くことで、以下の通りになる。
 
 $$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    m\dd{v_r}{t}-
     mr\omega_{\theta}^2-
     mr\omega_{\phi}^2\sin^2\theta=
     F_x\sin\theta\cos\phi+
@@ -798,7 +798,7 @@ $$
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    \dd{\omega_{\theta}}{t}+
     2mv_r\omega_{\theta}-
     mr\omega_{\phi}^2\sin\theta\cos\theta=
     F_x\cos\theta\cos\phi+
@@ -807,7 +807,7 @@ $$
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
+    \dd{\omega_{\phi}}{t}
     \sin\theta+
     2mr\omega_{\theta}\omega_{\phi}\cos\theta+
     2mv_r\omega_{\phi}\sin\theta=
@@ -838,21 +838,21 @@ $$
 と同じであることから、最終的に以下の形になる。
 
 $$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    m\dd{v_r}{t}-
     mr\omega_{\theta}^2-
     mr\omega_{\phi}^2\sin^2\theta=
     F_r
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    \dd{\omega_{\theta}}{t}+
     2mv_r\omega_{\theta}-
     mr\omega_{\phi}^2\sin\theta\cos\theta=
     F_{r_\theta}
 $$
 $$
     mr
-    \frac{\mathrm{d}\omega_{\phi}}{\mathrm{d}t}
+    \dd{\omega_{\phi}}{t}
     \sin\theta+
     2mr\omega_{\theta}\omega_{\phi}\cos\theta+
     2mv_r\omega_{\phi}\sin\theta=
@@ -862,7 +862,7 @@ $$
 ここで、動径方向の運動方程式を整理すると
 
 $$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
+    m\dd{v_r}{t}-
     \lr{
         mr\omega_{\theta}^2+
         mr\omega_{\phi}^2\sin^2\theta
@@ -922,7 +922,7 @@ $$
 というように動径方向に対して $f_r$ の分だけ働いていることになる。そのため、動径方向に対する運動方程式は以下の通りになる。
 
 $$
-    m\frac{\mathrm{d}v_r}{\mathrm{d}t}=
+    m\dd{v_r}{t}=
     F_r+f_{r,\theta}+f_{r,\phi}、
     f_{r,\theta}=mr\omega_{\theta}^2、
     f_{r,\phi}=
@@ -933,7 +933,7 @@ $$
 
 $$
     mr
-    \frac{\mathrm{d}\omega_{\theta}}{\mathrm{d}t}+
+    \dd{\omega_{\theta}}{t}+
     2mv_r\omega_{\theta}=
     F_{r_\theta}+f_{\theta,\phi}、
     f_{\theta,\phi}=
@@ -943,7 +943,7 @@ $$
 として、角度 $\theta$ に対して位置 $r$ で回転していることをふまえて両辺に $r$ をかけて整理すると、以下のようになる。この式は角度 $\theta$ に関する回転の運動方程式となっている。
 
 $$
-    \frac{\mathrm{d}L_{\theta}}{\mathrm{d}t}=
+    \dd{L_{\theta}}{t}=
     r(F_{r_\theta}+f_{\theta,\phi})、
     L_{\theta}=mr^2\omega_{\theta}、
     f_{\theta,\phi}=
@@ -953,7 +953,7 @@ $$
 同じ要領で角度 $\phi$ に関して位置 $r\sin\theta$ で回転していることを踏まえて両辺に $r\sin\theta$ をかけて整理してみると
 
 $$
-    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}
+    \dd{L_\phi}{t}
     =
     r\sin\theta F_{r_\phi}、
     L_\phi=
@@ -963,7 +963,7 @@ $$
 というように角度 $\phi$ に対する回転の運動方程式になる。ここで $L_\theta$ と $L_\phi$ の関係式が
 
 $$
-    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \dd{\bm{L}}{t}=
     \bm{N}、
     \bm{N}=\bm{r}\times\bm{F}、
     \bm{L}=
@@ -1052,45 +1052,45 @@ $$
 という関係式が成り立つことが分かる。そこで、これを時間微分して先ほどの式が得られるかを確認してみる。まず、時間微分すると
 
 $$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
-    -\frac{\mathrm{d}L_x}{\mathrm{d}t}\sin\phi-
+    \dd{L_\theta}{t}=
+    -\dd{L_x}{t}\sin\phi-
     L_x\omega_\phi\cos\phi+
-    \frac{\mathrm{d}L_y}{\mathrm{d}t}\cos\phi-
+    \dd{L_y}{t}\cos\phi-
     L_y\omega_\phi\sin\phi、
-    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
-    \frac{\mathrm{d}L_z}{\mathrm{d}t}
+    \dd{L_\phi}{t}=
+    \dd{L_z}{t}
 $$
 
 となるが、$L_x,L_y,L_z$ の時間微分
 
 $$
-    \frac{\mathrm{d}L_x}{\mathrm{d}t}=
+    \dd{L_x}{t}=
     yF_z-zF_y、
-    \frac{\mathrm{d}L_y}{\mathrm{d}t}=
+    \dd{L_y}{t}=
     zF_x-xF_z、
-    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    \dd{L_z}{t}=
     xF_y-yF_x
 $$
 
 を代入すると以下の通りになる。
 
 $$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    \dd{L_\theta}{t}=
     z(F_x\cos\phi+
     F_y\sin\phi)-
     (y\sin\phi+x\cos\phi)F_z-
     (L_x\cos\phi+L_y\sin\phi)\omega_\phi
 $$
 $$
-    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
-    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    \dd{L_\phi}{t}=
+    \dd{L_z}{t}=
     xF_y-yF_x
 $$
 
 そして $x,y,z$ を極座標の形になおすと
 
 $$
-    \frac{\mathrm{d}L_\theta}{\mathrm{d}t}=
+    \dd{L_\theta}{t}=
     r
     (F_x\cos\theta\cos\phi+
     F_y\cos\theta\sin\phi-
@@ -1098,8 +1098,8 @@ $$
     (L_x\cos\phi+L_y\sin\phi)\omega_\phi
 $$
 $$
-    \frac{\mathrm{d}L_\phi}{\mathrm{d}t}=
-    \frac{\mathrm{d}L_z}{\mathrm{d}t}=
+    \dd{L_\phi}{t}=
+    \dd{L_z}{t}=
     r\sin\theta(-F_x\sin\phi+F_y\cos\phi)
 $$
 
@@ -1122,7 +1122,7 @@ $$
 となる。そのため、3次元においても回転の運動方程式
 
 $$
-    \frac{\mathrm{d}\bm{L}}{\mathrm{d}t}=
+    \dd{\bm{L}}{t}=
     \bm{N}、
     \bm{L}=m(\bm{r}\times\bm{v})、
     \bm{N}=\bm{r}\times\bm{F}

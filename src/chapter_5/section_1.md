@@ -6,16 +6,16 @@
 　振り子の運動というのは、天井から質点を糸で吊るして揺らしたときの運動を指しており、質点の位置を $\bm{r}$、質量を $\bm{r},m$ 、外力として糸の張力 $\bm{T}$、重力 $\bm{G}$ が働いているとすると運動方程式は
 
 $$
-    m\frac{\mathrm{d}^2\bm{r}}{\mathrm{d}t}=
+    m\dd{^2\bm{r}}{t}=
     \bm{T}+\bm{G}
 $$
 
 となる。ここで、各成分に分けて書くと
 
 $$
-    m\frac{\mathrm{d}^2y}{\mathrm{d}t}=
+    m\dd{^2y}{t}=
     -T\sin\theta、
-    m\frac{\mathrm{d}^2x}{\mathrm{d}t}=
+    m\dd{^2x}{t}=
     mg-T\cos\theta
 $$
 
@@ -23,12 +23,12 @@ $$
 
 $$
     m\left[
-        \frac{\mathrm{d}^2r}
-        {\mathrm{d}t^2}-
+        \dd{^2r}
+        {t^2}-
         r
         \lr{
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}
+        \dd{\theta}
+        {t}
         }^2
     \right]=
     F_x\cos\theta+F_y\sin\theta=
@@ -36,13 +36,13 @@ $$
 $$
 $$
     m\lr{
-        2\frac{\mathrm{d}r}
-        {\mathrm{d}t}
-        \frac{\mathrm{d}\theta}
-        {\mathrm{d}t}+
+        2\dd{r}
+        {t}
+        \dd{\theta}
+        {t}+
         r
-        \frac{\mathrm{d}^2\theta}
-        {\mathrm{d}t^2}
+        \dd{^2\theta}
+        {t^2}
     }=
     F_y\cos\theta-F_x\sin\theta=
     -mg\sin\theta
@@ -54,9 +54,9 @@ $$
     
     T=ml
     \lr{
-    \frac{\mathrm{d}\theta}{\mathrm{d}t}
+    \dd{\theta}{t}
     }^2+mg\cos\theta、
-    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}=
+    \dd{^2\theta}{t^2}=
     -\frac{g}{l}\sin\theta
 $$
 

@@ -205,14 +205,14 @@ $$
     \gamma\lr{
         1-\frac{v_xV}{c^2}
     } m_r=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
+    \dd{t'}{t}m_r
 $$
 
 このことから、運動量についても
 
 $$
     p_x'=m_r'v_x'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
+    \dd{t'}{t}m_r
     \lr{
         \frac{v_x-V}{1-\frac{v_xV}{c^2}}
     }=
@@ -221,7 +221,7 @@ $$
 $$
 $$
     p_y'=m_r'v_y'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
+    \dd{t'}{t}m_r
     \left[
         \frac{v_y}{\gamma\lr{1-\frac{v_xV}{c^2}}}
     \right]=
@@ -230,7 +230,7 @@ $$
 $$
 $$
     p_z'=m_r'v_z'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
+    \dd{t'}{t}m_r
     \left[
         \frac{v_z}{\gamma\lr{1-\frac{v_xV}{c^2}}}
     \right]=
@@ -239,7 +239,7 @@ $$
 $$
 $$
     p_w'=m_r'v_w'=
-    \frac{\mathrm{d}t'}{\mathrm{d}t}m_rc=
+    \dd{t'}{t}m_rc=
     \gamma(m_rc-\beta m_rv_x)=
     \gamma(p_w-\beta p_x)
 $$
@@ -307,7 +307,7 @@ $$
 $$
     \frac{m_0}{
     \sqrt{1-\frac{\bm{v}^2}{c^2}}}=
-    \frac{\mathrm{d}t}{\mathrm{d}t'}
+    \dd{t}{t'}
     \frac{m_0}{
     \sqrt{1-\frac{\bm{v'}^2}{c^2}}}
     \rightarrow
@@ -332,11 +332,11 @@ $$
 
 $$
     \bm{f}=
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \dd{\bm{p}}{\tau}、
     \bm{f}\equiv
     \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     f_w=
-    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}、
+    \dd{p_w}{\tau}、
     f_w\equiv
     \frac{F_w}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
@@ -382,11 +382,11 @@ $$
 
 $$
     \bm{f}=
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \dd{\bm{p}}{\tau}、
     \bm{f}\equiv
     \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     f_w=
-    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}、
+    \dd{p_w}{\tau}、
     f_w\equiv
     \frac{F_w}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     {\mathrm d}\tau=
@@ -449,9 +449,9 @@ $$
 $$
     p_w=m_rv_w=m_rc=\frac{E_K}{c}、
     f_w=
-    \frac{\mathrm{d}p_w}{\mathrm{d}\tau}=
+    \dd{p_w}{\tau}=
     \frac{1}{c}
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
+    \dd{E_K}{\tau}=
     \frac{1}{c}
     (\bm{f}\cdot\bm{v})
 $$
@@ -460,10 +460,10 @@ $$
 
 $$
     \bm{f}=
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \dd{\bm{p}}{\tau}、
     \bm{p}=m_r\bm{v}、
     \bm{f}\cdot\bm{v}=
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
+    \dd{E_K}{\tau}、
     E_K=m_rc^2
 $$
 
@@ -472,40 +472,40 @@ $$
 $$
     p_x=m_rv_x=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \frac{\mathrm{d}x}{\mathrm{d}t}=
+    \dd{x}{t}=
     m_0u_x、
-    u_x=\frac{\mathrm{d}x}{\mathrm{d}\tau}
+    u_x=\dd{x}{\tau}
 $$
 $$
     p_y=m_rv_y=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \frac{\mathrm{d}y}{\mathrm{d}t}=
+    \dd{y}{t}=
     m_0u_y、
-    u_y=\frac{\mathrm{d}y}{\mathrm{d}\tau}
+    u_y=\dd{y}{\tau}
 $$
 $$
     p_z=m_rv_z=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \frac{\mathrm{d}z}{\mathrm{d}t}=
+    \dd{z}{t}=
     m_0u_z、
-    u_z=\frac{\mathrm{d}z}{\mathrm{d}\tau}
+    u_z=\dd{z}{\tau}
 $$
 $$
     p_w=m_rv_w=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \frac{\mathrm{d}w}{\mathrm{d}t}=
+    \dd{w}{t}=
     m_0u_w、
-    u_w=\frac{\mathrm{d}w}{\mathrm{d}\tau}
+    u_w=\dd{w}{\tau}
 $$
 
 というように、速度を $t$ ではなく $\tau$ で微分した $u$ を使えば質量は $m_0$ のまま変わらず、$1/\sqrt{1-\bm{v}^2/c^2}$ は $\mathrm{d}t/\mathrm{d}\tau$ として現れるだけである。そのため、相対論的質量 $m_r$ という考え方が不要なのではないかという疑問が生じる。この点は、 L. B. Okun が論文 "The concept of mass"（Physics Today 42(6), 31–36, 1989）で論じており、相対論的質量という概念が不要であるだけでなく、質量が速度とともに増えるという誤解を生みやすいことを指摘している。そのため、以降では $m_r$ は利用せず $m_0$ を用いて述べていくことにする。それに伴い、運動方程式も以下のように表記する。
 
 $$
     \bm{f}=
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}、
+    \dd{\bm{p}}{\tau}、
     \bm{p}=\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     \bm{f}\cdot\bm{v}=
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}、
+    \dd{E_K}{\tau}、
     E_K=\frac{m_0c^2}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
@@ -533,10 +533,10 @@ $$
 以上のことを踏まえて、実際に重力がかかる場合の運動を考えてみる。重力加速度 $\bm{g}$ で重力 $m_0\bm{g}$ が働いている場合、
 
 $$
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}\tau}=
+    \dd{\bm{p}}{\tau}=
     \frac{m_0\bm{g}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\mathrm{d}E_K}{\mathrm{d}\tau}=
+    \dd{E_K}{\tau}=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     (\bm{g}\cdot\bm{v})
 $$
@@ -544,21 +544,21 @@ $$
 となるが、固有時に関する微分 $\mathrm{d}t/\mathrm{d}\tau$ が出てくることから以下の形になる。
 
 $$
-    \frac{\mathrm{d}t}{\mathrm{d}\tau}
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    \dd{t}{\tau}
+    \dd{\bm{p}}{t}=
     \frac{m_0\bm{g}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     \rightarrow
-    \frac{\mathrm{d}\bm{p}}{\mathrm{d}t}=
+    \dd{\bm{p}}{t}=
     m_0\bm{g}
 $$
 $$
-    \frac{\mathrm{d}t}{\mathrm{d}\tau}
-    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
+    \dd{t}{\tau}
+    \dd{E_K}{t}=
     \frac{m_0}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
     (\bm{g}\cdot\bm{v})
     \rightarrow
-    \frac{\mathrm{d}E_K}{\mathrm{d}t}=
+    \dd{E_K}{t}=
     m_0(\bm{g}\cdot\bm{v})
 $$
 
