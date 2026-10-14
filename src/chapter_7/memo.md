@@ -9,11 +9,11 @@ $$
 $$
     \bm{u}_y\cdot\bm{u}_y=
     \frac{1}{2}
-    \left(
+    \lr{
         \bm{u}_X\cdot\bm{u}_X+
         2(\bm{u}_X\cdot\bm{u}_Y)+
         \bm{u}_Y\cdot\bm{u}_Y
-    \right)=1
+    }=1
 $$
 
 となることから、基底ベクトルの大きさは以下の通りとなる。
@@ -37,7 +37,7 @@ $$
 
 $$
     w'=w、x=-\beta w+x、y'=y、z'=z、
-    \left(\beta=\frac{V}{c}\right)
+    \lr{\beta=\frac{V}{c}}
 $$
 $$
     \leftrightarrow
@@ -77,161 +77,161 @@ $$
 $$
     \bm{u}_w=
     \frac{\partial \bm{s}}{\partial w}=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial w}
-    \right)
+    }
     \bm{u}_w'+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial w}
-    \right)
+    }
     \bm{u}_x'+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial w}
-    \right)
+    }
     \bm{u}_y'+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial w}
-    \right)
+    }
     \bm{u}_z'
 $$
 $$
     \bm{u}_x=
     \frac{\partial \bm{s}}{\partial x}=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial x}
-    \right)
+    }
     \bm{u}_w'+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial x}
-    \right)
+    }
     \bm{u}_x'+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial x}
-    \right)
+    }
     \bm{u}_y'+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial x}
-    \right)
+    }
     \bm{u}_z'
 $$
 $$
     \bm{u}_y=
     \frac{\partial \bm{s}}{\partial y}=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial y}
-    \right)
+    }
     \bm{u}_w'+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial y}
-    \right)
+    }
     \bm{u}_x'+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial y}
-    \right)
+    }
     \bm{u}_y'+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial y}
-    \right)
+    }
     \bm{u}_z'
 $$
 $$
     \bm{u}_z=
     \frac{\partial \bm{s}}{\partial z}=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial z}
-    \right)
+    }
     \bm{u}_w'+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial z}
-    \right)
+    }
     \bm{u}_x'+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial z}
-    \right)
+    }
     \bm{u}_y'+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial z}
-    \right)
+    }
     \bm{u}_z'
 $$
 $$
     \bm{u}_w'=
     \frac{\partial \bm{s}}{\partial w'}=
-    \left(
+    \lr{
         \frac{\partial w}{\partial w'}
-    \right)
+    }
     \bm{u}_w+
-    \left(
+    \lr{
         \frac{\partial x}{\partial w'}
-    \right)
+    }
     \bm{u}_x+
-    \left(
+    \lr{
         \frac{\partial y}{\partial w'}
-    \right)
+    }
     \bm{u}_y+
-    \left(
+    \lr{
         \frac{\partial z}{\partial w'}
-    \right)
+    }
     \bm{u}_z
 $$
 $$
     \bm{u}_x'=
     \frac{\partial \bm{s}}{\partial x'}=
-    \left(
+    \lr{
         \frac{\partial w}{\partial x'}
-    \right)
+    }
     \bm{u}_w+
-    \left(
+    \lr{
         \frac{\partial x}{\partial x'}
-    \right)
+    }
     \bm{u}_x+
-    \left(
+    \lr{
         \frac{\partial y}{\partial x'}
-    \right)
+    }
     \bm{u}_y+
-    \left(
+    \lr{
         \frac{\partial z}{\partial x'}
-    \right)
+    }
     \bm{u}_z
 $$
 $$
     \bm{u}_y'=
     \frac{\partial \bm{s}}{\partial y'}=
-    \left(
+    \lr{
         \frac{\partial w}{\partial y'}
-    \right)
+    }
     \bm{u}_w+
-    \left(
+    \lr{
         \frac{\partial x}{\partial y'}
-    \right)
+    }
     \bm{u}_x+
-    \left(
+    \lr{
         \frac{\partial y}{\partial y'}
-    \right)
+    }
     \bm{u}_y+
-    \left(
+    \lr{
         \frac{\partial z}{\partial y'}
-    \right)
+    }
     \bm{u}_z
 $$
 $$
     \bm{u}_z'=
     \frac{\partial \bm{s}}{\partial z'}=
-    \left(
+    \lr{
         \frac{\partial w}{\partial z'}
-    \right)
+    }
     \bm{u}_w+
-    \left(
+    \lr{
         \frac{\partial x}{\partial z'}
-    \right)
+    }
     \bm{u}_x+
-    \left(
+    \lr{
         \frac{\partial y}{\partial z'}
-    \right)
+    }
     \bm{u}_y+
-    \left(
+    \lr{
         \frac{\partial z}{\partial z'}
-    \right)
+    }
     \bm{u}_z
 $$
 
@@ -439,9 +439,9 @@ $$
     x'=\gamma(-\beta w+x)、
     y'=y、
     z'=z、
-    \left(
+    \lr{
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
-    \right)
+    }
 $$
 $$
     \leftrightarrow
@@ -624,17 +624,17 @@ $$
     \bm{e}_w\cdot\bm{e}_w=1、
     \bm{e}_w\cdot\bm{e}_x=
     \bm{e}_x\cdot\bm{e}_w=-\beta=
-    \cos\left(
+    \cos\lr{
         \frac{\pi}{2}+\alpha
-    \right)
+    }
 $$
 $$
     \bm{e}_w'\cdot\bm{e}_w'=1、
     \bm{e}_w'\cdot\bm{e}_x'=
     \bm{e}_x'\cdot\bm{e}_w'=\beta=
-    \cos\left(
+    \cos\lr{
         \frac{\pi}{2}-\alpha
-    \right)
+    }
 $$
 となり、座標も記載すると以下の図（ローデル図）の通りになる。
 <p align="center">
@@ -729,9 +729,9 @@ $$
     x'=\gamma(-\beta w+x)、
     y'=y、
     z'=z、
-    \left(
+    \lr{
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
-    \right)
+    }
 $$
 となるため、同じように行列にしてみると
 $$
@@ -770,78 +770,78 @@ $$
 そして、これらの微小変化をとると
 $$
     \mathrm{d}w'=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial w}
-    \right)
+    }
     \mathrm{d}w+
-    \left(
+    \lr{
         \frac{\partial w'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial w'}{\partial y}
-    \right)
+    }
     \mathrm{d}y+
-    \left(
+    \lr{
         \frac{\partial w'}{\partial z}
-    \right)
+    }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}x'=
-    \left(
+    \lr{
         \frac{\partial x'}{\partial w}
-    \right)
+    }
     \mathrm{d}w+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial y}
-    \right)
+    }
     \mathrm{d}y+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial z}
-    \right)
+    }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}y'=
-    \left(
+    \lr{
         \frac{\partial y'}{\partial w}
-    \right)
+    }
     \mathrm{d}w+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial y}
-    \right)
+    }
     \mathrm{d}y+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial z}
-    \right)
+    }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}z'=
-    \left(
+    \lr{
         \frac{\partial z'}{\partial w}
-    \right)
+    }
     \mathrm{d}w+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial y}
-    \right)
+    }
     \mathrm{d}y+
-    \left(
+    \lr{
         \frac{\partial z'}{\partial z}
-    \right)
+    }
     \mathrm{d}z
 $$
 であるのだが、これ書き直すと以下のような形で書けることが分かる。
@@ -881,9 +881,9 @@ $$
 これは先ほどの各成分ごとの表記と同様な形で
 $$
     \mathrm{d}x'^\mu=
-    \left(
+    \lr{
         \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)
+    }
     \mathrm{d}x^\nu　
     (\mu=0,1,2,3)
 $$
@@ -913,9 +913,9 @@ $$
 $$
     e_{\nu}^\mu=
     \partial_\nu x'^\mu=
-    \left(
+    \lr{
         \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)
+    }
     \rightarrow
     \mathrm{d}x'^\mu=
     e_{\nu}^\mu\mathrm{d}x^\nu
@@ -962,11 +962,11 @@ $$
 $$
     \mathrm{d}\bm{s}'=
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
-    \left(
+    \lr{
         \bm{e}_{\nu}=
         \frac{\partial \bm{s}'}
         {\partial x^\nu}
-    \right)
+    }
 
 $$
 そして、この大きさを求めるために内積をとると

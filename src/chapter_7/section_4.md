@@ -44,18 +44,18 @@ $$
 
 $$
     x'=\gamma(x-\beta w)、y'=y、z'=z、
-    w'=\gamma\left(w-\beta x\right)、
-    \left(
+    w'=\gamma\lr{w-\beta x}、
+    \lr{
         \beta=\frac{V}{c}、
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
-    \right)
+    }
 $$
 
 から逆変換を求めると
 
 $$
     x=\gamma(x'+\beta w')、y=y'、z=z'、
-    w=\gamma\left(w'+\beta x'\right)
+    w=\gamma\lr{w'+\beta x'}
 $$
 
 
@@ -88,12 +88,12 @@ $$
     \frac{\partial w'}{\partial t'}
     \frac{\partial}{\partial w'}=
     c
-    \left(
+    \lr{
         \frac{\partial x}{\partial w'}
         \frac{\partial}{\partial x}+
         \frac{\partial w}{\partial w'}
         \frac{\partial}{\partial w}
-    \right)
+    }
     =
     \gamma V
     \frac{\partial}{\partial x}+
@@ -155,9 +155,9 @@ $$
 $$
     \frac{\partial B_x'}{\partial x}+
     \frac{\partial}{\partial y}
-    \gamma\left(B_y'-\frac{V}{c^2}E_z'\right)+
+    \gamma\lr{B_y'-\frac{V}{c^2}E_z'}+
     \frac{\partial}{\partial z}
-    \gamma\left(B_z'+\frac{V}{c^2}E_y'\right)=0
+    \gamma\lr{B_z'+\frac{V}{c^2}E_y'}=0
 $$
 
 一方で、今度は１番目の式を
@@ -184,15 +184,15 @@ $$
     \frac{\partial E_{x}'}{\partial z}-
     \gamma
     \frac{\partial}{\partial x}
-    \left(
+    \lr{
         E_{z}'-VB_{y}'
-    \right)=
+    }=
     -
     \gamma
     \frac{\partial}{\partial t}
-    \left(
+    \lr{
         B_{y}'-\frac{V}{c^2}E_{z}'
-    \right)
+    }
     
 $$
 $$
@@ -202,9 +202,9 @@ $$
     -
     \gamma
     \frac{\partial}{\partial t}
-    \left(
+    \lr{
         B_{z}'+\frac{V}{c^2}E_{y}'
-    \right)
+    }
 $$
 
 ここまでの式をまとめると、以下の通りとなる。
@@ -212,9 +212,9 @@ $$
 $$
     \frac{\partial B_x'}{\partial x}+
     \frac{\partial}{\partial y}
-    \gamma\left(B_y'-\frac{V}{c^2}E_z'\right)+
+    \gamma\lr{B_y'-\frac{V}{c^2}E_z'}+
     \frac{\partial}{\partial z}
-    \gamma\left(B_z'+\frac{V}{c^2}E_y'\right)=0
+    \gamma\lr{B_z'+\frac{V}{c^2}E_y'}=0
 $$
 $$
     \frac{\partial}{\partial y}\gamma(E_z'-VB_y')-
@@ -225,15 +225,15 @@ $$
     \frac{\partial E_{x}'}{\partial z}-
     \gamma
     \frac{\partial}{\partial x}
-    \left(
+    \lr{
         E_{z}'-VB_{y}'
-    \right)=
+    }=
     -
     \gamma
     \frac{\partial}{\partial t}
-    \left(
+    \lr{
         B_{y}'-\frac{V}{c^2}E_{z}'
-    \right)
+    }
 $$
 $$
     \frac{\partial}{\partial x}
@@ -242,35 +242,35 @@ $$
     -
     \gamma
     \frac{\partial}{\partial t}
-    \left(
+    \lr{
         B_{z}'+\frac{V}{c^2}E_{y}'
-    \right)
+    }
 $$
 
 これらの式から、以下の関係式が成り立つことが予想される。
 
 $$
     E_{x}=E_{x}'、
-    E_{y}=\gamma\left(E_{y}'+VB_{z}'\right)、
-    E_{z}=\gamma\left(E_{z}'-VB_{y}'\right)
+    E_{y}=\gamma\lr{E_{y}'+VB_{z}'}、
+    E_{z}=\gamma\lr{E_{z}'-VB_{y}'}
 $$
 $$
     B_{x}=B_{x}'、
-    B_{y}=\gamma\left(B_{y}'-\frac{V}{c^2}E_{z}'\right)、
-    B_{z}=\gamma\left(B_{z}'+\frac{V}{c^2}E_{y}'\right)
+    B_{y}=\gamma\lr{B_{y}'-\frac{V}{c^2}E_{z}'}、
+    B_{z}=\gamma\lr{B_{z}'+\frac{V}{c^2}E_{y}'}
 $$
 
 確認のため、これらの逆変換を求めるとこちらも符号が反転しているだけで対照的な形となっている。
 
 $$
     E_{x}'=E_{x}、
-    E_{y}'=\gamma\left(E_{y}-VB_{z}\right)、
-    E_{z}'=\gamma\left(E_{z}+VB_{y}\right)
+    E_{y}'=\gamma\lr{E_{y}-VB_{z}}、
+    E_{z}'=\gamma\lr{E_{z}+VB_{y}}
 $$
 $$
     B_{x}'=B_{x}、
-    B_{y}'=\gamma\left(B_{y}+\frac{V}{c^2}E_{z}\right)、
-    B_{z}'=\gamma\left(B_{z}-\frac{V}{c^2}E_{y}\right)
+    B_{y}'=\gamma\lr{B_{y}+\frac{V}{c^2}E_{z}}、
+    B_{z}'=\gamma\lr{B_{z}-\frac{V}{c^2}E_{y}}
 $$
 
 ここで、さらに**真空中であることを考慮する（光速が真空中での速度であるため）と**光速が
@@ -292,13 +292,13 @@ $$
 
 $$
     D_{x}'=D_{x}、
-    D_{y}'=\gamma\left(D_{y}-\frac{V}{c^2}H_{z}\right)、
-    D_{z}'=\gamma\left(D_{z}+\frac{V}{c^2}H_{y}\right)
+    D_{y}'=\gamma\lr{D_{y}-\frac{V}{c^2}H_{z}}、
+    D_{z}'=\gamma\lr{D_{z}+\frac{V}{c^2}H_{y}}
 $$
 $$
     H_{x}'=H_{x}、
-    H_{y}'=\gamma\left(H_{y}+VD_{z}\right)、
-    H_{z}'=\gamma\left(H_{z}-VD_{y}\right)
+    H_{y}'=\gamma\lr{H_{y}+VD_{z}}、
+    H_{z}'=\gamma\lr{H_{z}-VD_{y}}
 $$
 
 これらの式を用いると、Maxwell方程式の１番目の式と4番目の式が
@@ -330,60 +330,60 @@ $$
 $$
     \rho'=
     \gamma
-    \left(
+    \lr{
         \frac{\partial D_x}{\partial x}+
         \frac{\partial D_y}{\partial y}+
         \frac{\partial D_z}{\partial z}
-    \right)+
+    }+
     \gamma\frac{V}{c^2}
     \left[
         \frac{\partial D_x}{\partial t}-
-        \left(
+        \lr{
             \frac{\partial H_z}{\partial y}-
             \frac{\partial H_y}{\partial z}
-        \right)
+        }
     \right]=
     \gamma
-    \left(
+    \lr{
         \rho-\frac{V}{c^2}i_x
-    \right)
+    }
 $$
 $$
     i_x'=
     \gamma
     \left[
-        \left(
+        \lr{
             \frac{\partial H_z}{\partial y}-
             \frac{\partial H_y}{\partial z}
-        \right)-
+        }-
         \frac{\partial D_x}{\partial t}
     \right]-
     \gamma V
-    \left(
+    \lr{
         \frac{\partial D_x}{\partial x}+
         \frac{\partial D_y}{\partial y}+
         \frac{\partial D_z}{\partial z}
-    \right)=
+    }=
     \gamma
-    \left(
+    \lr{
         i_x-V\rho
-    \right)
+    }
 $$
 $$
     i_y'=
-    \left(
+    \lr{
         \frac{\partial H_x}{\partial z}-
         \frac{\partial H_z}{\partial x}
-    \right)-
+    }-
     \frac{\partial D_y}{\partial t}=
     i_y
 $$
 $$
     i_z'=
-    \left(
+    \lr{
         \frac{\partial H_y}{\partial x}-
         \frac{\partial H_x}{\partial y}
-    \right)-
+    }-
     \frac{\partial D_z}{\partial t}=
     i_z
 $$
@@ -406,8 +406,8 @@ $$
 
 次に変換則について、前に求めた $E, B$ の変換則は $\nabla\cdot B=0$ と $\nabla\times E=-\partial B/\partial t$ のみから導いたため、媒質があっても変わらない。同様に、自由電荷・自由電流に対する $\nabla\cdot D=\rho$ と $\nabla\times H=i+\partial D/\partial t$ からは
 
-$$D_x=D_x'、D_y=\gamma\left(D_y'+\frac{V}{c^2}H_z'\right)、D_z=\gamma\left(D_z'-\frac{V}{c^2}H_y'\right)$$
-$$H_x=H_x'、H_y=\gamma\left(H_y'-VD_z'\right)、H_z=\gamma\left(H_z'+VD_y'\right)$$
+$$D_x=D_x'、D_y=\gamma\lr{D_y'+\frac{V}{c^2}H_z'}、D_z=\gamma\lr{D_z'-\frac{V}{c^2}H_y'}$$
+$$H_x=H_x'、H_y=\gamma\lr{H_y'-VD_z'}、H_z=\gamma\lr{H_z'+VD_y'}$$
 
 が得られ、これも媒質があっても同じ形になる。変わるのは $D$ と $E$、$B$ と $H$ の関係であり、$D=\epsilon E$、$B=\mu H$ は媒質が静止している系でのみ成り立つ。媒質が速度 $v$ で動いて見える系では、
 
@@ -417,7 +417,7 @@ $$D+\frac{v\times H}{c^2}=\epsilon(E+v\times B)、B-\frac{v\times E}{c^2}=\mu(H-
 
 最後に、動いている媒質の中での光の速さを考える。K' 系で媒質が静止していて、光が $x$ 方向に速さ $c/n$ で進むとすると、K 系での光の速さ $u$ は、速度の変換式の逆変換から
 
-$$u=\frac{c/n+V}{1+V/(nc)}\simeq\frac{c}{n}+V\left(1-\frac{1}{n^2}\right)$$
+$$u=\frac{c/n+V}{1+V/(nc)}\simeq\frac{c}{n}+V\lr{1-\frac{1}{n^2}}$$
 
 となる（$V\ll c$ の最低次まで）。媒質の速さ $V$ に対して $1-1/n^2$ だけ引きずられることになり、これはFresnelの引きずり係数と呼ばれ、Fizeauの流水の実験で確かめられている。なお $n>1$、$V<c$ のとき $u<c$ である。
 

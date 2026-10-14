@@ -25,11 +25,11 @@ $$
 
 $$
     \sum_{i=1}^N
-    \left(
+    \lr{
     m_i
     \frac{\mathrm{d}^2\bm{r}_i}
     {\mathrm{d}t^2}
-    \right)=
+    }=
     \sum_{i=1}^N
     \bm{F}_{i}+
     \sum_{i=1}^N
@@ -49,16 +49,16 @@ $$
 
 $$
     \sum_{i=1}^N
-    \left(
+    \lr{
     m_i\frac{\mathrm{d}^2\bm{r}_i}
     {\mathrm{d}t^2}
-    \right)=
+    }=
     m
     \frac{\mathrm{d}^2}
     {\mathrm{d}t^2}
-    \left(
+    \lr{
     \frac{1}{m}\sum_{i=1}^N m_i\bm{r}_i
-    \right)
+    }
 $$
 
 というように変形して比較してみると、$\bm{r}$ は以下の形で置くことができる。

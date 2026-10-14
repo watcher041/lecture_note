@@ -33,11 +33,11 @@ $$
 
 $$
     x'=\gamma(x-\beta w)、y'=y、z'=z、
-    w'=\gamma\left(w-\beta x\right)、
-    \left(
+    w'=\gamma\lr{w-\beta x}、
+    \lr{
         \beta=\frac{V}{c}、
         \gamma=\frac{1}{\sqrt{1-\beta^2}}
-    \right)
+    }
 $$
 
 を $t$ で微分することで得られる
@@ -50,10 +50,10 @@ $$
 $$
 $$
     \frac{{\mathrm d}w'}{{\mathrm d}t}=
-    \gamma\left(c-\beta v_x\right)
+    \gamma\lr{c-\beta v_x}
     \rightarrow
     \frac{{\mathrm d}t'}{{\mathrm d}t}=
-    \gamma\left(1-\frac{v_xV}{c^2}\right)
+    \gamma\lr{1-\frac{v_xV}{c^2}}
 $$
 
 を利用して以下の通りに変換される。
@@ -61,9 +61,9 @@ $$
 $$
     v_x'=\frac{v_x-V}{1-\frac{v_xV}{c^2}}、
     v_y'=\frac{v_y}{
-    \gamma\left(1-\frac{v_xV}{c^2}\right)}、
+    \gamma\lr{1-\frac{v_xV}{c^2}}}、
     v_z'=\frac{v_z}{
-    \gamma\left(1-\frac{v_xV}{c^2}\right)}、
+    \gamma\lr{1-\frac{v_xV}{c^2}}}、
     v_w'=c
 $$
 
@@ -166,28 +166,28 @@ $$
 $$
     1-\frac{\bm{v}'^2}{c^2}=
     \frac{1}{
-        \left(
+        \lr{
             c-\frac{v_xV}{c}
-        \right)^2
+        }^2
     }
     \left[
-        \left(
+        \lr{
             c-\frac{v_xV}{c}
-        \right)^2-
+        }^2-
         (v_x-V)^2-
-        \left(
+        \lr{
             1-\frac{V^2}{c^2}
-        \right)
+        }
         (v_y^2+v_z^2)
     \right]=
     \frac{
-        \left(
+        \lr{
             1-\frac{\bm{v}^2}{c^2}
-        \right)
+        }
     }{
-        \gamma^2\left(
+        \gamma^2\lr{
             1-\frac{v_xV}{c^2}
-        \right)^2
+        }^2
     }
 $$
 
@@ -196,15 +196,15 @@ $$
 $$
     m_r'=
     \gamma
-    \left(
+    \lr{
         1-\frac{v_xV}{c^2}
-    \right)
+    }
     \frac{m_0}{
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
     }=
-    \gamma\left(
+    \gamma\lr{
         1-\frac{v_xV}{c^2}
-    \right) m_r=
+    } m_r=
     \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
 $$
 
@@ -213,9 +213,9 @@ $$
 $$
     p_x'=m_r'v_x'=
     \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
-    \left(
+    \lr{
         \frac{v_x-V}{1-\frac{v_xV}{c^2}}
-    \right)=
+    }=
     \gamma(m_rv_x-m_rV)=
     \gamma(p_x-\beta p_w)
 $$
@@ -223,7 +223,7 @@ $$
     p_y'=m_r'v_y'=
     \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
     \left[
-        \frac{v_y}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
+        \frac{v_y}{\gamma\lr{1-\frac{v_xV}{c^2}}}
     \right]=
     m_rv_y=
     p_y
@@ -232,7 +232,7 @@ $$
     p_z'=m_r'v_z'=
     \frac{\mathrm{d}t'}{\mathrm{d}t}m_r
     \left[
-        \frac{v_z}{\gamma\left(1-\frac{v_xV}{c^2}\right)}
+        \frac{v_z}{\gamma\lr{1-\frac{v_xV}{c^2}}}
     \right]=
     m_rv_z=
     p_z
@@ -251,10 +251,10 @@ $$
     \frac{{\mathrm d}p_x'}{{\mathrm d}t'}=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
-    \left(
+    \lr{
         \frac{{\mathrm d}p_x}{{\mathrm d}t}-
         \beta \frac{{\mathrm d}p_w}{{\mathrm d}t}
-    \right)=
+    }=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
     (F_x-\beta F_w)
@@ -280,10 +280,10 @@ $$
     \frac{{\mathrm d}p_w'}{{\mathrm d}t'}=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
-    \left(
+    \lr{
         \frac{{\mathrm d}p_w}{{\mathrm d}t}-
         \beta \frac{{\mathrm d}p_x}{{\mathrm d}t}
-    \right)=
+    }=
     \frac{{\mathrm d}t}{{\mathrm d}t'}
     \gamma
     (F_w-\beta F_x)
@@ -347,10 +347,10 @@ $$
     f_x'=
     \frac{{\mathrm d}p_x'}{{\mathrm d}\tau'}=
     \gamma
-    \left(
+    \lr{
         \frac{{\mathrm d}p_x}{{\mathrm d}\tau}-
         \beta \frac{{\mathrm d}p_w}{{\mathrm d}\tau}
-    \right)=
+    }=
     \gamma
     (f_x-\beta f_w)
 $$
@@ -370,10 +370,10 @@ $$
     f_w'=
     \frac{{\mathrm d}p_w'}{{\mathrm d}\tau'}=
     \gamma
-    \left(
+    \lr{
         \frac{{\mathrm d}p_w}{{\mathrm d}\tau}-
         \beta \frac{{\mathrm d}p_x}{{\mathrm d}\tau}
-    \right)=
+    }=
     \gamma
     (f_w-\beta f_x)
 $$
@@ -403,23 +403,23 @@ $$
 $$
     \bm{f}\cdot\bm{v}=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}\right)\cdot\bm{v}=
+    \lr{\frac{m_0\bm{v}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}}\cdot\bm{v}=
     \frac{m_0}{
-        \left(
+        \lr{
             1-\frac{\bm{v}^2}{c^2}
-        \right)^{3/2}
+        }^{3/2}
     }
-    \left(
+    \lr{
         \bm{v}\cdot
         \frac{{\rm d}\bm{v}}{{\rm d}\tau}
-    \right)=
+    }=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(
+    \lr{
         \frac{m_0c^2}
         {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-    \right)=
+    }=
     \frac{{\rm d}}{{\rm d}\tau}
-    \left(m_rc^2\right)
+    \lr{m_rc^2}
 $$
 
 となるため、運動エネルギーは以下の形になることが分かる。
@@ -580,7 +580,7 @@ $$
 $$
     v_z=
     -\frac{gt}
-    {\sqrt{1+\left(\frac{gt}{c}\right)^2}}
+    {\sqrt{1+\lr{\frac{gt}{c}}^2}}
     
 $$
 
@@ -589,7 +589,7 @@ $$
 $$
     E_K=
     m_0c^2
-    \sqrt{1+\left(\frac{gt}{c}\right)^2}
+    \sqrt{1+\lr{\frac{gt}{c}}^2}
 $$
 
 となることから、$E_K$ に関する式を用いて $z$ も得られる。
@@ -597,9 +597,9 @@ $$
 $$
     z=z_0+
     \frac{c^2}{g}
-    \left(
-    1-\sqrt{1+\left(\frac{gt}{c}\right)^2}
-    \right)
+    \lr{
+    1-\sqrt{1+\lr{\frac{gt}{c}}^2}
+    }
 $$
 
 このとき、光速に比べて $gt$ が小さいものとすると

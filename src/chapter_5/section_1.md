@@ -26,16 +26,16 @@ $$
         \frac{\mathrm{d}^2r}
         {\mathrm{d}t^2}-
         r
-        \left(
+        \lr{
         \frac{\mathrm{d}\theta}
         {\mathrm{d}t}
-        \right)^2
+        }^2
     \right]=
     F_x\cos\theta+F_y\sin\theta=
     mg\cos\theta-T
 $$
 $$
-    m\left(
+    m\lr{
         2\frac{\mathrm{d}r}
         {\mathrm{d}t}
         \frac{\mathrm{d}\theta}
@@ -43,7 +43,7 @@ $$
         r
         \frac{\mathrm{d}^2\theta}
         {\mathrm{d}t^2}
-    \right)=
+    }=
     F_y\cos\theta-F_x\sin\theta=
     -mg\sin\theta
 $$
@@ -53,9 +53,9 @@ $$
 $$
     
     T=ml
-    \left(
+    \lr{
     \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2+mg\cos\theta、
+    }^2+mg\cos\theta、
     \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}=
     -\frac{g}{l}\sin\theta
 $$

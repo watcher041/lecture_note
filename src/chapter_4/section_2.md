@@ -18,30 +18,30 @@ $$
 このとき反射、屈折のそれぞれの場合の経路AOA'およびAOBの光学距離は
 $$
     L(A,A')=
-    n_1\left(
+    n_1\lr{
         \sqrt{x^2+a^2}+\sqrt{(b-x)^2+c^2}
-    \right)
+    }
 $$
 $$
     L(A,B)=
-    n_1\left(
+    n_1\lr{
         \sqrt{x^2+a^2}+\sqrt{(d-x)^2+e^2}
-    \right)
+    }
 $$
 となる。そこで、$x$を変えた時にこれらが極値となることから、それぞれ
 $$
     \delta L(A,A')=
-    n_1\left(
+    n_1\lr{
         \frac{x}{\sqrt{x^2+a^2}}-
         \frac{b-x}{\sqrt{(b-x)^2+c^2}}
-    \right)\delta x = 0
+    }\delta x = 0
 $$
 $$
     \delta L(A,B)=
-    \left(
+    \lr{
         \frac{n_1x}{\sqrt{x^2+a^2}}-
         \frac{n_2(d-x)}{\sqrt{(d-x)^2+e^2}}
-    \right)\delta x = 0
+    }\delta x = 0
 $$
 となり、これらについて以下の関係が成り立つ。
 $$

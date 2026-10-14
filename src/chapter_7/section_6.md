@@ -69,31 +69,31 @@ $$
 
 $$
     \bm{s}=
-    \left(
+    \lr{
         x+\frac{1}{\sqrt{2}}y
-    \right)
+    }
     \bm{e}_X+
     \frac{1}{\sqrt{2}}y\bm{e}_Y=
     x\bm{e}_X+
     y
-    \left(
+    \lr{
         \frac{1}{\sqrt{2}}\bm{e}_X+
         \frac{1}{\sqrt{2}}\bm{e}_Y
-    \right)=
+    }=
     x\bm{e}_x+y\bm{e}_y
 $$
 $$
     \bm{s}=
-    \left(
+    \lr{
         X-Y
-    \right)
+    }
     \bm{e}_x+
     \sqrt{2}Y\bm{e}_y=
     X\bm{e}_x+
     Y
-    \left(
+    \lr{
         -\bm{e}_x+\sqrt{2}\bm{e}_y
-    \right)=
+    }=
     X\bm{e}_X+Y\bm{e}_Y
 $$
 
@@ -154,21 +154,21 @@ $$
 
 $$
     \mathrm{d}\bm{s}=
-    \left(
+    \lr{
         \frac{\partial \bm{s}}{\partial X}
-    \right)
+    }
     \mathrm{d}X+
-    \left(
+    \lr{
         \frac{\partial \bm{s}}{\partial Y}
-    \right)
+    }
     \mathrm{d}Y=
-    \left(
+    \lr{
         \frac{\partial \bm{s}}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial \bm{s}}{\partial y}
-    \right)
+    }
     \mathrm{d}y
 $$
 
@@ -207,42 +207,42 @@ $$
 
 $$
     \mathrm{d}X=
-    \left(
+    \lr{
         \frac{\partial X}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial X}{\partial y}
-    \right)
+    }
     \mathrm{d}y、
     \mathrm{d}Y=
-    \left(
+    \lr{
         \frac{\partial Y}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial Y}{\partial y}
-    \right)
+    }
     \mathrm{d}y
 $$
 $$
     \mathrm{d}x=
-    \left(
+    \lr{
         \frac{\partial x}{\partial X}
-    \right)
+    }
     \mathrm{d}X+
-    \left(
+    \lr{
         \frac{\partial x}{\partial Y}
-    \right)
+    }
     \mathrm{d}Y、
     \mathrm{d}y=
-    \left(
+    \lr{
         \frac{\partial y}{\partial X}
-    \right)
+    }
     \mathrm{d}X+
-    \left(
+    \lr{
         \frac{\partial y}{\partial Y}
-    \right)
+    }
     \mathrm{d}Y
 $$
 
@@ -253,24 +253,24 @@ $$
     \mathrm{d}X\bm{u}_X+
     \mathrm{d}Y\bm{u}_Y=
     \left[
-        \left(
+        \lr{
             \frac{\partial x}{\partial X}
-        \right)
+        }
         \bm{u}_x+
-        \left(
+        \lr{
             \frac{\partial y}{\partial X}
-        \right)
+        }
         \bm{u}_y
     \right]
     \mathrm{d}X+
     \left[
-        \left(
+        \lr{
             \frac{\partial x}{\partial Y}
-        \right)
+        }
         \bm{u}_x+
-        \left(
+        \lr{
             \frac{\partial y}{\partial Y}
-        \right)
+        }
         \bm{u}_y
     \right]
     \mathrm{d}Y
@@ -278,24 +278,24 @@ $$
 $$
     \mathrm{d}\bm{s}=
     \left[
-        \left(
+        \lr{
             \frac{\partial X}{\partial x}
-        \right)
+        }
         \bm{u}_X+
-        \left(
+        \lr{
             \frac{\partial Y}{\partial x}
-        \right)
+        }
         \bm{u}_Y
     \right]
     \mathrm{d}x+
     \left[
-        \left(
+        \lr{
             \frac{\partial X}{\partial y}
-        \right)
+        }
         \bm{u}_X+
-        \left(
+        \lr{
             \frac{\partial Y}{\partial y}
-        \right)
+        }
         \bm{u}_Y
     \right]
     \mathrm{d}y=
@@ -542,9 +542,9 @@ $$
         \mathrm{d}{x'}\mathrm{d}{x'}+
         2\frac{a}{c^2}w'
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        \left(
+        \lr{
             1+\frac{a^2}{c^4}w'^2
-        \right)
+        }
         \mathrm{d}{w'}\mathrm{d}{w'}
 $$
 
@@ -588,22 +588,22 @@ $$
 
 $$
     \mathrm{d}x'=
-    \left(
+    \lr{
         \frac{\partial x'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial w}
-    \right)
+    }
     \mathrm{d}w、
     \mathrm{d}w'=
-    \left(
+    \lr{
         \frac{\partial w'}{\partial x}
-    \right)
+    }
     \mathrm{d}x+
-    \left(
+    \lr{
         \frac{\partial w'}{\partial w}
-    \right)
+    }
     \mathrm{d}w
 $$
 

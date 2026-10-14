@@ -122,29 +122,29 @@ $$
 $$
     \mathrm{d}x'^\mu=
     \sum_{\nu=1}^2
-    \left(
+    \lr{
         \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)
+    }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
     \sum_{\mu=1}^2
-    \left(
+    \lr{
         \frac{\partial x^\nu}{\partial x'^\mu}
-    \right)
+    }
     \mathrm{d}x'^\mu
 $$
 $$
     \bm{u}'_\mu=
     \sum_{\nu=1}^2
-    \left(
+    \lr{
         \frac{\partial x^\nu}{\partial x'^\mu}
-    \right)
+    }
     \bm{u}_\nu、
     \bm{u}_\nu=
     \sum_{\mu=1}^2
-    \left(
+    \lr{
         \frac{\partial x'^\nu}{\partial x^\mu}
-    \right)
+    }
     \bm{u}'_\mu
 $$
 
@@ -162,24 +162,24 @@ $$
 $$
 $$
     \mathrm{d}x'^\mu=
-    \left(
+    \lr{
         \frac{\partial x'^\mu}{\partial x^\nu}
-    \right)
+    }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
-    \left(
+    \lr{
         \frac{\partial x^\nu}{\partial x'^\mu}
-    \right)
+    }
     \mathrm{d}x'^\mu、
     \bm{u}'_\mu=
-    \left(
+    \lr{
         \frac{\partial x^\nu}{\partial x'^\mu}
-    \right)
+    }
     \bm{u}_\nu、
     \bm{u}_\nu=
-    \left(
+    \lr{
         \frac{\partial x'^\nu}{\partial x^\mu}
-    \right)
+    }
     \bm{u}'_\mu
 $$
 
@@ -213,46 +213,46 @@ $$
 というように変換すると、共変ベクトルと反変ベクトルは
 $$
     x'_1=
-    \left(
+    \lr{
         \frac{\partial x}{\partial x'}
-    \right)
+    }
     x_1+
-    \left(
+    \lr{
         \frac{\partial y}{\partial x'}
-    \right)
+    }
     x_2=
     x_1、
     x'_2=
-    \left(
+    \lr{
         \frac{\partial x}{\partial y'}
-    \right)
+    }
     x_1+
-    \left(
+    \lr{
         \frac{\partial y}{\partial y'}
-    \right)
+    }
     x_2=
     \frac{1}{\sqrt{2}}x_1+
     \frac{1}{\sqrt{2}}x_2
 $$
 $$
     x'^1=
-    \left(
+    \lr{
         \frac{\partial x'}{\partial x}
-    \right)
+    }
     x^1+
-    \left(
+    \lr{
         \frac{\partial x'}{\partial y}
-    \right)
+    }
     x^2=
     x^1-x^2、
     x'^2=
-    \left(
+    \lr{
         \frac{\partial y'}{\partial x}
-    \right)
+    }
     x^1+
-    \left(
+    \lr{
         \frac{\partial y'}{\partial y}
-    \right)
+    }
     x^2=
     \sqrt{2}x^2
 $$
@@ -306,26 +306,26 @@ $$
 $$
     g'_{\mu\nu}
     \mathrm{d}x'^{\mu}=
-    \left(
+    \lr{
         \frac{\partial x^\lambda}{\partial x'^\mu}
-    \right)
-    \left(
+    }
+    \lr{
         \frac{\partial x^\xi}{\partial x'^\nu}
-    \right)
-    \left(
+    }
+    \lr{
         \frac{\partial x'^\mu}{\partial x^\eta}
-    \right)
+    }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
     \delta_{\eta}^{\lambda}
-    \left(
+    \lr{
         \frac{\partial x^\xi}{\partial x'^\nu}
-    \right)
+    }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
-    \left(
+    \lr{
         \frac{\partial x^\xi}{\partial x'^\nu}
-    \right)
+    }
     g_{\lambda\xi}
     \mathrm{d}x^\lambda
 $$

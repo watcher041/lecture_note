@@ -13,8 +13,8 @@ $$
 $$
 というように拘束力と外力とで力を分けて記載できるため、
 $$
-    \left(m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}-
-    \bm{F}\right)
+    \lr{m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}-
+    \bm{F}}
     \cdot\delta\bm{r}=0
 $$
 となる。次に、このベクトルが $f$ 個の変数で書けるものとして $\bm{r}(q_1,q_2,\cdots,q_f)$ とすると
@@ -22,7 +22,7 @@ $$
 $$
     \delta \bm{r}=
     \sum_{i=1}^{f}
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \delta q_i
 $$
 
@@ -32,9 +32,9 @@ $$
     \left[
         m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
         \cdot
-        \left(\frac{\partial \bm{r}}{\partial q_i}\right)-
+        \lr{\frac{\partial \bm{r}}{\partial q_i}}-
         \bm{F}\cdot
-        \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+        \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \right]\delta q_i=0
 $$
 
@@ -43,15 +43,15 @@ $$
 $$
     m\frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
     \cdot
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)=
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}=
     \frac{\mathrm{d}}{\mathrm{d}t}
     \left[
         m\bm{v}\cdot
-        \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+        \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \right]-
     m\bm{v}\cdot
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}
 $$
 
 とすると、各項目について
@@ -61,7 +61,7 @@ $$
     \frac{\partial}{\partial \dot{q}_i}
     \left[
         \sum_{j=1}^{f}
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \dot{q}_i+
     \frac{\partial \bm{r}}{\partial t}
     \right]=
@@ -69,17 +69,17 @@ $$
 $$
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)=
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}=
     \sum_{j=1}^{f}
     \frac{\partial}{\partial q_j}
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \dot{q}_j+
     \frac{\partial}{\partial t}
-     \left(\frac{\partial \bm{r}}{\partial q_i}\right)=
+     \lr{\frac{\partial \bm{r}}{\partial q_i}}=
      \frac{\partial}{\partial q_i}
      \left[
         \sum_{j=1}^{f}
-    \left(\frac{\partial \bm{r}}{\partial q_j}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_j}}
     \dot{q}_j+
     \frac{\partial \bm{r}}{\partial t}
      \right]=
@@ -91,26 +91,26 @@ $$
     \left[
         \frac{\mathrm{d}}{\mathrm{d}t}
         \frac{\partial}{\partial \dot{q}_i}
-        \left(
+        \lr{
             \frac{1}{2}m\bm{v}^2
-        \right)
+        }
         -
         \frac{\partial}{\partial q_i}
-        \left(
+        \lr{
             \frac{1}{2}m\bm{v}^2
-        \right)
+        }
         -
         \bm{F}\cdot
-        \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+        \lr{\frac{\partial \bm{r}}{\partial q_i}}
     \right]\delta q_i=0
 $$
 任意の仮想変位に対して成立するためには、中の項目が0になる必要があるため
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
+    \lr{
         \frac{\partial K}{\partial \dot{q}_i}
-    \right)
+    }
         -
         \frac{\partial K}{\partial q_i}
         =Q_i　
@@ -119,7 +119,7 @@ $$
 $$
     K=\frac{1}{2}m\bm{v}^2、
     Q_i=\bm{F}\cdot
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}
 $$
 が成り立つ。この運動方程式は一般的な座標に関して成立するものであり、Euler=lagrange方程式と呼ぶ。ただ、通常は力を保存力として
 $$
@@ -128,16 +128,16 @@ $$
 として、一般化力を以下のようにする。
 $$
     Q_i=-\frac{\partial U}{\partial\bm{r}}\cdot
-    \left(\frac{\partial \bm{r}}{\partial q_i}\right)=
+    \lr{\frac{\partial \bm{r}}{\partial q_i}}=
     -\frac{\partial U}{\partial q_i}
 $$
 すると、以下のように書くこともできる。
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(\frac{\partial L}{\partial \dot{q}_i}\right)-
+    \lr{\frac{\partial L}{\partial \dot{q}_i}}-
     \frac{\partial L}{\partial q_i}=0、
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(\frac{\partial U}{\partial \dot{q}_i}\right)=0
+    \lr{\frac{\partial U}{\partial \dot{q}_i}}=0
 $$
 $$
     L=K-U（ラグランジアン）

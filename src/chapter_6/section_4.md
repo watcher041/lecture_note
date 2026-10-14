@@ -5,16 +5,16 @@
 $$
     S(U_t-U,V_t-V)=
     S(U_t,V_t)-
-    \left(
+    \lr{
         \frac{\partial S}{\partial U}
-    \right)U-
-    \left(
+    }U-
+    \lr{
         \frac{\partial S}{\partial V}
-    \right)V=
+    }V=
     S(U_t,V_t)-
-    \left(
+    \lr{
     \frac{U+PV}{T}
-    \right)
+    }
 $$
 であるから、状態数としては以下の通りになる。
 $$
@@ -75,33 +75,33 @@ $$
 上記の関係式から、以下の関係が成り立つ。
 $$
     S=-
-    \left(
+    \lr{
         \frac{\partial G}
         {\partial T}
-    \right)_{P}、
+    }_{P}、
     V=
-    \left(
+    \lr{
         \frac{\partial G}
         {\partial P}
-    \right)_{T}、
+    }_{T}、
     H=-T^2
     \left[
         \frac{\partial}
         {\partial T}
-        \left(
+        \lr{
             \frac{G}{T}
-        \right)
+        }
     \right]_{P}
 $$
 そのため、期待値は以下の通りにかける。
 $$
     \braket{S}=
     -\frac{1}{T}
-    \left(
+    \lr{
         \frac{\partial}
         {\partial\beta}
         \ln Y
-    \right)_{P}-
+    }_{P}-
     \frac{\braket{G}}{T}=
     \frac{1}{T}
     (\braket{H}-\braket{G})
@@ -109,34 +109,34 @@ $$
 $$
     \braket{V}=
     -\frac{1}{\beta}
-    \left(
+    \lr{
         \frac{\partial}
         {\partial P}
         \ln Y
-    \right)_{T}、
+    }_{T}、
     \braket{H}=
     -
-    \left(
+    \lr{
         \frac{\partial}
         {\partial\beta}
         \ln Y
-    \right)_{P}=
+    }_{P}=
     \braket{U}+P\braket{V}
 $$
 そして、これが連続している場合には
 $$
     \mathcal{W}=
     \frac{1}{\beta P}
-    \left(
+    \lr{
         \frac{\partial\mathcal{W}}
         {\partial V}
-    \right)_{U,N}
+    }_{U,N}
     \leftrightarrow
     Z\rightarrow 
-    \left(
+    \lr{
         \frac{\partial Z}
         {\partial V}
-    \right)_{U,N}
+    }_{U,N}
 $$
 であることをふまえると、以下のように書くこともできる。
 $$
@@ -145,10 +145,10 @@ $$
     e^{-\beta (\mathcal{H}+PV)}、
     Y=
     \int_{0}^{V_t}
-    \left(
+    \lr{
         \frac{\partial Z}
         {\partial V}
-    \right)_{U,N}
+    }_{U,N}
     e^{-\beta PV}\mathrm{d}V、
 $$
 このうち、$\rho_Y$ からエンタルピーの期待値を求めると
@@ -171,9 +171,9 @@ $$
 $$
     Y=
     \frac{N}{h^{3N}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3N/2}
+    }^{3N/2}
     \int_{0}^{V_t}
     V^{N-1}e^{-\beta PV}\mathrm{d}V
 $$
@@ -216,14 +216,14 @@ $$
         \frac{3}{2}+
         \ln
         \frac{\braket{V}}{h^3}
-        \left(
+        \lr{
             \frac{2\pi m}{\beta}
-        \right)^{3/2}
+        }^{3/2}
     \right]+
     k_{\mathrm{B}}
-    \left(
+    \lr{
         N-N\ln N+\ln N!
-    \right)
+    }
     
 $$
 さらに、これからヘルムホルツの自由エネルギーも求めてみると
@@ -232,15 +232,15 @@ $$
     -\frac{N}{\beta}
     \ln
     \frac{\braket{V}}{h^3}
-    \left(
+    \lr{
             \frac{2\pi m}{\beta}
-    \right)^{3/2}-
+    }^{3/2}-
     k_{\mathrm{B}}T
-    \left(
+    \lr{
         N-
         N\ln N+
         \ln N!
-    \right)
+    }
 $$
 というように、前回の形と同様な形が出てくるが後半に余計な項がついてくることが分かる。これについては、分配関数を $N!$ で割る（組み合わせの重複分を消す）ことで解消できる。実際、
 $$
@@ -249,9 +249,9 @@ $$
 とおくと、まず正準集団における分配関数は
 $$
     Z=\frac{V^N}{N!h^{3N}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3N/2}
+    }^{3N/2}
 $$
 となるため、ヘルムホルツの自由エネルギーとエントロピーは以下の通りになる。
 $$
@@ -260,9 +260,9 @@ $$
     \ln
     \left[
         \frac{V}{h^{3}}
-        \left(
+        \lr{
            \frac{2m\pi}{\beta}
-        \right)^{3/2}
+        }^{3/2}
     \right]+
     \frac{1}{\beta}\ln N!
 $$
@@ -276,9 +276,9 @@ $$
         \ln
         \left[
             \frac{V}{h^{3}}
-            \left(
+            \lr{
             \frac{2m\pi}{\beta}
-            \right)^{3/2}
+            }^{3/2}
         \right]
     \right\}-
     k_{\mathrm{B}}\ln N!
@@ -295,13 +295,13 @@ $$
     -\frac{N}{\beta}
     \ln
     \frac{\braket{V}}{h^3}
-    \left(
+    \lr{
             \frac{2\pi m}{\beta}
-    \right)^{3/2}+
+    }^{3/2}+
     \frac{1}{\beta}
-    \left(
+    \lr{
         N\ln N-N
-    \right)
+    }
 $$
 $$
     \braket{S}=
@@ -311,15 +311,15 @@ $$
         \ln
         \left[
             \frac{\braket{V}}{h^{3}}
-            \left(
+            \lr{
             \frac{2m\pi}{\beta}
-            \right)^{3/2}
+            }^{3/2}
         \right]
     \right\}-
     k_{\mathrm{B}}
-    \left(
+    \lr{
         N\ln N-N
-    \right)
+    }
 $$
 $$
     \braket{G}=
@@ -332,9 +332,9 @@ $$
     \ln
     \left[
     \frac{\braket{V}}{Nh^3}
-    \left(
+    \lr{
         2\pi mk_{\mathrm{B}}T
-    \right)^{3/2}
+    }^{3/2}
     \right]
 $$
 

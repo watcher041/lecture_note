@@ -116,7 +116,7 @@ $$
 $$
     \omega=2\pi\nu=\frac{E}{\hbar}、
     k=\frac{2\pi}{\lambda}=\frac{p}{\hbar}、
-    \left(\hbar=\frac{h}{2\pi}\right)
+    \lr{\hbar=\frac{h}{2\pi}}
 $$
 
 となるため、エネルギーが運動量で

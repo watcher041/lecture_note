@@ -11,20 +11,20 @@ $$
 $$
     \begin{cases} 
         ・　小正準集団：
-        \mu=-T\left(
+        \mu=-T\lr{
             \frac{\partial S}
             {\partial N}
-        \right)_{U,V}\\
+        }_{U,V}\\
         ・　　正準集団：
-        \mu=-\frac{1}{\beta}\left(
+        \mu=-\frac{1}{\beta}\lr{
             \frac{\partial}
             {\partial N}\ln Z
-        \right)_{T,V}\\
+        }_{T,V}\\
         ・等圧定圧集団：
-         \mu=-\frac{1}{\beta}\left(
+         \mu=-\frac{1}{\beta}\lr{
             \frac{\partial}
             {\partial N}\ln Y
-        \right)_{T,P}
+        }_{T,P}
     \end{cases}
 $$
 として求まるので、自由粒子の場合を例にあげて各集団ごとにどうなるかを見ていくことにする。
@@ -59,58 +59,58 @@ $$
     Nk_{\mathrm{B}}\ln
     \left[
     \frac{8V}{h^3}
-    \left(
+    \lr{
         \frac{\pi mU}{3}
-    \right)^{3/2}
-    \left(
+    }^{3/2}
+    \lr{
         \frac{e}{N}
-    \right)^{5/2}
+    }^{5/2}
     \right]+
     \ln\frac{2\delta p}{\sqrt{2mU}}
 $$
 これにより、化学ポテンシャルは以下の通りになる。
 $$
     \mu=
-    -T\left(
+    -T\lr{
         \frac{\partial S}
         {\partial N}
-    \right)_{U,V}=
+    }_{U,V}=
     -k_{\mathrm{B}}T\ln
     \left[
     \frac{V}{Nh^3}
-    \left(
+    \lr{
         2\pi mk_{\mathrm{B}}T
-    \right)^{3/2}
+    }^{3/2}
     \right]
 $$
 　同様に、正準集団においても分配関数が
 $$
     Z=\frac{V^N}{N!h^{3N}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3N/2}、
+    }^{3N/2}、
     \ln Z\simeq
     N\ln
     \left[
     \frac{Ve}{Nh^3}
-    \left(
+    \lr{
         \frac{2\pi m}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     \right]
 $$
 であったため、化学ポテンシャルは以下の通りとなる。
 $$
     \mu=
-    -\frac{1}{\beta}\left(
+    -\frac{1}{\beta}\lr{
         \frac{\partial}
         {\partial N}\ln Z
-    \right)_{T,V}=
+    }_{T,V}=
     -k_{\mathrm{B}}T\ln
     \left[
     \frac{V}{Nh^3}
-    \left(
+    \lr{
         2\pi mk_{\mathrm{B}}T
-    \right)^{3/2}
+    }^{3/2}
     \right]
 $$
 　さらに、等圧定温集団においても分配関数が
@@ -127,24 +127,24 @@ $$
     N\ln
     \left[
         \frac{\braket{V}}{Nh^3}
-        \left(
+        \lr{
             \frac{2\pi m}{\beta}
-        \right)^{3/2}
+        }^{3/2}
     \right]
 $$
 であるから、上記と同じ形が得られることが確認できる。
 $$
     \mu=
-    -\frac{1}{\beta}\left(
+    -\frac{1}{\beta}\lr{
         \frac{\partial}
         {\partial N}\ln Y
-    \right)_{T,P}=
+    }_{T,P}=
     -k_{\mathrm{B}}T\ln
     \left[
     \frac{\braket{V}}{Nh^3}
-    \left(
+    \lr{
         2\pi mk_{\mathrm{B}}T
-    \right)^{3/2}
+    }^{3/2}
     \right]
 $$
 ここで、ギブスの自由エネルギと見比べると $N$ 以外の部分が一致しているため、
@@ -180,15 +180,15 @@ $$
 というように確かに $\mu(T,P)$ となっていることが分かる。これはGibbs-Duhemの式と呼ばれており、化学ポテンシャルの変数に関することだけではなく、$T,P,\mu$ が互いに依存しており、独立して変化させることができないとを意味している。これが正しいものかは、
 $$
     -\frac{S}{N}=
-    \left(
+    \lr{
         \frac{\partial \mu}
         {\partial T}
-    \right)_{P}、
+    }_{P}、
     \frac{V}{N}=
-    \left(
+    \lr{
         \frac{\partial \mu}
         {\partial P}
-    \right)_{T}
+    }_{T}
 $$
 であることから、化学ポテンシャルを圧力で表示した
 $$

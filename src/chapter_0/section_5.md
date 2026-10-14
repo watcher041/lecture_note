@@ -3,27 +3,27 @@
 
 　長さ、質量、時間の単位には、m,kg,sの三つが用いられているが、m,kg,sもまた同様に用いられる。この他、米英などでは長さにfoot、質量にpoundなどが現在もなお用いられている。組立単位の大きさは基本単位の大きさによって変わる。例えば面積の単位の大きさは、単位長さの一辺をもつ正方形の面積と規定されているから、1mを基本としてできる面積単位は、1cmを基本とするものに対して10000倍の広がりをもっている。そこで長さの単位 $L_1,L_2$ に対する面積の単位を $S_1,S_2$ で表すと、
 $$
-    \frac{S_2}{S_1}=\left(\frac{L_2}{L_1}\right)^2
+    \frac{S_2}{S_1}=\lr{\frac{L_2}{L_1}}^2
 $$
 cmとmの場合でいえば
 $$
-    \frac{S_2}{S_1}=\left(\frac{\rm m}{\rm cm}\right)^2=100^2
+    \frac{S_2}{S_1}=\lr{\frac{\rm m}{\rm cm}}^2=100^2
 $$
 である。今、長さ・質量・時間に対する２組の基本単位をそれぞれ $L_1,M_1,T_1,L_2,M_2,T_2$としてみると、各種の組立単位の大きさの比はそれぞれ次のように与えられる：
 
 $$
-    \frac{ [ 体積 ]_2 }{ [ 体積 ]_1}=\left(\frac{L_2}{L_1}\right)、
+    \frac{ [ 体積 ]_2 }{ [ 体積 ]_1}=\lr{\frac{L_2}{L_1}}、
     \frac{ [ 密度 ]_2}{ [ 密度 ]_1}=
-    \left(\frac{M_2}{M_1}\right)\times\left(\frac{L_2}{L_1}\right)^{-3}、
+    \lr{\frac{M_2}{M_1}}\times\lr{\frac{L_2}{L_1}}^{-3}、
     \frac{ [ 速さ ]_2}{ [ 速さ ]_1}=
-    \left(\frac{L_2}{L_1}\right)\times\left(\frac{T_2}{T_1}\right)^{-1}、
+    \lr{\frac{L_2}{L_1}}\times\lr{\frac{T_2}{T_1}}^{-1}、
 $$
 $$
     \frac{ [ 加速度 ]_2}{ [ 加速度 ]_1}=
-    \left(\frac{L_2}{L_1}\right)\times\left(\frac{T_2}{T_1}\right)^{-2}、
+    \lr{\frac{L_2}{L_1}}\times\lr{\frac{T_2}{T_1}}^{-2}、
     \frac{ [ 運動量 ]_2}{ [ 運動量 ]_1}=
-    \left(\frac{M_2}{M_1}\right)\times\left(\frac{L_2}{L_1}\right)
-    \times\left(\frac{T_2}{T_1}\right)^{-1}
+    \lr{\frac{M_2}{M_1}}\times\lr{\frac{L_2}{L_1}}
+    \times\lr{\frac{T_2}{T_1}}^{-1}
 $$
 
  これらの式の右辺の指数を組立単位の**次元**（dimention）とよび、また速さの次元は $LT^{-1}$ であるともいう。一般に、一つの物理量を単位 $U_1$ で表した時の数値を $n_1$ とし、単位を$U_2$で表した時の数値を $n_2$ とすれば
@@ -38,9 +38,9 @@ $$
 
 $$
     \frac{n_1}{n_2}=
-    \left(\frac{L_2}{L_1}\right)^x\times
-    \left(\frac{M_2}{M_1}\right)^y\times
-    \left(\frac{T_2}{T_1}\right)^z
+    \lr{\frac{L_2}{L_1}}^x\times
+    \lr{\frac{M_2}{M_1}}^y\times
+    \lr{\frac{T_2}{T_1}}^z
 $$
 
 となる。いまこの式を仮に次のように書き直してみる：
@@ -64,7 +64,7 @@ $$
 $$
 kg=1000g、m=100cmを代入すると
 $$
-    1=\rho\times 1000 \times \left(\frac{1}{100}\right)^3、
+    1=\rho\times 1000 \times \lr{\frac{1}{100}}^3、
     \therefore\rho = 1000、
     \therefore 密度=1000 {\rm kg\cdot m^{-3}}
 $$

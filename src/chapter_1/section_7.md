@@ -138,17 +138,17 @@ $$
 
 $$
   \begin{equation}
-    \left(
+    \lr{
       \rho(\bm{r}_{i})V_{i}
-    \right)
+    }
     \frac{\mathrm{d}^2\bm{r}_{i}}
     {\mathrm{d}t^2}=
     \sum_{i=1(\neq j)}^{\mathrm{N}}
     \bm{F}_{\mathrm{ij}}+
     \bm{F}_{i}、
-    \left( 
+    \lr{ 
       i=1,\cdots,\mathrm{N}
-    \right)
+    }
   \end{equation}
 $$
 

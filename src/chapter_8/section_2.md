@@ -40,9 +40,9 @@ $$
 さらに、運動量と速度の方向が同じであることと 等方的にエネルギーが利用されることを踏まえて
 $$
     c_{\perp}=
-    c\left(
+    c\lr{
         \frac{p_{\perp}}{p}
-    \right)、
+    }、
     \braket{p_{\perp}^2}=
     \frac{1}{3}\braket{p^2}
 $$
@@ -71,10 +71,10 @@ $$
     \frac{h\nu_0}{c}=
     \frac{h\nu_{\phi}}{c}\cos\phi+
     \gamma m_{e}v\cos\alpha、
-    \left(
+    \lr{
         \gamma=
         \frac{1}{\sqrt{1-(v/c)^2}}
-    \right)
+    }
 $$
 $$
     0=
@@ -83,28 +83,28 @@ $$
 $$
 であることから、
 $$
-    \left(
+    \lr{
         \frac{h\nu_0}{c}-
         \frac{h\nu_{\phi}}{c}\cos\phi
-    \right)^2=
+    }^2=
     (\gamma m_{e}v\cos\alpha)^2
 $$
 $$
-    \left(
+    \lr{
         \frac{h\nu_{\phi}}{c}\sin\phi
-    \right)^2=
+    }^2=
     (\gamma m_{e}v\sin\alpha)^2
 $$
 となるため、これら二式を足し合わせる。
 $$
-    \left(
+    \lr{
         \frac{h\nu_0}{c}
-    \right)^2-
+    }^2-
     2\frac{h^2\nu_0\nu_{\phi}}{c^2}
     \cos\phi+
-    \left(
+    \lr{
         \frac{h\nu_{\phi}}{c}
-    \right)^2=
+    }^2=
     (\gamma m_{e}v)^2
 $$
 さらに、エネルギー保存則から
@@ -122,10 +122,10 @@ $$
     c^2
     \left[
         1-
-        \left(
+        \lr{
             \frac{m_{e}c^2}
             {h\nu_0-h\nu_\phi+m_{e}c^2}
-        \right)^2
+        }^2
     \right]
 $$
 であるため、右辺は以下の通りになる。
@@ -147,9 +147,9 @@ $$
 $$
     \lambda_\phi=
     \lambda_0+
-    \left(
+    \lr{
         \frac{h}{m_ec}
-    \right)
+    }
     2\sin^2\frac{\phi}{2}
 $$ 
 と表示した方が式が容易になり、ここでの $h/m_ec$ はCompton波長と呼ばれている。

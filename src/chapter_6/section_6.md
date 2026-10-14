@@ -5,9 +5,9 @@
 $$
     S(U_t-U,V_t-V,N_t-N)=
     S(U_t,V_t,N_t)-
-    \left(
+    \lr{
     \frac{U+PV-\mu N}{T}
-    \right)
+    }
 $$
 $$
     U=TS-PV+\mu N
@@ -16,9 +16,9 @@ $$
 $$
     S(U_t-U,N_t-N)=
     S(U_t,N_t)-
-    \left(
+    \lr{
     \frac{U-\mu N}{T}
-    \right)
+    }
 $$
 であることから、分布関数は以下の通りになる（$J:グランドポテンシャル$）。
 $$
@@ -44,50 +44,50 @@ $$
 $$
 であることから、
 $$
-    \left(
+    \lr{
         \frac{\partial J}
         {\partial V}
-    \right)_{T,\mu}=
+    }_{T,\mu}=
     -P、
-    \left(
+    \lr{
         \frac{\partial J}
         {\partial T}
-    \right)_{V,\mu}=
+    }_{V,\mu}=
     -S、
-    \left(
+    \lr{
         \frac{\partial J}
         {\partial \mu}
-    \right)_{V,T}=
+    }_{V,T}=
     -N
 $$
 が成り立つため、各気体値は以下のように書ける。
 $$
     \braket{P}=
     \frac{1}{\beta}
-    \left(
+    \lr{
         \frac{\partial}{\partial V}
         \ln\Xi
-    \right)_{T,\mu}、
+    }_{T,\mu}、
     \braket{N}=
     \frac{1}{\beta}
-    \left(
+    \lr{
         \frac{\partial}{\partial \mu}
         \ln\Xi
-    \right)_{V,T}
+    }_{V,T}
 $$
 $$
     \braket{S}=
     -\frac{\braket{J}}{T}
     +\frac{1}{\beta}
-    \left(
+    \lr{
         \frac{\partial}{\partial T}
         \ln\Xi
-    \right)_{V,\mu}=
+    }_{V,\mu}=
     k_{\mathrm{B}}
-    \left(
+    \lr{
         \frac{\partial}{\partial T}
         T\ln\Xi
-    \right)_{V,\mu}
+    }_{V,\mu}
 $$
 これを連続的な形で記載した場合には、
 $$
@@ -122,16 +122,16 @@ $$
     \Xi=
     \sum_{N=0}^{N_t}
     \frac{V^N}{N!h^{3N}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3N/2}e^{\beta\mu N}=
+    }^{3N/2}e^{\beta\mu N}=
     \sum_{N=0}^{N_t}
     \frac{1}{N!}
     \left[
         \frac{V}{h^{3}}
-        \left(
+        \lr{
             \frac{2m\pi}{\beta}
-        \right)^{3/2}e^{\beta \mu}
+        }^{3/2}e^{\beta \mu}
     \right]^{N}
 $$
 となるため、総和に関して
@@ -145,50 +145,50 @@ $$
     \exp
     \left[
         \frac{V}{h^{3}}
-        \left(
+        \lr{
             \frac{2m\pi}{\beta}
-        \right)^{3/2}
+        }^{3/2}
         e^{\beta \mu}
     \right]、
     \ln\Xi=
     \frac{V}{h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}
 $$
 となるため、各期待値は以下の通りになる。
 $$
     \braket{P}=
     \frac{1}{\beta h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}、
     \braket{N}=
     \frac{V}{h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}、
     \braket{J}=
     -\frac{V}{\beta h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}
 $$
 $$
     \braket{S}=
     k_{\mathrm{B}}
     \frac{V}{h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}
-    \left(
+    \lr{
         \frac{5}{2}-\beta\mu
-    \right)
+    }
 $$
 $$
     \braket{U}=
@@ -197,27 +197,27 @@ $$
     \frac{3}{2}
     k_{\mathrm{B}}T
     \frac{V}{h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}
 $$
 あまりにも見にくいので、改めて整理すると以下のようになる。
 $$
     \braket{N}=
     \frac{V}{h^{3}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3/2}
+    }^{3/2}
     e^{\beta \mu}、
     \mu=
     -\frac{1}{\beta}
     \ln
     \left[
         \frac{V}{\braket{N}h^{3}}
-        \left(
+        \lr{
             \frac{2m\pi}{\beta}
-        \right)^{3/2}
+        }^{3/2}
     \right]
 $$
 $$
@@ -231,16 +231,16 @@ $$
 $$
     \braket{S}=
     \braket{N}k_{\mathrm{B}}
-    \left(
+    \lr{
         \frac{5}{2}-\beta\mu
-    \right)=
+    }=
     \braket{N}k_{\mathrm{B}}
     \ln
     \left[
         \frac{V}{\braket{N}h^{3}}
-        \left(
+        \lr{
             \frac{2m\pi}{\beta}
-        \right)^{3/2}
+        }^{3/2}
         e^{5/2}
     \right]
 $$

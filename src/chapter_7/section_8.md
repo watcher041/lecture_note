@@ -151,14 +151,14 @@ $$
 というようになる。このことから、固有時を通じてRiemann計量を扱うことができるため、一旦運動方程式を一般化してから置き換えることで加速度系の方程式を得ることができると考えられる。そこで、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
+    \lr{
         \frac{\partial\mathcal{L}}
         {\partial \dot{q}}
-    \right)-
-    \left(
+    }-
+    \lr{
         \frac{\partial\mathcal{L}}
         {\partial q}
-    \right)=0
+    }=0
 $$
 を利用してみると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
 $$
@@ -174,17 +174,17 @@ $$
 $$
 $$
     \frac{\partial\mathcal{L}}{\partial x}=
-    -\left(
+    -\lr{
         \frac{\partial U}{\partial x}
-    \right)、
+    }、
      \frac{\partial\mathcal{L}}{\partial y}=
-     -\left(
+     -\lr{
         \frac{\partial U}{\partial y}
-    \right)、
+    }、
     \frac{\partial\mathcal{L}}{\partial z}=
-    -\left(
+    -\lr{
         \frac{\partial U}{\partial z}
-    \right)
+    }
 $$
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 $$
@@ -197,9 +197,9 @@ $$
 $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
-    \left(
+    \lr{
     \frac{\mathrm{d}s}{\mathrm{d}t}
-    \right)、
+    }、
     \frac{\mathrm{d}s}{\mathrm{d}t}=
     \sqrt{
     \eta_{\mu\nu}
@@ -221,11 +221,11 @@ $$
     (g_{\lambda\mu}\dot{x}^{\nu}+
     g_{\lambda\mu}\dot{x}^{\mu})=
     -m_0c
-    \left(
+    \lr{
     g_{\lambda\mu}
     \frac{\mathrm{d}x^{\mu}}
     {\mathrm{d}s}
-    \right)
+    }
 $$
 $$
     \frac{\partial\mathcal{L}}
@@ -237,14 +237,14 @@ $$
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
     \frac{\partial U}{\partial x^\lambda}=
     -\frac{m_0c\dot{s}}{2}
-    \left(
+    \lr{
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
         \frac{\mathrm{d}x^{\mu}}
         {\mathrm{d}s}
         \frac{\mathrm{d}x^{\nu}}
         {\mathrm{d}s}
-    \right)-
+    }-
     \frac{\partial U}{\partial x^\lambda}
 $$
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
@@ -260,14 +260,14 @@ $$
     \frac{\mathrm{d}^2x^{\mu}}
     {\mathrm{d}s^2}-
     \frac{1}{2}
-    \left(
+    \lr{
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
         \frac{\mathrm{d}x^{\mu}}
         {\mathrm{d}s}
         \frac{\mathrm{d}x^{\nu}}
         {\mathrm{d}s}
-    \right)\right]-
+    }\right]-
     \frac{\partial U}{\partial x^\lambda}=0
 $$
 ここで、計量に関しての微分が
@@ -286,13 +286,13 @@ $$
     g_{\lambda\mu}
     \frac{\mathrm{d}^2x^{\mu}}
     {\mathrm{d}s^2}+
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
         \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
     \right]-
@@ -303,36 +303,36 @@ $$
     g_{\lambda\mu}
     \frac{\mathrm{d}^2x^{\mu}}
     {\mathrm{d}s^2}+
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
         \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=0
 $$
 となるわけだが、ここで以下のように変形する。
 $$
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}-
         \frac{1}{2}
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}=
     \frac{1}{2}
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
         \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
     \frac{\mathrm{d}x^{\mu}}{\mathrm{d}s}
     \frac{\mathrm{d}x^{\nu}}{\mathrm{d}s}
 $$
@@ -379,14 +379,14 @@ $$
 $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
         \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
 $$
 
 そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
@@ -404,14 +404,14 @@ $$
     g^{k\lambda}
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}g^{k\lambda}
-    \left(
+    \lr{
         \frac{\partial g_{\lambda\mu}}
         {\partial x^\nu}+
         \frac{\partial g_{\lambda\nu}}
         {\partial x^\mu}-
         \frac{\partial g_{\mu\nu}}
         {\partial x^\lambda}
-    \right)
+    }
 $$
 により、次の**測地線方程式**の形で記載される。
 $$
@@ -456,12 +456,12 @@ $$
     \frac{\mathrm{d}^2x^k}{\mathrm{d}s^2}=0
     \rightarrow
     \frac{\mathrm{d}p^k}{\mathrm{d}\tau}=0、
-    \left(
+    \lr{
         p^k=
         m_0
         \frac{\mathrm{d}x^k}
         {\mathrm{d}\tau}
-    \right)
+    }
 $$
 というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量呼ばれており、右辺に力がある場合には $f^k$ （4元力）となる。このように、今までは速度に応じて質量が変化するものと思われてきたが、実は時間の進み方が変化していたことが分かる。
 

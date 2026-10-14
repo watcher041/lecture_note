@@ -59,7 +59,7 @@ $$
 $$
     x^2_B+y^2_B+z^2_B=(ct_B)^2、
     t_{C}=2\frac{c^2}{c^2-V^2}
-    \left(t_{B}-\frac{V}{c^2}x_{B}\right)
+    \lr{t_{B}-\frac{V}{c^2}x_{B}}
 $$
 
 従来までは、この変換式としてGalilei変換が考えられており
@@ -74,22 +74,22 @@ $$
     t'_C=t_C、
     t'_B=
     \frac{c^2}{c^2-V^2}
-    \left(t_{B}-\frac{V}{c^2}x_{B}\right)
+    \lr{t_{B}-\frac{V}{c^2}x_{B}}
 $$
 
 というように対応しているものと考えられるため、試しに以下のように置いてみる。
 
 $$
     x'=x-Vt、y'=y、z'=z、
-    t'=\frac{c^2}{c^2-V^2}\left(t-\frac{V}{c^2}x\right)
+    t'=\frac{c^2}{c^2-V^2}\lr{t-\frac{V}{c^2}x}
 $$
 
 このようにすると、地点 C での式は
 
 $$
     t'_C=
-    \frac{c^2}{c^2-V^2}\left(t_C-\frac{V}{c^2}x_C\right)=
-    \frac{c^2}{c^2-V^2}\left(t_C-\frac{V}{c^2}Vt_C\right)=
+    \frac{c^2}{c^2-V^2}\lr{t_C-\frac{V}{c^2}x_C}=
+    \frac{c^2}{c^2-V^2}\lr{t_C-\frac{V}{c^2}Vt_C}=
     t_C
 $$
 
@@ -170,8 +170,8 @@ $$
 
 $$
     x'=\gamma(x-Vt)、y'=y、z'=z、
-    t'=\gamma\left(t-\frac{V}{c^2}x\right)　
-    \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
+    t'=\gamma\lr{t-\frac{V}{c^2}x}　
+    \lr{\gamma=\frac{1}{\sqrt{1-V^2/c^2}}}
 $$
 
 このようにすると全ての関係式を満たすわけだが、ここで一つ気になるものとして

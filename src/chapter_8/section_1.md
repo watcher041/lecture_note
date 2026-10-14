@@ -32,13 +32,13 @@ $$
 
 $$
     \nu^2=
-    \left(\frac{c}{2L}\right)^2(n_x^2+n_y^2+n_z^2)
+    \lr{\frac{c}{2L}}^2(n_x^2+n_y^2+n_z^2)
 $$
 
 一見すると離散的な値をとっているため一概には計算ができないが、ここで $L\to\infty$ として**振動数が連続していると仮定する**と、振動数 $\nu$ と $\nu+\mathrm{d}\nu$ での自由度は
 
 $$
-    \left(\frac{c}{2L}\right)^3
+    \lr{\frac{c}{2L}}^3
 $$
 
 につき1自由度あることから以下のようになる。
@@ -46,16 +46,16 @@ $$
 $$
     \frac{1}{8}
     \frac{4\pi\nu^2\mathrm{d}\nu}
-    {\left(\frac{c}{2L}\right)^3}=
+    {\lr{\frac{c}{2L}}^3}=
     \frac{4\pi L^3}{c^3}\nu^2\mathrm{d}\nu
 $$
 
 スペクトルが空洞の形によらないことを踏まえて、エネルギー密度を求めると以下のようになる。
 
 $$
-    u\mathrm{d}\nu=\frac{1}{L^3}\left(
+    u\mathrm{d}\nu=\frac{1}{L^3}\lr{
     \frac{4\pi L^3}{c^3}\nu^2\mathrm{d}\nu\times 2kT
-    \right)=
+    }=
     \frac{8\pi kT}{c^3}\nu^2\mathrm{d}\nu
 $$
 
@@ -119,9 +119,9 @@ $$
 $$
     \mathcal{H}=
     \sum_{i=1}^{f}
-    \left(
+    \lr{
         aq_i^2+bp_i^2
-    \right)
+    }
 $$
 
 となり、この分の分配関数と期待値が
@@ -134,17 +134,17 @@ $$
     \mathrm{d}q_1\cdots\mathrm{d}q_f
     \mathrm{d}p_1\cdots\mathrm{d}p_f=
     \frac{1}{f!}
-    \left(
+    \lr{
         \frac{\pi}{h\beta\sqrt{ab}}
-    \right)^{f}
+    }^{f}
 $$
 $$
     \braket{\mathcal{H}}=
     -\frac{\partial}{\partial\beta}
     \ln Z=fkT、
-    \left(
+    \lr{
         \beta=\frac{1}{kT}
-    \right)
+    }
 $$
 
 であるため、$kT$ が出てきているということになる（分配関数を除けば、1自由度の場合を $f$ 倍したものと同じ）。そのため、ここで1自由度あたりのエネルギーを
@@ -184,10 +184,10 @@ $$
     \frac{f!}{N_0!N_1!\cdots N_n!\cdots}
     e^{-(0N_0+\cdots+nN_n+\cdots)
     \beta h\nu}=
-    \left(
+    \lr{
         \sum_{n=0}^{\infty}
         e^{-n\beta h\nu}
-    \right)^f
+    }^f
 $$
 
 このときは、分配関数も一体の分配関数を $N$ 乗したものとなっており、

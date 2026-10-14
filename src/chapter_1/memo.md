@@ -14,11 +14,11 @@ $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     (\bm{r}\cdot\bm{p})=
     m
-    \left(
+    \lr{
         \bm{v}^2+
         \bm{r}\cdot
         \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-    \right)=
+    }=
     m\bm{v}^2+
     \bm{r}\cdot\bm{F}
 $$
@@ -29,13 +29,13 @@ $$
     \frac{\mathrm{d}}{\mathrm{d}t}
     (\bm{v}\cdot\bm{p})=
     2m
-    \left(
+    \lr{
         \bm{v}\cdot
         \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-    \right)=
-    2\left(
+    }=
+    2\lr{
         \bm{v}\cdot\bm{F}
-    \right)
+    }
 $$
 
 これを整理すると、以下の式が得られる。
@@ -44,9 +44,9 @@ $$
     \frac{\mathrm{d}K}{\mathrm{d}t}=P、
     K=
     \frac{1}{2}
-    \left(
+    \lr{
         \bm{v}\cdot\bm{p}
-    \right)、
+    }、
     P=\bm{v}\cdot\bm{F}
 $$
 
@@ -55,9 +55,9 @@ $$
 $$
     K=
     \frac{1}{2}
-    \left(
+    \lr{
         \bm{v}\cdot\bm{p}
-    \right)=
+    }=
     \frac{\bm{p}^2}{2m}=
     \frac{1}{2}m\bm{v}^2
 $$

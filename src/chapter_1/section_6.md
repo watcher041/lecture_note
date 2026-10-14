@@ -16,11 +16,11 @@ $$
 $$
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
     \bm{r}_i\times
     \frac{\mathrm{d}^2\bm{r}_i}
     {\mathrm{d}t^2}
-    \right)=
+    }=
     \sum_{i=1}^N
     (\bm{r}_i\times\bm{F}_{i})+
     \sum_{i=1}^N
@@ -50,11 +50,11 @@ $$
 $$
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
     \bm{r}_i\times
     \frac{\mathrm{d}^2\bm{r}_i}
     {\mathrm{d}t^2}
-    \right)=
+    }=
     \sum_{i=1}^N
     (\bm{r}_i\times\bm{F}_{i})
 $$
@@ -64,25 +64,25 @@ $$
 $$
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
     \bm{r}_i\times
     \frac{\mathrm{d}^2\bm{r}_i}
     {\mathrm{d}t^2}
-    \right)=
+    }=
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
     \bm{r}_i\times
     \frac{\mathrm{d}\bm{v}_i}
     {\mathrm{d}t}
-    \right)=
+    }=
     \frac{\mathrm{d}}{\mathrm{d}t}
     \left[
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
     \bm{r}_i\times\bm{v}_i
-    \right)
+    }
     \right]
 
 $$
@@ -143,9 +143,9 @@ $$
     =
     \sum_{i=1}^N
     m_i
-    \left(
+    \lr{
         \bm{r}_G+\bm{r}'_i
-    \right)
+    }
     \times
     (
         \bm{v}_G+\bm{v}'_i
@@ -153,14 +153,14 @@ $$
     &=
     m(\bm{r}_G\times\bm{v}_G)+
     \bm{r}_G\times
-    \left(
+    \lr{
         \sum_{i=1}^N
         m_i\bm{v}'_i
-    \right)+
-    \left(
+    }+
+    \lr{
         \sum_{i=1}^N
         m_i\bm{r}'_i
-    \right)\times\bm{v}_G+
+    }\times\bm{v}_G+
     \sum_{i=1}^N
     m_i(\bm{r}'_i\times\bm{v}'_i)
     \end{align*}
@@ -182,10 +182,10 @@ $$
 
 $$
     \frac{\mathrm{d}}{\mathrm{d}t}
-    \left(
+    \lr{
         \sum_{i=1}^N 
         m_i\bm{r}'_i
-    \right)=
+    }=
     \sum_{i=1}^N 
     m_i\bm{v}'_i=
     \bm{0}
@@ -277,15 +277,15 @@ $$
 
 $$
     \bm{r}'\times\bm{\omega}=
-    \left(
+    \lr{
         \bm{r}'\cdot
         \frac{\bm{v}'}{r'}
-    \right)\cdot
+    }\cdot
    \frac{\bm{r}'}{r'} -
-    \left(
+    \lr{
         \bm{r}'\cdot
         \frac{\bm{r}'}{r'}
-    \right)\cdot
+    }\cdot
     \frac{\bm{v}'}{r'}=
     \frac{\bm{r}'}{r'^2}(\bm{r}'\cdot\bm{v}')
     -\bm{v}'

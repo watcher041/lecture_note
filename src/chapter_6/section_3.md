@@ -34,10 +34,10 @@ $$
 $$
     \frac{\mathrm{d}'Q}{T}+
     \frac{\mathrm{d}'Q_{b}}{T_{b}} =
-    \left(
+    \lr{
         \frac{1}{T}-
         \frac{1}{T_{b}}
-    \right)\mathrm{d}'Q \le
+    }\mathrm{d}'Q \le
     \mathrm{d}S + \mathrm{d}S_{b}
 $$
 となるわけだが、ここで熱と温度の関係を見てみると
@@ -55,10 +55,10 @@ $$
 $$
 というように互いに同符号になっていることから、以下の関係が成り立つことが分かる。
 $$
-    0\le\left(
+    0\le\lr{
         \frac{1}{T}-
         \frac{1}{T_{b}}
-    \right)\mathrm{d}'Q
+    }\mathrm{d}'Q
     \le\mathrm{d}S + \mathrm{d}S_{b}
 $$
 ここでBoltzmannの原理よりエントロピーを状態数で置き換えると
@@ -94,15 +94,15 @@ $$
     \frac{1}{T}\mathrm{d}U+
     \frac{P}{T}\mathrm{d}V
     \rightarrow
-    \left(
+    \lr{
         \frac{\partial S}
         {\partial U}
-    \right)_V=
+    }_V=
     \frac{1}{T}、
-    \left(
+    \lr{
         \frac{\partial S}
         {\partial V}
-    \right)_U=
+    }_U=
     \frac{P}{T}
 $$
 $$
@@ -110,24 +110,24 @@ $$
     \frac{1}{T_b}\mathrm{d}U_b+
     \frac{P_b}{T_b}\mathrm{d}V_b
     \rightarrow
-    \left(
+    \lr{
         \frac{\partial S_b}
         {\partial U_b}
-    \right)_{V_b}=
+    }_{V_b}=
     \frac{1}{T_b}、
-    \left(
+    \lr{
         \frac{\partial S_b}
         {\partial V_b}
-    \right)_{U_b}=
+    }_{U_b}=
     \frac{P_b}{T_b}
 $$
 また、二つのエントロピーの和（$S_{\mathrm{x}}$）も熱平衡（$T\simeq T_b$）の状態になると
 $$
     \mathrm{d}S+\mathrm{d}S_b=
-    \left(
+    \lr{
         \frac{1}{T}-
         \frac{1}{T_{b}}
-    \right)\mathrm{d}'Q\simeq 0
+    }\mathrm{d}'Q\simeq 0
     \rightarrow
     \mathrm{d}S_{\mathrm{x}}=0
 $$ 
@@ -159,9 +159,9 @@ $$
 そして、右辺の $\mathcal{W}_b$ のエントロピーに関して
 $$
     S_b(U_t-U)\simeq S_b(U_t)-
-    \left(
+    \lr{
         \frac{\partial S_b}{\partial U_b}    
-    \right)_V U=
+    }_V U=
     S_b(U_t)-\frac{U}{T_b}
 $$
 であることから、状態数に関しては以下のように書ける。
@@ -210,31 +210,31 @@ $$
 であるから、以下の関係式が成り立つ。
 $$
     S=-
-    \left(
+    \lr{
         \frac{\partial F}
         {\partial T}
-    \right)_{V}、
+    }_{V}、
     P=-
-    \left(
+    \lr{
         \frac{\partial F}
         {\partial V}
-    \right)_{T}、
+    }_{T}、
     U=F+TS=
     -T^2\left[
         \frac{\partial}{\partial T}
-        \left(
+        \lr{
             \frac{F}{T}
-        \right)
+        }
     \right]_V
 $$
 このことから、自由エネルギーの形で表示できることが分かる。そのため、期待値の方も
 $$
     \braket{S}=
     -\frac{1}{T}
-    \left(
+    \lr{
         \frac{\partial}{\partial\beta}
         \ln Z
-    \right)_V-
+    }_V-
     \frac{\braket{F}}{T}=
     \frac{1}{T}
     (\braket{U}-\braket{F})
@@ -242,14 +242,14 @@ $$
 $$
     \braket{P}=
     -\frac{1}{\beta}
-    \left(
+    \lr{
         \frac{\partial}{\partial V}\ln Z
-    \right)_T、
+    }_T、
     \braket{U}=
-    -\left(
+    -\lr{
         \frac{\partial}{\partial\beta}
         \ln Z
-    \right)_V
+    }_V
 $$
 となり、分配関数から圧力とエネルギーが求まることが分かる。
 
@@ -266,10 +266,10 @@ $$
 $$
     \mathcal{W}=
     \frac{1}{\beta}
-    \left(
+    \lr{
     \frac{\partial \mathcal{W}}
     {\partial U}
-    \right)_{V}
+    }_{V}
 $$
 というような関係が成り立つことを利用して、
 $$
@@ -278,10 +278,10 @@ $$
     \mathcal{D}(U)e^{-\beta U}
     \mathrm{d}U=1、
     \mathcal{D}(U)=
-    \left(
+    \lr{
     \frac{\partial \mathcal{W}}
     {\partial U}
-    \right)_{V}
+    }_{V}
 $$
 というように書ける。ただ、一般的にはハミルトニアンにより
 $$
@@ -330,9 +330,9 @@ $$
 　以上のことを踏まえて、例として自由粒子の場合を考えると分配間関数が
 $$
     Z=\frac{V^N}{h^{3N}}
-    \left(
+    \lr{
         \frac{2m\pi}{\beta}
-    \right)^{3N/2}
+    }^{3N/2}
 $$
 であることから、各期待値は以下の通りになる。
 $$
@@ -345,9 +345,9 @@ $$
     \ln
     \left[
         \frac{V}{h^{3}}
-        \left(
+        \lr{
            \frac{2m\pi}{\beta}
-        \right)^{3/2}
+        }^{3/2}
     \right]
 $$
 $$
@@ -360,9 +360,9 @@ $$
         \ln
         \left[
             \frac{V}{h^{3}}
-            \left(
+            \lr{
             \frac{2m\pi}{\beta}
-            \right)^{3/2}
+            }^{3/2}
         \right]
     \right\}
 $$

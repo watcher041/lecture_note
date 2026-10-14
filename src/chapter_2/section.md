@@ -36,7 +36,7 @@ $$
 になる。エントロピー全体としても示量量であるため、${\rm d'}Q>0、{\rm d'}Q_{\rm B}={\rm d'}Q、{\rm d'}Q_{\rm A}=-{\rm d'}Q$
 $$
     {\rm d}S={\rm d}S_{\rm A}+{\rm d}S_{\rm B}=
-    \left(\frac{1}{T_{\rm B}}-\frac{1}{T_{\rm A}}\right){\rm d'}Q\geq 0
+    \lr{\frac{1}{T_{\rm B}}-\frac{1}{T_{\rm A}}}{\rm d'}Q\geq 0
 $$
 これから孤立系では熱平衡出ない状態であればエントロピーが増大し続け、熱平衡になればエントロピーがある値をとるようになる。この値はBoltzmannの原理により
 $$

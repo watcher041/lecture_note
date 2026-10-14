@@ -114,13 +114,13 @@ $$
 $$
 であるため、以下の関係式が成り立つことが分かる。
 $$
-    \left(
+    \lr{
         \frac{\partial S}{\partial U}
-    \right)_{V}=
+    }_{V}=
     \frac{1}{T}、
-    \left(
+    \lr{
         \frac{\partial S}{\partial V}
-    \right)_{U}=
+    }_{U}=
     \frac{P}{T}
 $$
 そのため、まずエントロピーを求めてみると
@@ -135,9 +135,9 @@ $$
 $$
 であることから、それぞれの式に代入すると
 $$
-    \left(
+    \lr{
         \frac{\partial S}{\partial U}
-    \right)_{V}=
+    }_{V}=
     \frac{1}{T}
     \rightarrow
     U=
@@ -146,9 +146,9 @@ $$
     \frac{3}{2}Nk_{\mathrm{B}}T
 $$
 $$
-    \left(
+    \lr{
         \frac{\partial S}{\partial V}
-    \right)_{U}=
+    }_{U}=
     \frac{P}{T}
     \rightarrow
     PV=Nk_{\mathrm{B}}T
@@ -162,9 +162,9 @@ $$
     \frac{3}{2}Nk_{\mathrm{B}}T
     \rightarrow
     \frac{1}{3N}
-    \left(
+    \lr{
     \sum_{i=1}^{3N}\frac{1}{2}mv_{i}^2
-    \right)=
+    }=
     \frac{1}{2}k_{\mathrm{B}}T
 $$
 というように、一成分当たりの平均エネルギーが $1/2k_{\mathrm{B}}T$ になっていることが分かる（**エネルギー等分配則**）。そこで、これを期待値として
@@ -192,9 +192,9 @@ $$
 ここでの $N_{\mathrm{A}}$ は1molでの分子数を表しており**アボガドロ数**と呼ばれている。そして、この関係式から定積モル比熱（1molあたりの比熱）を求めてみると次のようになる。
 $$
     C_V=
-    \left(
+    \lr{
     \frac{\partial U}{\partial T}
-    \right)_{V}=\frac{3}{2}R
+    }_{V}=\frac{3}{2}R
 $$
 
 この値と実験値を比較してみると以下の表の通りになる。

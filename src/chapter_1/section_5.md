@@ -99,9 +99,9 @@ $$
     r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
     \sin\theta-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
+    }^2
     \cos\theta
 $$
 $$
@@ -115,9 +115,9 @@ $$
     r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}
     \cos\theta-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
+    }^2
     \sin\theta
 $$
 
@@ -128,9 +128,9 @@ $$
     \left[
         \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
         r
-        \left(
+        \lr{
             \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \right)^2
+        }^2
     \right]
     \cos\theta-
     \left[
@@ -146,9 +146,9 @@ $$
     \left[
         \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
         r
-        \left(
+        \lr{
             \frac{\mathrm{d}\theta}{\mathrm{d}t}
-        \right)^2
+        }^2
     \right]
     \sin\theta+
     \left[
@@ -167,9 +167,9 @@ $$
     \frac{\mathrm{d}^2r}
     {\mathrm{d}t^2}-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2、
+    }^2、
     a_{r_\theta}=
     2\frac{\mathrm{d}r}
     {\mathrm{d}t}
@@ -198,14 +198,14 @@ $$
         \frac{\mathrm{d}^2r}
         {\mathrm{d}t^2}-
         r
-        \left(
+        \lr{
         \frac{\mathrm{d}\theta}
         {\mathrm{d}t}
-        \right)^2
+        }^2
     \right]=F_x\cos\theta+F_y\sin\theta
 $$
 $$
-    m\left(
+    m\lr{
         2\frac{\mathrm{d}r}
         {\mathrm{d}t}
         \frac{\mathrm{d}\theta}
@@ -213,7 +213,7 @@ $$
         r
         \frac{\mathrm{d}^2\theta}
         {\mathrm{d}t^2}
-    \right)=-F_x\sin\theta+F_y\cos\theta
+    }=-F_x\sin\theta+F_y\cos\theta
 $$
 
 となるが、このとき力に関しても速度や加速度と同じように
@@ -230,12 +230,12 @@ $$
         \frac{\mathrm{d}^2r}
         {\mathrm{d}t^2}-
         r
-        \left(
+        \lr{
         \frac{\mathrm{d}\theta}
         {\mathrm{d}t}
-        \right)^2
+        }^2
     \right]=F_r、
-    m\left(
+    m\lr{
         2\frac{\mathrm{d}r}
         {\mathrm{d}t}
         \frac{\mathrm{d}\theta}
@@ -243,7 +243,7 @@ $$
         r
         \frac{\mathrm{d}^2\theta}
         {\mathrm{d}t^2}
-    \right)=F_{r_\theta}
+    }=F_{r_\theta}
 $$
 
 これらの式を詳しく見ていくと、動径方向については
@@ -253,9 +253,9 @@ $$
     F_r+f_{r,\theta}、
     f_{r,\theta}=
     mr
-    \left(
+    \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2
+    }^2
 $$
 
 というように、極座標に変換することで別の力 $f_{r,\theta}$ （遠心力）が遠ざかる方向に働いている**ように見える**形になっている。次に、角度方向については二体問題と同じように $r$ をかけて整理すると
@@ -336,10 +336,10 @@ $$
 
 $$
     m
-    \left(
+    \lr{
     \bm{r}\times
     \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-    \right)
+    }
     =\bm{N}、
     \bm{N} = \bm{r}\times\bm{F}
 $$
@@ -347,10 +347,10 @@ $$
 というように右辺がモーメント $\bm{N}$ となるので、左辺を変形してみると
 
 $$
-    \left(
+    \lr{
     \bm{r}\times
     \frac{\mathrm{d}\bm{v}}{\mathrm{d}t}
-    \right)=
+    }=
     \frac{\mathrm{d}}{\mathrm{d}t}
     (\bm{r}\times\bm{v})-
     (\bm{v}\times\bm{v})=
@@ -371,13 +371,13 @@ $$
 
 $$
     m(\bm{r}\times\bm{v})=
-    \left(
+    \lr{
         0,0,
         mx
         \frac{\mathrm{d}y}{\mathrm{d}t}-
         my
         \frac{\mathrm{d}x}{\mathrm{d}t}
-    \right)=
+    }=
     I\bm{\omega}、
     \bm{\omega}=(0,0,\omega)
 $$
@@ -591,14 +591,14 @@ $$
         a_x=\frac{\mathrm{d}^2x}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
-        \left(
+        \lr{
             \frac{\mathrm{d}r}{\mathrm{d}t}
             \sin\theta\cos\phi+
             r\frac{\mathrm{d}\theta}{\mathrm{d}t}
             \cos\theta\cos\phi-
             r\frac{\mathrm{d}\phi}{\mathrm{d}t}
             \sin\theta\sin\phi
-        \right)\\
+        }\\
         &=
         \left[
             r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
@@ -622,13 +622,13 @@ $$
         \left[
             \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
             r
-            \left(
+            \lr{
                 \frac{\mathrm{d}\theta}{\mathrm{d}t}
-            \right)^2-
+            }^2-
             r
-            \left(
+            \lr{
                 \frac{\mathrm{d}\phi}{\mathrm{d}t}
-            \right)^2
+            }^2
         \right]
         \sin\theta\cos\phi
     \end{align*}
@@ -638,14 +638,14 @@ $$
         a_y=\frac{\mathrm{d}^2y}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
-        \left(
+        \lr{
             \frac{\mathrm{d}r}{\mathrm{d}t}
             \sin\theta\sin\phi+
             r\frac{\mathrm{d}\theta}{\mathrm{d}t}
             \cos\theta\sin\phi+
             r\frac{\mathrm{d}\phi}{\mathrm{d}t}
             \sin\theta\cos\phi
-        \right)\\
+        }\\
         &=
         \left[
             r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
@@ -669,13 +669,13 @@ $$
         \left[
             \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
             r
-            \left(
+            \lr{
                 \frac{\mathrm{d}\theta}{\mathrm{d}t}
-            \right)^2-
+            }^2-
             r
-            \left(
+            \lr{
                 \frac{\mathrm{d}\phi}{\mathrm{d}t}
-            \right)^2
+            }^2
         \right]
         \sin\theta\sin\phi
     \end{align*}
@@ -685,12 +685,12 @@ $$
         a_z=\frac{\mathrm{d}^2z}{\mathrm{d}t^2}
         &=
         \frac{\mathrm{d}}{\mathrm{d}t}
-        \left(
+        \lr{
             \frac{\mathrm{d}r}{\mathrm{d}t}
             \cos\theta-
             r\frac{\mathrm{d}\theta}{\mathrm{d}t}
             \sin\theta
-        \right)\\
+        }\\
         &=
         -\left[
             r\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2}+
@@ -701,9 +701,9 @@ $$
         \left[
             \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
             r
-            \left(
+            \lr{
                 \frac{\mathrm{d}\theta}{\mathrm{d}t}
-            \right)^2
+            }^2
         \right]
         \cos\theta
     \end{align*}
@@ -735,13 +735,13 @@ $$
     a_r=
     \frac{\mathrm{d}^2r}{\mathrm{d}t^2}-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)^2-
+    }^2-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)^2
+    }^2
     \sin^2\theta
 $$
 $$
@@ -752,9 +752,9 @@ $$
     \frac{\mathrm{d}r}{\mathrm{d}t}
     \frac{\mathrm{d}\theta}{\mathrm{d}t}-
     r
-    \left(
+    \lr{
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)^2
+    }^2
     \sin\theta\cos\theta
 $$
 $$
@@ -773,17 +773,17 @@ $$
 
 $$
     v_r=
-    \left(
+    \lr{
         \frac{\mathrm{d}r}{\mathrm{d}t}
-    \right)、
+    }、
     \omega_{\theta}=
-     \left(
+     \lr{
         \frac{\mathrm{d}\theta}{\mathrm{d}t}
-    \right)、
+    }、
     \omega_{\phi}=
-     \left(
+     \lr{
         \frac{\mathrm{d}\phi}{\mathrm{d}t}
-    \right)
+    }
 $$
 
 と置くことで、以下の通りになる。
@@ -863,10 +863,10 @@ $$
 
 $$
     m\frac{\mathrm{d}v_r}{\mathrm{d}t}-
-    \left(
+    \lr{
         mr\omega_{\theta}^2+
         mr\omega_{\phi}^2\sin^2\theta
-    \right)=
+    }=
     F_r
 $$
 

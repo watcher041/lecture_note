@@ -5,8 +5,8 @@
 
 $$
     x'=\gamma(x-Vt)、y'=y、z'=z、
-    t'=\gamma\left(t-\frac{V}{c^2}x\right)　
-    \left(\gamma=\frac{1}{\sqrt{1-V^2/c^2}}\right)
+    t'=\gamma\lr{t-\frac{V}{c^2}x}　
+    \lr{\gamma=\frac{1}{\sqrt{1-V^2/c^2}}}
 $$
 
 となるわけだが、これらが何を意味しているのか考えてみることにする。従来から変換式としてはGalilei変換が利用されており
@@ -19,15 +19,15 @@ $$
 
 $$
     x'=\gamma(x-\beta ct)、y'=y、z'=z、
-    ct'=\gamma\left(ct-\beta x\right)　
-    \left(\gamma=\frac{1}{\sqrt{1-\beta^2}}、\beta=\frac{V}{c}\right)
+    ct'=\gamma\lr{ct-\beta x}　
+    \lr{\gamma=\frac{1}{\sqrt{1-\beta^2}}、\beta=\frac{V}{c}}
 $$
 
 すると、$ct$ が $x$ と同じような座標の一部としてみなせるので $w$ として
 
 $$
     x'=\gamma(x-\beta w)、
-    w'=\gamma\left(w-\beta x\right)
+    w'=\gamma\lr{w-\beta x}
 $$
 
 とおき、試しに $x$ と $w$ との関係を座標で描いてみると以下の図の通りになる。
@@ -46,7 +46,7 @@ $$
 となるため、Lorentz変換を逆変換したもの
 
 $$
-    w=\gamma\left(w'+\beta x'\right)、
+    w=\gamma\lr{w'+\beta x'}、
     x=\gamma(x'+\beta w')
     
 $$
@@ -151,14 +151,14 @@ $$
 $$
     x_{2}'-x_{1}'=
     \gamma\left[
-        \left(x_{2}-x_{1}\right)-V\left(t_{2}-t_{1}\right)
+        \lr{x_{2}-x_{1}}-V\lr{t_{2}-t_{1}}
     \right]
 $$
 $$
     t_{2}'-t_{1}'=
     \gamma\left[
-        \left(t_{2}-t_{1}\right)-
-        \frac{V}{c^2}\left(x_{2}-x_{1}\right)
+        \lr{t_{2}-t_{1}}-
+        \frac{V}{c^2}\lr{x_{2}-x_{1}}
     \right]
 $$
 
@@ -202,14 +202,14 @@ $$
 $$
     x_{\rm B}'-x_{\rm A}'=
     \gamma\left[
-        \left(x_{\rm B}-x_{\rm A}\right)-V\left(t_{\rm B}-t_{\rm A}\right)
+        \lr{x_{\rm B}-x_{\rm A}}-V\lr{t_{\rm B}-t_{\rm A}}
     \right]=\Delta x'
 $$
 $$
     t_{\rm B}'-t_{\rm A}'=
     \gamma\left[
-        \left(t_{\rm B}-t_{\rm A}\right)-
-        \frac{V}{c^2}\left(x_{\rm B}-x_{\rm A}\right)
+        \lr{t_{\rm B}-t_{\rm A}}-
+        \frac{V}{c^2}\lr{x_{\rm B}-x_{\rm A}}
     \right]=0
 $$
 
