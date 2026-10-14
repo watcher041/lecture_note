@@ -22,7 +22,7 @@ $$
 $$
     \delta \bm{r}=
     \sum_{i=1}^{f}
-    \lr{\pp{ \bm{r}}{ q_i}}
+    \lr{\pp{\bm{r}}{q_i}}
     \delta q_i
 $$
 
@@ -32,9 +32,9 @@ $$
     \LR{
         m\dd{\bm{v}}{t}
         \cdot
-        \lr{\pp{ \bm{r}}{ q_i}}-
+        \lr{\pp{\bm{r}}{q_i}}-
         \bm{F}\cdot
-        \lr{\pp{ \bm{r}}{ q_i}}
+        \lr{\pp{\bm{r}}{q_i}}
     }\delta q_i=0
 $$
 
@@ -43,65 +43,65 @@ $$
 $$
     m\dd{\bm{v}}{t}
     \cdot
-    \lr{\pp{ \bm{r}}{ q_i}}=
+    \lr{\pp{\bm{r}}{q_i}}=
     \dd{}{t}
     \LR{
         m\bm{v}\cdot
-        \lr{\pp{ \bm{r}}{ q_i}}
+        \lr{\pp{\bm{r}}{q_i}}
     }-
     m\bm{v}\cdot
     \dd{}{t}
-    \lr{\pp{ \bm{r}}{ q_i}}
+    \lr{\pp{\bm{r}}{q_i}}
 $$
 
 とすると、各項目について
 
 $$
-    \pp{ \bm{v}}{ \dot{q}_i}=
-    \pp{}{ \dot{q}_i}
+    \pp{\bm{v}}{\dot{q}_i}=
+    \pp{}{\dot{q}_i}
     \LR{
         \sum_{j=1}^{f}
-    \lr{\pp{ \bm{r}}{ q_i}}
+    \lr{\pp{\bm{r}}{q_i}}
     \dot{q}_i+
-    \pp{ \bm{r}}{ t}
+    \pp{\bm{r}}{t}
     }=
-    \pp{ \bm{r}}{ q_i}
+    \pp{\bm{r}}{q_i}
 $$
 $$
     \dd{}{t}
-    \lr{\pp{ \bm{r}}{ q_i}}=
+    \lr{\pp{\bm{r}}{q_i}}=
     \sum_{j=1}^{f}
-    \pp{}{ q_j}
-    \lr{\pp{ \bm{r}}{ q_i}}
+    \pp{}{q_j}
+    \lr{\pp{\bm{r}}{q_i}}
     \dot{q}_j+
-    \pp{}{ t}
-     \lr{\pp{ \bm{r}}{ q_i}}=
-     \pp{}{ q_i}
+    \pp{}{t}
+     \lr{\pp{\bm{r}}{q_i}}=
+     \pp{}{q_i}
      \LR{
         \sum_{j=1}^{f}
-    \lr{\pp{ \bm{r}}{ q_j}}
+    \lr{\pp{\bm{r}}{q_j}}
     \dot{q}_j+
-    \pp{ \bm{r}}{ t}
+    \pp{\bm{r}}{t}
      }=
-    \pp{ \bm{v}}{ q_i}
+    \pp{\bm{v}}{q_i}
 $$
 となるため、これらを代入すると以下の通りになる。
 $$
     \sum_{i=1}^{f}
     \LR{
         \dd{}{t}
-        \pp{}{ \dot{q}_i}
+        \pp{}{\dot{q}_i}
         \lr{
             \frac{1}{2}m\bm{v}^2
         }
         -
-        \pp{}{ q_i}
+        \pp{}{q_i}
         \lr{
             \frac{1}{2}m\bm{v}^2
         }
         -
         \bm{F}\cdot
-        \lr{\pp{ \bm{r}}{ q_i}}
+        \lr{\pp{\bm{r}}{q_i}}
     }\delta q_i=0
 $$
 任意の仮想変位に対して成立するためには、中の項目が0になる必要があるため
@@ -109,35 +109,35 @@ $$
 $$
     \dd{}{t}
     \lr{
-        \pp{ K}{ \dot{q}_i}
+        \pp{K}{\dot{q}_i}
     }
         -
-        \pp{ K}{ q_i}
+        \pp{K}{q_i}
         =Q_i　
         (i=1,\cdots,f)
 $$
 $$
     K=\frac{1}{2}m\bm{v}^2、
     Q_i=\bm{F}\cdot
-    \lr{\pp{ \bm{r}}{ q_i}}
+    \lr{\pp{\bm{r}}{q_i}}
 $$
 が成り立つ。この運動方程式は一般的な座標に関して成立するものであり、Euler=lagrange方程式と呼ぶ。ただ、通常は力を保存力として
 $$
-    \bm{F}=-\pp{ U}{\bm{r}}
+    \bm{F}=-\pp{U}{\bm{r}}
 $$
 として、一般化力を以下のようにする。
 $$
-    Q_i=-\pp{ U}{\bm{r}}\cdot
-    \lr{\pp{ \bm{r}}{ q_i}}=
-    -\pp{ U}{ q_i}
+    Q_i=-\pp{U}{\bm{r}}\cdot
+    \lr{\pp{\bm{r}}{q_i}}=
+    -\pp{U}{q_i}
 $$
 すると、以下のように書くこともできる。
 $$
     \dd{}{t}
-    \lr{\pp{ L}{ \dot{q}_i}}-
-    \pp{ L}{ q_i}=0、
+    \lr{\pp{L}{\dot{q}_i}}-
+    \pp{L}{q_i}=0、
     \dd{}{t}
-    \lr{\pp{ U}{ \dot{q}_i}}=0
+    \lr{\pp{U}{\dot{q}_i}}=0
 $$
 $$
     L=K-U（ラグランジアン）

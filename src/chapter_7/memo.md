@@ -76,161 +76,161 @@ $$
 
 $$
     \bm{u}_w=
-    \pp{ \bm{s}}{ w}=
+    \pp{\bm{s}}{w}=
     \lr{
-        \pp{ w'}{ w}
+        \pp{w'}{w}
     }
     \bm{u}_w'+
     \lr{
-        \pp{ x'}{ w}
+        \pp{x'}{w}
     }
     \bm{u}_x'+
     \lr{
-        \pp{ y'}{ w}
+        \pp{y'}{w}
     }
     \bm{u}_y'+
     \lr{
-        \pp{ z'}{ w}
+        \pp{z'}{w}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_x=
-    \pp{ \bm{s}}{ x}=
+    \pp{\bm{s}}{x}=
     \lr{
-        \pp{ w'}{ x}
+        \pp{w'}{x}
     }
     \bm{u}_w'+
     \lr{
-        \pp{ x'}{ x}
+        \pp{x'}{x}
     }
     \bm{u}_x'+
     \lr{
-        \pp{ y'}{ x}
+        \pp{y'}{x}
     }
     \bm{u}_y'+
     \lr{
-        \pp{ z'}{ x}
+        \pp{z'}{x}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_y=
-    \pp{ \bm{s}}{ y}=
+    \pp{\bm{s}}{y}=
     \lr{
-        \pp{ w'}{ y}
+        \pp{w'}{y}
     }
     \bm{u}_w'+
     \lr{
-        \pp{ x'}{ y}
+        \pp{x'}{y}
     }
     \bm{u}_x'+
     \lr{
-        \pp{ y'}{ y}
+        \pp{y'}{y}
     }
     \bm{u}_y'+
     \lr{
-        \pp{ z'}{ y}
+        \pp{z'}{y}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_z=
-    \pp{ \bm{s}}{ z}=
+    \pp{\bm{s}}{z}=
     \lr{
-        \pp{ w'}{ z}
+        \pp{w'}{z}
     }
     \bm{u}_w'+
     \lr{
-        \pp{ x'}{ z}
+        \pp{x'}{z}
     }
     \bm{u}_x'+
     \lr{
-        \pp{ y'}{ z}
+        \pp{y'}{z}
     }
     \bm{u}_y'+
     \lr{
-        \pp{ z'}{ z}
+        \pp{z'}{z}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_w'=
-    \pp{ \bm{s}}{ w'}=
+    \pp{\bm{s}}{w'}=
     \lr{
-        \pp{ w}{ w'}
+        \pp{w}{w'}
     }
     \bm{u}_w+
     \lr{
-        \pp{ x}{ w'}
+        \pp{x}{w'}
     }
     \bm{u}_x+
     \lr{
-        \pp{ y}{ w'}
+        \pp{y}{w'}
     }
     \bm{u}_y+
     \lr{
-        \pp{ z}{ w'}
+        \pp{z}{w'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_x'=
-    \pp{ \bm{s}}{ x'}=
+    \pp{\bm{s}}{x'}=
     \lr{
-        \pp{ w}{ x'}
+        \pp{w}{x'}
     }
     \bm{u}_w+
     \lr{
-        \pp{ x}{ x'}
+        \pp{x}{x'}
     }
     \bm{u}_x+
     \lr{
-        \pp{ y}{ x'}
+        \pp{y}{x'}
     }
     \bm{u}_y+
     \lr{
-        \pp{ z}{ x'}
+        \pp{z}{x'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_y'=
-    \pp{ \bm{s}}{ y'}=
+    \pp{\bm{s}}{y'}=
     \lr{
-        \pp{ w}{ y'}
+        \pp{w}{y'}
     }
     \bm{u}_w+
     \lr{
-        \pp{ x}{ y'}
+        \pp{x}{y'}
     }
     \bm{u}_x+
     \lr{
-        \pp{ y}{ y'}
+        \pp{y}{y'}
     }
     \bm{u}_y+
     \lr{
-        \pp{ z}{ y'}
+        \pp{z}{y'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_z'=
-    \pp{ \bm{s}}{ z'}=
+    \pp{\bm{s}}{z'}=
     \lr{
-        \pp{ w}{ z'}
+        \pp{w}{z'}
     }
     \bm{u}_w+
     \lr{
-        \pp{ x}{ z'}
+        \pp{x}{z'}
     }
     \bm{u}_x+
     \lr{
-        \pp{ y}{ z'}
+        \pp{y}{z'}
     }
     \bm{u}_y+
     \lr{
-        \pp{ z}{ z'}
+        \pp{z}{z'}
     }
     \bm{u}_z
 $$
@@ -696,14 +696,14 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-    \alpha_{ 0}^0 & \alpha_{ 1}^0 & 
-    \alpha_{ 2}^0 & \alpha_{ 3}^0 \\
-    \alpha_{ 0}^1 & \alpha_{ 1}^1 & 
-    \alpha_{ 2}^1 & \alpha_{ 3}^1 \\
-    \alpha_{ 0}^2 & \alpha_{ 1}^2 & 
-    \alpha_{ 2}^2 & \alpha_{ 3}^2 \\
-    \alpha_{ 0}^3 & \alpha_{ 1}^3 & 
-    \alpha_{ 2}^3 & \alpha_{ 3}^3 
+    \alpha_{0}^0 & \alpha_{1}^0 & 
+    \alpha_{2}^0 & \alpha_{3}^0 \\
+    \alpha_{0}^1 & \alpha_{1}^1 & 
+    \alpha_{2}^1 & \alpha_{3}^1 \\
+    \alpha_{0}^2 & \alpha_{1}^2 & 
+    \alpha_{2}^2 & \alpha_{3}^2 \\
+    \alpha_{0}^3 & \alpha_{1}^3 & 
+    \alpha_{2}^3 & \alpha_{3}^3 
 \end{pmatrix}
 \begin{pmatrix}
     x^0 \\
@@ -715,12 +715,12 @@ $$
 とおくと、各成分ごと（ベクトルではない）に簡略化して書ける。
 $$
     x'^\mu=
-    \sum_{\nu=0}^{3}\alpha_{ \nu}^\mu x^\nu　
+    \sum_{\nu=0}^{3}\alpha_{\nu}^\mu x^\nu　
     (\mu=0,1,2,3)
 $$
 あるいは、今ここで $\nu$ に対して総和をとっているが、行列においては下付き添え字（行）と上付き添え字（列）の掛け算は足し合わせることになるので、以下のように総和記号を省いた表記（**Einsteinの縮約記法**）がよく用いられている。
 $$
-    x'^\mu=\alpha_{ \nu}^\mu x^\nu　
+    x'^\mu=\alpha_{\nu}^\mu x^\nu　
     (\mu=0,1,2,3)
 $$
 一方で、Lorentz変換においても
@@ -771,76 +771,76 @@ $$
 $$
     \mathrm{d}w'=
     \lr{
-        \pp{ w'}{ w}
+        \pp{w'}{w}
     }
     \mathrm{d}w+
     \lr{
-        \pp{ w'}{ x}
+        \pp{w'}{x}
     }
     \mathrm{d}x+
     \lr{
-        \pp{ w'}{ y}
+        \pp{w'}{y}
     }
     \mathrm{d}y+
     \lr{
-        \pp{ w'}{ z}
+        \pp{w'}{z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}x'=
     \lr{
-        \pp{ x'}{ w}
+        \pp{x'}{w}
     }
     \mathrm{d}w+
     \lr{
-        \pp{ x'}{ x}
+        \pp{x'}{x}
     }
     \mathrm{d}x+
     \lr{
-        \pp{ x'}{ y}
+        \pp{x'}{y}
     }
     \mathrm{d}y+
     \lr{
-        \pp{ x'}{ z}
+        \pp{x'}{z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}y'=
     \lr{
-        \pp{ y'}{ w}
+        \pp{y'}{w}
     }
     \mathrm{d}w+
     \lr{
-        \pp{ y'}{ x}
+        \pp{y'}{x}
     }
     \mathrm{d}x+
     \lr{
-        \pp{ y'}{ y}
+        \pp{y'}{y}
     }
     \mathrm{d}y+
     \lr{
-        \pp{ y'}{ z}
+        \pp{y'}{z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}z'=
     \lr{
-        \pp{ z'}{ w}
+        \pp{z'}{w}
     }
     \mathrm{d}w+
     \lr{
-        \pp{ z'}{ x}
+        \pp{z'}{x}
     }
     \mathrm{d}x+
     \lr{
-        \pp{ z'}{ y}
+        \pp{z'}{y}
     }
     \mathrm{d}y+
     \lr{
-        \pp{ z'}{ z}
+        \pp{z'}{z}
     }
     \mathrm{d}z
 $$
@@ -854,22 +854,22 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-    \pp{ w'}{ w} & 
-    \pp{ w'}{ x} & 
-    \pp{ w'}{ y} & 
-    \pp{ w'}{ z} \\
-    \pp{ x'}{ w} & 
-    \pp{ x'}{ x} & 
-    \pp{ x'}{ y} & 
-    \pp{ x'}{ z} \\
-    \pp{ y'}{ w} & 
-    \pp{ y'}{ x} & 
-    \pp{ y'}{ y} & 
-    \pp{ y'}{ z} \\
-    \pp{ z'}{ w} & 
-    \pp{ z'}{ x} & 
-    \pp{ z'}{ y} & 
-    \pp{ z'}{ z} \\
+    \pp{w'}{w} & 
+    \pp{w'}{x} & 
+    \pp{w'}{y} & 
+    \pp{w'}{z} \\
+    \pp{x'}{w} & 
+    \pp{x'}{x} & 
+    \pp{x'}{y} & 
+    \pp{x'}{z} \\
+    \pp{y'}{w} & 
+    \pp{y'}{x} & 
+    \pp{y'}{y} & 
+    \pp{y'}{z} \\
+    \pp{z'}{w} & 
+    \pp{z'}{x} & 
+    \pp{z'}{y} & 
+    \pp{z'}{z} \\
 \end{pmatrix}
 \begin{pmatrix}
     \mathrm{d}w \\
@@ -882,7 +882,7 @@ $$
 $$
     \mathrm{d}x'^\mu=
     \lr{
-        \pp{ x'^\mu}{ x^\nu}
+        \pp{x'^\mu}{x^\nu}
     }
     \mathrm{d}x^\nu　
     (\mu=0,1,2,3)
@@ -914,7 +914,7 @@ $$
     e_{\nu}^\mu=
     \partial_\nu x'^\mu=
     \lr{
-        \pp{ x'^\mu}{ x^\nu}
+        \pp{x'^\mu}{x^\nu}
     }
     \rightarrow
     \mathrm{d}x'^\mu=
@@ -931,31 +931,31 @@ $$
 =
 \mathrm{d}w
 \begin{pmatrix}
-    \pp{ w'}{ w} \\
-    \pp{ x'}{ w} \\
-    \pp{ y'}{ w} \\
-    \pp{ z'}{ w} 
+    \pp{w'}{w} \\
+    \pp{x'}{w} \\
+    \pp{y'}{w} \\
+    \pp{z'}{w} 
 \end{pmatrix}+
 \mathrm{d}x
 \begin{pmatrix}
-    \pp{ w'}{ x} \\
-    \pp{ x'}{ x} \\
-    \pp{ y'}{ x} \\
-    \pp{ z'}{ x} 
+    \pp{w'}{x} \\
+    \pp{x'}{x} \\
+    \pp{y'}{x} \\
+    \pp{z'}{x} 
 \end{pmatrix}+
 \mathrm{d}y
 \begin{pmatrix}
-    \pp{ w'}{ y} \\
-    \pp{ x'}{ y} \\
-    \pp{ y'}{ y} \\
-    \pp{ z'}{ y} 
+    \pp{w'}{y} \\
+    \pp{x'}{y} \\
+    \pp{y'}{y} \\
+    \pp{z'}{y} 
 \end{pmatrix}+
 \mathrm{d}z
 \begin{pmatrix}
-    \pp{ w'}{ z} \\
-    \pp{ x'}{ z} \\
-    \pp{ y'}{ z} \\
-    \pp{ z'}{ z} 
+    \pp{w'}{z} \\
+    \pp{x'}{z} \\
+    \pp{y'}{z} \\
+    \pp{z'}{z} 
 \end{pmatrix}
 $$
 というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
@@ -964,8 +964,8 @@ $$
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \lr{
         \bm{e}_{\nu}=
-        \pp{ \bm{s}'}
-        { x^\nu}
+        \pp{\bm{s}'}
+        {x^\nu}
     }
 
 $$

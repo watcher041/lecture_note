@@ -10,9 +10,9 @@ $$
 $$
 ただし、$(q_i,\dot{q}_i)$ に対しての変換に関する理論はない。しかし、Lagrange形式でも出た
 $$
-    p_i=\pp{ L}{ \dot{q}_i}
+    p_i=\pp{L}{\dot{q}_i}
     \rightarrow
-    \dot{q}_i=\pp{ G}{ \dot{p}_i}
+    \dot{q}_i=\pp{G}{\dot{p}_i}
 $$
 ということを行うと、Lagrange形式のものより対称性が高い正準方程式が導かれる（Legendre変換）。
 $$

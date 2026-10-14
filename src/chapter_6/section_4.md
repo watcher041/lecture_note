@@ -6,10 +6,10 @@ $$
     S(U_t-U,V_t-V)=
     S(U_t,V_t)-
     \lr{
-        \pp{ S}{ U}
+        \pp{S}{U}
     }U-
     \lr{
-        \pp{ S}{ V}
+        \pp{S}{V}
     }V=
     S(U_t,V_t)-
     \lr{
@@ -76,18 +76,18 @@ $$
 $$
     S=-
     \lr{
-        \pp{ G}
-        { T}
+        \pp{G}
+        {T}
     }_{P}、
     V=
     \lr{
-        \pp{ G}
-        { P}
+        \pp{G}
+        {P}
     }_{T}、
     H=-T^2
     \LR{
         \pp{}
-        { T}
+        {T}
         \lr{
             \frac{G}{T}
         }
@@ -111,7 +111,7 @@ $$
     -\frac{1}{\beta}
     \lr{
         \pp{}
-        { P}
+        {P}
         \ln Y
     }_{T}、
     \braket{H}=
@@ -129,13 +129,13 @@ $$
     \frac{1}{\beta P}
     \lr{
         \pp{\mathcal{W}}
-        { V}
+        {V}
     }_{U,N}
     \leftrightarrow
     Z\rightarrow 
     \lr{
-        \pp{ Z}
-        { V}
+        \pp{Z}
+        {V}
     }_{U,N}
 $$
 であることをふまえると、以下のように書くこともできる。
@@ -146,8 +146,8 @@ $$
     Y=
     \int_{0}^{V_t}
     \lr{
-        \pp{ Z}
-        { V}
+        \pp{Z}
+        {V}
     }_{U,N}
     e^{-\beta PV}\mathrm{d}V、
 $$

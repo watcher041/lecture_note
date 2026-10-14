@@ -68,15 +68,15 @@
                 if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
                     localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
                 }
-            } catch (e) { }
+            } catch (e) {}
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
             const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
             let theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
+            try {theme = localStorage.getItem('mdbook-theme'); } catch(e) {}
+            if (theme === null || theme === undefined) {theme = default_theme; }
             const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
@@ -90,7 +90,7 @@
             let sidebar = null;
             const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                try {sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) {}
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';

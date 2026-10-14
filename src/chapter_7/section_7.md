@@ -37,23 +37,23 @@ $$
 このことから、偏微分については
 
 $$
-    \pp{ x'}{ x}=
+    \pp{x'}{x}=
     \cos\alpha、
-    \pp{ x'}{ y}=
+    \pp{x'}{y}=
     \sin\alpha、
-    \pp{ y'}{ x}=
+    \pp{y'}{x}=
     -\sin\alpha、
-    \pp{ y'}{ y}=
+    \pp{y'}{y}=
     \cos\alpha
 $$
 $$
-    \pp{ x}{ x'}=
+    \pp{x}{x'}=
     \cos\alpha、
-    \pp{ x}{ y'}=
+    \pp{x}{y'}=
     -\sin\alpha、
-    \pp{ y}{ x'}=
+    \pp{y}{x'}=
     \sin\alpha、
-    \pp{ y}{ y'}=
+    \pp{y}{y'}=
     \cos\alpha
 $$
 
@@ -123,13 +123,13 @@ $$
     \mathrm{d}x'^\mu=
     \sum_{\nu=1}^2
     \lr{
-        \pp{ x'^\mu}{ x^\nu}
+        \pp{x'^\mu}{x^\nu}
     }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
     \sum_{\mu=1}^2
     \lr{
-        \pp{ x^\nu}{ x'^\mu}
+        \pp{x^\nu}{x'^\mu}
     }
     \mathrm{d}x'^\mu
 $$
@@ -137,13 +137,13 @@ $$
     \bm{u}'_\mu=
     \sum_{\nu=1}^2
     \lr{
-        \pp{ x^\nu}{ x'^\mu}
+        \pp{x^\nu}{x'^\mu}
     }
     \bm{u}_\nu、
     \bm{u}_\nu=
     \sum_{\mu=1}^2
     \lr{
-        \pp{ x'^\nu}{ x^\mu}
+        \pp{x'^\nu}{x^\mu}
     }
     \bm{u}'_\mu
 $$
@@ -163,22 +163,22 @@ $$
 $$
     \mathrm{d}x'^\mu=
     \lr{
-        \pp{ x'^\mu}{ x^\nu}
+        \pp{x'^\mu}{x^\nu}
     }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
     \lr{
-        \pp{ x^\nu}{ x'^\mu}
+        \pp{x^\nu}{x'^\mu}
     }
     \mathrm{d}x'^\mu、
     \bm{u}'_\mu=
     \lr{
-        \pp{ x^\nu}{ x'^\mu}
+        \pp{x^\nu}{x'^\mu}
     }
     \bm{u}_\nu、
     \bm{u}_\nu=
     \lr{
-        \pp{ x'^\nu}{ x^\mu}
+        \pp{x'^\nu}{x^\mu}
     }
     \bm{u}'_\mu
 $$
@@ -214,21 +214,21 @@ $$
 $$
     x'_1=
     \lr{
-        \pp{ x}{ x'}
+        \pp{x}{x'}
     }
     x_1+
     \lr{
-        \pp{ y}{ x'}
+        \pp{y}{x'}
     }
     x_2=
     x_1、
     x'_2=
     \lr{
-        \pp{ x}{ y'}
+        \pp{x}{y'}
     }
     x_1+
     \lr{
-        \pp{ y}{ y'}
+        \pp{y}{y'}
     }
     x_2=
     \frac{1}{\sqrt{2}}x_1+
@@ -237,21 +237,21 @@ $$
 $$
     x'^1=
     \lr{
-        \pp{ x'}{ x}
+        \pp{x'}{x}
     }
     x^1+
     \lr{
-        \pp{ x'}{ y}
+        \pp{x'}{y}
     }
     x^2=
     x^1-x^2、
     x'^2=
     \lr{
-        \pp{ y'}{ x}
+        \pp{y'}{x}
     }
     x^1+
     \lr{
-        \pp{ y'}{ y}
+        \pp{y'}{y}
     }
     x^2=
     \sqrt{2}x^2
@@ -307,24 +307,24 @@ $$
     g'_{\mu\nu}
     \mathrm{d}x'^{\mu}=
     \lr{
-        \pp{ x^\lambda}{ x'^\mu}
+        \pp{x^\lambda}{x'^\mu}
     }
     \lr{
-        \pp{ x^\xi}{ x'^\nu}
+        \pp{x^\xi}{x'^\nu}
     }
     \lr{
-        \pp{ x'^\mu}{ x^\eta}
+        \pp{x'^\mu}{x^\eta}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
     \delta_{\eta}^{\lambda}
     \lr{
-        \pp{ x^\xi}{ x'^\nu}
+        \pp{x^\xi}{x'^\nu}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
     \lr{
-        \pp{ x^\xi}{ x'^\nu}
+        \pp{x^\xi}{x'^\nu}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\lambda

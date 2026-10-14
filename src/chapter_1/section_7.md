@@ -146,7 +146,7 @@ $$
     \sum_{i=1(\neq j)}^{\mathrm{N}}
     \bm{F}_{\mathrm{ij}}+
     \bm{F}_{i}、
-    \lr{ 
+    \lr{
       i=1,\cdots,\mathrm{N}
     }
   \end{equation}

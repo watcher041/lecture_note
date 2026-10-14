@@ -53,14 +53,14 @@
                 if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
                     localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
                 }
-            } catch (e) { }
+            } catch (e) {}
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
+            try {theme = localStorage.getItem('mdbook-theme'); } catch(e) {}
+            if (theme === null || theme === undefined) {theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
             html.classList.remove('light')
@@ -73,7 +73,7 @@
             var html = document.querySelector('html');
             var sidebar = null;
             if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                try {sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) {}
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
@@ -96,7 +96,7 @@
                 if (e.target.tagName === 'A') {
                     sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
                 }
-            }, { passive: true });
+            }, {passive: true });
             var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
             sessionStorage.removeItem('sidebar-scroll');
             if (sidebarScrollTop) {
@@ -106,7 +106,7 @@
                 // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
                 var activeSection = document.querySelector('#sidebar .active');
                 if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
+                    activeSection.scrollIntoView({block: 'center' });
                 }
             }
         </script>
