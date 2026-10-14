@@ -5,13 +5,13 @@
 
 $$
     v_x'=
-    \frac{{\mathrm d}x'}{{\mathrm d}t'}、
+    \dd{x'}{t'}、
     v_y'=
-    \frac{{\mathrm d}y'}{{\mathrm d}t'}、
+    \dd{y'}{t'}、
     v_z'=
-    \frac{{\mathrm d}z'}{{\mathrm d}t'}、
+    \dd{z'}{t'}、
     v_w'=
-    \frac{{\mathrm d}w'}{{\mathrm d}t'}、
+    \dd{w'}{t'}、
     (w'=ct')
 $$
 
@@ -19,13 +19,13 @@ $$
 
 $$
     v_x=
-    \frac{{\mathrm d}x}{{\mathrm d}t}、
+    \dd{x}{t}、
     v_y=
-    \frac{{\mathrm d}y}{{\mathrm d}t}、
+    \dd{y}{t}、
     v_z=
-    \frac{{\mathrm d}z}{{\mathrm d}t}、
+    \dd{z}{t}、
     v_w=
-    \frac{{\mathrm d}w}{{\mathrm d}t}、
+    \dd{w}{t}、
      (w=ct)
 $$
 
@@ -43,16 +43,16 @@ $$
 を $t$ で微分することで得られる
 
 $$
-    \frac{{\mathrm d}x'}{{\mathrm d}t}=
+    \dd{x'}{t}=
     \gamma(v_x-V)、
-    \frac{{\mathrm d}y'}{{\mathrm d}t}=v_y、
-    \frac{{\mathrm d}z'}{{\mathrm d}t}=v_z、
+    \dd{y'}{t}=v_y、
+    \dd{z'}{t}=v_z、
 $$
 $$
-    \frac{{\mathrm d}w'}{{\mathrm d}t}=
+    \dd{w'}{t}=
     \gamma\lr{c-\beta v_x}
     \rightarrow
-    \frac{{\mathrm d}t'}{{\mathrm d}t}=
+    \dd{t'}{t}=
     \gamma\lr{1-\frac{v_xV}{c^2}}
 $$
 
@@ -90,7 +90,7 @@ $$
 $$
     V{\mathrm d}t=\beta^2{\mathrm d}x
     \rightarrow
-    V=\beta^2\frac{{\mathrm d}x}{{\mathrm d}t}=
+    V=\beta^2\dd{x}{t}=
     \beta^2v_x
 $$
 
@@ -248,43 +248,43 @@ $$
 
 $$
     F_x'=
-    \frac{{\mathrm d}p_x'}{{\mathrm d}t'}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{p_x'}{t'}=
+    \dd{t}{t'}
     \gamma
     \lr{
-        \frac{{\mathrm d}p_x}{{\mathrm d}t}-
-        \beta \frac{{\mathrm d}p_w}{{\mathrm d}t}
+        \dd{p_x}{t}-
+        \beta \dd{p_w}{t}
     }=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{t}{t'}
     \gamma
     (F_x-\beta F_w)
 $$
 $$
     F_y'=
-    \frac{{\mathrm d}p_y'}{{\mathrm d}t'}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
-    \frac{{\mathrm d}p_y}{{\mathrm d}t}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{p_y'}{t'}=
+    \dd{t}{t'}
+    \dd{p_y}{t}=
+    \dd{t}{t'}
     F_y
 $$
 $$
     F_z'=
-    \frac{{\mathrm d}p_z'}{{\mathrm d}t'}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
-    \frac{{\mathrm d}p_z}{{\mathrm d}t}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{p_z'}{t'}=
+    \dd{t}{t'}
+    \dd{p_z}{t}=
+    \dd{t}{t'}
     F_z
 $$
 $$
     F_w'=
-    \frac{{\mathrm d}p_w'}{{\mathrm d}t'}=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{p_w'}{t'}=
+    \dd{t}{t'}
     \gamma
     \lr{
-        \frac{{\mathrm d}p_w}{{\mathrm d}t}-
-        \beta \frac{{\mathrm d}p_x}{{\mathrm d}t}
+        \dd{p_w}{t}-
+        \beta \dd{p_x}{t}
     }=
-    \frac{{\mathrm d}t}{{\mathrm d}t'}
+    \dd{t}{t'}
     \gamma
     (F_w-\beta F_x)
 $$
@@ -345,34 +345,34 @@ $$
 
 $$
     f_x'=
-    \frac{{\mathrm d}p_x'}{{\mathrm d}\tau'}=
+    \dd{p_x'}{\tau'}=
     \gamma
     \lr{
-        \frac{{\mathrm d}p_x}{{\mathrm d}\tau}-
-        \beta \frac{{\mathrm d}p_w}{{\mathrm d}\tau}
+        \dd{p_x}{\tau}-
+        \beta \dd{p_w}{\tau}
     }=
     \gamma
     (f_x-\beta f_w)
 $$
 $$
     f_y'=
-    \frac{{\mathrm d}p_y'}{{\mathrm d}\tau'}=
-    \frac{{\mathrm d}p_y}{{\mathrm d}\tau}=
+    \dd{p_y'}{\tau'}=
+    \dd{p_y}{\tau}=
     f_y
 $$
 $$
     f_z'=
-    \frac{{\mathrm d}p_z'}{{\mathrm d}\tau'}=
-    \frac{{\mathrm d}p_z}{{\mathrm d}\tau}=
+    \dd{p_z'}{\tau'}=
+    \dd{p_z}{\tau}=
     f_z
 $$
 $$
     f_w'=
-    \frac{{\mathrm d}p_w'}{{\mathrm d}\tau'}=
+    \dd{p_w'}{\tau'}=
     \gamma
     \lr{
-        \frac{{\mathrm d}p_w}{{\mathrm d}\tau}-
-        \beta \frac{{\mathrm d}p_x}{{\mathrm d}\tau}
+        \dd{p_w}{\tau}-
+        \beta \dd{p_x}{\tau}
     }=
     \gamma
     (f_w-\beta f_x)
