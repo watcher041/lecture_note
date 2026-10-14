@@ -125,38 +125,38 @@ $$
 
 $$
     a_x=
-    \left[
+    \LR{
         \dd{^2r}{t^2}-
         r
         \lr{
             \dd{\theta}{t}
         }^2
-    \right]
+    }
     \cos\theta-
-    \left[
+    \LR{
         2\dd{r}{t}
         \dd{\theta}{t}+
         r
         \dd{^2\theta}{t^2}
-    \right]
+    }
     \sin\theta
 $$
 $$
     a_y=
-    \left[
+    \LR{
         \dd{^2r}{t^2}-
         r
         \lr{
             \dd{\theta}{t}
         }^2
-    \right]
+    }
     \sin\theta+
-    \left[
+    \LR{
         2\dd{r}{t}
         \dd{\theta}{t}+
         r
         \dd{^2\theta}{t^2}
-    \right]
+    }
     \cos\theta
 $$
 
@@ -194,7 +194,7 @@ $$
 が成立することから、運動方程式は
 
 $$
-    m\left[
+    m\LR{
         \dd{^2r}
         {t^2}-
         r
@@ -202,7 +202,7 @@ $$
         \dd{\theta}
         {t}
         }^2
-    \right]=F_x\cos\theta+F_y\sin\theta
+    }=F_x\cos\theta+F_y\sin\theta
 $$
 $$
     m\lr{
@@ -226,7 +226,7 @@ $$
 となっていることから、以下の通りになっていることが分かる。
 
 $$
-    m\left[
+    m\LR{
         \dd{^2r}
         {t^2}-
         r
@@ -234,7 +234,7 @@ $$
         \dd{\theta}
         {t}
         }^2
-    \right]=F_r、
+    }=F_r、
     m\lr{
         2\dd{r}
         {t}
@@ -600,14 +600,14 @@ $$
             \sin\theta\sin\phi
         }\\
         &=
-        \left[
+        \LR{
             r\dd{^2\theta}{t^2}+
             2\dd{r}{t}
             \dd{\theta}{t}
-        \right]
+        }
         \cos\theta\cos\phi\\
         &-
-        \left[
+        \LR{
             r\dd{^2\phi}{t^2}
             \sin\theta+
             2\dd{r}{t}
@@ -616,10 +616,10 @@ $$
             2r\dd{\theta}{t}
             \dd{\phi}{t}
             \cos\theta
-        \right]
+        }
         \sin\phi\\
         &+
-        \left[
+        \LR{
             \dd{^2r}{t^2}-
             r
             \lr{
@@ -629,7 +629,7 @@ $$
             \lr{
                 \dd{\phi}{t}
             }^2
-        \right]
+        }
         \sin\theta\cos\phi
     \end{align*}
 $$
@@ -647,14 +647,14 @@ $$
             \sin\theta\cos\phi
         }\\
         &=
-        \left[
+        \LR{
             r\dd{^2\theta}{t^2}+
             2\dd{r}{t}
             \dd{\theta}{t}
-        \right]
+        }
         \cos\theta\sin\phi\\
         &+ 
-        \left[
+        \LR{
             r\dd{^2\phi}{t^2}
             \sin\theta+
             2\dd{r}{t}
@@ -663,10 +663,10 @@ $$
             2r\dd{\theta}{t}
             \dd{\phi}{t}
             \cos\theta
-        \right]
+        }
         \cos\phi\\
         &+
-        \left[
+        \LR{
             \dd{^2r}{t^2}-
             r
             \lr{
@@ -676,7 +676,7 @@ $$
             \lr{
                 \dd{\phi}{t}
             }^2
-        \right]
+        }
         \sin\theta\sin\phi
     \end{align*}
 $$
@@ -692,19 +692,19 @@ $$
             \sin\theta
         }\\
         &=
-        -\left[
+        -\LR{
             r\dd{^2\theta}{t^2}+
             2\dd{r}{t}
             \dd{\theta}{t}
-        \right]
+        }
         \sin\theta+
-        \left[
+        \LR{
             \dd{^2r}{t^2}-
             r
             \lr{
                 \dd{\theta}{t}
             }^2
-        \right]
+        }
         \cos\theta
     \end{align*}
 $$

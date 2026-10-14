@@ -22,7 +22,7 @@ $$
 であり、以下の図のように極座標に置き換えて考えると
 
 $$
-    m\left[
+    m\LR{
         \dd{^2r}
         {t^2}-
         r
@@ -30,7 +30,7 @@ $$
         \dd{\theta}
         {t}
         }^2
-    \right]=
+    }=
     F_x\cos\theta+F_y\sin\theta=
     mg\cos\theta-T
 $$

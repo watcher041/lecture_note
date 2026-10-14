@@ -220,12 +220,12 @@ $$
         { V}
     }_{T}、
     U=F+TS=
-    -T^2\left[
+    -T^2\LR{
         \pp{}{ T}
         \lr{
             \frac{F}{T}
         }
-    \right]_V
+    }_V
 $$
 このことから、自由エネルギーの形で表示できることが分かる。そのため、期待値の方も
 $$
@@ -343,12 +343,12 @@ $$
     \braket{F}=
     -\frac{N}{\beta}
     \ln
-    \left[
+    \LR{
         \frac{V}{h^{3}}
         \lr{
            \frac{2m\pi}{\beta}
         }^{3/2}
-    \right]
+    }
 $$
 $$
     \braket{S}=
@@ -358,12 +358,12 @@ $$
     \left\{
         \frac{3}{2}+
         \ln
-        \left[
+        \LR{
             \frac{V}{h^{3}}
             \lr{
             \frac{2m\pi}{\beta}
             }^{3/2}
-        \right]
+        }
     \right\}
 $$
 

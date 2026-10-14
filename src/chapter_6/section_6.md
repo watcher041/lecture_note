@@ -127,12 +127,12 @@ $$
     }^{3N/2}e^{\beta\mu N}=
     \sum_{N=0}^{N_t}
     \frac{1}{N!}
-    \left[
+    \LR{
         \frac{V}{h^{3}}
         \lr{
             \frac{2m\pi}{\beta}
         }^{3/2}e^{\beta \mu}
-    \right]^{N}
+    }^{N}
 $$
 となるため、総和に関して
 $$
@@ -143,13 +143,13 @@ $$
 $$
     \Xi=
     \exp
-    \left[
+    \LR{
         \frac{V}{h^{3}}
         \lr{
             \frac{2m\pi}{\beta}
         }^{3/2}
         e^{\beta \mu}
-    \right]、
+    }、
     \ln\Xi=
     \frac{V}{h^{3}}
     \lr{
@@ -213,12 +213,12 @@ $$
     \mu=
     -\frac{1}{\beta}
     \ln
-    \left[
+    \LR{
         \frac{V}{\braket{N}h^{3}}
         \lr{
             \frac{2m\pi}{\beta}
         }^{3/2}
-    \right]
+    }
 $$
 $$
     \braket{P}=
@@ -236,12 +236,12 @@ $$
     }=
     \braket{N}k_{\mathrm{B}}
     \ln
-    \left[
+    \LR{
         \frac{V}{\braket{N}h^{3}}
         \lr{
             \frac{2m\pi}{\beta}
         }^{3/2}
         e^{5/2}
-    \right]
+    }
 $$
 このように、従来の結果と同じ結果が得られることが分かる。

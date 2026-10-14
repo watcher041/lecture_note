@@ -77,13 +77,13 @@ $$
     {t}
     }=
     \dd{}{t}
-    \left[
+    \LR{
     \sum_{i=1}^N
     m_i
     \lr{
     \bm{r}_i\times\bm{v}_i
     }
-    \right]
+    }
 
 $$
 
@@ -304,10 +304,10 @@ $$
     \sum_{i=1}^N
     m_i(\bm{r}'_i\times\bm{v}'_i)=
     \sum_{i=1}^N
-    \left[
+    \LR{
         m_i(\bm{r}'_i\cdot\bm{r}'_i)\cdot\bm{\omega}_i-
         m_i(\bm{r}'_i\cdot\bm{\omega}_i)\cdot\bm{r}'_i
-    \right]
+    }
 $$
 
 であるが、各成分が
@@ -316,31 +316,31 @@ $$
     L_x'=
     \sum_{i=1}^N
     m_i
-    \left[
+    \LR{
         (y_i'^2+z_i'^2)\omega_{i,x}-
         x_i'y_i'\omega_{i,y}-
         x_i'z_i'\omega_{i,z}
-    \right]
+    }
 $$
 $$
     L_y'=
     \sum_{i=1}^N
     m_i
-    \left[
+    \LR{
         -x_i'y_i'\omega_{i,x}+
         (x_i'^2+z_i'^2)\omega_{i,y}-
         y_i'z_i'\omega_{i,z}
-    \right]
+    }
 $$
 $$
     L_z'=
     \sum_{i=1}^N
     m_i
-    \left[
+    \LR{
         -x_i'z_i'\omega_{i,x}-
         y_i'z_i'\omega_{i,y}+
         (x_i'^2+y_i'^2)\omega_{i,z}
-    \right]
+    }
 $$
 
 となることから、慣性モーメントは以下の形となる。

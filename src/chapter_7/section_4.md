@@ -336,13 +336,13 @@ $$
         \pp{ D_z}{ z}
     }+
     \gamma\frac{V}{c^2}
-    \left[
+    \LR{
         \pp{ D_x}{ t}-
         \lr{
             \pp{ H_z}{ y}-
             \pp{ H_y}{ z}
         }
-    \right]=
+    }=
     \gamma
     \lr{
         \rho-\frac{V}{c^2}i_x
@@ -351,13 +351,13 @@ $$
 $$
     i_x'=
     \gamma
-    \left[
+    \LR{
         \lr{
             \pp{ H_z}{ y}-
             \pp{ H_y}{ z}
         }-
         \pp{ D_x}{ t}
-    \right]-
+    }-
     \gamma V
     \lr{
         \pp{ D_x}{ x}+

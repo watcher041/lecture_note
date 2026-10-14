@@ -85,13 +85,13 @@ $$
         { P}
     }_{T}、
     H=-T^2
-    \left[
+    \LR{
         \pp{}
         { T}
         \lr{
             \frac{G}{T}
         }
-    \right]_{P}
+    }_{P}
 $$
 そのため、期待値は以下の通りにかける。
 $$
@@ -212,14 +212,14 @@ $$
 $$
     \braket{S}=
     Nk_{\mathrm{B}}
-    \left[
+    \LR{
         \frac{3}{2}+
         \ln
         \frac{\braket{V}}{h^3}
         \lr{
             \frac{2\pi m}{\beta}
         }^{3/2}
-    \right]+
+    }+
     k_{\mathrm{B}}
     \lr{
         N-N\ln N+\ln N!
@@ -258,12 +258,12 @@ $$
     \braket{F}=
     -\frac{N}{\beta}
     \ln
-    \left[
+    \LR{
         \frac{V}{h^{3}}
         \lr{
            \frac{2m\pi}{\beta}
         }^{3/2}
-    \right]+
+    }+
     \frac{1}{\beta}\ln N!
 $$
 $$
@@ -274,12 +274,12 @@ $$
     \left\{
         \frac{3}{2}+
         \ln
-        \left[
+        \LR{
             \frac{V}{h^{3}}
             \lr{
             \frac{2m\pi}{\beta}
             }^{3/2}
-        \right]
+        }
     \right\}-
     k_{\mathrm{B}}\ln N!
 $$
@@ -309,12 +309,12 @@ $$
     \left\{
         \frac{3}{2}+
         \ln
-        \left[
+        \LR{
             \frac{\braket{V}}{h^{3}}
             \lr{
             \frac{2m\pi}{\beta}
             }^{3/2}
-        \right]
+        }
     \right\}-
     k_{\mathrm{B}}
     \lr{
@@ -330,12 +330,12 @@ $$
     {h^3\beta^{5/2}P}=
     -Nk_{\mathrm{B}}T
     \ln
-    \left[
+    \LR{
     \frac{\braket{V}}{Nh^3}
     \lr{
         2\pi mk_{\mathrm{B}}T
     }^{3/2}
-    \right]
+    }
 $$
 
 これらを比較すると、以下の関係が成り立てば互いに等しい関係になっていることが分かる。

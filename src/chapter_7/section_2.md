@@ -150,16 +150,16 @@ $$
 
 $$
     x_{2}'-x_{1}'=
-    \gamma\left[
+    \gamma\LR{
         \lr{x_{2}-x_{1}}-V\lr{t_{2}-t_{1}}
-    \right]
+    }
 $$
 $$
     t_{2}'-t_{1}'=
-    \gamma\left[
+    \gamma\LR{
         \lr{t_{2}-t_{1}}-
         \frac{V}{c^2}\lr{x_{2}-x_{1}}
-    \right]
+    }
 $$
 
 であるため、以下の関係式が得られる。
@@ -201,16 +201,16 @@ $$
 
 $$
     x_{\rm B}'-x_{\rm A}'=
-    \gamma\left[
+    \gamma\LR{
         \lr{x_{\rm B}-x_{\rm A}}-V\lr{t_{\rm B}-t_{\rm A}}
-    \right]=\Delta x'
+    }=\Delta x'
 $$
 $$
     t_{\rm B}'-t_{\rm A}'=
-    \gamma\left[
+    \gamma\LR{
         \lr{t_{\rm B}-t_{\rm A}}-
         \frac{V}{c^2}\lr{x_{\rm B}-x_{\rm A}}
-    \right]=0
+    }=0
 $$
 
 となり、以下の関係式が得られる。

@@ -547,9 +547,9 @@ $$
 $$
     2(\bm{u}_x\cdot\bm{u}_w)=
     \beta
-    \left[
+    \LR{
        (\bm{u}_w\cdot\bm{u}_w)-1
-    \right]
+    }
 $$
 
 をそれ以外の式に適用すると

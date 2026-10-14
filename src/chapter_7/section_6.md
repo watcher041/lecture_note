@@ -252,7 +252,7 @@ $$
     \mathrm{d}\bm{s}=
     \mathrm{d}X\bm{u}_X+
     \mathrm{d}Y\bm{u}_Y=
-    \left[
+    \LR{
         \lr{
             \pp{ x}{ X}
         }
@@ -261,9 +261,9 @@ $$
             \pp{ y}{ X}
         }
         \bm{u}_y
-    \right]
+    }
     \mathrm{d}X+
-    \left[
+    \LR{
         \lr{
             \pp{ x}{ Y}
         }
@@ -272,12 +272,12 @@ $$
             \pp{ y}{ Y}
         }
         \bm{u}_y
-    \right]
+    }
     \mathrm{d}Y
 $$
 $$
     \mathrm{d}\bm{s}=
-    \left[
+    \LR{
         \lr{
             \pp{ X}{ x}
         }
@@ -286,9 +286,9 @@ $$
             \pp{ Y}{ x}
         }
         \bm{u}_Y
-    \right]
+    }
     \mathrm{d}x+
-    \left[
+    \LR{
         \lr{
             \pp{ X}{ y}
         }
@@ -297,7 +297,7 @@ $$
             \pp{ Y}{ y}
         }
         \bm{u}_Y
-    \right]
+    }
     \mathrm{d}y=
     \mathrm{d}x\bm{u}_x+
     \mathrm{d}y\bm{u}_y

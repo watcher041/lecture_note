@@ -170,7 +170,7 @@ $$
             c-\frac{v_xV}{c}
         }^2
     }
-    \left[
+    \LR{
         \lr{
             c-\frac{v_xV}{c}
         }^2-
@@ -179,7 +179,7 @@ $$
             1-\frac{V^2}{c^2}
         }
         (v_y^2+v_z^2)
-    \right]=
+    }=
     \frac{
         \lr{
             1-\frac{\bm{v}^2}{c^2}
@@ -222,18 +222,18 @@ $$
 $$
     p_y'=m_r'v_y'=
     \dd{t'}{t}m_r
-    \left[
+    \LR{
         \frac{v_y}{\gamma\lr{1-\frac{v_xV}{c^2}}}
-    \right]=
+    }=
     m_rv_y=
     p_y
 $$
 $$
     p_z'=m_r'v_z'=
     \dd{t'}{t}m_r
-    \left[
+    \LR{
         \frac{v_z}{\gamma\lr{1-\frac{v_xV}{c^2}}}
-    \right]=
+    }=
     m_rv_z=
     p_z
 $$

@@ -29,13 +29,13 @@ $$
 となるので、以下のようになる。
 $$
     \sum_{i=1}^{f}
-    \left[
+    \LR{
         m\dd{\bm{v}}{t}
         \cdot
         \lr{\pp{ \bm{r}}{ q_i}}-
         \bm{F}\cdot
         \lr{\pp{ \bm{r}}{ q_i}}
-    \right]\delta q_i=0
+    }\delta q_i=0
 $$
 
 ここで、第1辺を整理して
@@ -45,10 +45,10 @@ $$
     \cdot
     \lr{\pp{ \bm{r}}{ q_i}}=
     \dd{}{t}
-    \left[
+    \LR{
         m\bm{v}\cdot
         \lr{\pp{ \bm{r}}{ q_i}}
-    \right]-
+    }-
     m\bm{v}\cdot
     \dd{}{t}
     \lr{\pp{ \bm{r}}{ q_i}}
@@ -59,12 +59,12 @@ $$
 $$
     \pp{ \bm{v}}{ \dot{q}_i}=
     \pp{}{ \dot{q}_i}
-    \left[
+    \LR{
         \sum_{j=1}^{f}
     \lr{\pp{ \bm{r}}{ q_i}}
     \dot{q}_i+
     \pp{ \bm{r}}{ t}
-    \right]=
+    }=
     \pp{ \bm{r}}{ q_i}
 $$
 $$
@@ -77,18 +77,18 @@ $$
     \pp{}{ t}
      \lr{\pp{ \bm{r}}{ q_i}}=
      \pp{}{ q_i}
-     \left[
+     \LR{
         \sum_{j=1}^{f}
     \lr{\pp{ \bm{r}}{ q_j}}
     \dot{q}_j+
     \pp{ \bm{r}}{ t}
-     \right]=
+     }=
     \pp{ \bm{v}}{ q_i}
 $$
 となるため、これらを代入すると以下の通りになる。
 $$
     \sum_{i=1}^{f}
-    \left[
+    \LR{
         \dd{}{t}
         \pp{}{ \dot{q}_i}
         \lr{
@@ -102,7 +102,7 @@ $$
         -
         \bm{F}\cdot
         \lr{\pp{ \bm{r}}{ q_i}}
-    \right]\delta q_i=0
+    }\delta q_i=0
 $$
 任意の仮想変位に対して成立するためには、中の項目が0になる必要があるため
 

@@ -34,12 +34,12 @@ $$
 $$
     \bm{E}=\bm{E}_q(\bm{r})+\bm{E}_Q(\bm{r})=
     k
-    \left[
+    \LR{
         q\frac{(\bm{r}-\bm{r}_q)}
         {|\bm{r}-\bm{r}_{q}|^3}+
         Q\frac{(\bm{r}-\bm{r}_Q)}
         {|\bm{r}-\bm{r}_{Q}|^3}
-    \right]
+    }
 $$
 
 <p align="center">

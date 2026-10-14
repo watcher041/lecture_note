@@ -119,17 +119,17 @@ $$
     \bm{S}_{\mathrm{l}}+\bm{S}_{\mathrm{r}}+\bm{S}_{\mathrm{f}}+\bm{S}_{\mathrm{b}}+
     \bm{S}_{\mathrm{u}}+\bm{S}_{}\\
    &=
-    \left[
+    \LR{
       \bm{S}(-\bm{e}_{y})+\bm{S}(\bm{e}_{y})
-    \right]
+    }
     \Delta x_{i}\Delta z_{i}+
-    \left[
+    \LR{
       \bm{S}(-\bm{e}_{x})+\bm{S}(\bm{e}_{x})
-    \right]
+    }
     \Delta y_{i}\Delta z_{i}+
-    \left[
+    \LR{
       \bm{S}(-\bm{e}_{z})+\bm{S}(\bm{e}_{z})
-    \right]
+    }
     \Delta x_{i}\Delta y_{i}
   \end{align*}
 $$

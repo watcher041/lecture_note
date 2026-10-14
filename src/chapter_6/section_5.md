@@ -57,7 +57,7 @@ $$
 $$
     S=
     Nk_{\mathrm{B}}\ln
-    \left[
+    \LR{
     \frac{8V}{h^3}
     \lr{
         \frac{\pi mU}{3}
@@ -65,7 +65,7 @@ $$
     \lr{
         \frac{e}{N}
     }^{5/2}
-    \right]+
+    }+
     \ln\frac{2\delta p}{\sqrt{2mU}}
 $$
 これにより、化学ポテンシャルは以下の通りになる。
@@ -76,12 +76,12 @@ $$
         { N}
     }_{U,V}=
     -k_{\mathrm{B}}T\ln
-    \left[
+    \LR{
     \frac{V}{Nh^3}
     \lr{
         2\pi mk_{\mathrm{B}}T
     }^{3/2}
-    \right]
+    }
 $$
 　同様に、正準集団においても分配関数が
 $$
@@ -91,12 +91,12 @@ $$
     }^{3N/2}、
     \ln Z\simeq
     N\ln
-    \left[
+    \LR{
     \frac{Ve}{Nh^3}
     \lr{
         \frac{2\pi m}{\beta}
     }^{3/2}
-    \right]
+    }
 $$
 であったため、化学ポテンシャルは以下の通りとなる。
 $$
@@ -106,12 +106,12 @@ $$
         { N}\ln Z
     }_{T,V}=
     -k_{\mathrm{B}}T\ln
-    \left[
+    \LR{
     \frac{V}{Nh^3}
     \lr{
         2\pi mk_{\mathrm{B}}T
     }^{3/2}
-    \right]
+    }
 $$
 　さらに、等圧定温集団においても分配関数が
 $$
@@ -120,17 +120,17 @@ $$
     \frac{1}{\beta^{5N/2}P^{N}}、
     \ln Y=
     N\ln
-    \left[
+    \LR{
         \frac{(2\pi m)^{3/2}}
         {h^3\beta^{5/2}P}
-    \right]=
+    }=
     N\ln
-    \left[
+    \LR{
         \frac{\braket{V}}{Nh^3}
         \lr{
             \frac{2\pi m}{\beta}
         }^{3/2}
-    \right]
+    }
 $$
 であるから、上記と同じ形が得られることが確認できる。
 $$
@@ -140,12 +140,12 @@ $$
         { N}\ln Y
     }_{T,P}=
     -k_{\mathrm{B}}T\ln
-    \left[
+    \LR{
     \frac{\braket{V}}{Nh^3}
     \lr{
         2\pi mk_{\mathrm{B}}T
     }^{3/2}
-    \right]
+    }
 $$
 ここで、ギブスの自由エネルギと見比べると $N$ 以外の部分が一致しているため、
 $$
@@ -194,21 +194,21 @@ $$
 $$
     \mu =
     -k_{\mathrm{B}}T\ln
-    \left[
+    \LR{
     \frac{(2\pi m)^{3/2}
     (k_{\mathrm{B}}T)^{5/2}}
     {Ph^3}
-    \right]
+    }
 $$
 を代入すると以前までに得たものと同じ形であることが分かる。
 $$
     S=Nk_{\mathrm{B}}
     \ln
-    \left[
+    \LR{
     \frac{(2\pi m)^{3/2}
     (k_{\mathrm{B}}T)^{5/2}}
     {Ph^3}e^{5/2}
-    \right]、
+    }、
     PV=Nk_{\mathrm{B}}T
 $$
 　
