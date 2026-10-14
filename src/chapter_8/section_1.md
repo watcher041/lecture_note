@@ -140,7 +140,7 @@ $$
 $$
 $$
     \braket{\mathcal{H}}=
-    -\frac{\partial}{\partial\beta}
+    -\pp{}{\beta}
     \ln Z=fkT、
     \lr{
         \beta=\frac{1}{kT}
@@ -203,9 +203,9 @@ $$
 
 $$
     \braket{U}=
-    -\frac{\partial}{\partial\beta}
+    -\pp{}{\beta}
     \ln Z=
-    -f\frac{\partial}{\partial\beta}
+    -f\pp{}{\beta}
     \ln Z_1=
     \frac{fh\nu}{e^{h\nu/kT}-1}
 $$

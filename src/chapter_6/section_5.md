@@ -12,18 +12,18 @@ $$
     \begin{cases} 
         ・　小正準集団：
         \mu=-T\lr{
-            \frac{\partial S}
-            {\partial N}
+            \pp{ S}
+            { N}
         }_{U,V}\\
         ・　　正準集団：
         \mu=-\frac{1}{\beta}\lr{
-            \frac{\partial}
-            {\partial N}\ln Z
+            \pp{}
+            { N}\ln Z
         }_{T,V}\\
         ・等圧定圧集団：
          \mu=-\frac{1}{\beta}\lr{
-            \frac{\partial}
-            {\partial N}\ln Y
+            \pp{}
+            { N}\ln Y
         }_{T,P}
     \end{cases}
 $$
@@ -72,8 +72,8 @@ $$
 $$
     \mu=
     -T\lr{
-        \frac{\partial S}
-        {\partial N}
+        \pp{ S}
+        { N}
     }_{U,V}=
     -k_{\mathrm{B}}T\ln
     \left[
@@ -102,8 +102,8 @@ $$
 $$
     \mu=
     -\frac{1}{\beta}\lr{
-        \frac{\partial}
-        {\partial N}\ln Z
+        \pp{}
+        { N}\ln Z
     }_{T,V}=
     -k_{\mathrm{B}}T\ln
     \left[
@@ -136,8 +136,8 @@ $$
 $$
     \mu=
     -\frac{1}{\beta}\lr{
-        \frac{\partial}
-        {\partial N}\ln Y
+        \pp{}
+        { N}\ln Y
     }_{T,P}=
     -k_{\mathrm{B}}T\ln
     \left[
@@ -181,13 +181,13 @@ $$
 $$
     -\frac{S}{N}=
     \lr{
-        \frac{\partial \mu}
-        {\partial T}
+        \pp{ \mu}
+        { T}
     }_{P}、
     \frac{V}{N}=
     \lr{
-        \frac{\partial \mu}
-        {\partial P}
+        \pp{ \mu}
+        { P}
     }_{T}
 $$
 であることから、化学ポテンシャルを圧力で表示した

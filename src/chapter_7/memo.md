@@ -76,161 +76,161 @@ $$
 
 $$
     \bm{u}_w=
-    \frac{\partial \bm{s}}{\partial w}=
+    \pp{ \bm{s}}{ w}=
     \lr{
-        \frac{\partial w'}{\partial w}
+        \pp{ w'}{ w}
     }
     \bm{u}_w'+
     \lr{
-        \frac{\partial x'}{\partial w}
+        \pp{ x'}{ w}
     }
     \bm{u}_x'+
     \lr{
-        \frac{\partial y'}{\partial w}
+        \pp{ y'}{ w}
     }
     \bm{u}_y'+
     \lr{
-        \frac{\partial z'}{\partial w}
+        \pp{ z'}{ w}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
+    \pp{ \bm{s}}{ x}=
     \lr{
-        \frac{\partial w'}{\partial x}
+        \pp{ w'}{ x}
     }
     \bm{u}_w'+
     \lr{
-        \frac{\partial x'}{\partial x}
+        \pp{ x'}{ x}
     }
     \bm{u}_x'+
     \lr{
-        \frac{\partial y'}{\partial x}
+        \pp{ y'}{ x}
     }
     \bm{u}_y'+
     \lr{
-        \frac{\partial z'}{\partial x}
+        \pp{ z'}{ x}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
+    \pp{ \bm{s}}{ y}=
     \lr{
-        \frac{\partial w'}{\partial y}
+        \pp{ w'}{ y}
     }
     \bm{u}_w'+
     \lr{
-        \frac{\partial x'}{\partial y}
+        \pp{ x'}{ y}
     }
     \bm{u}_x'+
     \lr{
-        \frac{\partial y'}{\partial y}
+        \pp{ y'}{ y}
     }
     \bm{u}_y'+
     \lr{
-        \frac{\partial z'}{\partial y}
+        \pp{ z'}{ y}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_z=
-    \frac{\partial \bm{s}}{\partial z}=
+    \pp{ \bm{s}}{ z}=
     \lr{
-        \frac{\partial w'}{\partial z}
+        \pp{ w'}{ z}
     }
     \bm{u}_w'+
     \lr{
-        \frac{\partial x'}{\partial z}
+        \pp{ x'}{ z}
     }
     \bm{u}_x'+
     \lr{
-        \frac{\partial y'}{\partial z}
+        \pp{ y'}{ z}
     }
     \bm{u}_y'+
     \lr{
-        \frac{\partial z'}{\partial z}
+        \pp{ z'}{ z}
     }
     \bm{u}_z'
 $$
 $$
     \bm{u}_w'=
-    \frac{\partial \bm{s}}{\partial w'}=
+    \pp{ \bm{s}}{ w'}=
     \lr{
-        \frac{\partial w}{\partial w'}
+        \pp{ w}{ w'}
     }
     \bm{u}_w+
     \lr{
-        \frac{\partial x}{\partial w'}
+        \pp{ x}{ w'}
     }
     \bm{u}_x+
     \lr{
-        \frac{\partial y}{\partial w'}
+        \pp{ y}{ w'}
     }
     \bm{u}_y+
     \lr{
-        \frac{\partial z}{\partial w'}
+        \pp{ z}{ w'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_x'=
-    \frac{\partial \bm{s}}{\partial x'}=
+    \pp{ \bm{s}}{ x'}=
     \lr{
-        \frac{\partial w}{\partial x'}
+        \pp{ w}{ x'}
     }
     \bm{u}_w+
     \lr{
-        \frac{\partial x}{\partial x'}
+        \pp{ x}{ x'}
     }
     \bm{u}_x+
     \lr{
-        \frac{\partial y}{\partial x'}
+        \pp{ y}{ x'}
     }
     \bm{u}_y+
     \lr{
-        \frac{\partial z}{\partial x'}
+        \pp{ z}{ x'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_y'=
-    \frac{\partial \bm{s}}{\partial y'}=
+    \pp{ \bm{s}}{ y'}=
     \lr{
-        \frac{\partial w}{\partial y'}
+        \pp{ w}{ y'}
     }
     \bm{u}_w+
     \lr{
-        \frac{\partial x}{\partial y'}
+        \pp{ x}{ y'}
     }
     \bm{u}_x+
     \lr{
-        \frac{\partial y}{\partial y'}
+        \pp{ y}{ y'}
     }
     \bm{u}_y+
     \lr{
-        \frac{\partial z}{\partial y'}
+        \pp{ z}{ y'}
     }
     \bm{u}_z
 $$
 $$
     \bm{u}_z'=
-    \frac{\partial \bm{s}}{\partial z'}=
+    \pp{ \bm{s}}{ z'}=
     \lr{
-        \frac{\partial w}{\partial z'}
+        \pp{ w}{ z'}
     }
     \bm{u}_w+
     \lr{
-        \frac{\partial x}{\partial z'}
+        \pp{ x}{ z'}
     }
     \bm{u}_x+
     \lr{
-        \frac{\partial y}{\partial z'}
+        \pp{ y}{ z'}
     }
     \bm{u}_y+
     \lr{
-        \frac{\partial z}{\partial z'}
+        \pp{ z}{ z'}
     }
     \bm{u}_z
 $$
@@ -771,76 +771,76 @@ $$
 $$
     \mathrm{d}w'=
     \lr{
-        \frac{\partial w'}{\partial w}
+        \pp{ w'}{ w}
     }
     \mathrm{d}w+
     \lr{
-        \frac{\partial w'}{\partial x}
+        \pp{ w'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial w'}{\partial y}
+        \pp{ w'}{ y}
     }
     \mathrm{d}y+
     \lr{
-        \frac{\partial w'}{\partial z}
+        \pp{ w'}{ z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}x'=
     \lr{
-        \frac{\partial x'}{\partial w}
+        \pp{ x'}{ w}
     }
     \mathrm{d}w+
     \lr{
-        \frac{\partial x'}{\partial x}
+        \pp{ x'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial x'}{\partial y}
+        \pp{ x'}{ y}
     }
     \mathrm{d}y+
     \lr{
-        \frac{\partial x'}{\partial z}
+        \pp{ x'}{ z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}y'=
     \lr{
-        \frac{\partial y'}{\partial w}
+        \pp{ y'}{ w}
     }
     \mathrm{d}w+
     \lr{
-        \frac{\partial y'}{\partial x}
+        \pp{ y'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial y'}{\partial y}
+        \pp{ y'}{ y}
     }
     \mathrm{d}y+
     \lr{
-        \frac{\partial y'}{\partial z}
+        \pp{ y'}{ z}
     }
     \mathrm{d}z
 $$
 $$
     \mathrm{d}z'=
     \lr{
-        \frac{\partial z'}{\partial w}
+        \pp{ z'}{ w}
     }
     \mathrm{d}w+
     \lr{
-        \frac{\partial z'}{\partial x}
+        \pp{ z'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial z'}{\partial y}
+        \pp{ z'}{ y}
     }
     \mathrm{d}y+
     \lr{
-        \frac{\partial z'}{\partial z}
+        \pp{ z'}{ z}
     }
     \mathrm{d}z
 $$
@@ -854,22 +854,22 @@ $$
 \end{pmatrix}
 =
 \begin{pmatrix}
-    \frac{\partial w'}{\partial w} & 
-    \frac{\partial w'}{\partial x} & 
-    \frac{\partial w'}{\partial y} & 
-    \frac{\partial w'}{\partial z} \\
-    \frac{\partial x'}{\partial w} & 
-    \frac{\partial x'}{\partial x} & 
-    \frac{\partial x'}{\partial y} & 
-    \frac{\partial x'}{\partial z} \\
-    \frac{\partial y'}{\partial w} & 
-    \frac{\partial y'}{\partial x} & 
-    \frac{\partial y'}{\partial y} & 
-    \frac{\partial y'}{\partial z} \\
-    \frac{\partial z'}{\partial w} & 
-    \frac{\partial z'}{\partial x} & 
-    \frac{\partial z'}{\partial y} & 
-    \frac{\partial z'}{\partial z} \\
+    \pp{ w'}{ w} & 
+    \pp{ w'}{ x} & 
+    \pp{ w'}{ y} & 
+    \pp{ w'}{ z} \\
+    \pp{ x'}{ w} & 
+    \pp{ x'}{ x} & 
+    \pp{ x'}{ y} & 
+    \pp{ x'}{ z} \\
+    \pp{ y'}{ w} & 
+    \pp{ y'}{ x} & 
+    \pp{ y'}{ y} & 
+    \pp{ y'}{ z} \\
+    \pp{ z'}{ w} & 
+    \pp{ z'}{ x} & 
+    \pp{ z'}{ y} & 
+    \pp{ z'}{ z} \\
 \end{pmatrix}
 \begin{pmatrix}
     \mathrm{d}w \\
@@ -882,7 +882,7 @@ $$
 $$
     \mathrm{d}x'^\mu=
     \lr{
-        \frac{\partial x'^\mu}{\partial x^\nu}
+        \pp{ x'^\mu}{ x^\nu}
     }
     \mathrm{d}x^\nu　
     (\mu=0,1,2,3)
@@ -914,7 +914,7 @@ $$
     e_{\nu}^\mu=
     \partial_\nu x'^\mu=
     \lr{
-        \frac{\partial x'^\mu}{\partial x^\nu}
+        \pp{ x'^\mu}{ x^\nu}
     }
     \rightarrow
     \mathrm{d}x'^\mu=
@@ -931,31 +931,31 @@ $$
 =
 \mathrm{d}w
 \begin{pmatrix}
-    \frac{\partial w'}{\partial w} \\
-    \frac{\partial x'}{\partial w} \\
-    \frac{\partial y'}{\partial w} \\
-    \frac{\partial z'}{\partial w} 
+    \pp{ w'}{ w} \\
+    \pp{ x'}{ w} \\
+    \pp{ y'}{ w} \\
+    \pp{ z'}{ w} 
 \end{pmatrix}+
 \mathrm{d}x
 \begin{pmatrix}
-    \frac{\partial w'}{\partial x} \\
-    \frac{\partial x'}{\partial x} \\
-    \frac{\partial y'}{\partial x} \\
-    \frac{\partial z'}{\partial x} 
+    \pp{ w'}{ x} \\
+    \pp{ x'}{ x} \\
+    \pp{ y'}{ x} \\
+    \pp{ z'}{ x} 
 \end{pmatrix}+
 \mathrm{d}y
 \begin{pmatrix}
-    \frac{\partial w'}{\partial y} \\
-    \frac{\partial x'}{\partial y} \\
-    \frac{\partial y'}{\partial y} \\
-    \frac{\partial z'}{\partial y} 
+    \pp{ w'}{ y} \\
+    \pp{ x'}{ y} \\
+    \pp{ y'}{ y} \\
+    \pp{ z'}{ y} 
 \end{pmatrix}+
 \mathrm{d}z
 \begin{pmatrix}
-    \frac{\partial w'}{\partial z} \\
-    \frac{\partial x'}{\partial z} \\
-    \frac{\partial y'}{\partial z} \\
-    \frac{\partial z'}{\partial z} 
+    \pp{ w'}{ z} \\
+    \pp{ x'}{ z} \\
+    \pp{ y'}{ z} \\
+    \pp{ z'}{ z} 
 \end{pmatrix}
 $$
 というように、基本ベクトルの和の形にもなるため、次のように書くこともできる。
@@ -964,8 +964,8 @@ $$
     \mathrm{d}x^{\nu}\bm{e}_{\nu}　
     \lr{
         \bm{e}_{\nu}=
-        \frac{\partial \bm{s}'}
-        {\partial x^\nu}
+        \pp{ \bm{s}'}
+        { x^\nu}
     }
 
 $$

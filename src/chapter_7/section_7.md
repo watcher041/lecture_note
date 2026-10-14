@@ -37,23 +37,23 @@ $$
 このことから、偏微分については
 
 $$
-    \frac{\partial x'}{\partial x}=
+    \pp{ x'}{ x}=
     \cos\alpha、
-    \frac{\partial x'}{\partial y}=
+    \pp{ x'}{ y}=
     \sin\alpha、
-    \frac{\partial y'}{\partial x}=
+    \pp{ y'}{ x}=
     -\sin\alpha、
-    \frac{\partial y'}{\partial y}=
+    \pp{ y'}{ y}=
     \cos\alpha
 $$
 $$
-    \frac{\partial x}{\partial x'}=
+    \pp{ x}{ x'}=
     \cos\alpha、
-    \frac{\partial x}{\partial y'}=
+    \pp{ x}{ y'}=
     -\sin\alpha、
-    \frac{\partial y}{\partial x'}=
+    \pp{ y}{ x'}=
     \sin\alpha、
-    \frac{\partial y}{\partial y'}=
+    \pp{ y}{ y'}=
     \cos\alpha
 $$
 
@@ -123,13 +123,13 @@ $$
     \mathrm{d}x'^\mu=
     \sum_{\nu=1}^2
     \lr{
-        \frac{\partial x'^\mu}{\partial x^\nu}
+        \pp{ x'^\mu}{ x^\nu}
     }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
     \sum_{\mu=1}^2
     \lr{
-        \frac{\partial x^\nu}{\partial x'^\mu}
+        \pp{ x^\nu}{ x'^\mu}
     }
     \mathrm{d}x'^\mu
 $$
@@ -137,13 +137,13 @@ $$
     \bm{u}'_\mu=
     \sum_{\nu=1}^2
     \lr{
-        \frac{\partial x^\nu}{\partial x'^\mu}
+        \pp{ x^\nu}{ x'^\mu}
     }
     \bm{u}_\nu、
     \bm{u}_\nu=
     \sum_{\mu=1}^2
     \lr{
-        \frac{\partial x'^\nu}{\partial x^\mu}
+        \pp{ x'^\nu}{ x^\mu}
     }
     \bm{u}'_\mu
 $$
@@ -163,22 +163,22 @@ $$
 $$
     \mathrm{d}x'^\mu=
     \lr{
-        \frac{\partial x'^\mu}{\partial x^\nu}
+        \pp{ x'^\mu}{ x^\nu}
     }
     \mathrm{d}x^\nu、
     \mathrm{d}x^\nu=
     \lr{
-        \frac{\partial x^\nu}{\partial x'^\mu}
+        \pp{ x^\nu}{ x'^\mu}
     }
     \mathrm{d}x'^\mu、
     \bm{u}'_\mu=
     \lr{
-        \frac{\partial x^\nu}{\partial x'^\mu}
+        \pp{ x^\nu}{ x'^\mu}
     }
     \bm{u}_\nu、
     \bm{u}_\nu=
     \lr{
-        \frac{\partial x'^\nu}{\partial x^\mu}
+        \pp{ x'^\nu}{ x^\mu}
     }
     \bm{u}'_\mu
 $$
@@ -214,21 +214,21 @@ $$
 $$
     x'_1=
     \lr{
-        \frac{\partial x}{\partial x'}
+        \pp{ x}{ x'}
     }
     x_1+
     \lr{
-        \frac{\partial y}{\partial x'}
+        \pp{ y}{ x'}
     }
     x_2=
     x_1、
     x'_2=
     \lr{
-        \frac{\partial x}{\partial y'}
+        \pp{ x}{ y'}
     }
     x_1+
     \lr{
-        \frac{\partial y}{\partial y'}
+        \pp{ y}{ y'}
     }
     x_2=
     \frac{1}{\sqrt{2}}x_1+
@@ -237,21 +237,21 @@ $$
 $$
     x'^1=
     \lr{
-        \frac{\partial x'}{\partial x}
+        \pp{ x'}{ x}
     }
     x^1+
     \lr{
-        \frac{\partial x'}{\partial y}
+        \pp{ x'}{ y}
     }
     x^2=
     x^1-x^2、
     x'^2=
     \lr{
-        \frac{\partial y'}{\partial x}
+        \pp{ y'}{ x}
     }
     x^1+
     \lr{
-        \frac{\partial y'}{\partial y}
+        \pp{ y'}{ y}
     }
     x^2=
     \sqrt{2}x^2
@@ -307,24 +307,24 @@ $$
     g'_{\mu\nu}
     \mathrm{d}x'^{\mu}=
     \lr{
-        \frac{\partial x^\lambda}{\partial x'^\mu}
+        \pp{ x^\lambda}{ x'^\mu}
     }
     \lr{
-        \frac{\partial x^\xi}{\partial x'^\nu}
+        \pp{ x^\xi}{ x'^\nu}
     }
     \lr{
-        \frac{\partial x'^\mu}{\partial x^\eta}
+        \pp{ x'^\mu}{ x^\eta}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
     \delta_{\eta}^{\lambda}
     \lr{
-        \frac{\partial x^\xi}{\partial x'^\nu}
+        \pp{ x^\xi}{ x'^\nu}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\eta=
     \lr{
-        \frac{\partial x^\xi}{\partial x'^\nu}
+        \pp{ x^\xi}{ x'^\nu}
     }
     g_{\lambda\xi}
     \mathrm{d}x^\lambda

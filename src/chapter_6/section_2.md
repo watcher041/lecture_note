@@ -115,11 +115,11 @@ $$
 であるため、以下の関係式が成り立つことが分かる。
 $$
     \lr{
-        \frac{\partial S}{\partial U}
+        \pp{ S}{ U}
     }_{V}=
     \frac{1}{T}、
     \lr{
-        \frac{\partial S}{\partial V}
+        \pp{ S}{ V}
     }_{U}=
     \frac{P}{T}
 $$
@@ -136,7 +136,7 @@ $$
 であることから、それぞれの式に代入すると
 $$
     \lr{
-        \frac{\partial S}{\partial U}
+        \pp{ S}{ U}
     }_{V}=
     \frac{1}{T}
     \rightarrow
@@ -147,7 +147,7 @@ $$
 $$
 $$
     \lr{
-        \frac{\partial S}{\partial V}
+        \pp{ S}{ V}
     }_{U}=
     \frac{P}{T}
     \rightarrow
@@ -193,7 +193,7 @@ $$
 $$
     C_V=
     \lr{
-    \frac{\partial U}{\partial T}
+    \pp{ U}{ T}
     }_{V}=\frac{3}{2}R
 $$
 

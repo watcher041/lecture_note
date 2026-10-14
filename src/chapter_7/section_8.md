@@ -152,38 +152,38 @@ $$
 $$
     \dd{}{t}
     \lr{
-        \frac{\partial\mathcal{L}}
-        {\partial \dot{q}}
+        \pp{\mathcal{L}}
+        { \dot{q}}
     }-
     \lr{
-        \frac{\partial\mathcal{L}}
-        {\partial q}
+        \pp{\mathcal{L}}
+        { q}
     }=0
 $$
 を利用してみると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
 $$
-    \frac{\partial\mathcal{L}}{\partial v_x}=
+    \pp{\mathcal{L}}{ v_x}=
     \frac{m_0v_x}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\partial\mathcal{L}}{\partial v_y}=
+    \pp{\mathcal{L}}{ v_y}=
     \frac{m_0v_y}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \frac{\partial\mathcal{L}}{\partial v_z}=
+    \pp{\mathcal{L}}{ v_z}=
     \frac{m_0v_z}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 $$
-    \frac{\partial\mathcal{L}}{\partial x}=
+    \pp{\mathcal{L}}{ x}=
     -\lr{
-        \frac{\partial U}{\partial x}
+        \pp{ U}{ x}
     }、
-     \frac{\partial\mathcal{L}}{\partial y}=
+     \pp{\mathcal{L}}{ y}=
      -\lr{
-        \frac{\partial U}{\partial y}
+        \pp{ U}{ y}
     }、
-    \frac{\partial\mathcal{L}}{\partial z}=
+    \pp{\mathcal{L}}{ z}=
     -\lr{
-        \frac{\partial U}{\partial z}
+        \pp{ U}{ z}
     }
 $$
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
@@ -210,11 +210,11 @@ $$
 $$
 と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
 $$
-    \frac{\partial\mathcal{L}}
-    {\partial \dot{x}^\lambda}=
+    \pp{\mathcal{L}}
+    { \dot{x}^\lambda}=
     -m_0c
-    \frac{\partial}
-    {\partial \dot{x}^\lambda}
+    \pp{}
+    { \dot{x}^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
     -\frac{m_0c}{2\dot{s}}
@@ -228,24 +228,24 @@ $$
     }
 $$
 $$
-    \frac{\partial\mathcal{L}}
-    {\partial x^\lambda}=
+    \pp{\mathcal{L}}
+    { x^\lambda}=
     -m_0c
-    \frac{\partial}
-    {\partial x^\lambda}
+    \pp{}
+    { x^\lambda}
     \sqrt{
     g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
-    \frac{\partial U}{\partial x^\lambda}=
+    \pp{ U}{ x^\lambda}=
     -\frac{m_0c\dot{s}}{2}
     \lr{
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
         \dd{x^{\mu}}
         {s}
         \dd{x^{\nu}}
         {s}
     }-
-    \frac{\partial U}{\partial x^\lambda}
+    \pp{ U}{ x^\lambda}
 $$
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
 以上の結果を上記の運動方程式に代入すると以下のような形になる。
@@ -261,21 +261,21 @@ $$
     {s^2}-
     \frac{1}{2}
     \lr{
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
         \dd{x^{\mu}}
         {s}
         \dd{x^{\nu}}
         {s}
     }\right]-
-    \frac{\partial U}{\partial x^\lambda}=0
+    \pp{ U}{ x^\lambda}=0
 $$
 ここで、計量に関しての微分が
 $$
     \dd{ g_{\lambda\mu}}
     { s}=
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}
+    \pp{ g_{\lambda\mu}}
+    { x^\nu}
     \dd{ x^\nu}
     { s}
 $$
@@ -287,16 +287,16 @@ $$
     \dd{^2x^{\mu}}
     {s^2}+
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}-
         \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}
     \right]-
-    \frac{\partial U}{\partial x^\lambda}=0
+    \pp{ U}{ x^\lambda}=0
 $$
 仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
 $$
@@ -304,11 +304,11 @@ $$
     \dd{^2x^{\mu}}
     {s^2}+
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}-
         \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}=0
@@ -316,62 +316,62 @@ $$
 となるわけだが、ここで以下のように変形する。
 $$
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}-
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}-
         \frac{1}{2}
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}=
     \frac{1}{2}
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}+
+        \pp{ g_{\lambda\nu}}
+        { x^\mu}-
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}
 $$
 そして、計量の微分を展開してみると
 $$
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}=
-    \frac{\partial}{\partial x^\nu}
+    \pp{ g_{\lambda\mu}}
+    { x^\nu}=
+    \pp{}{ x^\nu}
     (\bm{e}_\lambda\cdot\bm{e}_\mu)=
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}\cdot\bm{e}_\mu+
+    \pp{\bm{e}_\lambda}
+    { x^\nu}\cdot\bm{e}_\mu+
     \bm{e}_\lambda\cdot
-    \frac{\partial\bm{e}_\mu}
-    {\partial x^\nu}
+    \pp{\bm{e}_\mu}
+    { x^\nu}
 $$
 であり、ここで**第１種クリストフェル記号**を
 $$
     \Gamma_{\nu\lambda,\mu}=
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}\cdot\bm{e}_\mu=
+    \pp{\bm{e}_\lambda}
+    { x^\nu}\cdot\bm{e}_\mu=
     \bm{e}_\mu\cdot
-    \frac{\partial\bm{e}_\lambda}
-    {\partial x^\nu}
+    \pp{\bm{e}_\lambda}
+    { x^\nu}
 $$
 というように定義することで、
 $$
-    \frac{\partial g_{\lambda\mu}}
-    {\partial x^\nu}=
+    \pp{ g_{\lambda\mu}}
+    { x^\nu}=
     \Gamma_{\nu\lambda,\mu}+
     \Gamma_{\nu\mu,\lambda}
 $$
 となる。同様に、その他の偏微分についても
 $$
-    \frac{\partial g_{\lambda\nu}}
-    {\partial x^\mu}=
+    \pp{ g_{\lambda\nu}}
+    { x^\mu}=
     \Gamma_{\mu\lambda,\nu}+
     \Gamma_{\mu\nu,\lambda}、
-    \frac{\partial g_{\mu\nu}}
-    {\partial x^\lambda}=
+    \pp{ g_{\mu\nu}}
+    { x^\lambda}=
     \Gamma_{\lambda\mu,\nu}+
     \Gamma_{\lambda\nu,\mu}
 $$
@@ -380,12 +380,12 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}+
+        \pp{ g_{\lambda\nu}}
+        { x^\mu}-
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
 $$
 
@@ -405,12 +405,12 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}g^{k\lambda}
     \lr{
-        \frac{\partial g_{\lambda\mu}}
-        {\partial x^\nu}+
-        \frac{\partial g_{\lambda\nu}}
-        {\partial x^\mu}-
-        \frac{\partial g_{\mu\nu}}
-        {\partial x^\lambda}
+        \pp{ g_{\lambda\mu}}
+        { x^\nu}+
+        \pp{ g_{\lambda\nu}}
+        { x^\mu}-
+        \pp{ g_{\mu\nu}}
+        { x^\lambda}
     }
 $$
 により、次の**測地線方程式**の形で記載される。

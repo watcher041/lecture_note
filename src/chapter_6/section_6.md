@@ -45,18 +45,18 @@ $$
 であることから、
 $$
     \lr{
-        \frac{\partial J}
-        {\partial V}
+        \pp{ J}
+        { V}
     }_{T,\mu}=
     -P、
     \lr{
-        \frac{\partial J}
-        {\partial T}
+        \pp{ J}
+        { T}
     }_{V,\mu}=
     -S、
     \lr{
-        \frac{\partial J}
-        {\partial \mu}
+        \pp{ J}
+        { \mu}
     }_{V,T}=
     -N
 $$
@@ -65,13 +65,13 @@ $$
     \braket{P}=
     \frac{1}{\beta}
     \lr{
-        \frac{\partial}{\partial V}
+        \pp{}{ V}
         \ln\Xi
     }_{T,\mu}、
     \braket{N}=
     \frac{1}{\beta}
     \lr{
-        \frac{\partial}{\partial \mu}
+        \pp{}{ \mu}
         \ln\Xi
     }_{V,T}
 $$
@@ -80,12 +80,12 @@ $$
     -\frac{\braket{J}}{T}
     +\frac{1}{\beta}
     \lr{
-        \frac{\partial}{\partial T}
+        \pp{}{ T}
         \ln\Xi
     }_{V,\mu}=
     k_{\mathrm{B}}
     \lr{
-        \frac{\partial}{\partial T}
+        \pp{}{ T}
         T\ln\Xi
     }_{V,\mu}
 $$

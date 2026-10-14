@@ -6,10 +6,10 @@ $$
     S(U_t-U,V_t-V)=
     S(U_t,V_t)-
     \lr{
-        \frac{\partial S}{\partial U}
+        \pp{ S}{ U}
     }U-
     \lr{
-        \frac{\partial S}{\partial V}
+        \pp{ S}{ V}
     }V=
     S(U_t,V_t)-
     \lr{
@@ -76,18 +76,18 @@ $$
 $$
     S=-
     \lr{
-        \frac{\partial G}
-        {\partial T}
+        \pp{ G}
+        { T}
     }_{P}、
     V=
     \lr{
-        \frac{\partial G}
-        {\partial P}
+        \pp{ G}
+        { P}
     }_{T}、
     H=-T^2
     \left[
-        \frac{\partial}
-        {\partial T}
+        \pp{}
+        { T}
         \lr{
             \frac{G}{T}
         }
@@ -98,8 +98,8 @@ $$
     \braket{S}=
     -\frac{1}{T}
     \lr{
-        \frac{\partial}
-        {\partial\beta}
+        \pp{}
+        {\beta}
         \ln Y
     }_{P}-
     \frac{\braket{G}}{T}=
@@ -110,15 +110,15 @@ $$
     \braket{V}=
     -\frac{1}{\beta}
     \lr{
-        \frac{\partial}
-        {\partial P}
+        \pp{}
+        { P}
         \ln Y
     }_{T}、
     \braket{H}=
     -
     \lr{
-        \frac{\partial}
-        {\partial\beta}
+        \pp{}
+        {\beta}
         \ln Y
     }_{P}=
     \braket{U}+P\braket{V}
@@ -128,14 +128,14 @@ $$
     \mathcal{W}=
     \frac{1}{\beta P}
     \lr{
-        \frac{\partial\mathcal{W}}
-        {\partial V}
+        \pp{\mathcal{W}}
+        { V}
     }_{U,N}
     \leftrightarrow
     Z\rightarrow 
     \lr{
-        \frac{\partial Z}
-        {\partial V}
+        \pp{ Z}
+        { V}
     }_{U,N}
 $$
 であることをふまえると、以下のように書くこともできる。
@@ -146,8 +146,8 @@ $$
     Y=
     \int_{0}^{V_t}
     \lr{
-        \frac{\partial Z}
-        {\partial V}
+        \pp{ Z}
+        { V}
     }_{U,N}
     e^{-\beta PV}\mathrm{d}V、
 $$

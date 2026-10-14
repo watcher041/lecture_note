@@ -155,19 +155,19 @@ $$
 $$
     \mathrm{d}\bm{s}=
     \lr{
-        \frac{\partial \bm{s}}{\partial X}
+        \pp{ \bm{s}}{ X}
     }
     \mathrm{d}X+
     \lr{
-        \frac{\partial \bm{s}}{\partial Y}
+        \pp{ \bm{s}}{ Y}
     }
     \mathrm{d}Y=
     \lr{
-        \frac{\partial \bm{s}}{\partial x}
+        \pp{ \bm{s}}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial \bm{s}}{\partial y}
+        \pp{ \bm{s}}{ y}
     }
     \mathrm{d}y
 $$
@@ -176,13 +176,13 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}、
+    \pp{ \bm{s}}{ X}、
     \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}、
+    \pp{ \bm{s}}{ Y}、
     \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}、
+    \pp{ \bm{s}}{ x}、
     \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}
+    \pp{ \bm{s}}{ y}
 $$
 
 というように置くことで以下の形になることが分かる。
@@ -208,40 +208,40 @@ $$
 $$
     \mathrm{d}X=
     \lr{
-        \frac{\partial X}{\partial x}
+        \pp{ X}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial X}{\partial y}
+        \pp{ X}{ y}
     }
     \mathrm{d}y、
     \mathrm{d}Y=
     \lr{
-        \frac{\partial Y}{\partial x}
+        \pp{ Y}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial Y}{\partial y}
+        \pp{ Y}{ y}
     }
     \mathrm{d}y
 $$
 $$
     \mathrm{d}x=
     \lr{
-        \frac{\partial x}{\partial X}
+        \pp{ x}{ X}
     }
     \mathrm{d}X+
     \lr{
-        \frac{\partial x}{\partial Y}
+        \pp{ x}{ Y}
     }
     \mathrm{d}Y、
     \mathrm{d}y=
     \lr{
-        \frac{\partial y}{\partial X}
+        \pp{ y}{ X}
     }
     \mathrm{d}X+
     \lr{
-        \frac{\partial y}{\partial Y}
+        \pp{ y}{ Y}
     }
     \mathrm{d}Y
 $$
@@ -254,22 +254,22 @@ $$
     \mathrm{d}Y\bm{u}_Y=
     \left[
         \lr{
-            \frac{\partial x}{\partial X}
+            \pp{ x}{ X}
         }
         \bm{u}_x+
         \lr{
-            \frac{\partial y}{\partial X}
+            \pp{ y}{ X}
         }
         \bm{u}_y
     \right]
     \mathrm{d}X+
     \left[
         \lr{
-            \frac{\partial x}{\partial Y}
+            \pp{ x}{ Y}
         }
         \bm{u}_x+
         \lr{
-            \frac{\partial y}{\partial Y}
+            \pp{ y}{ Y}
         }
         \bm{u}_y
     \right]
@@ -279,22 +279,22 @@ $$
     \mathrm{d}\bm{s}=
     \left[
         \lr{
-            \frac{\partial X}{\partial x}
+            \pp{ X}{ x}
         }
         \bm{u}_X+
         \lr{
-            \frac{\partial Y}{\partial x}
+            \pp{ Y}{ x}
         }
         \bm{u}_Y
     \right]
     \mathrm{d}x+
     \left[
         \lr{
-            \frac{\partial X}{\partial y}
+            \pp{ X}{ y}
         }
         \bm{u}_X+
         \lr{
-            \frac{\partial Y}{\partial y}
+            \pp{ Y}{ y}
         }
         \bm{u}_Y
     \right]
@@ -308,26 +308,26 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial x}{\partial X}
+    \pp{ x}{ X}
     \bm{u}_x+
-    \frac{\partial y}{\partial X}
+    \pp{ y}{ X}
     \bm{u}_y、
     \bm{u}_Y=
-    \frac{\partial x}{\partial Y}
+    \pp{ x}{ Y}
     \bm{u}_x+
-    \frac{\partial y}{\partial Y}
+    \pp{ y}{ Y}
     \bm{u}_y
 $$
 $$
     \bm{u}_x=
-    \frac{\partial X}{\partial x}
+    \pp{ X}{ x}
     \bm{u}_X+
-    \frac{\partial Y}{\partial x}
+    \pp{ Y}{ x}
     \bm{u}_Y、
     \bm{u}_y=
-    \frac{\partial X}{\partial y}
+    \pp{ X}{ y}
     \bm{u}_X+
-    \frac{\partial Y}{\partial y}
+    \pp{ Y}{ y}
     \bm{u}_Y
 $$
 
@@ -335,50 +335,50 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}=
-    \frac{\partial x}{\partial X}
-    \frac{\partial \bm{s}}{\partial x}+
-    \frac{\partial y}{\partial X}
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial x}{\partial X}
+    \pp{ \bm{s}}{ X}=
+    \pp{ x}{ X}
+    \pp{ \bm{s}}{ x}+
+    \pp{ y}{ X}
+    \pp{ \bm{s}}{ y}=
+    \pp{ x}{ X}
     \bm{u}_x+
-    \frac{\partial y}{\partial X}
+    \pp{ y}{ X}
     \bm{u}_y
 $$
 $$
     \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}=
-    \frac{\partial x}{\partial Y}
-    \frac{\partial \bm{s}}{\partial x}+
-    \frac{\partial y}{\partial Y}
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial x}{\partial Y}
+    \pp{ \bm{s}}{ Y}=
+    \pp{ x}{ Y}
+    \pp{ \bm{s}}{ x}+
+    \pp{ y}{ Y}
+    \pp{ \bm{s}}{ y}=
+    \pp{ x}{ Y}
     \bm{u}_x+
-    \frac{\partial y}{\partial Y}
+    \pp{ y}{ Y}
     \bm{u}_y
 $$
 $$
     \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
-    \frac{\partial X}{\partial x}
-    \frac{\partial \bm{s}}{\partial X}+
-    \frac{\partial Y}{\partial x}
-    \frac{\partial \bm{s}}{\partial Y}=
-    \frac{\partial X}{\partial x}
+    \pp{ \bm{s}}{ x}=
+    \pp{ X}{ x}
+    \pp{ \bm{s}}{ X}+
+    \pp{ Y}{ x}
+    \pp{ \bm{s}}{ Y}=
+    \pp{ X}{ x}
     \bm{u}_X+
-    \frac{\partial Y}{\partial x}
+    \pp{ Y}{ x}
     \bm{u}_Y
 $$
 $$
     \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
-    \frac{\partial X}{\partial y}
-    \frac{\partial \bm{s}}{\partial X}+
-    \frac{\partial Y}{\partial y}
-    \frac{\partial \bm{s}}{\partial Y}=
-    \frac{\partial X}{\partial y}
+    \pp{ \bm{s}}{ y}=
+    \pp{ X}{ y}
+    \pp{ \bm{s}}{ X}+
+    \pp{ Y}{ y}
+    \pp{ \bm{s}}{ Y}=
+    \pp{ X}{ y}
     \bm{u}_X+
-    \frac{\partial Y}{\partial y}
+    \pp{ Y}{ y}
     \bm{u}_Y
 $$
 
@@ -388,20 +388,20 @@ $$
     X = x+\frac{1}{\sqrt{2}}y、
     Y = \frac{1}{\sqrt{2}}y
     \rightarrow
-    \frac{\partial X}{\partial x}=1、
-    \frac{\partial Y}{\partial x}=0、
-    \frac{\partial X}{\partial y}=\frac{1}{\sqrt{2}}、
-    \frac{\partial Y}{\partial y}=\frac{1}{\sqrt{2}}
+    \pp{ X}{ x}=1、
+    \pp{ Y}{ x}=0、
+    \pp{ X}{ y}=\frac{1}{\sqrt{2}}、
+    \pp{ Y}{ y}=\frac{1}{\sqrt{2}}
 $$
 
 $$
     x = X - Y、
     y = \sqrt{2}Y
     \rightarrow
-    \frac{\partial x}{\partial X}=1、
-    \frac{\partial y}{\partial X}=0、
-    \frac{\partial x}{\partial Y}=-1、
-    \frac{\partial y}{\partial Y}=\sqrt{2}
+    \pp{ x}{ X}=1、
+    \pp{ y}{ X}=0、
+    \pp{ x}{ Y}=-1、
+    \pp{ y}{ Y}=\sqrt{2}
 $$
 
 となることから、以下のような式が得られる。
@@ -428,16 +428,16 @@ $$
 
 $$
     \bm{u}_X=
-    \frac{\partial \bm{s}}{\partial X}=
+    \pp{ \bm{s}}{ X}=
     \bm{e}_X、
     \bm{u}_Y=
-    \frac{\partial \bm{s}}{\partial Y}=
+    \pp{ \bm{s}}{ Y}=
     \bm{e}_Y、
     \bm{u}_x=
-    \frac{\partial \bm{s}}{\partial x}=
+    \pp{ \bm{s}}{ x}=
     \bm{e}_x、
     \bm{u}_y=
-    \frac{\partial \bm{s}}{\partial y}=
+    \pp{ \bm{s}}{ y}=
     \bm{e}_y
 $$
 
@@ -455,20 +455,20 @@ $$
     x=x'+\frac{a}{2c^2}w'^2、
     w=w'
     \rightarrow
-    \frac{\partial x}{\partial x'}=1、
-    \frac{\partial w}{\partial x'}=0、
-    \frac{\partial x}{\partial w'}=\frac{a}{c^2}w'、
-    \frac{\partial w}{\partial w'}=1
+    \pp{ x}{ x'}=1、
+    \pp{ w}{ x'}=0、
+    \pp{ x}{ w'}=\frac{a}{c^2}w'、
+    \pp{ w}{ w'}=1
 $$
 
 $$
     x'=x-\frac{a}{2c^2}w^2、
     w'=w
     \rightarrow
-    \frac{\partial x'}{\partial x}=1、
-    \frac{\partial w'}{\partial x}=0、
-    \frac{\partial x'}{\partial w}=-\frac{a}{c^2}w、
-    \frac{\partial w'}{\partial w}=1
+    \pp{ x'}{ x}=1、
+    \pp{ w'}{ x}=0、
+    \pp{ x'}{ w}=-\frac{a}{c^2}w、
+    \pp{ w'}{ w}=1
 $$
 
 を利用して求めてみると、以下のような関係式が得られる。
@@ -589,20 +589,20 @@ $$
 $$
     \mathrm{d}x'=
     \lr{
-        \frac{\partial x'}{\partial x}
+        \pp{ x'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial x'}{\partial w}
+        \pp{ x'}{ w}
     }
     \mathrm{d}w、
     \mathrm{d}w'=
     \lr{
-        \frac{\partial w'}{\partial x}
+        \pp{ w'}{ x}
     }
     \mathrm{d}x+
     \lr{
-        \frac{\partial w'}{\partial w}
+        \pp{ w'}{ w}
     }
     \mathrm{d}w
 $$
@@ -611,14 +611,14 @@ $$
 
 $$
     \bm{u}_x'=
-    \frac{\partial x}{\partial x'}
+    \pp{ x}{ x'}
     \bm{u}_x+
-    \frac{\partial w}{\partial x'}
+    \pp{ w}{ x'}
     \bm{u}_w、
     \bm{u}_w'=
-    \frac{\partial x}{\partial w'}
+    \pp{ x}{ w'}
     \bm{u}_x+
-    \frac{\partial w}{\partial w'}
+    \pp{ w}{ w'}
     \bm{u}_w
 $$
 

@@ -6,8 +6,8 @@
 $$
   \nabla\cdot\bm{D}=\rho、
   \nabla\cdot\bm{B}=0、
-  \nabla\times\bm{E}=-\frac{\partial \bm{B}}{\partial t}、
-  \nabla\times\bm{H}=\bm{i}+\frac{\partial \bm{D}}{\partial t}
+  \nabla\times\bm{E}=-\pp{ \bm{B}}{ t}、
+  \nabla\times\bm{H}=\bm{i}+\pp{ \bm{D}}{ t}
 $$
 
 ここで、$\bm{E}$ は電場、$\bm{B}$ は磁束密度、$\bm{D}$ は電束密度、$\bm{H}$ は磁場（磁界の強さ）、$\rho$ は電荷密度、$\bm{i}$ は電流密度である。真空になると $\bm{D}=\epsilon_0\bm{E}$、$\bm{B}=\mu_0\bm{H}$ となる。ここで $\epsilon_0$ は真空の誘電率、$\mu_0$ は真空の透磁率である。ここまでのことをふまえて、まず K' 系においてのMaxwell方程式を
@@ -16,28 +16,28 @@ $$
   \nabla'\cdot\bm{D}'=\rho'、
   \nabla'\cdot\bm{B}'=0、
   \nabla'\times\bm{E}'=
-  -\frac{\partial \bm{B}'}{\partial t'}、
+  -\pp{ \bm{B}'}{ t'}、
   \nabla'\times\bm{H}'=
-  \bm{i}'+\frac{\partial \bm{D}'}{\partial t'}
+  \bm{i}'+\pp{ \bm{D}'}{ t'}
 $$
 
 と相対性原理をもとに表せたとする。このうち、２番目と３番目の式は
 
 $$
-  \frac{\partial B_{x}'}{\partial x'}+
-  \frac{\partial B_{y}'}{\partial y'}+
-  \frac{\partial B_{z}'}{\partial z'}=0
+  \pp{ B_{x}'}{ x'}+
+  \pp{ B_{y}'}{ y'}+
+  \pp{ B_{z}'}{ z'}=0
 $$
 $$
-  \frac{\partial E_{z}'}{\partial y'}-
-  \frac{\partial E_{y}'}{\partial z'}=
-  -\frac{\partial B_{x}'}{\partial t'}、
-  \frac{\partial E_{x}'}{\partial z'}-
-  \frac{\partial E_{z}'}{\partial x'}=
-  -\frac{\partial B_{y}'}{\partial t'}、
-  \frac{\partial E_{y}'}{\partial x'}-
-  \frac{\partial E_{x}'}{\partial y'}=
-  -\frac{\partial B_{z}'}{\partial t'}
+  \pp{ E_{z}'}{ y'}-
+  \pp{ E_{y}'}{ z'}=
+  -\pp{ B_{x}'}{ t'}、
+  \pp{ E_{x}'}{ z'}-
+  \pp{ E_{z}'}{ x'}=
+  -\pp{ B_{y}'}{ t'}、
+  \pp{ E_{y}'}{ x'}-
+  \pp{ E_{x}'}{ y'}=
+  -\pp{ B_{z}'}{ t'}
 $$
 
 と各成分ごとに書き下せるが、ここでLotrentz変換
@@ -62,146 +62,146 @@ $$
 となることから、各偏微分は以下の通り変換される。
 
 $$
-    \frac{\partial}{\partial x'}=
-    \frac{\partial x}{\partial x'}
-    \frac{\partial}{\partial x}+
-    \frac{\partial w}{\partial x'}
-    \frac{\partial}{\partial w}=
-    \gamma\frac{\partial}{\partial x}+
+    \pp{}{ x'}=
+    \pp{ x}{ x'}
+    \pp{}{ x}+
+    \pp{ w}{ x'}
+    \pp{}{ w}=
+    \gamma\pp{}{ x}+
     \gamma\frac{V}{c^2}
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
 $$
 $$
-    \frac{\partial}{\partial y'}=
-    \frac{\partial y}{\partial y'}
-    \frac{\partial}{\partial y}=
-    \frac{\partial}{\partial y}
+    \pp{}{ y'}=
+    \pp{ y}{ y'}
+    \pp{}{ y}=
+    \pp{}{ y}
 $$
 $$
-    \frac{\partial}{\partial z'}=
-    \frac{\partial z}{\partial z'}
-    \frac{\partial}{\partial z}=
-    \frac{\partial}{\partial z}
+    \pp{}{ z'}=
+    \pp{ z}{ z'}
+    \pp{}{ z}=
+    \pp{}{ z}
 $$
 $$
-    \frac{\partial}{\partial t'}=
-    \frac{\partial w'}{\partial t'}
-    \frac{\partial}{\partial w'}=
+    \pp{}{ t'}=
+    \pp{ w'}{ t'}
+    \pp{}{ w'}=
     c
     \lr{
-        \frac{\partial x}{\partial w'}
-        \frac{\partial}{\partial x}+
-        \frac{\partial w}{\partial w'}
-        \frac{\partial}{\partial w}
+        \pp{ x}{ w'}
+        \pp{}{ x}+
+        \pp{ w}{ w'}
+        \pp{}{ w}
     }
     =
     \gamma V
-    \frac{\partial}{\partial x}+
+    \pp{}{ x}+
     \gamma
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
 $$
 
 となるため、これらを適用すると以下の形が得られる。
 
 $$
-    \gamma\frac{\partial B_x'}{\partial x}+
+    \gamma\pp{ B_x'}{ x}+
     \gamma\frac{V}{c^2}
-    \frac{\partial B_x'}{\partial t}+
-    \frac{\partial B_y'}{\partial y}+
-    \frac{\partial B_z'}{\partial z}=0
+    \pp{ B_x'}{ t}+
+    \pp{ B_y'}{ y}+
+    \pp{ B_z'}{ z}=0
 $$
 $$
-    \frac{\partial E_{z}'}{\partial y}-
-    \frac{\partial E_{y}'}{\partial z}=
+    \pp{ E_{z}'}{ y}-
+    \pp{ E_{y}'}{ z}=
     -\gamma V
-    \frac{\partial B_{x}'}{\partial x}-
+    \pp{ B_{x}'}{ x}-
     \gamma
-    \frac{\partial B_{x}'}{\partial t}
+    \pp{ B_{x}'}{ t}
 $$
 $$
-    \frac{\partial E_{x}'}{\partial z}-
-    \gamma\frac{\partial E_{z}'}{\partial x}-
+    \pp{ E_{x}'}{ z}-
+    \gamma\pp{ E_{z}'}{ x}-
     \gamma\frac{V}{c^2}
-    \frac{\partial E_{z}'}{\partial t}=
+    \pp{ E_{z}'}{ t}=
     -\gamma V
-    \frac{\partial B_{y}'}{\partial x}-
+    \pp{ B_{y}'}{ x}-
     \gamma
-    \frac{\partial B_{y}'}{\partial t}
+    \pp{ B_{y}'}{ t}
 $$
 $$
-    \gamma\frac{\partial E_{y}'}{\partial x}+
+    \gamma\pp{ E_{y}'}{ x}+
     \gamma\frac{V}{c^2}
-    \frac{\partial E_{y}'}{\partial t}-
-    \frac{\partial E_{x}'}{\partial y}=
+    \pp{ E_{y}'}{ t}-
+    \pp{ E_{x}'}{ y}=
     -\gamma V
-    \frac{\partial B_{z}'}{\partial x}-
+    \pp{ B_{z}'}{ x}-
     \gamma
-    \frac{\partial B_{z}'}{\partial t}
+    \pp{ B_{z}'}{ t}
 $$
 
 このうち、２番目の式を
 
 $$
     \gamma
-    \frac{\partial B_{x}'}{\partial t}=
+    \pp{ B_{x}'}{ t}=
     -\gamma V
-    \frac{\partial B_{x}'}{\partial x}-
-    \frac{\partial E_{z}'}{\partial y}+
-    \frac{\partial E_{y}'}{\partial z}
+    \pp{ B_{x}'}{ x}-
+    \pp{ E_{z}'}{ y}+
+    \pp{ E_{y}'}{ z}
 $$
 
 と置き換えて１番目の式に代入すると以下の式が得られる。
 
 $$
-    \frac{\partial B_x'}{\partial x}+
-    \frac{\partial}{\partial y}
+    \pp{ B_x'}{ x}+
+    \pp{}{ y}
     \gamma\lr{B_y'-\frac{V}{c^2}E_z'}+
-    \frac{\partial}{\partial z}
+    \pp{}{ z}
     \gamma\lr{B_z'+\frac{V}{c^2}E_y'}=0
 $$
 
 一方で、今度は１番目の式を
 
 $$
-    \gamma\frac{\partial B_x'}{\partial x}=-
+    \gamma\pp{ B_x'}{ x}=-
     \gamma\frac{V}{c^2}
-    \frac{\partial B_x'}{\partial t}-
-    \frac{\partial B_y'}{\partial y}-
-    \frac{\partial B_z'}{\partial z}
+    \pp{ B_x'}{ t}-
+    \pp{ B_y'}{ y}-
+    \pp{ B_z'}{ z}
 $$
 
 として二番目の式に代入すると以下の式が得られる。
 
 $$
-    \frac{\partial}{\partial y}\gamma(E_z'-VB_y')-
-    \frac{\partial}{\partial z}\gamma(E_y'+VB_z')=
-    -\frac{\partial B_x'}{\partial t}
+    \pp{}{ y}\gamma(E_z'-VB_y')-
+    \pp{}{ z}\gamma(E_y'+VB_z')=
+    -\pp{ B_x'}{ t}
 $$
 
 残りの３，４番目の式も整理することで以下の通りとなる。
 
 $$
-    \frac{\partial E_{x}'}{\partial z}-
+    \pp{ E_{x}'}{ z}-
     \gamma
-    \frac{\partial}{\partial x}
+    \pp{}{ x}
     \lr{
         E_{z}'-VB_{y}'
     }=
     -
     \gamma
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
     \lr{
         B_{y}'-\frac{V}{c^2}E_{z}'
     }
     
 $$
 $$
-    \frac{\partial}{\partial x}
+    \pp{}{ x}
     \gamma(E_{y}'+VB_{z}')-
-    \frac{\partial E_{x}'}{\partial y}=
+    \pp{ E_{x}'}{ y}=
     -
     \gamma
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
     \lr{
         B_{z}'+\frac{V}{c^2}E_{y}'
     }
@@ -210,38 +210,38 @@ $$
 ここまでの式をまとめると、以下の通りとなる。
 
 $$
-    \frac{\partial B_x'}{\partial x}+
-    \frac{\partial}{\partial y}
+    \pp{ B_x'}{ x}+
+    \pp{}{ y}
     \gamma\lr{B_y'-\frac{V}{c^2}E_z'}+
-    \frac{\partial}{\partial z}
+    \pp{}{ z}
     \gamma\lr{B_z'+\frac{V}{c^2}E_y'}=0
 $$
 $$
-    \frac{\partial}{\partial y}\gamma(E_z'-VB_y')-
-    \frac{\partial}{\partial z}\gamma(E_y'+VB_z')=
-    -\frac{\partial B_x'}{\partial t}
+    \pp{}{ y}\gamma(E_z'-VB_y')-
+    \pp{}{ z}\gamma(E_y'+VB_z')=
+    -\pp{ B_x'}{ t}
 $$
 $$
-    \frac{\partial E_{x}'}{\partial z}-
+    \pp{ E_{x}'}{ z}-
     \gamma
-    \frac{\partial}{\partial x}
+    \pp{}{ x}
     \lr{
         E_{z}'-VB_{y}'
     }=
     -
     \gamma
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
     \lr{
         B_{y}'-\frac{V}{c^2}E_{z}'
     }
 $$
 $$
-    \frac{\partial}{\partial x}
+    \pp{}{ x}
     \gamma(E_{y}'+VB_{z}')-
-    \frac{\partial E_{x}'}{\partial y}=
+    \pp{ E_{x}'}{ y}=
     -
     \gamma
-    \frac{\partial}{\partial t}
+    \pp{}{ t}
     \lr{
         B_{z}'+\frac{V}{c^2}E_{y}'
     }
@@ -304,25 +304,25 @@ $$
 これらの式を用いると、Maxwell方程式の１番目の式と4番目の式が
 
 $$
-    \frac{\partial D_x'}{\partial x'}+
-    \frac{\partial D_y'}{\partial y'}+
-    \frac{\partial D_z'}{\partial z'}=
+    \pp{ D_x'}{ x'}+
+    \pp{ D_y'}{ y'}+
+    \pp{ D_z'}{ z'}=
     \rho'
 $$
 
 $$
-    \frac{\partial H_z'}{\partial y'}-
-    \frac{\partial H_y'}{\partial z'}=
+    \pp{ H_z'}{ y'}-
+    \pp{ H_y'}{ z'}=
     i_x'+
-    \frac{\partial D_x'}{\partial t'}、
-    \frac{\partial H_x'}{\partial z'}-
-    \frac{\partial H_z'}{\partial x'}=
+    \pp{ D_x'}{ t'}、
+    \pp{ H_x'}{ z'}-
+    \pp{ H_z'}{ x'}=
     i_y'+
-    \frac{\partial D_y'}{\partial t'}、
-    \frac{\partial H_y'}{\partial x'}-
-    \frac{\partial H_x'}{\partial y'}=
+    \pp{ D_y'}{ t'}、
+    \pp{ H_y'}{ x'}-
+    \pp{ H_x'}{ y'}=
     i_z'+
-    \frac{\partial D_z'}{\partial t'}
+    \pp{ D_z'}{ t'}
 $$
 
 となるため、電荷密度と電流は以下の通りとなる。
@@ -331,16 +331,16 @@ $$
     \rho'=
     \gamma
     \lr{
-        \frac{\partial D_x}{\partial x}+
-        \frac{\partial D_y}{\partial y}+
-        \frac{\partial D_z}{\partial z}
+        \pp{ D_x}{ x}+
+        \pp{ D_y}{ y}+
+        \pp{ D_z}{ z}
     }+
     \gamma\frac{V}{c^2}
     \left[
-        \frac{\partial D_x}{\partial t}-
+        \pp{ D_x}{ t}-
         \lr{
-            \frac{\partial H_z}{\partial y}-
-            \frac{\partial H_y}{\partial z}
+            \pp{ H_z}{ y}-
+            \pp{ H_y}{ z}
         }
     \right]=
     \gamma
@@ -353,16 +353,16 @@ $$
     \gamma
     \left[
         \lr{
-            \frac{\partial H_z}{\partial y}-
-            \frac{\partial H_y}{\partial z}
+            \pp{ H_z}{ y}-
+            \pp{ H_y}{ z}
         }-
-        \frac{\partial D_x}{\partial t}
+        \pp{ D_x}{ t}
     \right]-
     \gamma V
     \lr{
-        \frac{\partial D_x}{\partial x}+
-        \frac{\partial D_y}{\partial y}+
-        \frac{\partial D_z}{\partial z}
+        \pp{ D_x}{ x}+
+        \pp{ D_y}{ y}+
+        \pp{ D_z}{ z}
     }=
     \gamma
     \lr{
@@ -372,19 +372,19 @@ $$
 $$
     i_y'=
     \lr{
-        \frac{\partial H_x}{\partial z}-
-        \frac{\partial H_z}{\partial x}
+        \pp{ H_x}{ z}-
+        \pp{ H_z}{ x}
     }-
-    \frac{\partial D_y}{\partial t}=
+    \pp{ D_y}{ t}=
     i_y
 $$
 $$
     i_z'=
     \lr{
-        \frac{\partial H_y}{\partial x}-
-        \frac{\partial H_x}{\partial y}
+        \pp{ H_y}{ x}-
+        \pp{ H_x}{ y}
     }-
-    \frac{\partial D_z}{\partial t}=
+    \pp{ D_z}{ t}=
     i_z
 $$
 

@@ -95,13 +95,13 @@ $$
     \frac{P}{T}\mathrm{d}V
     \rightarrow
     \lr{
-        \frac{\partial S}
-        {\partial U}
+        \pp{ S}
+        { U}
     }_V=
     \frac{1}{T}、
     \lr{
-        \frac{\partial S}
-        {\partial V}
+        \pp{ S}
+        { V}
     }_U=
     \frac{P}{T}
 $$
@@ -111,13 +111,13 @@ $$
     \frac{P_b}{T_b}\mathrm{d}V_b
     \rightarrow
     \lr{
-        \frac{\partial S_b}
-        {\partial U_b}
+        \pp{ S_b}
+        { U_b}
     }_{V_b}=
     \frac{1}{T_b}、
     \lr{
-        \frac{\partial S_b}
-        {\partial V_b}
+        \pp{ S_b}
+        { V_b}
     }_{U_b}=
     \frac{P_b}{T_b}
 $$
@@ -160,7 +160,7 @@ $$
 $$
     S_b(U_t-U)\simeq S_b(U_t)-
     \lr{
-        \frac{\partial S_b}{\partial U_b}    
+        \pp{ S_b}{ U_b}    
     }_V U=
     S_b(U_t)-\frac{U}{T_b}
 $$
@@ -211,17 +211,17 @@ $$
 $$
     S=-
     \lr{
-        \frac{\partial F}
-        {\partial T}
+        \pp{ F}
+        { T}
     }_{V}、
     P=-
     \lr{
-        \frac{\partial F}
-        {\partial V}
+        \pp{ F}
+        { V}
     }_{T}、
     U=F+TS=
     -T^2\left[
-        \frac{\partial}{\partial T}
+        \pp{}{ T}
         \lr{
             \frac{F}{T}
         }
@@ -232,7 +232,7 @@ $$
     \braket{S}=
     -\frac{1}{T}
     \lr{
-        \frac{\partial}{\partial\beta}
+        \pp{}{\beta}
         \ln Z
     }_V-
     \frac{\braket{F}}{T}=
@@ -243,11 +243,11 @@ $$
     \braket{P}=
     -\frac{1}{\beta}
     \lr{
-        \frac{\partial}{\partial V}\ln Z
+        \pp{}{ V}\ln Z
     }_T、
     \braket{U}=
     -\lr{
-        \frac{\partial}{\partial\beta}
+        \pp{}{\beta}
         \ln Z
     }_V
 $$
@@ -267,8 +267,8 @@ $$
     \mathcal{W}=
     \frac{1}{\beta}
     \lr{
-    \frac{\partial \mathcal{W}}
-    {\partial U}
+    \pp{ \mathcal{W}}
+    { U}
     }_{V}
 $$
 というような関係が成り立つことを利用して、
@@ -279,8 +279,8 @@ $$
     \mathrm{d}U=1、
     \mathcal{D}(U)=
     \lr{
-    \frac{\partial \mathcal{W}}
-    {\partial U}
+    \pp{ \mathcal{W}}
+    { U}
     }_{V}
 $$
 というように書ける。ただ、一般的にはハミルトニアンにより
