@@ -309,7 +309,7 @@ $$
     \gamma
     \LR{
         E_y+
-        (v_zB_x-v_zB_z)
+        (v_zB_x-v_xB_z)
     }
 $$
 $$
