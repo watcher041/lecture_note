@@ -300,6 +300,11 @@ $$
     q'\lr{
         E_y'+
         v_z'B_x'-v_x'B_z'
+    }=
+    \frac{q'}{\gamma\lr{1-\frac{v_xV}{c^2}}}
+    \LR{
+        E_y+
+        (v_zB_x-v_zB_z)
     }
 $$
 $$
@@ -307,6 +312,11 @@ $$
     q'\lr{
         E_z'+
         v_x'B_y'-v_y'B_x'
+    }=
+    \frac{q'}{\gamma\lr{1-\frac{v_xV}{c^2}}}
+    \LR{
+        E_z+
+        (v_xB_y-v_yB_x)
     }
 $$
 
