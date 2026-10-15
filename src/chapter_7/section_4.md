@@ -273,22 +273,25 @@ $$
     B_{z}'=\gamma\lr{B_{z}-\frac{V}{c^2}E_{y}}
 $$
 
-これを踏まえて、次に K' 系において荷電粒子（電荷 $q'$）に電場 $\bm{E}'$ や磁場　$\bm{B}'$ が働いている状況を考えてみると、まずLorentz力は以下の通りに書ける。
+これを踏まえて、次に K' 系において荷電粒子（電荷 $q'$）に電場 $\bm{E}'$ や磁場　$\bm{B}'$ が働いている状況を考えてみると、まず相対論的なLorentz力は以下の通りに書ける。
 
 $$
-    \bm{F}'=
-    q'(\bm{E}'+\bm{v}'\times\bm{B}')
+    \bm{f}'=
+    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    (\bm{E}'+\bm{v}'\times\bm{B}')
 $$
 
 これを各成分ごとに展開すると、
 
 $$
-    F_x'=
-    q'\lr{
+    f_x'=
+    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \lr{
         E_x'+
         v_y'B_z'-v_z'B_y'
     }=
-    \frac{q'}{1-\frac{v_xV}{c^2}}
+    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
+    \gamma
     \LR{
         (E_x+v_yB_z-v_zB_y)-
         \frac{V}{c^2}(\bm{v}\cdot\bm{E})
@@ -296,31 +299,44 @@ $$
     
 $$
 $$
-    F_y'=
-    q'\lr{
+    f_y'=
+    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \lr{
         E_y'+
         v_z'B_x'-v_x'B_z'
     }=
-    \frac{q'}{\gamma\lr{1-\frac{v_xV}{c^2}}}
+    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
+    \gamma
     \LR{
         E_y+
         (v_zB_x-v_zB_z)
     }
 $$
 $$
-    F_z'=
-    q'\lr{
+    f_z'=
+    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
+    \lr{
         E_z'+
         v_x'B_y'-v_y'B_x'
     }=
-    \frac{q'}{\gamma\lr{1-\frac{v_xV}{c^2}}}
+    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
+    \gamma
     \LR{
         E_z+
         (v_xB_y-v_yB_x)
     }
 $$
 
+となるが、相対論的な力の変換式が
 
+$$
+    f_x'=\gamma(f_x-\beta f_w)、
+    f_y'=f_y、
+    f_z'=f_z、
+    f_w'=\gamma(f_w-\beta f_x)
+$$
+
+というようになるため、比較することで電荷に関しては $q'=q$ と不変になることが分かる。
 
 
 
