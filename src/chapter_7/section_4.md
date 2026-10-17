@@ -417,10 +417,30 @@ $$
     \end{pmatrix}
 $$
 $$
-    \bm{D}=\bm{\epsilon}\bm{E}、
+    \bm{D}=\bm{\epsilon}\bm{E}=
+      \begin{pmatrix}
+        \epsilon_{11} & \epsilon_{12} & \epsilon_{13}\\
+        \epsilon_{21} & \epsilon_{22} & \epsilon_{23}\\
+        \epsilon_{31} & \epsilon_{32} & \epsilon_{33}
+    \end{pmatrix}
+    \begin{pmatrix}
+        E_x\\
+        E_y\\
+        E_z
+    \end{pmatrix}
 $$
 $$
-    \bm{B}=\bm{\mu}\bm{H}
+    \bm{B}=\bm{\mu}\bm{H}=
+    \begin{pmatrix}
+        \mu_{11} & \mu_{12} & \mu_{13}\\
+        \mu_{21} & \mu_{22} & \mu_{23}\\
+        \mu_{31} & \mu_{32} & \mu_{33}
+    \end{pmatrix}
+    \begin{pmatrix}
+        H_x\\
+        H_y\\
+        H_z
+    \end{pmatrix}
 $$
 
 
