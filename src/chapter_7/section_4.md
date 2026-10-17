@@ -273,86 +273,35 @@ $$
     B_{z}'=\gamma\lr{B_{z}-\frac{V}{c^2}E_{y}}
 $$
 
-これを踏まえて、次に K' 系において荷電粒子（電荷 $q'$）に電場 $\bm{E}'$ や磁場　$\bm{B}'$ が働いている状況を考えてみると、まず相対論的なLorentz力は以下の通りに書ける。
+ここで光速が真空中のものであることから
 
 $$
-    \bm{f}'=
-    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    (\bm{E}'+\bm{v}'\times\bm{B}')
+    c=\frac{1}{\sqrt{\epsilon_0\mu_0}}
 $$
 
-これを各成分ごとに展開すると、
+であるから、**真空中である場合**上記の変換式は
 
 $$
-    f_x'=
-    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \lr{
-        E_x'+
-        v_y'B_z'-v_z'B_y'
-    }=
-    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
-    \gamma
-    \LR{
-        (E_x+v_yB_z-v_zB_y)-
-        \frac{V}{c^2}(\bm{v}\cdot\bm{E})
-    }
-    
-$$
-$$
-    f_y'=
-    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \lr{
-        E_y'+
-        v_z'B_x'-v_x'B_z'
-    }=
-    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
-    \gamma
-    \LR{
-        E_y+
-        (v_zB_x-v_xB_z)
-    }
-$$
-$$
-    f_z'=
-    \frac{q'}{\sqrt{1-\frac{\bm{v}'^2}{c^2}}}
-    \lr{
-        E_z'+
-        v_x'B_y'-v_y'B_x'
-    }=
-    \frac{q'}{\sqrt{1-\frac{\bm{v^2}}{c^2}}}
-    \gamma
-    \LR{
-        E_z+
-        (v_xB_y-v_yB_x)
-    }
+    \bm{D}'=\epsilon_0\bm{E}'、
+    \bm{B}'=\mu_0\bm{H}'、
+    \bm{D}=\epsilon_0\bm{E}、
+    \bm{B}=\mu_0\bm{H}
 $$
 
-となるが、相対論的な力の変換式が
+の関係式から以下の通りとなる。
 
 $$
-    f_x'=\gamma(f_x-\beta f_w)、
-    f_y'=f_y、
-    f_z'=f_z、
-    f_w'=\gamma(f_w-\beta f_x)
+    D_{x}'=D_{x}、
+    D_{y}'=\gamma\lr{D_{y}-\frac{V}{c^2}H_{z}}、
+    D_{z}'=\gamma\lr{D_{z}+\frac{V}{c^2}H_{y}}
+$$
+$$
+    H_{x}'=H_{x}、
+    H_{y}'=\gamma\lr{H_{y}+VD_{z}}、
+    H_{z}'=\gamma\lr{H_{z}-VD_{y}}
 $$
 
-というようになるため、比較することで電荷に関しては $q'=q$ と不変になることが分かる。
-
-
-空気などの媒質がある場合も考える（Minkofskyの構成方程式を考慮する）
-
-
-
-
-
-
-
-
-
-
-
-
-Maxwell方程式の1番目の式において
+これらの式を用いると、Maxwell方程式の１番目の式と4番目の式が
 
 $$
     \pp{D_x'}{x'}+
@@ -361,7 +310,22 @@ $$
     \rho'
 $$
 
-となっていたが、
+$$
+    \pp{H_z'}{y'}-
+    \pp{H_y'}{z'}=
+    i_x'+
+    \pp{D_x'}{t'}、
+    \pp{H_x'}{z'}-
+    \pp{H_z'}{x'}=
+    i_y'+
+    \pp{D_y'}{t'}、
+    \pp{H_y'}{x'}-
+    \pp{H_x'}{y'}=
+    i_z'+
+    \pp{D_z'}{t'}
+$$
+
+となるため、電荷密度と電流は以下の通りとなる。
 
 $$
     \rho'=
@@ -383,23 +347,6 @@ $$
     \lr{
         \rho-\frac{V}{c^2}i_x
     }
-$$
-
-
-
-$$
-    \pp{H_z'}{y'}-
-    \pp{H_y'}{z'}=
-    i_x'+
-    \pp{D_x'}{t'}、
-    \pp{H_x'}{z'}-
-    \pp{H_z'}{x'}=
-    i_y'+
-    \pp{D_y'}{t'}、
-    \pp{H_y'}{x'}-
-    \pp{H_x'}{y'}=
-    i_z'+
-    \pp{D_z'}{t'}
 $$
 $$
     i_x'=
@@ -441,8 +388,40 @@ $$
     i_z
 $$
 
+一方で、**観測者に対して静止している媒質中**では
 
-
+$$
+    \bm{D}'=\bm{\epsilon}\bm{E}'=
+    \begin{pmatrix}
+        \epsilon_{11} & \epsilon_{12} & \epsilon_{13}\\
+        \epsilon_{21} & \epsilon_{22} & \epsilon_{23}\\
+        \epsilon_{31} & \epsilon_{32} & \epsilon_{33}
+    \end{pmatrix}
+    \begin{pmatrix}
+        E_x'\\
+        E_y'\\
+        E_z'
+    \end{pmatrix}
+$$
+$$
+    \bm{B}'=\bm{\mu}\bm{H}'=
+    \begin{pmatrix}
+        \mu_{11} & \mu_{12} & \mu_{13}\\
+        \mu_{21} & \mu_{22} & \mu_{23}\\
+        \mu_{31} & \mu_{32} & \mu_{33}
+    \end{pmatrix}
+    \begin{pmatrix}
+        H_x'\\
+        H_y'\\
+        H_z'
+    \end{pmatrix}
+$$
+$$
+    \bm{D}=\bm{\epsilon}\bm{E}、
+$$
+$$
+    \bm{B}=\bm{\mu}\bm{H}
+$$
 
 
 
