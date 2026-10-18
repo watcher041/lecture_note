@@ -203,135 +203,7 @@ $$
     x'=x'(x,w)、w'=w'(x,w)
 $$
 
-というように変換式を満たしていることから、微小変化が
-
-$$
-    \mathrm{d}x=
-    \lr{
-        \pp{x}{x'}
-    }
-    \mathrm{d}x'+
-    \lr{
-        \pp{x}{w'}
-    }
-    \mathrm{d}w'、
-    \mathrm{d}w=
-    \lr{
-        \pp{w}{x'}
-    }
-    \mathrm{d}x'+
-    \lr{
-        \pp{w}{w'}
-    }
-    \mathrm{d}w'
-$$
-$$
-    \mathrm{d}x'=
-    \lr{
-        \pp{x'}{x}
-    }
-    \mathrm{d}x+
-    \lr{
-        \pp{x'}{w}
-    }
-    \mathrm{d}w、
-    \mathrm{d}w'=
-    \lr{
-        \pp{w'}{x}
-    }
-    \mathrm{d}x+
-    \lr{
-        \pp{w'}{w}
-    }
-    \mathrm{d}w
-$$
-
-であるため、$\mathrm{d}\bm{s}$ の関係式に代入すると
-
-$$
-    \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \LR{
-        \lr{
-            \pp{x'}{x}
-        }
-        \bm{u}_x'+
-        \lr{
-            \pp{w'}{x}
-        }
-        \bm{u}_w'
-    }
-    \mathrm{d}x+
-    \LR{
-        \lr{
-            \pp{x'}{w}
-        }
-        \bm{u}_x'+
-        \lr{
-            \pp{w'}{w}
-        }
-        \bm{u}_w'
-    }
-    \mathrm{d}w
-$$
-$$
-    \mathrm{d}\bm{s}=
-    \LR{
-        \lr{
-            \pp{x}{x'}
-        }
-        \bm{u}_x+
-        \lr{
-            \pp{w}{x'}
-        }
-        \bm{u}_w
-    }
-    \mathrm{d}x'+
-    \LR{
-        \lr{
-            \pp{x}{w'}
-        }
-        \bm{u}_x+
-        \lr{
-            \pp{w}{w'}
-        }
-        \bm{u}_w
-    }
-    \mathrm{d}w'=
-    \mathrm{d}x'\bm{u}_x'+
-    \mathrm{d}w'\bm{u}_w'
-$$
-
-
-となるため、比較すると以下の関係式が得られる。
-
-$$
-    \bm{u}_x=
-    \pp{x'}{x}
-    \bm{u}_x'+
-    \pp{w'}{x}
-    \bm{u}_w'、
-    \bm{u}_w=
-    \pp{x'}{w}
-    \bm{u}_x'+
-    \pp{w'}{w}
-    \bm{u}_w'
-$$
-$$
-    \bm{u}_x'=
-    \pp{x}{x'}
-    \bm{u}_x+
-    \pp{w}{x'}
-    \bm{u}_w、
-    \bm{u}_w'=
-    \pp{x}{w'}
-    \bm{u}_x+
-    \pp{w}{w'}
-    \bm{u}_w
-$$
-
-この関係式が正しいかは、次のように展開してみることで確認できる。
+というように変換式を満たしていることから、基底ベクトル同士の関係は以下の通りとなる。
 
 $$
     \bm{u}_x=
@@ -444,7 +316,7 @@ $$
 といように基底ベクトルと基本ベクトルが同じものとなる。
  -->
 
-ここでまでのことを利用すると、等加速度系における基底ベクトルを求めてみると、
+このことから、等加速度系における基底ベクトルは、
 
 $$
     x=x'+\frac{a}{2c^2}w'^2、
@@ -480,7 +352,15 @@ $$
     \bm{u}_x+\bm{u}_w
 $$
 
-そして、これから変換後の内積を求めると
+また、変換前の座標系が直交座標系であることから
+
+$$
+    \bm{u}_x=\bm{e}_x、\bm{u}_w=\bm{e}_w、
+    \bm{u}_x\cdot\bm{u}_x=1、
+    \bm{u}_x\cdot\bm{u}_w=0
+$$
+
+とおいてみると、変換後の内積を求めると
 
 $$
     \bm{u}_{x'}\cdot\bm{u}_{x'}=1、
