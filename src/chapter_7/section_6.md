@@ -147,7 +147,7 @@ $$
 というようになっているものとする。ところが、ここで変換後の基本ベクトルが各地点で同じではないため、一概にこのような形で書けないという問題がでてきてしまう。そのため、各地点ごとに基本ベクトルがどうなっているかを見る必要が出てくる。そこで $\bm{s}$ を一般に
 
 $$
-    \bm{s}=\bm{s}(X,Y)=\bm{s}(x,y)
+    \bm{s}=\bm{s}(x,w)=\bm{s}(x',w')
 $$
 
 というように変換されるものとして、この微小変化をとることで
@@ -155,234 +155,234 @@ $$
 $$
     \mathrm{d}\bm{s}=
     \lr{
-        \pp{\bm{s}}{X}
-    }
-    \mathrm{d}X+
-    \lr{
-        \pp{\bm{s}}{Y}
-    }
-    \mathrm{d}Y=
-    \lr{
         \pp{\bm{s}}{x}
     }
     \mathrm{d}x+
     \lr{
-        \pp{\bm{s}}{y}
+        \pp{\bm{s}}{w}
     }
-    \mathrm{d}y
+    \mathrm{d}w=
+    \lr{
+        \pp{\bm{s}}{x'}
+    }
+    \mathrm{d}x'+
+    \lr{
+        \pp{\bm{s}}{w'}
+    }
+    \mathrm{d}w'
 $$
 
 と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
 
 $$
-    \bm{u}_X=
-    \pp{\bm{s}}{X}、
-    \bm{u}_Y=
-    \pp{\bm{s}}{Y}、
     \bm{u}_x=
     \pp{\bm{s}}{x}、
-    \bm{u}_y=
-    \pp{\bm{s}}{y}
+    \bm{u}_w=
+    \pp{\bm{s}}{w}、
+    \bm{u}_x'=
+    \pp{\bm{s}}{x'}、
+    \bm{u}_w'=
+    \pp{\bm{s}}{w'}
 $$
 
 というように置くことで以下の形になることが分かる。
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}X\bm{u}_X+
-    \mathrm{d}Y\bm{u}_Y=
     \mathrm{d}x\bm{u}_x+
-    \mathrm{d}y\bm{u}_y
+    \mathrm{d}w\bm{u}_w=
+    \mathrm{d}x'\bm{u}_x'+
+    \mathrm{d}w'\bm{u}_w'
 $$
 
 また、座標系間で変数が
 
 $$
-    X=X(x,y)、Y=Y(x,y)
+    x=x(x',w')、w=w(x',w')
     \leftrightarrow
-    x=x(X,Y)、y=y(X,Y)
+    x'=x'(x,w)、w'=w'(x,w)
 $$
 
 というように変換式を満たしていることから、微小変化が
 
 $$
-    \mathrm{d}X=
-    \lr{
-        \pp{X}{x}
-    }
-    \mathrm{d}x+
-    \lr{
-        \pp{X}{y}
-    }
-    \mathrm{d}y、
-    \mathrm{d}Y=
-    \lr{
-        \pp{Y}{x}
-    }
-    \mathrm{d}x+
-    \lr{
-        \pp{Y}{y}
-    }
-    \mathrm{d}y
-$$
-$$
     \mathrm{d}x=
     \lr{
-        \pp{x}{X}
+        \pp{x}{x'}
     }
-    \mathrm{d}X+
+    \mathrm{d}x'+
     \lr{
-        \pp{x}{Y}
+        \pp{x}{w'}
     }
-    \mathrm{d}Y、
-    \mathrm{d}y=
+    \mathrm{d}w'、
+    \mathrm{d}w=
     \lr{
-        \pp{y}{X}
+        \pp{w}{x'}
     }
-    \mathrm{d}X+
+    \mathrm{d}x'+
     \lr{
-        \pp{y}{Y}
+        \pp{w}{w'}
     }
-    \mathrm{d}Y
+    \mathrm{d}w'
+$$
+$$
+    \mathrm{d}x'=
+    \lr{
+        \pp{x'}{x}
+    }
+    \mathrm{d}x+
+    \lr{
+        \pp{x'}{w}
+    }
+    \mathrm{d}w、
+    \mathrm{d}w'=
+    \lr{
+        \pp{w'}{x}
+    }
+    \mathrm{d}x+
+    \lr{
+        \pp{w'}{w}
+    }
+    \mathrm{d}w
 $$
 
 であるため、$\mathrm{d}\bm{s}$ の関係式に代入すると
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}X\bm{u}_X+
-    \mathrm{d}Y\bm{u}_Y=
+    \mathrm{d}x\bm{u}_x+
+    \mathrm{d}w\bm{u}_w=
     \LR{
         \lr{
-            \pp{x}{X}
+            \pp{x'}{x}
         }
-        \bm{u}_x+
+        \bm{u}_x'+
         \lr{
-            \pp{y}{X}
+            \pp{w'}{x}
         }
-        \bm{u}_y
+        \bm{u}_w'
     }
-    \mathrm{d}X+
+    \mathrm{d}x+
     \LR{
         \lr{
-            \pp{x}{Y}
+            \pp{x'}{w}
         }
-        \bm{u}_x+
+        \bm{u}_x'+
         \lr{
-            \pp{y}{Y}
+            \pp{w'}{w}
         }
-        \bm{u}_y
+        \bm{u}_w'
     }
-    \mathrm{d}Y
+    \mathrm{d}w
 $$
 $$
     \mathrm{d}\bm{s}=
     \LR{
         \lr{
-            \pp{X}{x}
+            \pp{x}{x'}
         }
-        \bm{u}_X+
+        \bm{u}_x+
         \lr{
-            \pp{Y}{x}
+            \pp{w}{x'}
         }
-        \bm{u}_Y
+        \bm{u}_w
     }
-    \mathrm{d}x+
+    \mathrm{d}x'+
     \LR{
         \lr{
-            \pp{X}{y}
+            \pp{x}{w'}
         }
-        \bm{u}_X+
+        \bm{u}_x+
         \lr{
-            \pp{Y}{y}
+            \pp{w}{w'}
         }
-        \bm{u}_Y
+        \bm{u}_w
     }
-    \mathrm{d}y=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}y\bm{u}_y
+    \mathrm{d}w'=
+    \mathrm{d}x'\bm{u}_x'+
+    \mathrm{d}w'\bm{u}_w'
 $$
 
 
 となるため、比較すると以下の関係式が得られる。
 
 $$
-    \bm{u}_X=
-    \pp{x}{X}
-    \bm{u}_x+
-    \pp{y}{X}
-    \bm{u}_y、
-    \bm{u}_Y=
-    \pp{x}{Y}
-    \bm{u}_x+
-    \pp{y}{Y}
-    \bm{u}_y
-$$
-$$
     \bm{u}_x=
-    \pp{X}{x}
-    \bm{u}_X+
-    \pp{Y}{x}
-    \bm{u}_Y、
-    \bm{u}_y=
-    \pp{X}{y}
-    \bm{u}_X+
-    \pp{Y}{y}
-    \bm{u}_Y
+    \pp{x'}{x}
+    \bm{u}_x'+
+    \pp{w'}{x}
+    \bm{u}_w'、
+    \bm{u}_w=
+    \pp{x'}{w}
+    \bm{u}_x'+
+    \pp{w'}{w}
+    \bm{u}_w'
+$$
+$$
+    \bm{u}_x'=
+    \pp{x}{x'}
+    \bm{u}_x+
+    \pp{w}{x'}
+    \bm{u}_w、
+    \bm{u}_w'=
+    \pp{x}{w'}
+    \bm{u}_x+
+    \pp{w}{w'}
+    \bm{u}_w
 $$
 
 この関係式が正しいかは、次のように展開してみることで確認できる。
 
 $$
-    \bm{u}_X=
-    \pp{\bm{s}}{X}=
-    \pp{x}{X}
-    \pp{\bm{s}}{x}+
-    \pp{y}{X}
-    \pp{\bm{s}}{y}=
-    \pp{x}{X}
-    \bm{u}_x+
-    \pp{y}{X}
-    \bm{u}_y
-$$
-$$
-    \bm{u}_Y=
-    \pp{\bm{s}}{Y}=
-    \pp{x}{Y}
-    \pp{\bm{s}}{x}+
-    \pp{y}{Y}
-    \pp{\bm{s}}{y}=
-    \pp{x}{Y}
-    \bm{u}_x+
-    \pp{y}{Y}
-    \bm{u}_y
-$$
-$$
     \bm{u}_x=
     \pp{\bm{s}}{x}=
-    \pp{X}{x}
-    \pp{\bm{s}}{X}+
-    \pp{Y}{x}
-    \pp{\bm{s}}{Y}=
-    \pp{X}{x}
-    \bm{u}_X+
-    \pp{Y}{x}
-    \bm{u}_Y
+    \pp{x'}{x}
+    \pp{\bm{s}}{x'}+
+    \pp{w'}{x}
+    \pp{\bm{s}}{w'}=
+    \pp{x'}{x}
+    \bm{u}_x'+
+    \pp{w'}{x}
+    \bm{u}_w'
 $$
 $$
-    \bm{u}_y=
-    \pp{\bm{s}}{y}=
-    \pp{X}{y}
-    \pp{\bm{s}}{X}+
-    \pp{Y}{y}
-    \pp{\bm{s}}{Y}=
-    \pp{X}{y}
-    \bm{u}_X+
-    \pp{Y}{y}
-    \bm{u}_Y
+    \bm{u}_w=
+    \pp{\bm{s}}{w}=
+    \pp{x'}{w}
+    \pp{\bm{s}}{x'}+
+    \pp{w'}{w}
+    \pp{\bm{s}}{w'}=
+    \pp{x'}{w}
+    \bm{u}_x'+
+    \pp{w'}{w}
+    \bm{u}_w
+$$
+$$
+    \bm{u}_x'=
+    \pp{\bm{s}}{x'}=
+    \pp{x}{x'}
+    \pp{\bm{s}}{x}+
+    \pp{w}{x'}
+    \pp{\bm{s}}{w}=
+    \pp{x}{x'}
+    \bm{u}_x+
+    \pp{w}{x'}
+    \bm{u}_w
+$$
+$$
+    \bm{u}_w'=
+    \pp{\bm{s}}{w'}=
+    \pp{x}{w'}
+    \pp{\bm{s}}{x}+
+    \pp{w}{w'}
+    \pp{\bm{s}}{w}=
+    \pp{x}{w'}
+    \bm{u}_x+
+    \pp{w}{w'}
+    \bm{u}_w
 $$
 
-これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
+<!-- これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
 
 $$
     X = x+\frac{1}{\sqrt{2}}y、
@@ -441,15 +441,10 @@ $$
     \bm{e}_y
 $$
 
-といように基底ベクトルと基本ベクトルが同じものとなる。一方で、定加速度系については、変換後については基本ベクトルが各地点で同じにならないことから、以下の変換前の式しか成り立たないことになる。
+といように基底ベクトルと基本ベクトルが同じものとなる。
+ -->
 
-$$
-    \bm{s}=x\bm{e}_x+y\bm{e}_y、
-    \bm{u}_x=\bm{e}_x、
-    \bm{u}_y=\bm{e}_y
-$$
-
-そのため、まず基底ベクトルを
+ここでまでのことを利用すると、等加速度系における基底ベクトルを求めてみると、
 
 $$
     x=x'+\frac{a}{2c^2}w'^2、
@@ -471,7 +466,7 @@ $$
     \pp{w'}{w}=1
 $$
 
-を利用して求めてみると、以下のような関係式が得られる。
+であるから以下の通りとなる。
 
 $$
     \bm{u}_x=\bm{u}_{x'}、
