@@ -617,12 +617,22 @@ $$
     \frac{\mathrm{d}t}{\sqrt{1+\lr{\frac{gt}{c}}^2}}
 $$
 
-であるから積分すると以下の通りになる。
+であるから積分すると
 
+$$
+    \tau = \frac{c}{g}\operatorname{arsinh}\left(\frac{gt}{c}\right)
+    \rightarrow
+    t=\dfrac{c}{g}\sinh\dfrac{g\tau}{c}
+$$
 
+となる。そのため、$\tau$ で表記した $t$ を先の式に代入すると
 
+$$
+    v_z = -c\tanh\frac{g\tau}{c}、
+    z = z_0 - \frac{c^2}{g}\left(\cosh\frac{g\tau}{c}-1\right)
+$$
 
-
+が得られる。$g\tau\ll c$ では $\tanh x\simeq x$、$\cosh x - 1\simeq x^2/2$ より、$v_z=-g\tau$、$z=z_0-\dfrac{1}{2}g\tau^2$ と、固有時でも従来と同じ形に帰着する。
 
 次に、電場や磁場が働くとどうなるかを次項の電磁気学のところで見ていこう。
 
