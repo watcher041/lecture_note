@@ -93,13 +93,13 @@ $$
     \mathrm{d}x'^1=
     \cos\alpha\ \mathrm{d}x^1+\sin\alpha\ \mathrm{d}x^2、
     \mathrm{d}x'^2=
-    -\sin\alpha\ \mathrm{d}x^1+\cos\alpha\ \mathrm{d}x^1
+    -\sin\alpha\ \mathrm{d}x^1+\cos\alpha\ \mathrm{d}x^2
 $$
 $$
     \bm{u}'_1=
     \cos\alpha\ \bm{u}_1+\sin\alpha\ \bm{u}_2、
     \bm{u}'_2=
-    -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_1
+    -\sin\alpha\ \bm{u}_1+\cos\alpha\ \bm{u}_2
 $$
 
 また、この表記を用いることでベクトル $\bm{s}$ に関する式も
@@ -143,7 +143,7 @@ $$
     \bm{u}_\nu=
     \sum_{\mu=1}^2
     \lr{
-        \pp{x'^\nu}{x^\mu}
+        \pp{x'^\mu}{x^\nu}
     }
     \bm{u}'_\mu
 $$
@@ -178,7 +178,7 @@ $$
     \bm{u}_\nu、
     \bm{u}_\nu=
     \lr{
-        \pp{x'^\nu}{x^\mu}
+        \pp{x'^\mu}{x^\nu}
     }
     \bm{u}'_\mu
 $$
@@ -291,7 +291,7 @@ $$
     g_{\mu 1}\mathrm{d}x^\mu
 $$
 
-というように共変ベクトルにRiemann計量を適用した形になっていることになる。このことから、
+というように反変成分 $dx^μ$ にRiemann計量を適用すると、共変成分 $\mathrm{d}x_1$ が得られることになる。このことから、
 
 $$
     \mathrm{d}x_\nu=
