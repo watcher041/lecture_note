@@ -2,39 +2,54 @@
 ## 重力と慣性（等価原理）
 
 　特殊相対性理論において、各地点の座標と時間について議論していたと思うが、一定速度で動く観測者というのは実際にないことが多い。というのも、地球上で観測を行うにあたって重力や地球の自転といった影響を受けていることからも伺える。　一例として、地球の自転を考える。簡単のため、赤道面内の運動だけを考え、自転軸のまわりに回る座標系 $(x', y')$ を地球上の座標とする。これに対して、自転と無関係に静止している座標系 $(x, y)$ を慣性系とし、$t' = t$ とする。$(x', y')$ 系の軸が $(x, y)$ 系に対して角 $\theta$ だけ回っているとすると、座標は
+
 $$
     x = x'\cos\theta - y'\sin\theta,\qquad
     y = x'\sin\theta + y'\cos\theta
 $$
-で結ばれる。地球の自転では $\theta$ は時間とともに一定の割合で増えるので、角速度 $\omega = \dfrac{\mathrm{d}\theta}{\mathrm{d}t}$ は定数である。
 
-　これを $t$ で微分する。$\dfrac{\mathrm{d}}{\mathrm{d}t}\cos\theta = -\omega\sin\theta,\ \dfrac{\mathrm{d}}{\mathrm{d}t}\sin\theta = \omega\cos\theta$ なので
+で結ばれる。これを $t$ で微分すると角速度を $\omega = \frac{\mathrm{d}\theta}{\mathrm{d}t}$ として
+
 $$
     \frac{\mathrm{d}x}{\mathrm{d}t} = \left(\frac{\mathrm{d}x'}{\mathrm{d}t} - \omega y'\right)\cos\theta - \left(\frac{\mathrm{d}y'}{\mathrm{d}t} + \omega x'\right)\sin\theta,
 $$
 $$
     \frac{\mathrm{d}y}{\mathrm{d}t} = \left(\frac{\mathrm{d}x'}{\mathrm{d}t} - \omega y'\right)\sin\theta + \left(\frac{\mathrm{d}y'}{\mathrm{d}t} + \omega x'\right)\cos\theta
 $$
-となる。これらは元の座標の式と同じ形をしているので、もう一度微分すると
+
+となる。これらは元の座標の式と同じ形をしており、もう一度微分することで
+
 $$
     \frac{\mathrm{d}^2 x}{\mathrm{d}t^2} = a_x\cos\theta - a_y\sin\theta,\qquad
     \frac{\mathrm{d}^2 y}{\mathrm{d}t^2} = a_x\sin\theta + a_y\cos\theta
 $$
+
 を得る。ただし
+
 $$
     a_x = \frac{\mathrm{d}^2 x'}{\mathrm{d}t^2} - 2\omega\frac{\mathrm{d}y'}{\mathrm{d}t} - \omega^2 x',\qquad
     a_y = \frac{\mathrm{d}^2 y'}{\mathrm{d}t^2} + 2\omega\frac{\mathrm{d}x'}{\mathrm{d}t} - \omega^2 y'
 $$
-とおいた。
 
-　慣性系では Newton の運動方程式が $m\dfrac{\mathrm{d}^2 x}{\mathrm{d}t^2} = F_x,\ m\dfrac{\mathrm{d}^2 y}{\mathrm{d}t^2} = F_y$ と書ける。力も座標と同じように回転系の軸に沿った成分 $F'_x,\ F'_y$ で表すと、$F_x = F'_x\cos\theta - F'_y\sin\theta,\ F_y = F'_x\sin\theta + F'_y\cos\theta$ である。これを上の式と見比べれば $ma_x = F'_x,\ ma_y = F'_y$ が成り立つので、地球上で見た運動方程式は
+とおいた。慣性系では Newton の運動方程式が
+
+$$
+    m\dfrac{\mathrm{d}^2 x}{\mathrm{d}t^2} = F_x、 
+    m\dfrac{\mathrm{d}^2 y}{\mathrm{d}t^2} = F_y
+$$
+
+と書ける。力も座標と同じように回転系の軸に沿った成分 $F'_x,\ F'_y$ で表すと、
+
+$$
+    F_x = F'_x\cos\theta - F'_y\sin\theta,\ F_y = F'_x\sin\theta + F'_y\cos\theta
+$$
+
+である。これを上の式と見比べれば $ma_x = F'_x,\ ma_y = F'_y$ が成り立つので、地球上で見た運動方程式は
 $$
     m\frac{\mathrm{d}^2 x'}{\mathrm{d}t^2} = F'_x + 2m\omega\frac{\mathrm{d}y'}{\mathrm{d}t} + m\omega^2 x',\qquad
     m\frac{\mathrm{d}^2 y'}{\mathrm{d}t^2} = F'_y - 2m\omega\frac{\mathrm{d}x'}{\mathrm{d}t} + m\omega^2 y'
 $$
-となる。右辺の $F'$ 以外の項は、座標系が回転しているために現れた見かけの力、すなわち**慣性力**であり、$m\omega^2 x',\ m\omega^2 y'$ は**遠心力**、速度に比例する項は**Coriolis力**と呼ばれる。
-
-　ここで、地球の中心に向かう重力のもとで、物体が $x'$ 軸（鉛直上向き）に沿って運動する場合を考える。重力は中心力なので、回転系でも大きさと向きは変わらず、$F'_x = -mg,\ F'_y = 0$ である。このとき Coriolis力は $y'$ 方向にしか働かないので、鉛直方向の運動だけを見れば
+となる。右辺の $F'$ 以外の項は、座標系が回転しているために現れた見かけの力、すなわち**慣性力**であり、$m\omega^2 x',\ m\omega^2 y'$ は**遠心力**、速度に比例する項は**Coriolis力**と呼ばれる。ここで、地球の中心に向かう重力のもとで、物体が $x'$ 軸（鉛直上向き）に沿って運動する場合を考える。重力は中心力なので、回転系でも大きさと向きは変わらず、$F'_x = -mg,\ F'_y = 0$ である。このとき Coriolis力は $y'$ 方向にしか働かないので、鉛直方向の運動だけを見れば
 $$
     m\frac{\mathrm{d}^2 x'}{\mathrm{d}t^2} = mx'\omega^2 - mg
 $$
