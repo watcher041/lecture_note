@@ -257,7 +257,7 @@ $$
     \sqrt{2}x^2
 $$
 
-となるため、以下の図からも分かるように反変ベクトルであることが分かる。
+となるため、以下の図からも分かるように共変成分と反変成分は異なる値になることが分かる。
 
 <p align="center">
     <img width="36%" src="images/oblique_covariant.png">
@@ -330,7 +330,7 @@ $$
     \mathrm{d}x^\lambda
 $$
 
-というように、$g_{\lambda\xi}\mathrm{d}x^\lambda$ が共変ベクトルのふるまいをすることからもうかがえる。また、逆変換についてもRiemann計量の逆数
+というように、$g_{\lambda\xi}\mathrm{d}x^\lambda$ が共変ベクトルのふるまいをすることからもうかがえる。また、逆変換についてもRiemann計量の逆行列
 
 $$
     \mathrm{d}x^\mu=
