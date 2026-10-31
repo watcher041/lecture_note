@@ -341,13 +341,13 @@ $$
 であるから以下の通りとなる。
 
 $$
-    \bm{u}_x=\bm{u}_{x'}、
+    \bm{u}_x=\bm{u}_x'、
     \bm{u}_w=
     -\frac{a}{c^2}w'
-    \bm{u}_{x'}+
-    \bm{u}_{w'}、
-    \bm{u}_{x'}=\bm{u}_x、
-    \bm{u}_{w'}=
+    \bm{u}_x'+
+    \bm{u}_w'、
+    \bm{u}_x'=\bm{u}_x、
+    \bm{u}_w'=
     \frac{a}{c^2}w
     \bm{u}_x+\bm{u}_w
 $$
@@ -363,10 +363,10 @@ $$
 とおいてみると、変換後の内積を求めると
 
 $$
-    \bm{u}_{x'}\cdot\bm{u}_{x'}=1、
-    \bm{u}_{w'}\cdot\bm{u}_{w'}=
+    \bm{u}_x'\cdot\bm{u}_x'=1、
+    \bm{u}_w'\cdot\bm{u}_w'=
     1+\frac{a^2}{c^4}w'^2、
-    \bm{u}_{x'}\cdot\bm{u}_{w'}=
+    \bm{u}_x'\cdot\bm{u}_w'=
     \frac{a}{c^2}w'
 $$
 
@@ -377,8 +377,8 @@ $$
     \mathrm{d}\bm{s}=
     \mathrm{d}x\bm{u}_x+
     \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_{x'}+
-    \mathrm{d}{w'}\bm{u}_{w'}
+    \mathrm{d}{x'}\bm{u}_x'+
+    \mathrm{d}{w'}\bm{u}_w'
 $$
 
 として、この内積を求めると
@@ -396,13 +396,13 @@ $$
         (\bm{u}_w\cdot\bm{u}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_{x'}\cdot\bm{u}_{x'})
+        (\bm{u}_x'\cdot\bm{u}_x')
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_{x'}\cdot\bm{u}_{w'})
+        (\bm{u}_x'\cdot\bm{u}_w')
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{x'})
+        (\bm{u}_w'\cdot\bm{u}_x')
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{w'})
+        (\bm{u}_w'\cdot\bm{u}_w')
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -432,8 +432,8 @@ $$
     \mathrm{d}\bm{s}=
     \mathrm{d}x\bm{u}_x+
     \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_{x'}+
-    \mathrm{d}{w'}\bm{u}_{w'}
+    \mathrm{d}{x'}\bm{u}_x'+
+    \mathrm{d}{w'}\bm{u}_w'
 $$
 $$
     \begin{aligned}
@@ -448,13 +448,13 @@ $$
         (\bm{u}_w\cdot\bm{u}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_{x'}\cdot\bm{u}_{x'})
+        (\bm{u}_x'\cdot\bm{u}_x')
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_{x'}\cdot\bm{u}_{w'})
+        (\bm{u}_x'\cdot\bm{u}_w')
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{x'})
+        (\bm{u}_w'\cdot\bm{u}_x')
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_{w'}\cdot\bm{u}_{w'})
+        (\bm{u}_w'\cdot\bm{u}_w')
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -501,17 +501,17 @@ $$
 
 $$
 \begin{pmatrix}
-\dfrac{\partial x'}{\partial x} & \dfrac{\partial x'}{\partial w} \\[2mm]
-\dfrac{\partial w'}{\partial x} & \dfrac{\partial w'}{\partial w}
+    \dfrac{\partial x'}{\partial x} & \dfrac{\partial x'}{\partial w} \\[2mm]
+    \dfrac{\partial w'}{\partial x} & \dfrac{\partial w'}{\partial w}
 \end{pmatrix}
 \begin{pmatrix}
-\dfrac{\partial x}{\partial x'} & \dfrac{\partial x}{\partial w'} \\[2mm]
-\dfrac{\partial w}{\partial x'} & \dfrac{\partial w}{\partial w'}
+    \dfrac{\partial x}{\partial x'} & \dfrac{\partial x}{\partial w'} \\[2mm]
+    \dfrac{\partial w}{\partial x'} & \dfrac{\partial w}{\partial w'}
 \end{pmatrix}
 =
 \begin{pmatrix}
-1 & 0 \\
-0 & 1
+    1 & 0 \\
+    0 & 1
 \end{pmatrix}
 $$
 
