@@ -515,4 +515,17 @@ $$
 \end{pmatrix}
 $$
 
-となっている。この逆の変換があるからこそ、成分と基底の積和であるベクトル自体は座標系によらず同じものになる。このように、座標変換をすると少なくとも二通りの変換が行われており、一般的に成分が一つ目の式の形で変換されるものを**反変ベクトル**、基底ベクトルと同じ形（二つ目の式の形）で変換されるものを**共変ベクトル**というように呼ぶ。このことについて、次回で述べていくことにする。
+となっている。この逆の変換があるからこそ、成分と基底の積和であるベクトル自体は座標系によらず同じものになる。このように、座標変換をすると少なくとも二通りの変換が行われており、一般的に成分が一つ目の式の形で変換されるものを**反変ベクトル**、基底ベクトルと同じ形（二つ目の式の形）で変換されるものを**共変ベクトル**というように呼ぶ。反変と共変は互いに逆の変換を受けるため、同じ添字について一つずつ組にして足し合わせると、変換による変化が打ち消し合って座標系によらない量になる。実際、スカラー関数 $\phi(x,w)$ の勾配は連鎖律により
+
+$$
+    \frac{\partial \phi}{\partial x'} = \frac{\partial x}{\partial x'}\frac{\partial \phi}{\partial x} + \frac{\partial w}{\partial x'}\frac{\partial \phi}{\partial w}、\quad
+    \frac{\partial \phi}{\partial w'} = \frac{\partial x}{\partial w'}\frac{\partial \phi}{\partial x} + \frac{\partial w}{\partial w'}\frac{\partial \phi}{\partial w}
+$$
+
+と、基底ベクトルと同じ形（二つ目の式の形）で変換される。したがって、反変ベクトルである $\mathrm{d}x$、$\mathrm{d}w$ と組にした
+
+$$
+    \mathrm{d}\phi = \frac{\partial \phi}{\partial x}\mathrm{d}x + \frac{\partial \phi}{\partial w}\mathrm{d}w = \frac{\partial \phi}{\partial x'}\mathrm{d}x' + \frac{\partial \phi}{\partial w'}\mathrm{d}w'
+$$
+
+は、どちらの座標系で計算しても同じ値になる。ベクトル $\mathrm{d}\boldsymbol{s}$ が座標系によらないのも、成分（反変）と基底（共変）を組にして足し合わせているためである。一方、反変どうしを掛けただけでは打ち消し合わないので、座標系によらない量にはならない。例えば $\mathrm{d}\boldsymbol{s}\cdot\mathrm{d}\boldsymbol{s}$ には反変の $\mathrm{d}x$ が2つ現れるので、基底どうしの内積（共変2つ）を掛けて初めて不変になる。このことについて、次回で述べていくことにする。
