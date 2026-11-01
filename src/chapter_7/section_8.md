@@ -56,8 +56,13 @@ $$
     }
     \bm{b}'_\mu
 $$
+$$
+    g_{\mu\nu} = \bm{b}_\mu\cdot\bm{b}_\nu、
+    g'_{\mu\nu} = \bm{b}'_\mu\cdot\bm{b}'_\nu
+$$
 
-が成り立つ。ここでの対応は $w$ が時間を含む特殊な変数であることを考慮して
+
+が成り立つ。ただし、ここで $w$ が時間を含む特殊な変数であることを考慮して以下の通りにしている。
 
 $$
     \mathrm{d}x^0=\mathrm{d}w、
@@ -71,6 +76,37 @@ $$
     \mathrm{d}x'^2=\mathrm{d}y'、
     \mathrm{d}x'^3=\mathrm{d}z'
 $$
+
+ここで $g_{\mu\nu}$ の成分自体は、座標系の取り方（基底ベクトルの内積の値）によって変わる。一方、相対論的力学で出てきた固有時の微小変化
+
+$$
+    \mathrm{d}\tau = \mathrm{d}t'\sqrt{1-\frac{\bm{v}'^2}{c^2}} = \mathrm{d}t\sqrt{1-\frac{\bm{v}^2}{c^2}}
+$$
+
+は座標系によらない量である。これを改めて見てみると、$\mathrm{d}x^0 = c\,\mathrm{d}t$、$\mathrm{d}x^i = v_i\,\mathrm{d}t$ を用いて
+
+$$
+    (c\,\mathrm{d}\tau)^2 = (\mathrm{d}x'^0)^2 - (\mathrm{d}x'^1)^2 - (\mathrm{d}x'^2)^2 - (\mathrm{d}x'^3)^2 = (\mathrm{d}x^0)^2 - (\mathrm{d}x^1)^2 - (\mathrm{d}x^2)^2 - (\mathrm{d}x^3)^2
+$$
+
+と書ける。そこで $(\mathrm{d}s)^2 = (c\,\mathrm{d}\tau)^2$ と定めると、$(\mathrm{d}s)^2 = g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu$ と係数を比べることで
+
+$$
+    g_{\mu\nu} = g'_{\mu\nu} = \eta_{\mu\nu} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
+$$
+
+が得られる。この $\eta_{\mu\nu}$ を**Minkowski計量**と呼ぶ。$g_{\mu\nu}$ の成分は座標系の取り方によって変わるが、慣性系の座標では、固有時による定義 $(\mathrm{d}s)^2 = (c\,\mathrm{d}\tau)^2$ から $\eta_{\mu\nu}$ となる。$\mathrm{d}\tau$ は慣性系 K′ でも同じ関係で与えられるため、K′ でも $g'_{\mu\nu} = \eta_{\mu\nu}$ となり、
+
+$$
+    (\mathrm{d}s)^2 = \eta_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu = \eta_{\mu\nu}\mathrm{d}x'^\mu\mathrm{d}x'^\nu
+$$
+
+と同じ形で書ける。一方、加速度系のように慣性系でない座標では、$(\mathrm{d}s)^2$ の値は変わらないが、$g_{\mu\nu}$ の成分は $\eta_{\mu\nu}$ から変化する。
+
+
+
+
+
 
 
 
@@ -162,59 +198,13 @@ $$
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
-ここで、固有時に関して
 
-$$
-    \mathrm{d}\tau=
-    \mathrm{d}t'
-    \sqrt{1-\frac{\bm{v'}^2}{c^2}}=
-    \mathrm{d}t
-    \sqrt{1-\frac{\bm{v}^2}{c^2}}
-$$
 
-となっていたわけだが、これを少し整理してみると反変ベクトルにより
 
-$$
-    (c\mathrm{d}\tau)^2=
-    (\mathrm{d}x'^0)^2-
-    (\mathrm{d}x'^1)^2-
-    (\mathrm{d}x'^2)^2-
-    (\mathrm{d}x'^3)^2=
-    (\mathrm{d}x^0)^2-
-    (\mathrm{d}x^1)^2-
-    (\mathrm{d}x^2)^2-
-    (\mathrm{d}x^3)^2
-$$
 
-というように書けるため、ちょうど微小ベクトルの内積の形で不変な形をしていることから
 
-$$
-    (\mathrm{d}\bm{s})^2=(c\mathrm{d}\tau)^2=
-    \eta_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
-    \eta_{\mu\nu}\mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
-$$
 
-というように定義することができる。ここで、$\eta$ は**Minkofsky計量**と呼ばれるものとなっており、
-
-$$
-    \eta_{\mu\nu}=
-    \begin{cases}
-         1 & (\mu,\nu=1)\\
-         -1 & (\mu,\nu=1,2,3)
-    \end{cases}
-$$
-
-というようになっている。そのため、固有時の方も計量を用いて
-
-$$
-    \mathrm{d}\tau=
-    \frac{1}{c}
-    \sqrt{\eta_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}}=
-    \frac{1}{c}
-    \sqrt{\eta_{\mu\nu}\mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}}
-$$
-
-というようになる。このことから、固有時を通じてRiemann計量を扱うことができるため、一旦運動方程式を一般化してから置き換えることで加速度系の方程式を得ることができると考えられる。そこで、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
+このことから、固有時を通じてRiemann計量を扱うことができるため、一旦運動方程式を一般化してから置き換えることで加速度系の方程式を得ることができると考えられる。そこで、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 $$
     \dd{}{t}
     \lr{
