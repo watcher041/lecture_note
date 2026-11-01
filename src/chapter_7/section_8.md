@@ -93,27 +93,31 @@ $$
     \lr{\dd{x^3}{t}}^2
 $$
 
-は座標系によらない量であったため、$\mathrm{d}x^0 = c\,\mathrm{d}t$ を用いて
+は座標系によらない量であったため、$\mathrm{d}x^0 = c\,\mathrm{d}t、\mathrm{d}x'^0 = c\mathrm{d}t'$ を用いて
 
 $$
     (c\,\mathrm{d}\tau)^2 = (\mathrm{d}x'^0)^2 - (\mathrm{d}x'^1)^2 - (\mathrm{d}x'^2)^2 - (\mathrm{d}x'^3)^2 = (\mathrm{d}x^0)^2 - (\mathrm{d}x^1)^2 - (\mathrm{d}x^2)^2 - (\mathrm{d}x^3)^2
 $$
 
-と書ける。そこで $(\mathrm{d}s)^2 = (c\,\mathrm{d}\tau)^2$ と定めると、$(\mathrm{d}s)^2$ の係数を比べることで
+と書ける。そこで $(\mathrm{d}s)^2 = (c\,\mathrm{d}\tau)^2$ と定めると、
 
 $$
-    (\mathrm{d}s)^2 = \eta_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu = \eta_{\mu\nu}\mathrm{d}x'^\mu\mathrm{d}x'^\nu
+    (\mathrm{d}s)^2=
+    g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu=
+    (\mathrm{d}x^0)^2 - (\mathrm{d}x^1)^2 - (\mathrm{d}x^2)^2 - (\mathrm{d}x^3)^2
 $$
+
+として係数を比べることで
+
 $$
     g_{\mu\nu} = g'_{\mu\nu} = \eta_{\mu\nu} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 0 & 0 & -1 \end{pmatrix}
 $$
 
-が得られる。この $\eta_{\mu\nu}$ を**Minkowski計量**と呼び、変換前後で同じ形になる。
+が得られる。この $\eta_{\mu\nu}$ を**Minkowski計量**と呼び、$(\mathrm{d}s)^2 $ も以下のように同じ形になる。
 
-
-と同じ形で書ける。一方、加速度系のように慣性系でない座標では、$(\mathrm{d}s)^2$ の値は変わらないが、$g_{\mu\nu}$ の成分は $\eta_{\mu\nu}$ から変化する。
-
-
+$$
+    (\mathrm{d}s)^2 = \eta_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu = \eta_{\mu\nu}\mathrm{d}x'^\mu\mathrm{d}x'^\nu
+$$
 
 
 
