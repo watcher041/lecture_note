@@ -1,7 +1,7 @@
 
 ## 特殊相対性理論から一般相対性理論へ
 
-　特殊相対性理論では、座標系の変換としてLorentz変換が利用されていた。
+<!-- 　特殊相対性理論では、座標系の変換としてLorentz変換が利用されていた。
 
 $$
     x'=\gamma(x-\beta w)、
@@ -20,15 +20,65 @@ $$
     w'=ct'、
     \beta=\frac{V}{c}、
     \gamma=\frac{1}{\sqrt{1-\beta^2}}
+$$ -->
+
+前回までは、位置ベクトル $\bm{s}$ の微小変化に関して
+
+$$
+    \mathrm{d}\bm{s}=
+    \mathrm{d}x^{\mu}\bm{b}_\mu=
+    \mathrm{d}x'^{\mu}\bm{b}'_\mu、
+    (\mathrm{d}\bm{s})^2=
+    g_{\mu\nu}
+    \mathrm{d}x^{\mu}\mathrm{d}x^{\nu}=
+    g_{\mu\nu}'
+    \mathrm{d}x'^{\mu}\mathrm{d}x'^{\nu}
+$$
+$$
+    \mathrm{d}x'^\mu=
+    \lr{
+        \pp{x'^\mu}{x^\nu}
+    }
+    \mathrm{d}x^\nu、
+    \mathrm{d}x^\nu=
+    \lr{
+        \pp{x^\nu}{x'^\mu}
+    }
+    \mathrm{d}x'^\mu、
+    \bm{b}'_\mu=
+    \lr{
+        \pp{x^\nu}{x'^\mu}
+    }
+    \bm{b}_\nu、
+    \bm{b}_\nu=
+    \lr{
+        \pp{x'^\mu}{x^\nu}
+    }
+    \bm{b}'_\mu
 $$
 
-ここで、$w$ は時間を含む特別な変数なので、以下では $w$ をあえて $x^0$ と書き、$x$、$y$、$z$ をそれぞれ $x^1$、$x^2$、$x^3$ と書くことにする。Lorentz変換は座標の1次式であり、定数項（平行移動）も含まないため、変換の係数を偏微分の形で書くと
+となることを述べたが、これに固有時 $\mathrm{d}\tau$ を割ることで
 
 $$
-    \pp{x'^0}{x^0} = \gamma、\quad \pp{x'^0}{x^1} = -\gamma\beta、\quad \pp{x'^1}{x^0} = -\gamma\beta、\quad \pp{x'^1}{x^1} = \gamma、\quad \pp{x'^2}{x^2} = \pp{x'^3}{x^3} = 1
+    
 $$
 
-となり（それ以外の成分は 0）、いずれも座標によらない定数となる。そのため
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $$
     x'^\mu = \pp{x'^\mu}{x^\nu}x^\nu

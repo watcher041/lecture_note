@@ -172,16 +172,16 @@ $$
     \mathrm{d}w'
 $$
 
-と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{u}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
+と展開してみる。すると、基本ベクトルを利用した式と同じように各成分のベクトルの和になっていることが分かる。実際、$\bm{b}$ を基底ベクトル（大きさが1でない各成分のベクトル）として
 
 $$
-    \bm{u}_x=
+    \bm{b}_x=
     \pp{\bm{s}}{x}、
-    \bm{u}_w=
+    \bm{b}_w=
     \pp{\bm{s}}{w}、
-    \bm{u}_x'=
+    \bm{b}_x'=
     \pp{\bm{s}}{x'}、
-    \bm{u}_w'=
+    \bm{b}_w'=
     \pp{\bm{s}}{w'}
 $$
 
@@ -189,10 +189,10 @@ $$
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \mathrm{d}x'\bm{u}_x'+
-    \mathrm{d}w'\bm{u}_w'
+    \mathrm{d}x\bm{b}_x+
+    \mathrm{d}w\bm{b}_w=
+    \mathrm{d}x'\bm{b}_x'+
+    \mathrm{d}w'\bm{b}_w'
 $$
 
 また、座標系間で変数が
@@ -206,52 +206,52 @@ $$
 というように変換式を満たしていることから、基底ベクトル同士の関係は以下の通りとなる。
 
 $$
-    \bm{u}_x=
+    \bm{b}_x=
     \pp{\bm{s}}{x}=
     \pp{x'}{x}
     \pp{\bm{s}}{x'}+
     \pp{w'}{x}
     \pp{\bm{s}}{w'}=
     \pp{x'}{x}
-    \bm{u}_x'+
+    \bm{b}_x'+
     \pp{w'}{x}
-    \bm{u}_w'
+    \bm{b}_w'
 $$
 $$
-    \bm{u}_w=
+    \bm{b}_w=
     \pp{\bm{s}}{w}=
     \pp{x'}{w}
     \pp{\bm{s}}{x'}+
     \pp{w'}{w}
     \pp{\bm{s}}{w'}=
     \pp{x'}{w}
-    \bm{u}_x'+
+    \bm{b}_x'+
     \pp{w'}{w}
-    \bm{u}_w'
+    \bm{b}_w'
 $$
 $$
-    \bm{u}_x'=
+    \bm{b}_x'=
     \pp{\bm{s}}{x'}=
     \pp{x}{x'}
     \pp{\bm{s}}{x}+
     \pp{w}{x'}
     \pp{\bm{s}}{w}=
     \pp{x}{x'}
-    \bm{u}_x+
+    \bm{b}_x+
     \pp{w}{x'}
-    \bm{u}_w
+    \bm{b}_w
 $$
 $$
-    \bm{u}_w'=
+    \bm{b}_w'=
     \pp{\bm{s}}{w'}=
     \pp{x}{w'}
     \pp{\bm{s}}{x}+
     \pp{w}{w'}
     \pp{\bm{s}}{w}=
     \pp{x}{w'}
-    \bm{u}_x+
+    \bm{b}_x+
     \pp{w}{w'}
-    \bm{u}_w
+    \bm{b}_w
 $$
 
 <!-- これは基底ベクトルの変換になっているため、例として直交座標系から斜交座標系に変換した場合どうなるか見てみると
@@ -279,13 +279,13 @@ $$
 となることから、以下のような式が得られる。
 
 $$
-    \bm{u}_X=\bm{u}_x、
-    \bm{u}_Y=
-    -\bm{u}_x+\sqrt{2}\bm{u}_y、
-    \bm{u}_x=\bm{u}_X、
-    \bm{u}_y=
-    \frac{1}{\sqrt{2}}\bm{u}_X+
-    \frac{1}{\sqrt{2}}\bm{u}_Y
+    \bm{b}_X=\bm{b}_x、
+    \bm{b}_Y=
+    -\bm{b}_x+\sqrt{2}\bm{b}_y、
+    \bm{b}_x=\bm{b}_X、
+    \bm{b}_y=
+    \frac{1}{\sqrt{2}}\bm{b}_X+
+    \frac{1}{\sqrt{2}}\bm{b}_Y
 $$
 
 また、このときのベクトル $\bm{s}$ は基本ベクトルを用いて
@@ -299,16 +299,16 @@ $$
 と書ける（**基本ベクトルが位置によって変わらない**）ことから、この偏微分をとることで
 
 $$
-    \bm{u}_X=
+    \bm{b}_X=
     \pp{\bm{s}}{X}=
     \bm{e}_X、
-    \bm{u}_Y=
+    \bm{b}_Y=
     \pp{\bm{s}}{Y}=
     \bm{e}_Y、
-    \bm{u}_x=
+    \bm{b}_x=
     \pp{\bm{s}}{x}=
     \bm{e}_x、
-    \bm{u}_y=
+    \bm{b}_y=
     \pp{\bm{s}}{y}=
     \bm{e}_y
 $$
@@ -341,32 +341,32 @@ $$
 であるから以下の通りとなる。
 
 $$
-    \bm{u}_x=\bm{u}_x'、
-    \bm{u}_w=
+    \bm{b}_x=\bm{b}_x'、
+    \bm{b}_w=
     -\frac{a}{c^2}w'
-    \bm{u}_x'+
-    \bm{u}_w'、
-    \bm{u}_x'=\bm{u}_x、
-    \bm{u}_w'=
+    \bm{b}_x'+
+    \bm{b}_w'、
+    \bm{b}_x'=\bm{b}_x、
+    \bm{b}_w'=
     \frac{a}{c^2}w
-    \bm{u}_x+\bm{u}_w
+    \bm{b}_x+\bm{b}_w
 $$
 
 また、変換前の座標系が直交座標系であることから
 
 $$
-    \bm{u}_x=\bm{e}_x、\bm{u}_w=\bm{e}_w、
-    \bm{u}_x\cdot\bm{u}_x=1、
-    \bm{u}_x\cdot\bm{u}_w=0
+    \bm{b}_x=\bm{e}_x、\bm{b}_w=\bm{e}_w、
+    \bm{b}_x\cdot\bm{b}_x=1、
+    \bm{b}_x\cdot\bm{b}_w=0
 $$
 
 とおいてみると、変換後の内積を求めると
 
 $$
-    \bm{u}_x'\cdot\bm{u}_x'=1、
-    \bm{u}_w'\cdot\bm{u}_w'=
+    \bm{b}_x'\cdot\bm{b}_x'=1、
+    \bm{b}_w'\cdot\bm{b}_w'=
     1+\frac{a^2}{c^4}w'^2、
-    \bm{u}_x'\cdot\bm{u}_w'=
+    \bm{b}_x'\cdot\bm{b}_w'=
     \frac{a}{c^2}w'
 $$
 
@@ -375,10 +375,10 @@ $$
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_x'+
-    \mathrm{d}{w'}\bm{u}_w'
+    \mathrm{d}x\bm{b}_x+
+    \mathrm{d}w\bm{b}_w=
+    \mathrm{d}{x'}\bm{b}_x'+
+    \mathrm{d}{w'}\bm{b}_w'
 $$
 
 として、この内積を求めると
@@ -387,22 +387,22 @@ $$
     \begin{aligned}
         \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
         &=
-        (\bm{u}_x\cdot\bm{u}_x)
+        (\bm{b}_x\cdot\bm{b}_x)
         \mathrm{d}x\mathrm{d}x+
-        (\bm{u}_x\cdot\bm{u}_w)
+        (\bm{b}_x\cdot\bm{b}_w)
         \mathrm{d}x\mathrm{d}w+
-        (\bm{u}_w\cdot\bm{u}_x)
+        (\bm{b}_w\cdot\bm{b}_x)
         \mathrm{d}w\mathrm{d}x+
-        (\bm{u}_w\cdot\bm{u}_w)
+        (\bm{b}_w\cdot\bm{b}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_x'\cdot\bm{u}_x')
+        (\bm{b}_x'\cdot\bm{b}_x')
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_x'\cdot\bm{u}_w')
+        (\bm{b}_x'\cdot\bm{b}_w')
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_w'\cdot\bm{u}_x')
+        (\bm{b}_w'\cdot\bm{b}_x')
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_w'\cdot\bm{u}_w')
+        (\bm{b}_w'\cdot\bm{b}_w')
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -430,31 +430,31 @@ $$
 
 $$
     \mathrm{d}\bm{s}=
-    \mathrm{d}x\bm{u}_x+
-    \mathrm{d}w\bm{u}_w=
-    \mathrm{d}{x'}\bm{u}_x'+
-    \mathrm{d}{w'}\bm{u}_w'
+    \mathrm{d}x\bm{b}_x+
+    \mathrm{d}w\bm{b}_w=
+    \mathrm{d}{x'}\bm{b}_x'+
+    \mathrm{d}{w'}\bm{b}_w'
 $$
 $$
     \begin{aligned}
         \mathrm{d}\bm{s}\cdot\mathrm{d}\bm{s}
         &=
-        (\bm{u}_x\cdot\bm{u}_x)
+        (\bm{b}_x\cdot\bm{b}_x)
         \mathrm{d}x\mathrm{d}x+
-        (\bm{u}_x\cdot\bm{u}_w)
+        (\bm{b}_x\cdot\bm{b}_w)
         \mathrm{d}x\mathrm{d}w+
-        (\bm{u}_w\cdot\bm{u}_x)
+        (\bm{b}_w\cdot\bm{b}_x)
         \mathrm{d}w\mathrm{d}x+
-        (\bm{u}_w\cdot\bm{u}_w)
+        (\bm{b}_w\cdot\bm{b}_w)
         \mathrm{d}w\mathrm{d}w\\
         &=
-        (\bm{u}_x'\cdot\bm{u}_x')
+        (\bm{b}_x'\cdot\bm{b}_x')
         \mathrm{d}{x'}\mathrm{d}{x'}+
-        (\bm{u}_x'\cdot\bm{u}_w')
+        (\bm{b}_x'\cdot\bm{b}_w')
         \mathrm{d}{x'}\mathrm{d}{w'}+
-        (\bm{u}_w'\cdot\bm{u}_x')
+        (\bm{b}_w'\cdot\bm{b}_x')
         \mathrm{d}{w'}\mathrm{d}{x'}+
-        (\bm{u}_w'\cdot\bm{u}_w')
+        (\bm{b}_w'\cdot\bm{b}_w')
         \mathrm{d}{w'}\mathrm{d}{w'}
     \end{aligned}
 $$
@@ -485,16 +485,16 @@ $$
 と変換され、基底ベクトルに対しては
 
 $$
-    \bm{u}_x'=
+    \bm{b}_x'=
     \pp{x}{x'}
-    \bm{u}_x+
+    \bm{b}_x+
     \pp{w}{x'}
-    \bm{u}_w、
-    \bm{u}_w'=
+    \bm{b}_w、
+    \bm{b}_w'=
     \pp{x}{w'}
-    \bm{u}_x+
+    \bm{b}_x+
     \pp{w}{w'}
-    \bm{u}_w
+    \bm{b}_w
 $$
 
 と変換される。この2つの変換の係数は同じではなく、互いに逆行列の関係にある。実際、
