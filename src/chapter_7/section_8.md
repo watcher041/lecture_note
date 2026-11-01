@@ -119,103 +119,143 @@ $$
     (\mathrm{d}s)^2 = \eta_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu = \eta_{\mu\nu}\mathrm{d}x'^\mu\mathrm{d}x'^\nu
 $$
 
+また、$\mathrm{d}x^\mu$ が反変ベクトルであることから固有時で割った
 
+$$
+    u^0=
+    \dd{x^0}{\tau}、
+    u^1=
+    \dd{x^1}{\tau}、
+    u^2=
+    \dd{x^2}{\tau}、
+    u^3=
+    \dd{x^3}{\tau}
+    \rightarrow
+    u^\mu=
+    \dd{x^\mu}{\tau}
+$$
 
+という量 $u^\mu$（**4元速度**）も反変ベクトルになる。そのため、運動量も反変ベクトルの形で
 
+$$
+    p^0=
+    m_0u^0、
+    p^1=
+    m_0u^1、
+    p^2=
+    m_0u^2、
+    p^3=
+    m_0u^3
+    \rightarrow
+    p^\mu=
+    m_0u^\mu
+$$
 
+といように 4元運動量 $p^\mu$ で表記することができ、力に関しても運動方程式から
 
+$$
+    f^0=
+    \dd{p^0}{\tau}、
+    f^1=
+    \dd{p^1}{\tau}、
+    f^2=
+    \dd{p^2}{\tau}、
+    f^3=
+    \dd{p^3}{\tau}
+    \rightarrow
+    f^\mu=
+    \dd{p^\mu}{\tau}
+$$
 
+というように **4元力** $f^\mu$ で表記される。分かりやすいように $(w,x,y,z)$ の表記にしてみると、まず4元速度は
 
+$$
+    u^0 = \frac{c}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
+    u^1 = \frac{v_x}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
+    u^2 = \frac{v_y}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
+    u^3 = \frac{v_z}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}
+$$
 
+となる。したがって 4元運動量は
 
+$$
+    p^0 = \frac{E_r}{c}、
+    p^1 = p_x、
+    p^2 = p_y、
+    p^3 = p_z、
+    E_r=\frac{m_0c^2}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+$$
 
-
-
-
-
-
-
-
-
-一方で、運動方程式についても
+と、時間成分がエネルギーを $c$ で割ったもの、空間成分がこれまでの相対論的運動量になる。また、4元力に関しても相対論力学の運動方程式
 
 $$
     \dd{\bm{p}}{\tau}=
     \bm{f}、
-    
+     \dd{E_r}{\tau}=
+    (\bm{f}\cdot\bm{v})、
     \bm{p}=
     \frac{m_0\bm{v}}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \bm{f}=
-    \frac{\bm{F}}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \mathrm{d}\tau=
-    \sqrt{1-\frac{\bm{v}^2}{c^2}}
-    \mathrm{d}t
-$$
-$$
-    \dd{E_K}{\tau}=
-    (\bm{f}\cdot\bm{v})、
-    E_K=
+    E_r=
     \frac{m_0c^2}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
-と書けたわけだが、ここで速度ベクトルと力は反変ベクトルの形で
+と比べてみることで、以下のように対応していることが分かる。
 
 $$
-    u^0=c、
-    u^1=v_x、
-    u^2=v_y、
-    u^3=v_z
-$$
-$$
-    F^0=\frac{1}{c}(\bm{F}\cdot\bm{v})、
-    F^1=F_x、
-    F^2=F_y、
-    F^3=F_z
+    f^0 = \frac{1}{c}(\bm{f}\cdot\bm{v})、
+    f^1 = f_x、
+    f^2 = f_y、
+    f^3 = f_z
 $$
 
-というように書けるので、運動量と力は以下の通りにかける。
+ここまでのことから、最終的に運動方程式は反変ベクトルの形で
 
 $$
-    p^\mu=
-    \frac{m_0u^\mu}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     f^\mu=
-    \frac{F^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    (\mu=0,1,2,3)
-$$
-
-書くと以下の通りになる。
-
-$$
-    \dd{p^\mu}{\tau}=
-    f^\mu、
+    \dd{p^\mu}{\tau}、
     p^\mu=
-    \frac{m_0v^\mu}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
+    m_0u^\mu、
+    u^\mu=
+    \dd{x^\mu}{\tau}
 $$
 
+と表記されることになるが、この形はあくまでLorentz変換の範囲のもので一般的な加速度系では成り立たない。そこで、座標のとり方によらない形で運動方程式を扱うため、一度解析力学の形に変更してみる。解析力学において運動方程式は、ラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 
-
-
-
-
-
-このことから、固有時を通じてRiemann計量を扱うことができるため、一旦運動方程式を一般化してから置き換えることで加速度系の方程式を得ることができると考えられる。そこで、解析力学において運動方程式はラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 $$
     \dd{}{t}
     \lr{
-        \pp{\mathcal{L}}
-        {\dot{q}}
-    }-
-    \lr{
-        \pp{\mathcal{L}}
-        {q}
-    }=0
+        \pp{\mathcal{L}}{\dot{q}}
+    } - \pp{\mathcal{L}}{q} = 0
 $$
-を利用してみると、力がポテンシャル $U$ で記述されるもの（保存力）としたとき
+
+と書かれ、この形は一般化座標 $q$ のとり方によらない。また、運動方程式の方も比べやすくするために、時間 $t$ を用いて
+
 $$
+    F^\mu=
+    \dd{p^\mu}{t}、
+    p^\mu=
+    \frac{m_0v^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    v^\mu=
+    \dd{x^\mu}{t}
+$$
+
+と置き換え、力 $F^{\mu}$ もポテンシャル $U$ で記述されるもの（保存力）としたとき
+
+$$
+    F^\mu=
+    -\lr{
+        \pp{U}{x^\mu}
+    }
+$$
+
+となるため、各成分ごとに比べてると以下の通りになる。
+
+$$
+    \pp{\mathcal{L}}{c}=
+    \frac{m_0c}
+    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
     \pp{\mathcal{L}}{v_x}=
     \frac{m_0v_x}
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
@@ -227,6 +267,10 @@ $$
     {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 $$
+    \pp{\mathcal{L}}{t}=
+    -\lr{
+        \pp{U}{t}
+    }、
     \pp{\mathcal{L}}{x}=
     -\lr{
         \pp{U}{x}
@@ -240,14 +284,67 @@ $$
         \pp{U}{z}
     }
 $$
+
+なお、第0成分 $F^0 = \dfrac{\mathrm{d}p^0}{\mathrm{d}t}$ は独立な式ではない。$p^0 = \dfrac{E_K}{c}$ であるから $F^0 = \dfrac{1}{c}\dfrac{\mathrm{d}E_K}{\mathrm{d}t}$ であり、空間成分の運動方程式から導かれる仕事とエネルギーの関係に等しい。実際、$p^\mu p_\mu = (p^0)^2 - \boldsymbol{p}^2 = m_0^2c^2$ を $t$ で微分すると $p^0F^0 = \boldsymbol{p}\cdot\boldsymbol{F}$ となり、
+
+$$
+F^0 = \frac{\boldsymbol{F}\cdot\boldsymbol{v}}{c}
+$$
+
+が得られる。保存力で $U$ が時間に陽に依存しないときは $\boldsymbol{F}\cdot\boldsymbol{v} = -\dfrac{\mathrm{d}U}{\mathrm{d}t}$ なので、
+
+$$
+F^0 = -\frac{1}{c}\frac{\mathrm{d}U}{\mathrm{d}t}、\quad \frac{\mathrm{d}}{\mathrm{d}t}\left(E_K + U\right) = 0
+$$
+
+と、エネルギー保存則になる。これは、$F^i = -\dfrac{\partial U}{\partial x^i}$ を $i=0$ にそのまま拡張した $-\dfrac{\partial U}{\partial x^0} = 0$ とは異なる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
+
 $$
     \mathcal{L}=
     -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
     \simeq
     \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
 $$
+
 次に、前回でも登場した計量 $g_{\mu\nu}$ により
+
 $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}=
     \frac{1}{c}
@@ -262,7 +359,9 @@ $$
     \rightarrow
     \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
 $$
+
 と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
+
 $$
     \pp{\mathcal{L}}
     {\dot{x}^\lambda}=
@@ -301,8 +400,10 @@ $$
     }-
     \pp{U}{x^\lambda}
 $$
+
 となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
 以上の結果を上記の運動方程式に代入すると以下のような形になる。
+
 $$
     m_0c\dot{s}
     \LR{
@@ -324,7 +425,9 @@ $$
     }}-
     \pp{U}{x^\lambda}=0
 $$
+
 ここで、計量に関しての微分が
+
 $$
     \dd{g_{\lambda\mu}}
     {s}=
@@ -333,7 +436,9 @@ $$
     \dd{x^\nu}
     {s}
 $$
+
 であるため、これを踏まえて整理すると次の通りになる。
+
 $$
     m_0c\dot{s}
     \LR{
@@ -352,7 +457,9 @@ $$
     }-
     \pp{U}{x^\lambda}=0
 $$
+
 仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
+
 $$
     g_{\lambda\mu}
     \dd{^2x^{\mu}}
@@ -367,7 +474,9 @@ $$
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}=0
 $$
+
 となるわけだが、ここで以下のように変形する。
+
 $$
     \lr{
         \pp{g_{\lambda\mu}}
@@ -390,7 +499,9 @@ $$
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}
 $$
+
 そして、計量の微分を展開してみると
+
 $$
     \pp{g_{\lambda\mu}}
     {x^\nu}=
@@ -402,7 +513,9 @@ $$
     \pp{\bm{e}_\mu}
     {x^\nu}
 $$
+
 であり、ここで**第１種クリストフェル記号**を
+
 $$
     \Gamma_{\nu\lambda,\mu}=
     \pp{\bm{e}_\lambda}
@@ -411,14 +524,18 @@ $$
     \pp{\bm{e}_\lambda}
     {x^\nu}
 $$
+
 というように定義することで、
+
 $$
     \pp{g_{\lambda\mu}}
     {x^\nu}=
     \Gamma_{\nu\lambda,\mu}+
     \Gamma_{\nu\mu,\lambda}
 $$
+
 となる。同様に、その他の偏微分についても
+
 $$
     \pp{g_{\lambda\nu}}
     {x^\mu}=
@@ -429,7 +546,9 @@ $$
     \Gamma_{\lambda\mu,\nu}+
     \Gamma_{\lambda\nu,\mu}
 $$
+
 となるため、以下のような関係が成り立つことが分かる。
+
 $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}
@@ -444,6 +563,7 @@ $$
 $$
 
 そして、元の式に $g^{k\lambda}$ をかけることにより以下の形が得られる。
+
 $$
     \dd{^2x^k}
     {s^2}+
@@ -452,7 +572,9 @@ $$
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}=0
 $$
+
 これは**第２種クリストッフェル記号**を用いて
+
 $$
     \Gamma^{k}_{\mu\nu}=
     g^{k\lambda}
@@ -467,7 +589,9 @@ $$
         {x^\lambda}
     }
 $$
+
 により、次の**測地線方程式**の形で記載される。
+
 $$
     \dd{^2x^k}
     {s^2}+
@@ -475,7 +599,9 @@ $$
     \dd{x^{\mu}}{s}
     \dd{x^{\nu}}{s}=0
 $$
+
 この式は物体がRiemann空間内を最短距離で通るということを前提にして求められるもので、例として点Aから点Bへ物体が移動するものとすると
+
 $$
     s=\int_A^B\mathrm{d}s=
     \int_A^B
@@ -485,7 +611,9 @@ $$
     \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
     \mathrm{d}t
 $$
+
 が最小となる（$\delta s=0$）ときの関係式からも確認できる。特殊相対性理論においては、$g_{\mu\nu}=\eta_{\mu\nu}$（Lorentz変換）とするとクリストッフェル記号は0となり
+
 $$
     \dd{^2x^k}
     {s^2}=0、
@@ -496,7 +624,9 @@ $$
     }=
     \sqrt{c^2-\bm{v}^2}
 $$
+
 となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
+
 $$
     \mathrm{d}\tau=
     \frac{\dot{s}}{c}\mathrm{d}t=
@@ -504,7 +634,9 @@ $$
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
     \mathrm{d}t
 $$
+
 とおくと、先程測地線方程式に $m_0c\dot{s}$ がかかっていたことを踏まえて
+
 $$
     m_0c\dot{s}
     \dd{^2x^k}{s^2}=0
@@ -517,16 +649,19 @@ $$
         {\tau}
     }
 $$
+
 というように、相対論的力学で登場した運動方程式で力を0とした式が求められることが分かる。ここでの  $p^k$ は4元運動量呼ばれており、右辺に力がある場合には $f^k$ （4元力）となる。このように、今までは速度に応じて質量が変化するものと思われてきたが、実は時間の進み方が変化していたことが分かる。
 
 
 測地線方程式において、第二項目を右辺に移項し両辺に $m_0c$ をかけると $p^k=m_0cv^k$ であるため
+
 $$
     \dd{p^k}
     {\tau}=
     -\frac{1}{m_0c}\Gamma^{k}_{\mu\nu}
     p^{\mu}p^{\nu}
 $$
+
 となるが、ここで右辺が慣性力によるものになると思われる。そこで、まずは簡単に地球上の重力を考慮して
 
 $$
