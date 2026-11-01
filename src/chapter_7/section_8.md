@@ -506,11 +506,11 @@ $$
     \pp{g_{\lambda\mu}}
     {x^\nu}=
     \pp{}{x^\nu}
-    (\bm{e}_\lambda\cdot\bm{e}_\mu)=
-    \pp{\bm{e}_\lambda}
-    {x^\nu}\cdot\bm{e}_\mu+
-    \bm{e}_\lambda\cdot
-    \pp{\bm{e}_\mu}
+    (\bm{b}_\lambda\cdot\bm{b}_\mu)=
+    \pp{\bm{b}_\lambda}
+    {x^\nu}\cdot\bm{b}_\mu+
+    \bm{b}_\lambda\cdot
+    \pp{\bm{b}_\mu}
     {x^\nu}
 $$
 
@@ -518,10 +518,10 @@ $$
 
 $$
     \Gamma_{\nu\lambda,\mu}=
-    \pp{\bm{e}_\lambda}
-    {x^\nu}\cdot\bm{e}_\mu=
-    \bm{e}_\mu\cdot
-    \pp{\bm{e}_\lambda}
+    \pp{\bm{b}_\lambda}
+    {x^\nu}\cdot\bm{b}_\mu=
+    \bm{b}_\mu\cdot
+    \pp{\bm{b}_\lambda}
     {x^\nu}
 $$
 
