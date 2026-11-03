@@ -578,14 +578,14 @@ $$
 $$
     \dd{g_{\lambda\mu}}{s}\dot{x}^\mu=
     \pp{g_{\lambda\mu}}{x^\nu}\dot{x}^\mu \dot{x}^\nu、
-    g_{\lambda\mu}g^{i\mu}=1
+    g_{\lambda\mu}g^{\lambda\mu}=1
 $$
 
 と置き換えられるため、以下の式が得られる。
 
 $$
     \dd{\dot{x}^\mu}{s}+
-    g^{i\mu}
+    g^{\lambda\mu}
     \lr{
         \pp{g_{\lambda\mu}}{x^\nu}-
         \frac{1}{2}\pp{g_{\mu\nu}}{x^\lambda}
