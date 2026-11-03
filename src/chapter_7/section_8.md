@@ -456,7 +456,7 @@ $$
 
 $$
     \pp{\mathcal{L}}{u^i}=
-    p_i+\frac{U}{c}\delta^i_0、
+    p_i+\frac{U}{c}\delta^0_i、
     \pp{\mathcal{L}}{x^i}=
     \frac{u^0}{c}\pp{U}{x^i}、
     p_i=\eta_{ij}p^j
@@ -500,74 +500,30 @@ $$
     f^3
 $$
 
-となり、4成分すべてが前回導いた運動方程式と一致する。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-上記は固有時で書いたものであるため、これを $t$ で書きなおすと以下の通りになる。
-
-$$
-    \dd{}{t}
-    \lr{
-        \pp{\mathcal{L}}{q'^i}
-    }-\pp{\mathcal{L}}{q^i}=0、
-    q'_i=\dd{q_i}{t}
-$$
-
-であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
+となり、4成分すべてが前回導いた運動方程式と一致する。ここまでのことを踏まえて、ラグランジアンにおいて $\eta_{\mu\nu}\rightarrow g_{\mu\nu}$ としてLagrange方程式を解くことで一般的な方程式が導かれるものと思われるが、重力のみに関しては慣性力と等価であるものとするとポテンシャルの部分は0になると考えられる。そこで、
 
 $$
     \mathcal{L}=
-    -m_0c^2\sqrt{1-\frac{\bm{v}^2}{c^2}}-U
-    \simeq
-    \frac{1}{2}m\bm{v}^2-(m_0c^2+U)
-$$
-
-次に、前回でも登場した計量 $g_{\mu\nu}$ により
-
-$$
-    \sqrt{1-\frac{\bm{v}^2}{c^2}}=
-    \frac{1}{c}
-    \lr{
-    \dd{s}{t}
-    }、
-    \dd{s}{t}=
-    \sqrt{
-    \eta_{\mu\nu}
-    \dd{x^\mu}{t}
-    \dd{x^\nu}{t}}
+    \frac{1}{2}m_0u_\nu u^\nu=
+    \frac{1}{2}m_0\eta_{\mu\nu}u^\mu u^\nu
     \rightarrow
-    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \mathcal{L}=
+    \frac{1}{2}m_0g_{\mu\nu}u^\mu u^\nu
 $$
 
-と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}、q=x^\lambda$ として
+と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu} u^\mu u^\nu}、q=x^\lambda$ として
 
 $$
     \pp{\mathcal{L}}
-    {\dot{x}^\lambda}=
+    { u^\lambda}=
     -m_0c
     \pp{}
-    {\dot{x}^\lambda}
+    { u^\lambda}
     \sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}=
+    g_{\mu\nu} u^\mu u^\nu}=
     -\frac{m_0c}{2\dot{s}}
-    (g_{\lambda\mu}\dot{x}^{\nu}+
-    g_{\lambda\mu}\dot{x}^{\mu})=
+    (g_{\lambda\mu} u^{\nu}+
+    g_{\lambda\mu} u^{\mu})=
     -m_0c
     \lr{
     g_{\lambda\mu}
@@ -582,7 +538,7 @@ $$
     \pp{}
     {x^\lambda}
     \sqrt{
-    g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}-
+    g_{\mu\nu} u^\mu u^\nu}-
     \pp{U}{x^\lambda}=
     -\frac{m_0c\dot{s}}{2}
     \lr{
@@ -803,7 +759,7 @@ $$
     \dd{s}{t}
     \mathrm{d}t=
     \int_A^B
-    \sqrt{g_{\mu\nu}\dot{x}^\mu\dot{x}^\nu}
+    \sqrt{g_{\mu\nu} u^\mu u^\nu}
     \mathrm{d}t
 $$
 
@@ -815,7 +771,7 @@ $$
     \dd{s}{t}=
     \sqrt{
         \eta_{\mu\nu}
-        \dot{x}^{\mu} \dot{x}^{\nu}
+         u^{\mu}  u^{\nu}
     }=
     \sqrt{c^2-\bm{v}^2}
 $$
