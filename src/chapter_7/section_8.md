@@ -558,7 +558,7 @@ $$
 となる。そして、これらを運動方程式に代入すると以下の通りになる。
 
 $$
-    \dd{}{\tau}
+    \dd{}{s}
     (m_0g_{\lambda\mu}\dot{x}^\mu)-
     \frac{1}{2}m_0
     \pp{g_{\mu\nu}}{x^\lambda}\dot{x}^\mu \dot{x}^\nu=0
@@ -567,8 +567,8 @@ $$
 この式を整理すると
 
 $$
-    g_{\lambda\mu}\dd{\dot{x}^\mu}{\tau}+
-    \dd{g_{\lambda\mu}}{\tau}\dot{x}^\mu-
+    g_{\lambda\mu}\dd{\dot{x}^\mu}{s}+
+    \dd{g_{\lambda\mu}}{s}\dot{x}^\mu-
     \frac{1}{2}
     \pp{g_{\mu\nu}}{x^\lambda}\dot{x}^\mu \dot{x}^\nu=0
 $$
@@ -576,7 +576,7 @@ $$
 となるが、ここで $g_{\lambda\mu}$ に関して
 
 $$
-    \dd{g_{\lambda\mu}}{\tau}\dot{x}^\mu=
+    \dd{g_{\lambda\mu}}{s}\dot{x}^\mu=
     \pp{g_{\lambda\mu}}{x^\nu}\dot{x}^\mu \dot{x}^\nu、
     g_{\lambda\mu}g^{i\mu}=1
 $$
@@ -584,7 +584,7 @@ $$
 と置き換えられるため、以下の式が得られる。
 
 $$
-    \dd{\dot{x}^\mu}{\tau}+
+    \dd{\dot{x}^\mu}{s}+
     g^{i\mu}
     \lr{
         \pp{g_{\lambda\mu}}{x^\nu}-
@@ -703,10 +703,10 @@ $$
     \sqrt{c^2-\bm{v}^2}
 $$
 
-となるが、ここで $s$ の時間微分に関して**固有時** $\tau$ を
+となるが、ここで $s$ の時間微分に関して**固有時** $s$ を
 
 $$
-    \mathrm{d}\tau=
+    \mathrm{d}s=
     \frac{\dot{s}}{c}\mathrm{d}t=
     \dd{s}{c}=
     \sqrt{1-\frac{\bm{v}^2}{c^2}}
@@ -719,12 +719,12 @@ $$
     m_0c\dot{s}
     \dd{^2x^k}{s^2}=0
     \rightarrow
-    \dd{p^k}{\tau}=0、
+    \dd{p^k}{s}=0、
     \lr{
         p^k=
         m_0
         \dd{x^k}
-        {\tau}
+        {s}
     }
 $$
 
@@ -735,7 +735,7 @@ $$
 
 $$
     \dd{p^k}
-    {\tau}=
+    {s}=
     -\frac{1}{m_0c}\Gamma^{k}_{\mu\nu}
     p^{\mu}p^{\nu}
 $$
