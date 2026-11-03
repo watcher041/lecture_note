@@ -537,6 +537,55 @@ $$
     \dd{x_\lambda}{s}
 $$
 
+ここまでは平坦な時空（計量 $\eta_{\mu\nu}$）で考えてきた。重力を含めるため、等価原理（任意の点の近傍で局所慣性系がとれ、そこでは自由粒子が等速直線運動をする）にもとづき、次の置き換えを**仮定する**。
+
+$$
+\eta_{\mu\nu}\ \to\ g_{\mu\nu}(x)
+$$
+
+以降、$x^\mu$ は任意の座標を表す（一般化座標 $q^\mu$ と同じ役割をもつ）。固有時は
+
+$$
+\mathrm{d}\tau=\frac1c\sqrt{g_{\mu\nu}\,\mathrm{d}x^\mu\mathrm{d}x^\nu}
+$$
+
+で与えられ、ラグランジアンは重力のみのとき（$U=0$）
+
+$$
+    \mathcal{L}=
+    \frac{1}{2}m_0\,g_{\mu\nu}(x)\,x'^\mu x'^\nu、
+    x'^\mu=\frac{\mathrm{d}x^\mu}{\mathrm{d}\tau}
+$$
+
+となる。重力以外の力があるときは、$\mathcal{L}$ に $W$ を加えればよい。運動方程式は
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}\tau}\!\left(\frac{\partial\mathcal{L}}{\partial x'^\lambda}\right)-\frac{\partial\mathcal{L}}{\partial x^\lambda}=0
+$$
+
+である。$\mathcal{L}$ は $\tau$ にあらわに依存しないので $g_{\mu\nu}x'^\mu x'^\nu$ は保存され、$\tau$ は自動的にアフィンパラメータになる。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 と置き換えて、改めて運動方程式を記述してみよう。すると、運動方程式に関して
 
 $$
