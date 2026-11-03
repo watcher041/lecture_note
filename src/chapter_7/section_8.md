@@ -255,29 +255,29 @@ $$
 
 $$
     \delta x_\mu=
-    \pp{x_\mu}{q^i}\delta q^i
+    \pp{x_\mu}{q}\delta q
 $$
 
 というようになるため、$q$ で置き換えると以下の通りとなる。
 
 $$
     \lr{
-        f^\mu\pp{x_\mu}{q^i}-
+        f^\mu\pp{x_\mu}{q}-
         \dd{p^\mu}{\tau}
-        \pp{x_\mu}{q^i}
-    }\delta q^i=0
+        \pp{x_\mu}{q}
+    }\delta q=0
 $$
 
 次に、運動量 $p^\mu$ が $m_0u^\mu$ であることから
 
 $$
     \dd{p^\mu}{\tau}
-    \pp{x_\mu}{q^i}=
+    \pp{x_\mu}{q}=
     \dd{}{\tau}
     \lr{
-        m_0u^\mu\pp{x_\mu}{q^i}
+        m_0u^\mu\pp{x_\mu}{q}
     }-
-    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q}}
 $$
 
 となるが、ここで $u_\mu$ も一般化座標 $q$ により以下の形でおく。
@@ -292,9 +292,9 @@ $$
 
 $$
     \text{(a)}\quad
-    \pp{u_\mu}{\dot q^i}=\pp{x_\mu}{q^i},\qquad
+    \pp{u_\mu}{\dot q}=\pp{x_\mu}{q},\qquad
     \text{(b)}\quad
-    \dd{}{\tau}\lr{\pp{x_\mu}{q^i}}=\pp{u_\mu}{q^i}
+    \dd{}{\tau}\lr{\pp{x_\mu}{q}}=\pp{u_\mu}{q}
 $$
 
 が成り立つことを利用して、試しに
@@ -306,22 +306,22 @@ $$
 とおくと、(a), (b) から
 
 $$
-    m_0u^\mu\pp{x_\mu}{q^i}=
-    m_0u_\mu\pp{u^\mu}{\dot q^i}=
-    \pp{T}{\dot q^i}、
-    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}=
-    m_0u_\mu\pp{u^\mu}{q^i}=\pp{T}{q^i}
+    m_0u^\mu\pp{x_\mu}{q}=
+    m_0u_\mu\pp{u^\mu}{\dot q}=
+    \pp{T}{\dot q}、
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q}}=
+    m_0u_\mu\pp{u^\mu}{q}=\pp{T}{q}
 $$
 
-となる。これらを代入して $\delta q^i$ の係数を0とおくと（$\delta q^i$ は互いに独立）、
+となる。これらを代入して $\delta q$ の係数を0とおくと（$\delta q$ は互いに独立）、
 
 $$
     \dd{}{\tau}
-    \lr{\pp{T}{\dot{q}^i}}-\pp{T}{q^i}=Q_i、
-    Q_i\equiv f^\mu\pp{x_\mu}{q^i}
+    \lr{\pp{T}{\dot{q}}}-\pp{T}{q}=Q、
+    Q\equiv f^\mu\pp{x_\mu}{q}
 $$
 
-が得られる。$Q_i$ は一般化力である。次に、力が $U(x^\mu)$（$x^0=ct$ を含む）から来る場合を考える。$\bm{F}=-\nabla U$ のとき、
+が得られる。$Q$ は一般化力である。次に、力が $U(x^\mu)$（$x^0=ct$ を含む）から来る場合を考える。$\bm{F}=-\nabla U$ のとき、
 
 $$
     f^\mu=
@@ -333,7 +333,7 @@ $$
 であり、これを代入すると
 
 $$ 
-    Q_i=
+    Q=
     \gamma\LR{
         -\frac{1}{c}
         \lr{
@@ -341,17 +341,17 @@ $$
             \dd{x^2}{t}\pp{U}{x^2}+
             \dd{x^3}{t}\pp{U}{x^3}
         }
-        \pp{x^0}{q^i}+
-        \pp{U}{x^1}\pp{x^1}{q^i}+
-        \pp{U}{x^2}\pp{x^2}{q^i}+
-        \pp{U}{x^3}\pp{x^3}{q^i}
+        \pp{x^0}{q}+
+        \pp{U}{x^1}\pp{x^1}{q}+
+        \pp{U}{x^2}\pp{x^2}{q}+
+        \pp{U}{x^3}\pp{x^3}{q}
     }
 $$
 
 となるが、ここで第0成分に関して
 
 $$
-    \pp{U}{x^0}\pp{x^0}{q^i}-\pp{U}{x^0}\pp{x^0}{q^i}=0
+    \pp{U}{x^0}\pp{x^0}{q}-\pp{U}{x^0}\pp{x^0}{q}=0
 $$
 
 を加えることで、第１項目は
@@ -365,43 +365,43 @@ $$
             \dd{x^3}{t}\pp{U}{x^3}+
             \pp{U}{t}
         }
-        \pp{x^0}{q^i}
+        \pp{x^0}{q}
     }=
     -\frac{1}{c}
     \dd{U}{\tau}
-    \pp{x^0}{q^i}
+    \pp{x^0}{q}
 $$
 
 となり、第２項目は
 
 $$
     \gamma\LR{
-        \pp{U}{x^1}\pp{x^1}{q^i}+
-        \pp{U}{x^2}\pp{x^2}{q^i}+
-        \pp{U}{x^3}\pp{x^3}{q^i}+
-        \pp{U}{x^0}\pp{x^0}{q^i}
+        \pp{U}{x^1}\pp{x^1}{q}+
+        \pp{U}{x^2}\pp{x^2}{q}+
+        \pp{U}{x^3}\pp{x^3}{q}+
+        \pp{U}{x^0}\pp{x^0}{q}
     }=
     \gamma
-    \pp{U}{x^\mu}\pp{x^\mu}{q^i}=
+    \pp{U}{x^\mu}\pp{x^\mu}{q}=
     \gamma
-    \pp{U}{q^i}
+    \pp{U}{q}
 $$
 
 となるため、以下のように整理される。
 
 $$
-    Q_i=
-    \gamma\pp{U}{q^i}-
-    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^i}
+    Q=
+    \gamma\pp{U}{q}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q}
 $$
 
 ここで、恒等式として
 
 $$
     \text{(c)}\quad
-    \pp{u^0}{\dot q^i}=\pp{x^0}{q^i},\qquad
+    \pp{u^0}{\dot q}=\pp{x^0}{q},\qquad
     \text{(d)}\quad
-    \dd{}{\tau}\lr{\pp{x^0}{q^i}}=\pp{u^0}{q^i}
+    \dd{}{\tau}\lr{\pp{x^0}{q}}=\pp{u^0}{q}
 $$
 
 が成り立つので、試しに  
@@ -413,24 +413,24 @@ $$
 を考えると、(c), (d) を使って
 
 $$
-    \pp{W}{q^i}-\dd{}{\tau}
-    \lr{\pp{W}{\dot q^i}}=
-    \frac{u^0}{c}\pp{U}{q^i}-
-    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^i}
+    \pp{W}{q}-\dd{}{\tau}
+    \lr{\pp{W}{\dot q}}=
+    \frac{u^0}{c}\pp{U}{q}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q}
 $$
 
-となり、右辺は $Q_i$ に一致する。すなわち
+となり、右辺は $Q$ に一致する。すなわち
 
 $$
-Q_i=\pp{W}{q^i}-\dd{}{\tau}\lr{\pp{W}{\dot q^i}}
+Q=\pp{W}{q}-\dd{}{\tau}\lr{\pp{W}{\dot q}}
 $$
 
 である。これを左辺に移すと
 
 $$
     \dd{}{\tau}
-    \lr{\pp{(T+W)}{\dot q^i}}-
-    \pp{(T+W)}{q^i}=0
+    \lr{\pp{(T+W)}{\dot q}}-
+    \pp{(T+W)}{q}=0
 $$
 
 となる。したがって、ラグランジアンは
@@ -446,8 +446,8 @@ $$
 $$
     \dd{}{\tau}
     \lr{
-        \pp{\mathcal{L}}{\dot{q}^i}
-    }-\pp{\mathcal{L}}{q^i}=0、
+        \pp{\mathcal{L}}{\dot{q}}
+    }-\pp{\mathcal{L}}{q}=0、
     \dot{q}_i=
     \dd{q_i}{\tau}
 $$
