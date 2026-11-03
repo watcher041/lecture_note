@@ -335,25 +335,88 @@ $$
 $$ 
     Q_i=
     \gamma\LR{
-
+        -\frac{1}{c}
+        \lr{
+            \dd{x^1}{t}\pp{U}{x^1}+
+            \dd{x^2}{t}\pp{U}{x^2}+
+            \dd{x^3}{t}\pp{U}{x^3}
+        }
+        \pp{x^0}{q^i}+
+        \pp{U}{x^1}\pp{x^1}{q^i}+
+        \pp{U}{x^2}\pp{x^2}{q^i}+
+        \pp{U}{x^3}\pp{x^3}{q^i}
     }
 $$
 
-$$
-Q_i=\frac{u^0}{c}\pp{U}{x^\mu}\pp{x^\mu}{q^i}-\frac1c\dd{U}{\tau}\pp{x^0}{q^i}
-$$
-
-と書ける。ここで
+となるが、ここで第0成分に関して
 
 $$
-W=\frac Uc\,u^0
+    \pp{U}{x^0}\pp{x^0}{q^i}-\pp{U}{x^0}\pp{x^0}{q^i}=0
 $$
 
-を考えると、(a), (b) を使って
+を加えることで、第１項目は
 
 $$
-\pp{W}{q^i}-\dd{}{\tau}\lr{\pp{W}{\dot q^i}}
-=\frac{u^0}{c}\pp{U}{q^i}-\frac1c\dd{U}{\tau}\pp{x^0}{q^i}
+    \gamma\LR{
+        -\frac{1}{c}
+        \lr{
+            \dd{x^1}{t}\pp{U}{x^1}+
+            \dd{x^2}{t}\pp{U}{x^2}+
+            \dd{x^3}{t}\pp{U}{x^3}+
+            \pp{U}{t}
+        }
+        \pp{x^0}{q^i}
+    }=
+    -\frac{1}{c}
+    \dd{U}{\tau}
+    \pp{x^0}{q^i}
+$$
+
+となり、第２項目は
+
+$$
+    \gamma\LR{
+        \pp{U}{x^1}\pp{x^1}{q^i}+
+        \pp{U}{x^2}\pp{x^2}{q^i}+
+        \pp{U}{x^3}\pp{x^3}{q^i}+
+        \pp{U}{x^0}\pp{x^0}{q^i}
+    }=
+    \gamma
+    \pp{U}{x^\mu}\pp{x^\mu}{q^i}=
+    \gamma
+    \pp{U}{q^i}
+$$
+
+となるため、以下のように整理される。
+
+$$
+    Q_i=
+    \gamma\pp{U}{q^i}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^i}
+$$
+
+ここで、恒等式として
+
+$$
+    \text{(c)}\quad
+    \pp{u^0}{\dot q^i}=\pp{x^0}{q^i},\qquad
+    \text{(d)}\quad
+    \dd{}{\tau}\lr{\pp{x^0}{q^i}}=\pp{u^0}{q^i}
+$$
+
+が成り立つので、試しに  
+
+$$
+    W=\gamma U=\frac{U}{c}u^0
+$$
+
+を考えると、(c), (d) を使って
+
+$$
+    \pp{W}{q^i}-\dd{}{\tau}
+    \lr{\pp{W}{\dot q^i}}=
+    \frac{u^0}{c}\pp{U}{q^i}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^i}
 $$
 
 となり、右辺は $Q_i$ に一致する。すなわち
@@ -389,31 +452,72 @@ $$
     \dd{q_i}{\tau}
 $$
 
-で書ける。拘束 $u_\nu u^\nu=c^2$ は、$\partial/\partial\dot q^i$ を取ったあとで課す。
-
-**各成分の確認**
-
-$q^\mu=x^\mu$ とおくと、$\frac{x^\mu}{q^i}=\delta^\mu_i$ で、
+で書ける。確認のため、$q=x$ とおくと
 
 $$
-    \frac{\mathcal{L}}{u^\mu}=
-    p_\mu+\frac Uc\,\delta^0_\mu,\qquad
-    \frac{\mathcal{L}}{x^\mu}=
-    \frac{u^0}{c}\pp{U}{x^\mu}
+    \pp{\mathcal{L}}{u^i}=
+    p_i+\frac{U}{c}\delta^i_0、
+    \pp{\mathcal{L}}{x^i}=
+    \frac{u^0}{c}\pp{U}{x^i}、
+    p_i=\eta_{ij}p^j
 $$
 
 となる。これを運動方程式に入れると
 
 $$
-\dd{p_\mu}{\tau}=\frac{u^0}{c}\pp{U}{x^\mu}-\frac1c\dd{U}{\tau}\,\delta^0_\mu
+    \dd{p_0}{\tau}=
+    \dd{p^0}{\tau}=
+    \frac{u^0}{c}\pp{U}{x^0}-
+    \frac{1}{c}\dd{U}{\tau}=
+    \gamma\lr{\frac{\bm{v}\cdot -\nabla U}{c}}=
+    f^0
+$$
+$$
+    \dd{p_1}{\tau}=
+    -\dd{p^1}{\tau}=
+    \frac{u^0}{c}\pp{U}{x^1}
+    \rightarrow
+    \dd{p^1}{\tau}=
+    -\frac{u^0}{c}\pp{U}{x^1}=
+    f^1
+$$
+$$
+    \dd{p_2}{\tau}=
+    -\dd{p^2}{\tau}=
+    \frac{u^0}{c}\pp{U}{x^2}
+    \rightarrow
+    \dd{p^2}{\tau}=
+    -\frac{u^0}{c}\pp{U}{x^2}=
+    f^2
+$$
+$$
+    \dd{p^3}{\tau}=
+    -\dd{p^3}{\tau}=
+    \frac{u^0}{c}\pp{U}{x^3}
+    \rightarrow
+    \dd{p^3}{\tau}=
+    -\frac{u^0}{c}\pp{U}{x^3}=
+    f^3
 $$
 
-である。
+となり、4成分すべてが前回導いた運動方程式と一致する。
 
-- 空間成分：$\frac{p^i}{\tau}=-\gamma\frac{U}{x^i}=f^i$
-- 第0成分：$\frac{p^0}{\tau}=\frac{\gamma}{c}\frac{U}{t}-\frac{\gamma}{c}\lr{\frac{U}{t}+\bm v\cdot\nabla U}=-\frac{\gamma}{c}\,\bm v\cdot\nabla U=f^0$
 
-となり、4成分すべてが $\frac{p^\mu}{\tau}=f^\mu$ と一致する。第0成分は、$p^0=E/c$ なので仕事とエネルギーの関係 $\frac{E}{t}=\bm F\cdot\bm v$ を表している。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 上記は固有時で書いたものであるため、これを $t$ で書きなおすと以下の通りになる。
 
@@ -424,48 +528,6 @@ $$
     }-\pp{\mathcal{L}}{q^i}=0、
     q'_i=\dd{q_i}{t}
 $$
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 であるから、ラグランジアンが以下の通りになることが分かる（静止エネルギーがポテンシャルエネルギーの一部のような振る舞いをする）。
 
