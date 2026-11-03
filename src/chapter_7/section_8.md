@@ -569,7 +569,7 @@ $$
 ここで**第１種クリストフェル記号**を
 
 $$
-    \Gamma_{\nu\lambda,\mu}=
+    \Gamma_{\nu i,\mu}=
     \pp{\bm{b}^i}
     {x^\nu}\cdot\bm{b}_\mu=
     \bm{b}_\mu\cdot
@@ -580,18 +580,18 @@ $$
 というように定義することで、
 
 $$
-    \pp{g_{\lambda\mu}}
+    \pp{g_{i\mu}}
     {x^\nu}=
-    \Gamma_{\nu\lambda,\mu}+
+    \Gamma_{\nu i,\mu}+
     \Gamma_{\nu\mu,\lambda}
 $$
 
 となる。同様に、その他の偏微分についても
 
 $$
-    \pp{g_{\lambda\nu}}
+    \pp{g_{i\nu}}
     {x^\mu}=
-    \Gamma_{\mu\lambda,\nu}+
+    \Gamma_{\mu i,\nu}+
     \Gamma_{\mu\nu,\lambda}、
     \pp{g_{\mu\nu}}
     {x^i}=
@@ -605,9 +605,9 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}
     \lr{
-        \pp{g_{\lambda\mu}}
+        \pp{g_{i\mu}}
         {x^\nu}+
-        \pp{g_{\lambda\nu}}
+        \pp{g_{i\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
         {x^i}
@@ -633,9 +633,9 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}g^{k\lambda}
     \lr{
-        \pp{g_{\lambda\mu}}
+        \pp{g_{i\mu}}
         {x^\nu}+
-        \pp{g_{\lambda\nu}}
+        \pp{g_{i\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
         {x^i}
