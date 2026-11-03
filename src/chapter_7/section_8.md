@@ -455,10 +455,10 @@ $$
 で書ける。確認のため、$q=x$ とおくと
 
 $$
-    \pp{\mathcal{L}}{u^i}=
+    \pp{\mathcal{L}}{x^\lambda}=
     p_i+\frac{U}{c}\delta^0_i、
-    \pp{\mathcal{L}}{x^i}=
-    \frac{u^0}{c}\pp{U}{x^i}、
+    \pp{\mathcal{L}}{x^\lambda}=
+    \frac{u^0}{c}\pp{U}{x^\lambda}、
     p_i=\eta_{ij}p^j
 $$
 
@@ -500,7 +500,19 @@ $$
     f^3
 $$
 
-となり、4成分すべてが前回導いた運動方程式と一致する。ここまでのことを踏まえて、ラグランジアンにおいて $\eta_{\mu\nu}\rightarrow g_{\mu\nu}$ としてLagrange方程式を解くことで一般的な方程式が導かれるものと思われるが、重力のみに関しては慣性力と等価であるものとするとポテンシャルの部分は0になると考えられる。そこで、
+となり、4成分すべてが前回導いた運動方程式と一致する。ここまでのことを踏まえて、ラグランジアンにおいて $\eta_{\mu\nu}\rightarrow g_{\mu\nu}$ としてLagrange方程式を解くことで一般的な方程式が導かれるものと思われるため、まず固有時について
+
+$$
+    \mathrm{d}\tau=
+    \frac{1}{c}
+    \sqrt{\eta_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu}
+    \rightarrow
+    \mathrm{d}s=
+    \frac{1}{c}
+    \sqrt{g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu}
+$$
+
+というようにパラメータ $s$ におきかえる。そして、ラグランジアンに関して
 
 $$
     \mathcal{L}=
@@ -508,62 +520,76 @@ $$
     \frac{1}{2}m_0\eta_{\mu\nu}u^\mu u^\nu
     \rightarrow
     \mathcal{L}=
-    \frac{1}{2}m_0g_{\mu\nu}u^\mu u^\nu
+    \frac{1}{2}m_0g_{\mu\nu}
+    \dd{x^\mu}{s}\dd{x^\nu}{s}
+$$
+$$
+    \dd{}{\tau}
+    \lr{
+        \pp{\mathcal{L}}{\dot{q}^\lambda}
+    }-\pp{\mathcal{L}}{q^\lambda}=0
+    \rightarrow
+    \dd{}{s}
+    \lr{
+        \pp{\mathcal{L}}{\dot{x}^\lambda}
+    }-\pp{\mathcal{L}}{x^\lambda}=0、
+    \dot{x}_\lambda=
+    \dd{x_\lambda}{s}
 $$
 
-と置き換えて、改めて運動方程式を記述してみよう。まず、$q=x$ として
+と置き換えて、改めて運動方程式を記述してみよう。すると、運動方程式に関して
 
 $$
-    \pp{\mathcal{L}}{u^i}=
+    \pp{\mathcal{L}}{x^\lambda}=
     \frac{1}{2}m_0
-    \pp{}{u^i}
-    (g_{\mu\nu}u^\mu u^\nu)=
-    m_0g_{i\mu}u^\mu
+    \pp{}{x^\lambda}
+    (g_{\mu\nu}\dot{x}^\mu \dot{x}^\nu)=
+    m_0g_{\lambda\mu}\dot{x}^\mu
 $$
 $$
-    \pp{\mathcal{L}}{x^i}=
+    \pp{\mathcal{L}}{x^\lambda}=
     \frac{1}{2}m_0
-    \pp{}{x^i}
-    (g_{\mu\nu}u^\mu u^\nu)=
+    \pp{}{x^\lambda}
+    (g_{\mu\nu}\dot{x}^\mu \dot{x}^\nu)=
     \frac{1}{2}m_0
-    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu
+    \pp{g_{\mu\nu}}{x^\lambda}\dot{x}^\mu \dot{x}^\nu
 $$
 
 となる。そして、これらを運動方程式に代入すると以下の通りになる。
 
 $$
     \dd{}{\tau}
-    (m_0g_{i\mu}u^\mu)-
+    (m_0g_{\lambda\mu}\dot{x}^\mu)-
     \frac{1}{2}m_0
-    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu=0
+    \pp{g_{\mu\nu}}{x^\lambda}\dot{x}^\mu \dot{x}^\nu=0
 $$
 
 この式を整理すると
 
 $$
-    g_{i\mu}\dd{u^\mu}{\tau}+
-    \dd{g_{i\mu}}{\tau}u^\mu-
+    g_{\lambda\mu}\dd{\dot{x}^\mu}{\tau}+
+    \dd{g_{\lambda\mu}}{\tau}\dot{x}^\mu-
     \frac{1}{2}
-    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu=0
+    \pp{g_{\mu\nu}}{x^\lambda}\dot{x}^\mu \dot{x}^\nu=0
 $$
 
-となるが、ここで $g_{i\mu}$ に関して
+となるが、ここで $g_{\lambda\mu}$ に関して
 
 $$
-    \dd{g_{i\mu}}{\tau}u^\mu=
-    \pp{g_{i\mu}}{x^\nu}u^\mu u^\nu、
-    g_{i\mu}g^{i\mu}=1
+    \dd{g_{\lambda\mu}}{\tau}\dot{x}^\mu=
+    \pp{g_{\lambda\mu}}{x^\nu}\dot{x}^\mu \dot{x}^\nu、
+    g_{\lambda\mu}g^{i\mu}=1
 $$
 
 と置き換えられるため、以下の式が得られる。
 
 $$
-    \dd{u^\mu}{\tau}+
+    \dd{\dot{x}^\mu}{\tau}+
     g^{i\mu}
     \lr{
-        \pp{g_{i\mu}}{x^\nu}-
-        \frac{1}{2}\pp{g_{\mu\nu}}{x^i}
-    }u^\mu u^\nu=0
+        \pp{g_{\lambda\mu}}{x^\nu}-
+        \frac{1}{2}\pp{g_{\mu\nu}}{x^\lambda}
+    }\dot{x}^\mu \dot{x}^\nu=0
 $$
 
 ここで**第１種クリストフェル記号**を
@@ -580,7 +606,7 @@ $$
 というように定義することで、
 
 $$
-    \pp{g_{i\mu}}
+    \pp{g_{\lambda\mu}}
     {x^\nu}=
     \Gamma_{\nu i,\mu}+
     \Gamma_{\nu\mu,\lambda}
@@ -589,12 +615,12 @@ $$
 となる。同様に、その他の偏微分についても
 
 $$
-    \pp{g_{i\nu}}
+    \pp{g_{\lambda\nu}}
     {x^\mu}=
     \Gamma_{\mu i,\nu}+
     \Gamma_{\mu\nu,\lambda}、
     \pp{g_{\mu\nu}}
-    {x^i}=
+    {x^\lambda}=
     \Gamma_{\lambda\mu,\nu}+
     \Gamma_{\lambda\nu,\mu}
 $$
@@ -605,12 +631,12 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}
     \lr{
-        \pp{g_{i\mu}}
+        \pp{g_{\lambda\mu}}
         {x^\nu}+
-        \pp{g_{i\nu}}
+        \pp{g_{\lambda\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
-        {x^i}
+        {x^\lambda}
     }
 $$
 
@@ -633,12 +659,12 @@ $$
     \Gamma_{\mu\nu,\lambda}=
     \frac{1}{2}g^{k\lambda}
     \lr{
-        \pp{g_{i\mu}}
+        \pp{g_{\lambda\mu}}
         {x^\nu}+
-        \pp{g_{i\nu}}
+        \pp{g_{\lambda\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
-        {x^i}
+        {x^\lambda}
     }
 $$
 
@@ -660,7 +686,7 @@ $$
     \dd{s}{t}
     \mathrm{d}t=
     \int_A^B
-    \sqrt{g_{\mu\nu} u^\mu u^\nu}
+    \sqrt{g_{\mu\nu} \dot{x}^\mu \dot{x}^\nu}
     \mathrm{d}t
 $$
 
