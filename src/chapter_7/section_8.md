@@ -289,10 +289,12 @@ $$
     }\delta q^i=0
 $$
 
-となる。ここで $u^\mu$ も一般化座標 $q$ により
+となる。ここで $u_\mu$ も一般化座標 $q$ により
 
 $$
-u^\mu=\dd{x^\mu}{\tau}=\pp{x^\mu}{q^j}\dot q^j
+    u_\mu=
+    \dd{x_\mu}{\tau}=\pp{x_\mu}{q^j}\dot{q}^j、
+    \dot{q}^j=\dd{q^j}{\tau}
 $$
 
 である。これから次の2つの恒等式が成り立つ。
