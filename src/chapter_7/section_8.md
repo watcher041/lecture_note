@@ -511,168 +511,69 @@ $$
     \frac{1}{2}m_0g_{\mu\nu}u^\mu u^\nu
 $$
 
-と置き換えて、改めて運動方程式を記述すると $\dot{s}=\sqrt{g_{\mu\nu} u^\mu u^\nu}、q=x^\lambda$ として
+と置き換えて、改めて運動方程式を記述してみよう。まず、$q=x$ として
 
 $$
-    \pp{\mathcal{L}}
-    { u^\lambda}=
-    -m_0c
-    \pp{}
-    { u^\lambda}
-    \sqrt{
-    g_{\mu\nu} u^\mu u^\nu}=
-    -\frac{m_0c}{2\dot{s}}
-    (g_{\lambda\mu} u^{\nu}+
-    g_{\lambda\mu} u^{\mu})=
-    -m_0c
-    \lr{
-    g_{\lambda\mu}
-    \dd{x^{\mu}}
-    {s}
-    }
+    \pp{\mathcal{L}}{u^i}=
+    \frac{1}{2}m_0
+    \pp{}{u^i}
+    (g_{\mu\nu}u^\mu u^\nu)=
+    m_0g_{i\mu}u^\mu
 $$
 $$
-    \pp{\mathcal{L}}
-    {x^\lambda}=
-    -m_0c
-    \pp{}
-    {x^\lambda}
-    \sqrt{
-    g_{\mu\nu} u^\mu u^\nu}-
-    \pp{U}{x^\lambda}=
-    -\frac{m_0c\dot{s}}{2}
-    \lr{
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-        \dd{x^{\mu}}
-        {s}
-        \dd{x^{\nu}}
-        {s}
-    }-
-    \pp{U}{x^\lambda}
+    \pp{\mathcal{L}}{x^i}=
+    \frac{1}{2}m_0
+    \pp{}{x^i}
+    (g_{\mu\nu}u^\mu u^\nu)=
+    \frac{1}{2}m_0
+    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu
 $$
 
-となる（ここで $g_{\mu\nu}=g_{\nu\mu}$ を利用している）。
-以上の結果を上記の運動方程式に代入すると以下のような形になる。
+となる。そして、これらを運動方程式に代入すると以下の通りになる。
 
 $$
-    m_0c\dot{s}
-    \LR{
-    \dd{g_{\lambda\mu}}
-    {s}
-    \dd{x^{\mu}}
-    {s}+
-    g_{\lambda\mu}
-    \dd{^2x^{\mu}}
-    {s^2}-
+    \dd{}{\tau}
+    (m_0g_{i\mu}u^\mu)-
+    \frac{1}{2}m_0
+    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu=0
+$$
+
+この式を整理すると
+
+$$
+    g_{i\mu}\dd{u^\mu}{\tau}+
+    \dd{g_{i\mu}}{\tau}u^\mu-
     \frac{1}{2}
+    \pp{g_{\mu\nu}}{x^i}u^\mu u^\nu=0
+$$
+
+となるが、ここで $g_{i\mu}$ に関して
+
+$$
+    \dd{g_{i\mu}}{\tau}u^\mu=
+    \pp{g_{i\mu}}{x^\nu}u^\mu u^\nu、
+    g_{i\mu}g^{i\mu}=1
+$$
+
+と置き換えられるため、以下の式が得られる。
+
+$$
+    \dd{u^\mu}{\tau}+
+    g^{i\mu}
     \lr{
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-        \dd{x^{\mu}}
-        {s}
-        \dd{x^{\nu}}
-        {s}
-    }}-
-    \pp{U}{x^\lambda}=0
+        \pp{g_{i\mu}}{x^\nu}-
+        \frac{1}{2}\pp{g_{\mu\nu}}{x^i}
+    }u^\mu u^\nu=0
 $$
 
-ここで、計量に関しての微分が
-
-$$
-    \dd{g_{\lambda\mu}}
-    {s}=
-    \pp{g_{\lambda\mu}}
-    {x^\nu}
-    \dd{x^\nu}
-    {s}
-$$
-
-であるため、これを踏まえて整理すると次の通りになる。
-
-$$
-    m_0c\dot{s}
-    \LR{
-    g_{\lambda\mu}
-    \dd{^2x^{\mu}}
-    {s^2}+
-    \lr{
-        \pp{g_{\lambda\mu}}
-        {x^\nu}-
-        \frac{1}{2}
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-    }
-    \dd{x^{\mu}}{s}
-    \dd{x^{\nu}}{s}
-    }-
-    \pp{U}{x^\lambda}=0
-$$
-
-仮に外部からの影響がなく（ $U=0$ ）、 $\dot{s}\neq 0$ であることを踏まえると、
-
-$$
-    g_{\lambda\mu}
-    \dd{^2x^{\mu}}
-    {s^2}+
-    \lr{
-        \pp{g_{\lambda\mu}}
-        {x^\nu}-
-        \frac{1}{2}
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-    }
-    \dd{x^{\mu}}{s}
-    \dd{x^{\nu}}{s}=0
-$$
-
-となるわけだが、ここで以下のように変形する。
-
-$$
-    \lr{
-        \pp{g_{\lambda\mu}}
-        {x^\nu}-
-        \frac{1}{2}
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-    }
-    \dd{x^{\mu}}{s}
-    \dd{x^{\nu}}{s}=
-    \frac{1}{2}
-    \lr{
-        \pp{g_{\lambda\mu}}
-        {x^\nu}+
-        \pp{g_{\lambda\nu}}
-        {x^\mu}-
-        \pp{g_{\mu\nu}}
-        {x^\lambda}
-    }
-    \dd{x^{\mu}}{s}
-    \dd{x^{\nu}}{s}
-$$
-
-そして、計量の微分を展開してみると
-
-$$
-    \pp{g_{\lambda\mu}}
-    {x^\nu}=
-    \pp{}{x^\nu}
-    (\bm{b}_\lambda\cdot\bm{b}_\mu)=
-    \pp{\bm{b}_\lambda}
-    {x^\nu}\cdot\bm{b}_\mu+
-    \bm{b}_\lambda\cdot
-    \pp{\bm{b}_\mu}
-    {x^\nu}
-$$
-
-であり、ここで**第１種クリストフェル記号**を
+ここで**第１種クリストフェル記号**を
 
 $$
     \Gamma_{\nu\lambda,\mu}=
-    \pp{\bm{b}_\lambda}
+    \pp{\bm{b}^i}
     {x^\nu}\cdot\bm{b}_\mu=
     \bm{b}_\mu\cdot
-    \pp{\bm{b}_\lambda}
+    \pp{\bm{b}^i}
     {x^\nu}
 $$
 
@@ -693,7 +594,7 @@ $$
     \Gamma_{\mu\lambda,\nu}+
     \Gamma_{\mu\nu,\lambda}、
     \pp{g_{\mu\nu}}
-    {x^\lambda}=
+    {x^i}=
     \Gamma_{\lambda\mu,\nu}+
     \Gamma_{\lambda\nu,\mu}
 $$
@@ -709,7 +610,7 @@ $$
         \pp{g_{\lambda\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
-        {x^\lambda}
+        {x^i}
     }
 $$
 
@@ -737,7 +638,7 @@ $$
         \pp{g_{\lambda\nu}}
         {x^\mu}-
         \pp{g_{\mu\nu}}
-        {x^\lambda}
+        {x^i}
     }
 $$
 
