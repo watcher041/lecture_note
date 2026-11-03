@@ -170,10 +170,10 @@ $$
 というように **4元力** $f^\mu$ で表記される。分かりやすいように $(w,x,y,z)$ の表記にしてみると、まず4元速度は
 
 $$
-    u^0 = \frac{c}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
-    u^1 = \frac{v_x}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
-    u^2 = \frac{v_y}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}、
-    u^3 = \frac{v_z}{\sqrt{1-\dfrac{\bm{v}^2}{c^2}}}
+    u^0 = \frac{c}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    u^1 = \frac{v_x}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    u^2 = \frac{v_y}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
+    u^3 = \frac{v_z}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}
 $$
 
 となる。したがって 4元運動量は
@@ -221,7 +221,241 @@ $$
     \dd{x^\mu}{\tau}
 $$
 
-と表記されることになるが、この形はあくまでLorentz変換の範囲のもので一般的な加速度系では成り立たない。そこで、座標のとり方によらない形で運動方程式を扱うため、一度解析力学の形に変更してみる。解析力学において運動方程式は、ラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
+と表記されることになるが、この形はあくまでLorentz変換の範囲のもので一般的な加速度系では成り立たない。そこで、座標のとり方によらない形で運動方程式を扱うため、一度解析力学の形に変更してみる。通常の力学の仮想変位は、時刻を止めたまま位置だけをずらす変位で、$\delta t=0$ である。ここでは時刻も世界線の一部なので、$\tau$ を止めたまま世界線全体を $x^\mu\to x^\mu+\delta x^\mu$ とずらす。このとき $\delta x^0=c\,\delta t\neq0$ も許される（時間が変化することに注意）。運動方程式は4元ベクトルの式なので、任意の $\delta x^\mu$ に対して
+
+$$
+    \lr{f^\mu-\dd{p^\mu}{\tau}}\delta x_\mu=0、
+    \delta x_\mu=\eta_{\mu\nu}\delta x^\nu
+$$
+
+が成り立つ。各内積の形を展開すると
+
+$$
+    f^\mu\delta x_\mu=
+    f^0\delta x^0-
+    (f^1\delta x^1+f^2\delta x^2+f^3\delta x^3)=
+    \bm{f}\cdot(\bm{v}\delta t - \delta\bm{r})
+$$
+$$
+    \dd{p^\mu}{\tau}
+    \delta x_\mu=
+    \dd{p^0}{\tau}\delta x^0-
+    \lr{
+        \dd{p^1}{\tau}\delta x^1+
+        \dd{p^2}{\tau}\delta x^2+
+        \dd{p^3}{\tau}\delta x^3
+    }=
+    \lr{
+        \dd{E_r}{\tau}\delta t-
+        \dd{\bm{p}}{\tau}\cdot\delta\bm{r}
+    }
+$$
+
+となり、$\delta t=0$ なら3次元の仮想仕事に一致する。それを踏まえ、まず $x_\mu$ を一般化座標 $q$ で表すと
+
+$$
+    \delta x_\mu=
+    \pp{x_\mu}{q^i}\delta q^i
+$$
+
+というようになるため、$q$ で置き換えると以下の通りとなる。
+
+$$
+    \lr{
+        f^\mu\pp{x_\mu}{q^i}-
+        \dd{p^\mu}{\tau}
+        \pp{x_\mu}{q^i}
+    }\delta q^i=0
+$$
+
+次に、運動量が $m_0u^\mu$ であることから
+
+$$
+    \dd{p^\mu}{\tau}
+    \pp{x_\mu}{q^i}=
+    \dd{}{\tau}
+    \lr{
+        m_0u^\mu\pp{x_\mu}{q^i}
+    }-
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}
+$$
+
+となるため、これをもとの式に代入すると
+
+$$
+    \LR{
+        f^\mu\pp{x_\mu}{q^i}-
+        \dd{}{\tau}\lr{m_0u^\mu\pp{x_\mu}{q^i}}+m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}
+    }\delta q^i=0
+$$
+
+となる。ここで $u^\mu$ も一般化座標 $q$ により
+
+$$
+u^\mu=\dd{x^\mu}{\tau}=\pp{x^\mu}{q^j}\dot q^j
+$$
+
+である。これから次の2つの恒等式が成り立つ。
+
+$$
+    \text{(a)}\quad
+    \pp{u_\mu}{\dot q^i}=\pp{x_\mu}{q^i},\qquad
+    \text{(b)}\quad
+    \dd{}{\tau}\lr{\pp{x_\mu}{q^i}}=\pp{u_\mu}{q^i}
+$$
+
+このことから、試しに
+
+$$
+    T=\frac{1}{2}m_0u_\nu u^\nu
+$$
+
+とおくと、(a), (b) から
+
+$$
+    m_0u^\mu\pp{x_\mu}{q^i}=
+    m_0u_\mu\pp{u^\mu}{\dot q^i}=
+    \pp{T}{\dot q^i}、
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}=
+    m_0u_\mu\pp{u^\mu}{q^i}=\pp{T}{q^i}
+$$
+
+となる。ここで $u_\nu u^\nu=c^2$ はまだ代入せず、$T$ を $q^i$ と $\dot q^i$ の関数として微分している。これらを代入して $\delta q^i$ の係数を0とおくと（$\delta q^i$ は互いに独立）、
+
+$$
+    \dd{}{\tau}
+    \lr{\pp{T}{\dot{q}^i}}-\pp{T}{q^i}=Q_i、
+    Q_i\equiv f^\mu\pp{x_\mu}{q^i}
+$$
+
+が得られる。$Q_i$ は一般化力である。次に、力が $U(x^\mu)$（$x^0=ct$ を含む）から来る場合を考える。$\bm{F}=-\nabla U$ のとき、
+
+$$
+    f^\mu=
+    \gamma\lr{
+        -\frac{\bm{v}\cdot\nabla U}{c},\ -\nabla U
+    }
+$$
+
+であり、$\frac{U}{\tau}=\frac{U}{x^\nu}u^\nu$ を使うと
+
+$$
+Q_i=\frac{u^0}{c}\pp{U}{x^\mu}\pp{x^\mu}{q^i}-\frac1c\dd{U}{\tau}\pp{x^0}{q^i}
+$$
+
+と書ける。ここで
+
+$$
+W=\frac Uc\,u^0
+$$
+
+を考えると、(a), (b) を使って
+
+$$
+\pp{W}{q^i}-\dd{}{\tau}\lr{\pp{W}{\dot q^i}}
+=\frac{u^0}{c}\pp{U}{q^i}-\frac1c\dd{U}{\tau}\pp{x^0}{q^i}
+$$
+
+となり、右辺は $Q_i$ に一致する。すなわち
+
+$$
+Q_i=\pp{W}{q^i}-\dd{}{\tau}\lr{\pp{W}{\dot q^i}}
+$$
+
+である。これを左辺に移すと
+
+$$
+\dd{}{\tau}\lr{\frac{(m_0T+W)}{\dot q^i}}-\frac{(m_0T+W)}{q^i}=0
+$$
+
+となる。したがって、ラグランジアンは
+
+$$
+    \mathcal{L}=
+    T+W=
+    \frac{1}{2}m_0u_\nu u^\nu+\frac Uc\,u^0
+$$
+
+であり、運動方程式は一般化座標のとり方によらない形
+
+$$
+    \dd{}{\tau}
+    \lr{
+        \pp{\mathcal{L}}{\dot{q}^i}
+    }-\pp{\mathcal{L}}{q^i}=0
+$$
+
+で書ける。拘束 $u_\nu u^\nu=c^2$ は、$\partial/\partial\dot q^i$ を取ったあとで課す。
+
+**各成分の確認**
+
+$q^\mu=x^\mu$ とおくと、$\frac{x^\mu}{q^i}=\delta^\mu_i$ で、
+
+$$
+\frac{\mathcal{L}}{u^\mu}=p_\mu+\frac Uc\,\delta^0_\mu,\qquad
+\frac{\mathcal{L}}{x^\mu}=\frac{u^0}{c}\pp{U}{x^\mu}
+$$
+
+となる。これを運動方程式に入れると
+
+$$
+\dd{p_\mu}{\tau}=\frac{u^0}{c}\pp{U}{x^\mu}-\frac1c\dd{U}{\tau}\,\delta^0_\mu
+$$
+
+である。
+
+- 空間成分：$\frac{p^i}{\tau}=-\gamma\frac{U}{x^i}=f^i$
+- 第0成分：$\frac{p^0}{\tau}=\frac{\gamma}{c}\frac{U}{t}-\frac{\gamma}{c}\lr{\frac{U}{t}+\bm v\cdot\nabla U}=-\frac{\gamma}{c}\,\bm v\cdot\nabla U=f^0$
+
+となり、4成分すべてが $\frac{p^\mu}{\tau}=f^\mu$ と一致する。第0成分は、$p^0=E/c$ なので仕事とエネルギーの関係 $\frac{E}{t}=\bm F\cdot\bm v$ を表している。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+解析力学において運動方程式は、ラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
 
 $$
     \dd{}{t}
@@ -285,19 +519,19 @@ $$
     }
 $$
 
-なお、第0成分 $F^0 = \dfrac{\mathrm{d}p^0}{\mathrm{d}t}$ は独立な式ではない。$p^0 = \dfrac{E_K}{c}$ であるから $F^0 = \dfrac{1}{c}\dfrac{\mathrm{d}E_K}{\mathrm{d}t}$ であり、空間成分の運動方程式から導かれる仕事とエネルギーの関係に等しい。実際、$p^\mu p_\mu = (p^0)^2 - \boldsymbol{p}^2 = m_0^2c^2$ を $t$ で微分すると $p^0F^0 = \boldsymbol{p}\cdot\boldsymbol{F}$ となり、
+なお、第0成分 $F^0 = \frac{p^0}{t}$ は独立な式ではない。$p^0 = \frac{E_K}{c}$ であるから $F^0 = \frac{1}{c}\frac{E_K}{t}$ であり、空間成分の運動方程式から導かれる仕事とエネルギーの関係に等しい。実際、$p^\mu p_\mu = (p^0)^2 - \bm{p}^2 = m_0^2c^2$ を $t$ で微分すると $p^0F^0 = \bm{p}\cdot\bm{F}$ となり、
 
 $$
-F^0 = \frac{\boldsymbol{F}\cdot\boldsymbol{v}}{c}
+F^0 = \frac{\bm{F}\cdot\bm{v}}{c}
 $$
 
-が得られる。保存力で $U$ が時間に陽に依存しないときは $\boldsymbol{F}\cdot\boldsymbol{v} = -\dfrac{\mathrm{d}U}{\mathrm{d}t}$ なので、
+が得られる。保存力で $U$ が時間に陽に依存しないときは $\bm{F}\cdot\bm{v} = -\frac{U}{t}$ なので、
 
 $$
-F^0 = -\frac{1}{c}\frac{\mathrm{d}U}{\mathrm{d}t}、\quad \frac{\mathrm{d}}{\mathrm{d}t}\left(E_K + U\right) = 0
+F^0 = -\frac{1}{c}\dd{U}{t}、\quad \dd{}{t}\lr{E_K + U} = 0
 $$
 
-と、エネルギー保存則になる。これは、$F^i = -\dfrac{\partial U}{\partial x^i}$ を $i=0$ にそのまま拡張した $-\dfrac{\partial U}{\partial x^0} = 0$ とは異なる。
+と、エネルギー保存則になる。これは、$F^i = -\frac{U}{x^i}$ を $i=0$ にそのまま拡張した $-\frac{U}{x^0} = 0$ とは異なる。
 
 
 
