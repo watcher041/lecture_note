@@ -540,9 +540,9 @@ $$
 と置き換えて、改めて運動方程式を記述してみよう。すると、運動方程式に関して
 
 $$
-    \pp{\mathcal{L}}{x^\lambda}=
+    \pp{\mathcal{L}}{\dot{x}^\lambda}=
     \frac{1}{2}m_0
-    \pp{}{x^\lambda}
+    \pp{}{\dot{x}^\lambda}
     (g_{\mu\nu}\dot{x}^\mu \dot{x}^\nu)=
     m_0g_{\lambda\mu}\dot{x}^\mu
 $$
@@ -578,14 +578,14 @@ $$
 $$
     \dd{g_{\lambda\mu}}{s}\dot{x}^\mu=
     \pp{g_{\lambda\mu}}{x^\nu}\dot{x}^\mu \dot{x}^\nu、
-    g_{\lambda\mu}g^{\lambda\mu}=1
+    g^{k\lambda}g_{\lambda\mu}=\delta^k_\mu
 $$
 
 と置き換えられるため、以下の式が得られる。
 
 $$
-    \dd{\dot{x}^\mu}{s}+
-    g^{\lambda\mu}
+    \dd{\dot{x}^k}{s}+
+    g^{k\lambda}
     \lr{
         \pp{g_{\lambda\mu}}{x^\nu}-
         \frac{1}{2}\pp{g_{\mu\nu}}{x^\lambda}
@@ -595,11 +595,11 @@ $$
 ここで**第１種クリストフェル記号**を
 
 $$
-    \Gamma_{\nu i,\mu}=
-    \pp{\bm{b}^i}
+    \Gamma_{\nu\lambda,\mu}=
+    \pp{\bm{b}^\lambda}
     {x^\nu}\cdot\bm{b}_\mu=
     \bm{b}_\mu\cdot
-    \pp{\bm{b}^i}
+    \pp{\bm{b}^\lambda}
     {x^\nu}
 $$
 
@@ -608,7 +608,7 @@ $$
 $$
     \pp{g_{\lambda\mu}}
     {x^\nu}=
-    \Gamma_{\nu i,\mu}+
+    \Gamma_{\nu\lambda,\mu}+
     \Gamma_{\nu\mu,\lambda}
 $$
 
@@ -617,7 +617,7 @@ $$
 $$
     \pp{g_{\lambda\nu}}
     {x^\mu}=
-    \Gamma_{\mu i,\nu}+
+    \Gamma_{\mu\lambda,\nu}+
     \Gamma_{\mu\nu,\lambda}、
     \pp{g_{\mu\nu}}
     {x^\lambda}=
