@@ -280,16 +280,7 @@ $$
     m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}
 $$
 
-となるため、これをもとの式に代入すると
-
-$$
-    \LR{
-        f^\mu\pp{x_\mu}{q^i}-
-        \dd{}{\tau}\lr{m_0u^\mu\pp{x_\mu}{q^i}}+m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^i}}
-    }\delta q^i=0
-$$
-
-となる。ここで $u_\mu$ も一般化座標 $q$ により
+となるが、ここで $u_\mu$ も一般化座標 $q$ により以下の形でおく。
 
 $$
     u_\mu=
@@ -297,7 +288,7 @@ $$
     \dot{q}^j=\dd{q^j}{\tau}
 $$
 
-である。これから次の2つの恒等式が成り立つ。
+そして、次の2つの恒等式
 
 $$
     \text{(a)}\quad
@@ -306,7 +297,7 @@ $$
     \dd{}{\tau}\lr{\pp{x_\mu}{q^i}}=\pp{u_\mu}{q^i}
 $$
 
-このことから、試しに
+が成り立つことを利用して、試しに
 
 $$
     T=\frac{1}{2}m_0u_\nu u^\nu
@@ -393,7 +384,9 @@ $$
     \dd{}{\tau}
     \lr{
         \pp{\mathcal{L}}{\dot{q}^i}
-    }-\pp{\mathcal{L}}{q^i}=0
+    }-\pp{\mathcal{L}}{q^i}=0、
+    \dot{q}_i=
+    \dd{q_i}{\tau}
 $$
 
 で書ける。拘束 $u_\nu u^\nu=c^2$ は、$\partial/\partial\dot q^i$ を取ったあとで課す。
@@ -403,8 +396,10 @@ $$
 $q^\mu=x^\mu$ とおくと、$\frac{x^\mu}{q^i}=\delta^\mu_i$ で、
 
 $$
-\frac{\mathcal{L}}{u^\mu}=p_\mu+\frac Uc\,\delta^0_\mu,\qquad
-\frac{\mathcal{L}}{x^\mu}=\frac{u^0}{c}\pp{U}{x^\mu}
+    \frac{\mathcal{L}}{u^\mu}=
+    p_\mu+\frac Uc\,\delta^0_\mu,\qquad
+    \frac{\mathcal{L}}{x^\mu}=
+    \frac{u^0}{c}\pp{U}{x^\mu}
 $$
 
 となる。これを運動方程式に入れると
@@ -420,129 +415,22 @@ $$
 
 となり、4成分すべてが $\frac{p^\mu}{\tau}=f^\mu$ と一致する。第0成分は、$p^0=E/c$ なので仕事とエネルギーの関係 $\frac{E}{t}=\bm F\cdot\bm v$ を表している。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-解析力学において運動方程式は、ラグランジアン $\mathcal{L}$ と一般化座標 $q$ を用いて
+上記は固有時で書いたものであるため、これを $t$ で書きなおすと以下の通りになる。
 
 $$
     \dd{}{t}
     \lr{
-        \pp{\mathcal{L}}{\dot{q}}
-    } - \pp{\mathcal{L}}{q} = 0
+        \pp{\mathcal{L}}{q'^i}
+    }-\pp{\mathcal{L}}{q^i}=0、
+    q'_i=\dd{q_i}{t}
 $$
 
-と書かれ、この形は一般化座標 $q$ のとり方によらない。また、運動方程式の方も比べやすくするために、時間 $t$ を用いて
 
-$$
-    F^\mu=
-    \dd{p^\mu}{t}、
-    p^\mu=
-    \frac{m_0v^\mu}{\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    v^\mu=
-    \dd{x^\mu}{t}
-$$
 
-と置き換え、力 $F^{\mu}$ もポテンシャル $U$ で記述されるもの（保存力）としたとき
 
-$$
-    F^\mu=
-    -\lr{
-        \pp{U}{x^\mu}
-    }
-$$
 
-となるため、各成分ごとに比べてると以下の通りになる。
 
-$$
-    \pp{\mathcal{L}}{c}=
-    \frac{m_0c}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \pp{\mathcal{L}}{v_x}=
-    \frac{m_0v_x}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \pp{\mathcal{L}}{v_y}=
-    \frac{m_0v_y}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}、
-    \pp{\mathcal{L}}{v_z}=
-    \frac{m_0v_z}
-    {\sqrt{1-\frac{\bm{v}^2}{c^2}}}
-$$
-$$
-    \pp{\mathcal{L}}{t}=
-    -\lr{
-        \pp{U}{t}
-    }、
-    \pp{\mathcal{L}}{x}=
-    -\lr{
-        \pp{U}{x}
-    }、
-     \pp{\mathcal{L}}{y}=
-     -\lr{
-        \pp{U}{y}
-    }、
-    \pp{\mathcal{L}}{z}=
-    -\lr{
-        \pp{U}{z}
-    }
-$$
 
-なお、第0成分 $F^0 = \frac{p^0}{t}$ は独立な式ではない。$p^0 = \frac{E_K}{c}$ であるから $F^0 = \frac{1}{c}\frac{E_K}{t}$ であり、空間成分の運動方程式から導かれる仕事とエネルギーの関係に等しい。実際、$p^\mu p_\mu = (p^0)^2 - \bm{p}^2 = m_0^2c^2$ を $t$ で微分すると $p^0F^0 = \bm{p}\cdot\bm{F}$ となり、
-
-$$
-F^0 = \frac{\bm{F}\cdot\bm{v}}{c}
-$$
-
-が得られる。保存力で $U$ が時間に陽に依存しないときは $\bm{F}\cdot\bm{v} = -\frac{U}{t}$ なので、
-
-$$
-F^0 = -\frac{1}{c}\dd{U}{t}、\quad \dd{}{t}\lr{E_K + U} = 0
-$$
-
-と、エネルギー保存則になる。これは、$F^i = -\frac{U}{x^i}$ を $i=0$ にそのまま拡張した $-\frac{U}{x^0} = 0$ とは異なる。
 
 
 
