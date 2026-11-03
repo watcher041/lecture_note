@@ -255,29 +255,29 @@ $$
 
 $$
     \delta x_\mu=
-    \pp{x_\mu}{q}\delta q
+    \pp{x_\mu}{q^\lambda}\delta q^\lambda
 $$
 
 というようになるため、$q$ で置き換えると以下の通りとなる。
 
 $$
     \lr{
-        f^\mu\pp{x_\mu}{q}-
+        f^\mu\pp{x_\mu}{q^\lambda}-
         \dd{p^\mu}{\tau}
-        \pp{x_\mu}{q}
-    }\delta q=0
+        \pp{x_\mu}{q^\lambda}
+    }\delta q^\lambda=0
 $$
 
 次に、運動量 $p^\mu$ が $m_0u^\mu$ であることから
 
 $$
     \dd{p^\mu}{\tau}
-    \pp{x_\mu}{q}=
+    \pp{x_\mu}{q^\lambda}=
     \dd{}{\tau}
     \lr{
-        m_0u^\mu\pp{x_\mu}{q}
+        m_0u^\mu\pp{x_\mu}{q^\lambda}
     }-
-    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q}}
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^\lambda}}
 $$
 
 となるが、ここで $u_\mu$ も一般化座標 $q$ により以下の形でおく。
@@ -292,9 +292,9 @@ $$
 
 $$
     \text{(a)}\quad
-    \pp{u_\mu}{\dot q}=\pp{x_\mu}{q},\qquad
+    \pp{u_\mu}{\dot q^\lambda}=\pp{x_\mu}{q^\lambda},\qquad
     \text{(b)}\quad
-    \dd{}{\tau}\lr{\pp{x_\mu}{q}}=\pp{u_\mu}{q}
+    \dd{}{\tau}\lr{\pp{x_\mu}{q^\lambda}}=\pp{u_\mu}{q^\lambda}
 $$
 
 が成り立つことを利用して、試しに
@@ -306,22 +306,22 @@ $$
 とおくと、(a), (b) から
 
 $$
-    m_0u^\mu\pp{x_\mu}{q}=
-    m_0u_\mu\pp{u^\mu}{\dot q}=
-    \pp{T}{\dot q}、
-    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q}}=
-    m_0u_\mu\pp{u^\mu}{q}=\pp{T}{q}
+    m_0u^\mu\pp{x_\mu}{q^\lambda}=
+    m_0u_\mu\pp{u^\mu}{\dot q^\lambda}=
+    \pp{T}{\dot q^\lambda}、
+    m_0u^\mu\dd{}{\tau}\lr{\pp{x_\mu}{q^\lambda}}=
+    m_0u_\mu\pp{u^\mu}{q^\lambda}=\pp{T}{q^\lambda}
 $$
 
-となる。これらを代入して $\delta q$ の係数を0とおくと（$\delta q$ は互いに独立）、
+となる。これらを代入して $\delta q^\lambda$ の係数を0とおくと（$\delta q^\lambda$ は互いに独立）、
 
 $$
     \dd{}{\tau}
-    \lr{\pp{T}{\dot{q}}}-\pp{T}{q}=Q、
-    Q\equiv f^\mu\pp{x_\mu}{q}
+    \lr{\pp{T}{\dot{q}^\lambda}}-\pp{T}{q^\lambda}=Q_\lambda、
+    Q_\lambda\equiv f^\mu\pp{x_\mu}{q^\lambda}
 $$
 
-が得られる。$Q$ は一般化力である。次に、力が $U(x^\mu)$（$x^0=ct$ を含む）から来る場合を考える。$\bm{F}=-\nabla U$ のとき、
+が得られる。$Q_\lambda$ は一般化力である。次に、力が $U(x^\mu)$（$x^0=ct$ を含む）から来る場合を考える。$\bm{F}=-\nabla U$ のとき、
 
 $$
     f^\mu=
@@ -333,7 +333,7 @@ $$
 であり、これを代入すると
 
 $$ 
-    Q=
+    Q_\lambda=
     \gamma\LR{
         -\frac{1}{c}
         \lr{
@@ -341,17 +341,17 @@ $$
             \dd{x^2}{t}\pp{U}{x^2}+
             \dd{x^3}{t}\pp{U}{x^3}
         }
-        \pp{x^0}{q}+
-        \pp{U}{x^1}\pp{x^1}{q}+
-        \pp{U}{x^2}\pp{x^2}{q}+
-        \pp{U}{x^3}\pp{x^3}{q}
+        \pp{x^0}{q^\lambda}+
+        \pp{U}{x^1}\pp{x^1}{q^\lambda}+
+        \pp{U}{x^2}\pp{x^2}{q^\lambda}+
+        \pp{U}{x^3}\pp{x^3}{q^\lambda}
     }
 $$
 
 となるが、ここで第0成分に関して
 
 $$
-    \pp{U}{x^0}\pp{x^0}{q}-\pp{U}{x^0}\pp{x^0}{q}=0
+    \pp{U}{x^0}\pp{x^0}{q^\lambda}-\pp{U}{x^0}\pp{x^0}{q^\lambda}=0
 $$
 
 を加えることで、第１項目は
@@ -365,43 +365,43 @@ $$
             \dd{x^3}{t}\pp{U}{x^3}+
             \pp{U}{t}
         }
-        \pp{x^0}{q}
+        \pp{x^0}{q^\lambda}
     }=
     -\frac{1}{c}
     \dd{U}{\tau}
-    \pp{x^0}{q}
+    \pp{x^0}{q^\lambda}
 $$
 
 となり、第２項目は
 
 $$
     \gamma\LR{
-        \pp{U}{x^1}\pp{x^1}{q}+
-        \pp{U}{x^2}\pp{x^2}{q}+
-        \pp{U}{x^3}\pp{x^3}{q}+
-        \pp{U}{x^0}\pp{x^0}{q}
+        \pp{U}{x^1}\pp{x^1}{q^\lambda}+
+        \pp{U}{x^2}\pp{x^2}{q^\lambda}+
+        \pp{U}{x^3}\pp{x^3}{q^\lambda}+
+        \pp{U}{x^0}\pp{x^0}{q^\lambda}
     }=
     \gamma
-    \pp{U}{x^\mu}\pp{x^\mu}{q}=
+    \pp{U}{x^\mu}\pp{x^\mu}{q^\lambda}=
     \gamma
-    \pp{U}{q}
+    \pp{U}{q^\lambda}
 $$
 
 となるため、以下のように整理される。
 
 $$
-    Q=
-    \gamma\pp{U}{q}-
-    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q}
+    Q_\lambda=
+    \gamma\pp{U}{q^\lambda}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^\lambda}
 $$
 
 ここで、恒等式として
 
 $$
     \text{(c)}\quad
-    \pp{u^0}{\dot q}=\pp{x^0}{q},\qquad
+    \pp{u^0}{\dot q^\lambda}=\pp{x^0}{q^\lambda},\qquad
     \text{(d)}\quad
-    \dd{}{\tau}\lr{\pp{x^0}{q}}=\pp{u^0}{q}
+    \dd{}{\tau}\lr{\pp{x^0}{q^\lambda}}=\pp{u^0}{q^\lambda}
 $$
 
 が成り立つので、試しに  
@@ -413,24 +413,24 @@ $$
 を考えると、(c), (d) を使って
 
 $$
-    \pp{W}{q}-\dd{}{\tau}
-    \lr{\pp{W}{\dot q}}=
-    \frac{u^0}{c}\pp{U}{q}-
-    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q}
+    \pp{W}{q^\lambda}-\dd{}{\tau}
+    \lr{\pp{W}{\dot q^\lambda}}=
+    \frac{u^0}{c}\pp{U}{q^\lambda}-
+    \frac{1}{c}\dd{U}{\tau}\pp{x^0}{q^\lambda}
 $$
 
-となり、右辺は $Q$ に一致する。すなわち
+となり、右辺は $Q_\lambda$ に一致する。すなわち
 
 $$
-Q=\pp{W}{q}-\dd{}{\tau}\lr{\pp{W}{\dot q}}
+Q_\lambda=\pp{W}{q^\lambda}-\dd{}{\tau}\lr{\pp{W}{\dot q^\lambda}}
 $$
 
 である。これを左辺に移すと
 
 $$
     \dd{}{\tau}
-    \lr{\pp{(T+W)}{\dot q}}-
-    \pp{(T+W)}{q}=0
+    \lr{\pp{(T+W)}{\dot q^\lambda}}-
+    \pp{(T+W)}{q^\lambda}=0
 $$
 
 となる。したがって、ラグランジアンは
@@ -446,10 +446,10 @@ $$
 $$
     \dd{}{\tau}
     \lr{
-        \pp{\mathcal{L}}{\dot{q}}
-    }-\pp{\mathcal{L}}{q}=0、
-    \dot{q}_i=
-    \dd{q_i}{\tau}
+        \pp{\mathcal{L}}{\dot{q}^\lambda}
+    }-\pp{\mathcal{L}}{q^\lambda}=0、
+    \dot{q}_\lambda=
+    \dd{q_\lambda}{\tau}
 $$
 
 で書ける。確認のため、$q=x$ とおくと
