@@ -339,7 +339,14 @@ $$
     }
 $$
 
-であり、$\frac{U}{\tau}=\frac{U}{x^\nu}u^\nu$ を使うと
+であり、これを代入すると
+
+$$ 
+    Q_i=
+    \gamma\LR{
+
+    }
+$$
 
 $$
 Q_i=\frac{u^0}{c}\pp{U}{x^\mu}\pp{x^\mu}{q^i}-\frac1c\dd{U}{\tau}\pp{x^0}{q^i}
@@ -367,7 +374,9 @@ $$
 である。これを左辺に移すと
 
 $$
-\dd{}{\tau}\lr{\frac{(m_0T+W)}{\dot q^i}}-\frac{(m_0T+W)}{q^i}=0
+    \dd{}{\tau}
+    \lr{\pp{(T+W)}{\dot q^i}}-
+    \pp{(T+W)}{q^i}=0
 $$
 
 となる。したがって、ラグランジアンは
