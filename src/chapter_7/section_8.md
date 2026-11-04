@@ -455,11 +455,11 @@ $$
 で書ける。確認のため、$q=x$ とおくと
 
 $$
-    \pp{\mathcal{L}}{x^\lambda}=
-    p_i+\frac{U}{c}\delta^0_i、
+    \pp{\mathcal{L}}{\dot{x}^\lambda}=
+    p_\lambda+\frac{U}{c}\delta^0_\lambda、
     \pp{\mathcal{L}}{x^\lambda}=
     \frac{u^0}{c}\pp{U}{x^\lambda}、
-    p_i=\eta_{ij}p^j
+    p_\lambda=\eta_{\lambda j}p^j
 $$
 
 となる。これを運動方程式に入れると
