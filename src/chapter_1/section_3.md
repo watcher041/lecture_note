@@ -26,7 +26,7 @@ $$F_W \le \mu F_N$$
 という不等式であり、動き出す直前の瞬間だけ $F_W = \mu F_N$ が成り立つ。そして、物体が動き出すと今度は運動と逆向きに動摩擦力が働くようになる。この値は、動摩擦係数を $\mu'$ とすると $\mu'F_N = \mu'mg$ となり、運動方程式は水平方向の右向きを正の $x$ 軸として
 
 $$
-    m\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = 
+    m\dd{^2x}{t^2} = 
     F - \mu' mg
 $$
 
@@ -104,37 +104,47 @@ $$
 
 $$x = l\sin\theta,\qquad y = -l\cos\theta$$
 
-と表される。（$x^2 + y^2 = l^2$ であり、おもりは糸の長さを半径とする円周上しか動けない。）
+と表される。ここで $x^2 + y^2 = l^2$ であり、おもりは糸の長さを半径とする円周上しか動けない。おもりに働く力は、重力 $mg$（下向き）と糸の張力 $F_T$（糸に沿って支点向き）である。張力の向きは支点の方向なので、成分は $(-F_T\sin\theta,\ F_T\cos\theta)$ となる。したがって、$x$ 方向と $y$ 方向の運動方程式は
 
-**力と運動方程式**　おもりに働く力は、重力 $mg$（下向き）と糸の張力 $T$（糸に沿って支点向き）である。張力の向きは支点の方向なので、成分は $(-T\sin\theta,\ T\cos\theta)$ となる。したがって、$x$ 方向と $y$ 方向の運動方程式は
+$$
+    m\dd{^2x}{t^2} = 
+    -F_T\sin\theta、
+    m\dd{^2y}{t^2} = 
+    F_T\cos\theta - mg
+$$
 
-$$m\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -T\sin\theta$$
+である。ところが、未知数が $x,\ y,\ F_T$ の三つあるのに式は二つしかない。これを補うのが、おもりが円周上を動くという条件 $x = l\sin\theta,\ y = -l\cos\theta$ であるため、まずこれらの式を $t$ で2回微分すると、
 
-$$m\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = T\cos\theta - mg$$
+$$
+    \dd{^2x}{t^2} = 
+    l\cos\theta\,\ddot\theta - l\sin\theta\,
+    \dot\theta^2、
+    \dd{^2y}{t^2} = 
+    l\sin\theta\,
+    \ddot\theta + l\cos\theta\,\dot\theta^2
+$$
+$$
+    \dot\theta = \dd{\theta}{t}、
+    \ddot\theta = \dd{^2\theta}{t^2}
+$$
 
-である。ところが、未知数が $x,\ y,\ T$ の三つあるのに式は二つしかない。これを補うのが、おもりが円周上を動くという条件 $x = l\sin\theta,\ y = -l\cos\theta$ である。
+となる。そして、$x$ 方向の式に $\cos\theta$、$y$ 方向の式に $\sin\theta$ をかけて足すと、
 
-**加速度を $\theta$ で表す**　$x = l\sin\theta,\ y = -l\cos\theta$ を $t$ で2回微分すると、
+$$
+    m\left(\dd{^2x}{t^2}\cos\theta + 
+    \dd{^2y}{t^2}\sin\theta\right) = -F_T\sin\theta\cos\theta + 
+    F_T\cos\theta\sin\theta - 
+    mg\sin\theta = 
+    -mg\sin\theta
+$$
 
-$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = l\cos\theta\,\ddot\theta - l\sin\theta\,\dot\theta^2$$
+となり、右辺から $F_T$ が消える。左辺に前の結果を代入すると、$\dot\theta^2$ の項も打ち消し合って $ml\ddot\theta$ だけが残るので、
 
-$$\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = l\sin\theta\,\ddot\theta + l\cos\theta\,\dot\theta^2$$
+$$ml\dd{^2\theta}{t^2} = -mg\sin\theta$$
 
-となる。（$\dot\theta = \dfrac{\mathrm{d}\theta}{\mathrm{d}t}$、$\ddot\theta = \dfrac{\mathrm{d}^2\theta}{\mathrm{d}t^2}$ と書いた。）
+が得られる。これが接線方向の運動方程式である。右辺は、重力の接線方向の成分 $-mg\sin\theta$ に等しい（斜面上の運動で、重力を斜面方向に分解したのと同じ考え方である）。今度は $x$ 方向の式に $-\sin\theta$、$y$ 方向の式に $\cos\theta$ をかけて足すと、
 
-**張力 $T$ を消去する**　$x$ 方向の式に $\cos\theta$、$y$ 方向の式に $\sin\theta$ をかけて足すと、
-
-$$m\left(\frac{\mathrm{d}^2x}{\mathrm{d}t^2}\cos\theta + \frac{\mathrm{d}^2y}{\mathrm{d}t^2}\sin\theta\right) = -T\sin\theta\cos\theta + T\cos\theta\sin\theta - mg\sin\theta = -mg\sin\theta$$
-
-となり、右辺から $T$ が消える。左辺に前の結果を代入すると、$\dot\theta^2$ の項も打ち消し合って $ml\ddot\theta$ だけが残るので、
-
-$$ml\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = -mg\sin\theta$$
-
-が得られる。これが接線方向の運動方程式である。右辺は、重力の接線方向の成分 $-mg\sin\theta$ に等しい（斜面上の運動で、重力を斜面方向に分解したのと同じ考え方である）。
-
-**張力の大きさ**　今度は $x$ 方向の式に $-\sin\theta$、$y$ 方向の式に $\cos\theta$ をかけて足すと、
-
-$$T = mg\cos\theta + ml\dot\theta^2$$
+$$F_T = mg\cos\theta + ml\dot\theta^2$$
 
 が得られる。糸の張力は、重力の糸方向の成分に、円運動のための項 $ml\dot\theta^2$ を加えたものになる。
 
@@ -149,7 +159,7 @@ $$
 $$
 \cos\theta=\frac{g}{l\omega^2},\qquad
 \omega=\sqrt{\frac{g}{l\cos\theta}},\qquad
-T=2\pi\sqrt{\frac{l\cos\theta}{g}}
+F_T=2\pi\sqrt{\frac{l\cos\theta}{g}}
 $$
 が得られる。
 
@@ -163,7 +173,7 @@ m\dd{^2x}{t^2}=-kx
 $$
 である。これは振り子の微小振動の式と同じ形をしており、解は
 $$
-x=A\cos(\omega t+\phi),\omega=\sqrt{\frac{k}{m}},T=2\pi\sqrt{\frac{m}{k}}
+x=A\cos(\omega t+\phi),\omega=\sqrt{\frac{k}{m}},F_T=2\pi\sqrt{\frac{m}{k}}
 $$
 となる（$A$ は振幅、$\phi$ は初期位相）。振り子で $g/l$ が果たしていた役割を、ここでは $k/m$ が果たしている。このように、復元力が変位に比例する運動はすべて単振動になる。
 
@@ -175,14 +185,14 @@ m\dd{v}{t}=mg-\gamma v
 $$
 である。$v(0)=0$ として解くと
 $$
-v(t)=\frac{mg}{\gamma}\leF_Wt(1-e^{-\gamma t/m}\right)
+v(t)=\frac{mg}{\gamma}\left(1-e^{-\gamma t/m}\right)
 $$
 となり、十分時間がたつと重力と抵抗がつり合って加速度が $0$ になり、一定の速度（終端速度）
 $$
-v_\inF_Wty=\frac{mg}{\gamma}
+v_\infty=\frac{mg}{\gamma}
 $$
 に近づく。
 
-速度が大きいときは、速度の2乗に比例する慣性抵抗 $-\kappa v^2$ で近似するほうがよく、このときの終端速度は $v_\inF_Wty=\sqrt{mg/\kappa}$ となる。
+速度が大きいときは、速度の2乗に比例する慣性抵抗 $-\kappa v^2$ で近似するほうがよく、このときの終端速度は $v_\infty=\sqrt{mg/\kappa}$ となる。
 
 ここまでは一つの質点の話であったが、もし二つの質点がある場合は万有引力も考慮する必要があり複雑になる。そのため、次では似たい問題について説明していくことにする。
