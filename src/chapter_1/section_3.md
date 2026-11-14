@@ -148,22 +148,59 @@ $$F_T = mg\cos\theta + ml\dot\theta^2$$
 
 が得られる。糸の張力は、重力の糸方向の成分に、円運動のための項 $ml\dot\theta^2$ を加えたものになる。
 
-### 円錐振り子の運動（円運動）
+ここで、仮に振れ角 $\theta$ が小さいとき、$\sin\theta$ は $\theta$ で近似できる。実際、テイラー展開すると
 
-**円錐振り子の運動**　糸が鉛直線と一定の角 $\theta$ をなしたまま、おもりが水平面内で等速円運動をする場合を考える。円の半径は $r=l\sin\theta$、糸の張力を $S$、角速度を $\omega$ とする。
+$$\sin\theta = \theta - \frac{\theta^3}{6} + \cdots$$
+
+であり、たとえば $\theta = 0.1\ \mathrm{rad}$（約 $6^\circ$）なら $\sin\theta = 0.09983\cdots$ で、$\theta$ との差は約 $0.2\%$ である。そこで $\sin\theta \approx \theta$ とおくと、
+
 $$
-\text{鉛直方向：}\ S\cos\theta=mg,\qquad
-\text{水平方向（向心力）：}\ S\sin\theta=mr\omega^2=ml\omega^2\sin\theta
+    \frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = 
+    -\frac{g}{l}\,\theta
 $$
-この2式から $S$ を消去すると
+
+となる。$\omega = \sqrt{g/l}$ とおけば
+
+$$\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = -\omega^2\theta$$
+
+であり、これは単振動の方程式である。一般解は
+
 $$
-\cos\theta=\frac{g}{l\omega^2},\qquad
-\omega=\sqrt{\frac{g}{l\cos\theta}},\qquad
-F_T=2\pi\sqrt{\frac{l\cos\theta}{g}}
+    \theta(t) = A\cos(\omega t + \phi)
 $$
+
+（$A,\ \phi$ は定数）である。実際、
+
+$$
+    \dfrac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = 
+    -\omega^2 A\cos(\omega t+\phi) = -\omega^2\theta
+$$ 
+
+となり、方程式を満たす。そして、初期値として時刻 $t=0$ で角度 $\theta_0$ まで持ち上げ、静かに放す場合を考える。初期条件は $\theta(0)=\theta_0,\ \dot\theta(0)=0$ である。$\dot\theta(t) = -A\omega\sin(\omega t+\phi)$ なので、
+
+$$\dot\theta(0) = -A\omega\sin\phi = 0 \quad\Rightarrow\quad \phi = 0$$
+
+$$\theta(0) = A\cos 0 = \theta_0 \quad\Rightarrow\quad A = \theta_0$$
+
+となり、
+
+$$\theta(t) = \theta_0\cos\left(\sqrt{\frac{g}{l}}\,t\right)$$
+
 が得られる。
 
+**周期**　$\omega t$ が $2\pi$ 増えるごとに元の状態に戻るので、周期は
 
+$$T_0 = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{l}{g}}$$
+
+である。周期は振れ幅 $\theta_0$ にもおもりの質量 $m$ にもよらず、糸の長さ $l$ と重力加速度 $g$ だけで決まる（振り子の等時性）。
+
+**$x,\ y$ で見ると**　$\theta$ が小さいとき、$x = l\sin\theta \approx l\theta$、$y = -l\cos\theta \approx -l\left(1-\dfrac{\theta^2}{2}\right) \approx -l$ なので、
+
+$$x(t) \approx l\theta_0\cos\omega t,\qquad y(t) \approx -l$$
+
+となる。水平方向には単振動し、鉛直方向はほとんど動かない（$y$ の変化は $\theta^2$ に比例する高次の小さな量）。これが、先ほど示した $x$ 方向と $y$ 方向の運動方程式の近似解である。
+
+また、張力は $F_T = mg\cos\theta + ml\dot\theta^2 \approx mg$ となり、微小振動では張力は重力とほぼつり合う。
 
 ### ばねの運動 → 振り子の運動に関係する運動
 
