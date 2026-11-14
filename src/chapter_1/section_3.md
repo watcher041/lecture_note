@@ -13,7 +13,7 @@ $$
 
 粗い水平面上で、物体（質量 $m$）に水平方向の力 $F$ を加えて動かす場合を考える。物体は鉛直方向には動かないので、垂直抗力は $F_N = mg$ である。水平方向については、$F$ が小さいと物体は静止したまま動かない。これは、押す力 $F$ とちょうど同じ大きさで逆向きの摩擦力（**静止摩擦力**）が働き、力がつり合っているからである。静止摩擦力の大きさは一定ではなく、加えた力に応じて変わる。物体が静止している間は加速度が $0$ なので、静止摩擦力を $F_W$ とすると
 
-$$0 = F - F_W \quad\Rightarrow\quad F_W = F$$
+$$0 = F - F_W \Rightarrow F_W = F$$
 
 となり、$F$ を大きくすれば $F_W$ も同じだけ大きくなる。ただし、静止摩擦力には上限（**最大静止摩擦力**）があり、この値は静止摩擦係数を $\mu$ とすると
 
@@ -50,70 +50,95 @@ $$
     v^2-v_0^2=-2g(y-y_0)
 $$
 
-### 斜面上の運動（重力を分解して考える運動）
+### 斜面上の運動（並進方向と鉛直方向の運動1）
 
-水平面と角 $\theta$ をなす斜面上に、質量 $m$ の物体を置いた場合を考える。斜面に沿って下向きに $x$ 軸、斜面に垂直な向きに $y$ 軸をとる。
-
-物体に働く力は、重力 $mg$（鉛直下向き）と、斜面からの垂直抗力 $N$ である。重力は斜面に平行な成分と垂直な成分に分解でき、
+水平面と角 $\theta$ をなす斜面上に、質量 $m$ の物体を置いた場合を考える。斜面に沿って下向きに $x$ 軸、斜面に垂直な向きに $y$ 軸をとる。物体に働く力は、重力 $mg$（鉛直下向き）と、斜面からの垂直抗力 $F_N$ である。重力は斜面に平行な成分と垂直な成分に分解でき、
 
 - 斜面方向（下向き）： $mg\sin\theta$
 - 斜面に垂直な方向（斜面を押す向き）： $mg\cos\theta$
 
-となる。
+となる。まず、斜面に垂直な方向では物体は動かないので
 
-**なめらかな斜面**　摩擦がない場合、斜面に垂直な方向では物体は動かないので力がつり合い、
-
-$$N = mg\cos\theta$$
-
-となる。斜面方向の運動方程式は
-
-$$m\frac{d^2x}{dt^2} = mg\sin\theta$$
-
-であり、$m$ が消えて加速度 $a = g\sin\theta$ の等加速度運動になる。$x(0)=0,\ v(0)=0$ として積分すると、
-
-$$v = g\sin\theta\, t,\qquad x = \frac{1}{2}g\sin\theta\, t^2$$
-
-が得られる。$\theta = 90^\circ$ なら $a = g$（自由落下）、$\theta = 0^\circ$ なら $a = 0$（水平面）となり、極端な場合にも前の結果と一致している。
-
-また、高さ $h$ だけ下ったとき、進んだ距離は $x = h/\sin\theta$ なので、
-
-$$v^2 = 2ax = 2g\sin\theta\cdot\frac{h}{\sin\theta} = 2gh$$
-
-となる。速さは斜面の角度によらず、高さの差だけで決まる。
-
-**粗い斜面**　動摩擦係数を $\mu'$ とすると、動摩擦力は $\mu' N = \mu' mg\cos\theta$ で、運動と逆向きに働く。
-
-- 斜面を滑り降りるとき（摩擦は上向き）：
-  $$m\frac{d^2x}{dt^2} = mg\sin\theta - \mu' mg\cos\theta \quad\Rightarrow\quad a = g(\sin\theta - \mu'\cos\theta)$$
-- 斜面を滑り上がるとき（摩擦は下向き）：
-  $$a = -g(\sin\theta + \mu'\cos\theta)$$
-  （加速度は斜面の下向きを正とした値で、負なので減速を表す）
-
-**静止する条件**　物体が静止したままでいられるのは、斜面方向の重力成分が最大静止摩擦力以下のときである。静止摩擦係数を $\mu$ とすると、
-
-$$mg\sin\theta \le \mu mg\cos\theta \quad\Rightarrow\quad \tan\theta \le \mu$$
-
-となる。これを超える角度で物体は滑り出す。$\tan\theta_0 = \mu$ を満たす角 $\theta_0$ を摩擦角という。
-
-
-
-### 振り子の運動・円錐振り子の運動（円運動） → 重力に関する運動
-
-長さ $l$ の糸に質量 $m$ のおもりをつけた場合を考える。
-
-**振り子の運動**　鉛直線からの角度を $\theta$ とすると、接線方向の運動方程式は
 $$
-ml\dd{^2\theta}{t^2}=-mg\sin\theta
+    F_N = mg\cos\theta
 $$
-である。$\theta$ が十分小さいとき $\sin\theta\approx\theta$ と近似でき、
+
+となる。斜面方向も傾きが小さいときには下向きの力が小さくなり動かないため、
+
 $$
-\dd{^2\theta}{t^2}=-\frac{g}{l}\theta
+    0=mg\sin\theta-F_w
+    \rightarrow
+    F_W=mg\sin\theta
 $$
-となる。これは単振動の式であり、角振動数と周期は
+
+であるが、傾きがある角度 $\theta_0$（**摩擦角**） のとき静止摩擦力が最大 $\mu F_N$ となるため、
+
 $$
-\omega=\sqrt{\frac{g}{l}},\qquad T=2\pi\sqrt{\frac{l}{g}}
+    0=mg\sin\theta_0-\mu F_N
+    \Rightarrow 
+    \mu=\tan\theta_0
 $$
-である。周期は振幅や質量によらない（振り子の等時性）。
+
+となる。そして、傾きが大きくなると物体が動き出し動摩擦係数を $\mu'$ とすると、運動方程式は
+
+$$
+    m\frac{d^2x}{dt^2} = 
+    mg\sin\theta - \mu' mg\cos\theta \Rightarrow 
+    \frac{d^2x}{dt^2} = 
+    g(\sin\theta - \mu'\cos\theta)
+$$
+
+であり、初期値を $x(0)=0,\ v(0)=0$ として積分すると、
+
+$$
+    v = gt(\sin\theta - \mu'\cos\theta)、
+    x = \frac{1}{2}gt^2(\sin\theta - \mu'\cos\theta)
+$$
+
+が得られる。
+
+
+### 振り子の運動（並進方向と鉛直方向の運動2）
+
+長さ $l$ の糸に質量 $m$ のおもりをつけた場合を考える。糸の上端（支点）を原点とし、水平右向きに $x$ 軸、鉛直上向きに $y$ 軸をとる。鉛直線からの角度を $\theta$ とすると、おもりの位置は
+
+$$x = l\sin\theta,\qquad y = -l\cos\theta$$
+
+と表される。（$x^2 + y^2 = l^2$ であり、おもりは糸の長さを半径とする円周上しか動けない。）
+
+**力と運動方程式**　おもりに働く力は、重力 $mg$（下向き）と糸の張力 $T$（糸に沿って支点向き）である。張力の向きは支点の方向なので、成分は $(-T\sin\theta,\ T\cos\theta)$ となる。したがって、$x$ 方向と $y$ 方向の運動方程式は
+
+$$m\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -T\sin\theta$$
+
+$$m\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = T\cos\theta - mg$$
+
+である。ところが、未知数が $x,\ y,\ T$ の三つあるのに式は二つしかない。これを補うのが、おもりが円周上を動くという条件 $x = l\sin\theta,\ y = -l\cos\theta$ である。
+
+**加速度を $\theta$ で表す**　$x = l\sin\theta,\ y = -l\cos\theta$ を $t$ で2回微分すると、
+
+$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = l\cos\theta\,\ddot\theta - l\sin\theta\,\dot\theta^2$$
+
+$$\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = l\sin\theta\,\ddot\theta + l\cos\theta\,\dot\theta^2$$
+
+となる。（$\dot\theta = \dfrac{\mathrm{d}\theta}{\mathrm{d}t}$、$\ddot\theta = \dfrac{\mathrm{d}^2\theta}{\mathrm{d}t^2}$ と書いた。）
+
+**張力 $T$ を消去する**　$x$ 方向の式に $\cos\theta$、$y$ 方向の式に $\sin\theta$ をかけて足すと、
+
+$$m\left(\frac{\mathrm{d}^2x}{\mathrm{d}t^2}\cos\theta + \frac{\mathrm{d}^2y}{\mathrm{d}t^2}\sin\theta\right) = -T\sin\theta\cos\theta + T\cos\theta\sin\theta - mg\sin\theta = -mg\sin\theta$$
+
+となり、右辺から $T$ が消える。左辺に前の結果を代入すると、$\dot\theta^2$ の項も打ち消し合って $ml\ddot\theta$ だけが残るので、
+
+$$ml\frac{\mathrm{d}^2\theta}{\mathrm{d}t^2} = -mg\sin\theta$$
+
+が得られる。これが接線方向の運動方程式である。右辺は、重力の接線方向の成分 $-mg\sin\theta$ に等しい（斜面上の運動で、重力を斜面方向に分解したのと同じ考え方である）。
+
+**張力の大きさ**　今度は $x$ 方向の式に $-\sin\theta$、$y$ 方向の式に $\cos\theta$ をかけて足すと、
+
+$$T = mg\cos\theta + ml\dot\theta^2$$
+
+が得られる。糸の張力は、重力の糸方向の成分に、円運動のための項 $ml\dot\theta^2$ を加えたものになる。
+
+### 円錐振り子の運動（円運動）
 
 **円錐振り子の運動**　糸が鉛直線と一定の角 $\theta$ をなしたまま、おもりが水平面内で等速円運動をする場合を考える。円の半径は $r=l\sin\theta$、糸の張力を $S$、角速度を $\omega$ とする。
 $$
@@ -138,7 +163,7 @@ m\dd{^2x}{t^2}=-kx
 $$
 である。これは振り子の微小振動の式と同じ形をしており、解は
 $$
-x=A\cos(\omega t+\phi),\qquad \omega=\sqrt{\frac{k}{m}},\qquad T=2\pi\sqrt{\frac{m}{k}}
+x=A\cos(\omega t+\phi),\omega=\sqrt{\frac{k}{m}},T=2\pi\sqrt{\frac{m}{k}}
 $$
 となる（$A$ は振幅、$\phi$ は初期位相）。振り子で $g/l$ が果たしていた役割を、ここでは $k/m$ が果たしている。このように、復元力が変位に比例する運動はすべて単振動になる。
 
