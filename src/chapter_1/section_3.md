@@ -80,7 +80,7 @@ $$
 となる。斜面方向も傾きが小さいときには下向きの力が小さくなり動かないため、
 
 $$
-    0=mg\sin\theta-F_w
+    0=mg\sin\theta-F_W
     \rightarrow
     F_W=mg\sin\theta
 $$
@@ -160,9 +160,7 @@ $$ml\dd{^2\theta}{t^2} = -mg\sin\theta$$
 
 $$F_T = mg\cos\theta + ml\dot\theta^2$$
 
-が得られる。糸の張力は、重力の糸方向の成分に、円運動のための項 $ml\dot\theta^2$ を加えたものになる。
-
-ここで、仮に振れ角 $\theta$ が小さいとき、$\sin\theta$ は $\theta$ で近似できる。実際、テイラー展開すると
+が得られる。糸の張力は、重力の糸方向の成分に、円運動のための項 $ml\dot\theta^2$ を加えたものになる。ここで、仮に振れ角 $\theta$ が小さいとき、$\sin\theta$ は $\theta$ で近似できる。実際、テイラー展開すると
 
 $$\sin\theta = \theta - \frac{\theta^3}{6} + \cdots$$
 
@@ -198,23 +196,17 @@ $$\theta(0) = A\cos 0 = \theta_0 \quad\Rightarrow\quad A = \theta_0$$
 
 となり、
 
-$$\theta(t) = \theta_0\cos\left(\sqrt{\frac{g}{l}}\,t\right)$$
+$$
+    \theta(t) = 
+    \theta_0\cos\left(\omega t\right)、
+    \omega=\sqrt{\frac{g}{l}}
+$$
 
-が得られる。
-
-**周期**　$\omega t$ が $2\pi$ 増えるごとに元の状態に戻るので、周期は
+が得られる。ここで、$\omega t$ が $2\pi$ 増えるごとに元の状態に戻るので、周期は
 
 $$T_0 = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{l}{g}}$$
 
-である。周期は振れ幅 $\theta_0$ にもおもりの質量 $m$ にもよらず、糸の長さ $l$ と重力加速度 $g$ だけで決まる（振り子の等時性）。
-
-**$x,\ y$ で見ると**　$\theta$ が小さいとき、$x = l\sin\theta \approx l\theta$、$y = -l\cos\theta \approx -l\left(1-\dfrac{\theta^2}{2}\right) \approx -l$ なので、
-
-$$x(t) \approx l\theta_0\cos\omega t,\qquad y(t) \approx -l$$
-
-となる。水平方向には単振動し、鉛直方向はほとんど動かない（$y$ の変化は $\theta^2$ に比例する高次の小さな量）。これが、先ほど示した $x$ 方向と $y$ 方向の運動方程式の近似解である。
-
-また、張力は $F_T = mg\cos\theta + ml\dot\theta^2 \approx mg$ となり、微小振動では張力は重力とほぼつり合う。
+である。周期は振れ幅 $\theta_0$ にもおもりの質量 $m$ にもよらず、糸の長さ $l$ と重力加速度 $g$ だけで決まる（**振り子の等時性**）。
 
 ### ばねの運動（振り子と類似した運動）
 
