@@ -15,25 +15,41 @@ $$x = a\cos\omega_0 t,\qquad y = 0$$
 
 となり、おもりは $x$ 軸に沿って往復し続ける。しかし、実際は**フーコーの振り子**でも知られているように軸上を段々とずれていくことが分かる。これは地球の自転によるものとなっている。
 
-地上は地球の自転とともに回転する座標系である。その変換式としては以下の通りとなる。
-
-### 回転座標系
-
 ニュートンの運動方程式 $m\ddot{x}=F_x$ などは、**慣性系**（静止している、または等速直線運動をしている座標系）で成り立つ。地上は地球の自転とともに回転しているので、厳密には慣性系ではない。そこで、回転している座標系から見ると運動方程式がどう変わるかを、成分ごとに順を追って調べる。以下では、空間は平坦で、全体にわたってデカルト座標がとれるものとする。
 
-**設定**　慣性系 S の座標を $(x,y,z)$ とし、S と原点を共有して $z$ 軸のまわりに一定の角速度 $\omega$ で回転する座標系 S′ の座標を $(x',y',z')$ とする。S′ の軸は、S の軸に対して時刻 $t$ に角 $\omega t$ だけ反時計回りに回っている。同じ点を S′ から見ると、座標は逆に時計回りに回って見えるので、
+**ステップ0：回転軸を $z$ 軸に合わせる**　回転軸の向きは、一般には座標軸の向きと一致していない。しかし、慣性系の座標軸の向きは自由に選べるので、はじめに座標軸を一定の角度だけ回して、$z$ 軸が回転軸に一致するように取り直しておく。このように取り直しても、運動方程式の形は変わらない。たとえば $x$ 軸のまわりに角 $\alpha$ だけ回した座標を $(x',y',z')$ とすると、
 
 $$
-x'=x\cos\omega t+y\sin\omega t,\qquad y'=-x\sin\omega t+y\cos\omega t,\qquad z'=z
+    x'=x、
+    y'=y\cos\alpha+z\sin\alpha、
+    z'=-y\sin\alpha+z\cos\alpha
+$$
+
+であり、力の成分 $(F'_x,F'_y,F'_z)$ も同じ式で変換される。$\alpha$ は定数なので、時間で2回微分した $\ddot{y}$ なども同じ式で変換され、
+
+$$
+    m\ddot{y'}=
+    m(\ddot y\cos\alpha+\ddot z\sin\alpha)=
+    F_y\cos\alpha+F_z\sin\alpha=F'_y
+$$
+
+となる。$x',z'$ についても同様なので、$m\ddot{x'}=F'_x$、$m\ddot{z'}=F'_z$ が成り立つ。一般の向きの軸も、このような回転を2回行えば $z$ 軸に合わせられる。以下では、この取り直しを済ませたものとして、$z'$ 軸が回転軸である慣性系を K とし、その座標を $(x',y',z')$ と書く。
+
+慣性系 K の座標を $(x',y',z')$ とし、K' と原点を共有して $z'$ 軸のまわりに一定の角速度 $\omega$ で回転する座標系 K' の座標を $(x'',y'',z'')$ とする。K' の軸は、K の軸に対して時刻 $t$ に角 $\omega t$ だけ反時計回りに回っている。同じ点を K' から見ると、座標は逆に時計回りに回って見えるので、
+
+$$
+    x''=x'\cos\omega t+y'\sin\omega t、
+    y''=-x'\sin\omega t+y'\cos\omega t、
+    z''=z'
 \tag{1}
 $$
 
-である。以下では $\cos\omega t$ と $\sin\omega t$ を、それぞれ $c$ と $s$ と略記する。これらの時間微分は $\dot c=-\omega s$、$\dot s=\omega c$ である。
+である。これらの時間微分は $\dot \cos\omega t=-\omega \sin\omega t$、$\dot \sin\omega t=\omega \cos\omega t$ である。
 
-力も同じ変換を受ける。S で測った力の成分を $(F_x,F_y,F_z)$ とすると、S′ の軸に沿った成分は
+力も同じ変換を受ける。K で測った力の成分を $(F_x,F_y,F_z)$ とすると、K' の軸に沿った成分は
 
 $$
-F'_x=F_xc+F_ys,\qquad F'_y=-F_xs+F_yc,\qquad F'_z=F_z
+F'_x=F_x\cos\omega t+F_y\sin\omega t,\qquad F'_y=-F_x\sin\omega t+F_y\cos\omega t,\qquad F'_z=F_z
 $$
 
 である。
@@ -41,12 +57,12 @@ $$
 **ステップ1：速度**　(1) 式の各成分を時間で微分する。積の微分で $c,s$ も微分されることに注意すると、
 
 $$
-\dot x'=(\dot xc+\dot ys)+\omega(-xs+yc)=(\dot xc+\dot ys)+\omega y'
+\dot x'=(\dot x\cos\omega t+\dot y\sin\omega t)+\omega(-x\sin\omega t+y\cos\omega t)=(\dot x\cos\omega t+\dot y\sin\omega t)+\omega y'
 \tag{2}
 $$
 
 $$
-\dot y'=(-\dot xs+\dot yc)+\omega(-xc-ys)=(-\dot xs+\dot yc)-\omega x'
+\dot y'=(-\dot x\sin\omega t+\dot y\cos\omega t)+\omega(-x\cos\omega t-y\sin\omega t)=(-\dot x\sin\omega t+\dot y\cos\omega t)-\omega x'
 \tag{3}
 $$
 
@@ -54,29 +70,29 @@ $$
 \dot z'=\dot z
 $$
 
-となる。最後の変形では、(1) 式から $-xs+yc=y'$、$xc+ys=x'$ であることを使った。括弧の中は、S で見た速度 $(\dot x,\dot y)$ を S′ の軸に沿って測り直した成分である。それに加えて、座標系が回っていることによる項 $\omega y'$ と $-\omega x'$ が現れている。
+となる。最後の変形では、(1) 式から $-x\sin\omega t+y\cos\omega t=y'$、$x\cos\omega t+y\sin\omega t=x'$ であることを使った。括弧の中は、K で見た速度 $(\dot x,\dot y)$ を K' の軸に沿って測り直した成分である。それに加えて、座標系が回っていることによる項 $\omega y'$ と $-\omega x'$ が現れている。
 
 **ステップ2：加速度**　(2) 式をもう一度微分する。
 
 $$
-\ddot x'=(\ddot xc+\ddot ys)+\omega(-\dot xs+\dot yc)+\omega\dot y'
+\ddot x'=(\ddot x\cos\omega t+\ddot y\sin\omega t)+\omega(-\dot x\sin\omega t+\dot y\cos\omega t)+\omega\dot y'
 $$
 
-ここで (3) 式から $-\dot xs+\dot yc=\dot y'+\omega x'$ なので、
+ここで (3) 式から $-\dot x\sin\omega t+\dot y\cos\omega t=\dot y'+\omega x'$ なので、
 
 $$
-\ddot x'=(\ddot xc+\ddot ys)+\omega(\dot y'+\omega x')+\omega\dot y'=(\ddot xc+\ddot ys)+2\omega\dot y'+\omega^2x'
+\ddot x'=(\ddot x\cos\omega t+\ddot y\sin\omega t)+\omega(\dot y'+\omega x')+\omega\dot y'=(\ddot x\cos\omega t+\ddot y\sin\omega t)+2\omega\dot y'+\omega^2x'
 $$
 
-となる。同様に (3) 式を微分し、(2) 式から $\dot xc+\dot ys=\dot x'-\omega y'$ であることを使うと、
+となる。同様に (3) 式を微分し、(2) 式から $\dot x\cos\omega t+\dot y\sin\omega t=\dot x'-\omega y'$ であることを使うと、
 
 $$
-\ddot y'=(-\ddot xs+\ddot yc)-\omega(\dot xc+\dot ys)-\omega\dot x'=(-\ddot xs+\ddot yc)-2\omega\dot x'+\omega^2y'
+\ddot y'=(-\ddot x\sin\omega t+\ddot y\cos\omega t)-\omega(\dot x\cos\omega t+\dot y\sin\omega t)-\omega\dot x'=(-\ddot x\sin\omega t+\ddot y\cos\omega t)-2\omega\dot x'+\omega^2y'
 $$
 
 が得られる。$z$ 方向は $\ddot z'=\ddot z$ のままである。
 
-**ステップ3：運動方程式**　慣性系 S では $m\ddot x=F_x,\ m\ddot y=F_y,\ m\ddot z=F_z$ が成り立つ。したがって $m(\ddot xc+\ddot ys)=F_xc+F_ys=F'_x$、$m(-\ddot xs+\ddot yc)=F'_y$ である。これを上の2式に代入して $m$ をかけると、S′ での運動方程式は
+**ステップ3：運動方程式**　慣性系 K では $m\ddot x=F_x,\ m\ddot y=F_y,\ m\ddot z=F_z$ が成り立つ。したがって $m(\ddot x\cos\omega t+\ddot y\sin\omega t)=F_x\cos\omega t+F_y\sin\omega t=F'_x$、$m(-\ddot x\sin\omega t+\ddot y\cos\omega t)=F'_y$ である。これを上の2式に代入して $m$ をかけると、K' での運動方程式は
 
 $$
 \begin{aligned}
@@ -94,13 +110,13 @@ $$
 
 これらは、物体どうしの相互作用から生じる力ではなく、回転する座標系から見たために現れる**慣性力**（見かけの力）である。コリオリ力の成分を、$\boldsymbol{\omega}=(0,0,\omega)$ と速度 $\boldsymbol{v}'$ の外積 $-2m\boldsymbol{\omega}\times\boldsymbol{v}'$ の成分と見比べると、一致することが確認できる。
 
-**確認　慣性系で止まっている物体**　慣性系 S で、点 $(x_0,y_0)$ に止まっている物体を考える。力は働かないので $F'=0$ である。(1) 式から
+**確認　慣性系で止まっている物体**　慣性系 K で、点 $(x_0,y_0)$ に止まっている物体を考える。力は働かないので $F'=0$ である。(1) 式から
 
 $$
 x'=x_0c+y_0s,\qquad y'=-x_0s+y_0c
 $$
 
-であり、微分すると $\dot x'=\omega y'$、$\dot y'=-\omega x'$、さらに $\ddot x'=\omega\dot y'=-\omega^2x'$ となる。一方、(4) 式の右辺は $2m\omega\dot y'+m\omega^2x'=-2m\omega^2x'+m\omega^2x'=-m\omega^2x'$ であり、左辺 $m\ddot x'=-m\omega^2x'$ と一致する。$y'$ 成分も同様である。S′ から見ると、この物体は軸のまわりを半径 $\sqrt{x_0^2+y_0^2}$、角速度 $\omega$（逆向き）で円運動しており、コリオリ力と遠心力がその向心力をちょうど作っている。
+であり、微分すると $\dot x'=\omega y'$、$\dot y'=-\omega x'$、さらに $\ddot x'=\omega\dot y'=-\omega^2x'$ となる。一方、(4) 式の右辺は $2m\omega\dot y'+m\omega^2x'=-2m\omega^2x'+m\omega^2x'=-m\omega^2x'$ であり、左辺 $m\ddot x'=-m\omega^2x'$ と一致する。$y'$ 成分も同様である。K' から見ると、この物体は軸のまわりを半径 $\sqrt{x_0^2+y_0^2}$、角速度 $\omega$（逆向き）で円運動しており、コリオリ力と遠心力がその向心力をちょうど作っている。
 
 **地球に当てはめる**　地上の座標系を、地球の自転とともに回る座標系とみなす（地球の公転は無視する）。自転の角速度の大きさは $\omega=2\pi/(1\text{恒星日})\approx7.29\times10^{-5}\ \mathrm{rad/s}$ である。ここでは自転軸が $z$ 軸ではなく傾いているので、座標軸をとり直す。
 
