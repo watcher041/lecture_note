@@ -3,15 +3,15 @@
 
 前回、振り子が一つの鉛直面内だけで動く場合を考えた。ここでは、おもりが水平面内の任意の方向に動けるとして3次元に拡張し、その運動を調べてみることにする。以下、鉛直上向きを $z$ 軸、水平面内に $x, y$ 軸をとる。支点を原点とし、おもりの位置を $\bm r = (x, y, z)$ とする。糸の張力 $F_T$ は支点向き、すなわち $-\bm r/l$ の向きに働くので、運動方程式は
 
-$$m\frac{\mathrm{d}^2\bm r}{\mathrm{d}t^2} = -\frac{F_T}{l}\,\bm r - mg\,\hat{\bm z},\qquad x^2+y^2+z^2 = l^2$$
+$$m\frac{\mathrm{d}^2\bm r}{\mathrm{d}t^2} = -\frac{F_T}{l}\,\bm r - mg\,\hat{\bm z}、x^2+y^2+z^2 = l^2$$
 
 である（$\hat{\bm z}$ は $z$ 方向の単位ベクトル）。振れが小さいとき、$|x|,\ |y| \ll l$ なので $z \approx -l$ であり、張力は $F_T \approx mg$ としてよい。このとき水平成分は
 
-$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -\omega_0^2\,x,\qquad \frac{\mathrm{d}^2y}{\mathrm{d}t^2} = -\omega_0^2\,y\qquad\left(\omega_0=\sqrt{\frac{g}{l}}\right)$$
+$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -\omega_0^2\,x、\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = -\omega_0^2\,y\qquad\left(\omega_0=\sqrt{\frac{g}{l}}\right)$$
 
 となる。$x$ と $y$ は互いに独立な、同じ角振動数の単振動である。たとえば $x$ 方向に $a$ だけ引いて静かに放すと
 
-$$x = a\cos\omega_0 t,\qquad y = 0$$
+$$x = a\cos\omega_0 t、y = 0$$
 
 となり、おもりは $x$ 軸に沿って往復し続ける。しかし、実際は**フーコーの振り子**でも知られているように軸上を段々とずれていくことが分かる。これは地球の自転によるものとなっている。
 
@@ -44,20 +44,21 @@ $$
 \tag{1}
 $$
 
-である。これらの時間微分は $\dot \cos\omega t=-\omega \sin\omega t$、$\dot \sin\omega t=\omega \cos\omega t$ である。
-
-力も同じ変換を受ける。K で測った力の成分を $(F_x,F_y,F_z)$ とすると、K' の軸に沿った成分は
+である。 K で測った力の成分を $(F_x,F_y,F_z)$ とすると、K' の軸に沿った成分は
 
 $$
-F'_x=F_x\cos\omega t+F_y\sin\omega t,\qquad F'_y=-F_x\sin\omega t+F_y\cos\omega t,\qquad F'_z=F_z
+    F''_x=F'_x\cos\omega t+F'_y\sin\omega t、F''_y=-F'_x\sin\omega t+F'_y\cos\omega t、
+    F''_z=F'_z
 $$
 
-である。
-
-**ステップ1：速度**　(1) 式の各成分を時間で微分する。積の微分で $c,s$ も微分されることに注意すると、
+である。(1) 式の各成分を時間で微分すると、
 
 $$
-\dot x'=(\dot x\cos\omega t+\dot y\sin\omega t)+\omega(-x\sin\omega t+y\cos\omega t)=(\dot x\cos\omega t+\dot y\sin\omega t)+\omega y'
+    \dot x'=
+    (\dot x\cos\omega t+\dot y\sin\omega t)+
+    \omega(-x\sin\omega t+y\cos\omega t)=
+    (\dot x\cos\omega t+\dot y\sin\omega t)+
+    \omega y'
 \tag{2}
 $$
 
@@ -113,7 +114,7 @@ $$
 **確認　慣性系で止まっている物体**　慣性系 K で、点 $(x_0,y_0)$ に止まっている物体を考える。力は働かないので $F'=0$ である。(1) 式から
 
 $$
-x'=x_0c+y_0s,\qquad y'=-x_0s+y_0c
+x'=x_0c+y_0s、y'=-x_0s+y_0c
 $$
 
 であり、微分すると $\dot x'=\omega y'$、$\dot y'=-\omega x'$、さらに $\ddot x'=\omega\dot y'=-\omega^2x'$ となる。一方、(4) 式の右辺は $2m\omega\dot y'+m\omega^2x'=-2m\omega^2x'+m\omega^2x'=-m\omega^2x'$ であり、左辺 $m\ddot x'=-m\omega^2x'$ と一致する。$y'$ 成分も同様である。K' から見ると、この物体は軸のまわりを半径 $\sqrt{x_0^2+y_0^2}$、角速度 $\omega$（逆向き）で円運動しており、コリオリ力と遠心力がその向心力をちょうど作っている。
@@ -139,7 +140,7 @@ $$
 と変換される。逆に、自転軸に沿った成分 $(V_X,V_Y,V_Z)$ をもつ量の、地上の成分は
 
 $$
-V_x=V_X,\qquad V_y=V_Y\sin\varphi+V_Z\cos\varphi,\qquad V_z=-V_Y\cos\varphi+V_Z\sin\varphi
+V_x=V_X、V_y=V_Y\sin\varphi+V_Z\cos\varphi、V_z=-V_Y\cos\varphi+V_Z\sin\varphi
 $$
 
 である。これをコリオリ力 $(V_X,V_Y,V_Z)=(2m\omega\dot Y,\,-2m\omega\dot X,\,0)$ に当てはめると、
@@ -274,7 +275,7 @@ $$\frac{\bm F_{\mathrm{C}}}{m} = \left(2\omega\sin\varphi\,\dot y - 2\omega\cos\
 
 となる。微小振動では $\dot z$ は $\dot x,\ \dot y$ に比べてずっと小さいので $\dot z$ を含む項は無視でき、$z$ 方向の項は重力や張力に比べて極めて小さいので無視できる。（遠心力も小さく、重力加速度 $g$ の中に含めて考えてよい。）残るのは水平成分で、
 
-$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -\omega_0^2x + 2\omega_z\,\dot y,\qquad \frac{\mathrm{d}^2y}{\mathrm{d}t^2} = -\omega_0^2y - 2\omega_z\,\dot x,\qquad \omega_z \equiv \omega\sin\varphi$$
+$$\frac{\mathrm{d}^2x}{\mathrm{d}t^2} = -\omega_0^2x + 2\omega_z\,\dot y、\frac{\mathrm{d}^2y}{\mathrm{d}t^2} = -\omega_0^2y - 2\omega_z\,\dot x、\omega_z \equiv \omega\sin\varphi$$
 
 となる。
 
@@ -298,7 +299,7 @@ $$u(t) \approx a\cos(\omega_0t)\,\mathrm{e}^{-\mathrm{i}\omega_zt}$$
 
 となる。実部と虚部に分けると、
 
-$$x(t) = a\cos\omega_0t\cdot\cos\omega_zt,\qquad y(t) = -a\cos\omega_0t\cdot\sin\omega_zt$$
+$$x(t) = a\cos\omega_0t\cdot\cos\omega_zt、y(t) = -a\cos\omega_0t\cdot\sin\omega_zt$$
 
 である。
 
