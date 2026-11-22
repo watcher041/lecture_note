@@ -169,13 +169,13 @@ $$\sin\theta = \theta - \frac{\theta^3}{6} + \cdots$$
 であり、たとえば $\theta = 0.1\ \mathrm{rad}$（約 $6^\circ$）なら $\sin\theta = 0.09983\cdots$ で、$\theta$ との差は約 $0.2\%$ である。そこで $\sin\theta \approx \theta$ とおくと、
 
 $$
-    \frac{^2\theta}{t^2} = 
+    \dd{^2\theta}{t^2} = 
     -\frac{g}{l}\,\theta
 $$
 
 となる。$\omega = \sqrt{g/l}$ とおけば
 
-$$\frac{^2\theta}{t^2} = -\omega^2\theta$$
+$$\dd{^2\theta}{t^2} = -\omega^2\theta$$
 
 であり、これは単振動の方程式である。一般解は
 
