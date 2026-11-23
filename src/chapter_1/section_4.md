@@ -35,79 +35,91 @@ $$
     F_y\cos\alpha+F_z\sin\alpha=F'_y
 $$
 
-となる。$x',z'$ についても同様なので、$m\ddot{x'}=F'_x$、$m\ddot{z'}=F'_z$ が成り立つ。そのため、運動方程式の形が変わらず慣性系となっていることが分かる。これを踏まえた上で、次に置き換えた慣性系を K として座標系 K' を K と原点を共有しており $z'$ 軸のまわりに一定の角速度 $\omega$ で回転する座標 $(x'',y'',z'')$ で見ているものとする。K' の軸は、K の軸に対して時刻 $t$ に角 $\omega t$ だけ反時計回りに回っている。同じ点を K' から見ると、座標は逆に時計回りに回って見えるので、
+となる。$x',z'$ についても同様なので、$m\ddot{x'}=F'_x$、$m\ddot{z'}=F'_z$ が成り立つ。そのため、運動方程式の形が変わらず慣性系となっていることが分かる。これを踏まえた上で、次に置き換えた慣性系を K として座標系 K' を K と原点を共有しており $z'$ 軸のまわりに一定の角速度 $\omega$ で回転する座標 $(X,Y,Z)$ で見ているものとする。K' の軸は、K の軸に対して時刻 $t$ に角 $\omega t$ だけ反時計回りに回っている。同じ点を K' から見ると、座標は逆に時計回りに回って見えるので、
 
 $$
-    x''=x'\cos\omega t+y'\sin\omega t、
-    y''=-x'\sin\omega t+y'\cos\omega t、
-    z''=z'
+    X=x'\cos\omega t+y'\sin\omega t、
+    Y=-x'\sin\omega t+y'\cos\omega t、
+    Z=z'
 $$
 
 である。 K' の軸に沿った成分は
 
 $$
-    F''_x=F'_x\cos\omega t+F'_y\sin\omega t、F''_y=-F'_x\sin\omega t+F'_y\cos\omega t、
-    F''_z=F'_z
+    F_X=F'_x\cos\omega t+F'_y\sin\omega t、F_Y=-F'_x\sin\omega t+F'_y\cos\omega t、
+    F_Z=F'_z
 $$
 
 である。そして、各成分を時間で微分すると
 
 $$
-    \dot x''=
+    \dot X=
     (\dot x'\cos\omega t+\dot y'\sin\omega t)+
     \omega(-x'\sin\omega t+y'\cos\omega t)=
     (\dot x'\cos\omega t+\dot y'\sin\omega t)+
-    \omega y''
+    \omega Y
 $$
 
 $$
-    \dot y''=
+    \dot Y=
     (-\dot x'\sin\omega t+\dot y'\cos\omega t)+
     \omega(-x'\cos\omega t-y'\sin\omega t)=
     (-\dot x'\sin\omega t+\dot y'\cos\omega t)-
-    \omega x''
+    \omega X
 $$
 
 $$
-    \dot z''=\dot z'
+    \dot Z=\dot z'
 $$
 
 となる。そして、もう一度微分すると
 
 $$
-    \ddot x''=
+    \ddot X=
     (\ddot x'\cos\omega t+\ddot y'\sin\omega t)+
     \omega(-\dot x'\sin\omega t+\dot y'\cos\omega t)+
-    \omega\dot y''=
+    \omega\dot Y=
     (\ddot x'\cos\omega t+\ddot y'\sin\omega t)+
-    2\omega\dot y''+\omega^2x''
+    2\omega\dot Y+\omega^2X
 $$
 $$
-    \ddot y''=
+    \ddot Y=
     (-\ddot x'\sin\omega t+\ddot y'\cos\omega t)-
     \omega(\dot x'\cos\omega t+\dot y'\sin\omega t)-
     \omega\dot x'=
     (-\ddot x'\sin\omega t+\ddot y'\cos\omega t)-
-    2\omega\dot x''+\omega^2y''
+    2\omega\dot X+\omega^2Y
 $$
 $$
-    \ddot z''=\ddot z'
+    \ddot Z=\ddot z'
 $$ 
 
-となる。慣性系 K では $m\ddot x'=F'_x,\ m\ddot y'=F'_y,\ m\ddot z'=F'_z$ が成り立つ。したがって $m(\ddot x\cos\omega t+\ddot y\sin\omega t)=F_x\cos\omega t+F_y\sin\omega t=F'_x$、$m(-\ddot x\sin\omega t+\ddot y\cos\omega t)=F'_y$ である。これを上の2式に代入して $m$ をかけると、K' での運動方程式は
+となる。慣性系 K では $m\ddot x'=F'_x,\ m\ddot y'=F'_y,\ m\ddot z'=F'_z$ が成り立つ。したがって
+
+$$
+    m(\ddot x'\cos\omega t+\ddot y'\sin\omega t)=
+    F'_x\cos\omega t+F'_y\sin\omega t=
+    F_X
+$$
+$$
+    m(-\ddot x'\sin\omega t+\ddot y'\cos\omega t)=
+    F_Y
+$$
+
+である。これを上の2式に代入して $m$ をかけると、K' での運動方程式は
 
 $$
 \begin{aligned}
-    m\ddot x''&=
-    F''_x+2m\omega\,\dot y''+m\omega^2x''\\
-    m\ddot y'&=
-    F''_y-2m\omega\,\dot x''+m\omega^2y''\\
-    m\ddot z''&=
-    F''_z
+    m\ddot X&=
+    F_X+2m\omega\,\dot Y+m\omega^2X\\
+    m\ddot Y&=
+    F_Y-2m\omega\,\dot X+m\omega^2Y\\
+    m\ddot Z&=
+    F_Z
 \end{aligned}
 $$
 
-となる。回転座標系で運動を見ると、実際に働く力 $F''$ のほかに、2種類の項が加わったように見える。
+となる。回転座標系で運動を見ると、実際に働く力 $F$ のほかに、2種類の項が加わったように見える。
 
 - **コリオリ力** $\bigl(2m\omega\dot y',\ -2m\omega\dot x',\ 0\bigr)$：速度 $(\dot x',\dot y')$ と内積をとると $2m\omega(\dot x'\dot y'-\dot y'\dot x')=0$ になるので、速度に垂直な向きである。回転座標系で動いている物体にだけ働き、仕事をしない。
 - **遠心力** $\bigl(m\omega^2x',\ m\omega^2y',\ 0\bigr)$：回転軸（$z'$ 軸）から遠ざかる向きで、大きさは軸からの距離 $\sqrt{x'^2+y'^2}$ に比例する。止まっている物体にも働く。
